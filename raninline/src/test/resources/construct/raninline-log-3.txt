@@ -1,0 +1,5 @@
+RegressionTest0.test0001
+target-statement-if-start;src/test/resources/construct/A.java;6
+target-statement-before;src/test/resources/construct/A.java;6;int;a;2
+target-statement-before;src/test/resources/construct/A.java;6;int;b;0
+target-statement-executed;src/test/resources/construct/A.java;6

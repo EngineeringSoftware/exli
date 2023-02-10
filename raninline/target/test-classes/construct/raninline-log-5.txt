@@ -1,0 +1,1 @@
+target-statement-start;src/test/java/resources/construct/GUID.java;39

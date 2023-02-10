@@ -1,0 +1,12 @@
+public class E {
+    
+    public void m(int a){
+        boolean c;
+        if (a > 1){
+            int b = a + 1;
+            c = true;
+        }else{
+            c = false;
+        }
+    }
+}

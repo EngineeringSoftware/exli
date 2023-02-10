@@ -1,0 +1,9 @@
+Running com.aquaticinformatics.aquarius.sdk.samples.serializers.InstantDeserializerTest
+target-statement-start;src/test/resources/construct/MM.java;45
+target-statement-before;src/test/resources/construct/MM.java;45;String;text;2017-12-25T00:00:00.123-07:00[PST]
+target-method-before;src/test/resources/construct/MM.java;45;int;text.indexOf('[');29
+target-statement-after;src/test/resources/construct/MM.java;45;String;text;2017-12-25T00:00:00.123-07:00
+target-statement-start;src/test/resources/construct/MM.java;45
+target-statement-before;src/test/resources/construct/MM.java;45;String;text;2017-12-25T00:00:00.123-07:00[PST]
+target-method-before;src/test/resources/construct/MM.java;45;int;text.indexOf('[');29
+target-statement-after;src/test/resources/construct/MM.java;45;String;text;2017-12-25T00:00:00.123-07:00

@@ -1,0 +1,9 @@
+package instrument;
+
+public class Z {
+    private void m(int a, int b){
+        if (a >> 1 > b){
+            a = a + b;
+        }
+    }
+}

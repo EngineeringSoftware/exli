@@ -1,0 +1,19 @@
+package instrument;
+
+public class NotReached3 {
+    public CompiledTemplate compile(IdentifiableStringTemplateSource templateSource) throws TemplateException {
+        // Replace '/' with any other char because Freemarker messes up IDs with '/' because it thinks they're paths.
+        String id = templateSource.getId().replace('/', ';');
+        String source = templateSource.getSource();
+        StringTemplateSource currentTemplateSource = (StringTemplateSource) templateLoader.findTemplateSource(id);
+        if (currentTemplateSource == null || !currentTemplateSource.getSource().equals(source)) {
+            templateLoader.putTemplateSource(id, source);
+        } else {
+        }
+        try {
+            return new FreeMarkerCompiledTemplate(templateConfiguration.getTemplate(id));
+        } catch (Exception e) {
+            throw new TemplateException("Unable to compile Freemarker template:\n" + source, e);
+        }
+    }    
+}

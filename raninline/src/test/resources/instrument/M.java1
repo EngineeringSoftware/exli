@@ -1,0 +1,13 @@
+public class M {
+    public void m(){
+        int a = 1;
+        int b = 2;
+        int c = new N().m(a, b);
+    }
+}
+
+class N{
+    public int m (int a, int b){
+        return a + b;
+    }
+}

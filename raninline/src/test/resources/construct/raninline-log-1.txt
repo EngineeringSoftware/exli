@@ -1,0 +1,9 @@
+RegressionTest0.test00318
+target-statement-start;src/test/resources/construct/EmailRecipientUtils.java;139
+target-statement-before;src/test/resources/construct/EmailRecipientUtils.java;139;String;input;descriptorByName/hudson.plugins.emailext.plugins.recipients.ListRecipientProvider
+target-statement-after;src/test/resources/construct/EmailRecipientUtils.java;139;String;input;descriptorByName/hudson.plugins.emailext.plugins.recipients.ListRecipientProvider
+
+RegressionTest0.test00318
+target-statement-start;src/test/resources/construct/EmailRecipientUtils.java;139
+target-statement-before;src/test/resources/construct/EmailRecipientUtils.java;139;String;input;descriptorByName/hudson.plugins.emailext.plugins.recipients.ListRecipientProvider
+target-statement-after;src/test/resources/construct/EmailRecipientUtils.java;139;String;input;descriptorByName/hudson.plugins.emailext.plugins.recipients.ListRecipientProvider

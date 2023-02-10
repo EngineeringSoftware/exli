@@ -1,0 +1,7 @@
+java -jar /home/user/projects/inlinegen-research/jars/junit-platform-console-standalone-1.9.0-RC1.jar -cp "/home/user/projects/inlinegen-research/java/raninline/target/classes:$(< unitinline-deps.txt)" --select-class=com.aquaticinformatics.aquarius.sdk.samples.serializers.InstantDeserializerTest --details=none >> /home/user/projects/inlinegen-research/log/unitinline-log.txt
+target-statement-start;src/test/resources/construct/InstantDeserializer.java;45
+target-statement-before;src/test/resources/construct/InstantDeserializer.java;45;String;text;2017-12-25T00:00:00.123-07:00[PST]
+target-statement-after;src/test/resources/construct/InstantDeserializer.java;45;String;text;2017-12-25T00:00:00.123-07:00
+target-statement-start;src/test/resources/construct/InstantDeserializer.java;45
+target-statement-before;src/test/resources/construct/InstantDeserializer.java;45;String;text;2017-12-25T00:00:00.123-07:00[PST]
+target-statement-after;src/test/resources/construct/InstantDeserializer.java;45;String;text;2017-12-25T00:00:00.123-07:00

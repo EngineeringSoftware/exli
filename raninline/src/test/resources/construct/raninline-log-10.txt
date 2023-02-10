@@ -1,0 +1,9 @@
+[INFO] Running com.restfb.logging.JulMessageTest
+target-statement-start;src/test/resources/construct/JulMessage.java;68
+target-statement-before;src/test/resources/construct/JulMessage.java;68;String;messagePattern;Simple\\{} text
+target-statement-before;src/test/resources/construct/JulMessage.java;68;int;k;0
+target-statement-after;src/test/resources/construct/JulMessage.java;68;int;l;7
+target-statement-start;src/test/resources/construct/JulMessage.java;68
+target-statement-before;src/test/resources/construct/JulMessage.java;68;String;messagePattern;\\{}Simple text
+target-statement-before;src/test/resources/construct/JulMessage.java;68;int;k;0
+target-statement-after;src/test/resources/construct/JulMessage.java;68;int;l;1

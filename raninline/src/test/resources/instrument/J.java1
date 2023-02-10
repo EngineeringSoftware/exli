@@ -1,0 +1,6 @@
+public class J {
+    public void m(int a, int b) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("a = " + String.valueOf(a));
+    }
+}

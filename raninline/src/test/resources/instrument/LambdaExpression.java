@@ -1,0 +1,8 @@
+package instrument;
+
+public class LambdaExpression {
+
+    public void isDeveloperBuild() {
+        return Func.all(_versionComponents, (v) -> v != null);
+    }
+}
