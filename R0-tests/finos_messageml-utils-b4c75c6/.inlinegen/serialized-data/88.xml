@@ -1,0 +1,203 @@
+<org.commonmark.node.Text>
+  <parent class="org.commonmark.node.Paragraph">
+    <parent class="org.commonmark.node.Document">
+      <firstChild class="org.commonmark.node.Paragraph" reference="../.."/>
+      <lastChild class="org.commonmark.node.Paragraph">
+        <parent class="org.commonmark.node.Document" reference="../.."/>
+        <prev class="org.commonmark.node.BulletList">
+          <parent class="org.commonmark.node.Document" reference="../../.."/>
+          <firstChild class="org.commonmark.node.ListItem">
+            <parent class="org.commonmark.node.BulletList" reference="../.."/>
+            <firstChild class="org.commonmark.node.Paragraph">
+              <parent class="org.commonmark.node.ListItem" reference="../.."/>
+            </firstChild>
+            <lastChild class="org.commonmark.node.Paragraph" reference="../firstChild"/>
+            <next class="org.commonmark.node.ListItem">
+              <parent class="org.commonmark.node.BulletList" reference="../../.."/>
+              <firstChild class="org.commonmark.node.Paragraph">
+                <parent class="org.commonmark.node.ListItem" reference="../.."/>
+              </firstChild>
+              <lastChild class="org.commonmark.node.Paragraph" reference="../firstChild"/>
+              <prev class="org.commonmark.node.ListItem" reference="../.."/>
+            </next>
+          </firstChild>
+          <lastChild class="org.commonmark.node.ListItem" reference="../firstChild/next"/>
+          <prev class="org.commonmark.node.Paragraph" reference="../../../.."/>
+          <next class="org.commonmark.node.Paragraph" reference="../.."/>
+          <tight>true</tight>
+          <bulletMarker>-</bulletMarker>
+        </prev>
+      </lastChild>
+    </parent>
+    <firstChild class="org.commonmark.node.Text">
+      <parent class="org.commonmark.node.Paragraph" reference="../.."/>
+      <next class="org.commonmark.node.Text">
+        <parent class="org.commonmark.node.Paragraph" reference="../../.."/>
+        <prev class="org.commonmark.node.Text" reference="../.."/>
+        <next class="org.commonmark.node.Text">
+          <parent class="org.commonmark.node.Paragraph" reference="../../../.."/>
+          <prev class="org.commonmark.node.Text" reference="../.."/>
+          <next class="org.commonmark.node.SoftLineBreak">
+            <parent class="org.commonmark.node.Paragraph" reference="../../../../.."/>
+            <prev class="org.commonmark.node.Text" reference="../.."/>
+            <next class="org.symphonyoss.symphony.messageml.markdown.nodes.TableNode">
+              <parent class="org.commonmark.node.Paragraph" reference="../../../../../.."/>
+              <firstChild class="org.symphonyoss.symphony.messageml.markdown.nodes.TableRowNode">
+                <parent class="org.symphonyoss.symphony.messageml.markdown.nodes.TableNode" reference="../.."/>
+                <firstChild class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode">
+                  <parent class="org.symphonyoss.symphony.messageml.markdown.nodes.TableRowNode" reference="../.."/>
+                  <firstChild class="org.commonmark.node.Text">
+                    <parent class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode" reference="../.."/>
+                    <literal>A1</literal>
+                  </firstChild>
+                  <lastChild class="org.commonmark.node.Text" reference="../firstChild"/>
+                  <next class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode">
+                    <parent class="org.symphonyoss.symphony.messageml.markdown.nodes.TableRowNode" reference="../../.."/>
+                    <firstChild class="org.commonmark.node.Text">
+                      <parent class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode" reference="../.."/>
+                      <literal>B1</literal>
+                    </firstChild>
+                    <lastChild class="org.commonmark.node.Text" reference="../firstChild"/>
+                    <prev class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode" reference="../.."/>
+                  </next>
+                </firstChild>
+                <lastChild class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode" reference="../firstChild/next"/>
+                <next class="org.symphonyoss.symphony.messageml.markdown.nodes.TableRowNode">
+                  <parent class="org.symphonyoss.symphony.messageml.markdown.nodes.TableNode" reference="../../.."/>
+                  <firstChild class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode">
+                    <parent class="org.symphonyoss.symphony.messageml.markdown.nodes.TableRowNode" reference="../.."/>
+                    <firstChild class="org.commonmark.node.Text">
+                      <parent class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode" reference="../.."/>
+                      <literal>A2</literal>
+                    </firstChild>
+                    <lastChild class="org.commonmark.node.Text" reference="../firstChild"/>
+                    <next class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode">
+                      <parent class="org.symphonyoss.symphony.messageml.markdown.nodes.TableRowNode" reference="../../.."/>
+                      <firstChild class="org.commonmark.node.Text">
+                        <parent class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode" reference="../.."/>
+                        <literal>B2</literal>
+                      </firstChild>
+                      <lastChild class="org.commonmark.node.Text" reference="../firstChild"/>
+                      <prev class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode" reference="../.."/>
+                    </next>
+                  </firstChild>
+                  <lastChild class="org.symphonyoss.symphony.messageml.markdown.nodes.TableCellNode" reference="../firstChild/next"/>
+                  <prev class="org.symphonyoss.symphony.messageml.markdown.nodes.TableRowNode" reference="../.."/>
+                </next>
+              </firstChild>
+              <lastChild class="org.symphonyoss.symphony.messageml.markdown.nodes.TableRowNode" reference="../firstChild/next"/>
+              <prev class="org.commonmark.node.SoftLineBreak" reference="../.."/>
+              <next class="org.commonmark.node.SoftLineBreak">
+                <parent class="org.commonmark.node.Paragraph" reference="../../../../../../.."/>
+                <prev class="org.symphonyoss.symphony.messageml.markdown.nodes.TableNode" reference="../.."/>
+                <next class="org.commonmark.node.StrongEmphasis">
+                  <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../.."/>
+                  <firstChild class="org.commonmark.node.Text">
+                    <parent class="org.commonmark.node.StrongEmphasis" reference="../.."/>
+                    <literal>bold</literal>
+                  </firstChild>
+                  <lastChild class="org.commonmark.node.Text" reference="../firstChild"/>
+                  <prev class="org.commonmark.node.SoftLineBreak" reference="../.."/>
+                  <next class="org.commonmark.node.Text">
+                    <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../.."/>
+                    <prev class="org.commonmark.node.StrongEmphasis" reference="../.."/>
+                    <next class="org.commonmark.node.Emphasis">
+                      <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../.."/>
+                      <firstChild class="org.commonmark.node.Text">
+                        <parent class="org.commonmark.node.Emphasis" reference="../.."/>
+                        <literal>italic</literal>
+                      </firstChild>
+                      <lastChild class="org.commonmark.node.Text" reference="../firstChild"/>
+                      <prev class="org.commonmark.node.Text" reference="../.."/>
+                      <next class="org.commonmark.node.Text">
+                        <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../.."/>
+                        <prev class="org.commonmark.node.Emphasis" reference="../.."/>
+                        <next class="org.commonmark.node.Text">
+                          <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../.."/>
+                          <prev class="org.commonmark.node.Text" reference="../.."/>
+                          <next class="org.commonmark.node.Text" reference="../../../../../../../../../../../../.."/>
+                          <literal></literal>
+                        </next>
+                        <literal> </literal>
+                      </next>
+                      <delimiter>_</delimiter>
+                    </next>
+                    <literal> </literal>
+                  </next>
+                  <delimiter>**</delimiter>
+                </next>
+              </next>
+            </next>
+          </next>
+          <literal></literal>
+        </next>
+        <literal>!</literal>
+      </next>
+      <literal>Hello</literal>
+    </firstChild>
+    <lastChild class="org.commonmark.node.Text">
+      <parent class="org.commonmark.node.Paragraph" reference="../.."/>
+      <prev class="org.commonmark.node.Text">
+        <parent class="org.commonmark.node.Paragraph" reference="../../.."/>
+        <prev class="org.commonmark.node.Text">
+          <parent class="org.commonmark.node.Paragraph" reference="../../../.."/>
+          <prev class="org.commonmark.node.Text">
+            <parent class="org.commonmark.node.Paragraph" reference="../../../../.."/>
+            <prev class="org.commonmark.node.Text">
+              <parent class="org.commonmark.node.Paragraph" reference="../../../../../.."/>
+              <prev class="org.commonmark.node.Text">
+                <parent class="org.commonmark.node.Paragraph" reference="../../../../../../.."/>
+                <prev class="org.commonmark.node.Text">
+                  <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../.."/>
+                  <prev class="org.commonmark.node.Text">
+                    <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../.."/>
+                    <prev class="org.commonmark.node.Text">
+                      <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../.."/>
+                      <prev class="org.commonmark.node.Text">
+                        <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../.."/>
+                        <prev class="org.commonmark.node.Text">
+                          <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../.."/>
+                          <prev class="org.commonmark.node.Text">
+                            <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../.."/>
+                            <prev class="org.commonmark.node.Text" reference="../../../../../../../../../../../../../.."/>
+                            <next class="org.commonmark.node.Text" reference="../.."/>
+                            <literal></literal>
+                          </prev>
+                          <next class="org.commonmark.node.Text" reference="../.."/>
+                          <literal> </literal>
+                        </prev>
+                        <next class="org.commonmark.node.Text" reference="../.."/>
+                        <literal>&#x91;</literal>
+                      </prev>
+                      <next class="org.commonmark.node.Text" reference="../.."/>
+                      <literal>KEYWORD&#x92;$cashtag</literal>
+                    </prev>
+                    <next class="org.commonmark.node.Text" reference="../.."/>
+                    <literal>&#x91;</literal>
+                  </prev>
+                  <next class="org.commonmark.node.Text" reference="../.."/>
+                  <literal> </literal>
+                </prev>
+                <next class="org.commonmark.node.Text" reference="../.."/>
+                <literal>&#x91;</literal>
+              </prev>
+              <next class="org.commonmark.node.Text" reference="../.."/>
+              <literal>USER</literal>
+            </prev>
+            <next class="org.commonmark.node.Text" reference="../.."/>
+            <literal>_</literal>
+          </prev>
+          <next class="org.commonmark.node.Text" reference="../.."/>
+          <literal>FOLLOW&#x92;123456789</literal>
+        </prev>
+        <next class="org.commonmark.node.Text" reference="../.."/>
+        <literal>&#x91;</literal>
+      </prev>
+      <literal> http://example.com</literal>
+    </lastChild>
+    <next class="org.commonmark.node.BulletList" reference="../parent/lastChild/prev"/>
+  </parent>
+  <prev class="org.commonmark.node.Text" reference="../parent/firstChild/next/next/next/next/next/next/next/next/next/next"/>
+  <next class="org.commonmark.node.Text" reference="../parent/lastChild/prev/prev/prev/prev/prev/prev/prev/prev/prev/prev/prev"/>
+  <literal>KEYWORD&#x92;#hashtag</literal>
+</org.commonmark.node.Text>

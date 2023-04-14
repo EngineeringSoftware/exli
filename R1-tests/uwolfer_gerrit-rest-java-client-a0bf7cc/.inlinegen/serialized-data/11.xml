@@ -1,0 +1,67 @@
+<java.util.regex.Matcher>
+  <parentPattern>
+    <pattern>.*?xGerritAuth=&quot;(.+?)&quot;</pattern>
+    <flags>0</flags>
+  </parentPattern>
+  <groups>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+  </groups>
+  <from>0</from>
+  <to>3968</to>
+  <lookbehindTo>0</lookbehindTo>
+  <text class="string">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;&lt;title&gt;Gerrit Code Review&lt;/title&gt;&lt;meta content=&quot;locale=en_US&quot; name=&quot;gwt:property&quot;&gt;&lt;script id=&quot;gerrit_hostpagedata&quot; language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;var gerrit_hostpagedata={&quot;version&quot;:&quot;2.11-554-gd83709e&quot;,&quot;config&quot;:{&quot;switchAccountUrl&quot;:&quot;/switch-account&quot;,&quot;httpPasswordUrl&quot;:&quot;/new-password&quot;,&quot;reportBugUrl&quot;:&quot;https://code.google.com/p/gerrit/issues/entry&quot;,&quot;httpPasswordSettingsEnabled&quot;:true,&quot;gitweb&quot;:{&quot;baseUrl&quot;:&quot;https://gerrit.googlesource.com/&quot;,&quot;type&quot;:{&quot;name&quot;:&quot;gitiles&quot;,&quot;revision&quot;:&quot;${project}/+/${commit}&quot;,&quot;project&quot;:&quot;${project}&quot;,&quot;branch&quot;:&quot;${project}/+/${branch}&quot;,&quot;rootTree&quot;:&quot;${project}/+/${commit}/&quot;,&quot;file&quot;:&quot;${project}/+/${commit}/${file}&quot;,&quot;fileHistory&quot;:&quot;${project}/+log/${branch}/${file}&quot;,&quot;pathSeparator&quot;:&quot;/&quot;,&quot;linkDrafts&quot;:true,&quot;urlEncode&quot;:true}},&quot;useContributorAgreements&quot;:true,&quot;useContactInfo&quot;:false,&quot;authType&quot;:&quot;CUSTOM_EXTENSION&quot;,&quot;downloadSchemes&quot;:[&quot;HTTP&quot;],&quot;gitHttpUrl&quot;:&quot;https://gerrit.googlesource.com/&quot;,&quot;editFullNameUrl&quot;:&quot;https://www.google.com/accounts/EditUserInfo&quot;,&quot;wildProject&quot;:{&quot;name&quot;:&quot;All-Projects&quot;},&quot;editableAccountFields&quot;:[&quot;REGISTER_NEW_EMAIL&quot;],&quot;documentationAvailable&quot;:true,&quot;anonymousCowardName&quot;:&quot;Anonymous Coward&quot;,&quot;suggestFrom&quot;:3,&quot;changeUpdateDelay&quot;:10,&quot;archiveFormats&quot;:[],&quot;largeChangeSize&quot;:500,&quot;replyLabel&quot;:&quot;Reply…&quot;,&quot;replyTitle&quot;:&quot;Reply and score (Shortcut: a)&quot;,&quot;allowDraftChanges&quot;:true},&quot;pluginsLoadTimeout&quot;:5000,&quot;isNoteDbEnabled&quot;:false};gerrit_hostpagedata.account={&quot;accountId&quot;:{&quot;id&quot;:1},&quot;registeredOn&quot;:&quot;&quot;,&quot;fullName&quot;:&quot;Diffy&quot;,&quot;preferredEmail&quot;:&quot;diffy@example.org&quot;,&quot;contactFiledOn&quot;:&quot;&quot;,&quot;generalPreferences&quot;:{&quot;maximumPageSize&quot;:25,&quot;showSiteHeader&quot;:true,&quot;useFlashClipboard&quot;:true,&quot;downloadUrl&quot;:&quot;HTTP&quot;,&quot;downloadCommand&quot;:&quot;CHECKOUT&quot;,&quot;copySelfOnEmail&quot;:false,&quot;dateFormat&quot;:&quot;STD&quot;,&quot;timeFormat&quot;:&quot;HHMM_12&quot;,&quot;relativeDateInChangeTable&quot;:true,&quot;diffView&quot;:&quot;SIDE_BY_SIDE&quot;,&quot;sizeBarInChangeTable&quot;:true,&quot;legacycidInChangeTable&quot;:false,&quot;reviewCategoryStrategy&quot;:&quot;NONE&quot;,&quot;muteCommonPathPrefixes&quot;:false},&quot;inactive&quot;:false};gerrit_hostpagedata.xGerritAuth=&quot;AGaX_CruyH1_pMhQTiv2U-Rr4HXo5VQxe3sAVAnsOrhrcbK7Wxzjdgqr&quot;;gerrit_hostpagedata.accountDiffPref={};gerrit_hostpagedata.theme={&quot;backgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;topMenuColor&quot;:&quot;#FFFFFF&quot;,&quot;textColor&quot;:&quot;#353535&quot;,&quot;trimColor&quot;:&quot;#EEEEEE&quot;,&quot;selectionColor&quot;:&quot;#D8EDF9&quot;,&quot;changeTableOutdatedColor&quot;:&quot;#F08080&quot;,&quot;tableOddRowColor&quot;:&quot;transparent&quot;,&quot;tableEvenRowColor&quot;:&quot;transparent&quot;};&lt;/script&gt;&lt;style id=&quot;gerrit_sitecss&quot; type=&quot;text/css&quot;&gt;
+    #gerrit_topmenu {
+        left: 60px;
+        margin-right: 60px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+    #diffy_logo {
+        display: block !important;
+        margin-bottom: -55px;
+        padding-left: 10px;
+        position: relative;
+        top: -55px;
+        width: 60px;
+    }
+    #gitiles_link_div {
+        float: right;
+        padding: 12px;
+    }
+
+&lt;/style&gt;&lt;link href=&quot;favicon.ico&quot; rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;gerrit_topmenu&quot;&gt;&lt;/div&gt;&lt;div id=&quot;gerrit_header&quot;&gt;&lt;div&gt;&lt;div id=&quot;diffy_logo&quot;&gt;&lt;img height=&quot;46&quot; src=&quot;static/diffy1.cache.png?e=5ab002d4723381bc63b8f98ce43dcf64&quot; width=&quot;50&quot;&gt;&lt;/div&gt;&lt;div id=&quot;gitiles_link_div&quot;&gt;&lt;a id=&quot;gitiles_link&quot;&gt;Browse Repositories&lt;/a&gt;&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;
+&lt;/script&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;gerrit_startinggerrit&quot; style=&quot;margin-left: 10px;&quot;&gt;&lt;p&gt;Loading &lt;a href=&quot;http://code.google.com/p/gerrit/&quot; target=&quot;_blank&quot;&gt;Gerrit Code Review&lt;/a&gt; ...&lt;/p&gt;&lt;noscript&gt;&lt;p&gt;Gerrit requires a JavaScript enabled browser.&lt;/p&gt;&lt;/noscript&gt;&lt;/div&gt;&lt;div id=&quot;gerrit_body&quot;&gt;&lt;/div&gt;&lt;div style=&quot;clear: both&quot;&gt;&lt;div id=&quot;gerrit_footer&quot;&gt;&lt;/div&gt;&lt;div id=&quot;gerrit_btmmenu&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;iframe id=&quot;__gwt_historyFrame&quot; src=&quot;javascript:&apos;&apos;&quot; style=&quot;position:absolute;width:0;height:0;border:0&quot; tabIndex=&quot;-1&quot;&gt;&lt;/iframe&gt;&lt;script language=&quot;javascript&quot; src=&quot;gerrit_ui/gerrit_ui.nocache.js?content=545f3b1bc773c583d675e5864c9a3dd1&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+</text>
+  <acceptMode>0</acceptMode>
+  <first>-1</first>
+  <last>0</last>
+  <oldLast>-1</oldLast>
+  <lastAppendPosition>0</lastAppendPosition>
+  <locals>
+    <int>-1</int>
+  </locals>
+  <hitEnd>false</hitEnd>
+  <requireEnd>false</requireEnd>
+  <transparentBounds>false</transparentBounds>
+  <anchoringBounds>true</anchoringBounds>
+</java.util.regex.Matcher>

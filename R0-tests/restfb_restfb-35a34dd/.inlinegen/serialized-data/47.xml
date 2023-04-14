@@ -1,0 +1,22 @@
+<map>
+  <entry>
+    <string>code</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>user_code</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>interval</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>verification_uri</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>expires_in</string>
+    <int>1</int>
+  </entry>
+</map>

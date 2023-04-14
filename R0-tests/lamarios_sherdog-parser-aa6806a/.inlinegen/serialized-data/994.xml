@@ -1,0 +1,130 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Aaron Dyett</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Dyett-65785</sherdogUrl>
+  <nickname></nickname>
+  <height></height>
+  <weight></weight>
+  <wins>3</wins>
+  <winsKo>1</winsKo>
+  <winsSub>0</winsSub>
+  <winsDec>2</winsDec>
+  <winsOther>0</winsOther>
+  <losses>1</losses>
+  <lossesKo>1</lossesKo>
+  <lossesSub>0</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>BFW 15 - Brace For War 15</name>
+        <sherdogUrl>https://www.sherdog.com/events/BFW-15-Brace-For-War-15-20983</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Dyett</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Dyett-65785</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Connor Murphy</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Connor-Murphy-75713</sherdogUrl>
+      </fighter2>
+      <date>2012-04-28T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>0:58</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>BFW 11 - Brace For War 11</name>
+        <sherdogUrl>https://www.sherdog.com/events/BFW-11-Brace-For-War-11-13730</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Taipari Rikihana</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Taipari-Rikihana-80054</sherdogUrl>
+      </fighter2>
+      <date>2011-09-17T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>FWC 9 - FightWorld Cup 9</name>
+        <sherdogUrl>https://www.sherdog.com/events/FWC-9-FightWorld-Cup-9-17916</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Brentin Mumford</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Brentin-Mumford-79124</sherdogUrl>
+      </fighter2>
+      <date>2011-08-06T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Days of Glory - Fight Night</name>
+        <sherdogUrl>https://www.sherdog.com/events/Days-of-Glory-Fight-Night-16769</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Chris Lokteff</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Chris-Lokteff-79116</sherdogUrl>
+      </fighter2>
+      <date>2011-05-28T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>KO (Punch)</winMethod>
+      <winTime>1:54</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UMMA 7 - Maryborough</name>
+        <sherdogUrl>https://www.sherdog.com/events/UMMA-7-Maryborough-14150</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Dyett</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Dyett-65785</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Kemara Osbourne</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Kemara-Osbourne-69004</sherdogUrl>
+      </fighter2>
+      <date>2010-08-27T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UMMA 6 - Coffs Harbour</name>
+        <sherdogUrl>https://www.sherdog.com/events/UMMA-6-Coffs-Harbour-13650</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[5]/fighter1"/>
+      <fighter2>
+        <name>John Highley</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/John-Highley-65786</sherdogUrl>
+      </fighter2>
+      <date>2010-05-29T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

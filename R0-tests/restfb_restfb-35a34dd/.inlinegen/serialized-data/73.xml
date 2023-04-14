@@ -1,0 +1,30 @@
+<map>
+  <entry>
+    <string>created_time</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>metadata</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>x</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>name</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>y</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>id</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>type</string>
+    <int>1</int>
+  </entry>
+</map>

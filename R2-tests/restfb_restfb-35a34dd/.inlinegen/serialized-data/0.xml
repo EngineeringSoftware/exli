@@ -1,0 +1,18 @@
+<map>
+  <entry>
+    <string>is_silhouette</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>width</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>url</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>height</string>
+    <int>1</int>
+  </entry>
+</map>

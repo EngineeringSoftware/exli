@@ -1,0 +1,156 @@
+<org.commonmark.node.Text>
+  <parent class="org.commonmark.node.Paragraph">
+    <parent class="org.commonmark.node.Document">
+      <firstChild class="org.commonmark.node.Paragraph" reference="../.."/>
+      <lastChild class="org.commonmark.node.Paragraph" reference="../.."/>
+    </parent>
+    <firstChild class="org.commonmark.node.Text">
+      <parent class="org.commonmark.node.Paragraph" reference="../.."/>
+      <next class="org.commonmark.node.Text">
+        <parent class="org.commonmark.node.Paragraph" reference="../../.."/>
+        <prev class="org.commonmark.node.Text" reference="../.."/>
+        <next class="org.commonmark.node.Text">
+          <parent class="org.commonmark.node.Paragraph" reference="../../../.."/>
+          <prev class="org.commonmark.node.Text" reference="../.."/>
+          <next class="org.commonmark.node.Text">
+            <parent class="org.commonmark.node.Paragraph" reference="../../../../.."/>
+            <prev class="org.commonmark.node.Text" reference="../.."/>
+            <next class="org.commonmark.node.Text">
+              <parent class="org.commonmark.node.Paragraph" reference="../../../../../.."/>
+              <prev class="org.commonmark.node.Text" reference="../.."/>
+              <next class="org.commonmark.node.Text">
+                <parent class="org.commonmark.node.Paragraph" reference="../../../../../../.."/>
+                <prev class="org.commonmark.node.Text" reference="../.."/>
+                <next class="org.commonmark.node.Text">
+                  <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../.."/>
+                  <prev class="org.commonmark.node.Text" reference="../.."/>
+                  <next class="org.commonmark.node.Text">
+                    <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../.."/>
+                    <prev class="org.commonmark.node.Text" reference="../.."/>
+                    <next class="org.commonmark.node.Text">
+                      <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../.."/>
+                      <prev class="org.commonmark.node.Text" reference="../.."/>
+                      <next class="org.commonmark.node.Text">
+                        <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../.."/>
+                        <prev class="org.commonmark.node.Text" reference="../.."/>
+                        <next class="org.commonmark.node.Text">
+                          <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../.."/>
+                          <prev class="org.commonmark.node.Text" reference="../.."/>
+                          <next class="org.commonmark.node.Text">
+                            <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../.."/>
+                            <prev class="org.commonmark.node.Text" reference="../.."/>
+                            <next class="org.commonmark.node.Text">
+                              <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../.."/>
+                              <prev class="org.commonmark.node.Text" reference="../.."/>
+                              <next class="org.commonmark.node.Text">
+                                <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../.."/>
+                                <prev class="org.commonmark.node.Text" reference="../.."/>
+                                <next class="org.commonmark.node.Text">
+                                  <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../.."/>
+                                  <prev class="org.commonmark.node.Text" reference="../.."/>
+                                  <next class="org.commonmark.node.Text">
+                                    <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../../.."/>
+                                    <prev class="org.commonmark.node.Text" reference="../.."/>
+                                    <next class="org.commonmark.node.Text">
+                                      <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../../../.."/>
+                                      <prev class="org.commonmark.node.Text" reference="../.."/>
+                                      <next class="org.commonmark.node.Text">
+                                        <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../../../../.."/>
+                                        <prev class="org.commonmark.node.Text" reference="../.."/>
+                                        <next class="org.commonmark.node.Text">
+                                          <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../../../../../.."/>
+                                          <prev class="org.commonmark.node.Text" reference="../.."/>
+                                          <next class="org.commonmark.node.Text">
+                                            <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../../../../../../.."/>
+                                            <prev class="org.commonmark.node.Text" reference="../.."/>
+                                            <next class="org.commonmark.node.Text">
+                                              <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../../../../../../../.."/>
+                                              <prev class="org.commonmark.node.Text" reference="../.."/>
+                                              <next class="org.commonmark.node.Emphasis">
+                                                <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                <firstChild class="org.commonmark.node.Text">
+                                                  <parent class="org.commonmark.node.Emphasis" reference="../.."/>
+                                                  <literal>italic</literal>
+                                                </firstChild>
+                                                <lastChild class="org.commonmark.node.Text" reference="../firstChild"/>
+                                                <prev class="org.commonmark.node.Text" reference="../.."/>
+                                                <next class="org.commonmark.node.Text">
+                                                  <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                  <prev class="org.commonmark.node.Emphasis" reference="../.."/>
+                                                  <next class="org.commonmark.node.StrongEmphasis">
+                                                    <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                    <firstChild class="org.commonmark.node.Text">
+                                                      <parent class="org.commonmark.node.StrongEmphasis" reference="../.."/>
+                                                      <literal>bold</literal>
+                                                    </firstChild>
+                                                    <lastChild class="org.commonmark.node.Text" reference="../firstChild"/>
+                                                    <prev class="org.commonmark.node.Text" reference="../.."/>
+                                                    <next class="org.commonmark.node.Text">
+                                                      <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                      <prev class="org.commonmark.node.StrongEmphasis" reference="../.."/>
+                                                      <next class="org.commonmark.node.Text">
+                                                        <parent class="org.commonmark.node.Paragraph" reference="../../../../../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                        <prev class="org.commonmark.node.Text" reference="../.."/>
+                                                        <next class="org.commonmark.node.Text" reference="../../../../../../../../../../../../../../../../../../../../../../../../../../../.."/>
+                                                        <literal></literal>
+                                                      </next>
+                                                      <literal> </literal>
+                                                    </next>
+                                                    <delimiter>**</delimiter>
+                                                  </next>
+                                                  <literal> </literal>
+                                                </next>
+                                                <delimiter>_</delimiter>
+                                              </next>
+                                              <literal> &gt; ? </literal>
+                                            </next>
+                                            <literal>&lt;</literal>
+                                          </next>
+                                          <literal> { } | : &quot; </literal>
+                                        </next>
+                                        <literal>+</literal>
+                                      </next>
+                                      <literal> </literal>
+                                    </next>
+                                    <literal>_</literal>
+                                  </next>
+                                  <literal> ( ) </literal>
+                                </next>
+                                <literal>*</literal>
+                              </next>
+                              <literal> </literal>
+                            </next>
+                            <literal>&amp;</literal>
+                          </next>
+                          <literal> = ^ </literal>
+                        </next>
+                        <literal>-</literal>
+                      </next>
+                      <literal> @ # $ % </literal>
+                    </next>
+                    <literal>!</literal>
+                  </next>
+                  <literal> ; &apos; , . / ~ </literal>
+                </next>
+                <literal>\</literal>
+              </next>
+              <literal> </literal>
+            </next>
+            <literal>]</literal>
+          </next>
+          <literal> </literal>
+        </next>
+        <literal>[</literal>
+      </next>
+      <literal>½ ¼ ¾ </literal>
+    </firstChild>
+    <lastChild class="org.commonmark.node.Text">
+      <parent class="org.commonmark.node.Paragraph" reference="../.."/>
+      <prev class="org.commonmark.node.Text" reference="../../.."/>
+      <literal></literal>
+    </lastChild>
+  </parent>
+  <prev class="org.commonmark.node.Text" reference="../parent/firstChild/next/next/next/next/next/next/next/next/next/next/next/next/next/next/next/next/next/next/next/next/next/next/next/next/next"/>
+  <next class="org.commonmark.node.Text" reference="../parent/lastChild"/>
+  <literal>KEYWORD&#x92;#hashtag</literal>
+</org.commonmark.node.Text>

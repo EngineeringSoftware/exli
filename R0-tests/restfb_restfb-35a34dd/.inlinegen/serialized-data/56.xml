@@ -1,0 +1,10 @@
+<map>
+  <entry>
+    <string>scope</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>target_ids</string>
+    <int>1</int>
+  </entry>
+</map>

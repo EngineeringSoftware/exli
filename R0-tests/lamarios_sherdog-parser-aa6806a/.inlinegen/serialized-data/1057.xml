@@ -1,0 +1,332 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>A.J. Matthews</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/AJ-Matthews-21922</sherdogUrl>
+  <nickname>The Mercenary</nickname>
+  <height>5&apos;11&quot;</height>
+  <weight>185 lbs</weight>
+  <birthday>1988-01-23 06:00:00.0 UTC</birthday>
+  <wins>9</wins>
+  <winsKo>6</winsKo>
+  <winsSub>0</winsSub>
+  <winsDec>3</winsDec>
+  <winsOther>0</winsOther>
+  <losses>9</losses>
+  <lossesKo>5</lossesKo>
+  <lossesSub>0</lossesSub>
+  <lossesDec>4</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bellator 219 - Awad vs. Girtz</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-219-Awad-vs-Girtz-73649</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>A.J. Matthews</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/AJ-Matthews-21922</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>David Rickels</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/David-Rickels-36198</sherdogUrl>
+      </fighter2>
+      <date>2019-03-29T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Eye Injury)</winMethod>
+      <winTime>3:24</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bellator 204 - Caldwell vs. Lahat</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-204-Caldwell-vs-Lahat-69027</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Logan Storley</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Logan-Storley-204697</sherdogUrl>
+      </fighter2>
+      <date>2018-08-17T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Elbows and Punches)</winMethod>
+      <winTime>3:56</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bellator 193 - Larkin vs. Gonzalez</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-193-Larkin-vs-Gonzalez-64165</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Kendall Grove</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Kendall-Grove-10126</sherdogUrl>
+      </fighter2>
+      <date>2018-01-26T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bellator 181 - Campos vs. Girtz 3</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-181-Campos-vs-Girtz-3-59595</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Andre Fialho</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Andre-Fialho-188171</sherdogUrl>
+      </fighter2>
+      <date>2017-07-14T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bellator 162 - Shlemenko vs. Grove</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-162-Shlemenko-vs-Grove-54911</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Hisaki Kato</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Hisaki-Kato-125695</sherdogUrl>
+      </fighter2>
+      <date>2016-10-21T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>4:58</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bellator 156 - Galvao vs. Dantas 2</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-156-Galvao-vs-Dantas-2-51341</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Ben Reiter</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Ben-Reiter-83786</sherdogUrl>
+      </fighter2>
+      <date>2016-06-17T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Rizin Fighting Federation - Saraba no Utake</name>
+        <sherdogUrl>https://www.sherdog.com/events/Rizin-Fighting-Federation-Saraba-no-Utake-48357</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Anatoly Tokov</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Anatoly-Tokov-56029</sherdogUrl>
+      </fighter2>
+      <date>2015-12-29T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>KO (Punch)</winMethod>
+      <winTime>0:55</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bellator 141 - Guillard vs. Girtz</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-141-Guillard-vs-Girtz-46865</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Emiliano Sordi</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Emiliano-Sordi-79071</sherdogUrl>
+      </fighter2>
+      <date>2015-08-28T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Retirement)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bellator 131 - Tito vs. Bonnar</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-131-Tito-vs-Bonnar-40331</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Kyle Bolt</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Kyle-Bolt-58190</sherdogUrl>
+      </fighter2>
+      <date>2014-11-15T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>1:39</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bellator MMA - Bellator 112</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-MMA-Bellator-112-35065</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Belal Muhammad</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Belal-Muhammad-108315</sherdogUrl>
+      </fighter2>
+      <date>2014-03-14T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>BFC - Bellator Fighting Championships 76</name>
+        <sherdogUrl>https://www.sherdog.com/events/BFC-Bellator-Fighting-Championships-76-23811</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Dom O&apos;Grady</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Dom-OGrady-23582</sherdogUrl>
+      </fighter2>
+      <date>2012-10-12T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>BFC - Bellator Fighting Championships 70</name>
+        <sherdogUrl>https://www.sherdog.com/events/BFC-Bellator-Fighting-Championships-70-21571</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Charlie Rader</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Charlie-Rader-24678</sherdogUrl>
+      </fighter2>
+      <date>2012-05-25T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>KO (Soccer Kick)</winMethod>
+      <winTime>3:34</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>BFC - Bellator Fighting Championships 53</name>
+        <sherdogUrl>https://www.sherdog.com/events/BFC-Bellator-Fighting-Championships-53-18394</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Rudy Bears</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rudy-Bears-23364</sherdogUrl>
+      </fighter2>
+      <date>2011-10-08T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Strikeforce - Diaz vs. Daley</name>
+        <sherdogUrl>https://www.sherdog.com/events/Strikeforce-Diaz-vs-Daley-15906</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Herman Terrado</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Herman-Terrado-29836</sherdogUrl>
+      </fighter2>
+      <date>2011-04-09T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>KO (Punch)</winMethod>
+      <winTime>4:16</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>PWP - War on the Mainland</name>
+        <sherdogUrl>https://www.sherdog.com/events/PWP-War-on-the-Mainland-13933</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Sean Choice</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Sean-Choice-64864</sherdogUrl>
+      </fighter2>
+      <date>2010-08-14T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>3:54</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Excessive Damage</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Excessive-Damage-13440</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>David Gomez</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/David-Gomez-34185</sherdogUrl>
+      </fighter2>
+      <date>2010-05-13T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Gladiator Challenge - Venom</name>
+        <sherdogUrl>https://www.sherdog.com/events/Gladiator-Challenge-Venom-9755</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Adam Figurski</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Adam-Figurski-44285</sherdogUrl>
+      </fighter2>
+      <date>2009-04-23T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>KO (Punches)</winMethod>
+      <winTime>0:23</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>TC 19 - Total Combat 19</name>
+        <sherdogUrl>https://www.sherdog.com/events/TC-19-Total-Combat-19-4858</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Daniel Morales</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Daniel-Morales-16841</sherdogUrl>
+      </fighter2>
+      <date>2007-03-31T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Doctor Stoppage)</winMethod>
+      <winTime>0:24</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

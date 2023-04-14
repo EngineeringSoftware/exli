@@ -1,0 +1,130 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Aaron Keyes</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Keyes-60149</sherdogUrl>
+  <nickname></nickname>
+  <height></height>
+  <weight></weight>
+  <wins>1</wins>
+  <winsKo>0</winsKo>
+  <winsSub>0</winsSub>
+  <winsDec>1</winsDec>
+  <winsOther>0</winsOther>
+  <losses>3</losses>
+  <lossesKo>0</lossesKo>
+  <lossesSub>3</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>TMT MMA - Too Much Talent: Fight Night 5</name>
+        <sherdogUrl>https://www.sherdog.com/events/TMT-MMA-Too-Much-Talent-Fight-Night-5-42279</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Keyes</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Keyes-60149</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Steve Obe</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Steve-Obe-40557</sherdogUrl>
+      </fighter2>
+      <date>2014-11-15T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>1:05</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>EB - Ultimatum</name>
+        <sherdogUrl>https://www.sherdog.com/events/EB-Ultimatum-14711</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Courtney Anderson</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Courtney-Anderson-72512</sherdogUrl>
+      </fighter2>
+      <date>2010-10-23T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>EB - Redemption</name>
+        <sherdogUrl>https://www.sherdog.com/events/EB-Redemption-14614</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Mark Armstrong</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Mark-Armstrong-49751</sherdogUrl>
+      </fighter2>
+      <date>2010-07-31T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>4:13</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>PK - Pro Kumite</name>
+        <sherdogUrl>https://www.sherdog.com/events/PK-Pro-Kumite-12040</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Shane Fourie</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Shane-Fourie-63355</sherdogUrl>
+      </fighter2>
+      <date>2010-04-10T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Arm-Triangle Choke)</winMethod>
+      <winTime>3:43</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>EB - Extreme Brawl</name>
+        <sherdogUrl>https://www.sherdog.com/events/EB-Extreme-Brawl-11961</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Keyes</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Keyes-60149</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Rob Silko</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rob-Silko-63656</sherdogUrl>
+      </fighter2>
+      <date>2010-03-20T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>0:28</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>AA - Generation X</name>
+        <sherdogUrl>https://www.sherdog.com/events/AA-Generation-X-12707</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[5]/fighter1"/>
+      <fighter2>
+        <name>Andy Vennells</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Andy-Vennells-60148</sherdogUrl>
+      </fighter2>
+      <date>2009-12-06T00:00:00-06:00[America/Chicago]</date>
+      <result>DRAW</result>
+      <winMethod>Draw</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>2</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

@@ -1,0 +1,42 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>A.J. Marquez</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/AJ-Marquez-340107</sherdogUrl>
+  <nickname></nickname>
+  <height></height>
+  <weight></weight>
+  <wins>0</wins>
+  <winsKo>0</winsKo>
+  <winsSub>0</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>0</losses>
+  <lossesKo>0</lossesKo>
+  <lossesSub>0</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bayou FC 40 - Bayou Fighting Championship 40</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bayou-FC-40-Bayou-Fighting-Championship-40-79197</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>A.J. Marquez</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/AJ-Marquez-340107</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Tommy Lee</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Tommy-Lee-340105</sherdogUrl>
+      </fighter2>
+      <date>2019-08-24T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>1:46</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

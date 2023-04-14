@@ -1,0 +1,44 @@
+<java.util.regex.Matcher>
+  <parentPattern>
+    <pattern>\{(\w+)\}</pattern>
+    <flags>0</flags>
+  </parentPattern>
+  <groups>
+    <int>15</int>
+    <int>25</int>
+    <int>16</int>
+    <int>24</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+  </groups>
+  <from>0</from>
+  <to>25</to>
+  <lookbehindTo>0</lookbehindTo>
+  <text class="string">/reportplugins/{UniqueId}</text>
+  <acceptMode>0</acceptMode>
+  <first>15</first>
+  <last>25</last>
+  <oldLast>25</oldLast>
+  <lastAppendPosition>0</lastAppendPosition>
+  <locals>
+    <int>-1</int>
+  </locals>
+  <hitEnd>false</hitEnd>
+  <requireEnd>false</requireEnd>
+  <transparentBounds>false</transparentBounds>
+  <anchoringBounds>true</anchoringBounds>
+</java.util.regex.Matcher>

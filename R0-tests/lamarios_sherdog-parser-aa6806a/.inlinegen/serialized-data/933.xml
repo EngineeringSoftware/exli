@@ -1,0 +1,113 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Aaron Kelle</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Kelle-48485</sherdogUrl>
+  <nickname></nickname>
+  <height></height>
+  <weight></weight>
+  <wins>0</wins>
+  <winsKo>0</winsKo>
+  <winsSub>0</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>1</losses>
+  <lossesKo>1</lossesKo>
+  <lossesSub>0</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>XFL - Xtreme Fight Night 336</name>
+        <sherdogUrl>https://www.sherdog.com/events/XFL-Xtreme-Fight-Night-336-56897</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Kelle</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Kelle-48485</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Stephen Skoch</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Stephen-Skoch-62805</sherdogUrl>
+      </fighter2>
+      <date>2016-10-01T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>2:17</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>XFL - XFN 2: Harris vs. Head</name>
+        <sherdogUrl>https://www.sherdog.com/events/XFL-XFN-2-Harris-vs-Head-15804</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Kelle</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Kelle-48485</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Matthew Gonzales</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Matthew-Gonzales-62515</sherdogUrl>
+      </fighter2>
+      <date>2011-02-25T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>0:50</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>FCF - Freestyle Cage Fighting 41</name>
+        <sherdogUrl>https://www.sherdog.com/events/FCF-Freestyle-Cage-Fighting-41-13063</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Billy Bussell</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Billy-Bussell-47769</sherdogUrl>
+      </fighter2>
+      <date>2010-04-17T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>1:49</winTime>
+      <winRound>2</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>5150 Combat League - Seasons Beatings</name>
+        <sherdogUrl>https://www.sherdog.com/events/5150-Combat-League-Seasons-Beatings-12167</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Aaron Ratcliff</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Ratcliff-48230</sherdogUrl>
+      </fighter2>
+      <date>2009-12-11T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>1:19</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>XFL - Collision Course</name>
+        <sherdogUrl>https://www.sherdog.com/events/XFL-Collision-Course-10500</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Victor Valenzuela</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Victor-Valenzuela-48486</sherdogUrl>
+      </fighter2>
+      <date>2009-03-06T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>1:24</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

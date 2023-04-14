@@ -1,0 +1,279 @@
+<com.sun.org.apache.xerces.internal.dom.DeferredElementImpl serialization="custom">
+  <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+    <default>
+      <flags>8</flags>
+      <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" serialization="custom">
+        <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+          <default>
+            <flags>24</flags>
+            <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" serialization="custom">
+              <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                <default>
+                  <flags>24</flags>
+                  <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredDocumentImpl" serialization="custom">
+                    <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                      <default>
+                        <flags>0</flags>
+                      </default>
+                    </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                    <com.sun.org.apache.xerces.internal.dom.ParentNode>
+                      <default>
+                        <firstChild class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../.."/>
+                        <ownerDocument class="com.sun.org.apache.xerces.internal.dom.DeferredDocumentImpl" reference="../../.."/>
+                      </default>
+                    </com.sun.org.apache.xerces.internal.dom.ParentNode>
+                    <com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl>
+                      <default>
+                        <docElement class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../.."/>
+                        <fFreeNLCache>
+                          <fLength>2</fLength>
+                          <fChildIndex>-1</fChildIndex>
+                          <fOwner class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../../../../../.."/>
+                        </fFreeNLCache>
+                        <actualEncoding>UTF-8</actualEncoding>
+                        <standalone>false</standalone>
+                        <changes>0</changes>
+                        <allowGrammarAccess>false</allowGrammarAccess>
+                        <errorChecking>true</errorChecking>
+                        <ancestorChecking>true</ancestorChecking>
+                        <xmlVersionChanged>false</xmlVersionChanged>
+                        <documentNumber>0</documentNumber>
+                        <nodeCounter>0</nodeCounter>
+                        <xml11Version>false</xml11Version>
+                      </default>
+                    </com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl>
+                    <com.sun.org.apache.xerces.internal.dom.DocumentImpl>
+                      <default>
+                        <mutationEvents>false</mutationEvents>
+                      </default>
+                    </com.sun.org.apache.xerces.internal.dom.DocumentImpl>
+                    <com.sun.org.apache.xerces.internal.dom.DeferredDocumentImpl>
+                      <default>
+                        <fNamespacesEnabled>false</fNamespacesEnabled>
+                      </default>
+                    </com.sun.org.apache.xerces.internal.dom.DeferredDocumentImpl>
+                  </ownerNode>
+                </default>
+              </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+              <com.sun.org.apache.xerces.internal.dom.ChildNode>
+                <default>
+                  <previousSibling class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../.."/>
+                </default>
+              </com.sun.org.apache.xerces.internal.dom.ChildNode>
+              <com.sun.org.apache.xerces.internal.dom.ParentNode>
+                <default>
+                  <firstChild class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../.."/>
+                  <ownerDocument class="com.sun.org.apache.xerces.internal.dom.DeferredDocumentImpl" reference="../../../com.sun.org.apache.xerces.internal.dom.NodeImpl/default/ownerNode"/>
+                </default>
+              </com.sun.org.apache.xerces.internal.dom.ParentNode>
+              <com.sun.org.apache.xerces.internal.dom.ElementImpl>
+                <default>
+                  <attributes serialization="custom">
+                    <com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl>
+                      <default>
+                        <flags>0</flags>
+                        <nodes class="vector">
+                          <com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl serialization="custom">
+                            <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                              <default>
+                                <flags>168</flags>
+                                <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../../../../../.."/>
+                              </default>
+                            </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                            <com.sun.org.apache.xerces.internal.dom.AttrImpl>
+                              <default>
+                                <name>data-format</name>
+                                <value class="string">PresentationML</value>
+                              </default>
+                            </com.sun.org.apache.xerces.internal.dom.AttrImpl>
+                          </com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl>
+                          <com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl serialization="custom">
+                            <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                              <default>
+                                <flags>168</flags>
+                                <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../../../../../.."/>
+                              </default>
+                            </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                            <com.sun.org.apache.xerces.internal.dom.AttrImpl>
+                              <default>
+                                <name>data-version</name>
+                                <value class="string">2.0</value>
+                              </default>
+                            </com.sun.org.apache.xerces.internal.dom.AttrImpl>
+                          </com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl>
+                        </nodes>
+                        <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../.."/>
+                      </default>
+                    </com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl>
+                  </attributes>
+                  <name>div</name>
+                </default>
+              </com.sun.org.apache.xerces.internal.dom.ElementImpl>
+            </ownerNode>
+          </default>
+        </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+        <com.sun.org.apache.xerces.internal.dom.ChildNode>
+          <default>
+            <previousSibling class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../.."/>
+          </default>
+        </com.sun.org.apache.xerces.internal.dom.ChildNode>
+        <com.sun.org.apache.xerces.internal.dom.ParentNode>
+          <default>
+            <firstChild class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" serialization="custom">
+              <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                <default>
+                  <flags>24</flags>
+                  <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../.."/>
+                </default>
+              </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+              <com.sun.org.apache.xerces.internal.dom.ChildNode>
+                <default>
+                  <nextSibling class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../../../../.."/>
+                  <previousSibling class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../../../../.."/>
+                </default>
+              </com.sun.org.apache.xerces.internal.dom.ChildNode>
+              <com.sun.org.apache.xerces.internal.dom.ParentNode>
+                <default>
+                  <firstChild class="com.sun.org.apache.xerces.internal.dom.DeferredTextImpl" serialization="custom">
+                    <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                      <default>
+                        <flags>24</flags>
+                        <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../.."/>
+                      </default>
+                    </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                    <com.sun.org.apache.xerces.internal.dom.ChildNode>
+                      <default>
+                        <previousSibling class="com.sun.org.apache.xerces.internal.dom.DeferredTextImpl" reference="../../.."/>
+                      </default>
+                    </com.sun.org.apache.xerces.internal.dom.ChildNode>
+                    <com.sun.org.apache.xerces.internal.dom.CharacterDataImpl>
+                      <default>
+                        <data>Hello</data>
+                      </default>
+                    </com.sun.org.apache.xerces.internal.dom.CharacterDataImpl>
+                  </firstChild>
+                  <ownerDocument class="com.sun.org.apache.xerces.internal.dom.DeferredDocumentImpl" reference="../../../../../../com.sun.org.apache.xerces.internal.dom.NodeImpl/default/ownerNode/com.sun.org.apache.xerces.internal.dom.NodeImpl/default/ownerNode"/>
+                </default>
+              </com.sun.org.apache.xerces.internal.dom.ParentNode>
+              <com.sun.org.apache.xerces.internal.dom.ElementImpl>
+                <default>
+                  <attributes serialization="custom">
+                    <com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl>
+                      <default>
+                        <flags>0</flags>
+                        <nodes class="vector"/>
+                        <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../.."/>
+                      </default>
+                    </com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl>
+                  </attributes>
+                  <name>div</name>
+                </default>
+              </com.sun.org.apache.xerces.internal.dom.ElementImpl>
+            </firstChild>
+            <ownerDocument class="com.sun.org.apache.xerces.internal.dom.DeferredDocumentImpl" reference="../../../com.sun.org.apache.xerces.internal.dom.NodeImpl/default/ownerNode/com.sun.org.apache.xerces.internal.dom.NodeImpl/default/ownerNode"/>
+          </default>
+        </com.sun.org.apache.xerces.internal.dom.ParentNode>
+        <com.sun.org.apache.xerces.internal.dom.ElementImpl>
+          <default>
+            <attributes serialization="custom">
+              <com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl>
+                <default>
+                  <flags>0</flags>
+                  <nodes class="vector">
+                    <com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl serialization="custom">
+                      <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                        <default>
+                          <flags>168</flags>
+                          <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../../../../../.."/>
+                        </default>
+                      </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                      <com.sun.org.apache.xerces.internal.dom.AttrImpl>
+                        <default>
+                          <name>data-accent-color</name>
+                          <value class="string">mauve</value>
+                        </default>
+                      </com.sun.org.apache.xerces.internal.dom.AttrImpl>
+                    </com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl>
+                    <com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl serialization="custom">
+                      <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                        <default>
+                          <flags>168</flags>
+                          <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../../../../../.."/>
+                        </default>
+                      </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                      <com.sun.org.apache.xerces.internal.dom.AttrImpl>
+                        <default>
+                          <name>data-icon-src</name>
+                          <value class="string">icon.png</value>
+                        </default>
+                      </com.sun.org.apache.xerces.internal.dom.AttrImpl>
+                    </com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl>
+                  </nodes>
+                  <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../.."/>
+                </default>
+              </com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl>
+            </attributes>
+            <name>div</name>
+          </default>
+        </com.sun.org.apache.xerces.internal.dom.ElementImpl>
+      </ownerNode>
+    </default>
+  </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+  <com.sun.org.apache.xerces.internal.dom.ChildNode>
+    <default>
+      <previousSibling class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../com.sun.org.apache.xerces.internal.dom.NodeImpl/default/ownerNode/com.sun.org.apache.xerces.internal.dom.ParentNode/default/firstChild"/>
+    </default>
+  </com.sun.org.apache.xerces.internal.dom.ChildNode>
+  <com.sun.org.apache.xerces.internal.dom.ParentNode>
+    <default>
+      <firstChild class="com.sun.org.apache.xerces.internal.dom.DeferredTextImpl" serialization="custom">
+        <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+          <default>
+            <flags>24</flags>
+            <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../.."/>
+          </default>
+        </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+        <com.sun.org.apache.xerces.internal.dom.ChildNode>
+          <default>
+            <previousSibling class="com.sun.org.apache.xerces.internal.dom.DeferredTextImpl" reference="../../.."/>
+          </default>
+        </com.sun.org.apache.xerces.internal.dom.ChildNode>
+        <com.sun.org.apache.xerces.internal.dom.CharacterDataImpl>
+          <default>
+            <data>world!</data>
+          </default>
+        </com.sun.org.apache.xerces.internal.dom.CharacterDataImpl>
+      </firstChild>
+      <ownerDocument class="com.sun.org.apache.xerces.internal.dom.DeferredDocumentImpl" reference="../../../com.sun.org.apache.xerces.internal.dom.NodeImpl/default/ownerNode/com.sun.org.apache.xerces.internal.dom.NodeImpl/default/ownerNode/com.sun.org.apache.xerces.internal.dom.NodeImpl/default/ownerNode"/>
+    </default>
+  </com.sun.org.apache.xerces.internal.dom.ParentNode>
+  <com.sun.org.apache.xerces.internal.dom.ElementImpl>
+    <default>
+      <attributes serialization="custom">
+        <com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl>
+          <default>
+            <flags>0</flags>
+            <nodes class="vector">
+              <com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl serialization="custom">
+                <com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                  <default>
+                    <flags>168</flags>
+                    <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../../../../../.."/>
+                  </default>
+                </com.sun.org.apache.xerces.internal.dom.NodeImpl>
+                <com.sun.org.apache.xerces.internal.dom.AttrImpl>
+                  <default>
+                    <name>class</name>
+                    <value class="string">cardBody</value>
+                  </default>
+                </com.sun.org.apache.xerces.internal.dom.AttrImpl>
+              </com.sun.org.apache.xerces.internal.dom.DeferredAttrImpl>
+            </nodes>
+            <ownerNode class="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" reference="../../../../../.."/>
+          </default>
+        </com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl>
+      </attributes>
+      <name>div</name>
+    </default>
+  </com.sun.org.apache.xerces.internal.dom.ElementImpl>
+</com.sun.org.apache.xerces.internal.dom.DeferredElementImpl>

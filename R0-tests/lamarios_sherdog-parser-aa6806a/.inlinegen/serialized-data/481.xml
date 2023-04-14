@@ -1,0 +1,207 @@
+<org.jsoup.nodes.Document>
+  <siblingIndex>0</siblingIndex>
+  <tag>
+    <tagName>#root</tagName>
+    <normalName>#root</normalName>
+    <isBlock>false</isBlock>
+    <formatAsBlock>true</formatAsBlock>
+    <empty>false</empty>
+    <selfClosing>false</selfClosing>
+    <preserveWhitespace>false</preserveWhitespace>
+    <formList>false</formList>
+    <formSubmit>false</formSubmit>
+  </tag>
+  <childNodes class="org.jsoup.nodes.Element$NodeList" serialization="custom">
+    <unserializable-parents/>
+    <list>
+      <default>
+        <size>1</size>
+      </default>
+      <int>1</int>
+      <org.jsoup.nodes.Element>
+        <parentNode class="org.jsoup.nodes.Document" reference="../../../.."/>
+        <siblingIndex>0</siblingIndex>
+        <tag>
+          <tagName>html</tagName>
+          <normalName>html</normalName>
+          <isBlock>true</isBlock>
+          <formatAsBlock>true</formatAsBlock>
+          <empty>false</empty>
+          <selfClosing>false</selfClosing>
+          <preserveWhitespace>false</preserveWhitespace>
+          <formList>false</formList>
+          <formSubmit>false</formSubmit>
+        </tag>
+        <childNodes class="org.jsoup.nodes.Element$NodeList" serialization="custom">
+          <unserializable-parents/>
+          <list>
+            <default>
+              <size>2</size>
+            </default>
+            <int>2</int>
+            <org.jsoup.nodes.Element>
+              <parentNode class="org.jsoup.nodes.Element" reference="../../../.."/>
+              <siblingIndex>0</siblingIndex>
+              <tag>
+                <tagName>head</tagName>
+                <normalName>head</normalName>
+                <isBlock>true</isBlock>
+                <formatAsBlock>true</formatAsBlock>
+                <empty>false</empty>
+                <selfClosing>false</selfClosing>
+                <preserveWhitespace>false</preserveWhitespace>
+                <formList>false</formList>
+                <formSubmit>false</formSubmit>
+              </tag>
+              <childNodes class="empty-list"/>
+            </org.jsoup.nodes.Element>
+            <org.jsoup.nodes.Element>
+              <parentNode class="org.jsoup.nodes.Element" reference="../../../.."/>
+              <siblingIndex>1</siblingIndex>
+              <tag>
+                <tagName>body</tagName>
+                <normalName>body</normalName>
+                <isBlock>true</isBlock>
+                <formatAsBlock>true</formatAsBlock>
+                <empty>false</empty>
+                <selfClosing>false</selfClosing>
+                <preserveWhitespace>false</preserveWhitespace>
+                <formList>false</formList>
+                <formSubmit>false</formSubmit>
+              </tag>
+              <childNodes class="org.jsoup.nodes.Element$NodeList" serialization="custom">
+                <unserializable-parents/>
+                <list>
+                  <default>
+                    <size>1</size>
+                  </default>
+                  <int>1</int>
+                  <org.jsoup.nodes.TextNode>
+                    <parentNode class="org.jsoup.nodes.Element" reference="../../../.."/>
+                    <siblingIndex>0</siblingIndex>
+                    <value class="string">America/New_York</value>
+                  </org.jsoup.nodes.TextNode>
+                </list>
+                <org.jsoup.nodes.Element_-NodeList>
+                  <default>
+                    <owner reference="../../../.."/>
+                  </default>
+                </org.jsoup.nodes.Element_-NodeList>
+              </childNodes>
+            </org.jsoup.nodes.Element>
+          </list>
+          <org.jsoup.nodes.Element_-NodeList>
+            <default>
+              <owner reference="../../../.."/>
+            </default>
+          </org.jsoup.nodes.Element_-NodeList>
+        </childNodes>
+      </org.jsoup.nodes.Element>
+    </list>
+    <org.jsoup.nodes.Element_-NodeList>
+      <default>
+        <owner class="org.jsoup.nodes.Document" reference="../../../.."/>
+      </default>
+    </org.jsoup.nodes.Element_-NodeList>
+  </childNodes>
+  <attributes>
+    <size>1</size>
+    <keys>
+      <string>/baseUri</string>
+      <null/>
+      <null/>
+    </keys>
+    <vals>
+      <string></string>
+      <null/>
+      <null/>
+    </vals>
+  </attributes>
+  <outputSettings>
+    <escapeMode>base</escapeMode>
+    <charset>UTF-8</charset>
+    <encoderThreadLocal>
+      <threadLocalHashCode>1949723393</threadLocalHashCode>
+    </encoderThreadLocal>
+    <prettyPrint>true</prettyPrint>
+    <outline>false</outline>
+    <indentAmount>1</indentAmount>
+    <syntax>html</syntax>
+  </outputSettings>
+  <parser>
+    <treeBuilder class="org.jsoup.parser.HtmlTreeBuilder">
+      <parser reference="../.."/>
+      <doc reference="../../.."/>
+      <baseUri></baseUri>
+      <currentToken class="org.jsoup.parser.Token$EOF">
+        <type>EOF</type>
+      </currentToken>
+      <settings>
+        <preserveTagCase>false</preserveTagCase>
+        <preserveAttributeCase>false</preserveAttributeCase>
+      </settings>
+      <start>
+        <type>StartTag</type>
+        <tagName>body</tagName>
+        <normalName>body</normalName>
+        <attrName></attrName>
+        <hasAttrName>false</hasAttrName>
+        <attrValue></attrValue>
+        <hasAttrValue>false</hasAttrValue>
+        <hasEmptyAttrValue>false</hasEmptyAttrValue>
+        <selfClosing>false</selfClosing>
+      </start>
+      <end>
+        <type>EndTag</type>
+        <tagName>head</tagName>
+        <normalName>head</normalName>
+        <attrName></attrName>
+        <hasAttrName>false</hasAttrName>
+        <attrValue></attrValue>
+        <hasAttrValue>false</hasAttrValue>
+        <hasEmptyAttrValue>false</hasEmptyAttrValue>
+        <selfClosing>false</selfClosing>
+      </end>
+      <state>InBody</state>
+      <baseUriSetFromDoc>false</baseUriSetFromDoc>
+      <headElement reference="../../../childNodes/list/org.jsoup.nodes.Element/childNodes/list/org.jsoup.nodes.Element"/>
+      <formattingElements/>
+      <tmplInsertMode/>
+      <pendingTableCharacters/>
+      <emptyEnd>
+        <type>EndTag</type>
+        <attrName></attrName>
+        <hasAttrName>false</hasAttrName>
+        <attrValue></attrValue>
+        <hasAttrValue>false</hasAttrValue>
+        <hasEmptyAttrValue>false</hasEmptyAttrValue>
+        <selfClosing>false</selfClosing>
+      </emptyEnd>
+      <framesetOk>false</framesetOk>
+      <fosterInserts>false</fosterInserts>
+      <fragmentParsing>false</fragmentParsing>
+      <specificScopeTarget>
+        <null/>
+      </specificScopeTarget>
+    </treeBuilder>
+    <errors serialization="custom">
+      <unserializable-parents/>
+      <list>
+        <default>
+          <size>0</size>
+        </default>
+        <int>0</int>
+      </list>
+      <org.jsoup.parser.ParseErrorList>
+        <default>
+          <initialCapacity>0</initialCapacity>
+          <maxSize>0</maxSize>
+        </default>
+      </org.jsoup.parser.ParseErrorList>
+    </errors>
+    <settings reference="../treeBuilder/settings"/>
+  </parser>
+  <quirksMode>noQuirks</quirksMode>
+  <location></location>
+  <updateMetaCharset>false</updateMetaCharset>
+</org.jsoup.nodes.Document>

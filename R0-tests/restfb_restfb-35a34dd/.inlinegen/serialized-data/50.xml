@@ -1,0 +1,14 @@
+<map>
+  <entry>
+    <string>field</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>verb</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>value</string>
+    <int>1</int>
+  </entry>
+</map>

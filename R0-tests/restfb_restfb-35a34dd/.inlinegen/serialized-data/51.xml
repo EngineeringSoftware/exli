@@ -1,0 +1,18 @@
+<map>
+  <entry>
+    <string>created_time</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>item</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>verb</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>target_ids</string>
+    <int>1</int>
+  </entry>
+</map>

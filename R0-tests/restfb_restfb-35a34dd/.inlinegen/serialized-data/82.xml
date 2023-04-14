@@ -1,0 +1,14 @@
+<map>
+  <entry>
+    <string>lot</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>street</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>valet</string>
+    <int>1</int>
+  </entry>
+</map>

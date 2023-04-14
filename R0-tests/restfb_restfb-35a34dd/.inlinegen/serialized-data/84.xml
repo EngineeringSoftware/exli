@@ -1,0 +1,26 @@
+<map>
+  <entry>
+    <string>metadata</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>flow_category</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>deeplink</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>label</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>id</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>type</string>
+    <int>1</int>
+  </entry>
+</map>

@@ -1,0 +1,4 @@
+<java.util.regex.Pattern>
+  <pattern>(	)+Suppressed\:</pattern>
+  <flags>0</flags>
+</java.util.regex.Pattern>

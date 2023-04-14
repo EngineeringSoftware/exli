@@ -1,0 +1,6 @@
+<de.redsix.pdfcompare.PageDiffCalculator>
+  <totalPixels>5</totalPixels>
+  <allowedDiffInPercent>0.0</allowedDiffInPercent>
+  <diffsFound>1</diffsFound>
+  <diffsFoundInExclusion>0</diffsFoundInExclusion>
+</de.redsix.pdfcompare.PageDiffCalculator>

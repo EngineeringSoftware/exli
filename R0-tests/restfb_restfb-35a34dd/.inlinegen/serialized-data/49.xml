@@ -1,0 +1,30 @@
+<map>
+  <entry>
+    <string>uid</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>standby</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>changes</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>id</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>time</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>changed_fields</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>messaging</string>
+    <int>1</int>
+  </entry>
+</map>

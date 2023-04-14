@@ -1,0 +1,14 @@
+<map>
+  <entry>
+    <string>call_to_actions</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>type</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>title</string>
+    <int>1</int>
+  </entry>
+</map>

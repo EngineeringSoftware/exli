@@ -1,0 +1,4 @@
+<org.craftercms.core.util.template.impl.IdentifiableStringTemplateSource>
+  <id>org.craftercms.core.exception.XmlMergeException: org.craftercms.core.exception.PathNotFoundException: urlTransformationEngine.transformedUrl</id>
+  <source>item</source>
+</org.craftercms.core.util.template.impl.IdentifiableStringTemplateSource>

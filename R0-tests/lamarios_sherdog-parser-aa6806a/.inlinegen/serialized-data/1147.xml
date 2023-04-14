@@ -1,0 +1,130 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Aaron Kreke</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Kreke-16151</sherdogUrl>
+  <nickname>Tower of Power</nickname>
+  <height></height>
+  <weight></weight>
+  <wins>4</wins>
+  <winsKo>1</winsKo>
+  <winsSub>3</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>1</losses>
+  <lossesKo>1</lossesKo>
+  <lossesSub>0</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>C3 - Summer Fight Fest 2</name>
+        <sherdogUrl>https://www.sherdog.com/events/C3-Summer-Fight-Fest-2-8179</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Kreke</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Kreke-16151</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Ron Vincent</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Ron-Vincent-35634</sherdogUrl>
+      </fighter2>
+      <date>2008-07-18T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>2:12</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>C3 - Corral Combat Classic 2</name>
+        <sherdogUrl>https://www.sherdog.com/events/C3-Corral-Combat-Classic-2-7409</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Louis Taylor</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Louis-Taylor-25948</sherdogUrl>
+      </fighter2>
+      <date>2008-04-26T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Slam)</winMethod>
+      <winTime>0:40</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>TFC 8 - Total Fight Challenge 8</name>
+        <sherdogUrl>https://www.sherdog.com/events/TFC-8-Total-Fight-Challenge-8-4938</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jim Peterson</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jim-Peterson-21632</sherdogUrl>
+      </fighter2>
+      <date>2007-04-28T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>0:31</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>IHC 11 - Apocalypse</name>
+        <sherdogUrl>https://www.sherdog.com/events/IHC-11-Apocalypse-4419</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Scott McGhee</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Scott-McGhee-19965</sherdogUrl>
+      </fighter2>
+      <date>2006-11-18T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Punches)</winMethod>
+      <winTime>3:40</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>IHC 10 - Tempest</name>
+        <sherdogUrl>https://www.sherdog.com/events/IHC-10-Tempest-3855</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Adam Kelso</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Adam-Kelso-16153</sherdogUrl>
+      </fighter2>
+      <date>2006-04-29T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Choke)</winMethod>
+      <winTime>N/A</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>C3 - Corral Combat Classic</name>
+        <sherdogUrl>https://www.sherdog.com/events/C3-Corral-Combat-Classic-6115</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Kreke</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Kreke-16151</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Brian Kovar</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Brian-Kovar-26758</sherdogUrl>
+      </fighter2>
+      <date>2007-12-01T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear Naked Choke)</winMethod>
+      <winTime>2:04</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

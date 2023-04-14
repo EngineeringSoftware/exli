@@ -1,0 +1,13 @@
+<de.redsix.pdfcompare.PageDiffCalculator>
+  <totalPixels>8696332</totalPixels>
+  <allowedDiffInPercent>0.0</allowedDiffInPercent>
+  <diffsFound>5908</diffsFound>
+  <diffsFoundInExclusion>0</diffsFoundInExclusion>
+  <diffArea>
+    <page>2</page>
+    <x1>237</x1>
+    <y1>248</y1>
+    <x2>1960</x2>
+    <y2>293</y2>
+  </diffArea>
+</de.redsix.pdfcompare.PageDiffCalculator>

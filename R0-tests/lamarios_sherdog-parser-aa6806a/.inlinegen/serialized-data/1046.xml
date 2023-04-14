@@ -1,0 +1,59 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Kenny Mbongo</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Kenny-Mbongo-412978</sherdogUrl>
+  <nickname></nickname>
+  <height></height>
+  <weight></weight>
+  <wins>0</wins>
+  <winsKo>0</winsKo>
+  <winsSub>0</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>0</losses>
+  <lossesKo>0</lossesKo>
+  <lossesSub>0</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Contenders - Contenders 33</name>
+        <sherdogUrl>https://www.sherdog.com/events/Contenders-Contenders-33-94732</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Kenny Mbongo</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Kenny-Mbongo-412978</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Sydney Omar Dacres</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Sydney-Omar-Dacres-412977</sherdogUrl>
+      </fighter2>
+      <date>2022-09-03T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>FSC - FightStar Championship 22</name>
+        <sherdogUrl>https://www.sherdog.com/events/FSC-FightStar-Championship-22-94958</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Zaein Ali</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Zaein-Ali-413868</sherdogUrl>
+      </fighter2>
+      <date>2022-07-15T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>0:00</winTime>
+      <winRound>2</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

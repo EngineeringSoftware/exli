@@ -1,0 +1,26 @@
+<map>
+  <entry>
+    <string>summary</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>can_comment</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>data</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>total_count</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>comment_order</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>count</string>
+    <int>1</int>
+  </entry>
+</map>

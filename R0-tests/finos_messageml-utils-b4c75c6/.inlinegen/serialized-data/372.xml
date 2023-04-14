@@ -1,0 +1,31 @@
+<org.commonmark.node.Text>
+  <parent class="org.commonmark.node.Paragraph">
+    <parent class="org.commonmark.node.Document">
+      <firstChild class="org.commonmark.node.Paragraph" reference="../.."/>
+      <lastChild class="org.commonmark.node.Paragraph" reference="../.."/>
+    </parent>
+    <firstChild class="org.commonmark.node.Text">
+      <parent class="org.commonmark.node.Paragraph" reference="../.."/>
+      <next class="org.commonmark.node.Text">
+        <parent class="org.commonmark.node.Paragraph" reference="../../.."/>
+        <prev class="org.commonmark.node.Text" reference="../.."/>
+        <next class="org.commonmark.node.Text" reference="../../../.."/>
+        <literal></literal>
+      </next>
+      <literal>Hello </literal>
+    </firstChild>
+    <lastChild class="org.commonmark.node.Text">
+      <parent class="org.commonmark.node.Paragraph" reference="../.."/>
+      <prev class="org.commonmark.node.Text">
+        <parent class="org.commonmark.node.Paragraph" reference="../../.."/>
+        <prev class="org.commonmark.node.Text" reference="../../../.."/>
+        <next class="org.commonmark.node.Text" reference="../.."/>
+        <literal></literal>
+      </prev>
+      <literal>!</literal>
+    </lastChild>
+  </parent>
+  <prev class="org.commonmark.node.Text" reference="../parent/firstChild/next"/>
+  <next class="org.commonmark.node.Text" reference="../parent/lastChild/prev"/>
+  <literal>USER_FOLLOW&#x92;1</literal>
+</org.commonmark.node.Text>

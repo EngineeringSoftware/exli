@@ -1,0 +1,26 @@
+<java.util.LinkedHashMap_-Entry>
+  <hash>1075939161</hash>
+  <key class="java.util.regex.Pattern">
+    <pattern>myMdc.long.*</pattern>
+    <flags>0</flags>
+  </key>
+  <value class="string">Long</value>
+  <after>
+    <hash>1976100757</hash>
+    <key class="java.util.regex.Pattern">
+      <pattern>myMdc.double.*</pattern>
+      <flags>0</flags>
+    </key>
+    <value class="string">Double</value>
+    <before reference="../.."/>
+    <after>
+      <hash>668149684</hash>
+      <key class="java.util.regex.Pattern">
+        <pattern>myMdc.string.*</pattern>
+        <flags>0</flags>
+      </key>
+      <value class="string">String</value>
+      <before reference="../.."/>
+    </after>
+  </after>
+</java.util.LinkedHashMap_-Entry>

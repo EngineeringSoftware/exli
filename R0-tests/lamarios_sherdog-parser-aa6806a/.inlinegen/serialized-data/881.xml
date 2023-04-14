@@ -1,0 +1,281 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Aaron Davis</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Davis-23061</sherdogUrl>
+  <nickname></nickname>
+  <height>5&apos;9&quot;</height>
+  <weight>186 lbs</weight>
+  <birthday>1977-01-27 06:00:00.0 UTC</birthday>
+  <wins>8</wins>
+  <winsKo>1</winsKo>
+  <winsSub>4</winsSub>
+  <winsDec>3</winsDec>
+  <winsOther>0</winsOther>
+  <losses>7</losses>
+  <lossesKo>3</lossesKo>
+  <lossesSub>4</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>LFA 32 - Allen vs. Hernandez</name>
+        <sherdogUrl>https://www.sherdog.com/events/LFA-32-Allen-vs-Hernandez-64843</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Davis</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Davis-23061</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Darrell Wood</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Darrell-Wood-26941</sherdogUrl>
+      </fighter2>
+      <date>2018-01-26T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>0:00</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>LFC 52 - Legacy Fighting Championship 52</name>
+        <sherdogUrl>https://www.sherdog.com/events/LFC-52-Legacy-Fighting-Championship-52-50273</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Ryan Spann</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Ryan-Spann-68057</sherdogUrl>
+      </fighter2>
+      <date>2016-03-25T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Guillotine Choke)</winMethod>
+      <winTime>2:53</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>LFC 48 - Legacy Fighting Championship 48</name>
+        <sherdogUrl>https://www.sherdog.com/events/LFC-48-Legacy-Fighting-Championship-48-47923</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Edgar Verdin</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Edgar-Verdin-59288</sherdogUrl>
+      </fighter2>
+      <date>2015-11-13T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>USA MMA 24 - Border War 4</name>
+        <sherdogUrl>https://www.sherdog.com/events/USA-MMA-24-Border-War-4-40107</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jason Anderson</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jason-Anderson-15984</sherdogUrl>
+      </fighter2>
+      <date>2014-03-21T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission</winMethod>
+      <winTime>1:55</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>IXFA 9 - Delta Downs</name>
+        <sherdogUrl>https://www.sherdog.com/events/IXFA-9-Delta-Downs-40105</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Brandon Farran</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Brandon-Farran-23939</sherdogUrl>
+      </fighter2>
+      <date>2013-05-18T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>3:56</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>USA MMA - Border War 3</name>
+        <sherdogUrl>https://www.sherdog.com/events/USA-MMA-Border-War-3-24863</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Carl Perry</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Carl-Perry-79627</sherdogUrl>
+      </fighter2>
+      <date>2012-08-18T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Choke)</winMethod>
+      <winTime>1:11</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>IXFA 8 - Delta Downs</name>
+        <sherdogUrl>https://www.sherdog.com/events/IXFA-8-Delta-Downs-24859</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Rakim Cleveland</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rakim-Cleveland-68068</sherdogUrl>
+      </fighter2>
+      <date>2012-07-07T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>GFA 12 - Global Fighting Alliance 12</name>
+        <sherdogUrl>https://www.sherdog.com/events/GFA-12-Global-Fighting-Alliance-12-16806</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jeremy McCombs</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jeremy-McCombs-43908</sherdogUrl>
+      </fighter2>
+      <date>2011-04-16T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>3:08</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>GFA 10 - Global Fighting Alliance 10</name>
+        <sherdogUrl>https://www.sherdog.com/events/GFA-10-Global-Fighting-Alliance-10-32491</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Andrew Ratichek</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Andrew-Ratichek-60425</sherdogUrl>
+      </fighter2>
+      <date>2011-01-14T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>BFC - Bellator Fighting Championships 31</name>
+        <sherdogUrl>https://www.sherdog.com/events/BFC-Bellator-Fighting-Championships-31-14352</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Tim Ruberg</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Tim-Ruberg-34646</sherdogUrl>
+      </fighter2>
+      <date>2010-09-30T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>1:44</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>GFA 6 - Global Fighting Alliance: Taped for Television</name>
+        <sherdogUrl>https://www.sherdog.com/events/GFA-6-Global-Fighting-Alliance-Taped-for-Television-14166</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Darrell Wood</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Darrell-Wood-26941</sherdogUrl>
+      </fighter2>
+      <date>2010-02-27T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>KO (Punch)</winMethod>
+      <winTime>0:51</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>USA MMA 6 - Night of Champions</name>
+        <sherdogUrl>https://www.sherdog.com/events/USA-MMA-6-Night-of-Champions-9797</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Aaron Garcia</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Garcia-41661</sherdogUrl>
+      </fighter2>
+      <date>2009-02-28T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>2:28</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>GFC 4 - Glory Fighting Championships 4</name>
+        <sherdogUrl>https://www.sherdog.com/events/GFC-4-Glory-Fighting-Championships-4-8211</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Justin Guthrie</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Justin-Guthrie-23397</sherdogUrl>
+      </fighter2>
+      <date>2008-07-26T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Punches)</winMethod>
+      <winTime>1:31</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>ECC - Elite Cage Combat</name>
+        <sherdogUrl>https://www.sherdog.com/events/ECC-Elite-Cage-Combat-6051</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jason Bowling</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jason-Bowling-19479</sherdogUrl>
+      </fighter2>
+      <date>2007-11-17T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear Naked Choke)</winMethod>
+      <winTime>1:37</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Greensparks 4 - Redemption</name>
+        <sherdogUrl>https://www.sherdog.com/events/Greensparks-4-Redemption-5337</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Mark Gearhart</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Mark-Gearhart-20825</sherdogUrl>
+      </fighter2>
+      <date>2007-05-05T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission</winMethod>
+      <winTime>0:32</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

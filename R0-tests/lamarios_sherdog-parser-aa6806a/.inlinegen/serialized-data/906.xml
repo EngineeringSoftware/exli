@@ -1,0 +1,471 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Aaron Johnson</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Johnson-39330</sherdogUrl>
+  <nickname>Tex</nickname>
+  <height>6&apos;1&quot;</height>
+  <weight>185 lbs</weight>
+  <birthday>1986-04-01 06:00:00.0 UTC</birthday>
+  <wins>13</wins>
+  <winsKo>1</winsKo>
+  <winsSub>12</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>10</losses>
+  <lossesKo>5</lossesKo>
+  <lossesSub>3</lossesSub>
+  <lossesDec>2</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>1</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Classic Entertainment and Sports - CES MMA 31</name>
+        <sherdogUrl>https://www.sherdog.com/events/Classic-Entertainment-and-Sports-CES-MMA-31-47895</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Johnson</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Johnson-39330</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Eric Spicely</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Eric-Spicely-63723</sherdogUrl>
+      </fighter2>
+      <date>2015-10-30T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Classic Entertainment and Sports - CES MMA 24</name>
+        <sherdogUrl>https://www.sherdog.com/events/Classic-Entertainment-and-Sports-CES-MMA-24-35091</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Greg Rebello</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Greg-Rebello-12293</sherdogUrl>
+      </fighter2>
+      <date>2014-06-27T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Guillotine Choke)</winMethod>
+      <winTime>1:07</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Warfare 9 - Apocalypse</name>
+        <sherdogUrl>https://www.sherdog.com/events/Warfare-9-Apocalypse-32073</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Rodney Wallace</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rodney-Wallace-33343</sherdogUrl>
+      </fighter2>
+      <date>2013-06-21T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>KO (Punch)</winMethod>
+      <winTime>2:00</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bellator MMA - Bellator 89</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-MMA-Bellator-89-27179</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Brennan Ward</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Brennan-Ward-41566</sherdogUrl>
+      </fighter2>
+      <date>2013-02-14T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>0:15</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>RFN - Renaissance Fight Night</name>
+        <sherdogUrl>https://www.sherdog.com/events/RFN-Renaissance-Fight-Night-25487</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Rodney Wallace</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rodney-Wallace-33343</sherdogUrl>
+      </fighter2>
+      <date>2012-07-28T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>KO (Punch)</winMethod>
+      <winTime>4:00</winTime>
+      <winRound>4</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>RFC 26 - Legends Return</name>
+        <sherdogUrl>https://www.sherdog.com/events/RFC-26-Legends-Return-22091</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>James Hammortree</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/James-Hammortree-42479</sherdogUrl>
+      </fighter2>
+      <date>2012-04-28T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission</winMethod>
+      <winTime>0:33</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>King of the Ring - VI</name>
+        <sherdogUrl>https://www.sherdog.com/events/King-of-the-Ring-VI-40237</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Misha Cirkunov</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Misha-Cirkunov-59197</sherdogUrl>
+      </fighter2>
+      <date>2012-03-17T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Heel Hook)</winMethod>
+      <winTime>2:11</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bullet Events - Battle of Rome 10</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bullet-Events-Battle-of-Rome-10-21677</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>John Walsh</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/John-Walsh-36211</sherdogUrl>
+      </fighter2>
+      <date>2012-01-21T00:00:00-06:00[America/Chicago]</date>
+      <result>NO_CONTEST</result>
+      <winMethod>NC (Accidental Head-butt)</winMethod>
+      <winTime>0:06</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>K.O. Kings - King of the Ring 5</name>
+        <sherdogUrl>https://www.sherdog.com/events/KO-Kings-King-of-the-Ring-5-19667</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Zachary Klouse</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Zachary-Klouse-67844</sherdogUrl>
+      </fighter2>
+      <date>2011-12-10T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>0:48</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>WBFN - Wild Bill&apos;s Fight Night 36</name>
+        <sherdogUrl>https://www.sherdog.com/events/WBFN-Wild-Bills-Fight-Night-36-18086</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>John Richard</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/John-Richard-67263</sherdogUrl>
+      </fighter2>
+      <date>2011-05-20T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>KO (Punches and Elbows)</winMethod>
+      <winTime>3:47</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Black and Blue Entertainment - Rebel Invasion</name>
+        <sherdogUrl>https://www.sherdog.com/events/Black-and-Blue-Entertainment-Rebel-Invasion-15084</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Matt Van Buren</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Matt-Van-Buren-64754</sherdogUrl>
+      </fighter2>
+      <date>2010-10-23T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>KO (Punches)</winMethod>
+      <winTime>0:00</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>PCB MMA - Brawl on the Beach</name>
+        <sherdogUrl>https://www.sherdog.com/events/PCB-MMA-Brawl-on-the-Beach-15551</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>T.J. Cook</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/TJ-Cook-9338</sherdogUrl>
+      </fighter2>
+      <date>2010-10-02T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission</winMethod>
+      <winTime>0:22</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>WBFN - Wild Bill&apos;s Fight Night 30</name>
+        <sherdogUrl>https://www.sherdog.com/events/WBFN-Wild-Bills-Fight-Night-30-14457</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Roger Carroll</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Roger-Carroll-29226</sherdogUrl>
+      </fighter2>
+      <date>2010-09-11T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>2:57</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Atlas Fights - Cage Rage 5</name>
+        <sherdogUrl>https://www.sherdog.com/events/Atlas-Fights-Cage-Rage-5-14382</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Brian Albin</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Brian-Albin-26740</sherdogUrl>
+      </fighter2>
+      <date>2010-08-14T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>3:34</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Rampage - Rampage 2010</name>
+        <sherdogUrl>https://www.sherdog.com/events/Rampage-Rampage-2010-13944</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Josh Eagans</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Josh-Eagans-35709</sherdogUrl>
+      </fighter2>
+      <date>2010-06-26T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bullet Fight Gear - Battle of Rome 8</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bullet-Fight-Gear-Battle-of-Rome-8-16383</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Bernard Rutherford</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Bernard-Rutherford-17598</sherdogUrl>
+      </fighter2>
+      <date>2010-01-23T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Triangle Choke)</winMethod>
+      <winTime>3:01</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>WBFN - Wild Bill&apos;s Fight Night 24</name>
+        <sherdogUrl>https://www.sherdog.com/events/WBFN-Wild-Bills-Fight-Night-24-11931</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Johnny Buck</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Johnny-Buck-48147</sherdogUrl>
+      </fighter2>
+      <date>2009-12-18T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Heel Hook)</winMethod>
+      <winTime>0:13</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Sin City Fight Club - Redline Grand Prix Opening Round</name>
+        <sherdogUrl>https://www.sherdog.com/events/Sin-City-Fight-Club-Redline-Grand-Prix-Opening-Round-11468</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Clint Hester</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Clint-Hester-43866</sherdogUrl>
+      </fighter2>
+      <date>2009-10-10T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>KO (Punches)</winMethod>
+      <winTime>0:42</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>WBFN - Wild Bill&apos;s Fight Night 21</name>
+        <sherdogUrl>https://www.sherdog.com/events/WBFN-Wild-Bills-Fight-Night-21-10532</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Steve Sawyer</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Steve-Sawyer-21134</sherdogUrl>
+      </fighter2>
+      <date>2009-07-24T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>0:35</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>SDB - Soco de Boss</name>
+        <sherdogUrl>https://www.sherdog.com/events/SDB-Soco-de-Boss-10430</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Chris Haggerty</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Chris-Haggerty-37420</sherdogUrl>
+      </fighter2>
+      <date>2009-05-30T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Kneebar)</winMethod>
+      <winTime>0:27</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Fight Party - Revenge</name>
+        <sherdogUrl>https://www.sherdog.com/events/Fight-Party-Revenge-10200</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Justin Williams</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Justin-Williams-46943</sherdogUrl>
+      </fighter2>
+      <date>2009-05-16T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>0:18</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>LOF 30 - Rebirth</name>
+        <sherdogUrl>https://www.sherdog.com/events/LOF-30-Rebirth-9738</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Kris Boyden</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Kris-Boyden-33383</sherdogUrl>
+      </fighter2>
+      <date>2009-02-06T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>3:36</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>WBFN - Wild Bill&apos;s Fight Night 17</name>
+        <sherdogUrl>https://www.sherdog.com/events/WBFN-Wild-Bills-Fight-Night-17-9847</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Clint Hester</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Clint-Hester-43866</sherdogUrl>
+      </fighter2>
+      <date>2008-11-08T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Doctor Stoppage)</winMethod>
+      <winTime>1:18</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>SOS - Showcase of Strength</name>
+        <sherdogUrl>https://www.sherdog.com/events/SOS-Showcase-of-Strength-9213</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>B.J. Ferguson</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/BJ-Ferguson-31949</sherdogUrl>
+      </fighter2>
+      <date>2008-10-03T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>2:35</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>WBFN - Wild Bill&apos;s Fight Night 15</name>
+        <sherdogUrl>https://www.sherdog.com/events/WBFN-Wild-Bills-Fight-Night-15-12249</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Johnson</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Johnson-39330</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Emeka Abanifi</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Emeka-Abanifi-57672</sherdogUrl>
+      </fighter2>
+      <date>2008-07-18T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>ECF - Elite Cage Fighting 24</name>
+        <sherdogUrl>https://www.sherdog.com/events/ECF-Elite-Cage-Fighting-24-8959</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[25]/fighter1"/>
+      <fighter2>
+        <name>Caleb Parrish</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Caleb-Parrish-39320</sherdogUrl>
+      </fighter2>
+      <date>2008-07-12T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

@@ -1,0 +1,3 @@
+<org.cyclonedx.model.Dependency>
+  <ref>http://cyclonedx.org/schema/ext/vulnerability/1.0</ref>
+</org.cyclonedx.model.Dependency>

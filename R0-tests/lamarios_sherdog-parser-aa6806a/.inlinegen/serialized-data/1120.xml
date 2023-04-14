@@ -1,0 +1,144 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Aaron Garrett</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Garrett-2653</sherdogUrl>
+  <nickname></nickname>
+  <height></height>
+  <weight></weight>
+  <wins>4</wins>
+  <winsKo>2</winsKo>
+  <winsSub>2</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>3</losses>
+  <lossesKo>1</lossesKo>
+  <lossesSub>2</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>MCC 7 - Valentine&apos;s Massacre</name>
+        <sherdogUrl>https://www.sherdog.com/events/MCC-7-Valentines-Massacre-4882</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Garrett</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Garrett-2653</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Jake Brown</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jake-Brown-18255</sherdogUrl>
+      </fighter2>
+      <date>2007-02-17T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>N/A</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>IC 16 - Iowa Challenge 16</name>
+        <sherdogUrl>https://www.sherdog.com/events/IC-16-Iowa-Challenge-16-2635</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Carl King</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Carl-King-11502</sherdogUrl>
+      </fighter2>
+      <date>2004-10-23T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>N/A</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UT - Ultimate Throwdown</name>
+        <sherdogUrl>https://www.sherdog.com/events/UT-Ultimate-Throwdown-2479</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Rudy Bork</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rudy-Bork-3451</sherdogUrl>
+      </fighter2>
+      <date>2004-07-16T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>7:51</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>AFA - Return of the Champions</name>
+        <sherdogUrl>https://www.sherdog.com/events/AFA-Return-of-the-Champions-2248</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Joe Cunningham</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Joe-Cunningham-9926</sherdogUrl>
+      </fighter2>
+      <date>2004-03-27T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>N/A</winTime>
+      <winRound>0</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>AFA - Return of the Champions</name>
+        <sherdogUrl>https://www.sherdog.com/events/AFA-Return-of-the-Champions-2248</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Mitch Baruth</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Mitch-Baruth-5320</sherdogUrl>
+      </fighter2>
+      <date>2004-03-27T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>KO (Punches)</winMethod>
+      <winTime>N/A</winTime>
+      <winRound>0</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>VFC 1 - Victory Fighting Championships 1</name>
+        <sherdogUrl>https://www.sherdog.com/events/VFC-1-Victory-Fighting-Championships-1-1044</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Justin James</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Justin-James-1926</sherdogUrl>
+      </fighter2>
+      <date>2002-06-16T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Submission to Punches)</winMethod>
+      <winTime>0:20</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>RW - Ring Wars</name>
+        <sherdogUrl>https://www.sherdog.com/events/RW-Ring-Wars-7980</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Corey Short</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Corey-Short-3453</sherdogUrl>
+      </fighter2>
+      <date>2002-03-30T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Submission to Strikes)</winMethod>
+      <winTime>0:58</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

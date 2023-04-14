@@ -1,0 +1,161 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Aaron Young</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Young-41095</sherdogUrl>
+  <nickname></nickname>
+  <height></height>
+  <weight></weight>
+  <wins>6</wins>
+  <winsKo>2</winsKo>
+  <winsSub>3</winsSub>
+  <winsDec>1</winsDec>
+  <winsOther>0</winsOther>
+  <losses>2</losses>
+  <lossesKo>1</lossesKo>
+  <lossesSub>1</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Battle Tested</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Battle-Tested-38067</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Young</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Young-41095</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Eddie Larrea</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Eddie-Larrea-28037</sherdogUrl>
+      </fighter2>
+      <date>2014-07-12T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Patriarch</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Patriarch-31401</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Chad Reiner</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Chad-Reiner-14016</sherdogUrl>
+      </fighter2>
+      <date>2013-07-06T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>0:46</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - High Octane</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-High-Octane-28295</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Zach Browder</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Zach-Browder-37701</sherdogUrl>
+      </fighter2>
+      <date>2013-03-16T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>0:38</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Brutaal - Fight Night</name>
+        <sherdogUrl>https://www.sherdog.com/events/Brutaal-Fight-Night-25281</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>James Austen Heidlage</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/James-Austen-Heidlage-92579</sherdogUrl>
+      </fighter2>
+      <date>2012-09-29T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>0:46</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>CFX 34 - Rumble in the Rapids 3</name>
+        <sherdogUrl>https://www.sherdog.com/events/CFX-34-Rumble-in-the-Rapids-3-23271</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Lucas St. Claire</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Lucas-St-Claire-24118</sherdogUrl>
+      </fighter2>
+      <date>2012-06-23T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>2:57</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>CFX - Gladiator Evolution</name>
+        <sherdogUrl>https://www.sherdog.com/events/CFX-Gladiator-Evolution-12203</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jay Porter</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jay-Porter-16542</sherdogUrl>
+      </fighter2>
+      <date>2009-08-15T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Kimura)</winMethod>
+      <winTime>4:00</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Brutaal - Fight Night</name>
+        <sherdogUrl>https://www.sherdog.com/events/Brutaal-Fight-Night-12149</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Adam Rothfelder</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Adam-Rothfelder-57950</sherdogUrl>
+      </fighter2>
+      <date>2008-11-06T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>0:45</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>CFX - Cage Fighting Extreme</name>
+        <sherdogUrl>https://www.sherdog.com/events/CFX-Cage-Fighting-Extreme-9314</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Joseph Young</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Joseph-Young-41092</sherdogUrl>
+      </fighter2>
+      <date>2008-06-28T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Guillotine Choke)</winMethod>
+      <winTime>4:26</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

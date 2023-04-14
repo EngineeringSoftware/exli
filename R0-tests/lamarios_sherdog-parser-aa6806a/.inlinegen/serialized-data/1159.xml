@@ -1,0 +1,127 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Aaron Barnard</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Barnard-22170</sherdogUrl>
+  <nickname></nickname>
+  <height></height>
+  <weight></weight>
+  <wins>1</wins>
+  <winsKo>1</winsKo>
+  <winsSub>0</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>5</losses>
+  <lossesKo>3</lossesKo>
+  <lossesSub>2</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>FFL 6 - Hierarchy</name>
+        <sherdogUrl>https://www.sherdog.com/events/FFL-6-Hierarchy-30163</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Barnard</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Barnard-22170</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Duncan Wilson</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Duncan-Wilson-31218</sherdogUrl>
+      </fighter2>
+      <date>2013-05-10T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Keylock)</winMethod>
+      <winTime>4:20</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>FFL 2 - Origins</name>
+        <sherdogUrl>https://www.sherdog.com/events/FFL-2-Origins-25861</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Ayrin Avey</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Ayrin-Avey-117137</sherdogUrl>
+      </fighter2>
+      <date>2012-10-19T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>0:25</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>SBD - Summer Beat Down</name>
+        <sherdogUrl>https://www.sherdog.com/events/SBD-Summer-Beat-Down-20975</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Cassian Alexy</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Cassian-Alexy-31217</sherdogUrl>
+      </fighter2>
+      <date>2009-08-07T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>1:15</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Excalibur</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Excalibur-7350</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jason Volpe</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jason-Volpe-20212</sherdogUrl>
+      </fighter2>
+      <date>2008-07-19T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>2:12</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>RITC - Rumble in the Cage 24</name>
+        <sherdogUrl>https://www.sherdog.com/events/RITC-Rumble-in-the-Cage-24-5293</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Travis Briere</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Travis-Briere-18909</sherdogUrl>
+      </fighter2>
+      <date>2007-06-09T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>N/A</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>RKFC - Ring King Fight Challenge</name>
+        <sherdogUrl>https://www.sherdog.com/events/RKFC-Ring-King-Fight-Challenge-5093</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Darrin Schritt</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Darrin-Schritt-20396</sherdogUrl>
+      </fighter2>
+      <date>2007-04-14T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO</winMethod>
+      <winTime>0:41</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

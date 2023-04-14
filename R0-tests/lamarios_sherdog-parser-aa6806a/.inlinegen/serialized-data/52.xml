@@ -1,0 +1,519 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Rustam Khabilov</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Rustam-Khabilov-45417</sherdogUrl>
+  <nickname>Tiger</nickname>
+  <height>5&apos;8&quot;</height>
+  <weight>170 lbs</weight>
+  <birthday>1986-11-04 06:00:00.0 UTC</birthday>
+  <wins>24</wins>
+  <winsKo>4</winsKo>
+  <winsSub>5</winsSub>
+  <winsDec>15</winsDec>
+  <winsOther>0</winsOther>
+  <losses>4</losses>
+  <lossesKo>0</lossesKo>
+  <lossesSub>1</lossesSub>
+  <lossesDec>3</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event class="com.ftpix.sherdogparser.models.Event">
+        <name>Bellator 293</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-293-Golm-vs-James-96285</sherdogUrl>
+        <date>2023-03-31T15:00:00+08:00[Asia/Kuala_Lumpur]</date>
+        <fights/>
+        <location>Temecula, California, United States</location>
+      </event>
+      <fighter1 class="com.ftpix.sherdogparser.models.Fighter" reference="../../.."/>
+      <fighter2>
+        <name>Jaleel Willis</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jaleel-Willis-146637</sherdogUrl>
+      </fighter2>
+      <date>2023-03-31T15:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>NOT_HAPPENED</result>
+      <winRound>0</winRound>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 163 - Magomedsharipov vs. Kattar</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-163-Magomedsharipov-vs-Kattar-79823</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Rustam Khabilov</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rustam-Khabilov-45417</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Sergey Khandozhko</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Sergey-Khandozhko-91889</sherdogUrl>
+      </fighter2>
+      <date>2019-11-09T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 145 - Blachowicz vs. Santos</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-145-Blachowicz-vs-Santos-72051</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Diego Ferreira</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Diego-Ferreira-26358</sherdogUrl>
+      </fighter2>
+      <date>2019-02-23T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 136 - Hunt vs. Oleynik</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-136-Hunt-vs-Oleynik-68195</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Kajan Johnson</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Kajan-Johnson-5615</sherdogUrl>
+      </fighter2>
+      <date>2018-09-15T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 115 - Volkov vs. Struve</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-115-Volkov-vs-Struve-58751</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Desmond Green</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Desmond-Green-89993</sherdogUrl>
+      </fighter2>
+      <date>2017-09-02T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 206 - Holloway vs. Pettis</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-206-Holloway-vs-Pettis-55001</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Jason Saggo</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jason-Saggo-58213</sherdogUrl>
+      </fighter2>
+      <date>2016-12-10T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 93 - Arlovski vs. Barnett</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-93-Arlovski-vs-Barnett-52185</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Leandro Silva</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Leandro-Silva-86382</sherdogUrl>
+      </fighter2>
+      <date>2016-09-03T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 87 - Overeem vs. Arlovski</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-87-Overeem-vs-Arlovski-50621</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Chris Wade</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Chris-Wade-79335</sherdogUrl>
+      </fighter2>
+      <date>2016-05-08T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 84 - Silva vs. Bisping</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-84-Silva-vs-Bisping-47937</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Norman Parke</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Norman-Parke-47549</sherdogUrl>
+      </fighter2>
+      <date>2016-02-27T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 61 - Bigfoot vs. Mir</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-61-Bigfoot-vs-Mir-38843</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Adriano Martins</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Adriano-Martins-9907</sherdogUrl>
+      </fighter2>
+      <date>2015-02-22T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 42 - Henderson vs. Khabilov</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-42-Henderson-vs-Khabilov-36711</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Benson Henderson</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Benson-Henderson-20548</sherdogUrl>
+      </fighter2>
+      <date>2014-06-07T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>1:16</winTime>
+      <winRound>4</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 31 - Fight for the Troops 3</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-31-Fight-for-the-Troops-3-32077</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Jorge Masvidal</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jorge-Masvidal-7688</sherdogUrl>
+      </fighter2>
+      <date>2013-11-06T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 159 - Jones vs. Sonnen</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-159-Jones-vs-Sonnen-25825</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Yancy Medeiros</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Yancy-Medeiros-27738</sherdogUrl>
+      </fighter2>
+      <date>2013-04-27T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Thumb Injury)</winMethod>
+      <winTime>2:32</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC - The Ultimate Fighter 16 Finale</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-The-Ultimate-Fighter-16-Finale-24719</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Vinc Pichel</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Vinc-Pichel-57848</sherdogUrl>
+      </fighter2>
+      <date>2012-12-15T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>KO (Suplex and Punches)</winMethod>
+      <winTime>2:15</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Pure MMA 2 - Next Episode</name>
+        <sherdogUrl>https://www.sherdog.com/events/Pure-MMA-2-Next-Episode-21129</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Jason Dent</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jason-Dent-8321</sherdogUrl>
+      </fighter2>
+      <date>2012-05-12T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>One FC 2 - Battle of Heroes</name>
+        <sherdogUrl>https://www.sherdog.com/events/One-FC-2-Battle-of-Heroes-18821</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Rodrigo Ribeiro</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rodrigo-Ribeiro-23524</sherdogUrl>
+      </fighter2>
+      <date>2012-02-11T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>ProFC Grand Prix Global - Caucasus</name>
+        <sherdogUrl>https://www.sherdog.com/events/ProFC-Grand-Prix-Global-Caucasus-18606</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Nazir Kadyzhev</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Nazir-Kadyzhev-80237</sherdogUrl>
+      </fighter2>
+      <date>2011-09-26T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>4:58</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>M-1 Selection Ukraine 2010 - The Finals</name>
+        <sherdogUrl>https://www.sherdog.com/events/M1-Selection-Ukraine-2010-The-Finals-16205</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Ruslan Khaskhanov</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Ruslan-Khaskhanov-45418</sherdogUrl>
+      </fighter2>
+      <date>2011-02-12T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>M-1 Selection Ukraine 2010 - Round 6</name>
+        <sherdogUrl>https://www.sherdog.com/events/M1-Selection-Ukraine-2010-Round-6-15675</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Sergei Utochkin</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Sergei-Utochkin-74948</sherdogUrl>
+      </fighter2>
+      <date>2010-11-06T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>1:28</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>M-1 Selection Ukraine 2010 - Clash of the Titans</name>
+        <sherdogUrl>https://www.sherdog.com/events/M1-Selection-Ukraine-2010-Clash-of-the-Titans-14743</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Gleb Morozov</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Gleb-Morozov-70891</sherdogUrl>
+      </fighter2>
+      <date>2010-09-18T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>4:36</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>M-1 Selection Ukraine 2010 - Round 2</name>
+        <sherdogUrl>https://www.sherdog.com/events/M1-Selection-Ukraine-2010-Round-2-15213</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Andrei Balakhonov</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Andrei-Balakhonov-70887</sherdogUrl>
+      </fighter2>
+      <date>2010-05-07T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>1:34</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>M-1 Challenge - 2009 Selections 8</name>
+        <sherdogUrl>https://www.sherdog.com/events/M1-Challenge-2009-Selections-8-11480</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Said Khalilov</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Said-Khalilov-11791</sherdogUrl>
+      </fighter2>
+      <date>2009-10-04T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>M-1 Challenge - 2009 Selections 6</name>
+        <sherdogUrl>https://www.sherdog.com/events/M1-Challenge-2009-Selections-6-11187</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Gasanali Gasanaliev</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Gasanali-Gasanaliev-51563</sherdogUrl>
+      </fighter2>
+      <date>2009-09-05T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>M-1 Challenge 18 - Netherlands Day Two</name>
+        <sherdogUrl>https://www.sherdog.com/events/M1-Challenge-18-Netherlands-Day-Two-11016</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Akin Duran</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Akin-Duran-16737</sherdogUrl>
+      </fighter2>
+      <date>2009-08-16T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>KO (Slam)</winMethod>
+      <winTime>0:08</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>M-1 Challenge - 2009 Selections 4</name>
+        <sherdogUrl>https://www.sherdog.com/events/M1-Challenge-2009-Selections-4-10890</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Vener Galiev</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Vener-Galiev-23616</sherdogUrl>
+      </fighter2>
+      <date>2009-06-24T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>M-1 Challenge - 2009 Selections 2</name>
+        <sherdogUrl>https://www.sherdog.com/events/M1-Challenge-2009-Selections-2-10042</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Vladimir Papusha</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Vladimir-Papusha-6619</sherdogUrl>
+      </fighter2>
+      <date>2009-04-19T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>2:04</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>CSFU - Champions League</name>
+        <sherdogUrl>https://www.sherdog.com/events/CSFU-Champions-League-14801</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Hamiz Mamedov</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Hamiz-Mamedov-55080</sherdogUrl>
+      </fighter2>
+      <date>2008-09-13T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>CFF - International MMA Tournament</name>
+        <sherdogUrl>https://www.sherdog.com/events/CFF-International-MMA-Tournament-14804</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Karen Grigoryan</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Karen-Grigoryan-10860</sherdogUrl>
+      </fighter2>
+      <date>2007-12-09T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>TFC 1 - Tsumada Fighting Championship</name>
+        <sherdogUrl>https://www.sherdog.com/events/TFC-1-Tsumada-Fighting-Championship-16746</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[2]/fighter1"/>
+      <fighter2>
+        <name>Bagautdin Abasov</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Bagautdin-Abasov-51360</sherdogUrl>
+      </fighter2>
+      <date>2007-08-03T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Triangle Choke)</winMethod>
+      <winTime>2:14</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

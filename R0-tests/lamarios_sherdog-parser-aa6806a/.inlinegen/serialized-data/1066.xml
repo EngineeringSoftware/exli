@@ -1,0 +1,284 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>A.J. Dobson</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/AJ-Dobson-119943</sherdogUrl>
+  <nickname></nickname>
+  <height>6&apos;2&quot;</height>
+  <weight>185 lbs</weight>
+  <birthday>1992-01-18 06:00:00.0 UTC</birthday>
+  <wins>6</wins>
+  <winsKo>3</winsKo>
+  <winsSub>2</winsSub>
+  <winsDec>1</winsDec>
+  <winsOther>0</winsOther>
+  <losses>2</losses>
+  <lossesKo>0</lossesKo>
+  <lossesSub>0</lossesSub>
+  <lossesDec>2</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>1</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 280 - Oliveira vs. Makhachev</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-280-Oliveira-vs-Makhachev-92490</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>A.J. Dobson</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/AJ-Dobson-119943</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Armen Petrosyan</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Armen-Petrosyan-302783</sherdogUrl>
+      </fighter2>
+      <date>2022-10-22T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 271 - Adesanya vs. Whittaker 2</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-271-Adesanya-vs-Whittaker-2-90742</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jacob Malkoun</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jacob-Malkoun-204645</sherdogUrl>
+      </fighter2>
+      <date>2022-02-12T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Dana White&apos;s Contender Series - Contender Series 2021: Week 4</name>
+        <sherdogUrl>https://www.sherdog.com/events/Dana-Whites-Contender-Series-Contender-Series-2021-Week-4-89240</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Hashem Arkhagha</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Hashem-Arkhagha-74722</sherdogUrl>
+      </fighter2>
+      <date>2021-09-21T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>4:21</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>SHP 57 - Strike Hard Productions 57</name>
+        <sherdogUrl>https://www.sherdog.com/events/SHP-57-Strike-Hard-Productions-57-87878</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Kailan Hill</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Kailan-Hill-232313</sherdogUrl>
+      </fighter2>
+      <date>2020-11-07T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>KO (Punches)</winMethod>
+      <winTime>0:35</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Honor FC 6 - Fight Night Nautica</name>
+        <sherdogUrl>https://www.sherdog.com/events/Honor-FC-6-Fight-Night-Nautica-70041</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Wesley Golden</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Wesley-Golden-52401</sherdogUrl>
+      </fighter2>
+      <date>2018-08-18T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>0:24</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Alpha One Sports - IT Fight Series 78</name>
+        <sherdogUrl>https://www.sherdog.com/events/Alpha-One-Sports-IT-Fight-Series-78-64893</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Montrell James</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Montrell-James-206849</sherdogUrl>
+      </fighter2>
+      <date>2017-12-09T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Territorial Dispute</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Territorial-Dispute-58243</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Willie Whitehead</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Willie-Whitehead-211617</sherdogUrl>
+      </fighter2>
+      <date>2017-04-15T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Submission to Punches)</winMethod>
+      <winTime>1:43</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>DCS 33 - Spring Brawl 2017</name>
+        <sherdogUrl>https://www.sherdog.com/events/DCS-33-Spring-Brawl-2017-59065</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Seth Bass</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Seth-Bass-124667</sherdogUrl>
+      </fighter2>
+      <date>2017-04-01T00:00:00-05:00[America/Chicago]</date>
+      <result>NO_CONTEST</result>
+      <winMethod>NC (Accidental Eye Poke)</winMethod>
+      <winTime>0:43</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>RFO - Big Guns 19</name>
+        <sherdogUrl>https://www.sherdog.com/events/RFO-Big-Guns-19-52653</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jarrel Miller</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jarrel-Miller-89177</sherdogUrl>
+      </fighter2>
+      <date>2016-06-25T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>1:00</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>RFO - Big Guns 12</name>
+        <sherdogUrl>https://www.sherdog.com/events/RFO-Big-Guns-12-32655</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>A.J. Dobson</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/AJ-Dobson-119943</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>John Gunther</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/John-Gunther-86098</sherdogUrl>
+      </fighter2>
+      <date>2013-08-31T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>NAAFS - Fight Night in the Flats 9</name>
+        <sherdogUrl>https://www.sherdog.com/events/NAAFS-Fight-Night-in-the-Flats-9-30083</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Joshua John Lasich</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Joshua-John-Lasich-79552</sherdogUrl>
+      </fighter2>
+      <date>2013-06-01T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>NAAFS - Caged Vengeance 13</name>
+        <sherdogUrl>https://www.sherdog.com/events/NAAFS-Caged-Vengeance-13-28231</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Dustin Wolf</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Dustin-Wolf-76643</sherdogUrl>
+      </fighter2>
+      <date>2013-03-30T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Triangle Choke and Punches)</winMethod>
+      <winTime>2:08</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>NAAFS - Caged Fury 20</name>
+        <sherdogUrl>https://www.sherdog.com/events/NAAFS-Caged-Fury-20-25247</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Nathan Davies</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Nathan-Davies-82554</sherdogUrl>
+      </fighter2>
+      <date>2012-11-10T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>0:12</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>NFC 7 - Field of Fury</name>
+        <sherdogUrl>https://www.sherdog.com/events/NFC-7-Field-of-Fury-28149</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Jonathan Burkley</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jonathan-Burkley-126503</sherdogUrl>
+      </fighter2>
+      <date>2012-06-23T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>2:25</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Purgatory FS 7 - Purgatory Fight Series 7</name>
+        <sherdogUrl>https://www.sherdog.com/events/Purgatory-FS-7-Purgatory-Fight-Series-7-24831</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Mike Rehard</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Mike-Rehard-136357</sherdogUrl>
+      </fighter2>
+      <date>2012-05-12T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

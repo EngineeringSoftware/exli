@@ -1,0 +1,165 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Aaron Hamilton</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Hamilton-65199</sherdogUrl>
+  <nickname>The Snake</nickname>
+  <height>5&apos;11&quot;</height>
+  <weight>184 lbs</weight>
+  <birthday>1982-11-20 06:00:00.0 UTC</birthday>
+  <wins>1</wins>
+  <winsKo>0</winsKo>
+  <winsSub>1</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>6</losses>
+  <lossesKo>4</lossesKo>
+  <lossesSub>1</lossesSub>
+  <lossesDec>1</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>TPF 35 - Tachi Palace Fights 35</name>
+        <sherdogUrl>https://www.sherdog.com/events/TPF-35-Tachi-Palace-Fights-35-84133</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Hamilton</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Hamilton-65199</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Evan Solorio</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Evan-Solorio-92453</sherdogUrl>
+      </fighter2>
+      <date>2018-11-09T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>KO</winMethod>
+      <winTime>0:36</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>CXF 11 - Alpha Dog</name>
+        <sherdogUrl>https://www.sherdog.com/events/CXF-11-Alpha-Dog-65323</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Edmen Shahbazyan</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Edmen-Shahbazyan-247691</sherdogUrl>
+      </fighter2>
+      <date>2018-02-17T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>1:08</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>GKO 11 - Global Knockout 11</name>
+        <sherdogUrl>https://www.sherdog.com/events/GKO-11-Global-Knockout-11-63939</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Sinjen Smith</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Sinjen-Smith-99015</sherdogUrl>
+      </fighter2>
+      <date>2017-11-04T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>3:43</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>CFC 3 - Conquer Fighting Championships 3</name>
+        <sherdogUrl>https://www.sherdog.com/events/CFC-3-Conquer-Fighting-Championships-3-58709</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jumoke Hunter</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jumoke-Hunter-217157</sherdogUrl>
+      </fighter2>
+      <date>2017-03-18T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Bellator 165 - Chandler vs. Henderson</name>
+        <sherdogUrl>https://www.sherdog.com/events/Bellator-165-Chandler-vs-Henderson-54909</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Kevin Ferguson Jr.</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Kevin-Ferguson-Jr-230681</sherdogUrl>
+      </fighter2>
+      <date>2016-11-19T00:00:00-06:00[America/Chicago]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Guillotine Choke)</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Home Turf</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Home-Turf-51335</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Richard Dusio</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Richard-Dusio-219907</sherdogUrl>
+      </fighter2>
+      <date>2016-03-19T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>1:57</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Gladiator Challenge - Undisputed</name>
+        <sherdogUrl>https://www.sherdog.com/events/Gladiator-Challenge-Undisputed-14274</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Max Griffin</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Max-Griffin-53904</sherdogUrl>
+      </fighter2>
+      <date>2010-09-18T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>2:20</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>FFW - Fight for Wrestling 1</name>
+        <sherdogUrl>https://www.sherdog.com/events/FFW-Fight-for-Wrestling-1-13375</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Aaron Hamilton</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Hamilton-65199</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>John Hackleman Jr.</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/John-Hackleman-Jr-65198</sherdogUrl>
+      </fighter2>
+      <date>2010-05-22T00:00:00-05:00[America/Chicago]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

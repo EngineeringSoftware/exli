@@ -1,0 +1,26 @@
+<map>
+  <entry>
+    <string>metadata</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>src</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>width</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>id</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>type</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>height</string>
+    <int>1</int>
+  </entry>
+</map>

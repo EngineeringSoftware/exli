@@ -1,0 +1,22 @@
+<map>
+  <entry>
+    <string>image</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>metadata</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>source</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>id</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>type</string>
+    <int>1</int>
+  </entry>
+</map>

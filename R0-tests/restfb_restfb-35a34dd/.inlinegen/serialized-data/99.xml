@@ -1,0 +1,14 @@
+<map>
+  <entry>
+    <string>access_token</string>
+    <list>
+      <string>&lt;access-token&gt;</string>
+    </list>
+  </entry>
+  <entry>
+    <string>expires</string>
+    <list>
+      <string>5184000</string>
+    </list>
+  </entry>
+</map>

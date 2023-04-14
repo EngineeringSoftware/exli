@@ -1,0 +1,385 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Shane Cadotte</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Shane-Cadotte-41891</sherdogUrl>
+  <nickname></nickname>
+  <height></height>
+  <weight></weight>
+  <wins>3</wins>
+  <winsKo>1</winsKo>
+  <winsSub>2</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>6</losses>
+  <lossesKo>3</lossesKo>
+  <lossesSub>3</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>SMMA - Shine MMA 5</name>
+        <sherdogUrl>https://www.sherdog.com/events/SMMA-Shine-MMA-5-40551</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Shane Cadotte</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Shane-Cadotte-41891</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Kurtis Ehrhorn</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Kurtis-Ehrhorn-63520</sherdogUrl>
+      </fighter2>
+      <date>2014-06-28T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Punches)</winMethod>
+      <winTime>0:51</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Clockwork</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Clockwork-36531</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jeff Paradise</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jeff-Paradise-148925</sherdogUrl>
+      </fighter2>
+      <date>2014-04-26T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>0:14</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>SMMA - Shine MMA 2</name>
+        <sherdogUrl>https://www.sherdog.com/events/SMMA-Shine-MMA-2-40555</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Daniel Wales</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Daniel-Wales-70785</sherdogUrl>
+      </fighter2>
+      <date>2013-12-07T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>1:57</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Under Fire</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Under-Fire-33417</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Joel Chapman</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Joel-Chapman-114185</sherdogUrl>
+      </fighter2>
+      <date>2013-10-12T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>1:36</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Trump Card</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Trump-Card-19961</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Dale Bennett</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Dale-Bennett-52222</sherdogUrl>
+      </fighter2>
+      <date>2012-06-30T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>3:45</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Driller Promotions / SEG - Downtown Showdown 5</name>
+        <sherdogUrl>https://www.sherdog.com/events/Driller-Promotions-SEG-Downtown-Showdown-5-22503</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Erik Vo</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Erik-Vo-31141</sherdogUrl>
+      </fighter2>
+      <date>2012-05-18T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>1:45</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Punch Out</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Punch-Out-19947</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Cody Osborne</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Cody-Osborne-87099</sherdogUrl>
+      </fighter2>
+      <date>2012-04-14T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>2:02</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Interference</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Interference-15862</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Dale Bennett</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Dale-Bennett-52222</sherdogUrl>
+      </fighter2>
+      <date>2011-10-08T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Guillotine Choke)</winMethod>
+      <winTime>2:44</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Compression Test</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Compression-Test-17734</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Tony Zelinski</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Tony-Zelinski-47623</sherdogUrl>
+      </fighter2>
+      <date>2011-07-23T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>3:41</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Outkasts</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Outkasts-15847</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Shane Cadotte</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Shane-Cadotte-41891</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Rusty Defoe</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rusty-Defoe-73892</sherdogUrl>
+      </fighter2>
+      <date>2011-04-09T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Arm-Triangle Choke)</winMethod>
+      <winTime>2:25</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - High Profile</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-High-Profile-14961</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Brian Bagin</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Brian-Bagin-42358</sherdogUrl>
+      </fighter2>
+      <date>2010-10-09T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>1:00</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>EFC - Evolution Fighting Championships 11</name>
+        <sherdogUrl>https://www.sherdog.com/events/EFC-Evolution-Fighting-Championships-11-14446</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>John Hasch</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/John-Hasch-41317</sherdogUrl>
+      </fighter2>
+      <date>2010-08-21T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>2:09</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Chain Reaction</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Chain-Reaction-13969</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Dale Bennett</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Dale-Bennett-52222</sherdogUrl>
+      </fighter2>
+      <date>2010-07-17T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>1:37</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Turbulence 2</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Turbulence-2-13364</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Johnathan Meins</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Johnathan-Meins-55040</sherdogUrl>
+      </fighter2>
+      <date>2010-04-24T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Strike Point</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Strike-Point-11115</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Rocky Delorme</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rocky-Delorme-41323</sherdogUrl>
+      </fighter2>
+      <date>2009-10-10T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>3:00</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Connection</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Connection-10527</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Jason Gignac</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jason-Gignac-48009</sherdogUrl>
+      </fighter2>
+      <date>2009-07-18T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Guillotine Choke)</winMethod>
+      <winTime>2:28</winTime>
+      <winRound>2</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>EFC 10 - Evolution Fighting Championships 10</name>
+        <sherdogUrl>https://www.sherdog.com/events/EFC-10-Evolution-Fighting-Championships-10-10387</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>David Hartline</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/David-Hartline-37664</sherdogUrl>
+      </fighter2>
+      <date>2009-05-30T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>1:59</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>FS - First Strike</name>
+        <sherdogUrl>https://www.sherdog.com/events/FS-First-Strike-10209</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Dylan Falduto</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Dylan-Falduto-37700</sherdogUrl>
+      </fighter2>
+      <date>2009-05-02T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>2:54</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Insanity</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Insanity-9659</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Dylan Copeskey</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Dylan-Copeskey-41324</sherdogUrl>
+      </fighter2>
+      <date>2009-04-04T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Guillotine Choke)</winMethod>
+      <winTime>0:34</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Combat USA - War at Waverly</name>
+        <sherdogUrl>https://www.sherdog.com/events/Combat-USA-War-at-Waverly-9457</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Rocky Delorme</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rocky-Delorme-41323</sherdogUrl>
+      </fighter2>
+      <date>2008-12-20T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission</winMethod>
+      <winTime>1:05</winTime>
+      <winRound>3</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>KOTC - Rock Solid</name>
+        <sherdogUrl>https://www.sherdog.com/events/KOTC-Rock-Solid-7770</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight[10]/fighter1"/>
+      <fighter2>
+        <name>Sean Henry Barnett</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Sean-Henry-Barnett-36220</sherdogUrl>
+      </fighter2>
+      <date>2008-07-19T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Armbar)</winMethod>
+      <winTime>0:43</winTime>
+      <winRound>1</winRound>
+      <type>AMATEUR</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

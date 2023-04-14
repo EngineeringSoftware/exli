@@ -1,0 +1,3 @@
+<singleton-list>
+  <java-class>org.symphonyoss.symphony.messageml.elements.Dialog</java-class>
+</singleton-list>

@@ -1,0 +1,10 @@
+<map>
+  <entry>
+    <string>media_id</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>comment_id</string>
+    <int>1</int>
+  </entry>
+</map>

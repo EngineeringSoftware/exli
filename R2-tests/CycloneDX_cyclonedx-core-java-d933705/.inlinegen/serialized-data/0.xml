@@ -1,0 +1,19 @@
+<dynamic-proxy>
+  <interface>org.cyclonedx.model.VersionFilter</interface>
+  <handler class="sun.reflect.annotation.AnnotationInvocationHandler" serialization="custom">
+    <sun.reflect.annotation.AnnotationInvocationHandler>
+      <default>
+        <memberValues class="linked-hash-map">
+          <entry>
+            <string>versions</string>
+            <string-array>
+              <string>1.2</string>
+              <string>1.3</string>
+            </string-array>
+          </entry>
+        </memberValues>
+        <type>org.cyclonedx.model.VersionFilter</type>
+      </default>
+    </sun.reflect.annotation.AnnotationInvocationHandler>
+  </handler>
+</dynamic-proxy>
