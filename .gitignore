@@ -1,0 +1,143 @@
+*~
+\#*\#
+.DS_Store
+_downloads/
+_dataset/
+/userstudy/miniconda/
+
+
+# IntelliJ
+.idea
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+
+### https://raw.github.com/github/gitignore/80a8803b004013d17291196825a327b9e871f009/Global/macOS.gitignore
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### https://raw.github.com/github/gitignore/80a8803b004013d17291196825a327b9e871f009/Global/VisualStudioCode.gitignore
+# .vscode
+workspace.code-workspace
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse m2e generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+*.iml
+
+__pycache__/
+python/build/
+python/*.egg-info/
+
+log/
+generated-tests/
+# reduced-tests/
+raninline-log.txt
+inlinetest-log-all.txt
+inlinetest-log.txt
+
+reduced-inline-tests/
+all-inline-tests/
+generated-tests-ASE/
+
+!jars
+!java/minimization/coverage-mapper/lib/
+
+# file is too large
+results/grouped-inline-tests.json
+results/not-grouped-inline-tests.json
+
+jacoco.exec
+
+results/all-inline-tests-report/lamarios_sherdog-parser.json
+
+merged-tests/
+ge-tests/
+gre-tests/
+greedy-tests/
+hgs-tests/
+
+appendix.pdf
+app.pdf
+/all-tests-initial
+/all-inline-tests
+/log
+/reduced-inline-tests
+/reduced-tests-initial
+counter-log.txt
