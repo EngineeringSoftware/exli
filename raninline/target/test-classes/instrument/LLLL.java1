@@ -1,8 +1,0 @@
-package instrument;
-
-public class LLLL {
-    public void m(){
-        Stream<PageArea> pageAreas = exclusionPerPage.entrySet().stream().sorted(Map.Entry.comparingByKey()).flatMap(entry -> 
-            entry.getValue().getExclusions().stream());
-    }
-}

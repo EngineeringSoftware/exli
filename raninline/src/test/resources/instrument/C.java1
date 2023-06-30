@@ -1,5 +1,0 @@
-public class C {
-    public void m(int b) {
-        int c = b + 1;
-    }
-}

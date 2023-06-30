@@ -1,5 +1,0 @@
-class Castclass{
-    void m(TestResult failedTest){
-        String name = String.format("%s.%s", (failedTest instanceof CaseResult) ? ((CaseResult) failedTest).getClassName() : failedTest.getFullName(), failedTest.getDisplayName());
-    }
-}
