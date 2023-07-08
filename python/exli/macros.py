@@ -51,3 +51,35 @@ class Macros:
     INLINE_GEN_DIR_NAME = ".inlinegen"
     INLINE_TEST_PACKAGE = "inlinetests"
     DEVELOPER_TESTS = "DT"
+
+    projects_needs_to_be_excluded = [
+        "dropwizard_dropwizard-elasticsearch"  # no test covered target statement
+    ]
+
+    project_with_timeout = [
+        "apache_datasketches-java",  # test timeout
+    ]
+
+    projects_without_target_stmts = [
+        "phax_ph-poi",
+        "kbss-cvut_jb4jsonld-jackson",
+        "lukas-krecan_json2xml",
+        "mojohaus_tidy-maven-plugin",
+        "cyclopsgroup_jcli",
+        "cloudbees-oss_zendesk-java-client",
+    ]
+
+    projects_without_covered_stmts = ["dropwizard_dropwizard-elasticsearch"]
+
+    projects_with_jacoco_exception = [
+        "FasterXML_woodstox",  # jacoco throws exception
+        "venkatramanm_common",
+        "assertthat_selenium-shutterbug",
+        "bvolpato_inutils4j",
+        "networknt_json-schema-validator",
+        "ralscha_extdirectspring",
+        "sonyxperiadev_gerrit-events",
+        "twilio_twilio-java",
+    ]
+
+    projects_with_no_inline_tests = ["onelogin_onelogin-java-sdk"]

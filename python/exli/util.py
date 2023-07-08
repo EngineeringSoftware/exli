@@ -187,3 +187,48 @@ class Util:
             if test_path == "":
                 return False, None
         return True, test_path
+
+    @classmethod
+    def get_sha(cls, project_name: str):
+        project_dict = se.io.load(
+            Macros.data_dir
+            / "teco-projects.json"
+        )
+        for project in project_dict:
+            if project["full_name"] == project_name:
+                return project["sha"][:7]
+        return None
+
+    @classmethod
+    def get_project_names_list(cls):
+        project_dict = se.io.load(
+            Macros.data_dir / "teco-projects.json"
+        )
+        return [
+            project["full_name"]
+            for project in project_dict
+            if project["jacoco"] and project["randoop"]
+        ]
+
+    @classmethod
+    def get_project_names_list_with_sha(cls):
+        project_dict = se.io.load(
+            Macros.data_dir
+            / "teco-projects.json"
+        )
+        return [
+            (project["full_name"], project["sha"][:7])
+            for project in project_dict
+            if project["jacoco"] and project["randoop"]
+        ]
+
+    @classmethod
+    def get_excluded_projects(cls):
+        return (
+            Macros.projects_without_target_stmts
+            + Macros.projects_without_covered_stmts
+            + Macros.projects_needs_to_be_excluded
+            + Macros.projects_with_jacoco_exception
+            + Macros.project_with_timeout
+            + Macros.projects_with_no_inline_tests
+        )
