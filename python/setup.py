@@ -41,22 +41,24 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
     ],
+    requires=[
+        "seutil(>=0.8.1)",
+        "xmltodict",
+        "tqdm(>=4.62.3)",
+        "universalmutator",
+    ],
     extras_require={
-        "dev": ["flake8", "black", "seutil", "xmltodict"],
+        "dev": ["flake8", "black", "ipykernel"],
         "research": [
-            "seutil>=0.8.1",
-            "tqdm~=4.62.3",
             "seaborn",
             "unidiff",
             "gensim",
             "pandas",
-            "universalmutator",
             "venn",
             "beautifulsoup4",
             ##################
             "openai",
             "tenacity",
-            "azure-cli"
         ],
     },
 )
