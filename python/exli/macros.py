@@ -7,9 +7,14 @@ class Macros:
     this_dir: Path = Path(os.path.dirname(os.path.realpath(__file__)))
     home_dir: Path = Path(expanduser("~"))
     project_dir: Path = this_dir.parent.parent
+    dataset_dir: Path = project_dir / "_dataset"
     downloads_dir: Path = project_dir / "_downloads"
     python_dir: Path = project_dir / "python"
     log_file: Path = python_dir / "experiments.log"
+    log_dir: Path = project_dir / "log"
+    paper_dir: Path = project_dir / "papers" / "paper"
+    figure_dir: Path = paper_dir / "figures"
+    table_dir: Path = paper_dir / "tables"
     data_dir: Path = project_dir / "data"
     results_dir: Path = project_dir / "results"
 
@@ -28,6 +33,8 @@ class Macros:
 
     jar_dir: Path = project_dir / "jars"
     evosuite_jar = jar_dir / "evosuite-master-1.2.1-SNAPSHOT.jar"
+    # evosuite_jar = jar_dir / "evosuite-1.2.0.jar"
+    # evosuite_runtime_jar = jar_dir / "evosuite-standalone-runtime-1.2.0.jar"
     evosuite_runtime_jar = jar_dir / "evosuite-master-1.2.1-SNAPSHOT.jar"
     randoop_jar = jar_dir / "randoop-all-4.3.1.jar"
     junit_jar = jar_dir / "junit-platform-console-standalone-1.9.0-RC1.jar"
@@ -83,3 +90,5 @@ class Macros:
     ]
 
     projects_with_no_inline_tests = ["onelogin_onelogin-java-sdk"]
+
+    test_minimization_algorithms = ["ge", "gre", "greedy", "hgs"]
