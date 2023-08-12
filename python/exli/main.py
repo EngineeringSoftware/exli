@@ -9,11 +9,12 @@ import traceback
 from exli.util import Util
 import os
 import collections
+from exli.generate_tests import Generate
 
 
 class Main:
-    # python -m exli.main run --project_name="Asana_java-asana" --commit="52fef9b" --copy_generated_tests="False"
-    # python -m exli.main run --project_name="AquaticInformatics_aquarius-sdk-java" --commit="8f4edb9" --copy_generated_tests="False"
+    # python -m exli.main run --project_name="Asana_java-asana" --commit="52fef9b" 
+    # python -m exli.main run --project_name="AquaticInformatics_aquarius-sdk-java" --commit="8f4edb9" 
     # --project_name=CycloneDX_cyclonedx-core-java --commit=d933705
     def run(
         self,
@@ -23,6 +24,7 @@ class Main:
         randoop: bool = True,
         unit: bool = True,
         evosuite: bool = True,
+        seed: int = 42,
     ):
         Util.compile_raninline()
         ################################## process input, prepare project ##################################
@@ -78,19 +80,18 @@ class Main:
         with se.io.cd(Macros.downloads_dir / parsed_project_name):
             se.bash.run("mvn test-compile " + Macros.SKIPS, 0)
 
-        # generate tests with Randoop
+        # generate tests with Randoop/Evosuite
+        randoop_output_dir = Macros.log_dir / "teco-randoop-test" / f"{parsed_project_name}" / f"randoop-tests-{seed}"
         if (
-            randoop
-            and not (
-                Macros.log_dir
-                / "teco-randoop-test"
-                / f"{parsed_project_name}"
-                / "randoop-tests"
-            ).exists()
+            randoop and not (randoop_output_dir).exists()
         ):
-            filter.Filter().get_randoop_info(
-                {"full_name": parsed_project_name, "sha": commit}
-            )
+            Generate().generate_tests_with_one_seed(parsed_project_name, commit, "randoop", randoop_output_dir)
+        
+        evosuite_output_dir = Macros.log_dir / "teco-evosuite-test" / f"{parsed_project_name}" / f"evosuite-tests-{seed}"
+        if (
+            evosuite and not (evosuite_output_dir).exists()
+        ):
+            Generate().generate_tests_with_one_seed(parsed_project_name, commit, "evosuite", evosuite_output_dir)
 
         print("inserting print statement...")
         with se.io.cd(Macros.java_raninline_dir):

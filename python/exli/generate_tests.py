@@ -9,7 +9,7 @@ from jsonargparse import CLI
 
 
 class Generate:
-    # python -m generate-tests generate_tests_with_different_seeds --project_name="jkuhnert_ognl" --commit="5c30e1e"
+    # python -m generate_tests generate_tests_with_different_seeds --project_name="jkuhnert_ognl" --commit="5c30e1e"
     def generate_tests_with_different_seeds(
         self,
         project_name: str,
@@ -37,30 +37,45 @@ class Generate:
             classpath_list = list(not_covered_classes)
         for seed in range(1, num_seeds + 1):
             # generate tests
+            self.generate_tests_with_one_seed(
+                project_name, commit, test_type, None, seed, classpath_list
+            )
+
+    def generate_tests_with_one_seed(self, 
+        project_name: str,
+        commit: str,
+        test_type: str = "randoop",
+        output_dir: str = None,
+        seed: int = 42,
+        classpath_list: list = None,
+    ):
+        if output_dir is None:
             output_dir = (
                 Macros.log_dir
                 / f"teco-{test_type}-test"
                 / project_name
                 / f"{test_type}-tests-{seed}"
             )
-            # create parent dir if not exist
-            if not os.path.exists(output_dir.parent):
-                se.io.mkdir(output_dir.parent)
-            if os.path.exists(output_dir):
-                print(f"output_dir: {output_dir} already exists")
-                continue
-            if test_type == "randoop":
-                res = Util.generate_randoop_tests(
-                    project_name, commit, seed, f"{output_dir}", 100, classpath_list
-                )
-                Util.fix_randoop_generated_tests_helper(project_name, output_dir)
-            elif test_type == "evosuite":
-                res = Util.generate_evosuite_tests(
-                    project_name, commit, seed, f"{output_dir}", 120, classpath_list
-                )
-            print(f"When seed is {seed}, {res}")
+        # create parent dir if not exist
+        if not os.path.exists(output_dir.parent):
+            se.io.mkdir(output_dir.parent)
+        if os.path.exists(output_dir):
+            print(f"output_dir: {output_dir} already exists")
+            return
+        if test_type == "randoop":
+            res = Util.generate_randoop_tests(
+                project_name, commit, seed, f"{output_dir}", 100, classpath_list
+            )
+            Util.fix_randoop_generated_tests_helper(project_name, output_dir)
+        elif test_type == "evosuite":
+            res = Util.generate_evosuite_tests(
+                project_name, commit, seed, f"{output_dir}", 120, classpath_list
+            )
+        else:
+            res = f"Unknown test type: {test_type}"
+        print(f"When seed is {seed}, {res}")
 
-    # python -m generate-tests generate_coverage --project_name="jkuhnert_ognl" --commit="5c30e1e"
+    # python -m generate_tests generate_coverage --project_name="jkuhnert_ognl" --commit="5c30e1e"
     def generate_coverage(
         self,
         project_name: str,
@@ -156,7 +171,7 @@ class Generate:
                     )
         return not_covered_classes
 
-    # python -m generate-tests analyze_covered_stmts --project_name="jkuhnert_ognl" --commit="5c30e1e"
+    # python -m generate_tests analyze_covered_stmts --project_name="jkuhnert_ognl" --commit="5c30e1e"
     def analyze_covered_stmts(
         self,
         project_name: str,
@@ -198,7 +213,7 @@ class Generate:
                 se.io.Fmt.jsonPretty,
             )
 
-    # python -m generate-tests batch_run_tool
+    # python -m generate_tests batch_run_tool
     def batch_run_tool(self, test_type: str = "randoop", num_seeds: int = 5):
         for project_name, sha in Util.get_project_names_list_with_sha():
             self.generate_tests_with_different_seeds(
@@ -207,7 +222,7 @@ class Generate:
             self.generate_coverage(project_name, sha, num_seeds, test_type)
             self.analyze_covered_stmts(project_name, sha, num_seeds, test_type)
 
-    # python -m generate-tests count_covered_stmts
+    # python -m generate_tests count_covered_stmts
     def count_covered_stmts(self, num_seeds: int = 5, test_type: str = "randoop"):
         covered_stmt = set()
         projs = set()
@@ -248,7 +263,7 @@ class Generate:
             se.io.Fmt.jsonPretty,
         )
 
-    # python -m generate-tests batch_generate_tests --test_type evosuite
+    # python -m generate_tests batch_generate_tests --test_type evosuite
     def batch_generate_tests(
         self,
         test_type: str,
@@ -331,7 +346,7 @@ class Generate:
                 time_dict[f"{project_name}-{test_type}-seed"] = res["seed"]
         se.io.dump(time_file, time_dict, se.io.Fmt.jsonPretty)
 
-    # python -m generate-tests batch_generate_coverage
+    # python -m generate_tests batch_generate_coverage
     def batch_generate_coverage(self):
         for project_name, commit in Util.get_project_names_list_with_sha():
             if project_name in Util.get_excluded_projects():
