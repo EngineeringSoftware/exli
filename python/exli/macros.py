@@ -25,7 +25,7 @@ class Macros:
     reduced_inline_tests_report_dir: Path = results_dir / "reduced-inline-tests-report"
     all_inline_tests_report_dir: Path = results_dir / "all-inline-tests-report"
     java_dir: Path = project_dir / "java"
-    java_raninline_dir: Path = project_dir / "java" / "raninline"
+    java_raninline_dir: Path = project_dir / "raninline"
     itest_java_dir: Path = project_dir.parent / "inlinetest-internal" / "java"
     all_mutants_dir: Path = results_dir / "all-mutants"
     mutants_dir: Path = results_dir / "mutants"
