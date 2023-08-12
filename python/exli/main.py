@@ -23,7 +23,6 @@ class Main:
         randoop: bool = True,
         unit: bool = True,
         evosuite: bool = True,
-        copy_generated_tests: bool = True,
     ):
         Util.compile_raninline()
         ################################## process input, prepare project ##################################
