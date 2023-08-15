@@ -49,22 +49,9 @@ class Generate:
         seed: int = 42,
         classpath_list: list = None,
     ):
-        if output_dir is None:
-            output_dir = (
-                Macros.log_dir
-                / f"teco-{test_type}-test"
-                / project_name
-                / f"{test_type}-tests-{seed}"
-            )
-        # create parent dir if not exist
-        if not os.path.exists(output_dir.parent):
-            se.io.mkdir(output_dir.parent)
-        if os.path.exists(output_dir):
-            print(f"output_dir: {output_dir} already exists")
-            return
         if test_type == "randoop":
             res = Util.generate_randoop_tests(
-                project_name, commit, seed, f"{output_dir}", 100, classpath_list
+                project_name, commit, seed, output_dir, 100, classpath_list
             )
             Util.fix_randoop_generated_tests_helper(project_name, output_dir)
         elif test_type == "evosuite":

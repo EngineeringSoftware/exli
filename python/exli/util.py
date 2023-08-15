@@ -506,6 +506,7 @@ class Util:
         cls,
         parsed_project_name: str,
         log_file_path: str = "",
+        randoop_dir: str = None,
         maven_project: MavenProject = None,
         timeout: int = 600,
     ):
@@ -619,9 +620,15 @@ class Util:
         project = Util.prepare_project(project_name, sha)
         maven_project = MavenProject.from_project(project)
         if output_dir is None:
-            output_dir = (
-                f"{Macros.log_dir}/teco-randoop-test/{project_name}/randoop-tests"
-            )
+            output_dir = Macros.log_dir / "teco-randoop-test" / f"{project_name}" / f"randoop-test-{seed}"
+        else:
+            output_dir = Path(output_dir)
+        if output_dir.exists():
+            print(f"output_dir: {output_dir} already exists")
+            return
+        # create parent dir if not exist
+        if not output_dir.parent.exists():
+            se.io.mkdir(output_dir.parent)
         try:
             with se.io.cd(Macros.downloads_dir / project_name):
                 maven_project.install()
@@ -695,6 +702,16 @@ class Util:
         res["seed"] = seed
         project = Util.prepare_project(project_name, sha)
         maven_project = MavenProject.from_project(project)
+        if output_dir is None:
+            output_dir = Macros.log_dir / "teco-evosuite-test" / f"{project_name}" / f"evosuite-test-{seed}"
+        else:
+            output_dir = Path(output_dir)
+        if output_dir.exists():
+            print(f"output_dir: {output_dir} already exists")
+            return
+        # create parent dir if not exist
+        if not output_dir.parent.exists():
+            se.io.mkdir(output_dir.parent)
         try:
             with se.io.cd(Macros.downloads_dir / project_name):
                 maven_project.install()
@@ -917,9 +934,7 @@ class Util:
         cls, project_name: str, randoop_test_dir: str = None
     ):
         if randoop_test_dir is None:
-            randoop_test_dir = (
-                f"{Macros.log_dir}/teco-randoop-test/{project_name}/randoop-tests"
-            )
+            print(f"{randoop_test_dir} does not exist")
         with se.io.cd(Macros.downloads_dir / project_name):
             se.io.rmdir(Macros.downloads_dir / project_name / "src/test/java")
             se.io.mkdir(Macros.downloads_dir / project_name / "src/test/java")

@@ -61,18 +61,18 @@ class Main:
             )
 
         # create a folder to store the reduced inline tests
-        proj_generated_tests_dir = (
-            f"{Macros.reduced_tests_dir}/{parsed_project_name}-{commit}"
+        proj_reduced_tests_dir = (
+            f"{Macros.reduced_tests_dir}/{parsed_project_name}-{commit}-{seed}"
         )
-        se.io.mkdir(proj_generated_tests_dir, fresh=True)
+        se.io.mkdir(proj_reduced_tests_dir, fresh=True)
         # create a folder to store all inline tests
-        proj_all_tests_dir = f"{Macros.all_tests_dir}/{parsed_project_name}-{commit}"
+        proj_all_tests_dir = f"{Macros.all_tests_dir}/{parsed_project_name}-{commit}-{seed}"
         se.io.mkdir(proj_all_tests_dir, fresh=True)
 
-        LOG_FILE_PATH = f"{proj_generated_tests_dir}/raninline-log.txt"
-        INLINE_TEST_LOG_FILE_PATH = f"{proj_generated_tests_dir}/inlinetest-log.txt"
+        LOG_FILE_PATH = f"{proj_reduced_tests_dir}/raninline-log.txt"
+        INLINE_TEST_LOG_FILE_PATH = f"{proj_reduced_tests_dir}/inlinetest-log.txt"
         ALL_INLINE_TEST_LOG_FILE_PATH = (
-            f"{proj_generated_tests_dir}/inlinetest-log-all.txt"
+            f"{proj_reduced_tests_dir}/inlinetest-log-all.txt"
         )
         CLASSES_DIR = f"{Macros.downloads_dir/parsed_project_name}/target/classes"
 
@@ -121,9 +121,8 @@ class Main:
             ################################## Run EvoSuite tests ##################################
             Util.copy_jacoco_extension()
             Util.configure_file("EvoSuite")
-            evosuite_dir = f"{Macros.log_dir}/teco-evosuite-test/{parsed_project_name}/evosuite-tests"
             Util.run_evosuite_command_line(
-                parsed_project_name, LOG_FILE_PATH, evosuite_dir
+                parsed_project_name, LOG_FILE_PATH, evosuite_output_dir
             )
             Util.remove_jacoco_extension()
         if randoop:
@@ -135,14 +134,14 @@ class Main:
 
         ################################## Save serialized data ##################################
         se.bash.run(
-            f"cp -r {Macros.downloads_dir}/{parsed_project_name}/{Macros.INLINE_GEN_DIR_NAME} {proj_generated_tests_dir}"
+            f"cp -r {Macros.downloads_dir}/{parsed_project_name}/{Macros.INLINE_GEN_DIR_NAME} {proj_reduced_tests_dir}"
         )
 
         ################################## Parse log ##################################
         Util.parse_log(
             parsed_project_name,
             commit,
-            proj_generated_tests_dir,
+            proj_reduced_tests_dir,
             INLINE_TEST_LOG_FILE_PATH,
             full_file_paths,
         )
