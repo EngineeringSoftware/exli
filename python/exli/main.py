@@ -85,13 +85,13 @@ class Main:
         if (
             randoop and not (randoop_output_dir).exists()
         ):
-            Generate().generate_tests_with_one_seed(parsed_project_name, commit, "randoop", randoop_output_dir)
+            Generate().generate_tests_with_one_seed(parsed_project_name, commit, "randoop", randoop_output_dir, seed)
         
         evosuite_output_dir = Macros.log_dir / "teco-evosuite-test" / f"{parsed_project_name}" / f"evosuite-tests-{seed}"
         if (
             evosuite and not (evosuite_output_dir).exists()
         ):
-            Generate().generate_tests_with_one_seed(parsed_project_name, commit, "evosuite", evosuite_output_dir)
+            Generate().generate_tests_with_one_seed(parsed_project_name, commit, "evosuite", evosuite_output_dir, seed)
 
         print("inserting print statement...")
         with se.io.cd(Macros.java_raninline_dir):
