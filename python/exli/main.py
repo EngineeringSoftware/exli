@@ -76,10 +76,7 @@ class Main:
         )
         CLASSES_DIR = f"{Macros.downloads_dir/parsed_project_name}/target/classes"
 
-        ################################## Instrument ##################################
-        with se.io.cd(Macros.downloads_dir / parsed_project_name):
-            se.bash.run("mvn test-compile " + Macros.SKIPS, 0)
-
+        ################################## Generate tests ##################################
         # generate tests with Randoop/Evosuite
         randoop_output_dir = Macros.log_dir / "teco-randoop-test" / f"{parsed_project_name}" / f"randoop-tests-{seed}"
         if (
@@ -92,6 +89,10 @@ class Main:
             evosuite and not (evosuite_output_dir).exists()
         ):
             Generate().generate_tests_with_one_seed(parsed_project_name, commit, "evosuite", evosuite_output_dir, seed)
+
+        ################################## Instrument ##################################
+        with se.io.cd(Macros.downloads_dir / parsed_project_name):
+            se.bash.run("mvn test-compile " + Macros.SKIPS, 0)
 
         print("inserting print statement...")
         with se.io.cd(Macros.java_raninline_dir):
