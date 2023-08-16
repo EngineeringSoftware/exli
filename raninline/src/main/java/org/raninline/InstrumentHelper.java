@@ -52,9 +52,9 @@ public class InstrumentHelper {
 
     // cd src/test/resources
     // javac -cp
-    // /home/user/projects/inlinegen-research/java/raninline/target/classes A.java
+    // /home/liuyu/projects/inlinegen-research/java/raninline/target/classes A.java
     // java -cp
-    // /home/user/projects/inlinegen-research/java/raninline/target/classes:. A
+    // /home/liuyu/projects/inlinegen-research/java/raninline/target/classes:. A
     public static String parseVarType(Object variable) {
         String varType = "";
         Class<?> clz = null;
@@ -729,7 +729,7 @@ public class InstrumentHelper {
         saveInlineTestsToFile(inlineTests, Constant.inlineTestFilePath);
         saveInlineTestsToFile(allInlineTests, Constant.allInlineTestFilePath);
 
-        String inlineGenDir = Utils.createDir(Constant.INLINE_GEN_DIR_NAME);
+        inlineGenDir = Utils.createDir(Constant.INLINE_GEN_DIR_NAME);
 
         // write number of inline tests for each target statement
         String inlineTestsCounterFile = inlineGenDir + "/" + Constant.INLINE_TESTS_COUNTER_FILE_NAME;

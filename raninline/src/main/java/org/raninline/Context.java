@@ -24,4 +24,5 @@ public class Context {
     public boolean lineNumberKnown = false;
     public boolean isTargetStmt = false;
     public boolean isCondition = false;
+    public boolean throwExceptionForMalformedInlineTest = false;
 }

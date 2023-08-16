@@ -46,7 +46,13 @@ public class App {
                 lineNumberFromInput = "-1";
                 filePathFromInput = null;
             }
-            Parser.addInlineTest(logFilePath, lineNumberFromInput, filePathFromInput);
+
+            boolean throwException = false;
+            if (args.length >= 5) {
+                throwException = Boolean.parseBoolean(args[4]);
+            }
+
+            Parser.addInlineTest(logFilePath, lineNumberFromInput, filePathFromInput, throwException);
         } else if (task.equals("construct-inline-test") || task.equals("c")) {
             // Construct inline tests from log file, the log file contains variables and
             // their values. It is now deprecated because we generate inline tests in memory
@@ -55,6 +61,10 @@ public class App {
             String lineNumber = args[2];
             String logFilePath = args[3];
             Parser.constructInlineTest(filePath, lineNumber, logFilePath);
+        } else if (task.equals("target-stmt")) {
+            String srcPath = args[1];
+            String logFilePath = args[2];
+            Parser.findTargetStmt(srcPath, logFilePath);
         } else {
             System.out.println("Invalid task");
         }

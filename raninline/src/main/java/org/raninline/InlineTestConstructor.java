@@ -16,9 +16,9 @@ import com.github.javaparser.ast.stmt.Statement;
 
 public class InlineTestConstructor extends ModifierVisitor<Context> {
     Set<Integer> visitedLines;
-    
+
     public InlineTestConstructor() {
-       visitedLines = new HashSet<>();
+        visitedLines = new HashSet<>();
     }
 
     @Override
@@ -30,7 +30,8 @@ public class InlineTestConstructor extends ModifierVisitor<Context> {
             }
             if (stmt.getRange().get().begin.line <= lineNumber && lineNumber <= stmt.getRange().get().end.line) {
                 // check if parent statement is in the same line
-                if (stmt.getParentNode().get().getRange().get().begin.line == stmt.getRange().get().begin.line) {
+                if (stmt.getParentNode().get().getRange().isPresent()
+                        && stmt.getParentNode().get().getRange().get().begin.line == stmt.getRange().get().begin.line) {
                     continue;
                 }
                 visitedLines.add(lineNumber);
@@ -38,15 +39,19 @@ public class InlineTestConstructor extends ModifierVisitor<Context> {
                 // find the target statement
                 Node parent = stmt.getParentNode().get();
                 for (String inlineTestStr : inlineTestStrs) {
-                    try{
+                    try {
                         Statement inlineTest = StaticJavaParser.parseStatement(inlineTestStr);
                         // insert the inline test after the target statement
                         if (parent instanceof BlockStmt) {
                             ((BlockStmt) parent).getStatements().addAfter(inlineTest, stmt);
                         }
-                    }catch(Exception e){
+                    } catch (Exception e) {
                         // when the inline test is not well-formed, skip it
-                        continue;
+                        if (ctx.throwExceptionForMalformedInlineTest)
+                            throw new RuntimeException(e.toString() + "\n" + "Error when parsing inline test: " + inlineTestStr);
+                        else{
+                            continue;
+                        }
                     }
                 }
             }
@@ -80,10 +85,10 @@ public class InlineTestConstructor extends ModifierVisitor<Context> {
                 Set<String> inlineTestStrs = ctx.inlineTests.get(lineNumber);
                 // log executed statement at the beginning of the if block
                 for (String inlineTestStr : inlineTestStrs) {
-                    try{
+                    try {
                         Statement inlineTest = StaticJavaParser.parseStatement(inlineTestStr);
                         thenStmt.asBlockStmt().getStatements().addFirst(inlineTest);
-                    }catch(Exception e){
+                    } catch (Exception e) {
                         // when the inline test is not well-formed, skip it
                         continue;
                     }

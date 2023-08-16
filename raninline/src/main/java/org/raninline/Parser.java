@@ -55,6 +55,23 @@ public class Parser {
         writer.close();
     }
 
+    /**
+     * find the target statements in the source file and log the target statements to a file
+     * @param srcPath
+     * @param logFilePath
+     * @throws IOException
+     */
+    public static void findTargetStmt(String srcPath, String logFilePath) throws IOException {
+        CompilationUnit cu = StaticJavaParser.parse(Paths.get(srcPath));
+        Context ctx = new Context();
+        // make the folder for the log file
+        new File(logFilePath).getParentFile().mkdirs();
+        ctx.srcPath = srcPath;
+        ctx.logPath = logFilePath;
+        FindTargetStmt visitor = new FindTargetStmt();
+        cu.accept(visitor, ctx);
+    }
+
     public static void changeModifier(String srcPath, String lineNumberStr) throws IOException {
         int lineNumber = Utils.parseLineNumber(lineNumberStr);
         if (lineNumber <= 0) {
@@ -81,7 +98,7 @@ public class Parser {
      * @param filePathFromInput
      * @throws IOException
      */
-    public static void addInlineTest(String logFilePath, String lineNumberStr, String filePathFromInput) throws IOException {
+    public static void addInlineTest(String logFilePath, String lineNumberStr, String filePathFromInput, boolean throwException) throws IOException {
         boolean lineNumberKnown = false;
         int lineNumberFromInput = Utils.parseLineNumber(lineNumberStr);
         if (lineNumberFromInput > 0) {
@@ -122,6 +139,9 @@ public class Parser {
             }
         }
         Context ctx = new Context();
+        if (throwException) {
+            ctx.throwExceptionForMalformedInlineTest = true;
+        }
         for (String srcPath : inlineTestMap.keySet()) {
             if (lineNumberKnown && !srcPath.equals(filePathFromInput)) {
                 continue;
