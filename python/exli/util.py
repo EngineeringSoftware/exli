@@ -642,7 +642,7 @@ class Util:
                 print("find classes...")
                 if classpath_list is None:
                     classpath_list = cls.find_classes()
-                total_time_limit = min(len(classpath_list) * time_limit, 10800)
+                total_time_limit = min(len(classpath_list) * time_limit, 3600)
                 print(f"total time limit: {total_time_limit}")
                 with open("randoop-tests/classlist.txt", "w") as f:
                     f.write("\n".join(classpath_list))
