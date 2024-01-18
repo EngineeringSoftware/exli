@@ -32,22 +32,26 @@ public class FindVariable extends VoidVisitorAdapter<Context> {
         Expression target = n.getTarget();
         if (!isLocalVariable(target.toString(), ctx)) {
             // a[n] = b, log a
-            if (target instanceof ArrayAccessExpr){
+            if (target instanceof ArrayAccessExpr) {
                 ArrayAccessExpr arrayAccessExpr = (ArrayAccessExpr) target;
                 if (arrayAccessExpr.getIndex() instanceof UnaryExpr) {
                     UnaryExpr index = (UnaryExpr) arrayAccessExpr.getIndex();
-                    if (index.getOperator() == UnaryExpr.Operator.POSTFIX_INCREMENT || index.getOperator() == UnaryExpr.Operator.POSTFIX_DECREMENT) {
-                        ctx.logVariablesAfter.add(arrayAccessExpr.getName().toString() + "[" + index.getExpression().toString() + "]");
-                    } else if (index.getOperator() == UnaryExpr.Operator.PREFIX_INCREMENT) {
-                        ctx.logVariablesBefore.add(arrayAccessExpr.getName().toString() + "[" + index.getExpression().toString() + "+1]");
-                    } else if (index.getOperator() == UnaryExpr.Operator.PREFIX_DECREMENT) {
-                        ctx.logVariablesBefore.add(arrayAccessExpr.getName().toString() + "[" + index.getExpression().toString() + "-1]");
+                    if (index.getOperator() == UnaryExpr.Operator.POSTFIX_INCREMENT) {
+                        ctx.logVariablesAfter.add(arrayAccessExpr.getName().toString() + "["
+                                + index.getExpression().toString() + " - 1]");
+                    } else if (index.getOperator() == UnaryExpr.Operator.POSTFIX_DECREMENT) {
+                        ctx.logVariablesAfter.add(arrayAccessExpr.getName().toString() + "["
+                                + index.getExpression().toString() + " + 1]");
+                    } else if (index.getOperator() == UnaryExpr.Operator.PREFIX_INCREMENT
+                            || index.getOperator() == UnaryExpr.Operator.PREFIX_DECREMENT) {
+                        ctx.logVariablesBefore.add(arrayAccessExpr.getName().toString() + "["
+                                + index.getExpression().toString() + "]");
                     } else {
                         ctx.logVariablesAfter.add(target.toString());
                     }
                 } else {
                     ctx.logVariablesAfter.add(target.toString());
-                } 
+                }
             } else {
                 ctx.logVariablesAfter.add(target.toString());
             }
@@ -70,30 +74,6 @@ public class FindVariable extends VoidVisitorAdapter<Context> {
         // skip: n.getName().accept(this, ctx);
         // skip: n.getType().accept(this, ctx);
     }
-
-    // @Override
-    // public void visit(final MethodCallExpr n, final Context ctx) {
-    // // TODO: if the scoep exists and is not a primitive type, log the whole
-    // method,
-    // // but static analyisis for target type is not accurate
-    // if (!n.getScope().isPresent() ||
-    // !n.getScope().get().toString().startsWith(Constant.LOG_CLASS_NAME)) {
-
-    // if (n.getParentNode().isPresent()
-    // && !(n.getParentNode().get() instanceof Statement || n.getParentNode().get()
-    // instanceof AssignExpr
-    // || n.getParentNode().get() instanceof VariableDeclarator)
-    // && n.findAll(LambdaExpr.class).size() == 0 && !containLocalVariable(n, ctx)
-    // && ctx.locals.size() == 0) {
-    // ctx.logMethodsBefore.add(n.toString());
-    // }
-    // n.getArguments().forEach(p -> p.accept(this, ctx));
-    // // skip: n.getName().accept(this, ctx);
-    // n.getScope().ifPresent(l -> l.accept(this, ctx));
-    // // skip: n.getTypeArguments().ifPresent(l -> l.forEach(v -> v.accept(this,
-    // // ctx)));
-    // }
-    // }
 
     public boolean containLocalVariable(Node n, Context ctx) {
         if (ctx.locals.size() == 0) {

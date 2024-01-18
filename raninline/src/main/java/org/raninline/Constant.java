@@ -45,4 +45,11 @@ public class Constant {
         final static String COVERAGE_FILE_NAME = "coverage.txt";
         final static String SERIALIZED_DATA_TO_PATH_FILE_NAME = "serialized-data-to-path.txt";
         final static int MAX_INLINE_TESTS_PER_STMT = 100;
+
+        final static String DECLARE_NAME = "itest";
+        final static String GIVEN = "given";
+        final static String GROUP = "group";
+        final static String CHECK_EQ = "checkEq";
+        final static String CHECK_TRUE = "checkTrue";
+        final static String CHECK_FALSE = "checkFalse";
 }

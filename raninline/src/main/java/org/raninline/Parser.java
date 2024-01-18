@@ -31,7 +31,8 @@ public class Parser {
      * @param inlineTestFilePath
      * @throws IOException
      */
-    public static void instrument(String srcPath, String lineNumberStr, String logFilePath, String inlineTestFilePath, String classesDirectory)
+    public static void instrument(String srcPath, String lineNumberStr, String logFilePath, String inlineTestFilePath,
+            String classesDirectory)
             throws IOException {
         CompilationUnit cu = StaticJavaParser.parse(Paths.get(srcPath));
         Context ctx = new Context();
@@ -56,7 +57,9 @@ public class Parser {
     }
 
     /**
-     * find the target statements in the source file and log the target statements to a file
+     * find the target statements in the source file and log the target statements
+     * to a file
+     * 
      * @param srcPath
      * @param logFilePath
      * @throws IOException
@@ -98,7 +101,8 @@ public class Parser {
      * @param filePathFromInput
      * @throws IOException
      */
-    public static void addInlineTest(String logFilePath, String lineNumberStr, String filePathFromInput, boolean throwException) throws IOException {
+    public static void addInlineTest(String logFilePath, String lineNumberStr, String filePathFromInput,
+            boolean throwException) throws IOException {
         boolean lineNumberKnown = false;
         int lineNumberFromInput = Utils.parseLineNumber(lineNumberStr);
         if (lineNumberFromInput > 0) {
@@ -117,7 +121,7 @@ public class Parser {
                 String srcPath = tokens[0];
                 int lineNumber;
                 try {
-                lineNumber = Integer.parseInt(tokens[1]);
+                    lineNumber = Integer.parseInt(tokens[1]);
                 } catch (NumberFormatException e) {
                     System.out.println("cannot be parsed: " + line);
                     continue;
@@ -189,18 +193,19 @@ public class Parser {
         InlineTestConstructor visitor = new InlineTestConstructor();
         cu = (CompilationUnit) cu.accept(visitor, ctx);
         if (ctx.inlineTests.size() > 0) {
-            // check if there is import of Here
-            boolean importHere = false;
+            // check if there is import of ITest
+            boolean importITest = false;
             NodeList<ImportDeclaration> importDeclarations = cu.getImports();
             for (ImportDeclaration importDeclaration : importDeclarations) {
-                if (importDeclaration.getNameAsString().equals("import org.inlinetest.Here")) {
-                    importHere = true;
+                if (importDeclaration.getNameAsString().equals("import org.inlinetest.ITest")) {
+                    importITest = true;
                     break;
                 }
             }
-            if (!importHere) {
-                cu.addImport("org.inlinetest.Here");
-                cu.addImport("org.inlinetest.Here.group", true, false);
+            if (!importITest) {
+                cu.addImport("org.inlinetest.ITest");
+                cu.addImport("org.inlinetest.ITest.itest", true, false);
+                cu.addImport("org.inlinetest.ITest.group", true, false);
             }
         }
         FileWriter writer;
@@ -274,18 +279,18 @@ public class Parser {
                                 break;
                             }
                             if (line.startsWith(Constant.TARGET_STMT_BEFORE)) {
-                                given.add("given(" + name + ", " + value + ")");
+                                given.add(Constant.GIVEN + "(" + name + ", " + value + ")");
                             } else {
-                                checkEq.add("checkEq(" + name + ", " + value + ")");
+                                checkEq.add(Constant.CHECK_EQ + "(" + name + ", " + value + ")");
                             }
                         } else if (line.startsWith(Constant.TARGET_STMT_EXECUTED)) {
-                            checkTrue.add("checkTrue(" + "group(" + ")" + ")");
+                            checkTrue.add(Constant.CHECK_TRUE + "(" + Constant.GROUP + "())");
                         } else {
                             break;
                         }
                     }
                     if (checkEq.size() > 0 || checkTrue.size() > 0) {
-                        String inlineTestStr = "new Here(\"" + source + "\")";
+                        String inlineTestStr = Constant.DECLARE_NAME + "(\"" + source + "\")";
                         for (String g : given) {
                             inlineTestStr += "." + g;
                         }
@@ -296,7 +301,7 @@ public class Parser {
                             inlineTestStr += "." + c;
                         }
                         if (ifCondition && checkTrue.isEmpty()) {
-                            inlineTestStr += ".checkFalse(" + "group(" + ")" + ")";
+                            inlineTestStr += "." + Constant.CHECK_FALSE + "(" + Constant.GROUP + "())";
                         }
                         inlineTestStr += ";";
                         Set<String> inlineTestSet = ctx.inlineTests.getOrDefault(ctx.lineNumber, new HashSet<String>());

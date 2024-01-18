@@ -12,7 +12,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -47,7 +46,7 @@ public class InstrumentHelper {
     // static InlineTest curInlineTest;
     static int totalInlineTests = 0;
     static {
-        Runtime.getRuntime().addShutdownHook(new SaveInlineTests());
+        Runtime.getRuntime().addShutdownHook(new TearDown());
     }
 
     // cd src/test/resources
@@ -123,6 +122,10 @@ public class InstrumentHelper {
             }
         } else {
             try {
+                // It is possbile that some xml files are saved but not used in any inline tests
+                // because the unit tests throw exceptions. The target statement is not fully
+                // executed. We choose to save all xml files and delete the unused ones later
+                // (in another script).
                 XStream xstream = new XStream();
                 String serializedString = xstream.toXML(variable);
                 String serializedStringHashCode = Integer.toString(serializedString.hashCode());
@@ -268,7 +271,8 @@ public class InstrumentHelper {
         boolean changed = false;
         for (int i = newCC.getFirstLine(); i <= newCC.getLastLine(); i++) {
             int status = newCC.getLine(i).getStatus();
-            // Log.debug(key + ", class: " + newCC.getName() + ", line: " + i + ", status: " + status);
+            // Log.debug(key + ", class: " + newCC.getName() + ", line: " + i + ", status: "
+            // + status);
             if ((status == ICounter.FULLY_COVERED
                     && (oldCC == null || oldCC.getLine(i).getStatus() == ICounter.NOT_COVERED
                             || oldCC.getLine(i).getStatus() == ICounter.PARTLY_COVERED))
@@ -289,7 +293,8 @@ public class InstrumentHelper {
             String key) {
         boolean changed = false;
         for (final IClassCoverage cc : newCoverageBuilder.getClasses()) {
-            // Log.debug("class coverage: " + cc.getName() + ", " + cc.getInstructionCounter().getCoveredCount());
+            // Log.debug("class coverage: " + cc.getName() + ", " +
+            // cc.getInstructionCounter().getCoveredCount());
             if (cc.getInstructionCounter().getCoveredCount() == 0) {
                 continue;
             } else {
@@ -329,13 +334,6 @@ public class InstrumentHelper {
         // coverage rate of context
         CoverageBuilder currentCoverageBuilder = getCoverageRateFromAllClasses(lineNumber, classesDirectory);
         boolean contextChanged = coverageChanged(newCoverageBuilder, currentCoverageBuilder, key);
-
-        // if (stmtChanged) {
-        //     Log.debug("Coverage rate of target statement itself changed: " + clazzName + String.valueOf(lineNumber));
-        // }
-        // if (contextChanged) {
-        //     Log.debug("Coverage rate of context changed: " + clazzName + String.valueOf(lineNumber));
-        // }
         return stmtChanged || contextChanged;
     }
 
@@ -390,8 +388,12 @@ public class InstrumentHelper {
             }
             analyzer.analyzeAll(classesDirectoryFile);
             // analyze org.raninline.IT_String
-            analyzer.analyzeAll(InstrumentHelper.class.getClassLoader().getResourceAsStream("org/raninline/IT_String.class"), "org.raninline.IT_String");
-            analyzer.analyzeAll(InstrumentHelper.class.getClassLoader().getResourceAsStream("org/raninline/IT_Matcher.class"), "org.raninline.IT_Matcher");
+            analyzer.analyzeAll(
+                    InstrumentHelper.class.getClassLoader().getResourceAsStream("org/raninline/IT_String.class"),
+                    "org.raninline.IT_String");
+            analyzer.analyzeAll(
+                    InstrumentHelper.class.getClassLoader().getResourceAsStream("org/raninline/IT_Matcher.class"),
+                    "org.raninline.IT_Matcher");
             // String jdkPath = System.getProperty("java.home") + File.separator + "lib" +
             // File.separator + "rt.jar";
             // analyzer.analyzeAll(new FileInputStream(jdkPath), jdkPath);
@@ -458,45 +460,38 @@ public class InstrumentHelper {
         }
         // skip the inline test if it does not have an assertion
         if (curInlineTest.assertions.size() == 0) {
+            Log.info("Skip inline test because it does not have an assertion: " + curInlineTest);
             return;
         }
         String key = curInlineTest.srcPath + ":" + curInlineTest.targetStmtLineNo;
 
         totalInlineTests++;
 
-        if (curInlineTest.assertions.size() > 0) {
-            if (!inlineTests.contains(curInlineTest)) {
-                if (canAddInlineTest(targetStmtLineNo, clazzName, classesDirectory)) {
-                    saveReducedInlineTests(curInlineTest);
-                    int counter = srcLineNoCounter.getOrDefault(key, 0);
-                    srcLineNoCounter.put(key, counter + 1);
-                }
+        if (!inlineTests.contains(curInlineTest)) {
+            if (canAddInlineTest(targetStmtLineNo, clazzName, classesDirectory)) {
+                saveReducedInlineTest(curInlineTest);
+                int counter = srcLineNoCounter.getOrDefault(key, 0);
+                srcLineNoCounter.put(key, counter + 1);
             }
+        }
 
-            if (!allInlineTests.contains(curInlineTest)) {
-                int allCounter = allSrcLineNoCounter.getOrDefault(key, 0);
-                saveAllInlineTests(curInlineTest);
-                allSrcLineNoCounter.put(key, allCounter + 1);
-            }
+        if (!allInlineTests.contains(curInlineTest)) {
+            int allCounter = allSrcLineNoCounter.getOrDefault(key, 0);
+            saveAllInlineTest(curInlineTest);
+            allSrcLineNoCounter.put(key, allCounter + 1);
         }
     }
 
-    public static void saveReducedInlineTests(InlineTest curInlineTest) {
+    public static void saveReducedInlineTest(InlineTest curInlineTest) {
         inlineTests.add(curInlineTest);
-        if (inlineTests.size() >= 100) {
-            // save inline tests to file, and clear the list
-            saveInlineTestsToFile(inlineTests, Constant.inlineTestFilePath);
-            inlineTests.clear();
-        }
+        // save inline tests to file
+        saveInlineTestToFile(curInlineTest, Constant.inlineTestFilePath);
     }
 
-    public static void saveAllInlineTests(InlineTest curInlineTest) {
+    public static void saveAllInlineTest(InlineTest curInlineTest) {
         allInlineTests.add(curInlineTest);
-        if (allInlineTests.size() >= 100) {
-            // save all inline tests to file, and clear the list
-            saveInlineTestsToFile(allInlineTests, Constant.allInlineTestFilePath);
-            allInlineTests.clear();
-        }
+        // save all inline tests to file
+        saveInlineTestToFile(curInlineTest, Constant.allInlineTestFilePath);
     }
 
     /**
@@ -540,7 +535,7 @@ public class InstrumentHelper {
             // add given statement
             String varType = parseVarType(variable);
             String varValue = parseValue(varType, variable);
-            String givenStmt = "given(" + variableName + "," + varValue + ")";
+            String givenStmt = Constant.GIVEN + "(" + variableName + "," + varValue + ")";
             if (targetStmtLineNoToCurInlineTestMap.containsKey(targetStmtNum)) {
                 InlineTest curInlineTest = targetStmtLineNoToCurInlineTestMap.get(targetStmtNum);
                 curInlineTest.givens.add(givenStmt);
@@ -549,7 +544,7 @@ public class InstrumentHelper {
             // add assertion statement for statement
             String varType = parseVarType(variable);
             String varValue = parseValue(varType, variable);
-            String checkStmt = "checkEq(" + variableName + "," + varValue + ")";
+            String checkStmt = Constant.CHECK_EQ + "(" + varValue + "," + variableName + ")";
             if (targetStmtLineNoToCurInlineTestMap.containsKey(targetStmtNum)) {
                 InlineTest curInlineTest = targetStmtLineNoToCurInlineTestMap.get(targetStmtNum);
                 curInlineTest.assertions.add(checkStmt);
@@ -558,9 +553,9 @@ public class InstrumentHelper {
             // add assertion statement for if condition
             String checkStmt;
             if (info.equals(Constant.TARGET_STMT_EXECUTED)) {
-                checkStmt = "checkTrue(group())";
+                checkStmt = Constant.CHECK_TRUE + "(" + Constant.GROUP + "())";
             } else {
-                checkStmt = "checkFalse(group())";
+                checkStmt = Constant.CHECK_FALSE + "(" + Constant.GROUP + "())";
             }
             if (targetStmtLineNoToCurInlineTestMap.containsKey(targetStmtNum)) {
                 InlineTest curInlineTest = targetStmtLineNoToCurInlineTestMap.get(targetStmtNum);
@@ -575,21 +570,6 @@ public class InstrumentHelper {
             // check if the coverage rate is different from existing inline tests
             addInlineTest(targetStmtNum, clazz.getName(), classesDirectory);
             targetStmtLineNoToCurInlineTestMap.remove(targetStmtNum);
-        }
-    }
-
-    /**
-     * Save all inline tests before JVM exits.
-     */
-    static class SaveInlineTests extends Thread {
-        public void run() {
-            if (inlineTests.isEmpty()) {
-                return;
-            }
-            // write log information
-            // Log.debug("Total inline tests: " + totalInlineTests);
-            // write coverage information
-            teardown();
         }
     }
 
@@ -629,146 +609,131 @@ public class InstrumentHelper {
         // read number of inline tests for each target statement
         String inlineTestsCounterFile = inlineGenDir + "/" + Constant.INLINE_TESTS_COUNTER_FILE_NAME;
         Path inlineTestsCounterFilePath = Paths.get(inlineTestsCounterFile);
-        if (!Files.exists(inlineTestsCounterFilePath)) {
-            return;
-        }
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(inlineTestsCounterFile));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] tokens = line.split(";");
-                if (tokens.length <= 1) {
-                    continue;
+        if (Files.exists(inlineTestsCounterFilePath)) {
+            try {
+                BufferedReader reader = new BufferedReader(new FileReader(inlineTestsCounterFile));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    String[] tokens = line.split(";");
+                    if (tokens.length <= 1) {
+                        continue;
+                    }
+                    String srcLineNo = tokens[0];
+                    int count = Integer.parseInt(tokens[1]);
+                    srcLineNoCounter.put(srcLineNo, count);
                 }
-                String srcLineNo = tokens[0];
-                int count = Integer.parseInt(tokens[1]);
-                srcLineNoCounter.put(srcLineNo, count);
+                reader.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-            reader.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
 
         // read coverage information for each target statement
         String coverageFile = inlineGenDir + "/" + Constant.COVERAGE_FILE_NAME;
         Path coverageFilePath = Paths.get(coverageFile);
-        if (!Files.exists(coverageFilePath)) {
-            return;
-        }
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(coverageFile));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] tokens = line.split(";");
-                String classLineNo = tokens[0];
+        if (Files.exists(coverageFilePath)) {
+            try {
+                BufferedReader reader = new BufferedReader(new FileReader(coverageFile));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    String[] tokens = line.split(";");
+                    String classLineNo = tokens[0];
 
-                for (int i = 1; i < tokens.length; i++) {
-                    String lineNo = tokens[i];
-                    if (!classLineNoToCovered.containsKey(classLineNo)) {
-                        classLineNoToCovered.put(classLineNo, new HashSet<String>());
+                    for (int i = 1; i < tokens.length; i++) {
+                        String lineNo = tokens[i];
+                        if (!classLineNoToCovered.containsKey(classLineNo)) {
+                            classLineNoToCovered.put(classLineNo, new HashSet<String>());
+                        }
+                        classLineNoToCovered.get(classLineNo).add(lineNo);
                     }
-                    classLineNoToCovered.get(classLineNo).add(lineNo);
                 }
+                reader.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-            reader.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
 
         // read serialized data to path
         String serializedDataToPath = inlineGenDir + "/" + Constant.SERIALIZED_DATA_TO_PATH_FILE_NAME;
         File serializedDataDirFile = new File(serializedDataToPath);
-        if (!serializedDataDirFile.exists()) {
-            return;
-        }
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(serializedDataToPath));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] tokens = line.split(";");
-                String serialzedData = tokens[0];
-                String path = tokens[1];
-                serializedDataToFilePathMap.put(serialzedData, path);
+        if (serializedDataDirFile.exists()) {
+            try {
+                BufferedReader reader = new BufferedReader(new FileReader(serializedDataToPath));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    String[] tokens = line.split(";");
+                    String serialzedData = tokens[0];
+                    String path = tokens[1];
+                    serializedDataToFilePathMap.put(serialzedData, path);
+                }
+                reader.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-            reader.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 
-    public static void saveInlineTestsToFile(List<InlineTest> inlineTestsList, String destPath) {
-        // sort inline tests and write to file
+    public static void saveInlineTestToFile(InlineTest inlineTest, String destPath) {
+        // save inline test
         try {
             FileWriter writer = new FileWriter(destPath, true);
-            Map<String, List<InlineTest>> srcToInlineTests = new HashMap<String, List<InlineTest>>();
-            for (InlineTest inlineTest : inlineTestsList) {
-                if (!srcToInlineTests.containsKey(inlineTest.srcPath)) {
-                    srcToInlineTests.put(inlineTest.srcPath, new ArrayList<InlineTest>());
-                }
-                srcToInlineTests.get(inlineTest.srcPath).add(inlineTest);
-            }
-            for (String srcPath : srcToInlineTests.keySet()) {
-                List<InlineTest> curInlineTests = srcToInlineTests.get(srcPath);
-                Collections.sort(curInlineTests, (o1, o2) -> o1.targetStmtLineNo - o2.targetStmtLineNo);
-                for (InlineTest inlineTest : curInlineTests) {
-                    writer.write(inlineTest.srcPath + ";" + inlineTest.targetStmtLineNo + ";" + inlineTest.toString()
-                            + "\n");
-                }
-            }
+            writer.write(inlineTest.srcPath + ";" + inlineTest.targetStmtLineNo + ";" + inlineTest.toString()
+                    + "\n");
             writer.close();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
     /**
-     * write coverage information to file
+     * Save all inline tests before JVM exits.
      */
-    public static void teardown() {
-        // save inline tests
-        saveInlineTestsToFile(inlineTests, Constant.inlineTestFilePath);
-        saveInlineTestsToFile(allInlineTests, Constant.allInlineTestFilePath);
+    static class TearDown extends Thread {
+        public void run() {
+            // write log information
+            // Log.debug("Total inline tests: " + totalInlineTests);
+            // write coverage information
+            inlineGenDir = Utils.createDir(Constant.INLINE_GEN_DIR_NAME);
 
-        inlineGenDir = Utils.createDir(Constant.INLINE_GEN_DIR_NAME);
-
-        // write number of inline tests for each target statement
-        String inlineTestsCounterFile = inlineGenDir + "/" + Constant.INLINE_TESTS_COUNTER_FILE_NAME;
-        try {
-            FileWriter writer = new FileWriter(inlineTestsCounterFile);
-            for (String srcLineNo : srcLineNoCounter.keySet()) {
-                writer.write(srcLineNo + ";" + srcLineNoCounter.get(srcLineNo) + "\n");
-            }
-            writer.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        // write coverage information for each target statement
-        String coverageFile = inlineGenDir + "/" + Constant.COVERAGE_FILE_NAME;
-        try {
-            FileWriter writer = new FileWriter(coverageFile);
-            for (String classLineNo : classLineNoToCovered.keySet()) {
-                writer.write(classLineNo);
-                for (String lineNo : classLineNoToCovered.get(classLineNo)) {
-                    writer.write(";" + lineNo);
+            // write number of inline tests for each target statement
+            String inlineTestsCounterFile = inlineGenDir + "/" + Constant.INLINE_TESTS_COUNTER_FILE_NAME;
+            try {
+                FileWriter writer = new FileWriter(inlineTestsCounterFile);
+                for (String srcLineNo : srcLineNoCounter.keySet()) {
+                    writer.write(srcLineNo + ";" + srcLineNoCounter.get(srcLineNo) + "\n");
                 }
-                writer.write("\n");
+                writer.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-            writer.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
 
-        // write serialized data to path
-        String serializedDataToPath = inlineGenDir + "/" + Constant.SERIALIZED_DATA_TO_PATH_FILE_NAME;
-        try {
-            FileWriter writer = new FileWriter(serializedDataToPath);
-            for (String serializedData : serializedDataToFilePathMap.keySet()) {
-                writer.write(serializedData + ";" + serializedDataToFilePathMap.get(serializedData) + "\n");
+            // write coverage information for each target statement
+            String coverageFile = inlineGenDir + "/" + Constant.COVERAGE_FILE_NAME;
+            try {
+                FileWriter writer = new FileWriter(coverageFile);
+                for (String classLineNo : classLineNoToCovered.keySet()) {
+                    writer.write(classLineNo);
+                    for (String lineNo : classLineNoToCovered.get(classLineNo)) {
+                        writer.write(";" + lineNo);
+                    }
+                    writer.write("\n");
+                }
+                writer.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-            writer.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+
+            // write serialized data to path
+            String serializedDataToPath = inlineGenDir + "/" + Constant.SERIALIZED_DATA_TO_PATH_FILE_NAME;
+            try {
+                FileWriter writer = new FileWriter(serializedDataToPath);
+                for (String serializedData : serializedDataToFilePathMap.keySet()) {
+                    writer.write(serializedData + ";" + serializedDataToFilePathMap.get(serializedData) + "\n");
+                }
+                writer.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ public class InlineTest {
     public List<String> assertions;
     public String srcPath; // source file path that inline test is in
     public String clazzName; // class that inline test is in
-    
+
     public InlineTest() {
         this.givens = new ArrayList<String>();
         this.assertions = new ArrayList<String>();
@@ -20,13 +20,13 @@ public class InlineTest {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         if (this.testName == null && this.targetStmtLineNo <= 0) {
-            sb.append("new Here()");
+            sb.append(Constant.DECLARE_NAME + "()");
         } else if (this.testName == null && this.targetStmtLineNo > 0) {
-            sb.append("new Here(" + this.targetStmtLineNo + ")"); 
+            sb.append(Constant.DECLARE_NAME + "(" + this.targetStmtLineNo + ")");
         } else if (this.testName != null && this.targetStmtLineNo <= 0) {
-            sb.append("new Here(\"" + this.testName + "\")");
+            sb.append(Constant.DECLARE_NAME + "(\"" + this.testName + "\")");
         } else {
-            sb.append("new Here(\"" + this.testName + "\", " + this.targetStmtLineNo + ")");
+            sb.append(Constant.DECLARE_NAME + "(\"" + this.testName + "\", " + this.targetStmtLineNo + ")");
         }
         for (String given : givens) {
             sb.append(".");
@@ -43,7 +43,7 @@ public class InlineTest {
     public int hashCode() {
         return this.srcPath.hashCode() + this.lineNo + this.toString().hashCode();
     }
-    
+
     public boolean equals(Object o) {
         if (o == this) {
             return true;

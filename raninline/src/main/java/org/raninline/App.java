@@ -35,7 +35,7 @@ public class App {
         } else if (task.equals("add-inline-test") || task.equals("a")) {
             // Add inline tests from log file, the log file contains constructed inline
             // tests.
-            // e.g. new Here().given(...).checkEq(...);
+            // e.g. itest().given(...).checkEq(...);
             String logFilePath = args[1];
             String lineNumberFromInput;
             String filePathFromInput;
