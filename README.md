@@ -13,10 +13,10 @@ R2-tests: It contains the R2 tests.
 
 ### Inline test format
 1. "Declare" part
-`new Here()`
+`itest`
 
-In our experiments, we use `new Here(test_source, target_stmt_line_number)`, to represent the test source and the line number of the target statement in original file (note that the original file is different from the Java file with inline tests).
-For example, `new Here("Randoop", 57)` means that the test source is Randoop generated tests, and the target statement starts at line 57 in the original file.
+In our experiments, we use `itest(test_source, target_stmt_line_number)`, to represent the test source and the line number of the target statement in original file (note that the original file is different from the Java file with inline tests).
+For example, `itest("Randoop", 57)` means that the test source is Randoop generated tests, and the target statement starts at line 57 in the original file.
 
 2. "Assign part" part
 `given(var, value)`
