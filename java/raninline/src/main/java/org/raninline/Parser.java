@@ -93,22 +93,6 @@ public class Parser {
         writer.close();
     }
 
-    public static void counter(String srcPath, String logFilePath, String inlineTestFilePath) throws IOException {
-        CompilationUnit cu = StaticJavaParser.parse(Paths.get(srcPath));
-        Context ctx = new Context();
-        // make the folder for the log file
-        new File(logFilePath).getParentFile().mkdirs();
-        ctx.srcPath = srcPath;
-        ctx.logPath = logFilePath;
-        ctx.inlineTestPath = inlineTestFilePath;
-        LogCounter visitor = new LogCounter();
-        cu = (CompilationUnit) cu.accept(visitor, ctx);
-        FileWriter writer;
-        writer = new FileWriter(srcPath);
-        writer.write(cu.toString());
-        writer.close();
-    }
-
     /**
      * Add parsed inline tests (from log file) to the Java source file
      * 

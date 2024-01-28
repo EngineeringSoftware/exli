@@ -26,10 +26,13 @@ RUN useradd -ms /bin/bash -c "Exli User" itdocker && echo "itdocker:itdocker" | 
 USER itdocker
 WORKDIR /home/itdocker/
 
-# Install sdkman
-RUN curl -s "https://get.sdkman.io" | bash && source "$HOME/.sdkman/bin/sdkman-init.sh"
-# Install java 8
-RUN bash -c "sdk install java 8.0.302-open"
+# Download and install SDKMAN
+RUN curl -s "https://get.sdkman.io" | bash
+# Add SDKMAN to PATH
+ENV PATH="$HOME/.sdkman/bin:${PATH}"
+# Install and set JDK 8 as the default JDK
+RUN bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && sdk install java 8.0.302-open"
+
 
 # Init conda
 RUN conda init bash && source ~/.bashrc
