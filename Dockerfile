@@ -22,26 +22,21 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
 ENV PATH=$CONDA_DIR/bin:$PATH
 
 # Add new user
-RUN useradd -ms /bin/bash -c "Inlinetests User" itdocker && echo "itdocker:itdocker" | chpasswd && adduser itdocker sudo
+RUN useradd -ms /bin/bash -c "Exli User" itdocker && echo "itdocker:itdocker" | chpasswd && adduser itdocker sudo
 USER itdocker
 WORKDIR /home/itdocker/
 
 # Install sdkman
 RUN curl -s "https://get.sdkman.io" | bash && source "$HOME/.sdkman/bin/sdkman-init.sh"
 # Install java 8
-RUN sdk install java 8.0.302-open
+RUN bash -c "sdk install java 8.0.302-open"
 
 # Init conda
 RUN conda init bash && source ~/.bashrc
 
 # Set up working environment
-RUN git clone git@github.com:EngineeringSoftware/inlinetest.git inlinetest
-RUN git clone git@github.com:EngineeringSoftware/exli.git exli
-# RUN mkdir projects
-# COPY --chown=itdocker:itdocker results exli/results
-# COPY --chown=itdocker:itdocker python exli/python
-# COPY --chown=itdocker:itdocker java exli/java
-# COPY --chown=itdocker:itdocker jars exli/jars
+RUN bash -c "git clone https://github.com/EngineeringSoftware/inlinetest.git inlinetest"
+RUN bash -c "git clone https://github.com/EngineeringSoftware/exli.git exli"
 
 # Install python exli
 RUN cd "$HOME/exli/python" && /bin/bash -c "bash prepare-conda-env.sh"
