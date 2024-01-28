@@ -1,5 +1,9 @@
-## Appendix
-appendix.pdf: This is the appendix of the paper. It contains some additional experiment results.
+# Exli
+Automatically extracting inline tests from unit tests.
+
+## Introduction
+This repo contains the code and data for producing the experiments in [Exli][paper-url].
+
 
 ## Generated tests
 R0-tests, R1-tests, R2-tests directories contain the inline tests that
@@ -24,9 +28,10 @@ For example, `itest("Randoop", 57)` means that the test source is Randoop genera
 3. "Assert" part
 `assert(var, value)`
 
-## Source code
+## Repo structure
 raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
 Instrumenter, Collector, Round1Reducer, and InlineTestConstructor.
+appendix.pdf: This is the appendix of the paper. It contains some additional experiment results.
 
 ## Citation
 If you have used EXLI in a research project, please cite the research paper in any related publication:
@@ -44,3 +49,5 @@ Authors: [Yu Liu](https://sweetstreet.github.io/), [Pengyu Nie](https://pengyuni
   year =         {2023},
 }
 ```
+
+[paper-url]: https://dl.acm.org/doi/10.1145/3597926.3598149
