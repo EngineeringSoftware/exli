@@ -61,16 +61,6 @@ public class App {
             String lineNumber = args[2];
             String logFilePath = args[3];
             Parser.constructInlineTest(filePath, lineNumber, logFilePath);
-        } else if (task.equals("counter")) {
-            String filePath = args[1];
-            String logFilePath = args[2];
-            String inlineTestFilePath;
-            if (args.length >= 4) {
-                inlineTestFilePath = args[3];
-            } else {
-                inlineTestFilePath = Paths.get(logFilePath).getParent().toString() + "/inlinetest-log.txt";
-            }
-            Parser.counter(filePath, logFilePath, inlineTestFilePath);
         } else if (task.equals("target-stmt")) {
             String srcPath = args[1];
             String logFilePath = args[2];
