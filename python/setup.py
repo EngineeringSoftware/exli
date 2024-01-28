@@ -41,12 +41,11 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
     ],
-    requires=[
+    install_requires=[
         "seutil",
         "xmltodict",
         "tqdm",
         "universalmutator",
-        "jsonargparse",
     ],
     extras_require={
         "dev": ["flake8", "black", "ipykernel"],
