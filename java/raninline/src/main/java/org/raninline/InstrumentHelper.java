@@ -544,7 +544,7 @@ public class InstrumentHelper {
             // add assertion statement for statement
             String varType = parseVarType(variable);
             String varValue = parseValue(varType, variable);
-            String checkStmt = Constant.CHECK_EQ + "(" + varValue + "," + variableName + ")";
+            String checkStmt = Constant.CHECK_EQ + "(" + variableName + "," + varValue + ")";
             if (targetStmtLineNoToCurInlineTestMap.containsKey(targetStmtNum)) {
                 InlineTest curInlineTest = targetStmtLineNoToCurInlineTestMap.get(targetStmtNum);
                 curInlineTest.assertions.add(checkStmt);
