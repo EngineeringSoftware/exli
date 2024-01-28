@@ -20,7 +20,7 @@ function prepare_conda_env() {
         pip install --upgrade pip
 
         # Install libraries but not this package itself
-        pip install .[dev,research]
+        pip install -e .[dev,research]
         pip uninstall ExLi-research -y
 }
 

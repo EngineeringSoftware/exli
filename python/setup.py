@@ -20,7 +20,7 @@ setup(
     maintainer="Yu Liu",
     maintainer_email="yuki.liu@utexas.edu",
     license="MIT",
-    url="https://github.com/EngineeringSoftware/ExLi",
+    url="https://github.com/EngineeringSoftware/exli",
     description="Extracting inline tests from unit tests",
     long_description="TODO",  # read('README.rst'),
     python_requires=">=3.7",
@@ -46,7 +46,6 @@ setup(
         "xmltodict",
         "tqdm",
         "universalmutator",
-        "jsonargparse",
     ],
     extras_require={
         "dev": ["flake8", "black", "ipykernel"],
