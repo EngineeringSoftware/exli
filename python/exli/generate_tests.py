@@ -9,60 +9,104 @@ from jsonargparse import CLI
 
 
 class Generate:
-    # python -m generate_tests generate_tests_with_different_seeds --project_name="jkuhnert_ognl" --commit="5c30e1e"
+    # python -m exli.generate_tests generate_tests_with_different_seeds --project_name="jkuhnert_ognl" --sha="5c30e1e"
     def generate_tests_with_different_seeds(
         self,
         project_name: str,
-        commit: str,
+        sha: str,
         num_seeds: int = 5,
         test_type: str = "randoop",
     ):
         if test_type == "randoop":
+            time_limit = 100
             not_covered_classes = self.get_not_covered_classes(project_name, "path")
             if not not_covered_classes:
                 print(f"not_covered_classes is empty for {project_name}")
                 return
             deps = set()
             for not_covered_class in not_covered_classes:
-                clazz_deps = Util.get_dependencies(
-                    project_name, commit, not_covered_class
-                )
+                clazz_deps = Util.get_dependencies(project_name, sha, not_covered_class)
                 deps.update(clazz_deps)
             classpath_list = list(deps)
         elif test_type == "evosuite":
+            time_limit = 120
             not_covered_classes = self.get_not_covered_classes(project_name, "name")
             if not not_covered_classes:
                 print(f"not_covered_classes is empty for {project_name}")
                 return
             classpath_list = list(not_covered_classes)
+
         for seed in range(1, num_seeds + 1):
             # generate tests
+            generated_unit_tests_dir = (
+                Macros.unit_tests_dir
+                / f"{project_name}"
+                / f"{test_type}-tests-{seed}"
+            )
+            deps_file_path = f"{generated_unit_tests_dir}/{test_type}-deps.txt"
+            classpath_list_path = f"{generated_unit_tests_dir}/classpath-list.txt"
+            log_file_path = Macros.log_dir / f"raninline-{test_type}-with-seeds.txt"
+            Util.prepare_project_for_test_generation(
+                project_name,
+                sha,
+                deps_file_path,
+                classpath_list_path,
+                log_file_path,
+            )
+            se.io.dump(
+                classpath_list_path,
+                classpath_list,
+                se.io.Fmt.txtList,
+            )
+            log_dir = Macros.log_dir / test_type
             self.generate_tests_with_one_seed(
-                project_name, commit, test_type, None, seed, classpath_list
+                project_name,
+                test_type,
+                generated_unit_tests_dir,
+                log_dir,
+                seed,
+                time_limit,
+                deps_file_path,
+                classpath_list_path,
             )
 
-    def generate_tests_with_one_seed(self, 
+    def generate_tests_with_one_seed(
+        self,
         project_name: str,
-        commit: str,
-        test_type: str = "randoop",
+        test_type: str,
         output_dir: str = None,
+        log_dir: str = None,
         seed: int = 42,
-        classpath_list: list = None,
+        time_limit: int = 100,
+        dep_file_path: str = None,
+        classpath_list_path: str = None,
     ):
         if test_type == "randoop":
             res = Util.generate_randoop_tests(
-                project_name, commit, seed, output_dir, 100, classpath_list
+                project_name,
+                seed,
+                output_dir,
+                log_dir,
+                time_limit,
+                dep_file_path,
+                classpath_list_path,
             )
             Util.fix_randoop_generated_tests_helper(project_name, output_dir)
         elif test_type == "evosuite":
             res = Util.generate_evosuite_tests(
-                project_name, commit, seed, f"{output_dir}", 120, classpath_list
+                project_name,
+                seed,
+                output_dir,
+                log_dir,
+                time_limit,
+                dep_file_path,
+                classpath_list_path,
             )
         else:
             res = f"Unknown test type: {test_type}"
         print(f"When seed is {seed}, {res}")
 
-    # python -m generate_tests generate_coverage --project_name="jkuhnert_ognl" --commit="5c30e1e"
+    # python -m exli.generate_tests generate_coverage --project_name="jkuhnert_ognl" --commit="5c30e1e"
     def generate_coverage(
         self,
         project_name: str,
@@ -158,7 +202,7 @@ class Generate:
                     )
         return not_covered_classes
 
-    # python -m generate_tests analyze_covered_stmts --project_name="jkuhnert_ognl" --commit="5c30e1e"
+    # python -m exli.generate_tests analyze_covered_stmts --project_name="jkuhnert_ognl" --commit="5c30e1e"
     def analyze_covered_stmts(
         self,
         project_name: str,
@@ -200,7 +244,7 @@ class Generate:
                 se.io.Fmt.jsonPretty,
             )
 
-    # python -m generate_tests batch_run_tool
+    # python -m exli.generate_tests batch_run_tool
     def batch_run_tool(self, test_type: str = "randoop", num_seeds: int = 5):
         for project_name, sha in Util.get_project_names_list_with_sha():
             self.generate_tests_with_different_seeds(
@@ -209,7 +253,7 @@ class Generate:
             self.generate_coverage(project_name, sha, num_seeds, test_type)
             self.analyze_covered_stmts(project_name, sha, num_seeds, test_type)
 
-    # python -m generate_tests count_covered_stmts
+    # python -m exli.generate_tests count_covered_stmts
     def count_covered_stmts(self, num_seeds: int = 5, test_type: str = "randoop"):
         covered_stmt = set()
         projs = set()
@@ -250,94 +294,9 @@ class Generate:
             se.io.Fmt.jsonPretty,
         )
 
-    # python -m generate_tests batch_generate_tests --test_type evosuite
-    def batch_generate_tests(
-        self,
-        test_type: str,
-        proj_name: str = None,
-        skip_existing: bool = False,
-        seed: int = 42,
-    ):
-        time_file = Macros.results_dir / "time" / f"generate-{test_type}.json"
-        if os.path.exists(time_file):
-            time_dict = se.io.load(time_file)
-        else:
-            time_dict = {}
-
-        for project_name, commit in Util.get_project_names_list_with_sha():
-            if proj_name is not None and project_name != proj_name:
-                continue
-            if project_name in Util.get_excluded_projects():
-                continue
-            output_dir = (
-                Macros.log_dir
-                / f"teco-{test_type}-test"
-                / project_name
-                / f"{test_type}-tests"
-            )
-            if not os.path.exists(output_dir.parent):
-                se.bash.run(f"mkdir -p {output_dir.parent}")
-            if skip_existing:
-                if os.path.exists(output_dir):
-                    continue
-            else:
-                if os.path.exists(output_dir):
-                    # remove the existing directory
-                    se.bash.run(f"rm -rf {output_dir}")
-            if test_type == "evosuite":
-                classes = self.get_classes(project_name, "name")
-                classpath_list = list(classes)
-                start_time = time.time()
-                try:
-                    with se.TimeUtils.time_limit(10800):
-                        res = Util.generate_evosuite_tests(
-                            project_name,
-                            commit,
-                            seed,
-                            f"{output_dir}",
-                            120,
-                            classpath_list,
-                        )
-                        print(f"res: {res}")
-                except se.TimeoutException:
-                    print(f"TimeoutException for {project_name}")
-            elif test_type == "randoop":
-                classes = self.get_classes(project_name, "path")
-                deps = set()
-                for not_covered_class in classes:
-                    clazz_deps = Util.get_dependencies(
-                        project_name, commit, not_covered_class
-                    )
-                    deps.update(clazz_deps)
-                classpath_list = list(deps)
-                start_time = time.time()
-                try:
-                    with se.TimeUtils.time_limit(10800):
-                        res = Util.generate_randoop_tests(
-                            project_name,
-                            commit,
-                            42,
-                            f"{output_dir}",
-                            100,
-                            classpath_list,
-                        )
-                        Util.fix_randoop_generated_tests_helper(
-                            project_name, output_dir
-                        )
-                except se.TimeoutException:
-                    print(f"TimeoutException for {project_name}")
-            end_time = time.time()
-            total_time = end_time - start_time
-            time_dict[f"{project_name}-{test_type}"] = total_time
-            if "seed" in res:
-                time_dict[f"{project_name}-{test_type}-seed"] = res["seed"]
-        se.io.dump(time_file, time_dict, se.io.Fmt.jsonPretty)
-
-    # python -m generate_tests batch_generate_coverage
+    # python -m exli.generate_tests batch_generate_coverage
     def batch_generate_coverage(self):
         for project_name, commit in Util.get_project_names_list_with_sha():
-            if project_name in Util.get_excluded_projects():
-                continue
             if project_name != "red6_pdfcompare":
                 continue
             res_dir = f"{Macros.results_dir}/teco-evosuite-tests"

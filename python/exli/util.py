@@ -76,7 +76,9 @@ class Util:
         return [
             project["full_name"]
             for project in project_dict
-            if project["jacoco"] and project["randoop"]
+            if project["jacoco"]
+            and project["randoop"]
+            and (project["full_name"] not in Util.get_excluded_projects())
         ]
 
     @classmethod
@@ -88,18 +90,18 @@ class Util:
         return [
             (project["full_name"], project["sha"][:7])
             for project in project_dict
-            if project["jacoco"] and project["randoop"]
+            if project["jacoco"]
+            and project["randoop"]
+            and (project["full_name"] not in Util.get_excluded_projects())
         ]
 
     @classmethod
     def copy_jacoco_extension(cls):
-        se.bash.run(
-            f"cp {Macros.project_dir}/jars/jacoco-extension-1.0-SNAPSHOT.jar $MAVEN_HOME/lib/ext/"
-        )
+        se.bash.run(f"cp {Macros.jacoco_extension_jar} $MAVEN_HOME/lib/ext/")
 
     @classmethod
     def remove_jacoco_extension(cls):
-        se.bash.run(f"rm $MAVEN_HOME/lib/ext/jacoco-extension-1.0-SNAPSHOT.jar")
+        se.bash.run(f"rm $MAVEN_HOME/lib/ext/" + Macros.jacoco_extension_jar.name)
 
     @classmethod
     def configure_tests_for_filtering(
@@ -228,7 +230,43 @@ class Util:
         return project
 
     @classmethod
-    def list_java_files(self, dir: str):
+    def avoid_permission_error(cls, project_name: str):
+        se.bash.run(f"chmod -R 777 {Macros.downloads_dir}/{project_name}")
+
+    @classmethod
+    def prepare_project_for_test_generation(
+        cls,
+        project_name: str,
+        sha: str,
+        dep_file_path: str,
+        classpath_list_path: str,
+        log_path: str,
+    ):
+        project = Util.prepare_project(project_name, sha)
+        maven_project = MavenProject.from_project(project)
+        try:
+            with se.io.cd(Macros.downloads_dir / project_name):
+                # Add dependencies of raninline.
+                maven_project.hack_pom_add_dependency(
+                    "org.raninline", "raninline", "1.0-SNAPSHOT"
+                )
+                maven_project.install()
+                # Get dependencies.
+                if dep_file_path is not None:
+                    dependencies = maven_project.exec_classpathes(
+                        Macros.downloads_dir / project_name,
+                        log_path,
+                    )
+                    se.io.dump(dep_file_path, dependencies, se.io.Fmt.txt)
+                # Get classpath.
+                if classpath_list_path is not None:
+                    classpath_list = Util.find_classes()
+                    se.io.dump(classpath_list_path, classpath_list, se.io.Fmt.txtList)
+        except Exception as e:
+            print(e)
+
+    @classmethod
+    def list_java_files(cls, dir: str):
         with se.io.cd(dir):
             # list all the java files in the project
             java_files = glob.glob(
@@ -246,9 +284,9 @@ class Util:
     def parse_inline_tests(
         cls,
         project_name: str,
-        sha: str = None,
-        generated_tests_dir: str = f"{Macros.reduced_tests_dir}",
-        inline_tests_dir: str = f"{Macros.reduced_inline_tests_dir}",
+        sha: str,
+        generated_tests_dir: str,
+        inline_tests_dir: str,
         file_path_with_inline_tests: str = None,
     ):
         if file_path_with_inline_tests is not None:
@@ -256,24 +294,23 @@ class Util:
             file_paths_with_inline_tests = [file_path_with_inline_tests]
         else:
             # find all java files with inline tests
-            generated_tests_dir = f"{generated_tests_dir}/{project_name}-{sha}"
             file_paths_with_inline_tests = cls.list_java_files(generated_tests_dir)
             if len(file_paths_with_inline_tests) == 0:
                 print(f"no inline tests found in {project_name}")
                 return
         # copy the generated test cases to a package
-        inlinetest_package_dir = f"{inline_tests_dir}/{project_name}-{sha}"
-        if os.path.exists(inlinetest_package_dir):
-            se.bash.run(f"rm -rf {inlinetest_package_dir}")
-        se.bash.run(f"mkdir -p {inlinetest_package_dir}")
+        if os.path.exists(inline_tests_dir):
+            se.bash.run(f"rm -rf {inline_tests_dir}")
+        se.bash.run(f"mkdir -p {inline_tests_dir}")
         # for each java file, parse the inline tests to JUnit tests
         for file_path in file_paths_with_inline_tests:
             # restfb has two packages, one is in src/main/java, the other is in src/main/lombok
             if project_name == "restfb_restfb":
                 app_src_path = f"{Macros.downloads_dir}/{project_name}/src/main/java:{Macros.downloads_dir}/{project_name}/src/main/lombok:{Macros.downloads_dir}/{project_name}/src/test/java"
             else:
+                deps_file = Util.get_deps_file_path(project_name, sha)
                 app_src_path = f"{Macros.downloads_dir}/{project_name}/src/main/java:{Macros.downloads_dir}/{project_name}/src/test/java"
-            command = f"java -cp {Macros.itest_jar} org.inlinetest.InlineTestRunnerSourceCode --input_file={file_path} --assertion_style=junit --output_dir={inlinetest_package_dir} --multiple_test_classes=true --dep_file_path={Macros.log_dir}/teco-randoop-test/{project_name}/randoop-tests/randoop-deps.txt --app_src_path={app_src_path}"
+            command = f"java -cp {Macros.itest_jar} org.inlinetest.InlineTestRunnerSourceCode --input_file={file_path} --assertion_style=junit --output_dir={inline_tests_dir} --multiple_test_classes=true --dep_file_path={deps_file} --app_src_path={app_src_path}"
             try:
                 se.bash.run(command, 0, timeout=180)
             except subprocess.TimeoutExpired as e:
@@ -284,48 +321,37 @@ class Util:
             except Exception as e:
                 print(f"error when parsing inline tests {file_path} for {project_name}")
                 continue
-        for file_path in os.listdir(inlinetest_package_dir):
-            content = se.io.load(
-                f"{inlinetest_package_dir}/{file_path}", se.io.Fmt.txtList
-            )
+        for file_path in os.listdir(inline_tests_dir):
+            content = se.io.load(f"{inline_tests_dir}/{file_path}", se.io.Fmt.txtList)
             package = content[0]
             package = package.replace("package ", "")
             package = package.replace(";", "")
             package_to_dir = package.replace(".", "/")
             # create package dir
-            se.bash.run(f"mkdir -p {inlinetest_package_dir}/{package_to_dir}")
+            se.bash.run(f"mkdir -p {inline_tests_dir}/{package_to_dir}")
             # move file to package
             se.bash.run(
-                f"mv {inlinetest_package_dir}/{file_path} {inlinetest_package_dir}/{package_to_dir}/{file_path}"
+                f"mv {inline_tests_dir}/{file_path} {inline_tests_dir}/{package_to_dir}/{file_path}"
             )
 
     @classmethod
     def run_inline_tests(
         cls,
         project_name: str,
-        commit: str = None,
-        inlinetest_dir: str = None,
+        sha: str,
+        inlinetest_dir: str,
+        cached_objects_dir: str,
+        deps_file: str,
         test_name: str = None,
+        log_path: str = None,
     ):
-        if commit is None:
-            commit = cls.get_sha(project_name)
-        if inlinetest_dir is None:
-            inlinetest_dir = (
-                f"{Macros.reduced_inline_tests_dir}/{project_name}-{commit}"
-            )
         if not os.path.exists(inlinetest_dir):
             return None, None
         with se.io.cd(Macros.downloads_dir / project_name):
             # compile the project
             se.bash.run(f"mvn clean compile {Macros.SKIPS}", 0)
             # copy the cached file
-            if (
-                Macros.reduced_tests_dir / f"{project_name}-{commit}" / ".inlinegen"
-            ).exists():
-                se.bash.run(
-                    f"cp -r {Macros.reduced_tests_dir}/{project_name}-{commit}/.inlinegen .",
-                    0,
-                )
+            se.bash.run(f"cp -r {cached_objects_dir} .", 0)
             # copy the inline tests
             if test_name:
                 exist, test_path = cls.find_inline_test(test_name, inlinetest_dir)
@@ -347,18 +373,27 @@ class Util:
                     f"cp -r {inlinetest_dir} {Macros.downloads_dir}/{project_name}/{Macros.INLINE_TEST_PACKAGE}",
                     0,
                 )
+            if not deps_file.exists():
+                Util.dump_dependencies(project_name, sha, f"{deps_file}")
             # compile
-            deps_file = f"{Macros.log_dir}/teco-randoop-test/{project_name}/randoop-tests/randoop-deps.txt"
             comp_str = f"javac -cp {Macros.itest_jar}:{Macros.jar_dir}/junit-platform-console-standalone-1.9.0-RC1.jar:{Macros.raninline_jar}:$(< {deps_file}) $(find {Macros.INLINE_TEST_PACKAGE} -name '*.java')"
             comp_failed_tests = []
             try:
                 se.bash.run(comp_str, 0)
             except Exception as e:
                 if test_name:
-                    print(e)
+                    if log_path:
+                        se.io.dump(
+                            log_path,
+                            [
+                                f"{project_name} {sha} {test_path}",
+                                traceback.format_exc(),
+                            ],
+                            se.io.Fmt.txtList,
+                            append=True,
+                        )
                     return "compilation failure", -1
                 else:
-                    print(e)
                     # compile file one by one, and remove the failed file
                     java_files = []
                     for file_path in glob.glob(
@@ -370,17 +405,28 @@ class Util:
                         try:
                             se.bash.run(comp_str, 0)
                         except Exception as e:
-                            print(e)
+                            if log_path:
+                                se.io.dump(
+                                    log_path,
+                                    [
+                                        f"{project_name} {sha} {file_path}",
+                                        traceback.format_exc(),
+                                    ],
+                                    se.io.Fmt.txtList,
+                                    append=True,
+                                )
                             comp_failed_tests.append(
                                 file_path + "," + traceback.format_exc()
                             )
                             se.bash.run(f"rm {file_path}")
                     if len(comp_failed_tests) == len(java_files):
                         return "compilation failure", -1
-            if f"{Macros.reduced_inline_tests_dir}" in inlinetest_dir:
-                comp_failed_tests_file = f"{Macros.reduced_inline_tests_report_dir}/{project_name}-comp-failed-tests.txt"
-            elif f"{Macros.all_inline_tests_dir}" in inlinetest_dir:
-                comp_failed_tests_file = f"{Macros.all_inline_tests_report_dir}/{project_name}-comp-failed-tests.txt"
+            if f"{Macros.reduced_its_dir}" in inlinetest_dir:
+                comp_failed_tests_file = f"{Macros.reduced_its_report_dir}/{project_name}-comp-failed-tests.txt"
+            elif f"{Macros.all_its_dir}" in inlinetest_dir:
+                comp_failed_tests_file = (
+                    f"{Macros.all_its_report_dir}/{project_name}-comp-failed-tests.txt"
+                )
             if os.path.exists(comp_failed_tests_file):
                 os.remove(comp_failed_tests_file)
             if comp_failed_tests:
@@ -415,6 +461,16 @@ class Util:
                 return None, run_res.returncode
 
     @classmethod
+    def get_deps_file_path(cls, project_name: str, sha: str):
+        # by default, return the deps file in the generated tests dir
+        deps_file = Macros.unit_tests_dir / f"{project_name}-{sha}" / "deps.txt"
+        if not deps_file.exists():
+            Util.prepare_project_for_test_generation(
+                project_name, sha, deps_file, None, None
+            )
+        return deps_file
+
+    @classmethod
     def find_inline_test(cls, test_name: str, inline_test_dir: str = None):
         with se.io.cd(inline_test_dir):
             test_path = se.bash.run(f"find . -name {test_name}").stdout.strip()
@@ -433,22 +489,20 @@ class Util:
         return maven_project
 
     @classmethod
-    def run_unit_tests(
+    def run_dev_written_unit_tests(
         cls,
-        parsed_project_name: str,
+        project_name: str,
         log_file_path: str,
         maven_project: MavenProject = None,
         timeout: int = 600,
     ):
         if maven_project is None:
-            maven_project = cls.get_maven_project(parsed_project_name)
-        Util.configure_tests_for_jacoco_agent(
-            parsed_project_name, "unit", maven_project
-        )
+            maven_project = cls.get_maven_project(project_name)
+        Util.configure_tests_for_jacoco_agent(project_name, "unit", maven_project)
         print("compiling and executing unit tests...")
         se.io.dump(log_file_path, ["Unit"], se.io.Fmt.txtList, append=True)
-        with se.io.cd(Macros.downloads_dir / parsed_project_name):
-            if parsed_project_name == "cyclopsgroup_jcli":
+        with se.io.cd(Macros.downloads_dir / project_name):
+            if project_name == "cyclopsgroup_jcli":
                 se.bash.run("mvn com.coveo:fmt-maven-plugin:format", 0)
             try:
                 with se.TimeUtils.time_limit(timeout):
@@ -462,19 +516,20 @@ class Util:
     @classmethod
     def run_randoop_command_line(
         cls,
-        parsed_project_name: str,
-        log_file_path: str = "",
-        deps_file: str = "randoop-deps.txt",
+        project_name: str,
+        generated_tests_dir: str,
+        log_file_path: str = None,
+        deps_file: str = None,
         timeout: int = 600,
     ):
-        with se.io.cd(Macros.downloads_dir / parsed_project_name):
+        with se.io.cd(Macros.downloads_dir / project_name):
             se.bash.run(f"mvn test-compile {Macros.SKIPS}")
         print("copying Randoop test cases...")
         se.bash.run(
-            f"cp -r {Macros.log_dir}/teco-randoop-test/{parsed_project_name}/randoop-tests {Macros.downloads_dir/parsed_project_name}/randoop-tests",
+            f"cp -r {generated_tests_dir} {Macros.downloads_dir/project_name}/randoop-tests",
             0,
         )
-        with se.io.cd(f"{Macros.downloads_dir/parsed_project_name}"):
+        with se.io.cd(f"{Macros.downloads_dir/project_name}"):
             # set field "debug" to true
             for f in glob.glob("randoop-tests/*.java"):
                 with open(f, "r") as f_in:
@@ -489,13 +544,13 @@ class Util:
         ################################## Execute tests ##################################
         print("compiling and executing test cases...")
         se.io.dump(log_file_path, ["Randoop"], se.io.Fmt.txtList, append=True)
-        with se.io.cd(f"{Macros.downloads_dir / parsed_project_name}"):
-            comp_str = f"javac -cp {Macros.jar_dir}/junit-platform-console-standalone-1.9.0-RC1.jar:{Macros.raninline_jar}:$(< 'randoop-tests'/{deps_file}) randoop-tests/RegressionTest*.java"
+        with se.io.cd(f"{Macros.downloads_dir / project_name}"):
+            comp_str = f"javac -cp {Macros.junit_jar}:{Macros.raninline_jar}:$(< {deps_file}) randoop-tests/RegressionTest*.java"
             se.bash.run(comp_str, 0)
             try:
                 with se.TimeUtils.time_limit(timeout):
                     # =inclbootstrapclasses=true
-                    run_str = f"java -javaagent:{Macros.jar_dir}/org.jacoco.agent-0.8.8-runtime.jar -jar {Macros.jar_dir}/junit-platform-console-standalone-1.9.0-RC1.jar -cp randoop-tests/:{Macros.raninline_jar}:$(< 'randoop-tests'/{deps_file}) --select-class RegressionTest --details=none &>> {log_file_path}"
+                    run_str = f"java -javaagent:{Macros.jacoco_agent_jar} -jar {Macros.junit_jar} -cp randoop-tests:{Macros.raninline_jar}:$(< {deps_file}) --select-class RegressionTest --details=none &>> {log_file_path}"
                     run_res = se.bash.run(run_str)
             except se.TimeoutException:
                 return -1
@@ -504,32 +559,36 @@ class Util:
     @classmethod
     def run_randoop(
         cls,
-        parsed_project_name: str,
-        log_file_path: str = "",
-        randoop_dir: str = None,
+        project_name: str,
+        generated_tests_dir: str,
+        log_file_path: str,
         maven_project: MavenProject = None,
         timeout: int = 600,
     ):
         if maven_project is None:
-            maven_project = cls.get_maven_project(parsed_project_name)
-        Util.configure_tests_for_jacoco_agent(
-            parsed_project_name, "randoop", maven_project
-        )
-        Util.copy_randoop_tests_to_src_test_java(parsed_project_name)
+            maven_project = cls.get_maven_project(project_name)
+        Util.configure_tests_for_jacoco_agent(project_name, "randoop", maven_project)
+        try:
+            Util.copy_randoop_tests_to_src_test_java(project_name, generated_tests_dir)
+        except Exception as e:
+            se.io.dump(log_file_path, [f"{e}"], se.io.Fmt.txtList, append=True)
+            return -1
         print("compiling and executing Randoop tests...")
-        with se.io.cd(Macros.downloads_dir / parsed_project_name):
+        se.io.dump(log_file_path, ["Randoop"], se.io.Fmt.txtList, append=True)
+        with se.io.cd(Macros.downloads_dir / project_name):
             try:
                 with se.TimeUtils.time_limit(timeout):
                     run_res = se.bash.run(
                         f"mvn clean test {Macros.SKIPS_NO_JACOCO} &>> {log_file_path}"
                     )
-            except se.TimeoutException:
+            except se.TimeoutException as e:
+                se.io.dump(log_file_path, [e], se.io.Fmt.txtList, append=True)
                 return -1
             return run_res.returncode
 
     @classmethod
     def run_jacoco(
-        self,
+        cls,
         project_name: str,
         sha: str,
         checkout: bool = True,
@@ -547,7 +606,7 @@ class Util:
                     project_name, test_type, maven_project
                 )
                 test_rr = se.bash.run(
-                    f"mvn clean test {Macros.SKIPS_NO_JACOCO} > {Macros.log_dir}/teco/{project_name}-{test_type}-jacoco.txt",
+                    f"mvn clean test {Macros.SKIPS_NO_JACOCO} > {Macros.log_dir}/jacoco/{project_name}-{test_type}-jacoco.txt",
                     timeout=timeout,
                 )
                 if test_rr.returncode != 0 and not allow_test_failure:
@@ -556,15 +615,15 @@ class Util:
                 if jacoco_exec:
                     print("jacoco.exec found")
                     se.bash.run(
-                        f"mvn jacoco:report > {Macros.log_dir}/teco/{project_name}-{test_type}-jacoco-report.txt",
+                        f"mvn jacoco:report > {Macros.log_dir}/jacoco/{project_name}-{test_type}-jacoco-report.txt",
                         timeout=120,
                     )
                     se.bash.run(
-                        f"rm -rf {Macros.log_dir}/teco/{project_name}-{test_type}-jacoco-report"
+                        f"rm -rf {Macros.log_dir}/jacoco/{project_name}-{test_type}-jacoco-report"
                     )
                     print("copying jacoco report...")
                     se.bash.run(
-                        f"cp -r target/site/jacoco {Macros.log_dir}/teco/{project_name}-{test_type}-jacoco-report"
+                        f"cp -r target/site/jacoco {Macros.log_dir}/jacoco/{project_name}-{test_type}-jacoco-report"
                     )
                     if test_type == "unit":
                         res["jacoco"] = True
@@ -607,79 +666,57 @@ class Util:
     def generate_randoop_tests(
         cls,
         project_name: str,
-        sha: str,
-        seed: int = 0,
+        seed: int = Macros.DEFAULT_SEED,
         output_dir: str = None,
+        log_dir: str = None,
         time_limit: int = 100,
-        classpath_list: List[str] = None,
+        dep_file_path: str = None,
+        classpath_file_path: str = None,
     ):
         print("run randoop...")
         res = {}
         res["seed"] = seed
-        se.io.mkdir(Macros.log_dir / "teco-randoop-test")
-        project = Util.prepare_project(project_name, sha)
-        maven_project = MavenProject.from_project(project)
-        if output_dir is None:
-            output_dir = Macros.log_dir / "teco-randoop-test" / f"{project_name}" / f"randoop-test-{seed}"
+        if log_dir is None:
+            randoop_log_dir = Macros.log_dir / "randoop"
         else:
-            output_dir = Path(output_dir)
-        if output_dir.exists():
-            print(f"output_dir: {output_dir} already exists")
-            return
-        # create parent dir if not exist
-        if not output_dir.parent.exists():
-            se.io.mkdir(output_dir.parent)
-        try:
-            with se.io.cd(Macros.downloads_dir / project_name):
-                maven_project.install()
-                dependencies = maven_project.exec_classpathes(
-                    Macros.downloads_dir / project_name,
-                    Macros.log_dir / "raninline.log",
-                )
-                se.io.mkdir("randoop-tests")
-                with open("randoop-tests/randoop-deps.txt", "w") as f:
-                    f.write(dependencies)
-                print("find classes...")
-                if classpath_list is None:
-                    classpath_list = cls.find_classes()
-                total_time_limit = min(len(classpath_list) * time_limit, 3600)
-                print(f"total time limit: {total_time_limit}")
-                with open("randoop-tests/classlist.txt", "w") as f:
-                    f.write("\n".join(classpath_list))
+            randoop_log_dir = log_dir
+        se.io.mkdir(randoop_log_dir)
+        log_path = f"{randoop_log_dir}/{project_name}-randoop.log"
+        error_log_path = f"{randoop_log_dir}/run-randoop.log"
 
-                with se.io.cd(f"{Macros.downloads_dir/project_name}/randoop-tests"):
-                    print("running randoop...")
-                    try:
-                        se.bash.run(
-                            f"java -cp {Macros.randoop_jar}:$(< randoop-deps.txt) randoop.main.Main gentests --time-limit={total_time_limit} --usethreads=true --randomseed={seed} --classlist=classlist.txt > {Macros.log_dir}/teco/{project_name}-randoop.log",
-                            0,
-                            timeout=total_time_limit + 1800,
-                        )
-                    except (subprocess.TimeoutExpired, Exception) as e:
-                        se.io.dump(
-                            f"{Macros.log_dir}/teco/run-randoop.log",
-                            [f"{e}"],
-                            se.io.Fmt.txtList,
-                            append=True,
-                        )
-                    java_files = se.bash.run(
-                        "find . -name 'RegressionTest*.java'"
-                    ).stdout
-                    if java_files.strip():
-                        res["randoop"] = True
-                        se.io.mkdir(
-                            f"{Macros.log_dir}/teco-randoop-test/{project_name}"
-                        )
-                        se.bash.run(
-                            f"cp -r {Macros.downloads_dir}/{project_name}/randoop-tests {output_dir}"
-                        )
-                    else:
-                        res["randoop"] = False
+        randoop_tests_dir = Macros.downloads_dir / project_name / "randoop-tests"
+        se.io.mkdir(randoop_tests_dir)
+        try:
+            with se.io.cd(randoop_tests_dir):
+                print("running randoop...")
+                try:
+                    classpath_list = se.io.load(classpath_file_path, se.io.Fmt.txtList)
+                    total_time_limit = min(len(classpath_list) * time_limit, 10800)
+                    print(f"total time limit: {total_time_limit}")
+                    se.bash.run(
+                        f"java -cp {Macros.randoop_jar}:$(< {dep_file_path}) randoop.main.Main gentests --time-limit={total_time_limit} --usethreads=true --randomseed={seed} --classlist={classpath_file_path} &> {log_path}",
+                        0,
+                        timeout=total_time_limit + 1800,
+                    )
+                except (subprocess.TimeoutExpired, Exception) as e:
+                    se.io.dump(
+                        f"{error_log_path}",
+                        [f"{e}"],
+                        se.io.Fmt.txtList,
+                        append=True,
+                    )
+                java_files = se.bash.run("find . -name 'RegressionTest*.java'").stdout
+                if java_files.strip():
+                    res["randoop"] = True
+                    se.io.mkdir(Path(output_dir).parent)
+                    se.bash.run(f"cp -r {randoop_tests_dir} {output_dir}")
+                else:
+                    res["randoop"] = False
         except Exception as e:
             print(traceback.format_exc())
             res["randoop"] = False
             se.io.dump(
-                f"{Macros.log_dir}/teco/run-randoop.log",
+                f"{error_log_path}",
                 [f"{e}"],
                 se.io.Fmt.txtList,
                 append=True,
@@ -690,50 +727,40 @@ class Util:
     def generate_evosuite_tests(
         cls,
         project_name: str,
-        sha: str,
-        seed: int = 0,
+        seed: int = Macros.DEFAULT_SEED,
         output_dir: str = None,
+        log_dir: str = None,
         time_limit: int = 120,
-        classpath_list: List[str] = None,
-        target_is_class: bool = True,
+        dep_file_path: str = None,
+        classpath_file_path: str = None,
     ):
         print("run evosuite...")
         res = {}
         res["seed"] = seed
-        project = Util.prepare_project(project_name, sha)
-        maven_project = MavenProject.from_project(project)
-        if output_dir is None:
-            output_dir = Macros.log_dir / "teco-evosuite-test" / f"{project_name}" / f"evosuite-test-{seed}"
+        if log_dir is None:
+            evosuite_log_dir = Macros.log_dir / "evosuite"
         else:
-            output_dir = Path(output_dir)
-        if output_dir.exists():
-            print(f"output_dir: {output_dir} already exists")
-            return
-        # create parent dir if not exist
-        if not output_dir.parent.exists():
-            se.io.mkdir(output_dir.parent)
+            evosuite_log_dir = log_dir
+        se.io.mkdir(evosuite_log_dir)
+        log_path = f"{evosuite_log_dir}/{project_name}-evosuite.log"
+        error_log_path = f"{evosuite_log_dir}/run-evosuite.log"
+
         try:
             with se.io.cd(Macros.downloads_dir / project_name):
-                maven_project.install()
-                dependencies = maven_project.exec_classpathes(
-                    Macros.downloads_dir / project_name,
-                    Macros.log_dir / "raninline.log",
-                )
-                se.io.dump("evosuite-deps.txt", dependencies, se.io.Fmt.txt)
-                if target_is_class:
+                if classpath_file_path is not None:
                     print("find classes...")
-                    if classpath_list is None:
-                        classpath_list = cls.find_classes()
+                    classpath_list = se.io.load(classpath_file_path, se.io.Fmt.txtList)
                     for classpath in tqdm(classpath_list):
+                        command = f"java -jar {Macros.evosuite_jar} -DCP_file_path {dep_file_path} -class {classpath} -seed {seed} -Dsearch_budget={time_limit} -Duse_separate_classloader=false -Dminimize=false -Dassertion_strategy=all -Dfilter_assertions=true -Dvirtual_fs=false -Dvirtual_net=false -Dsandbox_mode=OFF -Dfilter_sandbox_tests=true -Dmax_loop_iterations=-1 &> {log_path}"
+                        print(command)
                         try:
-                            # -Dassertion_timeout={time_limit} -Dminimization_timeout={time_limit}
-                            command = f"java -jar {Macros.evosuite_jar} -DCP_file_path evosuite-deps.txt -class {classpath} -seed {seed} -Dsearch_budget={time_limit} -Duse_separate_classloader=false -Dminimize=false -Dassertion_strategy=all -Dfilter_assertions=true -Dvirtual_fs=false -Dvirtual_net=false -Dsandbox_mode=OFF -Dfilter_sandbox_tests=true -Dmax_loop_iterations=-1 &> {Macros.log_dir}/teco/{project_name}-evosuite.log"
-                            print(command)
                             se.bash.run(command, 0, timeout=5 * time_limit)
+                            Util.avoid_permission_error(project_name)
                         except (subprocess.TimeoutExpired, Exception) as e:
                             print(traceback.format_exc())
+                            res["evosuite"] = False
                             se.io.dump(
-                                f"{Macros.log_dir}/teco/run-evosuite.log",
+                                f"{error_log_path}",
                                 [f"{e}"],
                                 se.io.Fmt.txtList,
                                 append=True,
@@ -743,19 +770,21 @@ class Util:
                     # check if target/classes exists
                     if not os.path.exists("target/classes"):
                         se.bash.run("mvn compile", 0)
-                    command = f"java -jar {Macros.evosuite_jar} -DCP_file_path evosuite-deps.txt -target {Macros.downloads_dir}/{project_name}/target/classes -seed {seed} -Dsearch_budget={time_limit} -Dassertion_timeout={time_limit} -Dminimization_timeout={time_limit} -Duse_separate_classloader=false -Dminimize=false -Dassertion_strategy=all -Dfilter_assertions=true -Dfilter_sandbox_tests=true -Dvirtual_fs=false -Dvirtual_net=false -Dsandbox_mode=OFF -Dmax_loop_iterations=-1 &> {Macros.log_dir}/teco/{project_name}-evosuite.log"
+                    command = f"java -jar {Macros.evosuite_jar} -DCP_file_path {dep_file_path} -target {Macros.downloads_dir}/{project_name}/target/classes -seed {seed} -Dsearch_budget={time_limit} -Dassertion_timeout={time_limit} -Dminimization_timeout={time_limit} -Duse_separate_classloader=false -Dminimize=false -Dassertion_strategy=all -Dfilter_assertions=true -Dfilter_sandbox_tests=true -Dvirtual_fs=false -Dvirtual_net=false -Dsandbox_mode=OFF -Dmax_loop_iterations=-1 &> {log_path}"
                     print(command)
                     try:
                         se.bash.run(command, 0, timeout=5 * time_limit)
+                        Util.avoid_permission_error(project_name)
                     except Exception as e:
                         print(traceback.format_exc())
                         res["evosuite"] = False
                         se.io.dump(
-                            f"{Macros.log_dir}/teco/run-evosuite.log",
+                            f"{error_log_path}",
                             [f"{e}"],
                             se.io.Fmt.txtList,
                             append=True,
                         )
+
                 # copy evosuite tests to output dir
                 if (Macros.downloads_dir / project_name / "evosuite-tests").exists():
                     # post-process generated tests, change (timeout = 4000) to (timeout = 4000000)
@@ -767,9 +796,6 @@ class Util:
                         f"cp -r {Macros.downloads_dir}/{project_name}/evosuite-tests {output_dir}"
                     )
                     se.bash.run(
-                        f"cp {Macros.downloads_dir}/{project_name}/evosuite-deps.txt {output_dir}"
-                    )
-                    se.bash.run(
                         f"cp -r {Macros.downloads_dir}/{project_name}/evosuite-report {output_dir}"
                     )
                     res["evosuite"] = True
@@ -779,7 +805,7 @@ class Util:
             print(traceback.format_exc())
             res["evosuite"] = False
             se.io.dump(
-                f"{Macros.log_dir}/teco/run-evosuite.log",
+                f"{error_log_path}",
                 [f"{e}"],
                 se.io.Fmt.txtList,
                 append=True,
@@ -789,27 +815,26 @@ class Util:
     @classmethod
     def run_evosuite_command_line(
         cls,
-        parsed_project_name: str,
+        project_name: str,
+        generated_tests_dir: str,
+        deps_file: str,
         log_file_path: str,
-        test_dir: str = None,
-        deps_file: str = "evosuite-deps.txt",
         target_jacoco_exec_path: str = None,
         time_limit: int = 600,
     ):
-        with se.io.cd(Macros.downloads_dir / parsed_project_name):
+        with se.io.cd(Macros.downloads_dir / project_name):
             se.bash.run(f"mvn test-compile {Macros.SKIPS}")
         print("copying EvoSuite test cases...")
-        if not test_dir:
-            test_dir = f"{Macros.log_dir}/teco-evosuite-test/{parsed_project_name}/evosuite-tests"
+        se.io.dump(log_file_path, ["EvoSuite"], se.io.Fmt.txtList, append=True)
         se.bash.run(
-            f"cp -r {test_dir} {Macros.downloads_dir/parsed_project_name}/evosuite-tests",
+            f"cp -r {generated_tests_dir} {Macros.downloads_dir/project_name}/evosuite-tests",
             0,
         )
 
         # 1. change separateClassLoader = true into separateClassLoader = false
         # 2. collect class names
         classes = set()
-        with se.io.cd(f"{Macros.downloads_dir/parsed_project_name}"):
+        with se.io.cd(f"{Macros.downloads_dir/project_name}"):
             # set field "debug" to true
             for f in glob.glob("evosuite-tests/**/*.java", recursive=True):
                 if f.endswith("Test.java"):
@@ -820,7 +845,7 @@ class Util:
                     )
 
         # TODO: hacky way to fix EvoSuite issue: comment out org.evosuite.runtime.GuiSupport
-        with se.io.cd(f"{Macros.downloads_dir/parsed_project_name}"):
+        with se.io.cd(f"{Macros.downloads_dir/project_name}"):
             for f in glob.glob("evosuite-tests/**/*_scaffolding.java", recursive=True):
                 content = se.io.load(f, se.io.Fmt.txt)
                 se.io.dump(
@@ -838,17 +863,15 @@ class Util:
         if not classes:
             return 0
         ################################## Execute tests ##################################
-        print("compiling and executing test cases...")
-        with se.io.cd(f"{Macros.downloads_dir / parsed_project_name}"):
+        print("compiling and executing EvoSuite generated tests...")
+        with se.io.cd(f"{Macros.downloads_dir/project_name}"):
             # add raninline.jar to evosuite-deps.txt
-            deps = se.io.load(f"evosuite-tests/{deps_file}", se.io.Fmt.txt).strip()
-            if f"{Macros.raninline_jar}" not in deps:
-                deps += f":{Macros.raninline_jar}"
+            deps = se.io.load(deps_file, se.io.Fmt.txt).strip()
             # TODO: hacky fix of file path problems
             deps = re.sub(r"/home/[^/]+/", f"/home/{os.getenv('USER')}/", deps)
-            se.io.dump(f"evosuite-tests/{deps_file}", deps, se.io.Fmt.txt)
+            se.io.dump(deps_file, deps, se.io.Fmt.txt)
 
-            comp_str = f"shopt -s globstar; javac -cp {Macros.evosuite_runtime_jar}:{Macros.junit_jar}:{Macros.raninline_jar}:$(< evosuite-tests/{deps_file}) evosuite-tests/**/*.java"
+            comp_str = f"shopt -s globstar; javac -cp {Macros.evosuite_runtime_jar}:{Macros.junit_jar}:{Macros.raninline_jar}:$(< {deps_file}) evosuite-tests/**/*.java"
             print(comp_str)
             try:
                 se.bash.run(comp_str, 0)
@@ -867,25 +890,23 @@ class Util:
                         # class_str += f"-c {c} "
                         class_str += f"{c} "
 
-                    # run_str = f"java -javaagent:{Macros.jacoco_agent_jar} -jar {Macros.junit_jar} -cp evosuite-tests:{Macros.evosuite_runtime_jar}:$(< evosuite-tests/{deps_file}) {class_str} --details=none &>> {log_file_path}"
+                    # run_str = f"java -javaagent:{Macros.jacoco_agent_jar} -jar {Macros.junit_jar} -cp evosuite-tests:{Macros.evosuite_runtime_jar}:$(< {deps_file}) {class_str} --details=none &>> {log_file_path}"
                     # need to use &>> instead of &> because we want to save EvoSuite, Randoop and Unit tests' logs into one file
-                    run_str = f"java -javaagent:{Macros.jacoco_agent_jar} -cp evosuite-tests:{Macros.evosuite_runtime_jar}:$(< evosuite-tests/{deps_file}) org.junit.runner.JUnitCore {class_str} &>> {log_file_path}"
+                    run_str = f"java -javaagent:{Macros.jacoco_agent_jar} -Dlogback.configurationFile={Macros.project_dir}/poms/logback.xml -cp evosuite-tests:{Macros.evosuite_runtime_jar}:{Macros.junit_jar}:{Macros.raninline_jar}:$(< {deps_file}) org.junit.runner.JUnitCore {class_str} &>> {log_file_path}"
                     print(run_str)
                     run_res = se.bash.run(run_str)
 
-                    jacoco_path = (
-                        Macros.downloads_dir / parsed_project_name / "jacoco.exec"
-                    )
+                    jacoco_path = Macros.downloads_dir / project_name / "jacoco.exec"
                     if jacoco_path.exists():
                         # generate jacoco report
                         se.bash.run(
-                            f"java -jar {Macros.jar_dir}/jacococli-0.8.10.jar report {jacoco_path} --classfiles target/classes --html {Macros.log_dir}/teco/{parsed_project_name}-evosuite-jacoco-report",
+                            f"java -jar {Macros.jar_dir}/jacococli-0.8.10.jar report {jacoco_path} --classfiles target/classes --html {Macros.log_dir}/jacoco/{project_name}-evosuite-jacoco-report",
                             0,
                         )
                         if target_jacoco_exec_path is not None:
                             # copy jacoco.exec to target_jacoco_exec_path
                             se.bash.run(
-                                f"cp {jacoco_path} {target_jacoco_exec_path}/{parsed_project_name}-evosuite-jacoco.exec",
+                                f"cp {jacoco_path} {target_jacoco_exec_path}/{project_name}-evosuite-jacoco.exec",
                                 0,
                             )
             except se.TimeoutException:
@@ -893,15 +914,9 @@ class Util:
         return run_res.returncode
 
     @classmethod
-    def configure_file(cls, test_name: str, test_path: str = None):
-        if test_path is None:
-            test_path = expanduser("~") + "/.inlinegenrc"
-            se.io.dump(test_path, f"inlinetestname={test_name}", se.io.Fmt.txt)
-
-    @classmethod
-    def get_affected_tests(cls, project_name: str, sha: str, line_num: int):
-        # TODO: may implement test selection
-        pass
+    def configure_file(cls, test_name: str):
+        test_path = expanduser("~") + "/.inlinegenrc"
+        se.io.dump(test_path, f"inlinetestname={test_name}", se.io.Fmt.txt)
 
     @classmethod
     def get_killed_mutants(cls, project_name: str, test_type_list: List[str]):
@@ -931,17 +946,17 @@ class Util:
 
     @classmethod
     def copy_randoop_tests_to_src_test_java(
-        cls, project_name: str, randoop_test_dir: str = None
+        cls, project_name: str, randoop_test_dir: str
     ):
-        if randoop_test_dir is None:
-            print(f"{randoop_test_dir} does not exist")
+        if not os.path.exists(randoop_test_dir):
+            raise RuntimeError(f"{randoop_test_dir} does not exist")
         with se.io.cd(Macros.downloads_dir / project_name):
             se.io.rmdir(Macros.downloads_dir / project_name / "src/test/java")
             se.io.mkdir(Macros.downloads_dir / project_name / "src/test/java")
             java_tests_path = f"{Macros.downloads_dir}/{project_name}/src/test/java"
             # avoid copying ErrorTest*.java
             se.bash.run(
-                f"cp -r {randoop_test_dir}/RegressionTest*.java {java_tests_path}"
+                f"cp -r {randoop_test_dir}/RegressionTest*.java {java_tests_path}", 0
             )
 
     @classmethod
@@ -1028,7 +1043,9 @@ class Util:
                 class_name = tokens[1]
                 inline_test_name = tokens[2]
                 target_stmt_line_no = class_name.split("_")[-1].replace("Test", "")
-                inline_test_line_no = inline_test_name.replace("testLine", "").replace("()", "")
+                inline_test_line_no = inline_test_name.replace("testLine", "").replace(
+                    "()", ""
+                )
             proj_to_stmt_set[project_name].add(f"{class_name}:{target_stmt_line_no}")
             proj_to_inline_test_set[project_name].add(
                 f"{class_name}:{inline_test_line_no}"
@@ -1066,54 +1083,58 @@ class Util:
         return target_stmt_to_inline_tests
 
     @classmethod
-    # python -m main parse_log --project_name="Asana_java-asana" --commit="52fef9b"
+    # python -m main parse_log --project_name="Asana_java-asana" --sha="52fef9b"
     def parse_log(
         cls,
         project_name: str,
-        commit: str,
-        proj_generated_tests_dir: str = "",
-        INLINE_TEST_LOG_FILE_PATH: str = "",
-        full_file_paths: List[str] = [],
+        sha: str,
+        inline_test_log_path: str,
+        proj_generated_tests_dir: str,
+        log_path: str,
+        timeout: int = 600,
     ):
-        if not proj_generated_tests_dir:
-            proj_generated_tests_dir = (
-                f"{Macros.reduced_tests_dir}/{project_name}-{commit}"
-            )
-        if not INLINE_TEST_LOG_FILE_PATH:
-            INLINE_TEST_LOG_FILE_PATH = f"{proj_generated_tests_dir}/inlinetest-log.txt"
-
-        if not os.path.exists(INLINE_TEST_LOG_FILE_PATH):
-            print(f"no inline test log file found at {INLINE_TEST_LOG_FILE_PATH}")
-            return
-
-        with se.io.cd(Macros.downloads_dir / project_name):
-            # checkout to the original commit for inserting inline tests
-            se.bash.run(f"git clean -xfd")
-            se.bash.run(f"git checkout .")
-            se.bash.run(f"git checkout {commit}")
-        print(
-            f"parsing log {INLINE_TEST_LOG_FILE_PATH} and adding inline tests to source code..."
-        )
+        # Parse log
+        Util.prepare_project(project_name, sha)
+        full_file_paths = Util.list_java_files(f"{Macros.downloads_dir}/{project_name}")
         try:
-            with se.io.cd(Macros.java_raninline_dir):
-                se.bash.run(
-                    f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="a {INLINE_TEST_LOG_FILE_PATH}"',
-                    0,
-                )
+            with se.TimeUtils.time_limit(timeout):
+                with se.io.cd(Macros.java_raninline_dir):
+                    se.bash.run(
+                        f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="a {inline_test_log_path}"',
+                        0,
+                    )
+        except se.TimeoutException as e:
+            se.io.dump(log_path, [e], se.io.Fmt.txtList, append=True)
         except Exception as e:
-            print(e)
+            se.io.dump(
+                log_path,
+                [f"Exception when adding inline tests back to the source code: {e}"],
+                se.io.Fmt.txtList,
+                append=True,
+            )
         file_paths_with_inline_tests = Util.list_java_files_with_inline_tests(
             project_name, full_file_paths
         )
-        file_with_inline_tests = len(file_paths_with_inline_tests)
         for full_file_path in file_paths_with_inline_tests:
-            se.bash.run(
-                f"cp {full_file_path} {proj_generated_tests_dir}",
-                0,
+            # It is possible that one project has multiple files with the same name
+            # create dir starts {Macros.downloads_dir}/{project_name} from to the generated tests dir
+            # e.g., {Macros.downloads_dir}/{project_name}/src/main/java/com/google/gson/JsonParser.java
+            # to {proj_generated_tests_dir}/com/google/gson/JsonParser.java
+            file_path = full_file_path.replace(
+                f"{Macros.downloads_dir}/{project_name}/src/main/java",
+                f"{proj_generated_tests_dir}",
             )
+            if project_name == "restfb_restfb" and "src/main/lombok" in full_file_path:
+                file_path = full_file_path.replace(
+                    f"{Macros.downloads_dir}/{project_name}/src/main/lombok",
+                    f"{proj_generated_tests_dir}",
+                )
+            se.bash.run(f"mkdir -p {os.path.dirname(file_path)}")
+            se.bash.run(f"cp {full_file_path} {file_path}")
+        file_with_inline_tests = len(file_paths_with_inline_tests)
         se.io.dump(
-            Macros.results_dir / "parselog.txt",
-            [f"{project_name} {commit} {file_with_inline_tests} files"],
+            log_path,
+            [f"{project_name} {sha} {file_with_inline_tests} files"],
             se.io.Fmt.txtList,
             append=True,
         )
@@ -1130,20 +1151,16 @@ class Util:
         for full_file_path in full_file_paths:
             # check if inline test is added
             file_content = se.io.load(full_file_path, se.io.Fmt.txt)
-            if "new Here(" not in file_content:
+            if f"{Macros.ITEST_DECLARE}" not in file_content:
                 continue
             file_paths_with_inline_tests.append(full_file_path)
         return file_paths_with_inline_tests
 
     @classmethod
     def fix_randoop_generated_tests_helper(
-        cls, project_name: str, generated_tests_dir: Path = None
+        cls, project_name: str, generated_tests_dir: str
     ):
-        if generated_tests_dir is None:
-            generated_tests_dir = (
-                Macros.log_dir / "teco-randoop-test" / project_name / "randoop-tests"
-            )
-        if not generated_tests_dir.exists():
+        if not os.path.exists(generated_tests_dir):
             return
         regression_test_file = generated_tests_dir / "RegressionTest.java"
 
@@ -1176,14 +1193,13 @@ class Util:
             print(f"skip {project_name}...")
 
     @classmethod
-    def get_dependencies(cls, project_name: str, commit: str, clazz: str):
-        Util.prepare_project(project_name, commit)
+    def get_dependencies(cls, project_name: str, sha: str, clazz: str):
+        Util.prepare_project(project_name, sha)
         with se.io.cd(Macros.downloads_dir / project_name):
             se.bash.run("mvn clean compile test-compile", 0)
             # copy the randoop-deps.txt file to the project root
-            se.bash.run(
-                f"cp {Macros.log_dir}/teco-randoop-test/{project_name}/randoop-tests/randoop-deps.txt ."
-            )
+            deps_file = Util.get_deps_file_path(project_name, sha)
+            se.bash.run(f"cp {deps_file} .")
             deps_command = (
                 f"jdeps -cp $(< randoop-deps.txt) -v -R -dotoutput jdepsoutput {clazz}"
             )
@@ -1220,3 +1236,24 @@ class Util:
     def compile_raninline(cls):
         with se.io.cd(Macros.java_raninline_dir):
             se.bash.run("mvn clean package", 0)
+
+    @classmethod
+    def get_auto_generated_files(cls):
+        auto_generated_files = set()
+        excluded_stmts = se.io.load(
+            f"{Macros.log_dir}/excluded-stmts.txt", se.io.Fmt.txtList
+        )
+        for excluded_stmt in excluded_stmts:
+            if excluded_stmt.startswith("/home"):
+                auto_generated_files.add(excluded_stmt.split(" ")[0])
+        return auto_generated_files
+
+    @classmethod
+    def is_auto_generated_file(cls, file_path: str):
+        # load the file content
+        file_content = se.io.load(file_path, se.io.Fmt.txt)
+        # check if the first line contains the comment "generated"
+        first_line = file_content.splitlines()[0]
+        if "generate" in first_line or "Generate" in first_line:
+            return True
+        return False

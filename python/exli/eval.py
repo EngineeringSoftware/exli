@@ -53,12 +53,18 @@ class Eval:
             #         print(f"{proj}: {len(target_stmts)}")
 
         for project_name, sha in Util.get_project_names_list_with_sha():
-            if (
-                skip_existing
-                and (Macros.all_mutants_dir / f"{project_name}.json").exists()
-            ):
-                continue
-            if project_name in Util.get_excluded_projects():
+            if filter_with_inline_tests:
+                if tool != "universalmutator":
+                    output_path = Macros.mutants_dir / f"{project_name}-{tool}.json"
+                else:
+                    output_path = Macros.mutants_dir / f"{project_name}.json"
+            else:
+                if tool != "universalmutator":
+                    output_path = Macros.all_mutants_dir / f"{project_name}-{tool}.json"
+                else:
+                    output_path = Macros.all_mutants_dir / f"{project_name}.json"
+
+            if skip_existing and output_path.exists():
                 continue
             Util.prepare_project(project_name, sha)
 
@@ -70,7 +76,7 @@ class Eval:
             for line in lines:
                 if not line.startswith("target stmt"):
                     break
-                path = line.split(";")[1]
+                path = line.split(";")[1].replace("inlinegen-research", "exli-internal")
                 class_name = path.split("/")[-1].split(".")[0]
                 line_num = line.split(";")[2]
                 if filter_with_inline_tests:
@@ -81,16 +87,6 @@ class Eval:
                 target_stmt = path + ";" + line_num  # path;line_num
                 target_stmts.add(target_stmt)
 
-            if filter_with_inline_tests:
-                if tool != "universalmutator":
-                    output_path = Macros.mutants_dir / f"{project_name}-{tool}.json"
-                else:
-                    output_path = Macros.mutants_dir / f"{project_name}.json"
-            else:
-                if tool != "universalmutator":
-                    output_path = Macros.all_mutants_dir / f"{project_name}-{tool}.json"
-                else:
-                    output_path = Macros.all_mutants_dir / f"{project_name}.json"
             start_time = time.time()
             self.generate_mutants(project_name, target_stmts, output_path, tool)
             end_time = time.time()
@@ -126,10 +122,10 @@ class Eval:
                 return line
 
     # python -m exli.eval generate_mutants --input_path eval-data-input.txt
-    # download Asana_java-asana in ~/projects/inlinegen-research/_downalods, checkout to SHA 52fef9bcb189ccb405069ecb0e0d560d9ee17451 and test the code
+    # download Asana_java-asana in ~/projects/exli-internal/_downalods, checkout to SHA 52fef9bcb189ccb405069ecb0e0d560d9ee17451 and test the code
     # output: a json file with mutants
     # {
-    #    "filepath": "~/projects/inlinegen-research/_downloads/Asana_java-asana/src/main/java/com/asana/requests/Request.java",
+    #    "filepath": "~/projects/exli-internal/_downloads/Asana_java-asana/src/main/java/com/asana/requests/Request.java",
     #    "linenumber": 155,
     #    "orginal_code": "flagsAccountedFor.addAll(Arrays.asList(header.split(",")));",
     #    "mutated_code": "flagsAccountedFor.removeAll(Arrays.asList(header.split(",")));",
@@ -171,7 +167,7 @@ class Eval:
                 se.io.Fmt.jsonPretty,
             )
 
-    # python -m exli.eval generate_mutants_for_each_line --project_name Asana_java-asana --orig_path "/home/liuyu/projects/inlinegen-research/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/helpers/SdkServiceClient.java" --line_num 191
+    # python -m exli.eval generate_mutants_for_each_line --project_name Asana_java-asana --orig_path "/home/liuyu/projects/exli-internal/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/helpers/SdkServiceClient.java" --line_num 191
     def generate_mutants_for_each_line(
         self, project_name: str, orig_path: str, line_num: str
     ):
@@ -258,10 +254,8 @@ class Eval:
             se.bash.run(f"git checkout .", 0)
             # compile the project with javac (required by Major)
             se.bash.run("mvn test-compile $SKIPS", 0)
-            se.bash.run(
-                f"cp {Macros.log_dir}/teco-randoop-test/{project_name}/randoop-tests/randoop-deps.txt .",
-                0,
-            )
+            randoop_deps_path = f"{Macros.log_dir}/teco-randoop-test/{project_name}/randoop-tests/randoop-deps.txt"
+            se.bash.run(f"cp {randoop_deps_path} .", 0)
 
         with se.io.cd(mutants_path):
             cmd = f"{Macros.major_script} -cp $(< {Macros.downloads_dir}/{project_name}/randoop-deps.txt) --export export.mutants {orig_path}"
@@ -313,12 +307,12 @@ class Eval:
     def run_tests_with_mutants(
         self,
         project_name: str,
-        commit: str = None,
+        sha: str = None,
         test_types: List[str] = None,
         mutant_type: str = "universalmutator",
     ):
-        if commit is None:
-            commit = Util.get_sha(project_name)
+        if sha is None:
+            sha = Util.get_sha(project_name)
 
         if mutant_type == "universalmutator":
             mutants_file = Macros.mutants_dir / f"{project_name}.json"
@@ -356,7 +350,7 @@ class Eval:
                 )
                 mutant_res = {}
                 # add inline tests to the file
-                Util.prepare_project(project_name, commit)
+                Util.prepare_project(project_name, sha)
                 with se.io.cd(Macros.downloads_dir / project_name):
                     if test_type in ["unit", "randoop", "evosuite"]:
                         # replace the original code with the mutated code
@@ -369,13 +363,13 @@ class Eval:
                         if test_type == "baseline":
                             file_path_with_inline_test = (
                                 Macros.all_tests_dir
-                                / f"{project_name}-{commit}"
+                                / f"{project_name}-{sha}"
                                 / java_file
                             )
                         else:
                             file_path_with_inline_test = (
                                 Macros.reduced_tests_dir
-                                / f"{project_name}-{commit}"
+                                / f"{project_name}-{sha}"
                                 / java_file
                             )
                         file_path_with_inline_test_temp = temp_dir / java_file
@@ -434,17 +428,17 @@ class Eval:
                         if test_type == "baseline":
                             Util.parse_inline_tests(
                                 project_name,
-                                commit,
+                                sha,
                                 Macros.all_tests_dir,
-                                Macros.all_inline_tests_dir,
+                                Macros.all_its_dir,
                                 file_path_with_inline_test_temp,
                             )
                         elif test_type == "reduced":
                             Util.parse_inline_tests(
                                 project_name,
-                                commit,
+                                sha,
                                 Macros.reduced_tests_dir,
-                                Macros.reduced_inline_tests_dir,
+                                Macros.reduced_its_dir,
                                 file_path_with_inline_test_temp,
                             )
                         # clean the temp file
@@ -453,46 +447,57 @@ class Eval:
                     if test_type in ["reduced", "baseline"]:
                         log_file = (
                             eval_log
-                            / f"{project_name}-{commit}-{test_type}-{inline_test_name}-{index}-{mutant_type}.log"
+                            / f"{project_name}-{sha}-{test_type}-{inline_test_name}-{index}-{mutant_type}.log"
                         )
                     else:
                         # no enough space to save all the log files
                         log_file = (
                             eval_log
-                            / f"{project_name}-{commit}-{test_type}-{mutant_type}.log"
+                            / f"{project_name}-{sha}-{test_type}-{mutant_type}.log"
                         )
                     if log_file.exists():
                         # remove the log file if it exists
                         se.bash.run(f"rm {log_file}")
                     try:
                         with se.TimeUtils.time_limit(600):
+                            deps_file = (
+                                Macros.unit_tests_dir
+                                / f"{project_name}-{sha}"
+                                / "deps.txt"
+                            )
                             end_time = -1
                             start_time = time.time()
                             if test_type == "baseline":
                                 # run baseline tests
                                 run_res, returncode = Util.run_inline_tests(
                                     project_name,
-                                    commit,
-                                    f"{Macros.all_inline_tests_dir}/{project_name}-{commit}",
+                                    sha,
+                                    f"{Macros.all_its_dir}/{project_name}-{sha}",
+                                    deps_file,
                                     inline_test_name,
                                 )
                             elif test_type == "reduced":
                                 # run inline tests
                                 run_res, returncode = Util.run_inline_tests(
                                     project_name,
-                                    commit,
-                                    f"{Macros.reduced_inline_tests_dir}/{project_name}-{commit}",
+                                    sha,
+                                    f"{Macros.reduced_its_dir}/{project_name}-{sha}",
+                                    deps_file,
                                     inline_test_name,
                                 )
                             elif test_type == "unit":
                                 # run unit tests
-                                returncode = Util.run_unit_tests(project_name, log_file)
+                                returncode = Util.run_dev_written_unit_tests(project_name, log_file)
                             elif test_type == "randoop":
                                 # run randoop tests
                                 returncode = Util.run_randoop(project_name, log_file)
                             elif test_type == "evosuite":
                                 # run evosuite tests
-                                generated_tests_dir = f"{Macros.log_dir}/teco-{test_type}-test/{project_name}/{test_type}-tests"
+                                generated_tests_dir = (
+                                    Macros.unit_tests_dir
+                                    / f"{project_name}-{sha}"
+                                    / "evosuite-tests"
+                                )
                                 returncode = Util.run_evosuite_command_line(
                                     project_name, log_file, generated_tests_dir
                                 )
@@ -573,8 +578,6 @@ class Eval:
 
         proj_sha_list = Util.get_project_names_list_with_sha()
         for project_name, sha in proj_sha_list:
-            if project_name in Util.get_excluded_projects():
-                continue
             if skip_existing:
                 if mutant_type == "universalmutator":
                     baseline_file = (
@@ -691,8 +694,6 @@ class Eval:
     # python -m exli.eval batch_test_to_killed_mutants --mutant_type "universalmutator"
     def batch_test_to_killed_mutants(self, mutant_type: str = "universalmutator"):
         for project_name, sha in Util.get_project_names_list_with_sha():
-            if project_name in Util.get_excluded_projects():
-                continue
             self.killed_mutants(project_name, sha, "baseline", mutant_type)
             self.killed_mutants(project_name, sha, "reduced", mutant_type)
 
@@ -701,9 +702,6 @@ class Eval:
     ):
         test_to_killed_mutants_dict = collections.defaultdict(set)
         for project_name in Util.get_project_names_list():
-            if project_name in Util.get_excluded_projects():
-                continue
-
             killed_mutants_file = (
                 Macros.results_dir
                 / "killed-mutants"
@@ -829,8 +827,6 @@ class Eval:
     def batch_add_back_tests(self, mutant_type: str = "universalmutator"):
         all_mutants_to_add_back_tests = collections.defaultdict(set)
         for project_name in Util.get_project_names_list():
-            if project_name in Util.get_excluded_projects():
-                continue
             mutants_to_add_back_tests = self.add_back_tests(project_name, mutant_type)
             print(project_name, len(mutants_to_add_back_tests))
             all_mutants_to_add_back_tests.update(mutants_to_add_back_tests)
@@ -899,8 +895,6 @@ class Eval:
         print(f"{len(target_stmt_to_inline_tests)=}")
         mutated_target_stmts = set()
         for project_name in Util.get_project_names_list():
-            if project_name in Util.get_excluded_projects():
-                continue
             if mutant_type == "universalmutator":
                 mutant_file = Macros.results_dir / "mutants" / f"{project_name}.json"
             elif mutant_type == "major":
@@ -1038,7 +1032,7 @@ class Eval:
                         line_index += 1
                         line = java_file_content[line_index]
                         inline_test_code += line.strip()
-                    # /home/user/projects/inlinegen-research/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/validadores/DFBigDecimalValidador.java;83;new Here("Unit", 83).given(tamanho,7).given(valor,"50.xml").given(posicaoPontoFlutuante,2).checkFalse(group());
+                    # /home/user/projects/exli-internal/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/validadores/DFBigDecimalValidador.java;83;new Here("Unit", 83).given(tamanho,7).given(valor,"50.xml").given(posicaoPontoFlutuante,2).checkFalse(group());
                     target_stmt_line_no = (
                         inline_test_code.split(")")[0].split(",")[-1].strip()
                     )
@@ -1139,34 +1133,27 @@ class Eval:
 
     # python -m exli.eval batch_parse_log_file
     def batch_parse_log_file(self):
+        log_path = Macros.log_dir / "parse-log.log"
         for input_type in ["merged"] + Macros.test_minimization_algorithms:
             generated_tests_dir = Macros.project_dir / f"{input_type}-tests"
             se.io.mkdir(generated_tests_dir, fresh=True)
 
-            for project_name, commit in Util.get_project_names_list_with_sha():
-                if project_name in Util.get_excluded_projects():
+            for project_name, sha in Util.get_project_names_list_with_sha():
+                inline_test_log_path = f"{Macros.reduced_tests_dir}/{project_name}-{sha}/inlinetest-log-{input_type}.txt"
+                if not os.path.exists(inline_test_log_path):
                     continue
 
-                INLINE_TEST_LOG_FILE_PATH = f"{Macros.reduced_tests_dir}/{project_name}-{commit}/inlinetest-log-{input_type}.txt"
-                if not os.path.exists(INLINE_TEST_LOG_FILE_PATH):
-                    continue
-
-                proj_generated_tests_dir = (
-                    f"{generated_tests_dir}/{project_name}-{commit}"
-                )
+                proj_generated_tests_dir = f"{generated_tests_dir}/{project_name}-{sha}"
                 # create the directory if not exist
                 if not os.path.exists(proj_generated_tests_dir):
                     os.makedirs(proj_generated_tests_dir)
 
-                full_file_paths = Util.list_java_files(
-                    f"{Macros.downloads_dir}/{project_name}"
-                )
                 Util.parse_log(
                     project_name,
-                    commit,
+                    sha,
+                    inline_test_log_path,
                     proj_generated_tests_dir,
-                    INLINE_TEST_LOG_FILE_PATH,
-                    full_file_paths,
+                    log_path,
                 )
 
     # python -m exli.eval add_passing_tests_into_java_files
@@ -1190,8 +1177,6 @@ class Eval:
         total_kept_inline_tests = 0
         for project_name, sha in Util.get_project_names_list_with_sha():
             excluded_inline_tests = 0
-            if project_name in Util.get_excluded_projects():
-                continue
             passed_stmts = all_proj_to_stmts[project_name]
             java_files_dir = java_files_root_dir / f"{project_name}-{sha}"
             if not os.path.exists(java_files_dir):
@@ -1248,8 +1233,6 @@ class Eval:
     def check_num_of_inline_tests(self):
         for input_type in ["merged"] + Macros.test_minimization_algorithms:
             for project_name, commit in Util.get_project_names_list_with_sha():
-                if project_name in Util.get_excluded_projects():
-                    continue
                 INLINE_TEST_LOG_FILE_PATH = f"{Macros.reduced_tests_dir}/{project_name}-{commit}/inlinetest-log-{input_type}.txt"
                 if not os.path.exists(INLINE_TEST_LOG_FILE_PATH):
                     continue
@@ -1311,8 +1294,6 @@ class Eval:
     # python -m exli.eval batch_filter_mutants_with_all_inline_tests
     def batch_filter_mutants_with_all_inline_tests(self):
         for project_name, sha in Util.get_project_names_list_with_sha():
-            if project_name in Util.get_excluded_projects():
-                continue
             self.filter_mutants_with_all_inline_tests(project_name, sha)
 
     # python -m exli.eval compute_r2_mutants_results --mutant_type "universalmutator"
@@ -1365,9 +1346,6 @@ class Eval:
             r1_t2s[f"{pname}#{clz}_{stmtno}Test#testLine{testno}()"] = f"{clz};{stmtno}"
 
         for pname in Util.get_project_names_list():
-            if pname in Util.get_excluded_projects():
-                continue
-
             mutants = se.io.load(Macros.results_dir / "mutants" / f"{pname}.json")
             mutated_stmts = set()
             for mutant in mutants:

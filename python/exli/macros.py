@@ -9,6 +9,7 @@ class Macros:
     project_dir: Path = this_dir.parent.parent
     dataset_dir: Path = project_dir / "_dataset"
     downloads_dir: Path = project_dir / "_downloads"
+    downloads_dir_str: str = str(downloads_dir)
     python_dir: Path = project_dir / "python"
     log_file: Path = python_dir / "experiments.log"
     log_dir: Path = project_dir / "log"
@@ -18,18 +19,20 @@ class Macros:
     data_dir: Path = project_dir / "data"
     results_dir: Path = project_dir / "results"
 
+    unit_tests_dir: Path = project_dir / "generated-tests"
     reduced_tests_dir: Path = project_dir / "reduced-tests"
     all_tests_dir: Path = project_dir / "all-tests"
-    reduced_inline_tests_dir: Path = project_dir / "reduced-inline-tests"
-    all_inline_tests_dir: Path = project_dir / "all-inline-tests"
-    reduced_inline_tests_report_dir: Path = results_dir / "reduced-inline-tests-report"
-    all_inline_tests_report_dir: Path = results_dir / "all-inline-tests-report"
+    reduced_its_dir: Path = project_dir / "reduced-its"
+    all_its_dir: Path = project_dir / "all-its"
+    reduced_its_report_dir: Path = results_dir / "reduced-its-report"
+    all_its_report_dir: Path = results_dir / "all-its-report"
     java_dir: Path = project_dir / "java"
-    java_raninline_dir: Path = project_dir / "raninline"
+    java_raninline_dir: Path = project_dir / "java" / "raninline"
     itest_java_dir: Path = project_dir.parent / "inlinetest-internal" / "java"
     all_mutants_dir: Path = results_dir / "all-mutants"
     mutants_dir: Path = results_dir / "mutants"
     jacoco_extension_dir: Path = project_dir / "jacoco-extension"
+    time_dir: Path = results_dir / "time"
 
     jar_dir: Path = project_dir / "jars"
     evosuite_jar = jar_dir / "evosuite-master-1.2.1-SNAPSHOT.jar"
@@ -43,6 +46,7 @@ class Macros:
     )
     jacoco_agent_jar = jar_dir / "org.jacoco.agent-0.8.8-runtime.jar"
     raninline_jar = java_raninline_dir / "target" / "raninline-1.0-SNAPSHOT.jar"
+    jacoco_extension_jar = jar_dir / "jacoco-extension-1.0-SNAPSHOT.jar"
     major_script = jar_dir / "major" / "bin" / "major"
 
     target_stmt_types = ["regex", "string", "bit", "stream"]
@@ -58,6 +62,7 @@ class Macros:
     INLINE_GEN_DIR_NAME = ".inlinegen"
     INLINE_TEST_PACKAGE = "inlinetests"
     DEVELOPER_TESTS = "DT"
+    DEFAULT_SEED = 42
 
     projects_needs_to_be_excluded = [
         "dropwizard_dropwizard-elasticsearch"  # no test covered target statement
@@ -92,3 +97,5 @@ class Macros:
     projects_with_no_inline_tests = ["onelogin_onelogin-java-sdk"]
 
     test_minimization_algorithms = ["ge", "gre", "greedy", "hgs"]
+
+    ITEST_DECLARE = "itest"
