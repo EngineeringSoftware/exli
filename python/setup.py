@@ -42,10 +42,11 @@ setup(
         "License :: OSI Approved :: MIT License",
     ],
     requires=[
-        "seutil(>=0.8.1)",
+        "seutil",
         "xmltodict",
-        "tqdm(>=4.62.3)",
+        "tqdm",
         "universalmutator",
+        "jsonargparse",
     ],
     extras_require={
         "dev": ["flake8", "black", "ipykernel"],
@@ -56,9 +57,6 @@ setup(
             "pandas",
             "venn",
             "beautifulsoup4",
-            ##################
-            "openai",
-            "tenacity",
         ],
     },
 )
