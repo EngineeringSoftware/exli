@@ -46,6 +46,7 @@ setup(
         "xmltodict",
         "tqdm",
         "universalmutator",
+        "jsonargparse",
     ],
     extras_require={
         "dev": ["flake8", "black", "ipykernel"],
