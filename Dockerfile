@@ -1,5 +1,5 @@
-# docker build -t inlinetests .
-# docker run -it inlinetests /bin/bash
+# docker build -t exli .
+# docker run -it exli /bin/bash
 
 # Pull base image
 FROM ubuntu:22.04
