@@ -571,6 +571,7 @@ class Eval:
         skip_existing: bool = True,
         test_types: List[str] = None,
         mutant_type: str = "universalmutator",
+        test_project_name: str = None,
     ):
         if test_types is None:
             test_types = ["baseline", "reduced", "unit", "randoop", "evosuite"]
@@ -594,6 +595,8 @@ class Eval:
 
         proj_sha_list = Util.get_project_names_list_with_sha()
         for project_name, sha in proj_sha_list:
+            if test_project_name is not None and project_name != test_project_name:
+                continue
             if skip_existing:
                 if mutant_type == "universalmutator":
                     baseline_file = (
