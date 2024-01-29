@@ -74,6 +74,8 @@ In `exli/python` directory
 
 `python -m exli.eval batch_run_generate_mutants --test_project_name AquaticInformatics_aquarius-sdk-java`
 
+`python -m exli.eval batch_run_tests_with_mutants --test_project_name AquaticInformatics_aquarius-sdk-java`
+
 ## Repo structure
 raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
 Instrumenter, Collector, Round1Reducer, and InlineTestConstructor.
