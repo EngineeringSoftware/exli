@@ -36,7 +36,7 @@ In the docker, create a Python environment named `exli`
 
 ### Usage
 
-#### Generate unit tests
+#### Generate unit tests and inline tests
 
 In `exli/python` directory
 
@@ -46,6 +46,9 @@ To use the default setting for directories
 
 `pythton -m exli.main batch_run --test_project_name=AquaticInformatics_aquarius-sdk-java`
 
+The generated inline tests are in 
+
+`all-tests/AquaticInformatics_aquarius-sdk-java`
 
 #### Execute the generated inline tests
 
@@ -59,7 +62,7 @@ To use the default setting for directories
 
 The generated execution result can be found at
 
-`results/reduced-its-report/AquaticInformatics_aquarius-sdk-java-8f4edb9.json`
+`results/all-its-report/AquaticInformatics_aquarius-sdk-java-8f4edb9.json`
 
 ## Repo structure
 raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
