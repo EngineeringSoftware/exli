@@ -525,6 +525,8 @@ class Util:
         deps_file: str = None,
         timeout: int = 600,
     ):
+        if not os.path.exists(generated_tests_dir):
+            return -1
         with se.io.cd(Macros.downloads_dir / project_name):
             se.bash.run(f"mvn test-compile {Macros.SKIPS}")
         print("copying Randoop test cases...")
@@ -568,6 +570,8 @@ class Util:
         maven_project: MavenProject = None,
         timeout: int = 600,
     ):
+        if not os.path.exists(generated_tests_dir):
+            return -1
         if maven_project is None:
             maven_project = cls.get_maven_project(project_name)
         Util.configure_tests_for_jacoco_agent(project_name, "randoop", maven_project)
@@ -825,6 +829,8 @@ class Util:
         target_jacoco_exec_path: str = None,
         time_limit: int = 600,
     ):
+        if not os.path.exists(generated_tests_dir):
+            return -1
         with se.io.cd(Macros.downloads_dir / project_name):
             se.bash.run(f"mvn test-compile {Macros.SKIPS}")
         print("copying EvoSuite test cases...")
