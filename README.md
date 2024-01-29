@@ -58,7 +58,7 @@ The generated inline tests are in
 
 In `exli/python` directory
 
-`python -m exli.main run_inline_tests --project_name=AquaticInformatics_aquarius-sdk-java --sha=8f4edb9 --generated_tests_dir=/home/liuyu/projects/exli-internal/reduced-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9 --inline_tests_dir=/home/liuyu/projects/exli-internal/reduced-its/AquaticInformatics_aquarius-sdk-java-8f4edb9 --inlinetest_report_path=/home/liuyu/projects/exli-internal/results/reduced-its-report/AquaticInformatics_aquarius-sdk-java-8f4edb9.json --cached_objects_dir=/home/liuyu/projects/exli-internal/all-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9/.inlinegen --deps_file=/home/liuyu/projects/exli-internal/generated-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9/deps.txt --parse_inline_tests=True --log_file_path=/home/liuyu/projects/exli-internal/log/run-its.log`
+`python -m exli.main run_inline_tests --project_name=AquaticInformatics_aquarius-sdk-java --sha=8f4edb9 --generated_tests_dir=/home/itdocker/projects/exli-internal/reduced-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9 --inline_tests_dir=/home/itdocker/projects/exli-internal/reduced-its/AquaticInformatics_aquarius-sdk-java-8f4edb9 --inlinetest_report_path=/home/itdocker/projects/exli-internal/results/reduced-its-report/AquaticInformatics_aquarius-sdk-java-8f4edb9.json --cached_objects_dir=/home/itdocker/projects/exli-internal/all-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9/.inlinegen --deps_file=/home/itdocker/projects/exli-internal/generated-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9/deps.txt --parse_inline_tests=True --log_file_path=/home/itdocker/projects/exli-internal/log/run-its.log`
 
 To use the default setting for directories
 
