@@ -55,7 +55,7 @@ Alternatively, to use the default setting for output file
 
 Alternatively, to use the default setting for test generation and output dirs
 
-`pythton -m exli.main batch_run --test_project_name=AquaticInformatics_aquarius-sdk-java`
+`python -m exli.main batch_run --test_project_name=AquaticInformatics_aquarius-sdk-java`
 
 The generated inline tests are in 
 
