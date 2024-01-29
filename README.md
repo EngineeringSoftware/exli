@@ -40,6 +40,10 @@ In the docker, create a Python environment named `exli`
 
 In `exli/python` directory
 
+(Optional) command to find the target statements. It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project. The generated target statements are in `results/target-stmt/AquaticInformatics_aquarius-sdk-java-8f4edb9.txt`
+
+`python -m exli.main batch_find_target_stmts --test_project_name=AquaticInformatics_aquarius-sdk-java`
+
 `python -m exli.main run --project_name=AquaticInformatics_aquarius-sdk-java --sha=8f4edb9 --randoop=True --randoop_tl=10 --unit=True --evosuite=True --evosuite_tl=20 --seed=42 --log_file_path=${HOME}/projects/exli-internal/log/raninline.log`
 
 To use the default setting for directories
@@ -63,6 +67,12 @@ To use the default setting for directories
 The generated execution result can be found at
 
 `results/all-its-report/AquaticInformatics_aquarius-sdk-java-8f4edb9.json`
+
+#### Generate mutants and run mutation analysis
+
+In `exli/python` directory
+
+`python -m exli.eval batch_run_generate_mutants --test_project_name AquaticInformatics_aquarius-sdk-java`
 
 ## Repo structure
 raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
