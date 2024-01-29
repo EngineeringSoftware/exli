@@ -13,7 +13,7 @@ import re
 
 class Main:
     # python -m exli.main batch_run
-    def batch_run(self):
+    def batch_run(self, test_project_name: str = None):
         """
         Generate unit tests with Randoop/EvoSuite. Execute
         developer-written or auto-generated unit tests to construct
@@ -37,6 +37,8 @@ class Main:
 
         projects = Util.get_project_names_list_with_sha()
         for project_name, sha in projects:
+            if test_project_name is not None and project_name != test_project_name:
+                continue
             try:
                 start_time = time.time()
                 self.run(
@@ -264,7 +266,7 @@ class Main:
         maven_project: MavenProject,
         tests_dir: str = None,
         deps_file_path: str = None,
-        timeout: int = 1800,
+        timeout: int = 3600,
     ):
         """
         Run unit tests of a specific type.
@@ -332,7 +334,7 @@ class Main:
                         cached_objects_dir,
                         deps_file,
                         True,
-                        log_path
+                        log_path,
                     )
                     end_time = time.time()
                     time_dict[f"{project_name}-reduced"] = end_time - start_time
@@ -347,7 +349,7 @@ class Main:
                         cached_objects_dir,
                         deps_file,
                         True,
-                        log_path
+                        log_path,
                     )
                     end_time = time.time()
                     time_dict[f"{project_name}-all"] = end_time - start_time
@@ -377,6 +379,9 @@ class Main:
         if not os.path.exists(generated_tests_dir):
             return
 
+        inputs = f"--project_name={project_name} --sha={sha} --generated_tests_dir={generated_tests_dir} --inline_tests_dir={inline_tests_dir} --inlinetest_report_path={inlinetest_report_path} --cached_objects_dir={cached_objects_dir} --deps_file={deps_file} --parse_inline_tests={parse_inline_tests} --log_file_path={log_path}"
+        se.bash.run(f'echo "{inputs}" >> {log_path}')
+
         Util.prepare_project(project_name, sha)
 
         if not os.path.exists(inline_tests_dir) or parse_inline_tests:
@@ -405,6 +410,11 @@ class Main:
 
     # python -m exli.main analyze_inline_tests_reports --inline_test_type="reduced"
     def analyze_inline_tests_reports(self, inline_test_type: str):
+        """
+        Generate a txt file that contains a list of failed tests and a list of passed tests.
+
+        :param inline_test_type: reduced or all
+        """
         if inline_test_type == "reduced":
             test_report_dir = Macros.reduced_its_report_dir
         elif inline_test_type == "all":
@@ -481,53 +491,78 @@ class Main:
     def remove_failed_tests(self, inline_test_type: str):
         failed_tests_file = Macros.results_dir / f"{inline_test_type}-failed-tests.txt"
         failed_tests = se.io.load(failed_tests_file, se.io.Fmt.txtList)
-        file_path_to_test_cases = collections.defaultdict(set)
+        project_to_failed_tests_to_line_nums = collections.defaultdict(
+            lambda: collections.defaultdict(list)
+        )
         for failed_test in failed_tests:
-            (
-                project_name,
-                class_name,
-                target_stmt_linenumber,
-                inline_test_linenumber,
-            ) = failed_test.split(";")
+            project_name = failed_test.split(";")[0]
+            full_class_with_line_num = ";".join(failed_test.split(";")[1:3])
+            it_line_num = failed_test.split(";")[-1]
+            project_to_failed_tests_to_line_nums[project_name][
+                full_class_with_line_num
+            ].append(it_line_num)
+
+        removed_failed_tests = []
+        removed_failed_tests_path = (
+            Macros.log_dir
+            / "removed-failed-tests.json"
+        )
+        num_of_failed_tests = 0
+        for (
+            project_name,
+            failed_tests,
+        ) in project_to_failed_tests_to_line_nums.items():
             sha = Util.get_sha(project_name)
-            if inline_test_type == "reduced":
-                file_path = Macros.reduced_tests_dir
-            elif inline_test_type == "all":
-                file_path = Macros.all_tests_dir
-            else:
-                raise Exception("unknown inline test type")
-            file_path = (
-                file_path
-                / f"{project_name}-{sha}"
-                / (class_name.split(".")[-1].split(r"$")[0] + ".java")
-            )
-            file_path_to_test_cases[file_path].add(int(inline_test_linenumber))
-        for file_path, test_cases in file_path_to_test_cases.items():
-            if not os.path.exists(file_path):
-                continue
-            lines = se.io.load(file_path, se.io.Fmt.txtList)
-            new_lines = []
-            index = 0
-            while index < len(lines):
-                if index + 1 in test_cases:
-                    while index < len(lines):
-                        print("skip line from project", file_path, lines[index].strip())
-                        if lines[index].strip().endswith(";"):
-                            index += 1
-                            break
-                        index += 1
-                    continue
-                new_lines.append(lines[index])
-                index += 1
-            se.io.dump(file_path, new_lines, se.io.Fmt.txtList)
+
+            for full_class_with_line_num, line_nums in failed_tests.items():
+                full_class_name = full_class_with_line_num.split(";")[0]
+                target_line_num = full_class_with_line_num.split(";")[1]
+
+                if inline_test_type == "reduced":
+                    file_path = Macros.reduced_tests_dir
+                elif inline_test_type == "all":
+                    file_path = Macros.all_tests_dir
+                else:
+                    raise Exception("unknown inline test type")
+                file_path_with_inline_test = (
+                    file_path
+                    / f"{project_name}-{sha}"
+                    / (full_class_name.split(r"$")[0].replace(".", "/") + ".java")
+                )
+                file_content = se.io.load(file_path_with_inline_test, se.io.Fmt.txtList)
+                for line_num in line_nums:
+                    num_of_failed_tests += 1
+                    failed_test = {
+                        "project": project_name,
+                        "file_path": f"{file_path_with_inline_test}",
+                        "full_class": full_class_name,
+                        "target_line_number": target_line_num,
+                        "it_line_number": line_num,
+                        "it": file_content[int(line_num) - 1],
+                    }
+                    removed_failed_tests.append(failed_test)
+                    file_content[int(line_num) - 1] = ""
+                se.io.dump(
+                    file_path_with_inline_test,
+                    file_content,
+                    se.io.Fmt.txtList,
+                )
+
+        se.io.dump(
+            removed_failed_tests_path,
+            removed_failed_tests,
+            se.io.Fmt.jsonPretty,
+        )
 
     # python -m exli.main batch_find_target_stmts
-    def batch_find_target_stmts(self):
+    def batch_find_target_stmts(self, test_project_name: str = None):
         """
         Collect target statements for each project.
         """
         projects = Util.get_project_names_list_with_sha()
         for project_name, sha in projects:
+            if test_project_name is not None and project_name != test_project_name:
+                continue
             target_stmts_path = (
                 Macros.results_dir / "target-stmt" / f"{project_name}-{sha}.txt"
             )

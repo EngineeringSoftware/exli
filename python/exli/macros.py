@@ -94,7 +94,7 @@ class Macros:
         "twilio_twilio-java",
     ]
 
-    projects_with_no_inline_tests = ["onelogin_onelogin-java-sdk"]
+    projects_with_no_inline_tests = ["onelogin_onelogin-java-sdk", "jenkinsci_email-ext-plugin"]
 
     test_minimization_algorithms = ["ge", "gre", "greedy", "hgs"]
 

@@ -35,11 +35,11 @@ class Filter:
                 continue
 
             keyword_target_statements_dict = dict()
-            log_file_path = (
+            target_stmts_path = (
                 Macros.results_dir / "target-stmt" / f"{project_name}-{sha}.txt"
             )
-            if (log_file_path).exists():
-                log = se.io.load(log_file_path, se.io.Fmt.txtList)
+            if target_stmts_path.exists():
+                log = se.io.load(target_stmts_path, se.io.Fmt.txtList)
                 for line in log:
                     if line.startswith("target stmt"):
                         stmt = dict()
@@ -65,7 +65,7 @@ class Filter:
                     else:
                         break
             else:
-                logger.warning(f"{log_file_path} does not exist for {project_name}")
+                logger.warning(f"{target_stmts_path} does not exist for {project_name}")
                 continue
 
             keyword_target_statements = list(keyword_target_statements_dict.values())
@@ -91,7 +91,7 @@ class Filter:
                     stmt.update(covered_map)
                 jacoco_results.append(stmt)
             se.io.dump(
-                Macros.results_dir / "teco-target-statements-excluded.json",
+                Macros.results_dir / "teco-target-statements.json",
                 jacoco_results,
                 fmt=se.io.Fmt.jsonPretty,
             )
@@ -537,10 +537,7 @@ class Filter:
         res = []
         mtd_covered_by_all_tests = 0
         mtd_not_covered_by_all_tests = 0
-        target_statements_file = (
-            Macros.results_dir
-            / "teco-target-statements-exclude-auto-generated-files.json"
-        )
+        target_statements_file = Macros.results_dir / "teco-target-statements.json"
         target_stmts = se.io.load(target_statements_file, se.io.Fmt.json)
         for target_statement in target_stmts:
             if (
@@ -675,63 +672,6 @@ class Filter:
                                     se.bash.run(
                                         f"cp {path_to_xml_file} {path_to_serialized_data}"
                                     )
-
-    # python -m exli.filter exclude_auto_generated_files
-    def exclude_auto_generated_files(self):
-        exclude_auto_generated_stmts = []
-        excluded_stmts_log_file = Macros.log_dir / "excluded-stmts.txt"
-        target_statements = se.io.load(
-            Macros.results_dir / "teco-target-statements.json"
-        )
-        checked_projects = set()
-        for target_statement in target_statements:
-            project_name = target_statement["project"]
-            if project_name not in checked_projects:
-                sha = Util.get_sha(project_name)
-                # check out the project
-                Util.prepare_project(project_name, sha)
-                checked_projects.add(project_name)
-            file_path = f"{Macros.downloads_dir}" + target_statement["filename"]
-            is_auto_generated = Util.is_auto_generated_file(file_path)
-            if is_auto_generated:
-                se.io.dump(
-                    excluded_stmts_log_file,
-                    [file_path + " is auto-generated"],
-                    se.io.Fmt.txtList,
-                    append=True,
-                )
-                continue
-            exclude_auto_generated_stmts.append(target_statement)
-        se.io.dump(
-            Macros.results_dir
-            / "teco-target-statements-exclude-auto-generated-files.json",
-            exclude_auto_generated_stmts,
-            se.io.Fmt.jsonPretty,
-        )
-
-        auto_generated_files = Util.get_auto_generated_files()
-        auto_generated_file_names = set(
-            [file.split("/")[-1].replace(".java", "") for file in auto_generated_files]
-        )
-        print(auto_generated_file_names)
-        all_pass_tests = se.io.load(
-            Macros.results_dir / "all-passed-tests.txt", se.io.Fmt.txtList
-        )
-        for pass_test in all_pass_tests:
-            # netceteragroup_trema-core;com.netcetera.trema.core.exporting.AndroidExporter;137;137
-            project_name, full_class_name, _, _ = pass_test.split(";")
-            class_name = full_class_name.split(".")[-1]
-            if (
-                project_name == "jkuhnert_ognl"
-                and class_name in auto_generated_file_names
-            ):
-                print(f"remove {pass_test}")
-                all_pass_tests.remove(pass_test)
-        se.io.dump(
-            Macros.results_dir / "all-passed-tests-exclude-auto-generated-files.txt",
-            all_pass_tests,
-            se.io.Fmt.txtList,
-        )
 
 
 if __name__ == "__main__":

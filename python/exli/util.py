@@ -308,8 +308,8 @@ class Util:
             if project_name == "restfb_restfb":
                 app_src_path = f"{Macros.downloads_dir}/{project_name}/src/main/java:{Macros.downloads_dir}/{project_name}/src/main/lombok:{Macros.downloads_dir}/{project_name}/src/test/java"
             else:
-                deps_file = Util.get_deps_file_path(project_name, sha)
                 app_src_path = f"{Macros.downloads_dir}/{project_name}/src/main/java:{Macros.downloads_dir}/{project_name}/src/test/java"
+            deps_file = Util.get_deps_file_path(project_name, sha)
             command = f"java -cp {Macros.itest_jar} org.inlinetest.InlineTestRunnerSourceCode --input_file={file_path} --assertion_style=junit --output_dir={inline_tests_dir} --multiple_test_classes=true --dep_file_path={deps_file} --app_src_path={app_src_path}"
             try:
                 se.bash.run(command, 0, timeout=180)
@@ -346,6 +346,7 @@ class Util:
         log_path: str = None,
     ):
         if not os.path.exists(inlinetest_dir):
+            print(f"{inlinetest_dir} does not exist")
             return None, None
         with se.io.cd(Macros.downloads_dir / project_name):
             # compile the project
@@ -367,14 +368,16 @@ class Util:
                         0,
                     )
                 else:
+                    print(f"no inline test {test_name} found in {inlinetest_dir}")
                     return None, None
             else:
                 se.bash.run(
                     f"cp -r {inlinetest_dir} {Macros.downloads_dir}/{project_name}/{Macros.INLINE_TEST_PACKAGE}",
                     0,
                 )
-            if not deps_file.exists():
-                Util.dump_dependencies(project_name, sha, f"{deps_file}")
+            if not os.path.exists(deps_file):
+                print(f"{deps_file} does not exist")
+                deps_file = Util.get_deps_file_path(project_name, sha)
             # compile
             comp_str = f"javac -cp {Macros.itest_jar}:{Macros.jar_dir}/junit-platform-console-standalone-1.9.0-RC1.jar:{Macros.raninline_jar}:$(< {deps_file}) $(find {Macros.INLINE_TEST_PACKAGE} -name '*.java')"
             comp_failed_tests = []
@@ -1257,3 +1260,12 @@ class Util:
         if "generate" in first_line or "Generate" in first_line:
             return True
         return False
+
+    @classmethod
+    def get_full_class_name(cls, file_path: str):
+        if file_path.endswith(".java"):
+            file_path = file_path[0 : len(file_path) - 5]
+        if "src/main/java/" in file_path:
+            return file_path.split("src/main/java/")[-1].replace("/", ".")
+        else:
+            return file_path.split("src/main/lombok/")[-1].replace("/", ".")

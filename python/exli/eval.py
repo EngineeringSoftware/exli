@@ -20,6 +20,7 @@ class Eval:
         skip_existing: bool = False,
         filter_with_inline_tests: bool = True,
         tool: str = "universalmutator",
+        test_project_name: str = None,
     ):
         time_file_path = Macros.results_dir / "time" / f"generate-mutants-{tool}.json"
         if time_file_path.exists():
@@ -36,23 +37,9 @@ class Eval:
                 for k in reduced_proj_to_target_stmts.keys()
             }
 
-            # # check if there are any existing mutants
-            # for proj, target_stmts in proj_to_target_stmts.items():
-            #     print(f"{proj}: {len(target_stmts)}")
-            #     # existing mutants
-            #     if (Macros.mutants_dir / f"{proj}.json").exists():
-            #         existing_mutants = se.io.load(
-            #             Macros.mutants_dir / f"{proj}.json", se.io.Fmt.json
-            #         )
-            #         existing_target_stmts = set()
-            #         for mutant in existing_mutants:
-            #             existing_target_stmts.add(
-            #                 f"{mutant['filepath'].split('/')[-1].split('.')[0]};{mutant['linenumber']}"
-            #             )
-            #         target_stmts = target_stmts - existing_target_stmts
-            #         print(f"{proj}: {len(target_stmts)}")
-
         for project_name, sha in Util.get_project_names_list_with_sha():
+            if test_project_name is not None and project_name != test_project_name:
+                continue
             if filter_with_inline_tests:
                 if tool != "universalmutator":
                     output_path = Macros.mutants_dir / f"{project_name}-{tool}.json"
@@ -310,6 +297,7 @@ class Eval:
         sha: str = None,
         test_types: List[str] = None,
         mutant_type: str = "universalmutator",
+        log_path: str = None,
     ):
         if sha is None:
             sha = Util.get_sha(project_name)
@@ -322,6 +310,7 @@ class Eval:
             raise Exception(f"Unknown mutant type: {mutant_type}")
 
         if not mutants_file.exists():
+            print(f"no mutants for {project_name}")
             return
         eval_log = Macros.log_dir / "eval"
         if not eval_log.exists():
@@ -335,6 +324,7 @@ class Eval:
         for test_type in test_types:
             mutants = se.io.load(mutants_file, se.io.Fmt.json)
             if not mutants:
+                print(f"no mutants for {project_name}")
                 return
             res = []
             updated_mutants = []
@@ -359,20 +349,28 @@ class Eval:
                         lines[line_num - 1] = mutated_code
                         se.io.dump(file_path, "\n".join(lines), se.io.Fmt.txt)
                     elif test_type in ["baseline", "reduced"]:
-                        java_file = file_path.split("/")[-1]
+                        inline_test_fqn = Util.get_full_class_name(file_path)
+                        inline_test_path_with_package = (
+                            inline_test_fqn.replace(".", "/") + ".java"
+                        )
                         if test_type == "baseline":
-                            file_path_with_inline_test = (
-                                Macros.all_tests_dir
-                                / f"{project_name}-{sha}"
-                                / java_file
-                            )
+                            file_path_with_inline_test = Macros.all_tests_dir
                         else:
-                            file_path_with_inline_test = (
-                                Macros.reduced_tests_dir
-                                / f"{project_name}-{sha}"
-                                / java_file
-                            )
-                        file_path_with_inline_test_temp = temp_dir / java_file
+                            file_path_with_inline_test = Macros.reduced_tests_dir
+                        file_path_with_inline_test = (
+                            file_path_with_inline_test
+                            / f"{project_name}-{sha}"
+                            / inline_test_path_with_package
+                        )
+                        if not file_path_with_inline_test.exists():
+                            print("file not exist", file_path_with_inline_test)
+                            continue
+                        file_path_with_inline_test_temp = (
+                            temp_dir / inline_test_path_with_package
+                        )
+                        se.bash.run(
+                            f"mkdir -p {os.path.dirname(file_path_with_inline_test_temp)}"
+                        )
                         se.bash.run(
                             f"cp {file_path_with_inline_test} {file_path_with_inline_test_temp}"
                         )
@@ -411,7 +409,17 @@ class Eval:
                                 else:
                                     new_lines.append(line)
                             if not replace:
-                                print("not contain the original code")
+                                error_message = f"cannot find {original_code} in {file_path_with_inline_test}"
+                                print(error_message)
+                                if log_path:
+                                    se.io.dump(
+                                        log_path,
+                                        [error_message],
+                                        se.io.Fmt.txtList,
+                                        append=True,
+                                    )
+                                continue
+
                             se.io.dump(
                                 file_path_with_inline_test_temp,
                                 "\n".join(new_lines),
@@ -429,16 +437,16 @@ class Eval:
                             Util.parse_inline_tests(
                                 project_name,
                                 sha,
-                                Macros.all_tests_dir,
-                                Macros.all_its_dir,
+                                f"{Macros.all_tests_dir}/{project_name}-{sha}",
+                                f"{Macros.all_its_dir}/{project_name}-{sha}",
                                 file_path_with_inline_test_temp,
                             )
                         elif test_type == "reduced":
                             Util.parse_inline_tests(
                                 project_name,
                                 sha,
-                                Macros.reduced_tests_dir,
-                                Macros.reduced_its_dir,
+                                f"{Macros.reduced_tests_dir}/{project_name}-{sha}",
+                                f"{Macros.reduced_its_dir}/{project_name}-{sha}",
                                 file_path_with_inline_test_temp,
                             )
                         # clean the temp file
@@ -473,6 +481,7 @@ class Eval:
                                     project_name,
                                     sha,
                                     f"{Macros.all_its_dir}/{project_name}-{sha}",
+                                    f"{Macros.all_tests_dir}/{project_name}-{sha}/{Macros.INLINE_GEN_DIR_NAME}",
                                     deps_file,
                                     inline_test_name,
                                 )
@@ -482,12 +491,15 @@ class Eval:
                                     project_name,
                                     sha,
                                     f"{Macros.reduced_its_dir}/{project_name}-{sha}",
+                                    f"{Macros.all_tests_dir}/{project_name}-{sha}/{Macros.INLINE_GEN_DIR_NAME}",
                                     deps_file,
                                     inline_test_name,
                                 )
                             elif test_type == "unit":
                                 # run unit tests
-                                returncode = Util.run_dev_written_unit_tests(project_name, log_file)
+                                returncode = Util.run_dev_written_unit_tests(
+                                    project_name, log_file
+                                )
                             elif test_type == "randoop":
                                 # run randoop tests
                                 returncode = Util.run_randoop(project_name, log_file)
@@ -576,6 +588,10 @@ class Eval:
         else:
             res_dict = {}
 
+        log_path = Macros.log_dir / "run-tests-with-mutants.log"
+        if log_path.exists():
+            se.bash.run(f"rm {log_path}")
+
         proj_sha_list = Util.get_project_names_list_with_sha()
         for project_name, sha in proj_sha_list:
             if skip_existing:
@@ -603,6 +619,7 @@ class Eval:
                 sha,
                 test_types,
                 mutant_type,
+                log_path,
             )
             end_time = time.time()
             res_dict[f"{project_name}-time"] = end_time - start_time
@@ -1270,7 +1287,8 @@ class Eval:
             if tokens[0] == project_name:
                 passed_tests_set.add(tokens[1] + tokens[2])
         res = []
-        for mutant in mutants:
+        for idx, mutant in enumerate(mutants):
+            mutant["index"] = idx
             file_path = mutant["filepath"]
             line_num = mutant["linenumber"]
             # inline_test_name = (
