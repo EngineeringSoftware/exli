@@ -4,17 +4,6 @@ Automatically extracting inline tests from unit tests.
 ## Introduction
 This repo contains the code and data for producing the experiments in [Exli][paper-url].
 
-
-## Generated tests
-R0-tests, R1-tests, R2-tests directories contain the inline tests that
-are integrated with source code.
-
-R0-tests: It contains the R0 tests.
-
-R1-tests: It contains the R1 tests.
-
-R2-tests: It contains the R2 tests.
-
 ### Inline test format
 1. "Declare" part
 `itest`
@@ -28,10 +17,26 @@ For example, `itest("Randoop", 57)` means that the test source is Randoop genera
 3. "Assert" part
 `assert(var, value)`
 
+
+## How to use Exli
+
+
+
+
 ## Repo structure
 raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
 Instrumenter, Collector, Round1Reducer, and InlineTestConstructor.
-appendix.pdf: This is the appendix of the paper. It contains some additional experiment results.
+
+### Generated tests
+R0-tests, R1-tests, R2-tests directories contain the inline tests that
+are integrated with source code.
+
+R0-tests: It contains the R0 tests.
+
+R1-tests: It contains the R1 tests.
+
+R2-tests: It contains the R2 tests.
+
 
 ## Citation
 If you have used EXLI in a research project, please cite the research paper in any related publication:
