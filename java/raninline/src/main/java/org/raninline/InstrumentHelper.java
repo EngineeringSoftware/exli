@@ -464,7 +464,8 @@ public class InstrumentHelper {
             return;
         }
         if (curInlineTest.toString().length() > Constant.MAX_INLINE_TEST_LENGTH) {
-            Log.info("Skip inline test because it is too long: " + curInlineTest);
+            Log.info("Skip inline test because it is too long. " + "src path: " + curInlineTest.srcPath + ", "
+                    + "target stmt line no: " + curInlineTest.targetStmtLineNo);
             return;
         }
         String key = curInlineTest.srcPath + ":" + curInlineTest.targetStmtLineNo;
