@@ -19,9 +19,47 @@ For example, `itest("Randoop", 57)` means that the test source is Randoop genera
 
 
 ## How to use Exli
+### Install
+Build a docker image
+
+`docker build -t exli .`
+
+`docker run -it exli /bin/bash`
 
 
+In the docker, create a Python environment named `exli`
 
+`cd exli/python && bash prepare-conda-env.sh`
+
+`conda activate exli`
+
+
+### Usage
+
+#### Generate unit tests
+
+In `exli/python` directory
+
+`python -m exli.main run --project_name=AquaticInformatics_aquarius-sdk-java --sha=8f4edb9 --randoop=True --randoop_tl=10 --unit=True --evosuite=True --evosuite_tl=20 --seed=42 --log_file_path=${HOME}/projects/exli-internal/log/raninline.log`
+
+To use the default setting for directories
+
+`pythton -m exli.main batch_run --test_project_name=AquaticInformatics_aquarius-sdk-java`
+
+
+#### Execute the generated inline tests
+
+In `exli/python` directory
+
+`python -m exli.main run_inline_tests --project_name=AquaticInformatics_aquarius-sdk-java --sha=8f4edb9 --generated_tests_dir=/home/liuyu/projects/exli-internal/reduced-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9 --inline_tests_dir=/home/liuyu/projects/exli-internal/reduced-its/AquaticInformatics_aquarius-sdk-java-8f4edb9 --inlinetest_report_path=/home/liuyu/projects/exli-internal/results/reduced-its-report/AquaticInformatics_aquarius-sdk-java-8f4edb9.json --cached_objects_dir=/home/liuyu/projects/exli-internal/all-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9/.inlinegen --deps_file=/home/liuyu/projects/exli-internal/generated-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9/deps.txt --parse_inline_tests=True --log_file_path=/home/liuyu/projects/exli-internal/log/run-its.log`
+
+To use the default setting for directories
+
+`python -m exli.main batch_run_inline_tests --test_project_name=AquaticInformatics_aquarius-sdk-java`
+
+The generated execution result can be found at
+
+`results/reduced-its-report/AquaticInformatics_aquarius-sdk-java-8f4edb9.json`
 
 ## Repo structure
 raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
