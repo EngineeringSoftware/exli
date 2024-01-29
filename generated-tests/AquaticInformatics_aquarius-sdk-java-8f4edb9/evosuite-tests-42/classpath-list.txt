@@ -1,0 +1,3 @@
+com.aquaticinformatics.aquarius.sdk.helpers.SdkServiceClient
+com.aquaticinformatics.aquarius.sdk.samples.serializers.InstantDeserializer
+com.aquaticinformatics.aquarius.sdk.AquariusServerVersion
