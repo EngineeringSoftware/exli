@@ -53,7 +53,7 @@ Alternatively, to use the default setting for output file
 
 `python -m exli.main run --project_name=AquaticInformatics_aquarius-sdk-java --sha=8f4edb9 --randoop=True --randoop_tl=100 --unit=True --evosuite=True --evosuite_tl=120 --seed=42 --log_file_path=${HOME}/exli/log/raninline.log`
 
-Alternatively, to use the default setting for output dirs
+Alternatively, to use the default setting for test generation and output dirs
 
 `pythton -m exli.main batch_run --test_project_name=AquaticInformatics_aquarius-sdk-java`
 
