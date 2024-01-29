@@ -463,6 +463,10 @@ public class InstrumentHelper {
             Log.info("Skip inline test because it does not have an assertion: " + curInlineTest);
             return;
         }
+        if (curInlineTest.toString().length() > Constant.MAX_INLINE_TEST_LENGTH) {
+            Log.info("Skip inline test because it is too long: " + curInlineTest);
+            return;
+        }
         String key = curInlineTest.srcPath + ":" + curInlineTest.targetStmtLineNo;
 
         totalInlineTests++;
