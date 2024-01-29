@@ -40,13 +40,20 @@ In the docker, create a Python environment named `exli`
 
 In `exli/python` directory
 
-(Optional) command to find the target statements. It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project. The generated target statements are in `results/target-stmt/AquaticInformatics_aquarius-sdk-java-8f4edb9.txt`
+-----
+(Optional) Find the target statements. It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project. The generated target statements are in `results/target-stmt/AquaticInformatics_aquarius-sdk-java-8f4edb9.txt`
+
+`python -m exli.main find_target_stmts --project_name=AquaticInformatics_aquarius-sdk-java --sha=8f4edb9 --target_stmts_path=${HOME}/exli/results/target-stmt/AquaticInformatics_aquarius-sdk-java-8f4edb9.txt`
+
+Alternatively, to use the default setting for output file
 
 `python -m exli.main batch_find_target_stmts --test_project_name=AquaticInformatics_aquarius-sdk-java`
 
-`python -m exli.main run --project_name=AquaticInformatics_aquarius-sdk-java --sha=8f4edb9 --randoop=True --randoop_tl=10 --unit=True --evosuite=True --evosuite_tl=20 --seed=42 --log_file_path=${HOME}/projects/exli-internal/log/raninline.log`
+-----
 
-To use the default setting for directories
+`python -m exli.main run --project_name=AquaticInformatics_aquarius-sdk-java --sha=8f4edb9 --randoop=True --randoop_tl=10 --unit=True --evosuite=True --evosuite_tl=20 --seed=42 --log_file_path=${HOME}/exli/log/raninline.log`
+
+Alternatively, to use the default setting for output dirs
 
 `pythton -m exli.main batch_run --test_project_name=AquaticInformatics_aquarius-sdk-java`
 
@@ -58,9 +65,9 @@ The generated inline tests are in
 
 In `exli/python` directory
 
-`python -m exli.main run_inline_tests --project_name=AquaticInformatics_aquarius-sdk-java --sha=8f4edb9 --generated_tests_dir=/home/itdocker/projects/exli-internal/reduced-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9 --inline_tests_dir=/home/itdocker/projects/exli-internal/reduced-its/AquaticInformatics_aquarius-sdk-java-8f4edb9 --inlinetest_report_path=/home/itdocker/projects/exli-internal/results/reduced-its-report/AquaticInformatics_aquarius-sdk-java-8f4edb9.json --cached_objects_dir=/home/itdocker/projects/exli-internal/all-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9/.inlinegen --deps_file=/home/itdocker/projects/exli-internal/generated-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9/deps.txt --parse_inline_tests=True --log_file_path=/home/itdocker/projects/exli-internal/log/run-its.log`
+`python -m exli.main run_inline_tests --project_name=AquaticInformatics_aquarius-sdk-java --sha=8f4edb9 --generated_tests_dir=${HOME}/exli/reduced-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9 --inline_tests_dir=${HOME}/exli/reduced-its/AquaticInformatics_aquarius-sdk-java-8f4edb9 --inlinetest_report_path=${HOME}/exli/results/reduced-its-report/AquaticInformatics_aquarius-sdk-java-8f4edb9.json --cached_objects_dir=${HOME}/exli/all-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9/.inlinegen --deps_file=${HOME}/exli/generated-tests/AquaticInformatics_aquarius-sdk-java-8f4edb9/deps.txt --parse_inline_tests=True --log_file_path=${HOME}/exli/log/run-its.log`
 
-To use the default setting for directories
+Alternatively, to use the default setting for output dirs
 
 `python -m exli.main batch_run_inline_tests --test_project_name=AquaticInformatics_aquarius-sdk-java`
 
