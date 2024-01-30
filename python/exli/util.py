@@ -1244,7 +1244,7 @@ class Util:
     @classmethod
     def compile_raninline(cls):
         with se.io.cd(Macros.java_raninline_dir):
-            se.bash.run("mvn clean package", 0)
+            se.bash.run("mvn install", 0)
 
     @classmethod
     def get_auto_generated_files(cls):
