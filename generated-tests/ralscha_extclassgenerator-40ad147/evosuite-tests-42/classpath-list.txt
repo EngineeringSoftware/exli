@@ -1,0 +1,10 @@
+ch.rasc.extclassgenerator.ModelGenerator$5
+ch.rasc.extclassgenerator.validation.FormatValidation
+ch.rasc.extclassgenerator.validation.AbstractValidation
+ch.rasc.extclassgenerator.validation.AbstractValidation$1
+ch.rasc.extclassgenerator.ModelGenerator$3
+ch.rasc.extclassgenerator.ModelAnnotationProcessor
+ch.rasc.extclassgenerator.ModelGenerator$1
+ch.rasc.extclassgenerator.ModelGenerator
+ch.rasc.extclassgenerator.ModelGenerator$4
+ch.rasc.extclassgenerator.ModelGenerator$2
