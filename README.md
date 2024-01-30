@@ -51,7 +51,7 @@ Alternatively, to use the default setting for output file
 
 -----
 
-`python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --randoop=True --randoop_tl=100 --unit=True --evosuite=True --evosuite_tl=120 --seed=42 --log_file_path=${HOME}/exli/log/raninline.log`
+`python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --randoop=True --randoop_tl=100 --unit=True --evosuite=True --evosuite_tl=120 --seed=42 --log_path=${HOME}/exli/log/raninline.log`
 
 Alternatively, to use the default setting for test generation and output dirs
 

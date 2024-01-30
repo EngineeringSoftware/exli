@@ -76,15 +76,15 @@ class Main:
         evosuite: bool = True,
         evosuite_tl: int = 120,
         seed: int = Macros.DEFAULT_SEED,
-        log_file_path: str = None,
+        log_path: str = None,
     ):
         ################################## process input, prepare project ##################################
         if sha is None:
             sha = Util.get_sha(project_name)
-        if log_file_path is None:
-            log_file_path = Macros.log_dir / "raninline.log"
-        inputs = f"--project_name={project_name} --sha={sha} --randoop={randoop} --randoop_tl={randoop_tl} --unit={unit} --evosuite={evosuite} --evosuite_tl={evosuite_tl} --seed={seed} --log_file_path={log_file_path}"
-        se.bash.run(f'echo "{inputs}" >> {log_file_path}')
+        if log_path is None:
+            log_path = Macros.log_dir / "raninline.log"
+        inputs = f"--project_name={project_name} --sha={sha} --randoop={randoop} --randoop_tl={randoop_tl} --unit={unit} --evosuite={evosuite} --evosuite_tl={evosuite_tl} --seed={seed} --log_path={log_path}"
+        se.bash.run(f'echo "{inputs}" >> {log_path}')
 
         Util.compile_raninline()
         Util.remove_jacoco_extension()
@@ -141,7 +141,7 @@ class Main:
                     sha,
                     deps_file_path,
                     classpath_list_path,
-                    log_file_path,
+                    log_path,
                 )
                 log_dir = Macros.log_dir / tool
                 Util.avoid_permission_error(project_name)
@@ -196,7 +196,7 @@ class Main:
                 is_auto_generated = Util.is_auto_generated_file(java_file_path)
                 if not is_auto_generated:
                     se.bash.run(
-                        f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="i {java_file_path} -1 {log_file_path} {reduced_log_path} {classes_dir}"',
+                        f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="i {java_file_path} -1 {log_path} {reduced_log_path} {classes_dir}"',
                         0,
                     )
 
@@ -246,7 +246,7 @@ class Main:
             sha,
             reduced_log_path,
             proj_reduced_tests_dir,
-            log_file_path,
+            log_path,
         )
 
         # parse all inline tests: for evaluation purposes
@@ -255,7 +255,7 @@ class Main:
             sha,
             all_log_path,
             proj_all_tests_dir,
-            log_file_path,
+            log_path,
         )
 
     def run_unit_tests(
