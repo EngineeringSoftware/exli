@@ -41,47 +41,47 @@ In the docker, create a Python environment named `exli`
 In `exli/python` directory
 
 -----
-(Optional) Find the target statements. It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project. The generated target statements are in `results/target-stmt/ralscha_extclassgenerator-40ad147.txt`
+(Optional) Find the target statements. It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project. The generated target statements are in `results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
 
-`python -m exli.main find_target_stmts --project_name=ralscha_extclassgenerator --sha=40ad147 --target_stmts_path=${HOME}/exli/results/target-stmt/ralscha_extclassgenerator-40ad147.txt`
+`python -m exli.main find_target_stmts --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --target_stmts_path=${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
 
 Alternatively, to use the default setting for output file
 
-`python -m exli.main batch_find_target_stmts --test_project_name=ralscha_extclassgenerator`
+`python -m exli.main batch_find_target_stmts --test_project_name=Bernardo-MG_velocity-config-tool`
 
 -----
 
-`python -m exli.main run --project_name=ralscha_extclassgenerator --sha=40ad147 --randoop=True --randoop_tl=100 --unit=True --evosuite=True --evosuite_tl=120 --seed=42 --log_file_path=${HOME}/exli/log/raninline.log`
+`python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --randoop=True --randoop_tl=100 --unit=True --evosuite=True --evosuite_tl=120 --seed=42 --log_file_path=${HOME}/exli/log/raninline.log`
 
 Alternatively, to use the default setting for test generation and output dirs
 
-`python -m exli.main batch_run --test_project_name=ralscha_extclassgenerator`
+`python -m exli.main batch_run --test_project_name=Bernardo-MG_velocity-config-tool`
 
 The generated inline tests are in 
 
-`all-tests/ralscha_extclassgenerator`
+`all-tests/Bernardo-MG_velocity-config-tool`
 
 #### Execute the generated inline tests
 
 In `exli/python` directory
 
-`python -m exli.main run_inline_tests --project_name=ralscha_extclassgenerator --sha=40ad147 --generated_tests_dir=${HOME}/exli/reduced-tests/ralscha_extclassgenerator-40ad147 --inline_tests_dir=${HOME}/exli/reduced-its/ralscha_extclassgenerator-40ad147 --inlinetest_report_path=${HOME}/exli/results/reduced-its-report/ralscha_extclassgenerator-40ad147.json --cached_objects_dir=${HOME}/exli/all-tests/ralscha_extclassgenerator-40ad147/.inlinegen --deps_file=${HOME}/exli/generated-tests/ralscha_extclassgenerator-40ad147/deps.txt --parse_inline_tests=True --log_file_path=${HOME}/exli/log/run-its.log`
+`python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/reduced-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/reduced-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_file_path=${HOME}/exli/log/run-its.log`
 
 Alternatively, to use the default setting for output dirs
 
-`python -m exli.main batch_run_inline_tests --test_project_name=ralscha_extclassgenerator`
+`python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`
 
 The generated execution result can be found at
 
-`results/all-its-report/ralscha_extclassgenerator-40ad147.json`
+`results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
 
 #### Generate mutants and run mutation analysis
 
 In `exli/python` directory
 
-`python -m exli.eval batch_run_generate_mutants --test_project_name ralscha_extclassgenerator`
+`python -m exli.eval batch_run_generate_mutants --test_project_name Bernardo-MG_velocity-config-tool`
 
-`python -m exli.eval batch_run_tests_with_mutants --test_project_name ralscha_extclassgenerator`
+`python -m exli.eval batch_run_tests_with_mutants --test_project_name Bernardo-MG_velocity-config-tool`
 
 ## Repo structure
 raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
