@@ -28,7 +28,7 @@ class Macros:
     all_its_report_dir: Path = results_dir / "all-its-report"
     java_dir: Path = project_dir / "java"
     java_raninline_dir: Path = project_dir / "java" / "raninline"
-    itest_java_dir: Path = project_dir.parent / "inlinetest-internal" / "java"
+    itest_java_dir: Path = project_dir.parent / "inlinetest" / "java"
     all_mutants_dir: Path = results_dir / "all-mutants"
     mutants_dir: Path = results_dir / "mutants"
     jacoco_extension_dir: Path = project_dir / "jacoco-extension"
