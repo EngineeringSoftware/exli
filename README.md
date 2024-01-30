@@ -71,6 +71,20 @@ Alternatively, to use the default setting for output dirs
 
 `python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`
 
+If there are failed inline tests, run the following command to remove the failed inline tests
+```
+python -m exli.main analyze_inline_tests_reports --inline_test_type=reduced
+
+python -m exli.main analyze_inline_tests_reports --inline_test_type=all
+
+python -m exli.main remove_failed_tests --inline_test_type reduced
+
+python -m exli.main remove_failed_tests --inline_test_type all
+
+python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool # re-generate test report
+```
+
+
 The generated execution result can be found at
 
 `results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
