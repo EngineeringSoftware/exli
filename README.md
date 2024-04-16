@@ -24,11 +24,11 @@ For example, `itest("Randoop", 57)` means that the test source is Randoop genera
 - Docker
 - Disk space: 10GB
 
-To run the experiments without Docker, you need to install the following dependencies:
+In the docker, the following tools/dependencies are installed:
 - Conda latest version
-- Python 3.9
+- Python 3.9 (or later)
 - Java 8
-- Maven 3.8.3
+- Maven 3.8.3 (or later)
 
 ### Install
 Build a docker image
