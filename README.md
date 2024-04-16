@@ -8,7 +8,7 @@ This repo contains the code and data for producing the experiments in [Exli][pap
 1. "Declare" part
 `itest`
 
-In our experiments, we use `itest(test_source, target_stmt_line_number)`, to represent the test source and the line number of the target statement in original file (note that the original file is different from the Java file with inline tests).
+In our experiments, we use `itest(test_source, target_stmt_line_number)`, to represent the test source and the line number of the target statement in original file (note that after adding inline tests to the original file, the line numbers of target statements change).
 For example, `itest("Randoop", 57)` means that the test source is Randoop generated tests, and the target statement starts at line 57 in the original file.
 
 2. "Assign part" part
@@ -19,6 +19,17 @@ For example, `itest("Randoop", 57)` means that the test source is Randoop genera
 
 
 ## How to use Exli
+
+### Requirements
+- Docker
+- Disk space: 10GB
+
+To run the experiments without Docker, you need to install the following dependencies:
+- Conda latest version
+- Python 3.9
+- Java 8
+- Maven 3.8.3
+
 ### Install
 Build a docker image
 
@@ -41,9 +52,11 @@ In the docker, create a Python environment named `exli`
 In `exli/python` directory
 
 -----
-(Optional) Find the target statements. It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project. The generated target statements are in `results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
+(Optional) Find the target statements. It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project. 
 
 `python -m exli.main find_target_stmts --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --target_stmts_path=${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
+
+The generated target statements are in `results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
 
 Alternatively, to use the default setting for output file
 
