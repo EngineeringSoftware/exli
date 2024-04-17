@@ -1,8 +1,8 @@
-# Exli
+# ExLi
 Automatically extracting inline tests from unit tests.
 
 ## Introduction
-This repo contains the code and data for producing the experiments in [Exli][paper-url].
+This repo contains the code and data for producing the experiments in [ExLi][paper-url].
 
 ### Inline test format
 1. "Declare" part
@@ -18,7 +18,7 @@ For example, `itest("Randoop", 57)` means that the test source is Randoop genera
 `assert(var, value)`
 
 
-## How to use Exli
+## How to use ExLi
 
 ### Requirements
 - Docker
@@ -107,14 +107,14 @@ This command runs the inline tests and generates the execution report at `${HOME
 There are 4 inline tests failed because not all generated inline tests can be executed successfully. For example, if the user-defined class does not override the `toString()` method, the serialized object will contain the class name and the hash code, and the new object will not be equal to the original object when we run the inline tests and compare the objects.
 
 If there are failed inline tests, run the following command to remove the failed inline tests
-```
-python -m exli.main analyze_inline_tests_reports --inline_test_type=reduced
 
-python -m exli.main analyze_inline_tests_reports --inline_test_type=all
+`python -m exli.main analyze_inline_tests_reports --inline_test_type=reduced`
 
-python -m exli.main remove_failed_tests --inline_test_type reduced
+`python -m exli.main analyze_inline_tests_reports --inline_test_type=all`
 
-python -m exli.main remove_failed_tests --inline_test_type all
+`python -m exli.main remove_failed_tests --inline_test_type reduced`
+
+`python -m exli.main remove_failed_tests --inline_test_type all`
 
 # re-generate test reports
 python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool
@@ -150,7 +150,7 @@ R2-tests: It contains the R2 tests.
 
 
 ## Citation
-If you have used EXLI in a research project, please cite the research paper in any related publication:
+If you have used ExLi in a research project, please cite the research paper in any related publication:
 
 Title: [Extracting Inline Tests from Unit Tests](https://dl.acm.org/doi/abs/10.1145/3597926.3598149)
 
