@@ -1,0 +1,15 @@
+package construct;
+
+import org.inlinetest.ITest;
+
+public class A {
+
+    public void m(int a, int b) {
+        a = a + b;
+        if (a > 1 && b < 1) {
+            a = a + b;
+        } else {
+            a = a - b;
+        }
+    }
+}

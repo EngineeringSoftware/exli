@@ -1,0 +1,11 @@
+public class P {
+    void m (int a, int b, int c){
+        if (a << b > 0){
+            b = a + c;
+        }else if (a << b < 0){
+            b = a - c;
+        }else{
+            b = a * c;
+        }
+    }
+}

@@ -1,0 +1,2 @@
+src/test/resources/construct/Element.java;816;itest("Unit", 816).given(elementTypes,"49.xml").given(maxCountPerElementType,50).checkEq(hasExceeded,false);
+src/test/resources/construct/Element.java;816;itest("Unit", 816).given(elementTypes,"49.xml").given(maxCountPerElementType,50).checkEq(hasExceeded,true);

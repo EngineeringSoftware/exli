@@ -1,0 +1,12 @@
+public class G{
+    static int x = 1;
+
+    public static void m(){
+        x = H.i + 1;
+        System.out.println(x);
+    }
+}
+
+class H{
+    static int i = 9;
+}

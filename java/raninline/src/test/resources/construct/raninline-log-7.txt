@@ -1,0 +1,11 @@
+RegressionTest0.test00015
+target-statement-start;src/test/resources/construct/NumberFacility.java;120
+target-statement-before;src/test/resources/construct/NumberFacility.java;120;boolean[];res;[false, false, false, false, false, false, false, false]
+target-statement-before;src/test/resources/construct/NumberFacility.java;120;byte;b;-1
+target-statement-before;src/test/resources/construct/NumberFacility.java;120;int;i;0
+target-statement-before;src/test/resources/construct/NumberFacility.java;120;boolean;res[7 - i];false
+target-statement-after;src/test/resources/construct/NumberFacility.java;120;boolean;res[7 - i];true
+
+RegressionTest0.test00016
+
+RegressionTest0.test00017

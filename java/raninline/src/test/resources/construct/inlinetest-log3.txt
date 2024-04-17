@@ -1,0 +1,2 @@
+src/test/resources/construct/DefaultFacebookClient.java;311;itest("Unit", 311).given(IDS_PARAM_NAME,"ids").given(parameters,"102.xml").checkFalse(group());
+src/test/resources/construct/DefaultFacebookClient.java;311;itest("Unit", 311).given(IDS_PARAM_NAME,"ids").given(parameters,"109.xml").checkTrue(group());

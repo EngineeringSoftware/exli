@@ -1,0 +1,2 @@
+src/test/resources/construct/Styles.java;148;itest("Unit", 148).given(input,"background-color:red").checkEq(separator,16);
+src/test/resources/construct/Styles.java;148;itest("Unit", 148).given(input,"back").checkEq(separator,-1);
