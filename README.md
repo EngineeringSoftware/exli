@@ -135,6 +135,8 @@ In `exli/python` directory
 `python -m exli.eval batch_run_tests_with_mutants --test_project_name Bernardo-MG_velocity-config-tool`
 
 ## Repo structure
+
+### Code
 raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
 Instrumenter, Collector, Round1Reducer, and InlineTestConstructor.
 
