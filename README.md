@@ -116,9 +116,9 @@ If there are failed inline tests, run the following command to remove the failed
 
 `python -m exli.main remove_failed_tests --inline_test_type all`
 
-# re-generate test reports
-python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool
-```
+Re-generate test reports
+
+`python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`
 
 The generated execution result can be found at
 
