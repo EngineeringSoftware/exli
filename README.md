@@ -47,32 +47,36 @@ In the docker, create a Python environment named `exli`
 
 ### Usage
 
-#### Generate unit tests and inline tests
-
 In `exli/python` directory
 
------
-(Optional) Find the target statements. It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project. 
+#### (Optional) Find the target statements. 
+
+It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project. 
 
 `python -m exli.main find_target_stmts --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --target_stmts_path=${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
 
-The generated target statements are in `results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
+(Alternatively, to use the default output file path
+`python -m exli.main batch_find_target_stmts --test_project_name=Bernardo-MG_velocity-config-tool`)
 
-Alternatively, to use the default setting for output file
+The generated target statements are in `${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
 
-`python -m exli.main batch_find_target_stmts --test_project_name=Bernardo-MG_velocity-config-tool`
+There are three target statements found in the project `Bernardo-MG_velocity-config-tool` at commit `26226f5`:
+```
+target stmt string;/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java;195;null;;null
+target stmt string;/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java;200;null;;null
+target stmt string;/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java;288;null;;null
+```
 
------
-
+#### Generate unit tests and inline tests
 `python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --randoop=True --randoop_tl=100 --unit=True --evosuite=True --evosuite_tl=120 --seed=42 --log_path=${HOME}/exli/log/raninline.log`
 
-Alternatively, to use the default setting for test generation and output dirs
-
-`python -m exli.main batch_run --test_project_name=Bernardo-MG_velocity-config-tool`
+(Alternatively, to use the default setting for test generation and output dirs path
+`python -m exli.main batch_run --test_project_name=Bernardo-MG_velocity-config-tool`)
 
 The generated inline tests are in 
 
-`all-tests/Bernardo-MG_velocity-config-tool`
+`${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5`
+
 
 #### Execute the generated inline tests
 
@@ -80,9 +84,27 @@ In `exli/python` directory
 
 `python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/reduced-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/reduced-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log`
 
-Alternatively, to use the default setting for output dirs
+(Alternatively, to use the default setting for output dirs
+`python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`)
 
-`python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`
+This command runs the inline tests and generates the execution report at `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`. The report shows the number of tests, errors, failures, and time. For example,
+
+```
+{
+    "testsuite": {
+        "@errors": "4",
+        "@failures": "0",
+        "@hostname": "bafe0a4bce5a",
+        "@name": "JUnit Jupiter",
+        "@skipped": "0",
+        "@tests": "6",
+        "@time": "0.122",
+        ...
+    }
+}
+```
+
+
 
 If there are failed inline tests, run the following command to remove the failed inline tests
 ```
