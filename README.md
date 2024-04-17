@@ -104,7 +104,7 @@ This command runs the inline tests and generates the execution report at `${HOME
 }
 ```
 
-
+There are 4 inline tests failed because not all generated inline tests can be executed successfully. For example, if the user-defined class does not override the `toString()` method, the serialized object will contain the class name and the hash code, and the new object will not be equal to the original object when we run the inline tests and compare the objects.
 
 If there are failed inline tests, run the following command to remove the failed inline tests
 ```
@@ -122,7 +122,7 @@ python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_veloc
 
 The generated execution result can be found at
 
-`results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
+`results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
 
 #### Generate mutants and run mutation analysis
 
