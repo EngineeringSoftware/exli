@@ -49,7 +49,7 @@ In the docker, create a Python environment named `exli`
 
 #### (Optional) Find the target statements. 
 
-It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project. 
+It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project, which may take a long time (~2 min * number of classes). 
 
 In `exli/python` directory
 
