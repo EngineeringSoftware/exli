@@ -47,11 +47,11 @@ In the docker, create a Python environment named `exli`
 
 ### Usage
 
-In `exli/python` directory
-
 #### (Optional) Find the target statements. 
 
 It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project. 
+
+In `exli/python` directory
 
 `python -m exli.main find_target_stmts --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --target_stmts_path=${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
 
