@@ -18,6 +18,9 @@ class Main:
         Generate unit tests with Randoop/EvoSuite. Execute
         developer-written or auto-generated unit tests to construct
         inline tests.
+        
+        Args:
+            test_project_name (str): The name of the project to be tested. If None, all projects are tested.
         """
         log_file_path = Macros.log_dir / "raninline.log"
         if os.path.exists(log_file_path):
@@ -78,6 +81,20 @@ class Main:
         seed: int = Macros.DEFAULT_SEED,
         log_path: str = None,
     ):
+        """
+        Generate inline tests for a project.
+
+        Args:
+            project_name (str): The name of the project.
+            sha (str, optional): The commit hash. If None, the latest commit is used. Defaults to None.
+            randoop (bool, optional): Whether to run Randoop to generate tests. Defaults to True.
+            randoop_tl (int, optional): The time limit for Randoop. Defaults to 100.
+            unit (bool, optional): Whether to run developer-written unit tests. Defaults to True.
+            evosuite (bool, optional): Whether to run EvoSuite to generate tests. Defaults to True.
+            evosuite_tl (int, optional): The time limit for EvoSuite. Defaults to 120.
+            seed (int, optional): The seed for test generation. Defaults to Macros.DEFAULT_SEED.
+            log_path (str, optional): The path for the log file. Defaults to None.
+        """
         ################################## process input, prepare project ##################################
         if sha is None:
             sha = Util.get_sha(project_name)
@@ -558,6 +575,9 @@ class Main:
     def batch_find_target_stmts(self, test_project_name: str = None):
         """
         Collect target statements for each project.
+        
+        Args:
+            test_project_name (str): The name of the project to be tested. If None, all projects are tested.
         """
         projects = Util.get_project_names_list_with_sha()
         for project_name, sha in projects:
@@ -576,6 +596,14 @@ class Main:
         sha: str,
         target_stmts_path: str,
     ):
+        """
+        Find target statements for a project.
+
+        Args:
+            project_name (str): org_repo, e.g., https://github.com/Bernardo-MG/velocity-config-tool, the project name is Bernardo-MG_velocity-config-tool
+            sha (str): commit hash
+            target_stmts_path (str): path to store the target statements
+        """
         Util.prepare_project(project_name, sha)
         with se.io.cd(Macros.downloads_dir / project_name):
             full_file_paths = Util.list_java_files(
