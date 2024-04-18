@@ -17,6 +17,23 @@ For example, `itest("Randoop", 57)` means that the test source is Randoop genera
 3. "Assert" part
 `assert(var, value)`
 
+### Repo structure
+
+#### Code
+raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
+Instrumenter, Collector, Round1Reducer, and InlineTestConstructor.
+
+python: This directory contains the scripts of running ExLi end-to-end and generates figures.
+
+#### Generated tests
+R0-tests, R1-tests, R2-tests directories contain the inline tests that
+are integrated with source code.
+
+R0-tests: It contains the R0 tests.
+
+R1-tests: It contains the R1 tests.
+
+R2-tests: It contains the R2 tests.
 
 ## How to use ExLi
 
@@ -207,24 +224,6 @@ Projects for evaluation
 | visenze/visearch-sdk-java | 0efcda3 | 7,643 |
 | wmixvideo/nfe | 1ccdba7 | 133,698 |
 
-
-## Repo structure
-
-### Code
-raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
-Instrumenter, Collector, Round1Reducer, and InlineTestConstructor.
-
-python: This directory contains the scripts of running ExLi end-to-end and generates figures.
-
-### Generated tests
-R0-tests, R1-tests, R2-tests directories contain the inline tests that
-are integrated with source code.
-
-R0-tests: It contains the R0 tests.
-
-R1-tests: It contains the R1 tests.
-
-R2-tests: It contains the R2 tests.
 
 
 ## Citation
