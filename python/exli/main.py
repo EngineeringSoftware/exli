@@ -438,6 +438,9 @@ class Main:
             test_report_dir = Macros.all_its_report_dir
         else:
             raise Exception("unknown inline test type")
+        if not os.path.exists(test_report_dir):
+            print(f"{test_report_dir} does not exist")
+            return        
         # iterate all reports in the report directory
         failed_tests = []
         passed_tests = []
