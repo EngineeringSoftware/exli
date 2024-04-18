@@ -27,7 +27,7 @@ For example, `itest("Randoop", 57)` means that the test source is Randoop genera
 In the docker, the following tools/dependencies are installed:
 - Conda latest version
 - Python 3.9 (or later)
-- Java 8
+- Java 8, JUnit 4
 - Maven 3.8.3 (or later)
 
 ### Install
