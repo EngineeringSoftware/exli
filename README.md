@@ -90,7 +90,8 @@ In `exli/python` directory
 
 This command runs the inline tests and generates the execution report at `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`. The report shows the number of tests, errors, failures, and time. For example,
 
-> {
+```json
+{
     "testsuite": {
         "@errors": "4",
         "@failures": "0",
@@ -102,7 +103,7 @@ This command runs the inline tests and generates the execution report at `${HOME
         ...
     }
 }
-
+```
 
 There are 4 inline tests failed because not all generated inline tests can be executed successfully. For example, if the user-defined class does not override the `toString()` method, the serialized object will contain the class name and the hash code, and the new object will not be equal to the original object when we run the inline tests and compare the objects.
 
