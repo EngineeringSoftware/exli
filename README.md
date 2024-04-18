@@ -64,9 +64,9 @@ In the docker, create a Python environment named `exli`
 
 ### Usage
 
-- For each command, append `--help` to see the usage and options.
-- For each command, the argument and value can be seperated by `=` or space. For example, `--project_name=Bernardo-MG_velocity-config-tool` or `--project_name Bernardo-MG_velocity-config-tool` are both valid.
-- To run on a specific project, replace `Bernardo-MG_velocity-config-tool` with the project name and `26226f5` with the commit hash. Notice that only projects that are in evaluated projects can be run with the command that only require `test_project_name`.
+> - For each command, append `--help` to see the usage and options.
+> - For each command, the argument and value can be seperated by `=` or space. For example, `--project_name=Bernardo-MG_velocity-config-tool` or `--project_name Bernardo-MG_velocity-config-tool` are both valid.
+> - To run on a specific project, replace `Bernardo-MG_velocity-config-tool` with the project name and `26226f5` with the commit hash. Notice that only projects that are in evaluated projects can be run with the command that only require `test_project_name`.
 
 #### (Optional) Find the target statements. 
 
