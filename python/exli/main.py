@@ -417,7 +417,7 @@ class Main:
             log_path,
         )
         if returncode != 0:
-            print(f"inline test failed for {project_name} {sha}")
+            print(f"Some inline tests failed for {project_name} {sha} during execution.")
         if run_res:
             se.io.dump(
                 inlinetest_report_path,
