@@ -93,7 +93,7 @@ python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-
 
 > This command runs the inline tests and generates the execution report at `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
 > 
-> To generate the report for all inline tests, replace `reduced` with `all` in the path `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`, the execution report is `${HOME}/exli/results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
+> To generate the report for all inline tests, replace `reduced` with `all` in the generated tests dir, inline tests dir and execution report (`${HOME}/exli/reduced-its` -> `${HOME}/exli/all-its`, `${HOME}/exli/results/reduced-its-report` -> `${HOME}/exli/results/all-its-report` and `${HOME}/exli/results/all-its-report` to `${HOME}/exli/results/reduced-its-report`)
 > 
 > The difference between "all-its-report" and "reduced-its-report" is that the "all-its-report" contains all the inline tests, while the "reduced-its-report" contains the inline tests that are reduced by the Round 1 Reducer (based on coverage).
 
