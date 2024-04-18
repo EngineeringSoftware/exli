@@ -123,7 +123,7 @@ The report shows the number of tests, errors, failures, and time. For example,
 
 It is possible to see the message "inline tests failed" because not all generated inline tests can be compiled or executed successfully. For example, if the user-defined class does not override the `toString()` method, the serialized object will contain the class name and the hash code, and the new object will not be equal to the original object when we run the inline tests and compare the objects (the collected value does not equal to the runtime value).
 
-If there are inline tests failed because of compilation, we directly remove these failed inline tests, the log file `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-comp-failed-tests.txt` stores the failed inline tests and the reason why they failed. (This project does not have compilation failed inline tests so this file does not exist.)
+If there are inline tests failed because of compilation, we directly remove these failed inline tests, the log file `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-comp-failed-tests.txt` stores the failed inline tests and the reason why they failed (This project does not have compilation failed inline tests so this file does not exist).
 
 If inline tests failed because of execution, run the following command to remove the failed inline tests:
 
