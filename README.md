@@ -89,38 +89,33 @@ In `exli/python` directory
 python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/reduced-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/reduced-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
 ```
 
-> This command runs the inline tests and generates the execution report at `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`.
+> This command runs the inline tests and generates the execution report at `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
 
 > Alternatively, to use the default setting for output dirs `python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`
 
 The report shows the number of tests, errors, failures, and time. For example,
-
 ```json
 {
     "testsuite": {
-        "@errors": "4",
+        "@errors": "0",
         "@failures": "0",
         "@hostname": "bafe0a4bce5a",
         "@name": "JUnit Jupiter",
         "@skipped": "0",
         "@tests": "6",
-        "@time": "0.122",
+        "@time": "0.042",
         ...
     }
 }
 ```
 
-There are 4 inline tests failed because not all generated inline tests can be executed successfully. For example, if the user-defined class does not override the `toString()` method, the serialized object will contain the class name and the hash code, and the new object will not be equal to the original object when we run the inline tests and compare the objects.
+It is possible to see the message "inline tests failed" because not all generated inline tests can be executed successfully. For example, if the user-defined class does not override the `toString()` method, the serialized object will contain the class name and the hash code, and the new object will not be equal to the original object when we run the inline tests and compare the objects (the collected value does not equal to the runtime value).
 
 If there are failed inline tests, run the following command to remove the failed inline tests
 
 `python -m exli.main analyze_inline_tests_reports --inline_test_type=reduced`
 
-`python -m exli.main analyze_inline_tests_reports --inline_test_type=all`
-
 `python -m exli.main remove_failed_tests --inline_test_type reduced`
-
-`python -m exli.main remove_failed_tests --inline_test_type all`
 
 Re-generate test reports
 
