@@ -141,3 +141,4 @@ app.pdf
 /reduced-inline-tests
 /reduced-tests-initial
 counter-log.txt
+java/raninline/.inlinegen/
