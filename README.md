@@ -47,7 +47,8 @@ In the docker, create a Python environment named `exli`
 
 ### Usage
 
-- For every command, append `--help` to see the usage and options.
+- For each command, append `--help` to see the usage and options.
+- For each command, the argument and value can be seperated by `=` or space. For example, `--project_name=Bernardo-MG_velocity-config-tool` or `--project_name Bernardo-MG_velocity-config-tool` are both valid.
 
 #### (Optional) Find the target statements. 
 
@@ -131,9 +132,9 @@ The generated execution result can be found at
 
 In `exli/python` directory
 
-`python -m exli.eval batch_run_generate_mutants --test_project_name Bernardo-MG_velocity-config-tool`
+`python -m exli.eval batch_run_generate_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
-`python -m exli.eval batch_run_tests_with_mutants --test_project_name Bernardo-MG_velocity-config-tool`
+`python -m exli.eval batch_run_tests_with_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
 ## Repo structure
 
