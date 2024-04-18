@@ -93,8 +93,8 @@ python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-
 
 > This command runs the inline tests and generates the execution report at `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
 and `${HOME}/exli/results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
-
-The difference between "all-its-report" and "reduced-its-report" is that the "all-its-report" contains all the inline tests, while the "reduced-its-report" contains the inline tests that are reduced by the Round 1 Reducer (based on coverage).
+> 
+> The difference between "all-its-report" and "reduced-its-report" is that the "all-its-report" contains all the inline tests, while the "reduced-its-report" contains the inline tests that are reduced by the Round 1 Reducer (based on coverage).
 
 > Alternatively, to use the default setting for output dirs `python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`
 
