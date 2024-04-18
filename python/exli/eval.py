@@ -22,6 +22,15 @@ class Eval:
         tool: str = "universalmutator",
         test_project_name: str = None,
     ):
+        """
+        Generate mutants for all target statements in the input file.
+
+        Args:
+            skip_existing (bool, optional): Skip existing mutants. Defaults to False.
+            filter_with_inline_tests (bool, optional): Filter with inline tests. Defaults to True.
+            tool (str, optional): The tool to generate mutants. Defaults to "universalmutator", can also be "major".
+            test_project_name (str, optional): The name of the project to test. Defaults to None.
+        """
         time_file_path = Macros.results_dir / "time" / f"generate-mutants-{tool}.json"
         if time_file_path.exists():
             time_dict = se.io.load(time_file_path, se.io.Fmt.json)
@@ -124,6 +133,15 @@ class Eval:
         output_path: str,
         tool: str = "universalmutator",
     ):
+        """
+        Generate mutants for each target statement in the input file.
+
+        Args:
+            project_name (str): The name of the project.
+            target_stmts (set): A set of target statements.
+            output_path (str): The path to save the generated mutants.
+            tool (str, optional): The tool to generate mutants. Defaults to "universalmutator", can also be "major".
+        """
         result = []
         # loop through lines in file:https://stackoverflow.com/questions/48124206/iterate-through-a-file-lines-in-python
         if tool == "universalmutator":
@@ -1268,49 +1286,6 @@ class Eval:
                     print(
                         input_type, project_name, logged_inline_test, added_inline_test
                     )
-
-    # deprecated, we can use `python -m exli.eval batch_run_generate_mutants --filter_with_inline_tests` to generate mutants
-    # python -m exli.eval filter_mutants_with_all_inline_tests
-    def filter_mutants_with_all_inline_tests(
-        self, project_name: str, commit: str = None
-    ):
-        if commit is None:
-            commit = Util.get_sha(project_name)
-        if not (Macros.all_mutants_dir / f"{project_name}.json").exists():
-            return
-        mutants = se.io.load(
-            Macros.all_mutants_dir / f"{project_name}.json", se.io.Fmt.json
-        )
-        passed_tests_list = se.io.load(
-            Macros.results_dir / "all-passed-tests.txt", se.io.Fmt.txtList
-        )
-        passed_tests_set = set()
-        for passed_tests in passed_tests_list:
-            tokens = passed_tests.split(";")
-            if tokens[0] == project_name:
-                passed_tests_set.add(tokens[1] + tokens[2])
-        res = []
-        for idx, mutant in enumerate(mutants):
-            mutant["index"] = idx
-            file_path = mutant["filepath"]
-            line_num = mutant["linenumber"]
-            # inline_test_name = (
-            #     file_path.split("/")[-1].split(".")[0] + f"_{line_num}Test.java"
-            # )
-            # exist, _ = Util.find_inline_test(
-            #     inline_test_name, f"{Macros.reduced_inline_tests_dir}"
-            # )
-            # print(project_name, file_path, line_num, exist)
-            # if not exist:
-            #     continue
-            classname = Util.file_path_to_class_name(file_path)
-            if f"{classname}{line_num}" in passed_tests_set:
-                res.append(mutant)
-        # save the results
-        if res:
-            se.io.dump(
-                Macros.mutants_dir / f"{project_name}.json", res, se.io.Fmt.jsonPretty
-            )
 
     # python -m exli.eval batch_filter_mutants_with_all_inline_tests
     def batch_filter_mutants_with_all_inline_tests(self):
