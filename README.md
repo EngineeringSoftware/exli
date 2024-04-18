@@ -160,7 +160,16 @@ Run mutation analysis:
 > Alternatively, to use the default settings `python -m exli.eval batch_run_tests_with_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
 ### Reproduce the results in the paper
-TODO
+
+#### Run experiments
+```bash
+
+```
+
+#### Make figures
+```bash
+
+```
 
 #### Background
 Projects for evaluation
@@ -176,7 +185,6 @@ Projects for evaluation
 | finos/messageml-utils | b4c75c6 | 21,765 |
 | fleipold/jproc | b872abf | 1,189 |
 | hyperledger/fabric-sdk-java | da35400 | 33,677 |
-| jenkinsci/email-ext-plugin | 699277c | 13,190 |
 | jkuhnert/ognl | 5c30e1e | 18,190 |
 | jscep/jscep | b20e944 | 6,310 |
 | lamarois/sherdog-parser | aa6806a | 1,546 |
