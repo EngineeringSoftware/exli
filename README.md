@@ -55,7 +55,9 @@ It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate
 
 In `exli/python` directory
 
-`python -m exli.main find_target_stmts --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --target_stmts_path=${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
+```bash
+python -m exli.main find_target_stmts --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --target_stmts_path=${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt
+```
 
 (Alternatively, to use the default output file path
 `python -m exli.main batch_find_target_stmts --test_project_name=Bernardo-MG_velocity-config-tool`)
