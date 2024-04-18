@@ -62,9 +62,9 @@ python -m exli.main find_target_stmts --project_name=Bernardo-MG_velocity-config
 > Alternatively, to use the default output file path
 `python -m exli.main batch_find_target_stmts --test_project_name=Bernardo-MG_velocity-config-tool`
 
-The generated target statements are in `${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
-
-There are three target statements found in the project `Bernardo-MG_velocity-config-tool` at commit `26226f5`:
+> The generated target statements are in `${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
+> 
+> There are three target statements found in the project `Bernardo-MG_velocity-config-tool` at commit `26226f5`:
 
 ```txt
 target stmt string;/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java;195;null;;null
