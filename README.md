@@ -59,8 +59,8 @@ In `exli/python` directory
 python -m exli.main find_target_stmts --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --target_stmts_path=${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt
 ```
 
-(Alternatively, to use the default output file path
-`python -m exli.main batch_find_target_stmts --test_project_name=Bernardo-MG_velocity-config-tool`)
+> Alternatively, to use the default output file path
+`python -m exli.main batch_find_target_stmts --test_project_name=Bernardo-MG_velocity-config-tool`
 
 The generated target statements are in `${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt`
 
@@ -77,8 +77,8 @@ target stmt string;/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-to
 python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --randoop=True --randoop_tl=100 --unit=True --evosuite=True --evosuite_tl=120 --seed=42 --log_path=${HOME}/exli/log/raninline.log
 ```
 
-(Alternatively, to use the default setting for test generation and output dirs path
-`python -m exli.main batch_run --test_project_name=Bernardo-MG_velocity-config-tool`)
+> Alternatively, to use the default setting for test generation and output dirs path
+`python -m exli.main batch_run --test_project_name=Bernardo-MG_velocity-config-tool`
 
 The generated inline tests are in 
 
