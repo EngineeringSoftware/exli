@@ -47,6 +47,8 @@ In the docker, create a Python environment named `exli`
 
 ### Usage
 
+- For every command, append `--help` to see the usage and options.
+
 #### (Optional) Find the target statements. 
 
 It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project, which may take a long time (~2 min * number of classes). 
@@ -139,6 +141,8 @@ In `exli/python` directory
 ### Code
 raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
 Instrumenter, Collector, Round1Reducer, and InlineTestConstructor.
+
+python: This directory contains the scripts of running ExLi end-to-end and 
 
 ### Generated tests
 R0-tests, R1-tests, R2-tests directories contain the inline tests that
