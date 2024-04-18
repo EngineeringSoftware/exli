@@ -155,7 +155,7 @@ TODO
 raninline: This directory constains the source code of TargetStmtFinder, VariablesFinder,
 Instrumenter, Collector, Round1Reducer, and InlineTestConstructor.
 
-python: This directory contains the scripts of running ExLi end-to-end and 
+python: This directory contains the scripts of running ExLi end-to-end and generates figures.
 
 ### Generated tests
 R0-tests, R1-tests, R2-tests directories contain the inline tests that
