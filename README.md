@@ -77,13 +77,10 @@ target stmt string;/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-to
 python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --randoop=True --randoop_tl=100 --unit=True --evosuite=True --evosuite_tl=120 --seed=42 --log_path=${HOME}/exli/log/raninline.log
 ```
 
+> The generated inline tests are in `${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5`
+
 > Alternatively, to use the default setting for test generation and output dirs path
 `python -m exli.main batch_run --test_project_name=Bernardo-MG_velocity-config-tool`
-
-The generated inline tests are in 
-
-`${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5`
-
 
 #### Execute the generated inline tests
 
