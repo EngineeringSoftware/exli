@@ -141,10 +141,10 @@ The generated execution result can be found at
 In `exli/python` directory
 
 Generate mutants:
-`python -m exli.eval batch_run_generate_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
+> Alternatively, to use the default settings `python -m exli.eval batch_run_generate_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
 Run mutation analysis:
-`python -m exli.eval batch_run_tests_with_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
+> Alternatively, to use the default settings `python -m exli.eval batch_run_tests_with_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
 ### Reproduce the results in the paper
 TODO
