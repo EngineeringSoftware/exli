@@ -157,23 +157,21 @@ The report shows the number of tests, errors, failures, and time. For example,
 }
 ```
 
----
 
-It is possible to see the message "Some inline tests failed for {project_name} {sha} during execution" because not all generated inline tests can be compiled or executed successfully. For example, if the user-defined class does not override the `toString()` method, the serialized object will contain the class name and the hash code, and the new object will not be equal to the original object when we run the inline tests and compare the objects (the collected value does not equal to the runtime value).
+> It is possible to see the message "Some inline tests failed for {project_name} {sha} during execution" because not all generated inline tests can be compiled or executed successfully. For example, if the user-defined class does not override the `toString()` method, the serialized object will contain the class name and the hash code, and the new object will not be equal to the original object when we run the inline tests and compare the objects (the collected value does not equal to the runtime value).
+> 
+> If there are inline tests failed because of compilation, we directly remove these failed inline tests, the log file `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-comp-failed-tests.txt` stores the failed inline tests and the reason why they failed (This project does not have compilation failed inline tests so this file does not exist).
+>
+> If inline tests failed because of execution, run the following command to remove the failed inline tests:
+> 
+> `python -m exli.main analyze_inline_tests_reports --inline_test_type=reduced` (or `all`)
+> 
+> `python -m exli.main remove_failed_tests --inline_test_type reduced` (or `all`)
+>
+> Re-generate test reports:
+> 
+> `python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`
 
-If there are inline tests failed because of compilation, we directly remove these failed inline tests, the log file `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-comp-failed-tests.txt` stores the failed inline tests and the reason why they failed (This project does not have compilation failed inline tests so this file does not exist).
-
-If inline tests failed because of execution, run the following command to remove the failed inline tests:
-
-`python -m exli.main analyze_inline_tests_reports --inline_test_type=reduced` (or `all`)
-
-`python -m exli.main remove_failed_tests --inline_test_type reduced` (or `all`)
-
-Re-generate test reports:
-
-`python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`
-
----
 
 The generated execution result can be found at
 
