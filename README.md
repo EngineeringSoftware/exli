@@ -86,7 +86,7 @@ Find target statements for a project.
 - For each command, the argument and value can be seperated by `=` or space. For example, `--project_name=Bernardo-MG_velocity-config-tool` or `--project_name Bernardo-MG_velocity-config-tool` are both valid.
 - To run on a specific project, replace `Bernardo-MG_velocity-config-tool` with the project name and `26226f5` with the commit hash. Notice that only projects that are in evaluated projects can be run with the command that only require `test_project_name`.
 
-#### Find the target statements. 
+#### Step 1: Find the target statements
 
 It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project, which may take a long time (~2 min * number of classes). Also, the second round reducer will generate mutants for these target statements.
 
@@ -108,7 +108,7 @@ target stmt string;/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-to
 target stmt string;/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java;288;null;;null
 ```
 
-#### Generate unit tests and inline tests
+#### Step 2: Generate unit tests and inline tests
 
 In `exli/python` directory
 
@@ -121,7 +121,7 @@ python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26
 > Alternatively, to use the default setting for test generation and output dirs path
 `python -m exli.main batch_run --test_project_name=Bernardo-MG_velocity-config-tool`
 
-#### Execute the generated inline tests
+#### Step 3: Execute the generated inline tests
 
 In `exli/python` directory
 
@@ -183,7 +183,7 @@ The generated execution result can be found at
 
 `${HOME}/exli/results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
 
-#### Generate mutants and run mutation analysis
+#### Step 4: Generate mutants and run mutation analysis
 
 In `exli/python` directory
 
