@@ -64,9 +64,27 @@ In the docker, create a Python environment named `exli`
 
 ### Usage
 
-> - For each command, append `--help` to see the usage and options.
-> - For each command, the argument and value can be seperated by `=` or space. For example, `--project_name=Bernardo-MG_velocity-config-tool` or `--project_name Bernardo-MG_velocity-config-tool` are both valid.
-> - To run on a specific project, replace `Bernardo-MG_velocity-config-tool` with the project name and `26226f5` with the commit hash. Notice that only projects that are in evaluated projects can be run with the command that only require `test_project_name`.
+- For each command, append `--help` to see the usage and options.
+> For example, `python -m exli.main find_target_stmts --help`
+>
+```txt
+usage: main.py [options] find_target_stmts [-h] [--config CONFIG] [--print_config[=flags]]
+                                           --project_name PROJECT_NAME --sha SHA
+                                           --target_stmts_path TARGET_STMTS_PATH
+
+Find target statements for a project.
+
+  ...
+  --project_name PROJECT_NAME
+                        org_repo, e.g., https://github.com/Bernardo-MG/velocity-config-tool, the project name is
+                        Bernardo-MG_velocity-config-tool (required, type: str)
+  --sha SHA             commit hash (required, type: str)
+  --target_stmts_path TARGET_STMTS_PATH
+                        path to store the target statements (required, type: str)
+```
+
+- For each command, the argument and value can be seperated by `=` or space. For example, `--project_name=Bernardo-MG_velocity-config-tool` or `--project_name Bernardo-MG_velocity-config-tool` are both valid.
+- To run on a specific project, replace `Bernardo-MG_velocity-config-tool` with the project name and `26226f5` with the commit hash. Notice that only projects that are in evaluated projects can be run with the command that only require `test_project_name`.
 
 #### (Optional) Find the target statements. 
 
