@@ -86,9 +86,9 @@ Find target statements for a project.
 - For each command, the argument and value can be seperated by `=` or space. For example, `--project_name=Bernardo-MG_velocity-config-tool` or `--project_name Bernardo-MG_velocity-config-tool` are both valid.
 - To run on a specific project, replace `Bernardo-MG_velocity-config-tool` with the project name and `26226f5` with the commit hash. Notice that only projects that are in evaluated projects can be run with the command that only require `test_project_name`.
 
-#### (Optional) Find the target statements. 
+#### Find the target statements. 
 
-It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project, which may take a long time (~2 min * number of classes). 
+It will help EvoSuite reduce the search scope. Otherwise, EvoSuite will generate tests on the whole project, which may take a long time (~2 min * number of classes). Also, the second round reducer will generate mutants for these target statements.
 
 In `exli/python` directory
 
@@ -189,7 +189,7 @@ Generate mutants:
 ```bash
 
 ```
-> Alternatively, to use the default settings `python -m exli.eval batch_run_generate_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
+> Alternatively, to use the default settings `python -m exli.eval batch_generate_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
 Run mutation analysis:
 ```bash
