@@ -589,7 +589,7 @@ class Main:
         self,
         skip_existing: bool = False,
         filter_with_inline_tests: bool = True,
-        tool: str = "universalmutator",
+        mutator: str = "universalmutator",
         test_project_name: str = None,
     ):
         """
@@ -601,7 +601,7 @@ class Main:
             tool(str): universalmutator or major
             test_project_name(str): only generate mutants for the specified project
         """
-        time_file_path = Macros.results_dir / "time" / f"generate-mutants-{tool}.json"
+        time_file_path = Macros.results_dir / "time" / f"generate-mutants-{mutator}.json"
         if time_file_path.exists():
             time_dict = se.io.load(time_file_path, se.io.Fmt.json)
         else:
@@ -611,10 +611,10 @@ class Main:
             if test_project_name is not None and project_name != test_project_name:
                 continue
             if filter_with_inline_tests:
-                output_path = Macros.mutants_dir / f"{project_name}-{sha}-{tool}.json"
+                output_path = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
             else:
                 output_path = (
-                    Macros.all_mutants_dir / f"{project_name}-{sha}-{tool}.json"
+                    Macros.all_mutants_dir / f"{project_name}-{sha}-{mutator}.json"
                 )
 
             if skip_existing and output_path.exists():
@@ -628,7 +628,7 @@ class Main:
                 sha,
                 target_stmts_path,
                 output_path,
-                tool,
+                mutator,
                 filter_with_inline_tests,
             )
             end_time = time.time()
@@ -642,7 +642,7 @@ class Main:
         sha: str,
         target_stmts_path: str,
         output_path: str,
-        tool: str = "universalmutator",
+        mutator: str = "universalmutator",
         filter_with_inline_tests: bool = True,
     ):
         """
@@ -665,7 +665,7 @@ class Main:
         Util.prepare_project(project_name, sha)
 
         # loop through lines in file:https://stackoverflow.com/questions/48124206/iterate-through-a-file-lines-in-python
-        if tool == "universalmutator":
+        if mutator == "universalmutator":
             for target_stmt in target_stmts:
                 orig_path = target_stmt.split(";")[0]
                 line_num = target_stmt.split(";")[1]
@@ -673,7 +673,7 @@ class Main:
                     project_name, orig_path, line_num
                 )
                 result.extend(line_results)
-        elif tool == "major":
+        elif mutator == "major":
             file_to_line_nums = collections.defaultdict(set)
             for target_stmt in target_stmts:
                 orig_path = target_stmt.split(";")[0]
