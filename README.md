@@ -146,7 +146,11 @@ python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-
 After running the inline tests, we can analyze the inline tests reports to get all passed and failed inline tests.
 
 ```bash
-python -m exli.main analyze_inline_tests_reports --inline_test_type=reduced (or `all`)
+python -m exli.main analyze_inline_tests_reports --inline_test_type=reduced
+```
+
+```bash
+python -m exli.main analyze_inline_tests_reports --inline_test_type=all
 ```
 
 > Alternatively, to use the default setting for output dirs `python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`, this will run the inline tests for both reduced and all inline tests 
