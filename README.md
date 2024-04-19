@@ -139,6 +139,12 @@ python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-
 python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/all-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
 ```
 
+After running the inline tests, we can analyze the inline tests reports to get all passed and failed inline tests.
+
+```bash
+python -m exli.main analyze_inline_tests_reports --inline_test_type=reduced (or `all`)
+```
+
 > Alternatively, to use the default setting for output dirs `python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`, this will run the inline tests for both reduced and all inline tests 
 
 The report shows the number of tests, errors, failures, and time. For example,
@@ -163,8 +169,6 @@ The report shows the number of tests, errors, failures, and time. For example,
 > If there are inline tests failed because of compilation, we directly remove these failed inline tests, the log file `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-comp-failed-tests.txt` stores the failed inline tests and the reason why they failed (This project does not have compilation failed inline tests so this file does not exist).
 >
 > If inline tests failed because of execution, run the following command to remove the failed inline tests:
-> 
-> `python -m exli.main analyze_inline_tests_reports --inline_test_type=reduced` (or `all`)
 > 
 > `python -m exli.main remove_failed_tests --inline_test_type reduced` (or `all`)
 >
