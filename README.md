@@ -1,5 +1,5 @@
 # ExLi
-Automatically extracting inline tests from unit tests.
+Automatically extracting inline tests from unit tests. Executing these inline tests with [itest][itest-url]
 
 ## Introduction
 This repo contains the code and data for producing the experiments in [ExLi][paper-url].
@@ -216,3 +216,4 @@ Authors: [Yu Liu](https://sweetstreet.github.io/), [Pengyu Nie](https://pengyuni
 ```
 
 [paper-url]: https://dl.acm.org/doi/10.1145/3597926.3598149
+[itest-url]: https://github.com/EngineeringSoftware/inlinetest
