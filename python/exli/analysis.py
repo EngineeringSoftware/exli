@@ -288,17 +288,17 @@ class Analysis:
                                 line_no_str = line.split(",")[1].split(")")[0].strip()
                                 target_stmt_line_no = int(line_no_str)
                                 test_line_no = line_index + 1
-                                test_line_no_to_target_stmt_line_no[
-                                    test_line_no
-                                ] = target_stmt_line_no
+                                test_line_no_to_target_stmt_line_no[test_line_no] = (
+                                    target_stmt_line_no
+                                )
                                 test_line_no_to_target_stmt[test_line_no] = target_stmt
                                 # extract the target statement source in the first parameter of Here constructor
                                 target_stmt_source = (
                                     line.split(",")[0].split("(")[1].strip()
                                 )
-                                test_line_no_to_source[
-                                    test_line_no
-                                ] = target_stmt_source
+                                test_line_no_to_source[test_line_no] = (
+                                    target_stmt_source
+                                )
                                 test_line_no_to_source_code[test_line_no] = line.strip()
                             else:
                                 target_stmt = line
@@ -338,13 +338,13 @@ class Analysis:
         return hashlib.md5(s.replace(" ", "").encode("utf-8")).hexdigest()
 
     # python -m exli.analysis check_mutants_not_killed_all
-    def check_mutants_not_killed_all(self):
+    def check_mutants_not_killed_all(self, mutator: str = "universalmutator"):
         # mutants that are not killed by initial inline tests
         res = []
         project_names = Util.get_project_names_list_with_sha()
         for project_name, sha in project_names:
             # mutation result
-            mutant_file = Macros.mutants_dir / f"{project_name}.json"
+            mutant_file = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
             if not mutant_file.exists():
                 continue
             mutants = se.io.load(mutant_file)
@@ -367,7 +367,7 @@ class Analysis:
         )
 
     # python -m exli.analysis reduced_inline_tests_missed_mutants
-    def reduced_inline_tests_missed_mutants(self):
+    def reduced_inline_tests_missed_mutants(self, mutator: str = "universalmutator"):
         res = []
         reduced_test_missed_mutants_file = (
             Macros.results_dir / "reduced-test-missed-mutants.json"
@@ -378,7 +378,7 @@ class Analysis:
         test_type_to_not_killed_target_stmt = collections.defaultdict(set)
         test_type_to_not_killed_project = collections.defaultdict(set)
         for project_name, sha in project_names:
-            mutants_file = Macros.mutants_dir / f"{project_name}.json"
+            mutants_file = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
             if not mutants_file.exists():
                 continue
             mutants = se.io.load(mutants_file)
@@ -434,7 +434,7 @@ class Analysis:
         file.save()
 
     # python -m exli.analysis check_mutants_all_not_killed
-    def check_mutants_all_not_killed(self):
+    def check_mutants_all_not_killed(self, mutator: str = "universalmutator"):
         test_type_to_all_killed = 0
         test_type_to_all_killed_target_stmt = set()
         test_type_to_all_killed_project = set()
@@ -443,7 +443,7 @@ class Analysis:
         project_names = Util.get_project_names_list_with_sha()
         for project_name, sha in project_names:
             # mutation result
-            mutant_file = Macros.mutants_dir / f"{project_name}.json"
+            mutant_file = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
             if not mutant_file.exists():
                 continue
             mutants = se.io.load(mutant_file)
@@ -500,7 +500,9 @@ class Analysis:
         file.save()
 
     # python -m exli.analysis check_mutants_all_killed_unit_tests_missed
-    def check_mutants_all_killed_unit_tests_missed(self):
+    def check_mutants_all_killed_unit_tests_missed(
+        self, mutator: str = "universalmutator"
+    ):
         target_stmt_set = set()
         proj_set = set()
         proj_to_target_stmt_dict = collections.defaultdict(set)
@@ -509,7 +511,7 @@ class Analysis:
         project_names = Util.get_project_names_list_with_sha()
         for project_name, sha in project_names:
             # mutation result
-            mutant_file = Macros.mutants_dir / f"{project_name}.json"
+            mutant_file = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
             if not mutant_file.exists():
                 continue
             mutants = se.io.load(mutant_file)
@@ -577,13 +579,15 @@ class Analysis:
         )
 
     # python -m exli.analysis check_mutant_not_killed_tests
-    def check_mutant_not_killed_tests(self, test_type: str = "randoop"):
+    def check_mutant_not_killed_tests(
+        self, test_type: str = "randoop", mutator: str = "universalmutator"
+    ):
         covered_res = []
         not_covered_res = []
         project_names = Util.get_project_names_list_with_sha()
         for project_name, sha in project_names:
             # mutation result
-            mutant_file = Macros.mutants_dir / f"{project_name}.json"
+            mutant_file = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
             if not mutant_file.exists():
                 continue
             mutation_result_file = (

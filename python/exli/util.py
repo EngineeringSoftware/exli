@@ -16,6 +16,49 @@ from tqdm import tqdm
 
 
 class Util:
+    def run_unit_tests(
+        cls,
+        test_type: str,
+        project_name: str,
+        log_path: str,
+        maven_project: MavenProject,
+        tests_dir: str = None,
+        deps_file_path: str = None,
+        timeout: int = 3600,
+    ):
+        """
+        Run unit tests of a specific type.
+
+        Args:
+            test_type(str): Type of the test (Unit, EvoSuite, or Randoop).
+            project_name(str): Name of the project.
+            log_path(str): Path for the log file.
+            maven_project(MavenProject): Maven project. Required for Unit and Randoop.
+            tests_dir_dict(str): Directory for tests. Required for EvoSuite and Randoop.
+            deps_file_path(str): Dependencies file path. Required for EvoSuite.
+            timeout(int): Timeout for the test execution. Defaults to 3600.
+        """
+        Util.copy_jacoco_extension()
+        Util.configure_file(test_type)
+
+        try:
+            with se.TimeUtils.time_limit(timeout):
+                if test_type == "Unit":
+                    Util.run_dev_written_unit_tests(
+                        project_name, log_path, maven_project, timeout
+                    )
+                elif test_type == "EvoSuite":
+                    Util.run_evosuite_command_line(
+                        project_name, tests_dir, deps_file_path, log_path, None, timeout
+                    )
+                elif test_type == "Randoop":
+                    Util.run_randoop(
+                        project_name, tests_dir, log_path, maven_project, timeout
+                    )
+        except se.TimeoutException as e:
+            se.io.dump(log_path, [e], se.io.Fmt.txtList, append=True)
+        Util.remove_jacoco_extension()
+
     # assume this method is invoked in maven project, the project has run mvn test-compile
     # return: string of dependencies appending with ":"
     @classmethod
@@ -844,7 +887,6 @@ class Util:
         # 2. collect class names
         classes = set()
         with se.io.cd(f"{Macros.downloads_dir/project_name}"):
-            # set field "debug" to true
             for f in glob.glob("evosuite-tests/**/*.java", recursive=True):
                 if f.endswith("Test.java"):
                     classes.add(
@@ -877,7 +919,7 @@ class Util:
             # add raninline.jar to evosuite-deps.txt
             deps = se.io.load(deps_file, se.io.Fmt.txt).strip()
             # TODO: hacky fix of file path problems
-            # deps = re.sub(r"/home/[^/]+/", f"/home/{os.getenv('USER')}/", deps)
+            deps = re.sub(r"/home/[^/]+/", f"/home/{os.getenv('USER')}/", deps)
             se.io.dump(deps_file, deps, se.io.Fmt.txt)
 
             comp_str = f"shopt -s globstar; javac -cp {Macros.evosuite_runtime_jar}:{Macros.junit_jar}:{Macros.raninline_jar}:$(< {deps_file}) evosuite-tests/**/*.java"
@@ -1092,6 +1134,50 @@ class Util:
         return target_stmt_to_inline_tests
 
     @classmethod
+    def get_target_stmts(cls, target_stmts_path: str, filter_with_inline_tests: bool = True, project_name: str = None):
+        target_stmts = set()
+        if not os.path.exists(target_stmts_path):
+            return target_stmts
+
+        if filter_with_inline_tests:
+            reduced_proj_to_target_stmts = cls.get_proj_to_target_stmts("reduced")
+            all_proj_to_target_stmts = cls.get_proj_to_target_stmts("all")
+            # intersection of reduced and all
+            proj_to_target_stmts = {
+                k: reduced_proj_to_target_stmts[k] & all_proj_to_target_stmts[k]
+                for k in reduced_proj_to_target_stmts.keys()
+            }
+        lines = se.io.load(target_stmts_path, se.io.Fmt.txtList)
+        for line in lines:
+            if not line.startswith("target stmt"):
+                break
+            path = line.split(";")[1].replace("inlinegen-research", "exli-internal")
+            class_name = path.split("/")[-1].split(".")[0]
+            line_num = line.split(";")[2]
+            if filter_with_inline_tests:
+                inline_tests_target_stmts = proj_to_target_stmts[project_name]
+                if f"{class_name};{line_num}" not in inline_tests_target_stmts:
+                    print(f"skip {class_name};{line_num}, not in inline tests")
+                    continue
+            target_stmt = path + ";" + line_num  # path;line_num
+            target_stmts.add(target_stmt)
+        return target_stmts
+              
+    def get_proj_to_target_stmts(cls, inline_test_type: str = "reduced"):
+        # project to target statements with passing inline tests
+        passed_inline_tests: list[str] = se.io.load(
+            Macros.results_dir / f"{inline_test_type}-passed-tests.txt",
+            se.io.Fmt.txtList,
+        )
+        proj_to_target_stmts = collections.defaultdict(set)
+        for passed_inline_test in passed_inline_tests:
+            proj = passed_inline_test.split(";")[0]
+            classname = passed_inline_test.split(";")[1].split(".")[-1]
+            target_stmt_line_num = passed_inline_test.split(";")[2]
+            proj_to_target_stmts[proj].add(f"{classname};{target_stmt_line_num}")
+        return proj_to_target_stmts
+      
+    @classmethod
     # python -m main parse_log --project_name="Asana_java-asana" --sha="52fef9b"
     def parse_log(
         cls,
@@ -1244,7 +1330,7 @@ class Util:
     @classmethod
     def compile_raninline(cls):
         with se.io.cd(Macros.java_raninline_dir):
-            se.bash.run("mvn install", 0)
+            se.bash.run("mvn clean package", 0)
 
     @classmethod
     def get_auto_generated_files(cls):

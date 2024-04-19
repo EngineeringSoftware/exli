@@ -1,3 +1,5 @@
+import glob
+from typing import List, Set
 from jsonargparse import CLI
 import seutil as se
 from exli.maven import MavenProject
@@ -18,7 +20,7 @@ class Main:
         Generate unit tests with Randoop/EvoSuite. Execute
         developer-written or auto-generated unit tests to construct
         inline tests.
-        
+
         Args:
             test_project_name (str): The name of the project to be tested. If None, all projects are tested.
         """
@@ -79,7 +81,7 @@ class Main:
         evosuite: bool = True,
         evosuite_tl: int = 120,
         seed: int = Macros.DEFAULT_SEED,
-        log_path: str = None,
+        log_file_path: str = None,
     ):
         """
         Generate inline tests for a project.
@@ -98,10 +100,10 @@ class Main:
         ################################## process input, prepare project ##################################
         if sha is None:
             sha = Util.get_sha(project_name)
-        if log_path is None:
-            log_path = Macros.log_dir / "raninline.log"
-        inputs = f"--project_name={project_name} --sha={sha} --randoop={randoop} --randoop_tl={randoop_tl} --unit={unit} --evosuite={evosuite} --evosuite_tl={evosuite_tl} --seed={seed} --log_path={log_path}"
-        se.bash.run(f'echo "{inputs}" >> {log_path}')
+        if log_file_path is None:
+            log_file_path = Macros.log_dir / "raninline.log"
+        inputs = f"--project_name={project_name} --sha={sha} --randoop={randoop} --randoop_tl={randoop_tl} --unit={unit} --evosuite={evosuite} --evosuite_tl={evosuite_tl} --seed={seed} --log_file_path={log_file_path}"
+        se.bash.run(f'echo "{inputs}" >> {log_file_path}')
 
         Util.compile_raninline()
         Util.remove_jacoco_extension()
@@ -158,7 +160,7 @@ class Main:
                     sha,
                     deps_file_path,
                     classpath_list_path,
-                    log_path,
+                    log_file_path,
                 )
                 log_dir = Macros.log_dir / tool
                 Util.avoid_permission_error(project_name)
@@ -213,7 +215,7 @@ class Main:
                 is_auto_generated = Util.is_auto_generated_file(java_file_path)
                 if not is_auto_generated:
                     se.bash.run(
-                        f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="i {java_file_path} -1 {log_path} {reduced_log_path} {classes_dir}"',
+                        f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="i {java_file_path} -1 {log_file_path} {reduced_log_path} {classes_dir}"',
                         0,
                     )
 
@@ -233,9 +235,9 @@ class Main:
             run_tests_log_path.unlink()
 
         if unit:
-            self.run_unit_tests("Unit", project_name, run_tests_log_path, maven_project)
+            Util.run_unit_tests("Unit", project_name, run_tests_log_path, maven_project)
         if evosuite:
-            self.run_unit_tests(
+            Util.run_unit_tests(
                 "EvoSuite",
                 project_name,
                 run_tests_log_path,
@@ -244,7 +246,7 @@ class Main:
                 deps_file_path,
             )
         if randoop:
-            self.run_unit_tests(
+            Util.run_unit_tests(
                 "Randoop",
                 project_name,
                 run_tests_log_path,
@@ -263,7 +265,7 @@ class Main:
             sha,
             reduced_log_path,
             proj_reduced_tests_dir,
-            log_path,
+            log_file_path,
         )
 
         # parse all inline tests: for evaluation purposes
@@ -272,49 +274,8 @@ class Main:
             sha,
             all_log_path,
             proj_all_tests_dir,
-            log_path,
+            log_file_path,
         )
-
-    def run_unit_tests(
-        self,
-        test_type: str,
-        project_name: str,
-        log_path: str,
-        maven_project: MavenProject,
-        tests_dir: str = None,
-        deps_file_path: str = None,
-        timeout: int = 3600,
-    ):
-        """
-        Run unit tests of a specific type.
-
-        :param test_type: Type of the test (Unit, EvoSuite, or Randoop).
-        :param project_name: Name of the project.
-        :param log_path: Path for the log file.
-        :param maven_project: Maven project. Required for Unit and Randoop.
-        :param tests_dir_dict: Directory for tests. Required for EvoSuite and Randoop.
-        :param deps_file_path: Dependencies file path. Required for EvoSuite.
-        """
-        Util.copy_jacoco_extension()
-        Util.configure_file(test_type)
-
-        try:
-            with se.TimeUtils.time_limit(timeout):
-                if test_type == "Unit":
-                    Util.run_dev_written_unit_tests(
-                        project_name, log_path, maven_project, timeout
-                    )
-                elif test_type == "EvoSuite":
-                    Util.run_evosuite_command_line(
-                        project_name, tests_dir, deps_file_path, log_path, None, timeout
-                    )
-                elif test_type == "Randoop":
-                    Util.run_randoop(
-                        project_name, tests_dir, log_path, maven_project, timeout
-                    )
-        except se.TimeoutException as e:
-            se.io.dump(log_path, [e], se.io.Fmt.txtList, append=True)
-        Util.remove_jacoco_extension()
 
     # python -m exli.main batch_run_inline_tests
     def batch_run_inline_tests(self, test_project_name: str = None):
@@ -373,9 +334,9 @@ class Main:
             except se.TimeoutException:
                 time_dict[project_name] = "timeout"
             except Exception as e:
-                time_dict[
-                    project_name
-                ] = f"{project_name} {sha}: {traceback.format_exc()}"
+                time_dict[project_name] = (
+                    f"{project_name} {sha}: {traceback.format_exc()}"
+                )
         se.io.dump(time_file_path, time_dict, se.io.Fmt.jsonPretty)
 
     # python -m exli.main run_inline_tests --project_name "Asana_java-asana" --sha "52fef9b"
@@ -396,7 +357,7 @@ class Main:
         if not os.path.exists(generated_tests_dir):
             return
 
-        inputs = f"--project_name={project_name} --sha={sha} --generated_tests_dir={generated_tests_dir} --inline_tests_dir={inline_tests_dir} --inlinetest_report_path={inlinetest_report_path} --cached_objects_dir={cached_objects_dir} --deps_file={deps_file} --parse_inline_tests={parse_inline_tests} --log_path={log_path}"
+        inputs = f"--project_name={project_name} --sha={sha} --generated_tests_dir={generated_tests_dir} --inline_tests_dir={inline_tests_dir} --inlinetest_report_path={inlinetest_report_path} --cached_objects_dir={cached_objects_dir} --deps_file={deps_file} --parse_inline_tests={parse_inline_tests} --log_file_path={log_path}"
         se.bash.run(f'echo "{inputs}" >> {log_path}')
 
         Util.prepare_project(project_name, sha)
@@ -417,7 +378,9 @@ class Main:
             log_path,
         )
         if returncode != 0:
-            print(f"Some inline tests failed for {project_name} {sha} during execution.")
+            print(
+                f"Some inline tests failed for {project_name} {sha} during execution."
+            )
         if run_res:
             se.io.dump(
                 inlinetest_report_path,
@@ -430,7 +393,8 @@ class Main:
         """
         Generate a txt file that contains a list of failed tests and a list of passed tests.
 
-        :param inline_test_type: reduced or all
+        Args:
+            inline_test_type(str): reduced or all
         """
         if inline_test_type == "reduced":
             test_report_dir = Macros.reduced_its_report_dir
@@ -440,7 +404,7 @@ class Main:
             raise Exception("unknown inline test type")
         if not os.path.exists(test_report_dir):
             print(f"{test_report_dir} does not exist")
-            return        
+            return
         # iterate all reports in the report directory
         failed_tests = []
         passed_tests = []
@@ -523,10 +487,7 @@ class Main:
             ].append(it_line_num)
 
         removed_failed_tests = []
-        removed_failed_tests_path = (
-            Macros.log_dir
-            / "removed-failed-tests.json"
-        )
+        removed_failed_tests_path = Macros.log_dir / "removed-failed-tests.json"
         num_of_failed_tests = 0
         for (
             project_name,
@@ -578,7 +539,7 @@ class Main:
     def batch_find_target_stmts(self, test_project_name: str = None):
         """
         Collect target statements for each project.
-        
+
         Args:
             test_project_name (str): The name of the project to be tested. If None, all projects are tested.
         """
@@ -623,146 +584,249 @@ class Main:
                             0,
                         )
 
-    # python -m exli.main count --project_name="Asana_java-asana" --commit="52fef9b"
-    # python -m exli.main count --project_name="AquaticInformatics_aquarius-sdk-java" --commit="8f4edb9"
-    def count(
+    # python -m exli.main batch_generate_mutants
+    def batch_generate_mutants(
         self,
-        project_name: str,
-        sha: str = "",
-        randoop: bool = True,
-        unit: bool = True,
-        evosuite: bool = True,
-        seed: int = Macros.DEFAULT_SEED,
+        skip_existing: bool = False,
+        filter_with_inline_tests: bool = True,
+        tool: str = "universalmutator",
+        test_project_name: str = None,
     ):
-        ################################## process input, prepare project ##################################
-        inputs = f"--project_name={project_name} --commit={sha} --randoop={randoop} --unit={unit}"
-        se.bash.run(f'echo "{inputs}" >> {Macros.log_dir}/raninline.log')
-        # parse input
-        project_name = project_name.replace("/", "_")
+        """
+        Generate mutants for each project.
 
-        Util.remove_jacoco_extension()
+        Args:
+            skip_existing(bool): skip project if the mutants file already exists
+            filter_with_inline_tests(bool): only generate mutants for target statements that have inline tests
+            tool(str): universalmutator or major
+            test_project_name(str): only generate mutants for the specified project
+        """
+        time_file_path = Macros.results_dir / "time" / f"generate-mutants-{tool}.json"
+        if time_file_path.exists():
+            time_dict = se.io.load(time_file_path, se.io.Fmt.json)
+        else:
+            time_dict = {}
 
-        # clone project
-        print("preparing project...")
-        project = Util.prepare_project(project_name, sha)
-
-        print("cleaning project...")
-        with se.io.cd(Macros.downloads_dir / project_name):
-            full_file_paths = Util.list_java_files(
-                f"{Macros.downloads_dir}/{project_name}"
-            )
-
-        # create a folder to store the reduced inline tests
-        proj_generated_tests_dir = f"{Macros.all_tests_dir}/{project_name}-{sha}"
-        se.io.mkdir(proj_generated_tests_dir)
-
-        log_file_path = Macros.log_dir / "counter.log"
-        INLINE_TEST_LOG_FILE_PATH = f"{proj_generated_tests_dir}/i-log.txt"
-
-        ################################## Instrument ##################################
-        with se.io.cd(Macros.downloads_dir / project_name):
-            se.bash.run("mvn test-compile " + Macros.SKIPS, 0)
-
-        print("inserting print statement...")
-        with se.io.cd(Macros.java_raninline_dir):
-            se.bash.run("mvn clean install -DskipTests " + Macros.SKIPS, 0)
-            for full_file_path in full_file_paths:
-                se.bash.run(
-                    f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="counter {full_file_path} {log_file_path} {INLINE_TEST_LOG_FILE_PATH}"',
-                    0,
+        for project_name, sha in Util.get_project_names_list_with_sha():
+            if test_project_name is not None and project_name != test_project_name:
+                continue
+            if filter_with_inline_tests:
+                output_path = Macros.mutants_dir / f"{project_name}-{sha}-{tool}.json"
+            else:
+                output_path = (
+                    Macros.all_mutants_dir / f"{project_name}-{sha}-{tool}.json"
                 )
 
-        print("recompiling modified file...")
-        with se.io.cd(Macros.downloads_dir / project_name):
-            maven_project = MavenProject.from_project(project)
-            maven_project.hack_pom_add_dependency(
-                "org.raninline", "raninline", "1.0-SNAPSHOT"
-            )
-            se.bash.run("mvn test-compile " + Macros.SKIPS, 0)
-
-        ################################## Run tests ##################################
-        run_tests_log_path = (
-            Macros.log_dir / "run-unit-tests" / f"{project_name}-{sha}.log"
-        )
-        if run_tests_log_path.exists():
-            run_tests_log_path.unlink()
-
-        if unit:
-            self.run_unit_tests("Unit", project_name, run_tests_log_path, maven_project)
-        if evosuite:
-            deps_file_path = f"{Macros.unit_tests_dir}/{project_name}-{sha}/deps.txt"
-            unit_tests_dir = f"{Macros.unit_tests_dir}/{project_name}-{sha}/evosuite-tests-{seed}/evosuite-tests"
-            self.run_unit_tests(
-                "EvoSuite",
-                project_name,
-                run_tests_log_path,
-                maven_project,
-                unit_tests_dir,
-                deps_file_path,
-            )
-        if randoop:
-            unit_tests_dir = f"{Macros.unit_tests_dir}/{project_name}-{sha}/randoop-tests-{seed}/randoop-tests"
-            self.run_unit_tests(
-                "Randoop",
-                project_name,
-                run_tests_log_path,
-                maven_project,
-                unit_tests_dir,
-            )
-
-        ################################## Save serialized data ##################################
-        se.bash.run(
-            f"cp -r {Macros.downloads_dir}/{project_name}/{Macros.INLINE_GEN_DIR_NAME}/unique-inline-tests-counter.txt {proj_generated_tests_dir}/{Macros.INLINE_GEN_DIR_NAME}/unique-inline-tests-counter.txt"
-        )
-        se.bash.run(
-            f"cp -r {Macros.downloads_dir}/{project_name}/{Macros.INLINE_GEN_DIR_NAME}/all-target-stmts-hit-counter.txt {proj_generated_tests_dir}/{Macros.INLINE_GEN_DIR_NAME}/all-target-stmts-hit-counter.txt"
-        )
-
-    # python -m exli.main batch_count
-    def batch_count(self):
-        projects_with_shas = Util.get_project_names_list_with_sha()
-        for project_name, sha in projects_with_shas:
-            try:
-                self.count(project_name, sha, True, True, True)
-            except Exception as e:
-                print(e)
-                se.io.dump(
-                    Macros.log_dir / "batchcount.txt",
-                    [f"{project_name} {sha}: {traceback.format_exc()}"],
-                    se.io.Fmt.txtList,
-                    append=True,
-                )
+            if skip_existing and output_path.exists():
                 continue
 
-    # python -m exli.main collect_randoop_tests_time
-    def collect_randoop_tests_time(self):
-        res_file_path = Macros.results_dir / "randoop-time.json"
-        res = dict()
-        for project_name, sha in Util.get_project_names_list_with_sha():
-            with se.io.cd(Macros.downloads_dir / project_name):
-                se.bash.run("git clean -xfd")
-                se.bash.run("git checkout .")
-                se.bash.run(f"git checkout {sha}")
-            maven_project = Util.get_maven_project(project_name)
-            Util.configure_tests_for_jacoco_agent(
-                project_name, "randoop", maven_project
+            target_stmts_path = f"{Macros.results_dir}/target-stmt/{project_name}.txt"
+
+            start_time = time.time()
+            self.generate_mutants(
+                project_name,
+                sha,
+                target_stmts_path,
+                output_path,
+                tool,
+                filter_with_inline_tests,
             )
-            Util.copy_randoop_tests_to_src_test_java(project_name)
-            print("compiling and executing Randoop tests...")
-            with se.io.cd(Macros.downloads_dir / project_name):
-                se.bash.run("mvn clean test-compile " + Macros.SKIPS)
-                try:
-                    with se.TimeUtils.time_limit(3600):
-                        start_time = time.time()
-                        run_res = se.bash.run(f"mvn test {Macros.SKIPS}")
-                        end_time = time.time()
-                        res[project_name] = end_time - start_time
-                except se.TimeoutException:
-                    continue
-                except Exception as e:
-                    print(project_name, e)
-                    continue
-        se.io.dump(res_file_path, res, se.io.Fmt.jsonPretty)
+            end_time = time.time()
+            time_dict[project_name] = end_time - start_time
+        se.io.dump(time_file_path, time_dict, se.io.Fmt.jsonPretty)
+
+    # python -m exli.main generate_mutants
+    def generate_mutants(
+        self,
+        project_name: str,
+        sha: str,
+        target_stmts_path: str,
+        output_path: str,
+        tool: str = "universalmutator",
+        filter_with_inline_tests: bool = True,
+    ):
+        """
+        Generate mutants for a project.
+
+        Args:
+            project_name (str): The name of the project.
+            sha(str): The commit hash.
+            target_stmts_path (str): The path to the target statements.
+            output_path (str): The path to store the mutants.
+            tool (str, optional): The tool to generate mutants. Defaults to "universalmutator".
+            filter_with_inline_tests(bool): only generate mutants for target statements that have inline tests
+        """
+        result = []
+
+        target_stmts = Util.get_target_stmts(
+            target_stmts_path, filter_with_inline_tests
+        )
+
+        Util.prepare_project(project_name, sha)
+
+        # loop through lines in file:https://stackoverflow.com/questions/48124206/iterate-through-a-file-lines-in-python
+        if tool == "universalmutator":
+            for target_stmt in target_stmts:
+                orig_path = target_stmt.split(";")[0]
+                line_num = target_stmt.split(";")[1]
+                line_results = self.generate_mutants_for_each_line(
+                    project_name, orig_path, line_num
+                )
+                result.extend(line_results)
+        elif tool == "major":
+            file_to_line_nums = collections.defaultdict(set)
+            for target_stmt in target_stmts:
+                orig_path = target_stmt.split(";")[0]
+                line_num = target_stmt.split(";")[1]
+                file_to_line_nums[orig_path].add(line_num)
+            for orig_path, line_nums in file_to_line_nums.items():
+                line_results = self.generate_mutants_for_each_file(
+                    project_name, orig_path, line_nums
+                )
+                result.extend(line_results)
+
+        # save results
+        if result:
+            se.io.dump(
+                output_path,
+                result,
+                se.io.Fmt.jsonPretty,
+            )
+
+    # python -m exli.main generate_mutants_for_each_line --project_name Asana_java-asana --orig_path "/home/liuyu/projects/exli-internal/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/helpers/SdkServiceClient.java" --line_num 191
+    def generate_mutants_for_each_line(
+        self, project_name: str, orig_path: str, line_num: str
+    ):
+        results = []
+
+        mutants_path = Macros.log_dir / f"{project_name}-mutants-temp"
+        if not mutants_path.exists():
+            se.bash.run(f"mkdir -p {mutants_path}")
+
+        line_num_file_path = Macros.log_dir / f"{project_name}-templinenum.txt"
+        se.io.dump(line_num_file_path, line_num, se.io.Fmt.txt)
+        # Step 3: call UniversalMutator and append json to results (loop through created mutants)
+        # https://www.geeksforgeeks.org/how-to-iterate-over-files-in-directory-using-python/
+
+        with se.io.cd(Macros.downloads_dir / project_name):
+            # clean the project
+            se.bash.run(f"git clean -xfd", 0)
+            se.bash.run(f"git checkout .", 0)
+
+        se.bash.run(
+            f"mutate {orig_path} --noCheck --mutantDir {mutants_path} --lines {line_num_file_path}",
+            0,
+        )
+        # count number of lines in original file
+        orig_line_num = self.file_len(orig_path)
+        for filename in os.scandir(mutants_path):
+            if filename.is_file():
+                mutant_line_num = self.file_len(filename.path)
+                # make json here (ignore mutants that insert or delete a line)
+                if orig_line_num == mutant_line_num:
+                    # check if the project can be compiled
+                    compile_result = self.compile_mutated_code(
+                        project_name, orig_path, filename.path, line_num
+                    )
+                    if compile_result:
+                        results.append(compile_result)
+        # clean
+        se.bash.run(f"rm -rf {mutants_path}")
+        se.bash.run(f"rm -rf {line_num_file_path}")
+        return results
+
+    # https://stackoverflow.com/questions/845058/how-to-get-line-count-of-a-large-file-cheaply-in-python
+    def file_len(self, filename: str) -> int:
+        with open(filename) as f:
+            for i, _ in enumerate(f):
+                pass
+        return i + 1
+
+    def get_line(self, filename: str, line_num: int) -> str:
+        lines = se.io.load(filename, se.io.Fmt.txtList)
+        return lines[line_num - 1]
+
+    def compile_mutated_code(
+        self, project_name: str, orig_path: str, mutated_file_path: str, line_num: str
+    ):
+        mutated_code = self.get_line(mutated_file_path, int(line_num))
+        if mutated_code.strip().startswith(r"/*") and mutated_code.strip().endswith(
+            r"*/"
+        ):
+            # ignore mutants that are comments
+            return {}
+        with se.io.cd(Macros.downloads_dir / project_name):
+            # clean the project
+            se.bash.run(f"git clean -xfd", 0)
+            se.bash.run(f"git checkout .", 0)
+            # get the original code
+            original_code = self.get_line(orig_path, int(line_num))
+            # copy the mutated file to the original file
+            se.bash.run(f"cp {mutated_file_path} {orig_path}")
+            try:
+                se.bash.run(f"mvn compile", 0)
+                # if the project can be compiled, save the mutant
+                return {
+                    "filepath": orig_path,
+                    "linenumber": int(line_num),
+                    "orginal_code": original_code,
+                    "mutated_code": mutated_code,
+                }
+            except:
+                # if the project cannot be compiled, ignore the mutant
+                return {}
+
+    def generate_mutants_for_each_file(
+        self, project_name: str, orig_path: str, line_nums: Set[str]
+    ):
+        results = []
+
+        mutants_path = Macros.log_dir / f"{project_name}-mutants-temp"
+        if not mutants_path.exists():
+            se.bash.run(f"mkdir -p {mutants_path}")
+
+        with se.io.cd(Macros.downloads_dir / project_name):
+            # clean the project
+            se.bash.run(f"git clean -xfd", 0)
+            se.bash.run(f"git checkout .", 0)
+            # compile the project with javac (required by Major)
+            se.bash.run("mvn test-compile $SKIPS", 0)
+            randoop_deps_path = f"{Macros.log_dir}/teco-randoop-test/{project_name}/randoop-tests/randoop-deps.txt"
+            se.bash.run(f"cp {randoop_deps_path} .", 0)
+
+        with se.io.cd(mutants_path):
+            cmd = f"{Macros.major_script} -cp $(< {Macros.downloads_dir}/{project_name}/randoop-deps.txt) --export export.mutants {orig_path}"
+            print(cmd)
+            se.bash.run(cmd, 0)
+            mutants_log_path = mutants_path / "mutants.log"
+            mutants_log = se.io.load(mutants_log_path, se.io.Fmt.txtList)
+            line_number_to_mutant_ids = collections.defaultdict(set)
+            for mutant in mutants_log:
+                tokens = mutant.split(":")
+                mutant_id = tokens[0]
+                mutant_line_num = tokens[-2]
+                if mutant_line_num in line_nums:
+                    line_number_to_mutant_ids[mutant_line_num].add(mutant_id)
+            mutants_dir = mutants_path / "mutants"
+            for line_num, mutant_ids in line_number_to_mutant_ids.items():
+                for mutant_id in mutant_ids:
+                    # find the java file in mutants_dir / mutant_id
+                    java_files = glob.glob(
+                        f"{mutants_dir}/{mutant_id}/**/*.java", recursive=True
+                    )
+                    print(f"{mutants_dir}/{mutant_id}/**/*.java")
+                    if len(java_files) != 1:
+                        print(f"Error: {mutant_id} has {len(java_files)} java files")
+                        continue
+                    mutant_path = java_files[0]
+                    compile_res = self.compile_mutated_code(
+                        project_name, orig_path, mutant_path, line_num
+                    )
+                    if compile_res:
+                        results.append(compile_res)
+        # clean
+        se.bash.run(f"rm -rf {mutants_path}")
+        return results
 
 
 if __name__ == "__main__":
