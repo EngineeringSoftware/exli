@@ -1,5 +1,5 @@
 # ExLi
-Automatically extracting inline tests from unit tests. Executing these inline tests with [itest][itest-url]
+Automatically extracting inline tests from unit tests. Executing these inline tests with [itest][itest-url].
 
 ## Introduction
 This repo contains the code and data for producing the experiments in [ExLi][paper-url].
