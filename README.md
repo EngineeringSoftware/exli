@@ -185,7 +185,7 @@ In `exli/python` directory
 
 Generate mutants:
 ```bash
-
+`python -m exli.main generate_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --target_stmts_path=${HOME}/exli/results/target-stmt/Bernardo-MG_velocity-config-tool-26226f5.txt --output_path=${HOME}/exli/results/mutants/Bernardo-MG_velocity-config-tool-26226f5.json`
 ```
 > Alternatively, to use the default settings `python -m exli.eval batch_generate_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
