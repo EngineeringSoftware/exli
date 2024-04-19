@@ -125,8 +125,16 @@ python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26
 
 In `exli/python` directory
 
+Execute reduced inline tests:
+
 ```bash
 python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/reduced-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/reduced-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
+```
+
+Execute all inline tests:
+
+```bash
+python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/all-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
 ```
 
 > This command runs the inline tests and generates the execution report at `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
@@ -134,10 +142,6 @@ python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-
 > To generate the report for all inline tests, replace `reduced` with `all` in the generated tests dir, inline tests dir and execution report (`${HOME}/exli/reduced-its` -> `${HOME}/exli/all-its`, `${HOME}/exli/results/reduced-its-report` -> `${HOME}/exli/results/all-its-report` and `${HOME}/exli/results/all-its-report` to `${HOME}/exli/results/reduced-its-report`)
 > 
 > The difference between "all-its-report" and "reduced-its-report" is that the "all-its-report" contains all the inline tests, while the "reduced-its-report" contains the inline tests that are reduced by the Round 1 Reducer (based on coverage).
-
-```bash
-python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/all-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
-```
 
 After running the inline tests, we can analyze the inline tests reports to get all passed and failed inline tests.
 
