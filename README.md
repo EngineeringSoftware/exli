@@ -197,55 +197,6 @@ Run mutation analysis:
 ```
 > Alternatively, to use the default settings `python -m exli.eval batch_run_tests_with_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
-### Reproduce the results in the paper
-
-#### Run experiments
-```bash
-
-```
-
-#### Make figures
-```bash
-
-```
-
-#### Background
-Projects for evaluation
-| project | SHA | LOC |
-|---------|-----|-----|
-| AquaticInformatics/aquarius-sdk-java | 8f4ed9b | 21,634 |
-| Asana/java-asana | 52fe9fb | 5,572 |
-| aws/aws-sdk-java | 5f8fed25 | 1,288 |
-| Bernard-MG/maven-site-fixer | 60244c0 | 1,689 |
-| Bernard-MG/velocity-config-tool | 2622cf5 | 358 |
-| craftercms/core | 4d394a9 | 10,233 |
-| CycloneDX/cyclonedx-core-java | d933705 | 6,011 |
-| finos/messageml-utils | b4c75c6 | 21,765 |
-| fleipold/jproc | b872abf | 1,189 |
-| hyperledger/fabric-sdk-java | da35400 | 33,677 |
-| jkuhnert/ognl | 5c30e1e | 18,190 |
-| jscep/jscep | b20e944 | 6,310 |
-| lamarois/sherdog-parser | aa6806a | 1,546 |
-| liquibase/liquibase-oracle | 6ab7dea | 7,170 |
-| maxmind/geoip-api-java | 1030316 | 11,526 |
-| medcl/elasticsearch-analysis-pinyin | 01dda56 | 2,169 |
-| mojohaus/build-helper-maven-plugin | f1fac8c | 2,424 |
-| mojohaus/properties-maven-plugin | 6cf7c2b | 831 |
-| mojo/versions-maven-plugin | 6cf7c2b | 891 |
-| mp911de/logstash-gelf | 66dedb8 | 13,130 |
-| mpatric/mp3agic | 407f7a9 | 9,907 |
-| netceteragroup/trema-core | fa9f76d | 3,285 |
-| phax/ph-pdf-layout | f2d7b98 | 14,408 |
-| ralscha/extclassgenerator | 40ad147 | 6,271 |
-| red6/pdfcompare | 1259ef2 | 4,213 |
-| restfb/restfb | 35a34dd | 42,022 |
-| stevesh/jopenfst | 14c4a1d | 5,180 |
-| TNG/property-loader | 928f414 | 1,860 |
-| wuolfer/gerrit-rest-java-client | a0bf7cc | 14,594 |
-| visenze/visearch-sdk-java | 0efcda3 | 7,643 |
-| wmixvideo/nfe | 1ccdba7 | 133,698 |
-
-
 
 ## Citation
 If you have used ExLi in a research project, please cite the research paper in any related publication:
