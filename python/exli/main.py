@@ -639,9 +639,10 @@ class Main:
                 )
 
             if skip_existing and output_path.exists():
+                print(f"Skip {project_name} {sha} because the mutants file already exists")
                 continue
 
-            target_stmts_path = f"{Macros.results_dir}/target-stmt/{project_name}.txt"
+            target_stmts_path = f"{Macros.results_dir}/target-stmt/{project_name}-{sha}.txt"
 
             start_time = time.time()
             self.generate_mutants(
