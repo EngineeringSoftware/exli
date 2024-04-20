@@ -211,7 +211,7 @@ python -m exli.eval --project_name=Bernardo-MG_velocity-config-tool --sha=26226f
 ```
 > Alternatively, to use the default settings `python -m exli.eval batch_run_tests_with_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
-The generated mutation analysis report is in
+The generated mutation analysis report are in
 `${HOME}/exli/results/mutants-eval-results/Bernardo-MG_velocity-config-tool-all.json`
 and
 `${HOME}/exli/results/mutants-eval-results/Bernardo-MG_velocity-config-tool-reduced.json`
