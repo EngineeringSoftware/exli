@@ -24,9 +24,9 @@ class Main:
         Args:
             test_project_name (str): The name of the project to be tested. If None, all projects are tested.
         """
-        log_file_path = Macros.log_dir / "raninline.log"
-        if os.path.exists(log_file_path):
-            os.remove(log_file_path)
+        log_path = Macros.log_dir / "raninline.log"
+        if os.path.exists(log_path):
+            os.remove(log_path)
 
         # prepare jacoco extension plugin
         Util.remove_jacoco_extension()
@@ -55,13 +55,13 @@ class Main:
                     True,
                     120,
                     Macros.DEFAULT_SEED,
-                    log_file_path,
+                    log_path,
                 )
                 end_time = time.time()
                 time_dict[project_name] = end_time - start_time
             except Exception as e:
                 se.io.dump(
-                    log_file_path,
+                    log_path,
                     [f"{project_name} {sha}: {traceback.format_exc()}"],
                     se.io.Fmt.txtList,
                     append=True,
@@ -81,7 +81,7 @@ class Main:
         evosuite: bool = True,
         evosuite_tl: int = 120,
         seed: int = Macros.DEFAULT_SEED,
-        log_file_path: str = None,
+        log_path: str = None,
     ):
         """
         Generate inline tests for a project.
@@ -100,10 +100,10 @@ class Main:
         ################################## process input, prepare project ##################################
         if sha is None:
             sha = Util.get_sha(project_name)
-        if log_file_path is None:
-            log_file_path = Macros.log_dir / "raninline.log"
-        inputs = f"--project_name={project_name} --sha={sha} --randoop={randoop} --randoop_tl={randoop_tl} --unit={unit} --evosuite={evosuite} --evosuite_tl={evosuite_tl} --seed={seed} --log_file_path={log_file_path}"
-        se.bash.run(f'echo "{inputs}" >> {log_file_path}')
+        if log_path is None:
+            log_path = Macros.log_dir / "raninline.log"
+        inputs = f"--project_name={project_name} --sha={sha} --randoop={randoop} --randoop_tl={randoop_tl} --unit={unit} --evosuite={evosuite} --evosuite_tl={evosuite_tl} --seed={seed} --log_path={log_path}"
+        se.bash.run(f'echo "{inputs}" >> {log_path}')
 
         Util.compile_raninline()
         Util.remove_jacoco_extension()
@@ -160,7 +160,7 @@ class Main:
                     sha,
                     deps_file_path,
                     classpath_list_path,
-                    log_file_path,
+                    log_path,
                 )
                 log_dir = Macros.log_dir / tool
                 Util.avoid_permission_error(project_name)
@@ -215,7 +215,7 @@ class Main:
                 is_auto_generated = Util.is_auto_generated_file(java_file_path)
                 if not is_auto_generated:
                     se.bash.run(
-                        f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="i {java_file_path} -1 {log_file_path} {reduced_log_path} {classes_dir}"',
+                        f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="i {java_file_path} -1 {log_path} {reduced_log_path} {classes_dir}"',
                         0,
                     )
 
@@ -265,7 +265,7 @@ class Main:
             sha,
             reduced_log_path,
             proj_reduced_tests_dir,
-            log_file_path,
+            log_path,
         )
 
         # parse all inline tests: for evaluation purposes
@@ -274,7 +274,7 @@ class Main:
             sha,
             all_log_path,
             proj_all_tests_dir,
-            log_file_path,
+            log_path,
         )
 
     # python -m exli.main batch_run_inline_tests
