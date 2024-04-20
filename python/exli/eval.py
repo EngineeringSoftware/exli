@@ -35,6 +35,7 @@ class Eval:
         test_types: List[str] = None,
         mutant_type: str = "universalmutator",
         log_path: str = None,
+        seed: int = 42,
     ):
         """
         Apply each mutant to the project and run the inline tests to check if tests can kill the mutant.
@@ -65,7 +66,7 @@ class Eval:
         temp_dir = Macros.log_dir / "eval" / "temp"
         if not temp_dir.exists():
             se.bash.run(f"mkdir -p {temp_dir}")
-            
+
         Util.prepare_project(project_name, sha)
 
         # execute reduced tests first to check if there is compilation failure
@@ -252,16 +253,26 @@ class Eval:
                                 )
                             elif test_type == "randoop":
                                 # run randoop tests
-                                returncode = Util.run_randoop(project_name, log_file)
+                                generated_tests_dir = (
+                                    Macros.unit_tests_dir
+                                    / f"{project_name}-{sha}"
+                                    / f"randoop-tests-{seed}"
+                                )
+                                returncode = Util.run_randoop(
+                                    project_name, generated_tests_dir, log_file
+                                )
                             elif test_type == "evosuite":
                                 # run evosuite tests
                                 generated_tests_dir = (
                                     Macros.unit_tests_dir
                                     / f"{project_name}-{sha}"
-                                    / "evosuite-tests"
+                                    / f"evosuite-tests-{seed}"
                                 )
                                 returncode = Util.run_evosuite_command_line(
-                                    project_name, log_file, generated_tests_dir
+                                    project_name,
+                                    generated_tests_dir,
+                                    deps_file,
+                                    log_file,
                                 )
                             end_time = time.time()
                             if test_type == "all" or test_type == "reduced":
@@ -365,7 +376,7 @@ class Eval:
 
                 if (all_file).exists():
                     continue
-            
+
             start_time = time.time()
             self.run_tests_with_mutants(
                 project_name,
@@ -519,9 +530,7 @@ class Eval:
         # add back tests in R0 that can kill mutants not killed by tests in R1
         if mutant_type == "universalmutator":
             initial_mutants_result_file = (
-                Macros.results_dir
-                / "mutants-eval-results"
-                / f"{project_name}-all.json"
+                Macros.results_dir / "mutants-eval-results" / f"{project_name}-all.json"
             )
         elif mutant_type == "major":
             initial_mutants_result_file = (
@@ -571,12 +580,7 @@ class Eval:
             mutant_index = killed_mutant["killed_mutant_index"]
             # have to mark the source here, because the inline test line number is different between all and reduced
             killed_mutant_to_tests_dict[mutant_index].add(
-                project_name
-                + "#"
-                + test_class_name
-                + "#"
-                + test_method_name
-                + "#all"
+                project_name + "#" + test_class_name + "#" + test_method_name + "#all"
             )
 
         mutants_to_add_back_tests = collections.defaultdict(set)
@@ -746,9 +750,7 @@ class Eval:
             algo_to_tests[algorithm].extend(tests)
 
             new_file_path = (
-                Macros.results_dir
-                / "minimized-o"
-                / f"{algorithm}-minimized-all.txt"
+                Macros.results_dir / "minimized-o" / f"{algorithm}-minimized-all.txt"
             )
             new_tests = se.io.load(new_file_path, se.io.Fmt.txtList)
             new_algo_to_tests[algorithm].extend(new_tests)
