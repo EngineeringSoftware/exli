@@ -44,7 +44,7 @@ class Eval:
             project_name (str): The name of the project.
             sha (str): The commit sha of the project.
             test_types (List[str], optional): The types of tests to run. Available options are ["all", "reduced", "unit", "randoop", "evosuite"]. Defaults to None. If None, all types of tests will be run.
-            mutant_type (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
+            mutator (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
             log_path (str, optional): The path to save the log file. Defaults to None.
         """
         if sha is None:
@@ -331,17 +331,17 @@ class Eval:
         self,
         skip_existing: bool = True,
         test_types: List[str] = None,
-        mutant_type: str = "universalmutator",
+        mutator: str = "universalmutator",
         test_project_name: str = None,
     ):
         if test_types is None:
             test_types = ["all", "reduced", "unit", "randoop", "evosuite"]
 
-        if mutant_type == "universalmutator":
+        if mutator == "universalmutator":
             time_file = (
                 Macros.results_dir / "time" / "batch-run-tests-with-mutants.json"
             )
-        elif mutant_type == "major":
+        elif mutator == "major":
             time_file = (
                 Macros.results_dir / "time" / "batch-run-tests-with-mutants-major.json"
             )
@@ -359,13 +359,13 @@ class Eval:
             if test_project_name is not None and project_name != test_project_name:
                 continue
             if skip_existing:
-                if mutant_type == "universalmutator":
+                if mutator == "universalmutator":
                     all_file = (
                         Macros.results_dir
                         / "mutants-eval-results"
                         / f"{project_name}-all.json"
                     )
-                elif mutant_type == "major":
+                elif mutator == "major":
                     all_file = (
                         Macros.results_dir
                         / "mutants-eval-results"
@@ -382,7 +382,7 @@ class Eval:
                 project_name,
                 sha,
                 test_types,
-                mutant_type,
+                mutator,
                 log_path,
             )
             end_time = time.time()
@@ -401,21 +401,21 @@ class Eval:
         project_name: str,
         sha: str = None,
         test_type: str = "all",
-        mutant_type: str = "universalmutator",
+        mutator: str = "universalmutator",
     ):
         if sha is None:
             sha = Util.get_sha(project_name)
         killed_mutants_file = (
             Macros.results_dir
             / "killed-mutants"
-            / f"{project_name}-{test_type}-{mutant_type}.json"
+            / f"{project_name}-{test_type}-{mutator}.json"
         )
 
         killed_mutants_res = []
 
-        if mutant_type == "universalmutator":
+        if mutator == "universalmutator":
             mutants_file = Macros.results_dir / "mutants" / f"{project_name}.json"
-        elif mutant_type == "major":
+        elif mutator == "major":
             mutants_file = Macros.results_dir / "mutants" / f"{project_name}-major.json"
         else:
             raise Exception("unknown mutant type")
@@ -424,7 +424,7 @@ class Eval:
             return
         mutants = se.io.load(mutants_file, se.io.Fmt.json)
         for index, mutant in enumerate(mutants):
-            # log/eval/AquaticInformatics_aquarius-sdk-java-8f4edb9-all-AquariusServerVersion_19Test.java-0-{mutant_type}.log
+            # log/eval/AquaticInformatics_aquarius-sdk-java-8f4edb9-all-AquariusServerVersion_19Test.java-0-{mutator}.log
             filepath = mutant["filepath"]
             linenumber = mutant["linenumber"]
             test_name = (
@@ -433,7 +433,7 @@ class Eval:
             mutation_res_file = (
                 Macros.log_dir
                 / "eval"
-                / f"{project_name}-{sha}-{test_type}-{test_name}-{index}-{mutant_type}.log"
+                / f"{project_name}-{sha}-{test_type}-{test_name}-{index}-{mutator}.log"
             )
             if not mutation_res_file.exists():
                 print(f"file not exist: {mutation_res_file}")
@@ -472,21 +472,50 @@ class Eval:
             se.io.Fmt.jsonPretty,
         )
 
-    # python -m exli.eval batch_test_to_killed_mutants --mutant_type "universalmutator"
-    def batch_test_to_killed_mutants(self, mutant_type: str = "universalmutator"):
+    # python -m exli.eval batch_test_to_killed_mutants --mutator "universalmutator"
+    def batch_test_to_killed_mutants(self, mutator: str = "universalmutator"):
+        """
+        Batch process all projects to get the killed mutants for each test.
+
+        Args:
+            mutator (str, optional): The tool used to generate mutants. Defaults to "universalmutator".
+        """
         for project_name, sha in Util.get_project_names_list_with_sha():
-            self.killed_mutants(project_name, sha, "all", mutant_type)
-            self.killed_mutants(project_name, sha, "reduced", mutant_type)
+            self.killed_mutants(project_name, sha, "all", mutator)
+            self.killed_mutants(project_name, sha, "reduced", mutator)
+
+    # python -m exli.eval test_to_killed_mutants
+    # --test_type all --test_type reduced
+    def test_to_killed_mutants(
+        self, test_type: str, mutator: str = "universalmutator"
+    ):
+        """
+        Get the killed mutants for each test.
+
+        Args:
+            test_type (str): The type of tests. Available options are ["all", "reduced"].
+            mutator (str, optional): The tool used to generate mutants. Defaults to "universalmutator".
+        """
+        result_file = (
+            Macros.results_dir / f"test-to-killed-mutants-{test_type}-{mutator}.txt"
+        )
+        results = []
+        test_to_killed_mutants_dict = self.get_test_to_killed_mutants(
+            test_type, mutator
+        )
+        for test_name, killed_mutants in test_to_killed_mutants_dict.items():
+            results.append(test_name + "," + ",".join(killed_mutants))
+        se.io.dump(result_file, results, se.io.Fmt.txtList)
 
     def get_test_to_killed_mutants(
-        self, test_type: str, mutant_type: str = "universalmutator"
+        self, test_type: str, mutator: str = "universalmutator"
     ):
         test_to_killed_mutants_dict = collections.defaultdict(set)
         for project_name in Util.get_project_names_list():
             killed_mutants_file = (
                 Macros.results_dir
                 / "killed-mutants"
-                / f"{project_name}-{test_type}-{mutant_type}.json"
+                / f"{project_name}-{test_type}-{mutator}.json"
             )
             if not killed_mutants_file.exists():
                 continue
@@ -500,22 +529,6 @@ class Eval:
                 ].add(f"{project_name}-{mutant_index}")
         return test_to_killed_mutants_dict
 
-    # python -m exli.eval test_to_killed_mutants
-    # --test_type all --test_type reduced
-    def test_to_killed_mutants(
-        self, test_type: str, mutant_type: str = "universalmutator"
-    ):
-        result_file = (
-            Macros.results_dir / f"test-to-killed-mutants-{test_type}-{mutant_type}.txt"
-        )
-        results = []
-        test_to_killed_mutants_dict = self.get_test_to_killed_mutants(
-            test_type, mutant_type
-        )
-        for test_name, killed_mutants in test_to_killed_mutants_dict.items():
-            results.append(test_name + "," + ",".join(killed_mutants))
-        se.io.dump(result_file, results, se.io.Fmt.txtList)
-
     # python -m exli.eval check_minimized_results
     def check_minimized_results(self):
         minizied_results_dir = Macros.results_dir / "minimized-inline-tests"
@@ -526,13 +539,13 @@ class Eval:
             print(minimized_result_file.name, len(minimized_results))
 
     # python -m exli.eval add_back_tests
-    def add_back_tests(self, project_name: str, mutant_type: str = "universalmutator"):
+    def add_back_tests(self, project_name: str, mutator: str = "universalmutator"):
         # add back tests in R0 that can kill mutants not killed by tests in R1
-        if mutant_type == "universalmutator":
+        if mutator == "universalmutator":
             initial_mutants_result_file = (
                 Macros.results_dir / "mutants-eval-results" / f"{project_name}-all.json"
             )
-        elif mutant_type == "major":
+        elif mutator == "major":
             initial_mutants_result_file = (
                 Macros.results_dir
                 / "mutants-eval-results"
@@ -545,13 +558,13 @@ class Eval:
             return []
         initial_mutants_result = se.io.load(initial_mutants_result_file, se.io.Fmt.json)
 
-        if mutant_type == "universalmutator":
+        if mutator == "universalmutator":
             reduced_mutants_result_file = (
                 Macros.results_dir
                 / "mutants-eval-results"
                 / f"{project_name}-reduced.json"
             )
-        elif mutant_type == "major":
+        elif mutator == "major":
             reduced_mutants_result_file = (
                 Macros.results_dir
                 / "mutants-eval-results"
@@ -568,7 +581,7 @@ class Eval:
         killed_mutants_file = (
             Macros.results_dir
             / "killed-mutants"
-            / f"{project_name}-all-{mutant_type}.json"
+            / f"{project_name}-all-{mutator}.json"
         )
 
         if not killed_mutants_file.exists():
@@ -598,10 +611,10 @@ class Eval:
         return mutants_to_add_back_tests
 
     # python -m exli.eval batch_add_back_tests
-    def batch_add_back_tests(self, mutant_type: str = "universalmutator"):
+    def batch_add_back_tests(self, mutator: str = "universalmutator"):
         all_mutants_to_add_back_tests = collections.defaultdict(set)
         for project_name in Util.get_project_names_list():
-            mutants_to_add_back_tests = self.add_back_tests(project_name, mutant_type)
+            mutants_to_add_back_tests = self.add_back_tests(project_name, mutator)
             print(project_name, len(mutants_to_add_back_tests))
             all_mutants_to_add_back_tests.update(mutants_to_add_back_tests)
         # all mutants to add back tests -> test to killed mutants
@@ -611,7 +624,7 @@ class Eval:
                 addback_t2m[test].add(mutant)
         # dump the results
         se.io.dump(
-            Macros.results_dir / f"add-back-tests-to-killed-mutants-{mutant_type}.txt",
+            Macros.results_dir / f"add-back-tests-to-killed-mutants-{mutator}.txt",
             [
                 test + "," + ",".join(sorted(mutants))
                 for test, mutants in addback_t2m.items()
@@ -620,14 +633,14 @@ class Eval:
         )
 
         # merge with reduced tests
-        reduced_t2m = self.get_test_to_killed_mutants("reduced", mutant_type)
+        reduced_t2m = self.get_test_to_killed_mutants("reduced", mutator)
         merged_t2m = collections.defaultdict(set)
         for test, mutants in reduced_t2m.items():
             merged_t2m[test].update(mutants)
         for test, mutants in addback_t2m.items():
             merged_t2m[test].update(mutants)
         se.io.dump(
-            Macros.results_dir / f"merged-tests-to-killed-mutants-{mutant_type}.txt",
+            Macros.results_dir / f"merged-tests-to-killed-mutants-{mutator}.txt",
             [
                 test + "," + ",".join(sorted(mutants))
                 for test, mutants in merged_t2m.items()
@@ -636,15 +649,15 @@ class Eval:
         )
 
     # python -m exli.eval minimize_tests
-    def minimize_tests(self, mutant_type: str = "universalmutator"):
+    def minimize_tests(self, mutator: str = "universalmutator"):
         data_file = (
-            Macros.results_dir / f"merged-tests-to-killed-mutants-{mutant_type}.txt"
+            Macros.results_dir / f"merged-tests-to-killed-mutants-{mutator}.txt"
         )
         orig_file = se.io.mktmp("exli")
         se.bash.run(f"cut -d, -f1 '{data_file}' > '{orig_file}'", 0)
         for algorithm in Macros.test_minimization_algorithms:
             out_file = (
-                Macros.results_dir / "minimized" / f"{algorithm}-{mutant_type}.txt"
+                Macros.results_dir / "minimized" / f"{algorithm}-{mutator}.txt"
             )
             # run test minimization scripts
             reduce_suite(
@@ -660,7 +673,7 @@ class Eval:
         se.io.rm(orig_file)
 
     # python -m exli.eval get_not_mutated_inline_tests
-    def get_not_mutated_inline_tests(self, mutant_type: str = "universalmutator"):
+    def get_not_mutated_inline_tests(self, mutator: str = "universalmutator"):
         # format of reduced-passed-tests.txt
         # mp911de_logstash-gelf;biz.paluch.logging.gelf.wildfly.WildFlyJsonFormatter;119;120
         target_stmt_to_inline_tests = Util.get_target_stmt_to_inline_tests(
@@ -669,9 +682,9 @@ class Eval:
         print(f"{len(target_stmt_to_inline_tests)=}")
         mutated_target_stmts = set()
         for project_name in Util.get_project_names_list():
-            if mutant_type == "universalmutator":
+            if mutator == "universalmutator":
                 mutant_file = Macros.results_dir / "mutants" / f"{project_name}.json"
-            elif mutant_type == "major":
+            elif mutator == "major":
                 mutant_file = (
                     Macros.results_dir / "mutants" / f"{project_name}-major.json"
                 )
@@ -698,17 +711,17 @@ class Eval:
         return not_mutated_inline_tests
 
     # python -m exli.eval save_not_mutated_inline_tests
-    def save_not_mutated_inline_tests(self, mutant_type: str = "universalmutator"):
+    def save_not_mutated_inline_tests(self, mutator: str = "universalmutator"):
         se.io.dump(
-            Macros.results_dir / f"not-mutated-inline-tests-{mutant_type}.txt",
-            sorted(self.get_not_mutated_inline_tests(mutant_type=mutant_type)),
+            Macros.results_dir / f"not-mutated-inline-tests-{mutator}.txt",
+            sorted(self.get_not_mutated_inline_tests(mutator=mutator)),
             se.io.Fmt.txtList,
         )
 
     # python -m exli.eval save_r2_inline_test_no_source_code
-    def save_r2_inline_test_no_source_code(self, mutant_type: str = "universalmutator"):
+    def save_r2_inline_test_no_source_code(self, mutator: str = "universalmutator"):
         not_mutated_inline_tests = se.io.load(
-            Macros.results_dir / f"not-mutated-inline-tests-{mutant_type}.txt",
+            Macros.results_dir / f"not-mutated-inline-tests-{mutator}.txt",
             se.io.Fmt.txtList,
         )
         updated_not_mutated_inline_tests = []
@@ -726,14 +739,14 @@ class Eval:
             updated_not_mutated_inline_tests.append(updated_not_mutated_inline_test)
         for algorithm in Macros.test_minimization_algorithms:
             minimized_file = (
-                Macros.results_dir / "minimized" / f"{algorithm}-{mutant_type}.txt"
+                Macros.results_dir / "minimized" / f"{algorithm}-{mutator}.txt"
             )
             minimized_tests = se.io.load(minimized_file, se.io.Fmt.txtList)
             r2_inline_tests = []
             r2_inline_tests.extend(minimized_tests)
             r2_inline_tests.extend(updated_not_mutated_inline_tests)
             se.io.dump(
-                Macros.results_dir / "r2" / f"{algorithm}-{mutant_type}.txt",
+                Macros.results_dir / "r2" / f"{algorithm}-{mutator}.txt",
                 sorted(r2_inline_tests),
                 se.io.Fmt.txtList,
             )
@@ -831,12 +844,12 @@ class Eval:
 
     # python -m exli.eval add_merged_tests_to_log_file
     def add_merged_tests_to_log_file(
-        self, input_type: str = "merged", mutant_type: str = "universalmutator"
+        self, input_type: str = "merged", mutator: str = "universalmutator"
     ):
         # load merged tests
         if input_type == "merged":
             merged_tests_to_killed_mutants_file = (
-                Macros.results_dir / f"merged-tests-to-killed-mutants-{mutant_type}.txt"
+                Macros.results_dir / f"merged-tests-to-killed-mutants-{mutator}.txt"
             )
             merged_tests_to_killed_mutants = se.io.load(
                 merged_tests_to_killed_mutants_file, se.io.Fmt.txtList
@@ -847,7 +860,7 @@ class Eval:
             ]
         else:
             merged_tests = se.io.load(
-                Macros.results_dir / "r2" / f"{input_type}-{mutant_type}.txt",
+                Macros.results_dir / "r2" / f"{input_type}-{mutator}.txt",
                 se.io.Fmt.txtList,
             )
         proj_to_merged_tests = collections.defaultdict(list)
@@ -1026,13 +1039,13 @@ class Eval:
         for project_name, sha in Util.get_project_names_list_with_sha():
             self.filter_mutants_with_all_inline_tests(project_name, sha)
 
-    # python -m exli.eval compute_r2_mutants_results --mutant_type "universalmutator"
-    # the mutant_type here is the mutantion tool used during R2 reduction; the eval mutation tool is always universalmutator
+    # python -m exli.eval compute_r2_mutants_results --mutator "universalmutator"
+    # the mutator here is the mutantion tool used during R2 reduction; the eval mutation tool is always universalmutator
     def compute_r2_mutants_results(
-        self, mutant_type: str = "universalmutator", algorithm: str = "greedy"
+        self, mutator: str = "universalmutator", algorithm: str = "greedy"
     ):
         r2_tests = se.io.load(
-            Macros.results_dir / "r2" / f"{algorithm}-{mutant_type}.txt",
+            Macros.results_dir / "r2" / f"{algorithm}-{mutator}.txt",
             se.io.Fmt.txtList,
         )
         proj_2_r2_tests = collections.defaultdict(list)
@@ -1106,8 +1119,8 @@ class Eval:
 
             results = [
                 {
-                    f"r2-{mutant_type}-killed": k,
-                    f"r2-{mutant_type}-time": 0,  # no time info because it is computed
+                    f"r2-{mutator}-killed": k,
+                    f"r2-{mutator}-time": 0,  # no time info because it is computed
                 }
                 for k in r2_killed
             ]
@@ -1115,14 +1128,14 @@ class Eval:
             se.io.dump(
                 Macros.results_dir
                 / "mutants-eval-results"
-                / f"{pname}-r2-{mutant_type}.json",
+                / f"{pname}-r2-{mutator}.json",
                 results,
                 se.io.Fmt.jsonPretty,
             )
             se.io.dump(
                 Macros.results_dir
                 / "mutants-eval-results"
-                / f"{pname}-r2-{mutant_type}-num.json",
+                / f"{pname}-r2-{mutator}-num.json",
                 num_test_with_mutants,
             )
 
