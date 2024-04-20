@@ -659,7 +659,7 @@ class Main:
         result = []
 
         target_stmts = Util.get_target_stmts(
-            target_stmts_path, filter_with_inline_tests
+            target_stmts_path, filter_with_inline_tests, project_name
         )
 
         Util.prepare_project(project_name, sha)

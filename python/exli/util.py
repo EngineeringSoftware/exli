@@ -1135,9 +1135,23 @@ class Util:
 
     @classmethod
     def get_target_stmts(cls, target_stmts_path: str, filter_with_inline_tests: bool = True, project_name: str = None):
+        """
+        Get target statements from the target_stmts_path file
+
+        Args:
+            target_stmts_path (str): Path to the target statements file.
+            filter_with_inline_tests (bool, optional): Whether to filter target statements with inline tests. Defaults to True.
+            project_name (str, optional): Project name. Defaults to None.
+
+        Returns:
+            set: Set of target statements
+        """
         target_stmts = set()
         if not os.path.exists(target_stmts_path):
             return target_stmts
+
+        if filter_with_inline_tests and project_name is None:
+            raise ValueError("project_name is required when filter_with_inline_tests is True")
 
         if filter_with_inline_tests:
             reduced_proj_to_target_stmts = cls.get_proj_to_target_stmts("reduced")
