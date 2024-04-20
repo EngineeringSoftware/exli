@@ -392,14 +392,17 @@ class Eval:
         )
 
     # python -m exli.eval batch_test_to_killed_mutants --mutator "universalmutator"
-    def batch_test_to_killed_mutants(self, mutator: str = "universalmutator"):
+    def batch_test_to_killed_mutants(self, mutator: str = "universalmutator", test_project_name: str = None):
         """
         Batch process all projects to get the killed mutants for each test.
 
         Args:
             mutator (str, optional): The tool used to generate mutants. Defaults to "universalmutator".
+            test_project_name (str, optional): The name of the project to be tested. If None, collect the mapping from test to killed mutants for all projects. Defaults to None.
         """
         for project_name, sha in Util.get_project_names_list_with_sha():
+            if test_project_name is not None and project_name != test_project_name:
+                continue
             self.test_to_killed_mutants(project_name, sha, "all", mutator)
             self.test_to_killed_mutants(project_name, sha, "reduced", mutator)
 
