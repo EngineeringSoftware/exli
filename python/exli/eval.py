@@ -408,7 +408,7 @@ class Eval:
     def test_to_killed_mutants(
         self,
         project_name: str,
-        sha: str = None,
+        sha: str,
         test_type: str = "all",
         mutator: str = "universalmutator",
     ):
@@ -417,12 +417,10 @@ class Eval:
 
         Args:
             project_name (str): The name of the project.
-            sha (str, optional): The commit sha of the project. Defaults to None.
+            sha (str): The commit sha of the project.
             test_type (str, optional): The type of tests to run. Available options are ["all", "reduced"]. Defaults to "all".
             mutator (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
         """
-        if sha is None:
-            sha = Util.get_sha(project_name)
         killed_mutants_file = (
             Macros.results_dir
             / "killed-mutants"
