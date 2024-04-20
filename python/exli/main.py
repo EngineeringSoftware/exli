@@ -375,6 +375,7 @@ class Main:
         """
         # source files with inline tests do not exist
         if not os.path.exists(generated_tests_dir):
+            print(f"{generated_tests_dir} does not exist")
             return
 
         inputs = f"--project_name={project_name} --sha={sha} --generated_tests_dir={generated_tests_dir} --inline_tests_dir={inline_tests_dir} --inlinetest_report_path={inlinetest_report_path} --cached_objects_dir={cached_objects_dir} --deps_file={deps_file} --parse_inline_tests={parse_inline_tests} --log_path={log_path}"
