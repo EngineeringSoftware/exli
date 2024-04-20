@@ -428,6 +428,7 @@ class Util:
             try:
                 se.bash.run(comp_str, 0)
             except Exception as e:
+                print(e)
                 if test_name:
                     if log_path:
                         se.io.dump(
@@ -452,6 +453,7 @@ class Util:
                         try:
                             se.bash.run(comp_str, 0)
                         except Exception as e:
+                            print(e)
                             if log_path:
                                 se.io.dump(
                                     log_path,
