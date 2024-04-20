@@ -207,7 +207,7 @@ The generated mutants are in `${HOME}/exli/results/mutants/Bernardo-MG_velocity-
 
 Run mutation analysis:
 ```bash
-
+python -m exli.eval --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --test_types=['all', 'reduced'] --mutator=universalmutator --log_path=${HOME}/exli/log/run-tests-with-mutants.log
 ```
 > Alternatively, to use the default settings `python -m exli.eval batch_run_tests_with_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
