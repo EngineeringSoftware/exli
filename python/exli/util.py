@@ -1151,6 +1151,7 @@ class Util:
         """
         target_stmts = set()
         if not os.path.exists(target_stmts_path):
+            print(f"{target_stmts_path} does not exist")
             return target_stmts
 
         if filter_with_inline_tests and project_name is None:
