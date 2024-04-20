@@ -33,7 +33,7 @@ class Eval:
         project_name: str,
         sha: str,
         test_types: List[str] = None,
-        mutant_type: str = "universalmutator",
+        mutator: str = "universalmutator",
         log_path: str = None,
         seed: int = 42,
     ):
@@ -50,12 +50,12 @@ class Eval:
         if sha is None:
             sha = Util.get_sha(project_name)
 
-        if mutant_type in ["universalmutator", "major"]:
+        if mutator in ["universalmutator", "major"]:
             mutants_file = (
-                Macros.mutants_dir / f"{project_name}-{sha}-{mutant_type}.json"
+                Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
             )
         else:
-            raise Exception(f"Unknown mutant type: {mutant_type}")
+            raise Exception(f"Unknown mutant type: {mutator}")
         if not mutants_file.exists():
             print(f"no mutants for {project_name}")
             return
@@ -206,13 +206,13 @@ class Eval:
                     if test_type in ["reduced", "all"]:
                         log_file = (
                             eval_log
-                            / f"{project_name}-{sha}-{test_type}-{inline_test_name}-{index}-{mutant_type}.log"
+                            / f"{project_name}-{sha}-{test_type}-{inline_test_name}-{index}-{mutator}.log"
                         )
                     else:
                         # no enough space to save all the log files
                         log_file = (
                             eval_log
-                            / f"{project_name}-{sha}-{test_type}-{mutant_type}.log"
+                            / f"{project_name}-{sha}-{test_type}-{mutator}.log"
                         )
                     if log_file.exists():
                         # remove the log file if it exists
@@ -308,9 +308,9 @@ class Eval:
             mutants_result_dir = Macros.results_dir / "mutants-eval-results"
             if not os.path.exists(mutants_result_dir):
                 se.bash.run(f"mkdir -p {mutants_result_dir}")
-            if mutant_type == "universalmutator":
+            if mutator == "universalmutator":
                 output_file = mutants_result_dir / f"{project_name}-{test_type}.json"
-            elif mutant_type == "major":
+            elif mutator == "major":
                 output_file = (
                     mutants_result_dir / f"{project_name}-{test_type}-major.json"
                 )
