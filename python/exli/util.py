@@ -16,6 +16,7 @@ from tqdm import tqdm
 
 
 class Util:
+    @classmethod
     def run_unit_tests(
         cls,
         test_type: str,
