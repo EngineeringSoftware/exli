@@ -51,9 +51,7 @@ class Eval:
             sha = Util.get_sha(project_name)
 
         if mutator in ["universalmutator", "major"]:
-            mutants_file = (
-                Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
-            )
+            mutants_file = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
         else:
             raise Exception(f"Unknown mutant type: {mutator}")
         if not mutants_file.exists():
@@ -211,8 +209,7 @@ class Eval:
                     else:
                         # no enough space to save all the log files
                         log_file = (
-                            eval_log
-                            / f"{project_name}-{sha}-{test_type}-{mutator}.log"
+                            eval_log / f"{project_name}-{sha}-{test_type}-{mutator}.log"
                         )
                     if log_file.exists():
                         # remove the log file if it exists
@@ -394,15 +391,36 @@ class Eval:
             se.io.Fmt.jsonPretty,
         )
 
-    # python -m exli.eval killed_mutants
+    # python -m exli.eval batch_test_to_killed_mutants --mutator "universalmutator"
+    def batch_test_to_killed_mutants(self, mutator: str = "universalmutator"):
+        """
+        Batch process all projects to get the killed mutants for each test.
+
+        Args:
+            mutator (str, optional): The tool used to generate mutants. Defaults to "universalmutator".
+        """
+        for project_name, sha in Util.get_project_names_list_with_sha():
+            self.test_to_killed_mutants(project_name, sha, "all", mutator)
+            self.test_to_killed_mutants(project_name, sha, "reduced", mutator)
+
+    # python -m exli.eval test_to_killed_mutants
     # --test_type "reduced"
-    def killed_mutants(
+    def test_to_killed_mutants(
         self,
         project_name: str,
         sha: str = None,
         test_type: str = "all",
         mutator: str = "universalmutator",
     ):
+        """
+        Get the killed mutants for each test.
+
+        Args:
+            project_name (str): The name of the project.
+            sha (str, optional): The commit sha of the project. Defaults to None.
+            test_type (str, optional): The type of tests to run. Available options are ["all", "reduced"]. Defaults to "all".
+            mutator (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
+        """
         if sha is None:
             sha = Util.get_sha(project_name)
         killed_mutants_file = (
@@ -413,10 +431,8 @@ class Eval:
 
         killed_mutants_res = []
 
-        if mutator == "universalmutator":
-            mutants_file = Macros.results_dir / "mutants" / f"{project_name}.json"
-        elif mutator == "major":
-            mutants_file = Macros.results_dir / "mutants" / f"{project_name}-major.json"
+        if mutator in ["universalmutator", "major"]:
+            mutants_file = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
         else:
             raise Exception("unknown mutant type")
 
@@ -472,30 +488,11 @@ class Eval:
             se.io.Fmt.jsonPretty,
         )
 
-    # python -m exli.eval batch_test_to_killed_mutants --mutator "universalmutator"
-    def batch_test_to_killed_mutants(self, mutator: str = "universalmutator"):
-        """
-        Batch process all projects to get the killed mutants for each test.
-
-        Args:
-            mutator (str, optional): The tool used to generate mutants. Defaults to "universalmutator".
-        """
-        for project_name, sha in Util.get_project_names_list_with_sha():
-            self.killed_mutants(project_name, sha, "all", mutator)
-            self.killed_mutants(project_name, sha, "reduced", mutator)
-
-    # python -m exli.eval test_to_killed_mutants
+    # python -m exli.eval format_test_to_killed_mutants
     # --test_type all --test_type reduced
-    def test_to_killed_mutants(
+    def format_test_to_killed_mutants(
         self, test_type: str, mutator: str = "universalmutator"
     ):
-        """
-        Get the killed mutants for each test.
-
-        Args:
-            test_type (str): The type of tests. Available options are ["all", "reduced"].
-            mutator (str, optional): The tool used to generate mutants. Defaults to "universalmutator".
-        """
         result_file = (
             Macros.results_dir / f"test-to-killed-mutants-{test_type}-{mutator}.txt"
         )
@@ -579,9 +576,7 @@ class Eval:
 
         killed_mutant_to_tests_dict = collections.defaultdict(set)
         killed_mutants_file = (
-            Macros.results_dir
-            / "killed-mutants"
-            / f"{project_name}-all-{mutator}.json"
+            Macros.results_dir / "killed-mutants" / f"{project_name}-all-{mutator}.json"
         )
 
         if not killed_mutants_file.exists():
@@ -650,15 +645,11 @@ class Eval:
 
     # python -m exli.eval minimize_tests
     def minimize_tests(self, mutator: str = "universalmutator"):
-        data_file = (
-            Macros.results_dir / f"merged-tests-to-killed-mutants-{mutator}.txt"
-        )
+        data_file = Macros.results_dir / f"merged-tests-to-killed-mutants-{mutator}.txt"
         orig_file = se.io.mktmp("exli")
         se.bash.run(f"cut -d, -f1 '{data_file}' > '{orig_file}'", 0)
         for algorithm in Macros.test_minimization_algorithms:
-            out_file = (
-                Macros.results_dir / "minimized" / f"{algorithm}-{mutator}.txt"
-            )
+            out_file = Macros.results_dir / "minimized" / f"{algorithm}-{mutator}.txt"
             # run test minimization scripts
             reduce_suite(
                 data_file=data_file,
