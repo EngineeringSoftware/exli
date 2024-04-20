@@ -279,6 +279,12 @@ class Main:
 
     # python -m exli.main batch_run_inline_tests
     def batch_run_inline_tests(self, test_project_name: str = None):
+        """
+        Run inline tests for each project.
+
+        Args:
+            test_project_name (str, optional): The name of the project to be tested. If None, all projects are tested. Defaults to None.
+        """
         time_file_path = Macros.time_dir / "run-inline-tests.json"
         if time_file_path.exists():
             time_dict = se.io.load(time_file_path)
@@ -353,6 +359,20 @@ class Main:
         parse_inline_tests: bool = False,
         log_path: str = None,
     ):
+        """
+        Run inline tests for a project.
+
+        Args:
+            project_name (str): The name of the project.
+            sha (str): The commit hash.
+            generated_tests_dir (str): The path to the generated tests.
+            inline_tests_dir (str): The path to the inline tests.
+            inlinetest_report_path (str): The path to store the inline test report.
+            cached_objects_dir (str): The path to the cached objects.
+            deps_file (str): The path to the dependencies file.
+            parse_inline_tests (bool, optional): Whether to force parsing inline tests when inline tests dir is not empty. Defaults to False.
+            log_path (str, optional): The path for the log file. Defaults to None.
+        """
         # source files with inline tests do not exist
         if not os.path.exists(generated_tests_dir):
             return
