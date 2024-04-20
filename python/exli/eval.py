@@ -55,16 +55,19 @@ class Eval:
             )
         else:
             raise Exception(f"Unknown mutant type: {mutant_type}")
-
         if not mutants_file.exists():
             print(f"no mutants for {project_name}")
             return
+
         eval_log = Macros.log_dir / "eval"
         if not eval_log.exists():
             se.bash.run(f"mkdir -p {eval_log}")
         temp_dir = Macros.log_dir / "eval" / "temp"
         if not temp_dir.exists():
             se.bash.run(f"mkdir -p {temp_dir}")
+            
+        Util.prepare_project(project_name, sha)
+
         # execute reduced tests first to check if there is compilation failure
         if test_types is None:
             test_types = ["all", "reduced", "unit", "randoop", "evosuite"]
@@ -362,7 +365,7 @@ class Eval:
 
                 if (all_file).exists():
                     continue
-            Util.prepare_project(project_name, sha)
+            
             start_time = time.time()
             self.run_tests_with_mutants(
                 project_name,
