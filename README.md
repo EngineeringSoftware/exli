@@ -217,7 +217,7 @@ and
 `${HOME}/exli/results/mutants-eval-results/Bernardo-MG_velocity-config-tool-reduced.json`
 
 ### Results
-![Sets of mutants killed by inline tests and unit tests](results/figures/venn.pdf)
+![Sets of mutants killed by inline tests and unit tests](results/figures/venn.png)
 
 ## Citation
 If you have used ExLi in a research project, please cite the research paper in any related publication:
