@@ -484,7 +484,7 @@ class Eval:
         test_to_killed_mutants_dict = collections.defaultdict(set)
         for project_name, sha in Util.get_project_names_list_with_sha():
             test_to_killed_mutants_dict.update(
-                self.get_test_to_killed_mutants(project_name, sha, test_type, mutator)
+                self.get_test_to_killed_mutants(project_name, sha, mutator, test_type)
             )
         for test_name, killed_mutants in test_to_killed_mutants_dict.items():
             results.append(test_name + "," + ",".join(killed_mutants))
@@ -494,8 +494,8 @@ class Eval:
         self,
         project_name: str,
         sha: str,
+        mutator: str,
         test_type: str,
-        mutator: str = "universalmutator",
     ):
         test_to_killed_mutants_dict = collections.defaultdict(set)
         killed_mutants_file = (
@@ -524,10 +524,34 @@ class Eval:
             # extract file name
             print(minimized_result_file.name, len(minimized_results))
 
+    # python -m exli.eval batch_add_back_tests
+    def batch_add_back_tests(
+        self, mutator: str = "universalmutator", test_project_name: str = None
+    ):
+        """
+        Batch process all projects to add back tests (from all inline tests) for mutants that are not killed by reduced tests.
+
+        Args:
+            mutator (str, optional): The type of mutator. Defaults to "universalmutator".
+            test_project_name (str, optional): The name of the project to be tested. If None, adding back tests for all projects. Defaults to None.
+        """
+        for project_name, sha in Util.get_project_names_list_with_sha():
+            if test_project_name is not None and project_name != test_project_name:
+                continue
+            self.add_back_tests(project_name, sha, mutator)
+
     # python -m exli.eval add_back_tests
     def add_back_tests(
         self, project_name: str, sha: str, mutator: str = "universalmutator"
     ):
+        """
+        Add back tests (from all inline tests) for mutants that are not killed by reduced tests.
+
+        Args:
+            project_name (str): The name of the project.
+            sha (str): The commit sha of the project.
+            mutator (str, optional): The type of mutator. Defaults to "universalmutator".
+        """
         # add back tests in R0 that can kill mutants not killed by tests in R1
         if mutator in ["universalmutator", "major"]:
             initial_mutants_result_file = (
@@ -586,34 +610,15 @@ class Eval:
                         mutants_to_add_back_tests[f"{project_name}-{index}"].update(
                             killed_mutant_to_tests_dict[index]
                         )
-        return mutants_to_add_back_tests
 
-    # python -m exli.eval batch_add_back_tests
-    def batch_add_back_tests(
-        self, mutator: str = "universalmutator", test_project_name: str = None
-    ):
-        """
-        Batch process all projects to add back tests (from all inline tests) for mutants that are not killed by reduced tests.
-
-        Args:
-            mutator (str, optional): The type of mutator. Defaults to "universalmutator".
-            test_project_name (str, optional): The name of the project to be tested. If None, adding back tests for all projects. Defaults to None.
-        """
-        all_mutants_to_add_back_tests = collections.defaultdict(set)
-        for project_name, sha in Util.get_project_names_list_with_sha():
-            if test_project_name is not None and project_name != test_project_name:
-                continue
-            mutants_to_add_back_tests = self.add_back_tests(project_name, sha, mutator)
-            print(project_name, len(mutants_to_add_back_tests))
-            all_mutants_to_add_back_tests.update(mutants_to_add_back_tests)
         # all mutants to add back tests -> test to killed mutants
         addback_t2m = collections.defaultdict(set)
-        for mutant, tests in all_mutants_to_add_back_tests.items():
+        for mutant, tests in mutants_to_add_back_tests.items():
             for test in tests:
                 addback_t2m[test].add(mutant)
         # dump the results
         se.io.dump(
-            Macros.results_dir / f"add-back-tests-to-killed-mutants-{mutator}.txt",
+            Macros.results_dir / "add-back-tests-to-killed-mutants" / f"{project_name}-{sha}-{mutator}.txt",
             [
                 test + "," + ",".join(sorted(mutants))
                 for test, mutants in addback_t2m.items()
@@ -622,14 +627,14 @@ class Eval:
         )
 
         # merge with reduced tests
-        reduced_t2m = self.get_test_to_killed_mutants("reduced", mutator)
+        reduced_t2m = self.get_test_to_killed_mutants(project_name, sha, mutator, "reduced")
         merged_t2m = collections.defaultdict(set)
         for test, mutants in reduced_t2m.items():
             merged_t2m[test].update(mutants)
         for test, mutants in addback_t2m.items():
             merged_t2m[test].update(mutants)
         se.io.dump(
-            Macros.results_dir / f"merged-tests-to-killed-mutants-{mutator}.txt",
+            Macros.results_dir / "merged-tests-to-killed-mutants" / f"{project_name}-{sha}-{mutator}.txt",
             [
                 test + "," + ",".join(sorted(mutants))
                 for test, mutants in merged_t2m.items()
