@@ -212,10 +212,18 @@ python -m exli.eval run_tests_with_mutants --project_name=Bernardo-MG_velocity-c
 > Alternatively, to use the default settings `python -m exli.eval batch_run_tests_with_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
 The generated mutation analysis report are in
-`${HOME}/exli/results/mutants-eval-results/Bernardo-MG_velocity-config-tool-all.json`
+`${HOME}/exli/results/mutants-eval-results/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-all.json`
 and
-`${HOME}/exli/results/mutants-eval-results/Bernardo-MG_velocity-config-tool-reduced.json`
+`${HOME}/exli/results/mutants-eval-results/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-reduced.json`
 
+
+#### Step 5: Test reduction
+```bash
+python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --test_types=all --mutator=universalmutator
+python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --test_types=reduced --mutator=universalmutator
+```
+
+> Alternatively, to use the default settings `python -m exli.eval batch_test_to_killed_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
 ## Citation
 If you have used ExLi in a research project, please cite the research paper in any related publication:

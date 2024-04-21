@@ -305,12 +305,7 @@ class Eval:
             mutants_result_dir = Macros.results_dir / "mutants-eval-results"
             if not os.path.exists(mutants_result_dir):
                 se.bash.run(f"mkdir -p {mutants_result_dir}")
-            if mutator == "universalmutator":
-                output_file = mutants_result_dir / f"{project_name}-{test_type}.json"
-            elif mutator == "major":
-                output_file = (
-                    mutants_result_dir / f"{project_name}-{test_type}-major.json"
-                )
+            output_file = mutants_result_dir / f"{project_name}-{sha}-{mutator}-{test_type}.json"
             se.io.dump(
                 output_file,
                 res,
@@ -334,14 +329,9 @@ class Eval:
         if test_types is None:
             test_types = ["all", "reduced", "unit", "randoop", "evosuite"]
 
-        if mutator == "universalmutator":
-            time_file = (
-                Macros.results_dir / "time" / "batch-run-tests-with-mutants.json"
-            )
-        elif mutator == "major":
-            time_file = (
-                Macros.results_dir / "time" / "batch-run-tests-with-mutants-major.json"
-            )
+        time_file = (
+            Macros.results_dir / "time" / f"batch-run-tests-with-mutants-{mutator}.json"
+        )
         if time_file.exists():
             res_dict = se.io.load(time_file, se.io.Fmt.json)
         else:
@@ -356,17 +346,11 @@ class Eval:
             if test_project_name is not None and project_name != test_project_name:
                 continue
             if skip_existing:
-                if mutator == "universalmutator":
+                if mutator in ["universalmutator", "major"]:
                     all_file = (
                         Macros.results_dir
                         / "mutants-eval-results"
-                        / f"{project_name}-all.json"
-                    )
-                elif mutator == "major":
-                    all_file = (
-                        Macros.results_dir
-                        / "mutants-eval-results"
-                        / f"{project_name}-major.json"
+                        / f"{project_name}-{sha}-{mutator}-all.json"
                     )
                 else:
                     raise Exception("unknown mutant type")
@@ -392,7 +376,9 @@ class Eval:
         )
 
     # python -m exli.eval batch_test_to_killed_mutants --mutator "universalmutator"
-    def batch_test_to_killed_mutants(self, mutator: str = "universalmutator", test_project_name: str = None):
+    def batch_test_to_killed_mutants(
+        self, mutator: str = "universalmutator", test_project_name: str = None
+    ):
         """
         Batch process all projects to get the killed mutants for each test.
 
@@ -498,33 +484,38 @@ class Eval:
             Macros.results_dir / f"test-to-killed-mutants-{test_type}-{mutator}.txt"
         )
         results = []
-        test_to_killed_mutants_dict = self.get_test_to_killed_mutants(
-            test_type, mutator
-        )
+        test_to_killed_mutants_dict = collections.defaultdict(set)
+        for project_name, sha in Util.get_project_names_list_with_sha():
+            test_to_killed_mutants_dict.update(
+                self.get_test_to_killed_mutants(project_name, sha, test_type, mutator)
+            )
         for test_name, killed_mutants in test_to_killed_mutants_dict.items():
             results.append(test_name + "," + ",".join(killed_mutants))
         se.io.dump(result_file, results, se.io.Fmt.txtList)
 
     def get_test_to_killed_mutants(
-        self, test_type: str, mutator: str = "universalmutator"
+        self,
+        project_name: str,
+        sha: str,
+        test_type: str,
+        mutator: str = "universalmutator",
     ):
         test_to_killed_mutants_dict = collections.defaultdict(set)
-        for project_name in Util.get_project_names_list():
-            killed_mutants_file = (
-                Macros.results_dir
-                / "killed-mutants"
-                / f"{project_name}-{test_type}-{mutator}.json"
-            )
-            if not killed_mutants_file.exists():
-                continue
-            killed_mutants = se.io.load(killed_mutants_file, se.io.Fmt.json)
-            for killed_mutant in killed_mutants:
-                test_class_name = killed_mutant["test_class_name"]
-                test_method_name = killed_mutant["test_method_name"]
-                mutant_index = killed_mutant["killed_mutant_index"]
-                test_to_killed_mutants_dict[
-                    project_name + "#" + test_class_name + "#" + test_method_name
-                ].add(f"{project_name}-{mutant_index}")
+        killed_mutants_file = (
+            Macros.results_dir
+            / "killed-mutants"
+            / f"{project_name}-{sha}-{test_type}-{mutator}.json"
+        )
+        if not killed_mutants_file.exists():
+            return test_to_killed_mutants_dict
+        killed_mutants = se.io.load(killed_mutants_file, se.io.Fmt.json)
+        for killed_mutant in killed_mutants:
+            test_class_name = killed_mutant["test_class_name"]
+            test_method_name = killed_mutant["test_method_name"]
+            mutant_index = killed_mutant["killed_mutant_index"]
+            test_to_killed_mutants_dict[
+                project_name + "#" + test_class_name + "#" + test_method_name
+            ].add(f"{project_name}-{mutant_index}")
         return test_to_killed_mutants_dict
 
     # python -m exli.eval check_minimized_results
@@ -537,17 +528,15 @@ class Eval:
             print(minimized_result_file.name, len(minimized_results))
 
     # python -m exli.eval add_back_tests
-    def add_back_tests(self, project_name: str, mutator: str = "universalmutator"):
+    def add_back_tests(
+        self, project_name: str, sha: str, mutator: str = "universalmutator"
+    ):
         # add back tests in R0 that can kill mutants not killed by tests in R1
-        if mutator == "universalmutator":
-            initial_mutants_result_file = (
-                Macros.results_dir / "mutants-eval-results" / f"{project_name}-all.json"
-            )
-        elif mutator == "major":
+        if mutator in ["universalmutator", "major"]:
             initial_mutants_result_file = (
                 Macros.results_dir
                 / "mutants-eval-results"
-                / f"{project_name}-all-major.json"
+                / f"{project_name}-{sha}-{mutator}-all.json"
             )
         else:
             raise Exception("Invalid mutant type")
@@ -556,17 +545,11 @@ class Eval:
             return []
         initial_mutants_result = se.io.load(initial_mutants_result_file, se.io.Fmt.json)
 
-        if mutator == "universalmutator":
+        if mutator in ["universalmutator", "major"]:
             reduced_mutants_result_file = (
                 Macros.results_dir
                 / "mutants-eval-results"
-                / f"{project_name}-reduced.json"
-            )
-        elif mutator == "major":
-            reduced_mutants_result_file = (
-                Macros.results_dir
-                / "mutants-eval-results"
-                / f"{project_name}-reduced-major.json"
+                / f"{project_name}-{sha}-{mutator}-reduced.json"
             )
         else:
             raise Exception("Invalid mutant type")
@@ -607,10 +590,19 @@ class Eval:
         return mutants_to_add_back_tests
 
     # python -m exli.eval batch_add_back_tests
-    def batch_add_back_tests(self, mutator: str = "universalmutator"):
+    def batch_add_back_tests(
+        self, mutator: str = "universalmutator", test_project_name: str = None
+    ):
+        """
+        Batch process all projects to add back tests (from all inline tests) for mutants that are not killed by reduced tests.
+
+        Args:
+            mutator (str, optional): The type of mutator. Defaults to "universalmutator".
+            test_project_name (str, optional): The name of the project to be tested. If None, adding back tests for all projects. Defaults to None.
+        """
         all_mutants_to_add_back_tests = collections.defaultdict(set)
-        for project_name in Util.get_project_names_list():
-            mutants_to_add_back_tests = self.add_back_tests(project_name, mutator)
+        for project_name, sha in Util.get_project_names_list_with_sha():
+            mutants_to_add_back_tests = self.add_back_tests(project_name, sha, mutator)
             print(project_name, len(mutants_to_add_back_tests))
             all_mutants_to_add_back_tests.update(mutants_to_add_back_tests)
         # all mutants to add back tests -> test to killed mutants
