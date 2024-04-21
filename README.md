@@ -225,6 +225,25 @@ python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-c
 
 > Alternatively, to use the default settings `python -m exli.eval batch_test_to_killed_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
+```bash
+python -m exli.eval add_back_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator
+```
+
+> Alternatively, to use the default settings `python -m exli.eval batch_add_back_tests --test_project_name=Bernardo-MG_velocity-config-tool`
+
+```bash
+python -m exli.eval minimize_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator
+```
+
+In `${HOME}/exli/results/minimized`, the minimized tests are stored.
+For example, the minimized tests by greedy algorithm for the project `Bernardo-MG_velocity-config-tool` at commit `26226f5` are stored in `${HOME}/exli/results/minimized/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-greedy.txt`
+
+```txt
+Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_200Test#testLine204()
+Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test#testLine290()
+Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test#testLine301()#all
+```
+
 ## Citation
 If you have used ExLi in a research project, please cite the research paper in any related publication:
 

@@ -618,7 +618,10 @@ class Eval:
                 addback_t2m[test].add(mutant)
         # dump the results
         se.io.dump(
-            Macros.results_dir / "killed-mutants" / "add-back-tests-to-killed-mutants" / f"{project_name}-{sha}-{mutator}.txt",
+            Macros.results_dir
+            / "killed-mutants"
+            / "add-back-tests-to-killed-mutants"
+            / f"{project_name}-{sha}-{mutator}.txt",
             [
                 test + "," + ",".join(sorted(mutants))
                 for test, mutants in addback_t2m.items()
@@ -627,14 +630,19 @@ class Eval:
         )
 
         # merge with reduced tests
-        reduced_t2m = self.get_test_to_killed_mutants(project_name, sha, mutator, "reduced")
+        reduced_t2m = self.get_test_to_killed_mutants(
+            project_name, sha, mutator, "reduced"
+        )
         merged_t2m = collections.defaultdict(set)
         for test, mutants in reduced_t2m.items():
             merged_t2m[test].update(mutants)
         for test, mutants in addback_t2m.items():
             merged_t2m[test].update(mutants)
         se.io.dump(
-            Macros.results_dir / "killed-mutants" / "merged-tests-to-killed-mutants" / f"{project_name}-{sha}-{mutator}.txt",
+            Macros.results_dir
+            / "killed-mutants"
+            / "merged-tests-to-killed-mutants"
+            / f"{project_name}-{sha}-{mutator}.txt",
             [
                 test + "," + ",".join(sorted(mutants))
                 for test, mutants in merged_t2m.items()
@@ -643,18 +651,38 @@ class Eval:
         )
 
     # python -m exli.eval minimize_tests
-    def minimize_tests(self, mutator: str = "universalmutator"):
+    def minimize_tests(
+        self, project_name: str, sha: str, mutator: str = "universalmutator"
+    ):
         """
         Minimize the tests that can kill the mutants.
 
         Args:
+            project_name (str): The name of the project.
+            sha (str): The commit sha of the project.
             mutator (str, optional): The type of mutator. Defaults to "universalmutator".
         """
-        data_file = Macros.results_dir / f"merged-tests-to-killed-mutants-{mutator}.txt"
+        data_file = (
+            Macros.results_dir
+            / "killed-mutants"
+            / "merged-tests-to-killed-mutants"
+            / f"{project_name}-{sha}-{mutator}.txt"
+        )
+        if not data_file.exists():
+            print(f"no data file {data_file}")
+            return
+
         orig_file = se.io.mktmp("exli")
         se.bash.run(f"cut -d, -f1 '{data_file}' > '{orig_file}'", 0)
         for algorithm in Macros.test_minimization_algorithms:
-            out_file = Macros.results_dir / "minimized" / f"{algorithm}-{mutator}.txt"
+            out_file = (
+                Macros.results_dir
+                / "minimized"
+                / f"{project_name}-{sha}-{mutator}-{algorithm}.txt"
+            )
+            if not out_file.parent.exists():
+                se.bash.run(f"mkdir -p {out_file.parent}")
+
             # run test minimization scripts
             reduce_suite(
                 data_file=data_file,
