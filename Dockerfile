@@ -23,6 +23,7 @@ ENV PATH=$CONDA_DIR/bin:$PATH
 
 # Add new user
 RUN useradd -ms /bin/bash -c "Exli User" itdocker && echo "itdocker:itdocker" | chpasswd && adduser itdocker sudo
+USER itdocker
 ENV USER itdocker
 WORKDIR /home/itdocker/
 
