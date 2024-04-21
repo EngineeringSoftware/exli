@@ -601,6 +601,8 @@ class Eval:
         """
         all_mutants_to_add_back_tests = collections.defaultdict(set)
         for project_name, sha in Util.get_project_names_list_with_sha():
+            if test_project_name is not None and project_name != test_project_name:
+                continue
             mutants_to_add_back_tests = self.add_back_tests(project_name, sha, mutator)
             print(project_name, len(mutants_to_add_back_tests))
             all_mutants_to_add_back_tests.update(mutants_to_add_back_tests)
@@ -637,6 +639,12 @@ class Eval:
 
     # python -m exli.eval minimize_tests
     def minimize_tests(self, mutator: str = "universalmutator"):
+        """
+        Minimize the tests that can kill the mutants.
+
+        Args:
+            mutator (str, optional): The type of mutator. Defaults to "universalmutator".
+        """
         data_file = Macros.results_dir / f"merged-tests-to-killed-mutants-{mutator}.txt"
         orig_file = se.io.mktmp("exli")
         se.bash.run(f"cut -d, -f1 '{data_file}' > '{orig_file}'", 0)
