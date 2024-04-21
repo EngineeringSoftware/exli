@@ -10,5 +10,5 @@ sdk install maven 3.8.3
 sdk use maven 3.8.3
 
 ( cd ${_DIR}/raninline
-  mvn package
+  mvn install
 )

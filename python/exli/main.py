@@ -210,7 +210,6 @@ class Main:
         Util.prepare_project(project_name, sha)
         print("inserting print statement...")
         with se.io.cd(Macros.java_raninline_dir):
-            se.bash.run("mvn clean install " + Macros.SKIPS, 0)
             for java_file_path in java_file_paths:
                 is_auto_generated = Util.is_auto_generated_file(java_file_path)
                 if not is_auto_generated:
