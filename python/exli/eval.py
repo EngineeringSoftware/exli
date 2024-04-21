@@ -305,7 +305,9 @@ class Eval:
             mutants_result_dir = Macros.results_dir / "mutants-eval-results"
             if not os.path.exists(mutants_result_dir):
                 se.bash.run(f"mkdir -p {mutants_result_dir}")
-            output_file = mutants_result_dir / f"{project_name}-{sha}-{mutator}-{test_type}.json"
+            output_file = (
+                mutants_result_dir / f"{project_name}-{sha}-{mutator}-{test_type}.json"
+            )
             se.io.dump(
                 output_file,
                 res,
@@ -321,11 +323,18 @@ class Eval:
     # python -m exli.eval batch_run_tests_with_mutants
     def batch_run_tests_with_mutants(
         self,
-        skip_existing: bool = True,
         test_types: List[str] = None,
         mutator: str = "universalmutator",
         test_project_name: str = None,
     ):
+        """
+        Batch process all projects to run tests after applying each mutant to source, and check if tests can kill the mutant.
+
+        Args:
+            test_types (List[str], optional): The types of tests to run. Available options are ["all", "reduced", "unit", "randoop", "evosuite"]. Defaults to None. If None, all types of tests will be run.
+            mutator (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
+            test_project_name (str, optional): The name of the project to be tested. If None, run tests for all projects. Defaults to None.
+        """
         if test_types is None:
             test_types = ["all", "reduced", "unit", "randoop", "evosuite"]
 
@@ -345,18 +354,6 @@ class Eval:
         for project_name, sha in proj_sha_list:
             if test_project_name is not None and project_name != test_project_name:
                 continue
-            if skip_existing:
-                if mutator in ["universalmutator", "major"]:
-                    all_file = (
-                        Macros.results_dir
-                        / "mutants-eval-results"
-                        / f"{project_name}-{sha}-{mutator}-all.json"
-                    )
-                else:
-                    raise Exception("unknown mutant type")
-
-                if (all_file).exists():
-                    continue
 
             start_time = time.time()
             self.run_tests_with_mutants(
@@ -389,8 +386,8 @@ class Eval:
         for project_name, sha in Util.get_project_names_list_with_sha():
             if test_project_name is not None and project_name != test_project_name:
                 continue
-            self.test_to_killed_mutants(project_name, sha, "all", mutator)
-            self.test_to_killed_mutants(project_name, sha, "reduced", mutator)
+            self.test_to_killed_mutants(project_name, sha, mutator, "all")
+            self.test_to_killed_mutants(project_name, sha, mutator, "reduced")
 
     # python -m exli.eval test_to_killed_mutants
     # --test_type "reduced"
@@ -398,8 +395,8 @@ class Eval:
         self,
         project_name: str,
         sha: str,
-        test_type: str = "all",
         mutator: str = "universalmutator",
+        test_type: str = "all",
     ):
         """
         Get the killed mutants for each test.
@@ -407,13 +404,13 @@ class Eval:
         Args:
             project_name (str): The name of the project.
             sha (str): The commit sha of the project.
-            test_type (str, optional): The type of tests to run. Available options are ["all", "reduced"]. Defaults to "all".
             mutator (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
+            test_type (str, optional): The type of tests to run. Available options are ["all", "reduced"]. Defaults to "all".
         """
         killed_mutants_file = (
             Macros.results_dir
             / "killed-mutants"
-            / f"{project_name}-{test_type}-{mutator}.json"
+            / f"{project_name}-{sha}-{mutator}-{test_type}.json"
         )
 
         killed_mutants_res = []
@@ -504,7 +501,7 @@ class Eval:
         killed_mutants_file = (
             Macros.results_dir
             / "killed-mutants"
-            / f"{project_name}-{sha}-{test_type}-{mutator}.json"
+            / f"{project_name}-{sha}-{mutator}-{test_type}.json"
         )
         if not killed_mutants_file.exists():
             return test_to_killed_mutants_dict
@@ -560,7 +557,9 @@ class Eval:
 
         killed_mutant_to_tests_dict = collections.defaultdict(set)
         killed_mutants_file = (
-            Macros.results_dir / "killed-mutants" / f"{project_name}-all-{mutator}.json"
+            Macros.results_dir
+            / "killed-mutants"
+            / f"{project_name}-{sha}-{mutator}-all.json"
         )
 
         if not killed_mutants_file.exists():
