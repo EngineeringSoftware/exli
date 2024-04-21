@@ -618,7 +618,7 @@ class Eval:
                 addback_t2m[test].add(mutant)
         # dump the results
         se.io.dump(
-            Macros.results_dir / "add-back-tests-to-killed-mutants" / f"{project_name}-{sha}-{mutator}.txt",
+            Macros.results_dir / "killed-mutants" / "add-back-tests-to-killed-mutants" / f"{project_name}-{sha}-{mutator}.txt",
             [
                 test + "," + ",".join(sorted(mutants))
                 for test, mutants in addback_t2m.items()
@@ -634,7 +634,7 @@ class Eval:
         for test, mutants in addback_t2m.items():
             merged_t2m[test].update(mutants)
         se.io.dump(
-            Macros.results_dir / "merged-tests-to-killed-mutants" / f"{project_name}-{sha}-{mutator}.txt",
+            Macros.results_dir / "killed-mutants" / "merged-tests-to-killed-mutants" / f"{project_name}-{sha}-{mutator}.txt",
             [
                 test + "," + ",".join(sorted(mutants))
                 for test, mutants in merged_t2m.items()
