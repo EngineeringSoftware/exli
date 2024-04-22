@@ -125,34 +125,34 @@ python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26
 
 In `exli/python` directory
 
-Execute reduced inline tests:
+Execute r1 inline tests:
 
 ```bash
-python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/reduced-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/reduced-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
+python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/r1-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/r1-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/r1-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/r0-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
 ```
 
-Execute all inline tests:
+Execute r0 inline tests:
 
 ```bash
-python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/all-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
+python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/r0-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/r0-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/r0-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/r0-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
 ```
 
-> These two commands run the inline tests and generate the execution report at `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json` and `${HOME}/exli/results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
+> These two commands run the inline tests and generate the execution report at `${HOME}/exli/results/r1-its-report/Bernardo-MG_velocity-config-tool-26226f5.json` and `${HOME}/exli/results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
 >
-> `reduced-tests` and `all-tests` store the source code with inline tests, `reduced-its` and `all-its` store the inline tests parsed by itest framework
+> `r1-tests` and `r0-tests` store the source code with inline tests, `r1-its` and `r0-its` store the inline tests parsed by itest framework
 > 
-> To generate the report for all inline tests, replace `reduced` with `all` in the generated tests dir, inline tests dir and execution report (`${HOME}/exli/reduced-its` -> `${HOME}/exli/all-its`, `${HOME}/exli/results/reduced-its-report` -> `${HOME}/exli/results/all-its-report` and `${HOME}/exli/results/all-its-report` to `${HOME}/exli/results/reduced-its-report`)
+> To generate the report for all inline tests, replace `r1` with `r0` in the generated tests dir, inline tests dir and execution report (`${HOME}/exli/r1-its` -> `${HOME}/exli/r0-its`, `${HOME}/exli/results/r1-its-report` -> `${HOME}/exli/results/r0-its-report` and `${HOME}/exli/results/r1-its-report` to `${HOME}/exli/results/r0-its-report`)
 > 
-> The difference between "all-its-report" and "reduced-its-report" is that the "all-its-report" contains all the inline tests, while the "reduced-its-report" contains the inline tests that are reduced by the Round 1 Reducer (based on coverage)
+> The difference between "r0-its-report" and "r1-its-report" is that the "r0-its-report" contains all the inline tests, while the "r1-its-report" contains the inline tests that are reduced by the Round 1 Reducer (based on coverage)
 
 After running the inline tests, we can analyze the inline tests reports to get all passed and failed inline tests.
 
 ```bash
-python -m exli.main analyze_inline_tests_reports --inline_test_type=reduced
+python -m exli.main analyze_inline_tests_reports --inline_test_type=r1
 ```
 
 ```bash
-python -m exli.main analyze_inline_tests_reports --inline_test_type=all
+python -m exli.main analyze_inline_tests_reports --inline_test_type=r0
 ```
 
 > Alternatively, to use the default setting for output dirs `python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`, this will run the inline tests for both reduced and all inline tests 
@@ -176,11 +176,11 @@ The report shows the number of tests, errors, failures, and time. For example,
 
 > It is possible to see the message "Some inline tests failed for {project_name} {sha} during execution" because not all generated inline tests can be compiled or executed successfully. For example, if the user-defined class does not override the `toString()` method, the serialized object will contain the class name and the hash code, and the new object will not be equal to the original object when we run the inline tests and compare the objects (the collected value does not equal to the runtime value).
 > 
-> If there are inline tests failed because of compilation, we directly remove these failed inline tests, the log file `${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-comp-failed-tests.txt` stores the failed inline tests and the reason why they failed (This project does not have compilation failed inline tests so this file does not exist).
+> If there are inline tests failed because of compilation, we directly remove these failed inline tests, the log file `${HOME}/exli/results/r1-its-report/Bernardo-MG_velocity-config-tool-comp-failed-tests.txt` stores the failed inline tests and the reason why they failed (This project does not have compilation failed inline tests so this file does not exist).
 >
 > If inline tests failed because of execution, run the following command to remove the failed inline tests:
 > 
-> `python -m exli.main remove_failed_tests --inline_test_type reduced` (or `all`)
+> `python -m exli.main remove_failed_tests --inline_test_type r1` (or `r0`)
 >
 > Re-generate test reports:
 > 
@@ -189,9 +189,9 @@ The report shows the number of tests, errors, failures, and time. For example,
 
 The generated execution result can be found at
 
-`${HOME}/exli/results/reduced-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
+`${HOME}/exli/results/r1-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
 
-`${HOME}/exli/results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
+`${HOME}/exli/results/r0-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
 
 #### Step 4: Generate mutants and run mutation analysis
 
@@ -207,20 +207,20 @@ The generated mutants are in `${HOME}/exli/results/mutants/Bernardo-MG_velocity-
 
 Run mutation analysis:
 ```bash
-python -m exli.eval run_tests_with_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --test_types="['all', 'reduced']" --mutator=universalmutator --log_path=${HOME}/exli/log/run-tests-with-mutants.log
+python -m exli.eval run_tests_with_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --test_types="['r0', 'r1']" --mutator=universalmutator --log_path=${HOME}/exli/log/run-tests-with-mutants.log
 ```
 > Alternatively, to use the default settings `python -m exli.eval batch_run_tests_with_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
 
 The generated mutation analysis report are in
-`${HOME}/exli/results/mutants-eval-results/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-all.json`
+`${HOME}/exli/results/mutants-eval-results/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-r0.json`
 and
-`${HOME}/exli/results/mutants-eval-results/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-reduced.json`
+`${HOME}/exli/results/mutants-eval-results/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-r1.json`
 
 
 #### Step 5: Test reduction
 ```bash
-python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --test_type=all
-python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --test_type=reduced
+python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --test_type=r0
+python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --test_type=r1
 ```
 
 > Alternatively, to use the default settings `python -m exli.eval batch_test_to_killed_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
@@ -239,12 +239,12 @@ In `${HOME}/exli/results/minimized`, the minimized tests (R2 tests) are stored.
 For example, the minimized tests by greedy algorithm for the project `Bernardo-MG_velocity-config-tool` at commit `26226f5` are stored in `${HOME}/exli/results/minimized/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-greedy.txt`
 
 ```txt
-Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_200Test#testLine204()
-Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test#testLine290()
-Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test#testLine301()#all
+Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_200Test#testLine204()#r1
+Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test#testLine290()#r1
+Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test#testLine301()#r0
 ```
 
-Tests that end with `#reduced` are from R0 tests, end with `#all` are from R1 tests
+Tests that end with `#r0` are from R0 tests, end with `#r1` are from R1 tests
 
 ## Citation
 If you have used ExLi in a research project, please cite the research paper in any related publication:
