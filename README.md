@@ -229,8 +229,12 @@ python -m exli.eval add_back_tests --project_name=Bernardo-MG_velocity-config-to
 python -m exli.eval minimize_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator
 ```
 
-In `${HOME}/exli/results/minimized`, the minimized tests (r2 tests) are stored.
-For example, the minimized tests by greedy algorithm for the project `Bernardo-MG_velocity-config-tool` at commit `26226f5` are stored in `${HOME}/exli/results/minimized/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-greedy.txt`
+`${HOME}/exli/results/minimized` stores the minimized tests by 4
+different algorithms: `Greedy`, `GE`, `GRE`,
+`HGS`, which are called r2 tests in the paper.  For
+example, the minimized tests by greedy algorithm for the project
+`Bernardo-MG_velocity-config-tool` at commit `26226f5` are stored in
+`${HOME}/exli/results/minimized/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-greedy.txt`
 
 ```txt
 Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_200Test#testLine204()#r1
