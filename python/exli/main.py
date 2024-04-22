@@ -123,7 +123,9 @@ class Main:
         proj_r0_tests_dir = f"{Macros.r0_tests_dir}/{project_name}-{sha}"
         se.io.mkdir(proj_r0_tests_dir, fresh=True)
 
-        r1_log_path = f"{Macros.unit_tests_dir}/{project_name}-{sha}/inlinetest-r1-log.txt"
+        r1_log_path = (
+            f"{Macros.unit_tests_dir}/{project_name}-{sha}/inlinetest-r1-log.txt"
+        )
         if os.path.exists(r1_log_path):
             os.remove(r1_log_path)
         # related Java code: java/raninline/src/main/java/org/raninline/InstrumentHelper.java line 516
@@ -317,9 +319,7 @@ class Main:
                         log_path,
                     )
                     end_time = time.time()
-                    time_dict[f"{project_name}-{Macros.r1}"] = (
-                        end_time - start_time
-                    )
+                    time_dict[f"{project_name}-{Macros.r1}"] = end_time - start_time
 
                     start_time = time.time()
                     self.run_inline_tests(
@@ -709,7 +709,7 @@ class Main:
                 file_to_line_nums[orig_path].add(line_num)
             for orig_path, line_nums in file_to_line_nums.items():
                 line_results = self.generate_mutants_for_each_file(
-                    project_name, orig_path, line_nums
+                    project_name, sha, orig_path, line_nums
                 )
                 result.extend(line_results)
 
@@ -805,7 +805,7 @@ class Main:
                 return {}
 
     def generate_mutants_for_each_file(
-        self, project_name: str, orig_path: str, line_nums: Set[str]
+        self, project_name: str, sha: str, orig_path: str, line_nums: Set[str]
     ):
         results = []
 
@@ -819,8 +819,8 @@ class Main:
             se.bash.run(f"git checkout .", 0)
             # compile the project with javac (required by Major)
             se.bash.run("mvn test-compile $SKIPS", 0)
-            randoop_deps_path = f"{Macros.log_dir}/teco-randoop-test/{project_name}/randoop-tests/randoop-deps.txt"
-            se.bash.run(f"cp {randoop_deps_path} .", 0)
+            deps_path = f"{Macros.unit_tests_dir}/{project_name}-{sha}/deps.txt"
+            se.bash.run(f"cp {deps_path} .", 0)
 
         with se.io.cd(mutants_path):
             cmd = f"{Macros.major_script} -cp $(< {Macros.downloads_dir}/{project_name}/randoop-deps.txt) --export export.mutants {orig_path}"
