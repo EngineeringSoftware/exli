@@ -242,7 +242,10 @@ Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test
 Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test#testLine301()#r0
 ```
 
-Tests that end with `#r0` are from R0 tests, end with `#r1` are from R1 tests
+Tests that end with `#r0` are from R0 tests, end with `#r1` are from R1 tests. These 3 tests are the minimized tests (`r2` tests) by the greedy algorithm.
+
+### Reproduce the results in the paper
+See the [Reproduce the results](./REPRODUCE.md) for more details.
 
 ## Citation
 If you have used ExLi in a research project, please cite the research paper in any related publication:
