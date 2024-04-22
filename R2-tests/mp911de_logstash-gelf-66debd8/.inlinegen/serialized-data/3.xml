@@ -1,4 +1,0 @@
-<java.util.regex.Pattern>
-  <pattern>^(0x[0-9a-fA-F]+)|[+\-]?0|[+\-]?[1-9][0-9]{0,18}$</pattern>
-  <flags>0</flags>
-</java.util.regex.Pattern>

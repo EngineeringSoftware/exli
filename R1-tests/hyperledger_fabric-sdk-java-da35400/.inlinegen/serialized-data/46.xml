@@ -1,5 +1,0 @@
-<org.bouncycastle.asn1.x509.KeyUsage>
-  <bitString class="org.bouncycastle.asn1.DERBitString">
-    <contents>BaA=</contents>
-  </bitString>
-</org.bouncycastle.asn1.x509.KeyUsage>

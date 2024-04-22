@@ -1,8 +1,0 @@
-<map>
-  <entry>
-    <string>https://graph.facebook.com/v3.1/device/login_status</string>
-    <list>
-      <null/>
-    </list>
-  </entry>
-</map>

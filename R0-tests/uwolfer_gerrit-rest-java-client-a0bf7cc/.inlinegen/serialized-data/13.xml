@@ -1,9 +1,0 @@
-<org.apache.http.message.BasicStatusLine>
-  <protoVersion class="org.apache.http.HttpVersion">
-    <protocol>HTTP</protocol>
-    <major>1</major>
-    <minor>1</minor>
-  </protoVersion>
-  <statusCode>401</statusCode>
-  <reasonPhrase>Unauthorized</reasonPhrase>
-</org.apache.http.message.BasicStatusLine>

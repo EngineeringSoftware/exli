@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName></splitTableName>
-  <splitTableSchemaName>Synonym null dropped</splitTableSchemaName>
-  <newTableName>Synonym null dropped</newTableName>
-  <newTableSchemaName>Revoking grants on null that had been given to null</newTableSchemaName>
-  <columnNameList>SELECT</columnNameList>
-  <context>Revoking grants on null that had been given to null</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

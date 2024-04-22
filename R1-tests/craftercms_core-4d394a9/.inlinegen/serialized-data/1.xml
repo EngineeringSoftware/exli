@@ -1,4 +1,0 @@
-<org.craftercms.core.util.template.impl.IdentifiableStringTemplateSource>
-  <id>/root/body@/folder/descriptor.xml</id>
-  <source>${body}</source>
-</org.craftercms.core.util.template.impl.IdentifiableStringTemplateSource>
