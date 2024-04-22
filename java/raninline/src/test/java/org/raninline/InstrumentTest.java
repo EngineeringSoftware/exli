@@ -13,12 +13,12 @@ import java.nio.file.StandardCopyOption;
 
 /**
  * javac -cp
- * ~/projects/exli-internal/java/raninline/target/raninline-1.0-SNAPSHOT.jar:.
+ * ~/exli/java/raninline/target/raninline-1.0-SNAPSHOT.jar:.
  * A.java
  * java
- * -javaagent:/home/user/projects/exli-internal/jars/org.jacoco.agent-0.8.8-runtime.jar
+ * -javaagent:/home/user/exli/jars/org.jacoco.agent-0.8.8-runtime.jar
  * -cp
- * ~/projects/exli-internal/java/raninline/target/raninline-1.0-SNAPSHOT.jar:.
+ * ~/exli/java/raninline/target/raninline-1.0-SNAPSHOT.jar:.
  * A
  */
 
@@ -26,10 +26,10 @@ import java.nio.file.StandardCopyOption;
  * Instrumented files are generated in target/test-classes/instrument
  */
 public class InstrumentTest {
-    String logFilePath = System.getProperty("user.home") + "/projects/exli-internal/java/raninline/target/"
+    String logFilePath = System.getProperty("user.home") + "/exli/java/raninline/target/"
             + "raninline.txt";
     String classesDirectory = System.getProperty("user.home")
-            + "/projects/exli-internal/java/raninline/target/test-classes/instrument";
+            + "/exli/java/raninline/target/test-classes/instrument";
 
     @BeforeAll
     public static void setUp() {
