@@ -266,5 +266,15 @@ Authors: [Yu Liu](https://sweetstreet.github.io/), [Pengyu Nie](https://pengyuni
 }
 ```
 
+```bibtex
+@inproceedings{LiuFSE24EXLI,
+  title =        {ExLi: An Inline-Test Generation Tool for Java},
+  author =       {Yu Liu and Aditya Thimmaiah and Owolabi Legunsen and Milos Gligoric},
+  pages =        {1--5},
+  booktitle =    {Proceedings of the 32nd ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (Demonstrations)},
+  year =         {2024},
+}
+```
+
 [paper-url]: https://dl.acm.org/doi/10.1145/3597926.3598149
 [itest-url]: https://github.com/EngineeringSoftware/inlinetest
