@@ -587,7 +587,7 @@ class Eval:
             mutant_index = killed_mutant["killed_mutant_index"]
             # have to mark the source here, because the inline test line number is different between r0(all) and r1(reduced)
             killed_mutant_to_tests_dict[mutant_index].add(
-                project_name + "#" + test_class_name + "#" + test_method_name + "#r0"
+                project_name + "#" + test_class_name + "#" + test_method_name
             )
 
         mutants_to_add_back_tests = collections.defaultdict(set)
@@ -622,14 +622,12 @@ class Eval:
         )
 
         # merge with r1 tests
-        r1_t2m = self.get_test_to_killed_mutants(
-            project_name, sha, mutator, Macros.r1
-        )
+        r1_t2m = self.get_test_to_killed_mutants(project_name, sha, mutator, Macros.r1)
         merged_t2m = collections.defaultdict(set)
         for test, mutants in r1_t2m.items():
-            merged_t2m[test].update(mutants)
+            merged_t2m[test + "#" + Macros.r1].update(mutants)
         for test, mutants in addback_t2m.items():
-            merged_t2m[test].update(mutants)
+            merged_t2m[test + "#" + Macros.r0].update(mutants)
         se.io.dump(
             Macros.results_dir
             / "killed-mutants"
