@@ -686,6 +686,18 @@ class Eval:
             se.io.dump(out_file, sorted(selected_tests), se.io.Fmt.txtList)
         se.io.rm(orig_file)
 
+    def batch_minimize_tests(self, test_project_name: str = None):
+        """
+        Batch process all projects to minimize the tests that can kill the mutants.
+
+        Args:
+            test_project_name (str, optional): The name of the project to be tested. If None, minimize tests for all projects. Defaults to None.
+        """
+        for project_name, sha in Util.get_project_names_list_with_sha():
+            if test_project_name is not None and project_name != test_project_name:
+                continue
+            self.minimize_tests(project_name, sha, "universalmutator")
+
     # python -m exli.eval get_not_mutated_inline_tests
     def get_not_mutated_inline_tests(self, mutator: str = "universalmutator"):
         # format of r1-passed-tests.txt
