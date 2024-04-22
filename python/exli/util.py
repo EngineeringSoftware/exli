@@ -470,11 +470,11 @@ class Util:
                             se.bash.run(f"rm {file_path}")
                     if len(comp_failed_tests) == len(java_files):
                         return "compilation failure", -1
-            if f"{Macros.reduced_its_dir}" in inlinetest_dir:
-                comp_failed_tests_file = f"{Macros.reduced_its_report_dir}/{project_name}-comp-failed-tests.txt"
-            elif f"{Macros.all_its_dir}" in inlinetest_dir:
+            if f"{Macros.r1_its_dir}" in inlinetest_dir:
+                comp_failed_tests_file = f"{Macros.r1_its_report_dir}/{project_name}-comp-failed-tests.txt"
+            elif f"{Macros.r0_its_dir}" in inlinetest_dir:
                 comp_failed_tests_file = (
-                    f"{Macros.all_its_report_dir}/{project_name}-comp-failed-tests.txt"
+                    f"{Macros.r0_its_report_dir}/{project_name}-comp-failed-tests.txt"
                 )
             if os.path.exists(comp_failed_tests_file):
                 os.remove(comp_failed_tests_file)
@@ -1158,12 +1158,12 @@ class Util:
             raise ValueError("project_name is required when filter_with_inline_tests is True")
 
         if filter_with_inline_tests:
-            reduced_proj_to_target_stmts = cls.get_proj_to_target_stmts("reduced")
-            all_proj_to_target_stmts = cls.get_proj_to_target_stmts("all")
-            # intersection of reduced and all
+            r1_proj_to_target_stmts = cls.get_proj_to_target_stmts("r1")
+            r0_proj_to_target_stmts = cls.get_proj_to_target_stmts("r0")
+            # intersection of r1 and r0
             proj_to_target_stmts = {
-                k: reduced_proj_to_target_stmts[k] & all_proj_to_target_stmts[k]
-                for k in reduced_proj_to_target_stmts.keys()
+                k: r1_proj_to_target_stmts[k] & r0_proj_to_target_stmts[k]
+                for k in r1_proj_to_target_stmts.keys()
             }
         lines = se.io.load(target_stmts_path, se.io.Fmt.txtList)
         for line in lines:
@@ -1181,7 +1181,7 @@ class Util:
             target_stmts.add(target_stmt)
         return target_stmts
               
-    def get_proj_to_target_stmts(cls, inline_test_type: str = "reduced"):
+    def get_proj_to_target_stmts(cls, inline_test_type: str = "r1"):
         # project to target statements with passing inline tests
         passed_inline_tests: list[str] = se.io.load(
             Macros.results_dir / f"{inline_test_type}-passed-tests.txt",

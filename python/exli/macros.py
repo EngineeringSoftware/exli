@@ -20,12 +20,12 @@ class Macros:
     results_dir: Path = project_dir / "results"
 
     unit_tests_dir: Path = project_dir / "generated-tests"
-    reduced_tests_dir: Path = project_dir / "reduced-tests"
-    all_tests_dir: Path = project_dir / "all-tests"
-    reduced_its_dir: Path = project_dir / "reduced-its"
-    all_its_dir: Path = project_dir / "all-its"
-    reduced_its_report_dir: Path = results_dir / "reduced-its-report"
-    all_its_report_dir: Path = results_dir / "all-its-report"
+    r0_tests_dir: Path = project_dir / "r0-tests"
+    r0_its_dir: Path = project_dir / "r0-its"
+    r0_its_report_dir: Path = results_dir / "r0-its-report"
+    r1_tests_dir: Path = project_dir / "r1-tests"
+    r1_its_dir: Path = project_dir / "r1-its"
+    r1_its_report_dir: Path = results_dir / "r1-its-report"
     java_dir: Path = project_dir / "java"
     java_raninline_dir: Path = project_dir / "java" / "raninline"
     itest_java_dir: Path = project_dir.parent / "inlinetest" / "java"
@@ -50,6 +50,10 @@ class Macros:
     major_script = jar_dir / "major" / "bin" / "major"
 
     target_stmt_types = ["regex", "string", "bit", "stream"]
+    # inline test types
+    r0 = "r0"  # all inline tests without reduction
+    r1 = "r1"  # inline tests with first round reduction
+    r2 = "r2"  # inline tests with second round reduction
 
     TARGET_STMT_BEFORE = "target-statement-before"
     TARGET_STMT_AFTER = "target-statement-after"
@@ -94,7 +98,10 @@ class Macros:
         "twilio_twilio-java",
     ]
 
-    projects_with_no_inline_tests = ["onelogin_onelogin-java-sdk", "jenkinsci_email-ext-plugin"]
+    projects_with_no_inline_tests = [
+        "onelogin_onelogin-java-sdk",
+        "jenkinsci_email-ext-plugin",
+    ]
 
     test_minimization_algorithms = ["ge", "gre", "greedy", "hgs"]
 

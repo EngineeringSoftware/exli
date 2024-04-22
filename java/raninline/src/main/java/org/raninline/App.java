@@ -16,17 +16,23 @@ public class App {
             String filePath = args[1];
             String lineNumber = args[2];
             String logFilePath = args[3];
-            String inlineTestFilePath;
+            String r0TestPath;
             if (args.length >= 5) {
-                inlineTestFilePath = args[4];
+                r0TestPath = args[4];
             } else {
-                inlineTestFilePath = Paths.get(logFilePath).getParent().toString() + "/inlinetest-log.txt";
+                r0TestPath = Paths.get(logFilePath).getParent().toString() + "/inlinetest-r0.txt";
+            }
+            String r1TestPath;
+            if (args.length >= 6) {
+                r1TestPath = args[5];
+            } else {
+                r1TestPath = Paths.get(logFilePath).getParent().toString() + "/inlinetest-r1.txt";
             }
             String classesDirectory = null;
-            if (args.length >= 6) {
-                classesDirectory = args[5];
+            if (args.length >= 7) {
+                classesDirectory = args[6];
             }
-            Parser.instrument(filePath, lineNumber, logFilePath, inlineTestFilePath, classesDirectory);
+            Parser.instrument(filePath, lineNumber, logFilePath, r0TestPath, r1TestPath, classesDirectory);
         } else if (task.equals("change-modifier") || task.equals("m")) {
             // Change modifier to public (help Randoop generate more tests).
             String filePath = args[1];

@@ -12,7 +12,8 @@ import java.util.Set;
 public class Context {
     public String className;
     public String logPath;
-    public String inlineTestPath;
+    public String r0TestPath;
+    public String r1TestPath;
     public int lineNumber;
     public String srcPath;
     public String classesDirectory;

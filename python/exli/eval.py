@@ -43,7 +43,7 @@ class Eval:
         Args:
             project_name (str): The name of the project.
             sha (str): The commit sha of the project.
-            test_types (List[str], optional): The types of tests to run. Available options are ["all", "reduced", "unit", "randoop", "evosuite"]. Defaults to None. If None, all types of tests will be run.
+            test_types (List[str], optional): The types of tests to run. Available options are ["r0", "r1", "unit", "randoop", "evosuite"]. Defaults to None. If None, all types of tests will be run.
             mutator (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
             log_path (str, optional): The path to save the log file. Defaults to None.
         """
@@ -67,9 +67,9 @@ class Eval:
 
         Util.prepare_project(project_name, sha)
 
-        # execute reduced tests first to check if there is compilation failure
+        # execute r1 tests first to check if there is compilation failure
         if test_types is None:
-            test_types = ["all", "reduced", "unit", "randoop", "evosuite"]
+            test_types = [Macros.r0, Macros.r1, "unit", "randoop", "evosuite"]
         for test_type in test_types:
             mutants = se.io.load(mutants_file, se.io.Fmt.json)
             if not mutants:
@@ -103,9 +103,9 @@ class Eval:
                             inline_test_fqn.replace(".", "/") + ".java"
                         )
                         if test_type == "all":
-                            file_path_with_inline_test = Macros.all_tests_dir
+                            file_path_with_inline_test = Macros.r0_tests_dir
                         else:
-                            file_path_with_inline_test = Macros.reduced_tests_dir
+                            file_path_with_inline_test = Macros.r1_tests_dir
                         file_path_with_inline_test = (
                             file_path_with_inline_test
                             / f"{project_name}-{sha}"
@@ -186,16 +186,16 @@ class Eval:
                             Util.parse_inline_tests(
                                 project_name,
                                 sha,
-                                f"{Macros.all_tests_dir}/{project_name}-{sha}",
-                                f"{Macros.all_its_dir}/{project_name}-{sha}",
+                                f"{Macros.r0_tests_dir}/{project_name}-{sha}",
+                                f"{Macros.r0_its_dir}/{project_name}-{sha}",
                                 file_path_with_inline_test_temp,
                             )
                         elif test_type == "reduced":
                             Util.parse_inline_tests(
                                 project_name,
                                 sha,
-                                f"{Macros.reduced_tests_dir}/{project_name}-{sha}",
-                                f"{Macros.reduced_its_dir}/{project_name}-{sha}",
+                                f"{Macros.r1_tests_dir}/{project_name}-{sha}",
+                                f"{Macros.r1_its_dir}/{project_name}-{sha}",
                                 file_path_with_inline_test_temp,
                             )
                         # clean the temp file
@@ -228,8 +228,8 @@ class Eval:
                                 run_res, returncode = Util.run_inline_tests(
                                     project_name,
                                     sha,
-                                    f"{Macros.all_its_dir}/{project_name}-{sha}",
-                                    f"{Macros.all_tests_dir}/{project_name}-{sha}/{Macros.INLINE_GEN_DIR_NAME}",
+                                    f"{Macros.r0_its_dir}/{project_name}-{sha}",
+                                    f"{Macros.r0_tests_dir}/{project_name}-{sha}/{Macros.INLINE_GEN_DIR_NAME}",
                                     deps_file,
                                     inline_test_name,
                                 )
@@ -238,8 +238,8 @@ class Eval:
                                 run_res, returncode = Util.run_inline_tests(
                                     project_name,
                                     sha,
-                                    f"{Macros.reduced_its_dir}/{project_name}-{sha}",
-                                    f"{Macros.all_tests_dir}/{project_name}-{sha}/{Macros.INLINE_GEN_DIR_NAME}",
+                                    f"{Macros.r1_its_dir}/{project_name}-{sha}",
+                                    f"{Macros.r0_tests_dir}/{project_name}-{sha}/{Macros.INLINE_GEN_DIR_NAME}",
                                     deps_file,
                                     inline_test_name,
                                 )
@@ -816,9 +816,9 @@ class Eval:
             se.bash.run(f"git checkout {sha}")
         line_no_to_test = dict()
         if test_type == "reduced":
-            source_code_dir_path = Macros.reduced_tests_dir / f"{project_name}-{sha}"
+            source_code_dir_path = Macros.r1_tests_dir / f"{project_name}-{sha}"
         elif test_type == "all":
-            source_code_dir_path = Macros.all_tests_dir / f"{project_name}-{sha}"
+            source_code_dir_path = Macros.r0_tests_dir / f"{project_name}-{sha}"
         else:
             raise Exception(f"invalid test type: {test_type}")
         java_files = glob.glob(
@@ -897,7 +897,7 @@ class Eval:
         for proj, merged_test_list in proj_to_merged_tests.items():
             sha = Util.get_sha(proj)
             res_file_path = (
-                Macros.reduced_tests_dir
+                Macros.r1_tests_dir
                 / f"{proj}-{sha}"
                 / f"inlinetest-log-{input_type}.txt"
             )
@@ -948,7 +948,7 @@ class Eval:
             se.io.mkdir(generated_tests_dir, fresh=True)
 
             for project_name, sha in Util.get_project_names_list_with_sha():
-                inline_test_log_path = f"{Macros.reduced_tests_dir}/{project_name}-{sha}/inlinetest-log-{input_type}.txt"
+                inline_test_log_path = f"{Macros.r1_tests_dir}/{project_name}-{sha}/inlinetest-log-{input_type}.txt"
                 if not os.path.exists(inline_test_log_path):
                     continue
 
@@ -1042,7 +1042,7 @@ class Eval:
     def check_num_of_inline_tests(self):
         for input_type in ["merged"] + Macros.test_minimization_algorithms:
             for project_name, commit in Util.get_project_names_list_with_sha():
-                INLINE_TEST_LOG_FILE_PATH = f"{Macros.reduced_tests_dir}/{project_name}-{commit}/inlinetest-log-{input_type}.txt"
+                INLINE_TEST_LOG_FILE_PATH = f"{Macros.r1_tests_dir}/{project_name}-{commit}/inlinetest-log-{input_type}.txt"
                 if not os.path.exists(INLINE_TEST_LOG_FILE_PATH):
                     continue
                 inline_tests = se.io.load(INLINE_TEST_LOG_FILE_PATH, se.io.Fmt.txtList)
@@ -1192,7 +1192,7 @@ class Eval:
             )
 
         # create a folder to store the reduced inline tests
-        proj_generated_tests_dir = f"{Macros.all_tests_dir}/{project_name}-{sha}"
+        proj_generated_tests_dir = f"{Macros.r0_tests_dir}/{project_name}-{sha}"
         se.io.mkdir(proj_generated_tests_dir)
 
         log_file_path = Macros.log_dir / "counter.log"

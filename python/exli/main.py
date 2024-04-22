@@ -116,25 +116,22 @@ class Main:
                 f"{Macros.downloads_dir}/{project_name}"
             )
 
-        # create a folder to store the reduced inline tests
-        proj_reduced_tests_dir = f"{Macros.reduced_tests_dir}/{project_name}-{sha}"
-        se.io.mkdir(proj_reduced_tests_dir, fresh=True)
-        # create a folder to store all inline tests
-        proj_all_tests_dir = f"{Macros.all_tests_dir}/{project_name}-{sha}"
-        se.io.mkdir(proj_all_tests_dir, fresh=True)
+        # create a folder to store the r1(reduced) inline tests
+        proj_r1_tests_dir = f"{Macros.r1_tests_dir}/{project_name}-{sha}"
+        se.io.mkdir(proj_r1_tests_dir, fresh=True)
+        # create a folder to store r0(all) inline tests
+        proj_r0_tests_dir = f"{Macros.r0_tests_dir}/{project_name}-{sha}"
+        se.io.mkdir(proj_r0_tests_dir, fresh=True)
 
-        reduced_log_path = (
-            f"{Macros.unit_tests_dir}/{project_name}-{sha}/inlinetest-log.txt"
-        )
-        if os.path.exists(reduced_log_path):
-            os.remove(reduced_log_path)
-        # by default, all inline tests are saved in a file whose name is reduced_log_path.replace(".txt", "-all.txt")
+        r1_log_path = f"{Macros.unit_tests_dir}/{project_name}-{sha}/inlinetest-r1-log.txt"
+        if os.path.exists(r1_log_path):
+            os.remove(r1_log_path)
         # related Java code: java/raninline/src/main/java/org/raninline/InstrumentHelper.java line 516
-        all_log_path = (
-            f"{Macros.unit_tests_dir}/{project_name}-{sha}/inlinetest-log-all.txt"
+        r0_log_path = (
+            f"{Macros.unit_tests_dir}/{project_name}-{sha}/inlinetest-r0-log.txt"
         )
-        if os.path.exists(all_log_path):
-            os.remove(all_log_path)
+        if os.path.exists(r0_log_path):
+            os.remove(r0_log_path)
         classes_dir = f"{Macros.downloads_dir}/{project_name}/target/classes"
         deps_file_path = f"{Macros.unit_tests_dir}/{project_name}-{sha}/deps.txt"
 
@@ -214,7 +211,7 @@ class Main:
                 is_auto_generated = Util.is_auto_generated_file(java_file_path)
                 if not is_auto_generated:
                     se.bash.run(
-                        f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="i {java_file_path} -1 {log_path} {reduced_log_path} {classes_dir}"',
+                        f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="i {java_file_path} -1 {log_path} {r0_log_path} {r1_log_path} {classes_dir}"',
                         0,
                     )
 
@@ -255,24 +252,24 @@ class Main:
 
         ################################## Save serialized data ##################################
         se.bash.run(
-            f"cp -r {Macros.downloads_dir}/{project_name}/{Macros.INLINE_GEN_DIR_NAME} {proj_all_tests_dir}"
+            f"cp -r {Macros.downloads_dir}/{project_name}/{Macros.INLINE_GEN_DIR_NAME} {proj_r0_tests_dir}"
         )
 
         ################################## Parse log ##################################
         Util.parse_log(
             project_name,
             sha,
-            reduced_log_path,
-            proj_reduced_tests_dir,
+            r1_log_path,
+            proj_r1_tests_dir,
             log_path,
         )
 
-        # parse all inline tests: for evaluation purposes
+        # parse r0 inline tests: for evaluation purposes
         Util.parse_log(
             project_name,
             sha,
-            all_log_path,
-            proj_all_tests_dir,
+            r0_log_path,
+            proj_r0_tests_dir,
             log_path,
         )
 
@@ -303,7 +300,7 @@ class Main:
                 deps_file = Util.get_deps_file_path(project_name, sha)
                 with se.TimeUtils.time_limit(3600):
                     cached_objects_dir = (
-                        Macros.all_tests_dir
+                        Macros.r0_tests_dir
                         / f"{project_name}-{sha}"
                         / Macros.INLINE_GEN_DIR_NAME
                     )
@@ -311,31 +308,33 @@ class Main:
                     self.run_inline_tests(
                         project_name,
                         sha,
-                        f"{Macros.reduced_tests_dir}/{project_name}-{sha}",
-                        f"{Macros.reduced_its_dir}/{project_name}-{sha}",
-                        f"{Macros.reduced_its_report_dir}/{project_name}-{sha}.json",
+                        f"{Macros.r1_tests_dir}/{project_name}-{sha}",
+                        f"{Macros.r1_its_dir}/{project_name}-{sha}",
+                        f"{Macros.r1_its_report_dir}/{project_name}-{sha}.json",
                         cached_objects_dir,
                         deps_file,
                         True,
                         log_path,
                     )
                     end_time = time.time()
-                    time_dict[f"{project_name}-reduced"] = end_time - start_time
+                    time_dict[f"{project_name}-{Macros.r1}"] = (
+                        end_time - start_time
+                    )
 
                     start_time = time.time()
                     self.run_inline_tests(
                         project_name,
                         sha,
-                        f"{Macros.all_tests_dir}/{project_name}-{sha}",
-                        f"{Macros.all_its_dir}/{project_name}-{sha}",
-                        f"{Macros.all_its_report_dir}/{project_name}-{sha}.json",
+                        f"{Macros.r0_tests_dir}/{project_name}-{sha}",
+                        f"{Macros.r0_its_dir}/{project_name}-{sha}",
+                        f"{Macros.r0_its_report_dir}/{project_name}-{sha}.json",
                         cached_objects_dir,
                         deps_file,
                         True,
                         log_path,
                     )
                     end_time = time.time()
-                    time_dict[f"{project_name}-all"] = end_time - start_time
+                    time_dict[f"{project_name}-{Macros.r0}"] = end_time - start_time
             except se.TimeoutException:
                 time_dict[project_name] = "timeout"
             except Exception as e:
@@ -408,18 +407,18 @@ class Main:
                 se.io.Fmt.jsonPretty,
             )
 
-    # python -m exli.main analyze_inline_tests_reports --inline_test_type="reduced"
+    # python -m exli.main analyze_inline_tests_reports --inline_test_type="r1"
     def analyze_inline_tests_reports(self, inline_test_type: str):
         """
         Generate a txt file that contains a list of failed tests and a list of passed tests.
 
         Args:
-            inline_test_type(str): reduced or all
+            inline_test_type(str): r0 or r1
         """
-        if inline_test_type == "reduced":
-            test_report_dir = Macros.reduced_its_report_dir
-        elif inline_test_type == "all":
-            test_report_dir = Macros.all_its_report_dir
+        if inline_test_type == "r0":
+            test_report_dir = Macros.r0_its_report_dir
+        elif inline_test_type == "r1":
+            test_report_dir = Macros.r1_its_report_dir
         else:
             raise Exception("unknown inline test type")
         if not os.path.exists(test_report_dir):
@@ -491,7 +490,7 @@ class Main:
             se.io.Fmt.txtList,
         )
 
-    # python -m exli.main remove_failed_tests --inline_test_type reduced
+    # python -m exli.main remove_failed_tests --inline_test_type r1
     def remove_failed_tests(self, inline_test_type: str):
         failed_tests_file = Macros.results_dir / f"{inline_test_type}-failed-tests.txt"
         failed_tests = se.io.load(failed_tests_file, se.io.Fmt.txtList)
@@ -519,10 +518,10 @@ class Main:
                 full_class_name = full_class_with_line_num.split(";")[0]
                 target_line_num = full_class_with_line_num.split(";")[1]
 
-                if inline_test_type == "reduced":
-                    file_path = Macros.reduced_tests_dir
-                elif inline_test_type == "all":
-                    file_path = Macros.all_tests_dir
+                if inline_test_type == "r0":
+                    file_path = Macros.r0_tests_dir
+                elif inline_test_type == "r1":
+                    file_path = Macros.r1_tests_dir
                 else:
                     raise Exception("unknown inline test type")
                 file_path_with_inline_test = (
@@ -621,7 +620,9 @@ class Main:
             tool(str): universalmutator or major
             test_project_name(str): only generate mutants for the specified project
         """
-        time_file_path = Macros.results_dir / "time" / f"generate-mutants-{mutator}.json"
+        time_file_path = (
+            Macros.results_dir / "time" / f"generate-mutants-{mutator}.json"
+        )
         if time_file_path.exists():
             time_dict = se.io.load(time_file_path, se.io.Fmt.json)
         else:
@@ -631,17 +632,23 @@ class Main:
             if test_project_name is not None and project_name != test_project_name:
                 continue
             if filter_with_inline_tests:
-                output_path = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
+                output_path = (
+                    Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
+                )
             else:
                 output_path = (
                     Macros.all_mutants_dir / f"{project_name}-{sha}-{mutator}.json"
                 )
 
             if skip_existing and output_path.exists():
-                print(f"Skip {project_name} {sha} because the mutants file already exists")
+                print(
+                    f"Skip {project_name} {sha} because the mutants file already exists"
+                )
                 continue
 
-            target_stmts_path = f"{Macros.results_dir}/target-stmt/{project_name}-{sha}.txt"
+            target_stmts_path = (
+                f"{Macros.results_dir}/target-stmt/{project_name}-{sha}.txt"
+            )
 
             start_time = time.time()
             self.generate_mutants(

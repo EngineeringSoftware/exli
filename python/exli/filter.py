@@ -658,7 +658,7 @@ class Filter:
                                     print(line)
                                     # get the xml file
                                     path_to_xml_file = (
-                                        Macros.reduced_tests_dir
+                                        Macros.r1_tests_dir
                                         / project_name
                                         / ".inlinegen"
                                         / "serialized-data"

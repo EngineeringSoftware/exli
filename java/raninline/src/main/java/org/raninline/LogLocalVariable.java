@@ -268,7 +268,8 @@ public class LogLocalVariable extends ModifierVisitor<Context> {
         String logStmtStr = Constant.LOG_CLASS_NAME + ".logVariableAndGenerateTest("
                 + "\"" + prompt + "\""
                 + ", " + "\"" + ctx.logPath + "\""
-                + ", " + "\"" + ctx.inlineTestPath + "\""
+                + ", " + "\"" + ctx.r0TestPath + "\""
+                + ", " + "\"" + ctx.r1TestPath + "\""
                 + ", " + "\"" + ctx.srcPath + "\""
                 + ", " + (ctx.lineNumber)
                 + ", " + variable
@@ -283,7 +284,8 @@ public class LogLocalVariable extends ModifierVisitor<Context> {
         String logStmtStr = Constant.LOG_CLASS_NAME + ".logVariableAndGenerateTest("
                 + "\"" + prompt + "\""
                 + ", " + "\"" + ctx.logPath + "\""
-                + ", " + "\"" + ctx.inlineTestPath + "\""
+                + ", " + "\"" + ctx.r0TestPath + "\""
+                + ", " + "\"" + ctx.r1TestPath + "\""
                 + ", " + "\"" + ctx.srcPath + "\""
                 + ", " + (ctx.lineNumber)
                 + ", " + "null"

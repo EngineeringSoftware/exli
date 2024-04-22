@@ -31,9 +31,8 @@ public class Parser {
      * @param inlineTestFilePath
      * @throws IOException
      */
-    public static void instrument(String srcPath, String lineNumberStr, String logFilePath, String inlineTestFilePath,
-            String classesDirectory)
-            throws IOException {
+    public static void instrument(String srcPath, String lineNumberStr, String logFilePath, String r0TestPath,
+            String r1TestPath, String classesDirectory) throws IOException {
         CompilationUnit cu = StaticJavaParser.parse(Paths.get(srcPath));
         Context ctx = new Context();
         int lineNumber = Utils.parseLineNumber(lineNumberStr);
@@ -44,7 +43,8 @@ public class Parser {
         // make the folder for the log file
         new File(logFilePath).getParentFile().mkdirs();
         ctx.logPath = logFilePath;
-        ctx.inlineTestPath = inlineTestFilePath;
+        ctx.r0TestPath = r0TestPath;
+        ctx.r1TestPath = r1TestPath;
         ctx.lineNumber = lineNumber;
         ctx.srcPath = srcPath;
         ctx.classesDirectory = classesDirectory;

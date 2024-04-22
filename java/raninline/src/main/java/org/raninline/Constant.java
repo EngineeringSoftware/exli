@@ -33,8 +33,8 @@ public class Constant {
                         AssignExpr.Operator.LEFT_SHIFT, AssignExpr.Operator.SIGNED_RIGHT_SHIFT,
                         AssignExpr.Operator.UNSIGNED_RIGHT_SHIFT);
         static String logFilePath;
-        static String inlineTestFilePath;
-        static String allInlineTestFilePath;
+        static String r0TestPath;
+        static String r1TestPath;
         static String inlineTestName = ""; // default inline test name
         final static String CONFIGURE_FILE_NAME = ".inlinegenrc";
         final static String INLINE_GEN_DIR_NAME = ".inlinegen";

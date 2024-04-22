@@ -2,14 +2,12 @@ import collections
 import hashlib
 import os
 import random
-from pathlib import Path
 
 import seutil as se
 from exli.macros import Macros
 from exli.util import Util
 from jsonargparse import CLI
 from seutil import latex
-from unidiff import PatchSet
 
 
 class Analysis:
@@ -47,7 +45,7 @@ class Analysis:
         for project_name, sha in projects:
             print(project_name)
             test_log = os.path.join(
-                Macros.reduced_tests_dir, f"{project_name}-{sha}", "raninline-log.txt"
+                Macros.r1_tests_dir, f"{project_name}-{sha}", "raninline-log.txt"
             )
             if not os.path.exists(test_log):
                 continue
@@ -264,10 +262,10 @@ class Analysis:
 
                 if inline_tests_type == "reduced":
                     inline_tests_dir = (
-                        Macros.reduced_tests_dir / f"{project_name}-{sha}"
+                        Macros.r1_tests_dir / f"{project_name}-{sha}"
                     )
                 elif inline_tests_type == "all":
-                    inline_tests_dir = Macros.all_tests_dir / f"{project_name}-{sha}"
+                    inline_tests_dir = Macros.r0_tests_dir / f"{project_name}-{sha}"
                 if not inline_tests_dir.exists():
                     continue
 
@@ -652,7 +650,7 @@ class Analysis:
         for project_name, sha in Util.get_project_names_list_with_sha():
             # TODO: not found "unique-inline-tests-counter.txt", found inline-tests-counter.txt, but is that the same file?
             unique_inline_test_file = (
-                Macros.all_tests_dir
+                Macros.r0_tests_dir
                 / f"{project_name}-{sha}"
                 / Macros.INLINE_GEN_DIR_NAME
                 / "unique-inline-tests-counter.txt"

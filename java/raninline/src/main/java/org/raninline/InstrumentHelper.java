@@ -490,13 +490,13 @@ public class InstrumentHelper {
     public static void saveReducedInlineTest(InlineTest curInlineTest) {
         inlineTests.add(curInlineTest);
         // save inline tests to file
-        saveInlineTestToFile(curInlineTest, Constant.inlineTestFilePath);
+        saveInlineTestToFile(curInlineTest, Constant.r1TestPath);
     }
 
     public static void saveAllInlineTest(InlineTest curInlineTest) {
         allInlineTests.add(curInlineTest);
         // save all inline tests to file
-        saveInlineTestToFile(curInlineTest, Constant.allInlineTestFilePath);
+        saveInlineTestToFile(curInlineTest, Constant.r0TestPath);
     }
 
     /**
@@ -511,14 +511,12 @@ public class InstrumentHelper {
      * @param clazz
      * @param classesDirectory
      */
-    public static void logVariableAndGenerateTest(String info, String logPath, String inlineTestPath, String srcPath,
-            int targetStmtNum,
-            Object variable, String variableName, Class clazz, String classesDirectory) {
+    public static void logVariableAndGenerateTest(String info, String logPath, String r0TestPath, String r1TestPath, String srcPath, int targetStmtNum, Object variable, String variableName, Class clazz, String classesDirectory) {
         if (!init) {
             init = true;
             Constant.logFilePath = logPath;
-            Constant.inlineTestFilePath = inlineTestPath;
-            Constant.allInlineTestFilePath = inlineTestPath.replace(".txt", "-all.txt");
+            Constant.r0TestPath = r0TestPath;
+            Constant.r1TestPath = r1TestPath;
             init();
         }
         String key = srcPath + ":" + targetStmtNum;
@@ -679,6 +677,9 @@ public class InstrumentHelper {
     }
 
     public static void saveInlineTestToFile(InlineTest inlineTest, String destPath) {
+        if (destPath == null) {
+            return;
+        }
         // save inline test
         try {
             FileWriter writer = new FileWriter(destPath, true);
