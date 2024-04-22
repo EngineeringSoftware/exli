@@ -415,9 +415,9 @@ class Main:
         Args:
             inline_test_type(str): r0 or r1
         """
-        if inline_test_type == "r0":
+        if inline_test_type == Macros.r0:
             test_report_dir = Macros.r0_its_report_dir
-        elif inline_test_type == "r1":
+        elif inline_test_type == Macros.r1:
             test_report_dir = Macros.r1_its_report_dir
         else:
             raise Exception("unknown inline test type")
@@ -518,9 +518,9 @@ class Main:
                 full_class_name = full_class_with_line_num.split(";")[0]
                 target_line_num = full_class_with_line_num.split(";")[1]
 
-                if inline_test_type == "r0":
+                if inline_test_type == Macros.r0:
                     file_path = Macros.r0_tests_dir
-                elif inline_test_type == "r1":
+                elif inline_test_type == Macros.r1:
                     file_path = Macros.r1_tests_dir
                 else:
                     raise Exception("unknown inline test type")

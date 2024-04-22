@@ -2,7 +2,6 @@ import collections
 import glob
 import os
 import time
-import traceback
 from typing import Dict, List, Set
 
 import seutil as se
@@ -11,7 +10,6 @@ from exli.reduce import reduce_suite
 from exli.util import Util
 from jsonargparse import CLI
 from tqdm import tqdm
-from exli.maven import MavenProject
 
 
 class Eval:
@@ -97,15 +95,17 @@ class Eval:
                         lines = file_content.splitlines()
                         lines[line_num - 1] = mutated_code
                         se.io.dump(file_path, "\n".join(lines), se.io.Fmt.txt)
-                    elif test_type in ["all", "reduced"]:
+                    elif test_type in [Macros.r0, Macros.r1]:
                         inline_test_fqn = Util.get_full_class_name(file_path)
                         inline_test_path_with_package = (
                             inline_test_fqn.replace(".", "/") + ".java"
                         )
-                        if test_type == "all":
+                        if test_type == Macros.r0:
                             file_path_with_inline_test = Macros.r0_tests_dir
-                        else:
+                        elif test_type == Macros.r1:
                             file_path_with_inline_test = Macros.r1_tests_dir
+                        else:
+                            raise Exception(f"unknown test type: {test_type}")
                         file_path_with_inline_test = (
                             file_path_with_inline_test
                             / f"{project_name}-{sha}"
@@ -174,15 +174,7 @@ class Eval:
                                 "\n".join(new_lines),
                                 se.io.Fmt.txt,
                             )
-                        # replace the target statement original code with the mutated code
-                        # exist, test_path = Util.find_inline_test(
-                        #     inline_test_name, inline_test_dir
-                        # )
-                        # print("exist test path", exist, test_path)
-                        # if exist:
-                        #     test_path = f"{inline_test_dir}/{test_path}"
-                        #     file_content = se.io.load(test_path, se.io.Fmt.txt)
-                        if test_type == "all":
+                        if test_type == Macros.r0:
                             Util.parse_inline_tests(
                                 project_name,
                                 sha,
@@ -190,7 +182,7 @@ class Eval:
                                 f"{Macros.r0_its_dir}/{project_name}-{sha}",
                                 file_path_with_inline_test_temp,
                             )
-                        elif test_type == "reduced":
+                        elif test_type == Macros.r1:
                             Util.parse_inline_tests(
                                 project_name,
                                 sha,
@@ -201,7 +193,7 @@ class Eval:
                         # clean the temp file
                         se.bash.run(f"rm {file_path_with_inline_test_temp}")
                     # add timeout when running tests
-                    if test_type in ["reduced", "all"]:
+                    if test_type in [Macros.r0, Macros.r1]:
                         log_file = (
                             eval_log
                             / f"{project_name}-{sha}-{test_type}-{inline_test_name}-{index}-{mutator}.log"
@@ -223,7 +215,7 @@ class Eval:
                             )
                             end_time = -1
                             start_time = time.time()
-                            if test_type == "all":
+                            if test_type == Macros.r0:
                                 # run all inline tests
                                 run_res, returncode = Util.run_inline_tests(
                                     project_name,
@@ -233,7 +225,7 @@ class Eval:
                                     deps_file,
                                     inline_test_name,
                                 )
-                            elif test_type == "reduced":
+                            elif test_type == Macros.r1:
                                 # run inline tests
                                 run_res, returncode = Util.run_inline_tests(
                                     project_name,
@@ -272,7 +264,7 @@ class Eval:
                                     log_file,
                                 )
                             end_time = time.time()
-                            if test_type == "all" or test_type == "reduced":
+                            if test_type == Macros.r0 or test_type == Macros.r1:
                                 if run_res == "compilation failure":
                                     mutant["compilation_failure"] = True
                                 else:
@@ -313,7 +305,7 @@ class Eval:
                 res,
                 se.io.Fmt.jsonPretty,
             )
-            if test_type == "reduced" or test_type == "all":
+            if test_type in [Macros.r0, Macros.r1]:
                 se.io.dump(
                     mutants_file,
                     updated_mutants,
@@ -331,12 +323,12 @@ class Eval:
         Batch process all projects to run tests after applying each mutant to source, and check if tests can kill the mutant.
 
         Args:
-            test_types (List[str], optional): The types of tests to run. Available options are ["all", "reduced", "unit", "randoop", "evosuite"]. Defaults to None. If None, all types of tests will be run.
+            test_types (List[str], optional): The types of tests to run. Available options are ["r0", "r1", "unit", "randoop", "evosuite"]. Defaults to None. If None, all types of tests will be run.
             mutator (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
             test_project_name (str, optional): The name of the project to be tested. If None, run tests for all projects. Defaults to None.
         """
         if test_types is None:
-            test_types = ["all", "reduced", "unit", "randoop", "evosuite"]
+            test_types = [Macros.r0, Macros.r1, "unit", "randoop", "evosuite"]
 
         time_file = (
             Macros.results_dir / "time" / f"batch-run-tests-with-mutants-{mutator}.json"
@@ -386,17 +378,17 @@ class Eval:
         for project_name, sha in Util.get_project_names_list_with_sha():
             if test_project_name is not None and project_name != test_project_name:
                 continue
-            self.test_to_killed_mutants(project_name, sha, mutator, "all")
-            self.test_to_killed_mutants(project_name, sha, mutator, "reduced")
+            self.test_to_killed_mutants(project_name, sha, mutator, Macros.r0)
+            self.test_to_killed_mutants(project_name, sha, mutator, Macros.r1)
 
     # python -m exli.eval test_to_killed_mutants
-    # --test_type "reduced"
+    # --test_type "r1"
     def test_to_killed_mutants(
         self,
         project_name: str,
         sha: str,
         mutator: str = "universalmutator",
-        test_type: str = "all",
+        test_type: str = Macros.r0,
     ):
         """
         Get the killed mutants for each test.
@@ -405,7 +397,7 @@ class Eval:
             project_name (str): The name of the project.
             sha (str): The commit sha of the project.
             mutator (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
-            test_type (str, optional): The type of tests to run. Available options are ["all", "reduced"]. Defaults to "all".
+            test_type (str, optional): The type of tests to run. Available options are ["r0", "r1"]. Defaults to "r0".
         """
         killed_mutants_file = (
             Macros.results_dir
@@ -473,7 +465,7 @@ class Eval:
         )
 
     # python -m exli.eval format_test_to_killed_mutants
-    # --test_type all --test_type reduced
+    # --test_type all --test_type r1
     def format_test_to_killed_mutants(
         self, test_type: str, mutator: str = "universalmutator"
     ):
@@ -529,7 +521,7 @@ class Eval:
         self, mutator: str = "universalmutator", test_project_name: str = None
     ):
         """
-        Batch process all projects to add back tests (from all inline tests) for mutants that are not killed by reduced tests.
+        Batch process all projects to add back tests (from r0 inline tests) for mutants that are not killed by r1 tests.
 
         Args:
             mutator (str, optional): The type of mutator. Defaults to "universalmutator".
@@ -545,7 +537,7 @@ class Eval:
         self, project_name: str, sha: str, mutator: str = "universalmutator"
     ):
         """
-        Add back tests (from all inline tests) for mutants that are not killed by reduced tests.
+        Add back tests (from all inline tests) for mutants that are not killed by r1 tests.
 
         Args:
             project_name (str): The name of the project.
@@ -554,36 +546,36 @@ class Eval:
         """
         # add back tests in R0 that can kill mutants not killed by tests in R1
         if mutator in ["universalmutator", "major"]:
-            initial_mutants_result_file = (
+            r0_mutants_result_file = (
                 Macros.results_dir
                 / "mutants-eval-results"
-                / f"{project_name}-{sha}-{mutator}-all.json"
+                / f"{project_name}-{sha}-{mutator}-{Macros.r0}.json"
             )
         else:
             raise Exception("Invalid mutant type")
 
-        if not initial_mutants_result_file.exists():
+        if not r0_mutants_result_file.exists():
             return []
-        initial_mutants_result = se.io.load(initial_mutants_result_file, se.io.Fmt.json)
+        r0_mutants_result = se.io.load(r0_mutants_result_file, se.io.Fmt.json)
 
         if mutator in ["universalmutator", "major"]:
-            reduced_mutants_result_file = (
+            r1_mutants_result_file = (
                 Macros.results_dir
                 / "mutants-eval-results"
-                / f"{project_name}-{sha}-{mutator}-reduced.json"
+                / f"{project_name}-{sha}-{mutator}-{Macros.r1}.json"
             )
         else:
             raise Exception("Invalid mutant type")
 
-        if not reduced_mutants_result_file.exists():
+        if not r1_mutants_result_file.exists():
             return []
-        reduced_mutants_result = se.io.load(reduced_mutants_result_file, se.io.Fmt.json)
+        r1_mutants_result = se.io.load(r1_mutants_result_file, se.io.Fmt.json)
 
         killed_mutant_to_tests_dict = collections.defaultdict(set)
         killed_mutants_file = (
             Macros.results_dir
             / "killed-mutants"
-            / f"{project_name}-{sha}-{mutator}-all.json"
+            / f"{project_name}-{sha}-{mutator}-{Macros.r0}.json"
         )
 
         if not killed_mutants_file.exists():
@@ -593,18 +585,18 @@ class Eval:
             test_class_name = killed_mutant["test_class_name"]
             test_method_name = killed_mutant["test_method_name"]
             mutant_index = killed_mutant["killed_mutant_index"]
-            # have to mark the source here, because the inline test line number is different between all and reduced
+            # have to mark the source here, because the inline test line number is different between r0(all) and r1(reduced)
             killed_mutant_to_tests_dict[mutant_index].add(
-                project_name + "#" + test_class_name + "#" + test_method_name + "#all"
+                project_name + "#" + test_class_name + "#" + test_method_name + "#r0"
             )
 
         mutants_to_add_back_tests = collections.defaultdict(set)
-        for index, mutated_result in enumerate(reduced_mutants_result):
-            if mutated_result["reduced-killed"]:
+        for index, mutated_result in enumerate(r1_mutants_result):
+            if mutated_result[f"{Macros.r1}-killed"]:
                 continue
             else:
-                initial_killed = initial_mutants_result[index]["all-killed"]
-                if initial_killed:
+                r0_killed = r0_mutants_result[index][f"{Macros.r0}-killed"]
+                if r0_killed:
                     # add back the test that can kill the mutant
                     if killed_mutant_to_tests_dict[index]:
                         mutants_to_add_back_tests[f"{project_name}-{index}"].update(
@@ -629,12 +621,12 @@ class Eval:
             se.io.Fmt.txtList,
         )
 
-        # merge with reduced tests
-        reduced_t2m = self.get_test_to_killed_mutants(
-            project_name, sha, mutator, "reduced"
+        # merge with r1 tests
+        r1_t2m = self.get_test_to_killed_mutants(
+            project_name, sha, mutator, Macros.r1
         )
         merged_t2m = collections.defaultdict(set)
-        for test, mutants in reduced_t2m.items():
+        for test, mutants in r1_t2m.items():
             merged_t2m[test].update(mutants)
         for test, mutants in addback_t2m.items():
             merged_t2m[test].update(mutants)
@@ -698,10 +690,10 @@ class Eval:
 
     # python -m exli.eval get_not_mutated_inline_tests
     def get_not_mutated_inline_tests(self, mutator: str = "universalmutator"):
-        # format of reduced-passed-tests.txt
+        # format of r1-passed-tests.txt
         # mp911de_logstash-gelf;biz.paluch.logging.gelf.wildfly.WildFlyJsonFormatter;119;120
         target_stmt_to_inline_tests = Util.get_target_stmt_to_inline_tests(
-            Macros.results_dir / "reduced-passed-tests.txt"
+            Macros.results_dir / f"{Macros.r1}-passed-tests.txt"
         )
         print(f"{len(target_stmt_to_inline_tests)=}")
         mutated_target_stmts = set()
@@ -815,9 +807,9 @@ class Eval:
             se.bash.run("git checkout .")
             se.bash.run(f"git checkout {sha}")
         line_no_to_test = dict()
-        if test_type == "reduced":
+        if test_type == Macros.r1:
             source_code_dir_path = Macros.r1_tests_dir / f"{project_name}-{sha}"
-        elif test_type == "all":
+        elif test_type == Macros.r0:
             source_code_dir_path = Macros.r0_tests_dir / f"{project_name}-{sha}"
         else:
             raise Exception(f"invalid test type: {test_type}")
@@ -903,33 +895,26 @@ class Eval:
             )
             res_list = []
             # load class to inline tests
-            class_line_no_to_all_inline_test = self.line_number_to_test(
-                "all", proj, sha
+            class_line_no_to_r0_inline_test = self.line_number_to_test(
+                Macros.r0, proj, sha
             )
-            class_line_no_to_reduced_inline_test = self.line_number_to_test(
-                "reduced", proj, sha
+            class_line_no_to_r1_inline_test = self.line_number_to_test(
+                Macros.r1, proj, sha
             )
             for merged_test in merged_test_list:
-                # test_class_lastname = (
-                #     merged_test.split("#")[1].split("_")[-2].split(".")[-1]
-                # )
                 test_class = merged_test.split("#")[1].rsplit("_", 1)[0]
                 test_method = merged_test.split("#")[2]
                 test_line_no = (
                     merged_test.split("#")[2].replace("testLine", "").replace("()", "")
                 )
                 print(proj, merged_test, test_class, test_method, test_line_no)
-                if merged_test.endswith("all"):
+                if merged_test.endswith(Macros.r0):
                     res_list.append(
-                        class_line_no_to_all_inline_test[
-                            test_class + "#" + test_line_no
-                        ]
+                        class_line_no_to_r0_inline_test[test_class + "#" + test_line_no]
                     )
                 else:
                     res_list.append(
-                        class_line_no_to_reduced_inline_test[
-                            test_class + "#" + test_line_no
-                        ]
+                        class_line_no_to_r1_inline_test[test_class + "#" + test_line_no]
                     )
 
             se.io.dump(res_file_path, res_list, se.io.Fmt.txtList)
@@ -966,16 +951,16 @@ class Eval:
                 )
 
     # python -m exli.eval add_passing_tests_into_java_files
-    # --test_type "reduced" or "all"
-    def add_passing_tests_into_java_files(self, test_type: str = "all"):
+    # --test_type "r0" or "r1"
+    def add_passing_tests_into_java_files(self, test_type: str = Macros.r0):
         all_pass_test_file = Macros.results_dir / f"{test_type}-passed-tests.txt"
-        if test_type == "all":
+        if test_type == Macros.r0:
             java_files_root_dir = (
-                Macros.project_dir / "supplementary-materials" / "R0-tests"
+                Macros.project_dir / "supplementary-materials" / f"{Macros.r0}-tests"
             )
-        elif test_type == "reduced":
+        elif test_type == Macros.r1:
             java_files_root_dir = (
-                Macros.project_dir / "supplementary-materials" / "R1-tests"
+                Macros.project_dir / "supplementary-materials" / f"{Macros.r1}-tests"
             )
         else:
             raise ValueError(f"Unknown test type: {test_type}")
@@ -1078,7 +1063,8 @@ class Eval:
 
         # mappings from R0/R1 tests to killed mutants, for computing mutation score
         r0_t2m_txt = se.io.load(
-            Macros.results_dir / "test-to-killed-mutants-all-universalmutator.txt",
+            Macros.results_dir
+            / f"test-to-killed-mutants-{Macros.r0}-universalmutator.txt",
             se.io.Fmt.txtList,
         )
         r0_t2m: Dict[str, Set[int]] = {}
@@ -1087,7 +1073,8 @@ class Eval:
             r0_t2m[test] = {int(mutant.split("-")[-1]) for mutant in mutants}
 
         r1_t2m_txt = se.io.load(
-            Macros.results_dir / "test-to-killed-mutants-reduced-universalmutator.txt",
+            Macros.results_dir
+            / f"test-to-killed-mutants-{Macros.r1}-universalmutator.txt",
             se.io.Fmt.txtList,
         )
         r1_t2m: Dict[str, Set[int]] = {}
@@ -1097,7 +1084,7 @@ class Eval:
 
         # mappings from R0/R1 tests to target stmts, for computing number of inline tests with mutants
         r0_stmt_tests = se.io.load(
-            Macros.results_dir / "all-passed-tests.txt", se.io.Fmt.txtList
+            Macros.results_dir / f"{Macros.r0}-passed-tests.txt", se.io.Fmt.txtList
         )
         r0_t2s: Dict[str, str] = {}
         for line in r0_stmt_tests:
@@ -1105,7 +1092,7 @@ class Eval:
             r0_t2s[f"{pname}#{clz}_{stmtno}Test#testLine{testno}()"] = f"{clz};{stmtno}"
 
         r1_stmt_tests = se.io.load(
-            Macros.results_dir / "reduced-passed-tests.txt", se.io.Fmt.txtList
+            Macros.results_dir / f"{Macros.r1}-passed-tests.txt", se.io.Fmt.txtList
         )
         r1_t2s: Dict[str, str] = {}
         for line in r1_stmt_tests:
@@ -1125,8 +1112,8 @@ class Eval:
 
             num_test_with_mutants = 0
             for test in r2_tests_proj:
-                if test.endswith("#all"):
-                    test = test.replace("#all", "")
+                if test.endswith("#" + Macros.r0):
+                    test = test.replace("#" + Macros.r0, "")
                     if test in r0_t2m:
                         for mutant in r0_t2m[test]:
                             r2_killed[mutant] = True
@@ -1162,116 +1149,6 @@ class Eval:
                 / f"{pname}-r2-{mutator}-num.json",
                 num_test_with_mutants,
             )
-
-    # python -m exli.eval count --project_name="AquaticInformatics_aquarius-sdk-java" --commit="8f4edb9"
-    def count(
-        self,
-        project_name: str,
-        sha: str = "",
-        randoop: bool = True,
-        unit: bool = True,
-        evosuite: bool = True,
-        seed: int = Macros.DEFAULT_SEED,
-    ):
-        ################################## process input, prepare project ##################################
-        inputs = f"--project_name={project_name} --commit={sha} --randoop={randoop} --unit={unit}"
-        se.bash.run(f'echo "{inputs}" >> {Macros.log_dir}/raninline.log')
-        # parse input
-        project_name = project_name.replace("/", "_")
-
-        Util.remove_jacoco_extension()
-
-        # clone project
-        print("preparing project...")
-        project = Util.prepare_project(project_name, sha)
-
-        print("cleaning project...")
-        with se.io.cd(Macros.downloads_dir / project_name):
-            full_file_paths = Util.list_java_files(
-                f"{Macros.downloads_dir}/{project_name}"
-            )
-
-        # create a folder to store the reduced inline tests
-        proj_generated_tests_dir = f"{Macros.r0_tests_dir}/{project_name}-{sha}"
-        se.io.mkdir(proj_generated_tests_dir)
-
-        log_file_path = Macros.log_dir / "counter.log"
-        INLINE_TEST_LOG_FILE_PATH = f"{proj_generated_tests_dir}/i-log.txt"
-
-        ################################## Instrument ##################################
-        with se.io.cd(Macros.downloads_dir / project_name):
-            se.bash.run("mvn test-compile " + Macros.SKIPS, 0)
-
-        print("inserting print statement...")
-        with se.io.cd(Macros.java_raninline_dir):
-            se.bash.run("mvn clean install -DskipTests " + Macros.SKIPS, 0)
-            for full_file_path in full_file_paths:
-                se.bash.run(
-                    f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="counter {full_file_path} {log_file_path} {INLINE_TEST_LOG_FILE_PATH}"',
-                    0,
-                )
-
-        print("recompiling modified file...")
-        with se.io.cd(Macros.downloads_dir / project_name):
-            maven_project = MavenProject.from_project(project)
-            maven_project.hack_pom_add_dependency(
-                "org.raninline", "raninline", "1.0-SNAPSHOT"
-            )
-            se.bash.run("mvn test-compile " + Macros.SKIPS, 0)
-
-        ################################## Run tests ##################################
-        run_tests_log_path = (
-            Macros.log_dir / "run-unit-tests" / f"{project_name}-{sha}.log"
-        )
-        if run_tests_log_path.exists():
-            run_tests_log_path.unlink()
-
-        if unit:
-            Util.run_unit_tests("Unit", project_name, run_tests_log_path, maven_project)
-        if evosuite:
-            deps_file_path = f"{Macros.unit_tests_dir}/{project_name}-{sha}/deps.txt"
-            unit_tests_dir = f"{Macros.unit_tests_dir}/{project_name}-{sha}/evosuite-tests-{seed}/evosuite-tests"
-            Util.run_unit_tests(
-                "EvoSuite",
-                project_name,
-                run_tests_log_path,
-                maven_project,
-                unit_tests_dir,
-                deps_file_path,
-            )
-        if randoop:
-            unit_tests_dir = f"{Macros.unit_tests_dir}/{project_name}-{sha}/randoop-tests-{seed}/randoop-tests"
-            Util.run_unit_tests(
-                "Randoop",
-                project_name,
-                run_tests_log_path,
-                maven_project,
-                unit_tests_dir,
-            )
-
-        ################################## Save serialized data ##################################
-        se.bash.run(
-            f"cp -r {Macros.downloads_dir}/{project_name}/{Macros.INLINE_GEN_DIR_NAME}/unique-inline-tests-counter.txt {proj_generated_tests_dir}/{Macros.INLINE_GEN_DIR_NAME}/unique-inline-tests-counter.txt"
-        )
-        se.bash.run(
-            f"cp -r {Macros.downloads_dir}/{project_name}/{Macros.INLINE_GEN_DIR_NAME}/all-target-stmts-hit-counter.txt {proj_generated_tests_dir}/{Macros.INLINE_GEN_DIR_NAME}/all-target-stmts-hit-counter.txt"
-        )
-
-    # python -m exli.main batch_count
-    def batch_count(self):
-        projects_with_shas = Util.get_project_names_list_with_sha()
-        for project_name, sha in projects_with_shas:
-            try:
-                self.count(project_name, sha, True, True, True)
-            except Exception as e:
-                print(e)
-                se.io.dump(
-                    Macros.log_dir / "batchcount.txt",
-                    [f"{project_name} {sha}: {traceback.format_exc()}"],
-                    se.io.Fmt.txtList,
-                    append=True,
-                )
-                continue
 
     # python -m exli.eval collect_randoop_tests_time
     def collect_randoop_tests_time(cls):

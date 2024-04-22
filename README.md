@@ -119,19 +119,19 @@ python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26
 
 In `exli/python` directory
 
-Execute r1 inline tests:
-
-```bash
-python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/r1-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/r1-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/r1-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/r0-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
-```
-
 Execute r0 inline tests:
 
 ```bash
 python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/r0-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/r0-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/r0-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/r0-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
 ```
 
-> These two commands run the inline tests and generate the execution report at `${HOME}/exli/results/r1-its-report/Bernardo-MG_velocity-config-tool-26226f5.json` and `${HOME}/exli/results/all-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
+Execute r1 inline tests:
+
+```bash
+python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --generated_tests_dir=${HOME}/exli/r1-tests/Bernardo-MG_velocity-config-tool-26226f5 --inline_tests_dir=${HOME}/exli/r1-its/Bernardo-MG_velocity-config-tool-26226f5 --inlinetest_report_path=${HOME}/exli/results/r1-its-report/Bernardo-MG_velocity-config-tool-26226f5.json --cached_objects_dir=${HOME}/exli/r0-tests/Bernardo-MG_velocity-config-tool-26226f5/.inlinegen --deps_file=${HOME}/exli/generated-tests/Bernardo-MG_velocity-config-tool-26226f5/deps.txt --parse_inline_tests=True --log_path=${HOME}/exli/log/run-its.log
+```
+
+> These two commands run the inline tests and generate the execution report at `${HOME}/exli/results/r1-its-report/Bernardo-MG_velocity-config-tool-26226f5.json` and `${HOME}/exli/results/r0-its-report/Bernardo-MG_velocity-config-tool-26226f5.json`
 >
 > `r1-tests` and `r0-tests` store the source code with inline tests, `r1-its` and `r0-its` store the inline tests parsed by itest framework
 > 
@@ -142,11 +142,11 @@ python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-
 After running the inline tests, we can analyze the inline tests reports to get all passed and failed inline tests.
 
 ```bash
-python -m exli.main analyze_inline_tests_reports --inline_test_type=r1
+python -m exli.main analyze_inline_tests_reports --inline_test_type=r0
 ```
 
 ```bash
-python -m exli.main analyze_inline_tests_reports --inline_test_type=r0
+python -m exli.main analyze_inline_tests_reports --inline_test_type=r1
 ```
 
 > Alternatively, to use the default setting for output dirs `python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`, this will run the inline tests for both reduced and all inline tests 
@@ -229,7 +229,7 @@ python -m exli.eval add_back_tests --project_name=Bernardo-MG_velocity-config-to
 python -m exli.eval minimize_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator
 ```
 
-In `${HOME}/exli/results/minimized`, the minimized tests (R2 tests) are stored.
+In `${HOME}/exli/results/minimized`, the minimized tests (r2 tests) are stored.
 For example, the minimized tests by greedy algorithm for the project `Bernardo-MG_velocity-config-tool` at commit `26226f5` are stored in `${HOME}/exli/results/minimized/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-greedy.txt`
 
 ```txt
