@@ -33,7 +33,7 @@ class Eval:
         test_types: List[str] = None,
         mutator: str = "universalmutator",
         log_path: str = None,
-        seed: int = 42,
+        seed: int = Macros.DEFAULT_SEED,
     ):
         """
         Apply each mutant to the project and run the inline tests to check if tests can kill the mutant.

@@ -76,7 +76,7 @@ class Generate:
         test_type: str,
         output_dir: str = None,
         log_dir: str = None,
-        seed: int = 42,
+        seed: int = Macros.DEFAULT_SEED,
         time_limit: int = 100,
         dep_file_path: str = None,
         classpath_list_path: str = None,
