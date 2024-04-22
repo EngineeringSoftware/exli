@@ -1,5 +1,5 @@
 import glob
-from typing import List, Set
+from typing import Set
 from jsonargparse import CLI
 import seutil as se
 from exli.maven import MavenProject

@@ -2,7 +2,7 @@ from jsonargparse import CLI
 import seutil as se
 from exli.macros import Macros
 import re
-from pathlib import Path
+
 
 class Collector:
     def __init__(self):
@@ -121,7 +121,7 @@ class Collector:
                     se.io.Fmt.json,
                 )
                 for json_item in json_res:
-                    res_item = {} 
+                    res_item = {}
                     res_item["line"] = int(json_item["line_number"])
                     res_item["commit"] = project_name_to_sha[project_name]
                     res_item["type"] = exp_type
@@ -130,7 +130,12 @@ class Collector:
                     res_item["target"] = json_item["line_content"][0]
                     res_item["inline test"] = ""
                     res.append(res_item)
-            se.io.dump(Macros.data_dir / project_name / f"{project_name}.yaml", res, se.io.Fmt.yaml)
+            se.io.dump(
+                Macros.data_dir / project_name / f"{project_name}.yaml",
+                res,
+                se.io.Fmt.yaml,
+            )
+
 
 if __name__ == "__main__":
     CLI(Collector, as_positional=False)

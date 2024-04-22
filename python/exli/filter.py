@@ -1,5 +1,4 @@
 import collections
-import glob
 import os
 import re
 import time
@@ -7,7 +6,6 @@ import traceback
 
 import seutil as se
 from exli.macros import Macros
-from exli.maven import MavenProject
 from exli.util import Util
 from jsonargparse import CLI
 
@@ -357,9 +355,9 @@ class Filter:
                         "evosuite-deps.txt",
                     )
                     if returncode != 0:
-                        time_dict[
-                            project_name
-                        ] = "evosuite tests failed, return code not 0"
+                        time_dict[project_name] = (
+                            "evosuite tests failed, return code not 0"
+                        )
                         print(f"evosuite tests failed for {project_name}")
                         continue
                 elif test_type == "unit":
@@ -374,9 +372,9 @@ class Filter:
                 print("parsing jacoco.exec file...")
                 self.parse_jacoco_helper(project_name, test_type, jacoco_path)
             except Exception as e:
-                time_dict[
-                    project_name
-                ] = f"{test_type} tests failed, exception {traceback.format_exc()}"
+                time_dict[project_name] = (
+                    f"{test_type} tests failed, exception {traceback.format_exc()}"
+                )
                 print(traceback.format_exc())
                 Util.remove_jacoco_extension()
                 continue

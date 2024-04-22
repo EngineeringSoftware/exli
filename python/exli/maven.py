@@ -99,17 +99,24 @@ class MavenModule:
         )
 
         if is_plugin:
-            plugins = pom.get("project", {}).get("build", {}).get("plugins", {}).get("plugin", [])
+            plugins = (
+                pom.get("project", {})
+                .get("build", {})
+                .get("plugins", {})
+                .get("plugin", [])
+            )
             if not isinstance(plugins, list):
                 plugins = [plugins]
                 pom.get("build", {}).get("plugins", {})["plugin"] = plugins
         else:
-            plugins = pom.get("project", {}).get("dependencies", {}).get("dependency", [])
+            plugins = (
+                pom.get("project", {}).get("dependencies", {}).get("dependency", [])
+            )
             if not isinstance(plugins, list):
                 plugins = [plugins]
                 pom.get("project", {}).get("dependencies", {})["dependency"] = plugins
         to_remove = None
-        
+
         for i, plugin in enumerate(plugins):
             if plugin.get("artifactId") == artifact_id:
                 to_remove = i
@@ -133,11 +140,15 @@ class MavenModule:
             su.io.load(self.project.dir / self.rel_path / "pom.xml", fmt=su.io.Fmt.txt)
         )
 
-        dependencies = pom.get("project", {}).get("dependencies", {}).get("dependency", [])
-        if not isinstance(dependencies, list): 
+        dependencies = (
+            pom.get("project", {}).get("dependencies", {}).get("dependency", [])
+        )
+        if not isinstance(dependencies, list):
             dependencies = [dependencies]
             pom.get("project", {}).get("dependencies", {})["dependency"] = dependencies
-        dependencies.append({"groupId": group_id, "artifactId": artifact_id, "version": version})
+        dependencies.append(
+            {"groupId": group_id, "artifactId": artifact_id, "version": version}
+        )
 
         su.io.dump(
             self.project.dir / self.rel_path / "pom.xml",
@@ -283,7 +294,7 @@ class MavenProject:
                     f'echo "{project_path} {module.rel_path} no dependencies" >> {log_path}',
                     0,
                 )
-                  
+
         if not dependency_list:
             su.bash.run(
                 f'echo "{project_path} no dependencies" >> {log_path}',

@@ -1,5 +1,4 @@
 import os
-import time
 
 import seutil as se
 from exli.filter import Filter
