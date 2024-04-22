@@ -74,7 +74,7 @@ class Main:
     def run(
         self,
         project_name: str,
-        sha: str = None,
+        sha: str,
         randoop: bool = True,
         randoop_tl: int = 100,
         unit: bool = True,
@@ -98,8 +98,6 @@ class Main:
             log_path (str, optional): The path for the log file. Defaults to None.
         """
         ################################## process input, prepare project ##################################
-        if sha is None:
-            sha = Util.get_sha(project_name)
         if log_path is None:
             log_path = Macros.log_dir / "raninline.log"
         inputs = f"--project_name={project_name} --sha={sha} --randoop={randoop} --randoop_tl={randoop_tl} --unit={unit} --evosuite={evosuite} --evosuite_tl={evosuite_tl} --seed={seed} --log_path={log_path}"
