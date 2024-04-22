@@ -1169,7 +1169,6 @@ class Util:
         for line in lines:
             if not line.startswith("target stmt"):
                 break
-            path = line.split(";")[1].replace("inlinegen-research", "exli-internal")
             class_name = path.split("/")[-1].split(".")[0]
             line_num = line.split(";")[2]
             if filter_with_inline_tests:
