@@ -305,6 +305,12 @@ class Util:
                 # Get classpath.
                 if classpath_list_path is not None:
                     classpath_list = Util.find_classes()
+                    # remove package-info class
+                    classpath_list = [
+                        classpath
+                        for classpath in classpath_list
+                        if not classpath.endswith("package-info")
+                    ]
                     se.io.dump(classpath_list_path, classpath_list, se.io.Fmt.txtList)
         except Exception as e:
             print(e)
