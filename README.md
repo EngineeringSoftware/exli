@@ -139,6 +139,8 @@ python -m exli.main run_inline_tests --project_name=Bernardo-MG_velocity-config-
 > 
 > The difference between "r0-its-report" and "r1-its-report" is that the "r0-its-report" contains all the inline tests, while the "r1-its-report" contains the inline tests that are reduced by the Round 1 Reducer (based on coverage)
 
+> Alternatively, to use the default setting for output dirs `python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`, this will run the inline tests for both reduced and all inline tests 
+
 After running the inline tests, we can analyze the inline tests reports to get all passed and failed inline tests.
 
 ```bash
@@ -148,8 +150,6 @@ python -m exli.main analyze_inline_tests_reports --inline_test_type=r0
 ```bash
 python -m exli.main analyze_inline_tests_reports --inline_test_type=r1
 ```
-
-> Alternatively, to use the default setting for output dirs `python -m exli.main batch_run_inline_tests --test_project_name=Bernardo-MG_velocity-config-tool`, this will run the inline tests for both reduced and all inline tests 
 
 The report shows the number of tests, errors, failures, and time. For example,
 ```json
@@ -174,7 +174,7 @@ The report shows the number of tests, errors, failures, and time. For example,
 >
 > If inline tests failed because of execution, run the following command to remove the failed inline tests:
 > 
-> `python -m exli.main remove_failed_tests --inline_test_type r1` (or `r0`)
+> `python -m exli.main remove_failed_tests --inline_test_type=r1` (or `r0`)
 >
 > Re-generate test reports:
 > 
