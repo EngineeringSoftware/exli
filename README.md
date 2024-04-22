@@ -219,8 +219,8 @@ and
 
 #### Step 5: Test reduction
 ```bash
-python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --test_types=all
-python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --test_types=reduced
+python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --test_type=all
+python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --test_type=reduced
 ```
 
 > Alternatively, to use the default settings `python -m exli.eval batch_test_to_killed_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
