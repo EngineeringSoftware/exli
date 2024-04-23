@@ -1,0 +1,11 @@
+target stmt string;/home/itdocker/exli/_downloads/mojohaus_properties-maven-plugin/src/main/java/org/codehaus/mojo/properties/PropertyResolver.java;76;null;;null
+target stmt string;/home/itdocker/exli/_downloads/mojohaus_properties-maven-plugin/src/main/java/org/codehaus/mojo/properties/ExpansionBuffer.java;35;null;;null
+target stmt string;/home/itdocker/exli/_downloads/mojohaus_properties-maven-plugin/src/main/java/org/codehaus/mojo/properties/ExpansionBuffer.java;36;null;;null
+target stmt string;/home/itdocker/exli/_downloads/mojohaus_properties-maven-plugin/src/main/java/org/codehaus/mojo/properties/ExpansionBuffer.java;87;null;;null
+target stmt string;/home/itdocker/exli/_downloads/mojohaus_properties-maven-plugin/src/main/java/org/codehaus/mojo/properties/ExpansionBuffer.java;88;null;;null
+target stmt string;/home/itdocker/exli/_downloads/mojohaus_properties-maven-plugin/src/main/java/org/codehaus/mojo/properties/ExpansionBuffer.java;98;null;;null
+target stmt string;/home/itdocker/exli/_downloads/mojohaus_properties-maven-plugin/src/main/java/org/codehaus/mojo/properties/ExpansionBuffer.java;99;null;;null
+target stmt string;/home/itdocker/exli/_downloads/mojohaus_properties-maven-plugin/src/main/java/org/codehaus/mojo/properties/ExpansionBuffer.java;104;null;;null
+target stmt string;/home/itdocker/exli/_downloads/mojohaus_properties-maven-plugin/src/main/java/org/codehaus/mojo/properties/ExpansionBuffer.java;110;null;;null
+target stmt string;/home/itdocker/exli/_downloads/mojohaus_properties-maven-plugin/src/main/java/org/codehaus/mojo/properties/ReadPropertiesMojo.java;379;null;;null
+target stmt string;/home/itdocker/exli/_downloads/mojohaus_properties-maven-plugin/src/main/java/org/codehaus/mojo/properties/ReadPropertiesMojo.java;382;null;;null

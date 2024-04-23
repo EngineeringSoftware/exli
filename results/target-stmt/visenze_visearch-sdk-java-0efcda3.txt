@@ -1,0 +1,4 @@
+target stmt string;/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java;34;null;;null
+target stmt string;/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java;35;null;;null
+target stmt string;/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java;36;null;;null
+target stmt string;/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java;42;null;;null

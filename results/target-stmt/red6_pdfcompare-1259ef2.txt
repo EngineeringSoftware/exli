@@ -1,0 +1,10 @@
+target stmt string;/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/PdfComparator.java;492;null;;null
+target stmt string;/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/AbstractCompareResultWithSwap.java;126;null;;null
+target stmt regex;/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java;149;null;;null
+target stmt regex;/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java;151;null;;null
+target stmt regex;/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java;153;null;;null
+target stmt regex;/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java;155;null;;null
+target stmt stream;/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java;174;null;;null
+target stmt stream;/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java;175;null;;null
+target stmt stream;/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java;175;null;;null
+target stmt bit;/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/CompareResultImpl.java;130;null;;null

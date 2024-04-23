@@ -1,0 +1,4 @@
+target stmt bit;/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/transaction/TransactionId.java;113;null;;null
+target stmt bit;/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/transaction/TransactionId.java;114;null;;null
+target stmt regex;/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java;180;null;;null
+target stmt string;/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/verification/ConsoleCertificateVerifier.java;62;null;;null

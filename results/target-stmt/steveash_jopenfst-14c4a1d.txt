@@ -1,0 +1,7 @@
+target stmt bit;/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableArc.java;124;null;;null
+target stmt bit;/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java;66;null;;null
+target stmt bit;/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java;90;null;;null
+target stmt bit;/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableArc.java;80;null;;null
+target stmt bit;/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java;173;null;;null
+target stmt string;/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/io/Convert.java;261;null;;null
+target stmt string;/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/io/Convert.java;364;null;;null

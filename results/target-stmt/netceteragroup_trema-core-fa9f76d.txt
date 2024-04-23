@@ -1,0 +1,10 @@
+target stmt string;/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/XMLDatabase.java;455;null;;null
+target stmt string;/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/XMLDatabase.java;470;null;;null
+target stmt string;/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/AndroidExporter.java;104;null;;null
+target stmt regex;/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/AndroidExporter.java;137;null;;null
+target stmt string;/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/AndroidExporter.java;140;null;;null
+target stmt string;/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java;21;null;;null
+target stmt string;/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java;22;null;;null
+target stmt string;/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java;23;null;;null
+target stmt string;/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/importing/CSVFile.java;183;null;;null
+target stmt string;/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/importing/CSVFile.java;184;null;;null
