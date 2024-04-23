@@ -557,7 +557,7 @@ class Util:
             maven_project = cls.get_maven_project(project_name)
         Util.configure_tests_for_jacoco_agent(project_name, Macros.dev, maven_project)
         print("compiling and executing developer-written unit tests...")
-        se.io.dump(log_file_path, ["Dev"], se.io.Fmt.txtList, append=True)
+        se.io.dump(log_file_path, [Macros.Dev], se.io.Fmt.txtList, append=True)
         with se.io.cd(Macros.downloads_dir / project_name):
             if project_name == "cyclopsgroup_jcli":
                 se.bash.run("mvn com.coveo:fmt-maven-plugin:format", 0)
@@ -602,7 +602,7 @@ class Util:
 
         ################################## Execute tests ##################################
         print("compiling and executing test cases...")
-        se.io.dump(log_file_path, ["Randoop"], se.io.Fmt.txtList, append=True)
+        se.io.dump(log_file_path, [Macros.Randoop], se.io.Fmt.txtList, append=True)
         with se.io.cd(f"{Macros.downloads_dir / project_name}"):
             comp_str = f"javac -cp {Macros.junit_jar}:{Macros.raninline_jar}:$(< {deps_file}) randoop-tests/RegressionTest*.java"
             se.bash.run(comp_str, 0)
@@ -892,7 +892,7 @@ class Util:
         with se.io.cd(Macros.downloads_dir / project_name):
             se.bash.run(f"mvn test-compile {Macros.SKIPS}")
         print("copying EvoSuite test cases...")
-        se.io.dump(log_file_path, ["EvoSuite"], se.io.Fmt.txtList, append=True)
+        se.io.dump(log_file_path, [Macros.EvoSuite], se.io.Fmt.txtList, append=True)
         se.bash.run(
             f"cp -r {generated_tests_dir} {Macros.downloads_dir/project_name}/{Macros.evosuite}-tests",
             0,

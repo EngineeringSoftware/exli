@@ -122,13 +122,13 @@ class Main:
         se.io.mkdir(proj_r0_tests_dir, fresh=True)
 
         r1_log_path = (
-            f"{Macros.unit_tests_dir}/{project_name}-{sha}/inlinetest-r1-log.txt"
+            f"{Macros.unit_tests_dir}/{project_name}-{sha}/r1-inlinetests.txt"
         )
         if os.path.exists(r1_log_path):
             os.remove(r1_log_path)
         # related Java code: java/raninline/src/main/java/org/raninline/InstrumentHelper.java line 516
         r0_log_path = (
-            f"{Macros.unit_tests_dir}/{project_name}-{sha}/inlinetest-r0-log.txt"
+            f"{Macros.unit_tests_dir}/{project_name}-{sha}/r0-inlinetests.txt"
         )
         if os.path.exists(r0_log_path):
             os.remove(r0_log_path)

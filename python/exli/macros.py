@@ -55,9 +55,12 @@ class Macros:
     r1 = "r1"  # inline tests with first round reduction
     r2 = "r2"  # inline tests with second round reduction
     evosuite = "evosuite"
+    EvoSuite = "EvoSuite"
     randoop = "randoop"
-    dev = "dev" # developer-written tests
-    unit = "unit" # the combination of dev, randoop, and evosuite
+    Randoop = "Randoop"
+    dev = "dev"  # developer-written tests
+    Dev = "Dev"
+    unit = "unit"  # the combination of dev, randoop, and evosuite
 
     TARGET_STMT_BEFORE = "target-statement-before"
     TARGET_STMT_AFTER = "target-statement-after"
@@ -104,7 +107,7 @@ class Macros:
 
     projects_with_no_inline_tests = [
         "onelogin_onelogin-java-sdk",
-        "jenkinsci_email-ext-plugin", # evosuite generated tests removed the whole directory
+        "jenkinsci_email-ext-plugin",  # evosuite generated tests removed the whole directory
     ]
 
     test_minimization_algorithms = ["ge", "gre", "greedy", "hgs"]

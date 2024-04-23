@@ -39,9 +39,9 @@ class Analysis:
 
     # python -m exli.analysis parse_log
     def parse_log(self):
-        res = {"randoop": {}, "unit": {}}
+        res = {Macros.randoop: {}, Macros.dev: {}}
         projects = Util.get_project_names_list_with_sha()
-        test_type = "randoop"
+        test_type = Macros.randoop
         for project_name, sha in projects:
             print(project_name)
             test_log = os.path.join(
@@ -49,18 +49,21 @@ class Analysis:
             )
             if not os.path.exists(test_log):
                 continue
-            covered_line_number_map = {"randoop": {}, "unit": {}}
-            covered_line_number_map_with_method_call = {"randoop": {}, "unit": {}}
+            covered_line_number_map = {Macros.randoop: {}, Macros.dev: {}}
+            covered_line_number_map_with_method_call = {
+                Macros.randoop: {},
+                Macros.dev: {},
+            }
             no_stmt_after = set()
             if_stmt_map = collections.defaultdict(set)
             lines = se.io.load(test_log).splitlines()
             index = 0
             while index < len(lines):
                 line = lines[index]
-                if line == "Unit":
-                    test_type = "unit"
-                if line == "Randoop":
-                    test_type = "randoop"
+                if line == Macros.Dev:
+                    test_type = Macros.dev
+                if line == Macros.Randoop:
+                    test_type = Macros.randoop
                 if line.startswith(Macros.TARGET_STMT_START):
                     file_name = line.split(";")[1]
                     line_number = line.split(";")[2]
@@ -121,7 +124,7 @@ class Analysis:
                     line_number = line.split(";")[2]
                     if_stmt_map[test_type].add(f"{file_name}-{line_number}")
                 index += 1
-            for test_type in ["randoop", "unit"]:
+            for test_type in [Macros.randoop, Macros.dev]:
                 res[test_type][project_name] = collections.Counter()
                 res[test_type][project_name]["if_stmt"] = len(if_stmt_map[test_type])
                 res[test_type][project_name]["if_stmt_set"] = list(
@@ -208,11 +211,14 @@ class Analysis:
                 variables[var_name] = False
 
     # python -m exli.analysis list_inline_tests
-    def list_inline_tests(self, inline_tests_type: str = "reduced"):
-        if inline_tests_type == "reduced":
-            log_name = "inlinetest-log.txt"
+    def list_inline_tests(self, inline_tests_type: str = Macros.r1):
+        if inline_tests_type == Macros.r1:
+            log_name = "r1-inlinetests.txt"
+        elif inline_tests_type == Macros.r0:
+            log_name = "r0-inlinetests.txt"
         else:
-            log_name = "inlinetest-log-all.txt"
+            raise ValueError(f"Invalid inline tests type: {inline_tests_type}")
+
         project_names = Util.get_project_names_list_with_sha()
         res = {}
         for project_name, sha in project_names:
@@ -261,9 +267,7 @@ class Analysis:
                             }
 
                 if inline_tests_type == "reduced":
-                    inline_tests_dir = (
-                        Macros.r1_tests_dir / f"{project_name}-{sha}"
-                    )
+                    inline_tests_dir = Macros.r1_tests_dir / f"{project_name}-{sha}"
                 elif inline_tests_type == "all":
                     inline_tests_dir = Macros.r0_tests_dir / f"{project_name}-{sha}"
                 if not inline_tests_dir.exists():
@@ -349,13 +353,13 @@ class Analysis:
             mutation_result_file = (
                 Macros.results_dir
                 / "mutants-eval-results"
-                / f"{project_name}-baseline.json"
+                / f"{project_name}-{Macros.r0}.json"
             )
             if not mutation_result_file.exists():
                 continue
             mutation_results = se.io.load(mutation_result_file)
             for index, mutantion_result in enumerate(mutation_results):
-                if not mutantion_result["baseline-killed"]:
+                if not mutantion_result[f"{Macros.r0}-killed"]:
                     res_item = mutants[index]
                     res.append(res_item)
         se.io.dump(
@@ -371,7 +375,7 @@ class Analysis:
             Macros.results_dir / "reduced-test-missed-mutants.json"
         )
         project_names = Util.get_project_names_list_with_sha()
-        test_type_list = ["reduced", "baseline", "unit", "randoop"]
+        test_type_list = [Macros.r0, Macros.r1, Macros.dev, Macros.randoop]
         test_type_to_not_killed = collections.Counter()
         test_type_to_not_killed_target_stmt = collections.defaultdict(set)
         test_type_to_not_killed_project = collections.defaultdict(set)
@@ -446,7 +450,7 @@ class Analysis:
                 continue
             mutants = se.io.load(mutant_file)
             test_type_to_not_killed_ = collections.defaultdict(set)
-            for test_type in ["baseline", "reduced", "unit", "randoop"]:
+            for test_type in [Macros.r0, Macros.r1, Macros.dev, Macros.randoop]:
                 mutation_result_file = (
                     Macros.results_dir
                     / "mutants-eval-results"
@@ -460,10 +464,10 @@ class Analysis:
                         test_type_to_not_killed_[test_type].add(index)
             # intersection of all test types
             not_killed_set = (
-                test_type_to_not_killed_["baseline"]
-                & test_type_to_not_killed_["reduced"]
-                & test_type_to_not_killed_["unit"]
-                & test_type_to_not_killed_["randoop"]
+                test_type_to_not_killed_[Macros.r0]
+                & test_type_to_not_killed_[Macros.r1]
+                & test_type_to_not_killed_[Macros.dev]
+                & test_type_to_not_killed_[Macros.randoop]
             )
             for not_killed_index in not_killed_set:
                 res_item = mutants[not_killed_index]
@@ -515,7 +519,7 @@ class Analysis:
             mutants = se.io.load(mutant_file)
             test_type_to_killed = collections.defaultdict(set)
             test_type_to_not_killed = collections.defaultdict(set)
-            for test_type in ["baseline", "reduced", "unit", "randoop"]:
+            for test_type in [Macros.r0, Macros.r1, Macros.dev, Macros.randoop]:
                 mutation_result_file = (
                     Macros.results_dir
                     / "mutants-eval-results"
@@ -531,9 +535,9 @@ class Analysis:
                         test_type_to_killed[test_type].add(index)
             # intersection of all test types
             not_killed_set = (
-                test_type_to_killed["baseline"]
-                & test_type_to_not_killed["unit"]
-                & test_type_to_not_killed["randoop"]
+                test_type_to_killed[Macros.r0]
+                & test_type_to_not_killed[Macros.dev]
+                & test_type_to_not_killed[Macros.randoop]
             )
             for not_killed_index in not_killed_set:
                 res_item = mutants[not_killed_index]
@@ -578,7 +582,7 @@ class Analysis:
 
     # python -m exli.analysis check_mutant_not_killed_tests
     def check_mutant_not_killed_tests(
-        self, test_type: str = "randoop", mutator: str = "universalmutator"
+        self, test_type: str = Macros.randoop, mutator: str = "universalmutator"
     ):
         covered_res = []
         not_covered_res = []
