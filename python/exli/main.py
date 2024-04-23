@@ -560,16 +560,28 @@ class Main:
         Args:
             test_project_name (str): The name of the project to be tested. If None, all projects are tested.
         """
+        time_file_path = (
+            Macros.results_dir / "time" / f"find-target-stmts.json"
+        )
+        if time_file_path.exists():
+            time_dict = se.io.load(time_file_path, se.io.Fmt.json)
+        else:
+            time_dict = {}
+            
         projects = Util.get_project_names_list_with_sha()
         for project_name, sha in projects:
             if test_project_name is not None and project_name != test_project_name:
                 continue
+            start_time = time.time()
             target_stmts_path = (
                 Macros.results_dir / "target-stmt" / f"{project_name}-{sha}.txt"
             )
             if not target_stmts_path.parent.exists():
                 target_stmts_path.parent.mkdir(parents=True)
             self.find_target_stmts(project_name, sha, target_stmts_path)
+            end_time = time.time()
+            time_dict[project_name] = end_time - start_time
+        se.io.dump(time_file_path, time_dict, se.io.Fmt.jsonPretty)
 
     def find_target_stmts(
         self,
