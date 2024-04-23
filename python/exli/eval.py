@@ -41,7 +41,7 @@ class Eval:
         Args:
             project_name (str): The name of the project.
             sha (str): The commit sha of the project.
-            test_types (List[str], optional): The types of tests to run. Available options are ["r0", "r1", "unit", "randoop", "evosuite"]. Defaults to None. If None, all types of tests will be run.
+            test_types (List[str], optional): The types of tests to run. Available options are ["r0", "r1", "dev", "randoop", "evosuite"]. Defaults to None. If None, all types of tests will be run.
             mutator (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
             log_path (str, optional): The path to save the log file. Defaults to None.
         """
@@ -67,7 +67,13 @@ class Eval:
 
         # execute r1 tests first to check if there is compilation failure
         if test_types is None:
-            test_types = [Macros.r0, Macros.r1, "unit", "randoop", "evosuite"]
+            test_types = [
+                Macros.r0,
+                Macros.r1,
+                Macros.dev,
+                Macros.randoop,
+                Macros.evosuite,
+            ]
         for test_type in test_types:
             mutants = se.io.load(mutants_file, se.io.Fmt.json)
             if not mutants:
@@ -89,7 +95,7 @@ class Eval:
                 # add inline tests to the file
                 Util.prepare_project(project_name, sha)
                 with se.io.cd(Macros.downloads_dir / project_name):
-                    if test_type in ["unit", "randoop", "evosuite"]:
+                    if test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
                         # replace the original code with the mutated code
                         file_content = se.io.load(file_path, se.io.Fmt.txt)
                         lines = file_content.splitlines()
@@ -235,27 +241,27 @@ class Eval:
                                     deps_file,
                                     inline_test_name,
                                 )
-                            elif test_type == "unit":
+                            elif test_type == Macros.dev:
                                 # run unit tests
                                 returncode = Util.run_dev_written_unit_tests(
                                     project_name, log_file
                                 )
-                            elif test_type == "randoop":
+                            elif test_type == Macros.randoop:
                                 # run randoop tests
                                 generated_tests_dir = (
                                     Macros.unit_tests_dir
                                     / f"{project_name}-{sha}"
-                                    / f"randoop-tests-{seed}"
+                                    / f"{Macros.randoop}-tests-{seed}"
                                 )
                                 returncode = Util.run_randoop(
                                     project_name, generated_tests_dir, log_file
                                 )
-                            elif test_type == "evosuite":
+                            elif test_type == Macros.evosuite:
                                 # run evosuite tests
                                 generated_tests_dir = (
                                     Macros.unit_tests_dir
                                     / f"{project_name}-{sha}"
-                                    / f"evosuite-tests-{seed}"
+                                    / f"{Macros.evosuite}-tests-{seed}"
                                 )
                                 returncode = Util.run_evosuite_command_line(
                                     project_name,
@@ -323,12 +329,18 @@ class Eval:
         Batch process all projects to run tests after applying each mutant to source, and check if tests can kill the mutant.
 
         Args:
-            test_types (List[str], optional): The types of tests to run. Available options are ["r0", "r1", "unit", "randoop", "evosuite"]. Defaults to None. If None, all types of tests will be run.
+            test_types (List[str], optional): The types of tests to run. Available options are ["r0", "r1", "dev", "randoop", "evosuite"]. Defaults to None. If None, all types of tests will be run.
             mutator (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
             test_project_name (str, optional): The name of the project to be tested. If None, run tests for all projects. Defaults to None.
         """
         if test_types is None:
-            test_types = [Macros.r0, Macros.r1, "unit", "randoop", "evosuite"]
+            test_types = [
+                Macros.r0,
+                Macros.r1,
+                Macros.dev,
+                Macros.randoop,
+                Macros.evosuite,
+            ]
 
         time_file = (
             Macros.results_dir / "time" / f"batch-run-tests-with-mutants-{mutator}.json"
@@ -843,7 +855,7 @@ class Eval:
                         line_index += 1
                         line = java_file_content[line_index]
                         inline_test_code += line.strip()
-                    # /home/user/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/validadores/DFBigDecimalValidador.java;83;new Here("Unit", 83).given(tamanho,7).given(valor,"50.xml").given(posicaoPontoFlutuante,2).checkFalse(group());
+                    # /home/user/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/validadores/DFBigDecimalValidador.java;83;new Here("Dev", 83).given(tamanho,7).given(valor,"50.xml").given(posicaoPontoFlutuante,2).checkFalse(group());
                     target_stmt_line_no = (
                         inline_test_code.split(")")[0].split(",")[-1].strip()
                     )

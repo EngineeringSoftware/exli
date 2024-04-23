@@ -77,7 +77,7 @@ class Main:
         sha: str,
         randoop: bool = True,
         randoop_tl: int = 100,
-        unit: bool = True,
+        dev: bool = True,
         evosuite: bool = True,
         evosuite_tl: int = 120,
         seed: int = Macros.DEFAULT_SEED,
@@ -91,7 +91,7 @@ class Main:
             sha (str, optional): The commit hash. If None, the latest commit is used. Defaults to None.
             randoop (bool, optional): Whether to run Randoop to generate tests. Defaults to True.
             randoop_tl (int, optional): The time limit for Randoop. Defaults to 100.
-            unit (bool, optional): Whether to run developer-written unit tests. Defaults to True.
+            dev (bool, optional): Whether to run developer-written unit tests. Defaults to True.
             evosuite (bool, optional): Whether to run EvoSuite to generate tests. Defaults to True.
             evosuite_tl (int, optional): The time limit for EvoSuite. Defaults to 120.
             seed (int, optional): The seed for test generation. Defaults to Macros.DEFAULT_SEED.
@@ -100,7 +100,7 @@ class Main:
         ################################## process input, prepare project ##################################
         if log_path is None:
             log_path = Macros.log_dir / "raninline.log"
-        inputs = f"--project_name={project_name} --sha={sha} --randoop={randoop} --randoop_tl={randoop_tl} --unit={unit} --evosuite={evosuite} --evosuite_tl={evosuite_tl} --seed={seed} --log_path={log_path}"
+        inputs = f"--project_name={project_name} --sha={sha} --randoop={randoop} --randoop_tl={randoop_tl} --dev={dev} --evosuite={evosuite} --evosuite_tl={evosuite_tl} --seed={seed} --log_path={log_path}"
         se.bash.run(f'echo "{inputs}" >> {log_path}')
 
         Util.compile_raninline()
@@ -141,10 +141,10 @@ class Main:
 
         # generate tests with Randoop / EvoSuite
         unit_tests_dir_dict = dict()
-        for tool in ["randoop", "evosuite"]:
-            if tool == "randoop" and not randoop:
+        for tool in [Macros.randoop, Macros.evosuite]:
+            if tool == Macros.randoop and not randoop:
                 continue
-            if tool == "evosuite" and not evosuite:
+            if tool == Macros.evosuite and not evosuite:
                 continue
             generated_unit_tests_dir = (
                 Macros.unit_tests_dir / f"{project_name}-{sha}" / f"{tool}-tests-{seed}"
@@ -161,9 +161,9 @@ class Main:
                 )
                 log_dir = Macros.log_dir / tool
                 Util.avoid_permission_error(project_name)
-                if tool == "randoop":
+                if tool == Macros.randoop:
                     time_limit = randoop_tl
-                elif tool == "evosuite":
+                elif tool == Macros.evosuite:
                     time_limit = evosuite_tl
                     # get target statements, and parse into classpath-list.txt
                     target_stmts_path = (
@@ -230,24 +230,24 @@ class Main:
         if run_tests_log_path.exists():
             run_tests_log_path.unlink()
 
-        if unit:
-            Util.run_unit_tests("Unit", project_name, run_tests_log_path, maven_project)
+        if dev:
+            Util.run_unit_tests(Macros.dev, project_name, run_tests_log_path, maven_project)
         if evosuite:
             Util.run_unit_tests(
-                "EvoSuite",
+                Macros.evosuite,
                 project_name,
                 run_tests_log_path,
                 maven_project,
-                unit_tests_dir_dict["evosuite"],
+                unit_tests_dir_dict[Macros.evosuite],
                 deps_file_path,
             )
         if randoop:
             Util.run_unit_tests(
-                "Randoop",
+                Macros.randoop,
                 project_name,
                 run_tests_log_path,
                 maven_project,
-                unit_tests_dir_dict["randoop"],
+                unit_tests_dir_dict[Macros.randoop],
             )
 
         ################################## Save serialized data ##################################

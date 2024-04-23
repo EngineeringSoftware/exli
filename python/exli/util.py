@@ -31,10 +31,10 @@ class Util:
         Run unit tests of a specific type.
 
         Args:
-            test_type(str): Type of the test (Unit, EvoSuite, or Randoop).
+            test_type(str): Type of the test (dev, evosuite, or randoop).
             project_name(str): Name of the project.
             log_path(str): Path for the log file.
-            maven_project(MavenProject): Maven project. Required for Unit and Randoop.
+            maven_project(MavenProject): Maven project. Required for Dev and Randoop.
             tests_dir_dict(str): Directory for tests. Required for EvoSuite and Randoop.
             deps_file_path(str): Dependencies file path. Required for EvoSuite.
             timeout(int): Timeout for the test execution. Defaults to 3600.
@@ -44,15 +44,15 @@ class Util:
 
         try:
             with se.TimeUtils.time_limit(timeout):
-                if test_type == "Unit":
+                if test_type == Macros.dev:
                     Util.run_dev_written_unit_tests(
                         project_name, log_path, maven_project, timeout
                     )
-                elif test_type == "EvoSuite":
+                elif test_type == Macros.evosuite:
                     Util.run_evosuite_command_line(
                         project_name, tests_dir, deps_file_path, log_path, None, timeout
                     )
-                elif test_type == "Randoop":
+                elif test_type == Macros.randoop:
                     Util.run_randoop(
                         project_name, tests_dir, log_path, maven_project, timeout
                     )
@@ -162,7 +162,7 @@ class Util:
                     "<skipTests>true</skipTests>", "<skipTests>false</skipTests>"
                 )
                 se.io.dump("pom.xml", pom, se.io.Format.txt)
-        if test_type == "unit":
+        if test_type == Macros.dev:
             if project_name not in [
                 "FasterXML_woodstox",
                 "restfb_restfb",
@@ -175,7 +175,7 @@ class Util:
             ]:
                 maven_project.hack_pom_delete_plugin("maven-surefire-plugin")
                 maven_project.hack_pom_delete_plugin("jacoco-maven-plugin")
-        if test_type == "randoop" or test_type == "randoop-1200":
+        if test_type == Macros.randoop or test_type == f"{Macros.randoop}-1200":
             if project_name in ["craftercms_deployer"]:
                 maven_project.hack_pom_add_dependency("junit", "junit", "4.13")
             else:
@@ -193,7 +193,7 @@ class Util:
     def configure_tests_for_jacoco_agent(
         cls, project_name: str, test_type: str, maven_project: MavenProject
     ):
-        if test_type == "randoop":
+        if test_type == Macros.randoop:
             if project_name in [
                 "Bernardo-MG_maven-site-fixer",
                 "Bernardo-MG_velocity-config-tool",
@@ -229,7 +229,7 @@ class Util:
                 elif project_name == "uwolfer_gerrit-rest-java-client":
                     return
         cls.configure_tests_for_filtering(project_name, test_type, maven_project)
-        if test_type == "unit":
+        if test_type == Macros.dev:
             if project_name in [
                 "Bernardo-MG_maven-site-fixer",
                 "Bernardo-MG_velocity-config-tool",
@@ -477,7 +477,9 @@ class Util:
                     if len(comp_failed_tests) == len(java_files):
                         return "compilation failure", -1
             if f"{Macros.r1_its_dir}" in inlinetest_dir:
-                comp_failed_tests_file = f"{Macros.r1_its_report_dir}/{project_name}-comp-failed-tests.txt"
+                comp_failed_tests_file = (
+                    f"{Macros.r1_its_report_dir}/{project_name}-comp-failed-tests.txt"
+                )
             elif f"{Macros.r0_its_dir}" in inlinetest_dir:
                 comp_failed_tests_file = (
                     f"{Macros.r0_its_report_dir}/{project_name}-comp-failed-tests.txt"
@@ -553,9 +555,9 @@ class Util:
     ):
         if maven_project is None:
             maven_project = cls.get_maven_project(project_name)
-        Util.configure_tests_for_jacoco_agent(project_name, "unit", maven_project)
-        print("compiling and executing unit tests...")
-        se.io.dump(log_file_path, ["Unit"], se.io.Fmt.txtList, append=True)
+        Util.configure_tests_for_jacoco_agent(project_name, Macros.dev, maven_project)
+        print("compiling and executing developer-written unit tests...")
+        se.io.dump(log_file_path, ["Dev"], se.io.Fmt.txtList, append=True)
         with se.io.cd(Macros.downloads_dir / project_name):
             if project_name == "cyclopsgroup_jcli":
                 se.bash.run("mvn com.coveo:fmt-maven-plugin:format", 0)
@@ -626,7 +628,9 @@ class Util:
             return -1
         if maven_project is None:
             maven_project = cls.get_maven_project(project_name)
-        Util.configure_tests_for_jacoco_agent(project_name, "randoop", maven_project)
+        Util.configure_tests_for_jacoco_agent(
+            project_name, Macros.randoop, maven_project
+        )
         try:
             Util.copy_randoop_tests_to_src_test_java(project_name, generated_tests_dir)
         except Exception as e:
@@ -651,9 +655,9 @@ class Util:
         project_name: str,
         sha: str,
         checkout: bool = True,
-        test_type="unit",
-        timeout=600,
-        allow_test_failure=False,
+        test_type: str = Macros.dev,
+        timeout: int = 600,
+        allow_test_failure: bool = False,
     ):
         res = {}
         project = Util.prepare_project(project_name, sha, checkout)
@@ -684,18 +688,18 @@ class Util:
                     se.bash.run(
                         f"cp -r target/site/jacoco {Macros.log_dir}/jacoco/{project_name}-{test_type}-jacoco-report"
                     )
-                    if test_type == "unit":
+                    if test_type == Macros.dev:
                         res["jacoco"] = True
                     else:
                         res["randoop-jacoco"] = True
                 else:
                     print("jacoco.exec not found")
-                    if test_type == "unit":
+                    if test_type == Macros.dev:
                         res["jacoco"] = False
                     else:
                         res["randoop-jacoco"] = False
             except Exception as e:
-                if test_type == "unit":
+                if test_type == Macros.dev:
                     res["jacoco"] = False
                 else:
                     res["randoop-jacoco"] = False
@@ -736,14 +740,16 @@ class Util:
         res = {}
         res["seed"] = seed
         if log_dir is None:
-            randoop_log_dir = Macros.log_dir / "randoop"
+            randoop_log_dir = Macros.log_dir / Macros.randoop
         else:
             randoop_log_dir = log_dir
         se.io.mkdir(randoop_log_dir)
-        log_path = f"{randoop_log_dir}/{project_name}-randoop.log"
-        error_log_path = f"{randoop_log_dir}/run-randoop.log"
+        log_path = f"{randoop_log_dir}/{project_name}-{Macros.randoop}.log"
+        error_log_path = f"{randoop_log_dir}/run-{Macros.randoop}.log"
 
-        randoop_tests_dir = Macros.downloads_dir / project_name / "randoop-tests"
+        randoop_tests_dir = (
+            Macros.downloads_dir / project_name / f"{Macros.randoop}-tests"
+        )
         se.io.mkdir(randoop_tests_dir)
         try:
             with se.io.cd(randoop_tests_dir):
@@ -797,12 +803,12 @@ class Util:
         res = {}
         res["seed"] = seed
         if log_dir is None:
-            evosuite_log_dir = Macros.log_dir / "evosuite"
+            evosuite_log_dir = Macros.log_dir / Macros.evosuite
         else:
             evosuite_log_dir = log_dir
         se.io.mkdir(evosuite_log_dir)
-        log_path = f"{evosuite_log_dir}/{project_name}-evosuite.log"
-        error_log_path = f"{evosuite_log_dir}/run-evosuite.log"
+        log_path = f"{evosuite_log_dir}/{project_name}-{Macros.evosuite}.log"
+        error_log_path = f"{evosuite_log_dir}/run-{Macros.evosuite}.log"
 
         try:
             with se.io.cd(Macros.downloads_dir / project_name):
@@ -857,9 +863,9 @@ class Util:
                     se.bash.run(
                         f"cp -r {Macros.downloads_dir}/{project_name}/evosuite-report {output_dir}"
                     )
-                    res["evosuite"] = True
+                    res[Macros.evosuite] = True
                 else:
-                    res["evosuite"] = False
+                    res[Macros.evosuite] = False
         except Exception as e:
             print(traceback.format_exc())
             res["evosuite"] = False
@@ -888,7 +894,7 @@ class Util:
         print("copying EvoSuite test cases...")
         se.io.dump(log_file_path, ["EvoSuite"], se.io.Fmt.txtList, append=True)
         se.bash.run(
-            f"cp -r {generated_tests_dir} {Macros.downloads_dir/project_name}/evosuite-tests",
+            f"cp -r {generated_tests_dir} {Macros.downloads_dir/project_name}/{Macros.evosuite}-tests",
             0,
         )
 
@@ -951,7 +957,7 @@ class Util:
                         class_str += f"{c} "
 
                     # run_str = f"java -javaagent:{Macros.jacoco_agent_jar} -jar {Macros.junit_jar} -cp evosuite-tests:{Macros.evosuite_runtime_jar}:$(< {deps_file}) {class_str} --details=none &>> {log_file_path}"
-                    # need to use &>> instead of &> because we want to save EvoSuite, Randoop and Unit tests' logs into one file
+                    # need to use &>> instead of &> because we want to save EvoSuite, Randoop and Dev tests' logs into one file
                     run_str = f"java -javaagent:{Macros.jacoco_agent_jar} -Dlogback.configurationFile={Macros.project_dir}/poms/logback.xml -cp evosuite-tests:{Macros.evosuite_runtime_jar}:{Macros.junit_jar}:{Macros.raninline_jar}:$(< {deps_file}) org.junit.runner.JUnitCore {class_str} &>> {log_file_path}"
                     print(run_str)
                     run_res = se.bash.run(run_str)
@@ -1143,7 +1149,12 @@ class Util:
         return target_stmt_to_inline_tests
 
     @classmethod
-    def get_target_stmts(cls, target_stmts_path: str, filter_with_inline_tests: bool = True, project_name: str = None):
+    def get_target_stmts(
+        cls,
+        target_stmts_path: str,
+        filter_with_inline_tests: bool = True,
+        project_name: str = None,
+    ):
         """
         Get target statements from the target_stmts_path file
 
@@ -1161,7 +1172,9 @@ class Util:
             return target_stmts
 
         if filter_with_inline_tests and project_name is None:
-            raise ValueError("project_name is required when filter_with_inline_tests is True")
+            raise ValueError(
+                "project_name is required when filter_with_inline_tests is True"
+            )
 
         if filter_with_inline_tests:
             r1_proj_to_target_stmts = cls.get_proj_to_target_stmts("r1")
@@ -1186,7 +1199,7 @@ class Util:
             target_stmt = path + ";" + line_num  # path;line_num
             target_stmts.add(target_stmt)
         return target_stmts
-              
+
     def get_proj_to_target_stmts(cls, inline_test_type: str = "r1"):
         # project to target statements with passing inline tests
         passed_inline_tests: list[str] = se.io.load(
@@ -1200,7 +1213,7 @@ class Util:
             target_stmt_line_num = passed_inline_test.split(";")[2]
             proj_to_target_stmts[proj].add(f"{classname};{target_stmt_line_num}")
         return proj_to_target_stmts
-      
+
     @classmethod
     # python -m main parse_log --project_name="Asana_java-asana" --sha="52fef9b"
     def parse_log(

@@ -107,7 +107,7 @@ target stmt string;/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-to
 In `exli/python` directory
 
 ```bash
-python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --randoop=True --randoop_tl=100 --unit=True --evosuite=True --evosuite_tl=120 --seed=42 --log_path=${HOME}/exli/log/raninline.log
+python -m exli.main run --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --randoop=True --randoop_tl=100 --dev=True --evosuite=True --evosuite_tl=120 --seed=42 --log_path=${HOME}/exli/log/raninline.log
 ```
 
 > The generated inline tests are in `${HOME}/exli/all-tests/Bernardo-MG_velocity-config-tool-26226f5`
