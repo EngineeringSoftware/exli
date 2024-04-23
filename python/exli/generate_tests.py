@@ -8,7 +8,7 @@ from jsonargparse import CLI
 
 
 class Generate:
-    def generate_tests_with_one_seed(
+    def generate_tests(
         self,
         project_name: str,
         sha: str,
@@ -262,7 +262,7 @@ class Generate:
                 se.io.Fmt.txtList,
             )
             log_dir = Macros.log_dir / test_type
-            self.generate_tests_with_one_seed(
+            self.generate_tests(
                 project_name,
                 sha,
                 test_type,

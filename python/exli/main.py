@@ -156,7 +156,7 @@ class Main:
                 elif tool == Macros.evosuite:
                     time_limit = evosuite_tl
 
-                Generate().generate_tests_with_one_seed(
+                Generate().generate_tests(
                     project_name,
                     sha,
                     tool,
