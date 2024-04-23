@@ -143,8 +143,10 @@ class Main:
         unit_tests_dir_dict = dict()
         for tool in [Macros.randoop, Macros.evosuite]:
             if tool == Macros.randoop and not randoop:
+                print("skip Randoop...")
                 continue
             if tool == Macros.evosuite and not evosuite:
+                print("skip EvoSuite...")
                 continue
             generated_unit_tests_dir = (
                 Macros.unit_tests_dir / f"{project_name}-{sha}" / f"{tool}-tests-{seed}"

@@ -172,17 +172,6 @@ class Generate:
                 covMap_file,
             )
 
-    def get_classes(self, project_name: str, res_type: str = "path"):
-        target_stmts = se.io.load(Macros.results_dir / "teco-target-statements.json")
-        classes = set()
-        for target_stmt in target_stmts:
-            if target_stmt["project"] == project_name:
-                if res_type == "path":
-                    classes.add(Util.file_path_to_class_path(target_stmt["filename"]))
-                elif res_type == "name":
-                    classes.add(Util.file_path_to_class_name(target_stmt["filename"]))
-        return classes
-
     def get_not_covered_classes(self, project_name: str, res_type: str = "path"):
         target_stmts_not_covered_path = (
             Macros.results_dir / "teco-target-statements-not-covered.json"

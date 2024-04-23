@@ -13,17 +13,22 @@ logger = se.log.get_logger(__name__)
 
 
 class Filter:
-    # python -m exli.filter filter_target_statements
-    def filter_target_statements(self):
+    # python -m exli.filter classify_target_statements
+    def classify_target_statements(self):
+        """
+        Classify target statements:
+        1. stream, regex, string, bit
+        2. covered by dev, randoop, evosuite
+        """
         jacoco_results = []
         repos = Util.get_project_names_list_with_sha()
         for project_name, sha in repos:
             cov_map_exists = True
-            for test_type in ["unit", "randoop", "evosuite"]:
+            for test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
                 tests_cov_file = (
                     Macros.results_dir
-                    / f"teco-{test_type}-tests"
-                    / f"{project_name}-covMap.json"
+                    / f"{test_type}-tests-cov"
+                    / f"{project_name}-{sha}-covMap.json"
                 )
                 if not tests_cov_file.exists():
                     logger.warning(f"{tests_cov_file} does not exist")
@@ -77,11 +82,11 @@ class Filter:
                 class_name = Util.file_path_to_class_name(stmt["filename"])
                 line_number = stmt["line_number"]
 
-                for test_type in ["unit", "randoop", "evosuite"]:
+                for test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
                     cov_map_path = (
                         Macros.results_dir
-                        / f"teco-{test_type}-tests"
-                        / f"{project_name}-covMap.json"
+                        / f"{test_type}-tests-cov"
+                        / f"{project_name}-{sha}-covMap.json"
                     )
                     covered_map = Util.analyze_coverage(
                         cov_map_path, class_name, line_number, test_type
@@ -89,7 +94,7 @@ class Filter:
                     stmt.update(covered_map)
                 jacoco_results.append(stmt)
             se.io.dump(
-                Macros.results_dir / "teco-target-statements.json",
+                Macros.results_dir / "target-statements.json",
                 jacoco_results,
                 fmt=se.io.Fmt.jsonPretty,
             )
