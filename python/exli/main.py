@@ -90,10 +90,10 @@ class Main:
             project_name (str): The name of the project.
             sha (str, optional): The commit hash. If None, the latest commit is used. Defaults to None.
             randoop (bool, optional): Whether to run Randoop to generate tests. Defaults to True.
-            randoop_tl (int, optional): The time limit for Randoop. Defaults to 100.
+            randoop_tl (int, optional): The time limit (seconds per class) for Randoop. Defaults to 100.
             dev (bool, optional): Whether to run developer-written unit tests. Defaults to True.
             evosuite (bool, optional): Whether to run EvoSuite to generate tests. Defaults to True.
-            evosuite_tl (int, optional): The time limit for EvoSuite. Defaults to 120.
+            evosuite_tl (int, optional): The time limit (seconds per class) for EvoSuite. Defaults to 120.
             seed (int, optional): The seed for test generation. Defaults to Macros.DEFAULT_SEED.
             log_path (str, optional): The path for the log file. Defaults to None.
         """
@@ -121,15 +121,11 @@ class Main:
         proj_r0_tests_dir = f"{Macros.r0_tests_dir}/{project_name}-{sha}"
         se.io.mkdir(proj_r0_tests_dir, fresh=True)
 
-        r1_log_path = (
-            f"{Macros.unit_tests_dir}/{project_name}-{sha}/r1-inlinetests.txt"
-        )
+        r1_log_path = f"{Macros.unit_tests_dir}/{project_name}-{sha}/r1-inlinetests.txt"
         if os.path.exists(r1_log_path):
             os.remove(r1_log_path)
         # related Java code: java/raninline/src/main/java/org/raninline/InstrumentHelper.java line 516
-        r0_log_path = (
-            f"{Macros.unit_tests_dir}/{project_name}-{sha}/r0-inlinetests.txt"
-        )
+        r0_log_path = f"{Macros.unit_tests_dir}/{project_name}-{sha}/r0-inlinetests.txt"
         if os.path.exists(r0_log_path):
             os.remove(r0_log_path)
         classes_dir = f"{Macros.downloads_dir}/{project_name}/target/classes"
@@ -154,48 +150,15 @@ class Main:
             unit_tests_dir_dict[tool] = generated_unit_tests_dir / f"{tool}-tests"
             if not unit_tests_dir_dict[tool].exists():
                 classpath_list_path = f"{generated_unit_tests_dir}/classpath-list.txt"
-                Util.prepare_project_for_test_generation(
-                    project_name,
-                    sha,
-                    deps_file_path,
-                    classpath_list_path,
-                    log_path,
-                )
                 log_dir = Macros.log_dir / tool
-                Util.avoid_permission_error(project_name)
                 if tool == Macros.randoop:
                     time_limit = randoop_tl
                 elif tool == Macros.evosuite:
                     time_limit = evosuite_tl
-                    # get target statements, and parse into classpath-list.txt
-                    target_stmts_path = (
-                        Macros.results_dir / "target-stmt" / f"{project_name}-{sha}.txt"
-                    )
-                    if target_stmts_path.exists():
-                        lines = se.io.load(target_stmts_path, se.io.Fmt.txtList)
-                        parsed_classpath_list = [
-                            Util.file_path_to_class_name(line.split(";")[1])
-                            for line in lines
-                        ]
-                        # filter in all classpath list because there are some inner classes that start with parsed_classpath + $
-                        all_classpath_list = se.io.load(
-                            classpath_list_path, se.io.Fmt.txtList
-                        )
-                        filtered_classpath_set = set()
-                        for c in all_classpath_list:
-                            for parsed_classpath in parsed_classpath_list:
-                                if c == parsed_classpath or c.startswith(
-                                    parsed_classpath + "$"
-                                ):
-                                    filtered_classpath_set.add(c)
-                        se.io.dump(
-                            classpath_list_path,
-                            list(filtered_classpath_set),
-                            se.io.Fmt.txtList,
-                        )
 
                 Generate().generate_tests_with_one_seed(
                     project_name,
+                    sha,
                     tool,
                     generated_unit_tests_dir,
                     log_dir,
@@ -233,7 +196,9 @@ class Main:
             run_tests_log_path.unlink()
 
         if dev:
-            Util.run_unit_tests(Macros.dev, project_name, run_tests_log_path, maven_project)
+            Util.run_unit_tests(
+                Macros.dev, project_name, run_tests_log_path, maven_project
+            )
         if evosuite:
             Util.run_unit_tests(
                 Macros.evosuite,
@@ -562,14 +527,12 @@ class Main:
         Args:
             test_project_name (str): The name of the project to be tested. If None, all projects are tested.
         """
-        time_file_path = (
-            Macros.results_dir / "time" / f"find-target-stmts.json"
-        )
+        time_file_path = Macros.results_dir / "time" / f"find-target-stmts.json"
         if time_file_path.exists():
             time_dict = se.io.load(time_file_path, se.io.Fmt.json)
         else:
             time_dict = {}
-            
+
         projects = Util.get_project_names_list_with_sha()
         for project_name, sha in projects:
             if test_project_name is not None and project_name != test_project_name:

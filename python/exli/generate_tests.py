@@ -8,15 +8,219 @@ from jsonargparse import CLI
 
 
 class Generate:
-    # python -m exli.generate_tests generate_tests_with_different_seeds --project_name="jkuhnert_ognl" --sha="5c30e1e"
-    def generate_tests_with_different_seeds(
+    def generate_tests_with_one_seed(
         self,
         project_name: str,
         sha: str,
-        num_seeds: int = 5,
-        test_type: str = "randoop",
+        test_type: str,
+        output_dir: str = None,
+        log_dir: str = None,
+        seed: int = Macros.DEFAULT_SEED,
+        time_limit: int = 100,
+        dep_file_path: str = None,
+        classpath_list_path: str = None,
     ):
-        if test_type == "randoop":
+        """
+        Generate tests for a project with one seed
+
+        Args:
+            project_name (str): The name of the project
+            sha (str): The commit hash of the project
+            test_type (str): The type of test, either randoop or evosuite
+            output_dir (str, optional): The directory to store the generated tests. Defaults to None.
+            log_dir (str, optional): The directory to store the logs. Defaults to None.
+            seed (int, optional): The seed for the test generation. Defaults to Macros.DEFAULT_SEED.
+            time_limit (int, optional): The time limit (seconds per class) for the test generation. Defaults to 100.
+            dep_file_path (str, optional): The path to the dependency file. Defaults to None.
+            classpath_list_path (str, optional): The path to the classpath list file. Defaults to None.
+        """
+        Util.prepare_project_for_test_generation(
+            project_name,
+            sha,
+            dep_file_path,
+            classpath_list_path,
+            (
+                log_dir / f"prepare-project.log"
+                if log_dir
+                else Macros.log_dir / "prepare-project.log"
+            ),
+        )
+        Util.avoid_permission_error(project_name)
+        if test_type == Macros.randoop:
+            res = Util.generate_randoop_tests(
+                project_name,
+                seed,
+                output_dir,
+                log_dir,
+                time_limit,
+                dep_file_path,
+                classpath_list_path,
+            )
+            Util.fix_randoop_generated_tests_helper(project_name, output_dir)
+        elif test_type == Macros.evosuite:
+            # get target statements, and parse into classpath-list.txt
+            target_stmts_path = (
+                Macros.results_dir / "target-stmt" / f"{project_name}-{sha}.txt"
+            )
+            if target_stmts_path.exists():
+                lines = se.io.load(target_stmts_path, se.io.Fmt.txtList)
+                parsed_classpath_list = [
+                    Util.file_path_to_class_name(line.split(";")[1]) for line in lines
+                ]
+                # filter in all classpath list because there are some inner classes that start with parsed_classpath + $
+                all_classpath_list = se.io.load(classpath_list_path, se.io.Fmt.txtList)
+                filtered_classpath_set = set()
+                for c in all_classpath_list:
+                    for parsed_classpath in parsed_classpath_list:
+                        if c == parsed_classpath or c.startswith(
+                            parsed_classpath + "$"
+                        ):
+                            filtered_classpath_set.add(c)
+                se.io.dump(
+                    classpath_list_path,
+                    list(filtered_classpath_set),
+                    se.io.Fmt.txtList,
+                )
+            res = Util.generate_evosuite_tests(
+                project_name,
+                seed,
+                output_dir,
+                log_dir,
+                time_limit,
+                dep_file_path,
+                classpath_list_path,
+            )
+        else:
+            res = f"Unknown test type: {test_type}"
+        print(f"When seed is {seed}, {res}")
+
+    def generate_coverage(
+        self,
+        project_name: str,
+        sha: str,
+        seeds: list[int],
+        test_type: str = Macros.randoop,
+    ):
+        """
+        Generate coverage for a project with different seeds
+
+        Args:
+            project_name (str): The name of the project
+            sha (str): The commit hash of the project
+            seeds (list[int]): The list of seeds
+            test_type (str, optional): The type of tests. Defaults to Macros.randoop.
+        """
+        res_dir = f"{Macros.results_dir}/coverage"
+        if not os.path.exists(res_dir):
+            os.makedirs(res_dir)
+        for seed in seeds:
+            generated_tests_dir = (
+                Macros.unit_tests_dir
+                / f"{project_name}-{sha}"
+                / f"{test_type}-tests-{seed}"
+            )
+            self.generate_coverage_helper(
+                project_name, sha, seed, generated_tests_dir, res_dir, test_type
+            )
+
+    def generate_coverage_helper(
+        self,
+        project_name: str,
+        sha: str,
+        seed: int,
+        generated_tests_dir: str,
+        results_dir: str,
+        test_type: str = Macros.randoop,
+    ):
+        if not os.path.exists(generated_tests_dir):
+            print(f"{test_type}_tests_dir: {generated_tests_dir} does not exist")
+            return
+        Util.prepare_project(project_name, sha)
+        print(f"project_name: {project_name}, sha: {sha}")
+        Util.copy_randoop_tests_to_src_test_java(project_name, generated_tests_dir)
+        covMap_file = (
+            f"{results_dir}/{project_name}-{sha}-{test_type}-{seed}-covMap.json"
+        )
+        if test_type == Macros.randoop:
+            # set checkout to False because Randoop tests are copied into the repo
+            Util.run_jacoco(project_name, sha, False, Macros.randoop)
+            # parse into covMap.json
+            if not os.path.exists(
+                f"{Macros.downloads_dir}/{project_name}/target/jacoco.exec"
+            ):
+                print(f"jacoco.exec file does not exist for {project_name}")
+            Filter().generate_jacoco_report(
+                f"{Macros.downloads_dir}/{project_name}/target",
+                f"{Macros.downloads_dir}/{project_name}/target/classes/",
+                covMap_file,
+            )
+        elif test_type == Macros.evosuite:
+            log_file_path = Macros.log_dir / "coverage" / "evosuite.txt"
+            try:
+                Util.run_evosuite_command_line(
+                    project_name, log_file_path, generated_tests_dir
+                )
+            except Exception as e:
+                print(f"Exception: {e}")
+            if not os.path.exists(f"{Macros.downloads_dir}/{project_name}/jacoco.exec"):
+                print(f"jacoco.exec file does not exist for {project_name}")
+            Filter().generate_jacoco_report(
+                f"{Macros.downloads_dir}/{project_name}",
+                f"{Macros.downloads_dir}/{project_name}/target/classes/",
+                covMap_file,
+            )
+
+    # python -m exli.generate_tests analyze_covered_stmts --project_name="jkuhnert_ognl" --commit="5c30e1e"
+    def analyze_covered_stmts(
+        self,
+        project_name: str,
+        sha: str,
+        seeds: list[int],
+        test_type: str = Macros.randoop,
+    ):
+        # get the class name and line number
+        target_stmts_not_covered_path = (
+            Macros.results_dir / "target-statements-not-covered.json"
+        )
+        target_stmts_not_covered = se.io.load(target_stmts_not_covered_path)
+        target_stmts = []
+        for target_stmt in target_stmts_not_covered:
+            if target_stmt["project"] == project_name:
+                target_stmts.append(target_stmt)
+        print(f"target_stmts: {len(target_stmts)}")
+        if not target_stmts:
+            print(f"target_stmts is empty for {project_name}")
+            return
+        for seed in seeds:
+            res = []
+            cov_map_path = f"{Macros.results_dir}/coverage/{project_name}-{sha}-{test_type}-{seed}-covMap.json"
+            if not os.path.exists(cov_map_path):
+                print(f"cov_map_path: {cov_map_path} does not exist")
+                continue
+            for target_stmt in target_stmts:
+                class_name = Util.file_path_to_class_name(target_stmt["filename"])
+                line_number = target_stmt["line_number"]
+                covered_map = Util.analyze_coverage(
+                    cov_map_path, class_name, line_number, test_type
+                )
+                print(f"covered_map: {covered_map}")
+                target_stmt.update(covered_map)
+                res.append(target_stmt)
+            se.io.dump(
+                f"{Macros.results_dir}/covered-stmts/{project_name}-{sha}-{test_type}-{seed}.json",
+                res,
+                se.io.Fmt.jsonPretty,
+            )
+
+    # python -m exli.generate_tests generate_tests_for_uncovered_stmts
+    def generate_tests_for_uncovered_stmts(
+        self,
+        project_name: str,
+        sha: str,
+        seeds: list[int],
+        test_type: str = Macros.randoop,
+    ):
+        if test_type == Macros.randoop:
             time_limit = 100
             not_covered_classes = self.get_not_covered_classes(project_name, "path")
             if not not_covered_classes:
@@ -27,7 +231,7 @@ class Generate:
                 clazz_deps = Util.get_dependencies(project_name, sha, not_covered_class)
                 deps.update(clazz_deps)
             classpath_list = list(deps)
-        elif test_type == "evosuite":
+        elif test_type == Macros.evosuite:
             time_limit = 120
             not_covered_classes = self.get_not_covered_classes(project_name, "name")
             if not not_covered_classes:
@@ -35,16 +239,16 @@ class Generate:
                 return
             classpath_list = list(not_covered_classes)
 
-        for seed in range(1, num_seeds + 1):
+        for seed in seeds:
             # generate tests
             generated_unit_tests_dir = (
                 Macros.unit_tests_dir
-                / f"{project_name}"
+                / f"{project_name}-{sha}"
                 / f"{test_type}-tests-{seed}"
             )
-            deps_file_path = f"{generated_unit_tests_dir}/{test_type}-deps.txt"
+            deps_file_path = f"{Macros.unit_tests_dir}/{project_name}-{sha}/deps.txt"
             classpath_list_path = f"{generated_unit_tests_dir}/classpath-list.txt"
-            log_file_path = Macros.log_dir / f"raninline-{test_type}-with-seeds.txt"
+            log_file_path = Macros.log_dir / f"raninline-{test_type}-with-seeds.log"
             Util.prepare_project_for_test_generation(
                 project_name,
                 sha,
@@ -60,6 +264,7 @@ class Generate:
             log_dir = Macros.log_dir / test_type
             self.generate_tests_with_one_seed(
                 project_name,
+                sha,
                 test_type,
                 generated_unit_tests_dir,
                 log_dir,
@@ -69,112 +274,9 @@ class Generate:
                 classpath_list_path,
             )
 
-    def generate_tests_with_one_seed(
-        self,
-        project_name: str,
-        test_type: str,
-        output_dir: str = None,
-        log_dir: str = None,
-        seed: int = Macros.DEFAULT_SEED,
-        time_limit: int = 100,
-        dep_file_path: str = None,
-        classpath_list_path: str = None,
-    ):
-        if test_type == "randoop":
-            res = Util.generate_randoop_tests(
-                project_name,
-                seed,
-                output_dir,
-                log_dir,
-                time_limit,
-                dep_file_path,
-                classpath_list_path,
-            )
-            Util.fix_randoop_generated_tests_helper(project_name, output_dir)
-        elif test_type == "evosuite":
-            res = Util.generate_evosuite_tests(
-                project_name,
-                seed,
-                output_dir,
-                log_dir,
-                time_limit,
-                dep_file_path,
-                classpath_list_path,
-            )
-        else:
-            res = f"Unknown test type: {test_type}"
-        print(f"When seed is {seed}, {res}")
-
-    # python -m exli.generate_tests generate_coverage --project_name="jkuhnert_ognl" --commit="5c30e1e"
-    def generate_coverage(
-        self,
-        project_name: str,
-        commit: str,
-        num_seeds: int = 5,
-        test_type: str = "randoop",
-    ):
-        res_dir = f"{Macros.results_dir}/{test_type}-tests-seeds"
-        if not os.path.exists(res_dir):
-            os.makedirs(res_dir)
-        for seed in range(1, num_seeds + 1):
-            self.generate_coverage_helper(
-                project_name, commit, seed, res_dir, test_type
-            )
-
-    def generate_coverage_helper(
-        self,
-        project_name: str,
-        commit: str,
-        seed: int,
-        results_dir: str,
-        test_type: str = "randoop",
-    ):
-        if seed > 0:
-            generated_tests_dir = f"{Macros.log_dir}/teco-{test_type}-test/{project_name}/{test_type}-tests-{seed}"
-        else:
-            generated_tests_dir = f"{Macros.log_dir}/teco-{test_type}-test/{project_name}/{test_type}-tests"
-        if not os.path.exists(generated_tests_dir):
-            print(f"{test_type}_tests_dir: {generated_tests_dir} does not exist")
-            return
-        Util.prepare_project(project_name, commit)
-        print(f"project_name: {project_name}, commit: {commit}")
-        Util.copy_randoop_tests_to_src_test_java(project_name, generated_tests_dir)
-        if seed > 0:
-            covMap_file = f"{results_dir}/{project_name}-covMap-{seed}.json"
-        else:
-            covMap_file = f"{results_dir}/{project_name}-covMap.json"
-        if test_type == "randoop":
-            # set checkout to False because Randoop tests are copied into the repo
-            Util.run_jacoco(project_name, commit, False, "randoop")
-            # parse into covMap.json
-            if not os.path.exists(
-                f"{Macros.downloads_dir}/{project_name}/target/jacoco.exec"
-            ):
-                print(f"jacoco.exec file does not exist for {project_name}")
-            Filter().generate_jacoco_report(
-                f"{Macros.downloads_dir}/{project_name}/target",
-                f"{Macros.downloads_dir}/{project_name}/target/classes/",
-                covMap_file,
-            )
-        elif test_type == "evosuite":
-            log_file_path = Macros.log_dir / "teco" / "evosuite.txt"
-            try:
-                Util.run_evosuite_command_line(
-                    project_name, log_file_path, generated_tests_dir
-                )
-            except Exception as e:
-                print(f"Exception: {e}")
-            if not os.path.exists(f"{Macros.downloads_dir}/{project_name}/jacoco.exec"):
-                print(f"jacoco.exec file does not exist for {project_name}")
-            Filter().generate_jacoco_report(
-                f"{Macros.downloads_dir}/{project_name}",
-                f"{Macros.downloads_dir}/{project_name}/target/classes/",
-                covMap_file,
-            )
-
     def get_not_covered_classes(self, project_name: str, res_type: str = "path"):
         target_stmts_not_covered_path = (
-            Macros.results_dir / "teco-target-statements-not-covered.json"
+            Macros.results_dir / "target-statements-not-covered.json"
         )
         target_stmts_not_covered = se.io.load(target_stmts_not_covered_path)
         not_covered_classes = set()
@@ -190,64 +292,13 @@ class Generate:
                     )
         return not_covered_classes
 
-    # python -m exli.generate_tests analyze_covered_stmts --project_name="jkuhnert_ognl" --commit="5c30e1e"
-    def analyze_covered_stmts(
-        self,
-        project_name: str,
-        commit: str,
-        num_seeds: int = 5,
-        test_type: str = "randoop",
-    ):
-        # get the class name and line number
-        target_stmts_not_covered_path = (
-            Macros.results_dir / "teco-target-statements-not-covered.json"
-        )
-        target_stmts_not_covered = se.io.load(target_stmts_not_covered_path)
-        target_stmts = []
-        for target_stmt in target_stmts_not_covered:
-            if target_stmt["project"] == project_name:
-                target_stmts.append(target_stmt)
-        print(f"target_stmts: {len(target_stmts)}")
-        if not target_stmts:
-            print(f"target_stmts is empty for {project_name}")
-            return
-        for seed in range(1, num_seeds + 1):
-            res = []
-            cov_map_path = f"{Macros.results_dir}/{test_type}-tests-seeds/{project_name}-covMap-{seed}.json"
-            if not os.path.exists(cov_map_path):
-                print(f"cov_map_path: {cov_map_path} does not exist")
-                continue
-            for target_stmt in target_stmts:
-                class_name = Util.file_path_to_class_name(target_stmt["filename"])
-                line_number = target_stmt["line_number"]
-                covered_map = Util.analyze_coverage(
-                    cov_map_path, class_name, line_number, test_type
-                )
-                print(f"covered_map: {covered_map}")
-                target_stmt.update(covered_map)
-                res.append(target_stmt)
-            se.io.dump(
-                f"{Macros.results_dir}/{test_type}-tests-seeds/{project_name}-target-stmts-{seed}.json",
-                res,
-                se.io.Fmt.jsonPretty,
-            )
-
-    # python -m exli.generate_tests batch_run_tool
-    def batch_run_tool(self, test_type: str = "randoop", num_seeds: int = 5):
-        for project_name, sha in Util.get_project_names_list_with_sha():
-            self.generate_tests_with_different_seeds(
-                project_name, sha, num_seeds, test_type
-            )
-            self.generate_coverage(project_name, sha, num_seeds, test_type)
-            self.analyze_covered_stmts(project_name, sha, num_seeds, test_type)
-
     # python -m exli.generate_tests count_covered_stmts
-    def count_covered_stmts(self, num_seeds: int = 5, test_type: str = "randoop"):
+    def count_covered_stmts(self, seeds: list[int], test_type: str = "randoop"):
         covered_stmt = set()
         projs = set()
         for project_name, sha in Util.get_project_names_list_with_sha():
-            for seed in range(1, num_seeds + 1):
-                file_path = f"{Macros.results_dir}/{test_type}-tests-seeds/{project_name}-target-stmts-{seed}.json"
+            for seed in seeds:
+                file_path = f"{Macros.results_dir}/covered-stmts/{project_name}-{sha}-{test_type}-{seed}.json"
                 if not os.path.exists(file_path):
                     continue
                 file_content = se.io.load(file_path)
@@ -263,7 +314,7 @@ class Generate:
         total_projs = set()
         updated_not_covered_res = []
         not_covered_stmts = se.io.load(
-            Macros.results_dir / "teco-target-statements-not-covered.json"
+            Macros.results_dir / "target-statements-not-covered.json"
         )
         for item in not_covered_stmts:
             k = item["filename"] + item["line_number"]
@@ -281,16 +332,6 @@ class Generate:
             updated_not_covered_res,
             se.io.Fmt.jsonPretty,
         )
-
-    # python -m exli.generate_tests batch_generate_coverage
-    def batch_generate_coverage(self):
-        for project_name, commit in Util.get_project_names_list_with_sha():
-            if project_name != "red6_pdfcompare":
-                continue
-            res_dir = f"{Macros.results_dir}/teco-evosuite-tests"
-            if not os.path.exists(res_dir):
-                os.makedirs(res_dir)
-            self.generate_coverage_helper(project_name, commit, 0, res_dir, "evosuite")
 
 
 if __name__ == "__main__":

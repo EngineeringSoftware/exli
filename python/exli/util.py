@@ -669,7 +669,7 @@ class Util:
                     project_name, test_type, maven_project
                 )
                 test_rr = se.bash.run(
-                    f"mvn clean test {Macros.SKIPS_NO_JACOCO} > {Macros.log_dir}/jacoco/{project_name}-{test_type}-jacoco.txt",
+                    f"mvn clean test {Macros.SKIPS_NO_JACOCO} > {Macros.log_dir}/jacoco/{project_name}-{sha}-{test_type}-jacoco.txt",
                     timeout=timeout,
                 )
                 if test_rr.returncode != 0 and not allow_test_failure:
@@ -678,31 +678,22 @@ class Util:
                 if jacoco_exec:
                     print("jacoco.exec found")
                     se.bash.run(
-                        f"mvn jacoco:report > {Macros.log_dir}/jacoco/{project_name}-{test_type}-jacoco-report.txt",
+                        f"mvn jacoco:report > {Macros.log_dir}/jacoco/{project_name}-{sha}-{test_type}-jacoco-report.txt",
                         timeout=120,
                     )
                     se.bash.run(
-                        f"rm -rf {Macros.log_dir}/jacoco/{project_name}-{test_type}-jacoco-report"
+                        f"rm -rf {Macros.log_dir}/jacoco/{project_name}-{sha}-{test_type}-jacoco-report"
                     )
                     print("copying jacoco report...")
                     se.bash.run(
-                        f"cp -r target/site/jacoco {Macros.log_dir}/jacoco/{project_name}-{test_type}-jacoco-report"
+                        f"cp -r target/site/jacoco {Macros.log_dir}/jacoco/{project_name}-{sha}-{test_type}-jacoco-report"
                     )
-                    if test_type == Macros.dev:
-                        res["jacoco"] = True
-                    else:
-                        res["randoop-jacoco"] = True
+                    res[f"{test_type}-jacoco"] = True
                 else:
                     print("jacoco.exec not found")
-                    if test_type == Macros.dev:
-                        res["jacoco"] = False
-                    else:
-                        res["randoop-jacoco"] = False
+                    res[f"{test_type}-jacoco"] = False
             except Exception as e:
-                if test_type == Macros.dev:
-                    res["jacoco"] = False
-                else:
-                    res["randoop-jacoco"] = False
+                res[f"{test_type}-jacoco"] = False
                 res["exception"] = traceback.format_exc()
             Util.remove_jacoco_extension()
             return res
