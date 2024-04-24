@@ -98,7 +98,7 @@ class Generate:
         self,
         project_name: str,
         sha: str,
-        seeds: list[int],
+        seeds: list[int] = [Macros.DEFAULT_SEED],
         test_type: str = Macros.randoop,
     ):
         """
@@ -137,11 +137,11 @@ class Generate:
             return
         Util.prepare_project(project_name, sha)
         print(f"project_name: {project_name}, sha: {sha}")
-        Util.copy_randoop_tests_to_src_test_java(project_name, generated_tests_dir)
         covMap_file = (
             f"{results_dir}/{project_name}-{sha}-{test_type}-{seed}-covMap.json"
         )
         if test_type == Macros.randoop:
+            Util.copy_randoop_tests_to_src_test_java(project_name, generated_tests_dir)
             # set checkout to False because Randoop tests are copied into the repo
             Util.run_jacoco(project_name, sha, False, Macros.randoop)
             # parse into covMap.json
