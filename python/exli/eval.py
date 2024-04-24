@@ -430,8 +430,9 @@ class Eval:
         if not mutants_file.exists():
             return
         mutants = se.io.load(mutants_file, se.io.Fmt.json)
-        for index, mutant in enumerate(mutants):
+        for mutant in mutants:
             # log/eval/AquaticInformatics_aquarius-sdk-java-8f4edb9-all-AquariusServerVersion_19Test.java-0-{mutator}.log
+            index = mutant["id"]
             filepath = mutant["filepath"]
             linenumber = mutant["linenumber"]
             test_name = (
@@ -468,7 +469,7 @@ class Eval:
                         "test_method_name": test_case["@name"],
                         "target_stmt_linenumber": target_stmt_linenumber,
                         "inline_test_linenumber": inline_test_linenumber,
-                        "killed_mutant_index": index,
+                        "id": index,
                         "killed_mutant_file_path": filepath,
                     }
                     killed_mutants_res.append(killed_mutants_item)
@@ -478,24 +479,6 @@ class Eval:
             killed_mutants_res,
             se.io.Fmt.jsonPretty,
         )
-
-    # python -m exli.eval format_test_to_killed_mutants
-    # --test_type all --test_type r1
-    def format_test_to_killed_mutants(
-        self, test_type: str, mutator: str = Macros.universalmutator
-    ):
-        result_file = (
-            Macros.results_dir / f"test-to-killed-mutants-{test_type}-{mutator}.txt"
-        )
-        results = []
-        test_to_killed_mutants_dict = collections.defaultdict(set)
-        for project_name, sha in Util.get_project_names_list_with_sha():
-            test_to_killed_mutants_dict.update(
-                self.get_test_to_killed_mutants(project_name, sha, mutator, test_type)
-            )
-        for test_name, killed_mutants in test_to_killed_mutants_dict.items():
-            results.append(test_name + "," + ",".join(killed_mutants))
-        se.io.dump(result_file, results, se.io.Fmt.txtList)
 
     def get_test_to_killed_mutants(
         self,
@@ -516,7 +499,7 @@ class Eval:
         for killed_mutant in killed_mutants:
             test_class_name = killed_mutant["test_class_name"]
             test_method_name = killed_mutant["test_method_name"]
-            mutant_index = killed_mutant["killed_mutant_index"]
+            mutant_index = killed_mutant["id"]
             test_to_killed_mutants_dict[
                 project_name + "#" + test_class_name + "#" + test_method_name
             ].add(f"{project_name}-{mutant_index}")
@@ -599,14 +582,15 @@ class Eval:
         for killed_mutant in killed_mutants:
             test_class_name = killed_mutant["test_class_name"]
             test_method_name = killed_mutant["test_method_name"]
-            mutant_index = killed_mutant["killed_mutant_index"]
+            mutant_index = killed_mutant["id"]
             # have to mark the source here, because the inline test line number is different between r0(all) and r1(reduced)
             killed_mutant_to_tests_dict[mutant_index].add(
                 project_name + "#" + test_class_name + "#" + test_method_name
             )
 
         mutants_to_add_back_tests = collections.defaultdict(set)
-        for index, mutated_result in enumerate(r1_mutants_result):
+        for mutated_result in r1_mutants_result:
+            index = mutated_result["id"]
             if mutated_result[f"{Macros.r1}-killed"]:
                 continue
             else:
