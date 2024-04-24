@@ -61,7 +61,10 @@ class Macros:
     dev = "dev"  # developer-written tests
     Dev = "Dev"
     unit = "unit"  # the combination of dev, randoop, and evosuite
-
+    test_minimization_algorithms = ["ge", "gre", "greedy", "hgs"]
+    ITEST_DECLARE = "itest"
+    universalmutator = "universalmutator"
+    major = "major"
     TARGET_STMT_BEFORE = "target-statement-before"
     TARGET_STMT_AFTER = "target-statement-after"
     TARGET_STMT_START = "target-statement-start"
@@ -109,7 +112,3 @@ class Macros:
         "onelogin_onelogin-java-sdk",
         "jenkinsci_email-ext-plugin",  # evosuite generated tests removed the whole directory
     ]
-
-    test_minimization_algorithms = ["ge", "gre", "greedy", "hgs"]
-
-    ITEST_DECLARE = "itest"

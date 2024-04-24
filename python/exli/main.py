@@ -668,7 +668,7 @@ class Main:
         Util.prepare_project(project_name, sha)
 
         # loop through lines in file:https://stackoverflow.com/questions/48124206/iterate-through-a-file-lines-in-python
-        if mutator == "universalmutator":
+        if mutator == Macros.universalmutator:
             for target_stmt in target_stmts:
                 orig_path = target_stmt.split(";")[0]
                 line_num = target_stmt.split(";")[1]
@@ -676,7 +676,7 @@ class Main:
                     project_name, orig_path, line_num
                 )
                 result.extend(line_results)
-        elif mutator == "major":
+        elif mutator == Macros.major:
             file_to_line_nums = collections.defaultdict(set)
             for target_stmt in target_stmts:
                 orig_path = target_stmt.split(";")[0]

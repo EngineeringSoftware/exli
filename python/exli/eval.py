@@ -10,6 +10,7 @@ from exli.reduce import reduce_suite
 from exli.util import Util
 from jsonargparse import CLI
 from tqdm import tqdm
+import re
 
 
 class Eval:
@@ -87,6 +88,10 @@ class Eval:
                 original_code = mutant["orginal_code"].strip()
                 mutated_code = mutant["mutated_code"].strip()
                 file_path = mutant["filepath"]
+                if not file_path.startswith(Macros.home_dir):
+                    file_path = re.sub(
+                        r"/home/[^/]+/", f"{Macros.home_dir}/", file_path
+                    )
                 line_num = mutant["linenumber"]
                 inline_test_name = (
                     file_path.split("/")[-1].split(".")[0] + f"_{line_num}Test.java"
@@ -652,6 +657,37 @@ class Eval:
             se.io.Fmt.txtList,
         )
 
+    def batch_minimize_tests(self, mutator: str = "universalmutator"):
+        """
+        Batch process all projects to minimize the tests that can kill the mutants.
+
+        Args:
+            test_project_name (str, optional): The name of the project to be tested. If None, minimize tests for all projects. Defaults to None.
+            mutator (str, optional): The type of mutator. Defaults to "universalmutator".
+        """
+        # merge the results into one file
+        data_file = (
+            Macros.results_dir
+            / "killed-mutants"
+            / "merged-tests-to-killed-mutants"
+            / f"all-projects-{mutator}.txt"
+        )
+        for project_name, sha in Util.get_project_names_list_with_sha():
+            proj_data_file = (
+                Macros.results_dir
+                / "killed-mutants"
+                / "merged-tests-to-killed-mutants"
+                / f"{project_name}-{sha}-{mutator}.txt"
+            )
+            if proj_data_file.exists():
+                se.bash.run(f"cat {proj_data_file} >> {data_file}")
+        for algorithm in Macros.test_minimization_algorithms:
+            # minimize the tests
+            out_file = (
+                Macros.results_dir / "minimized" / f"r2-{mutator}-{algorithm}.txt"
+            )
+            self.minimize_tests_helper(algorithm, data_file, out_file)
+
     # python -m exli.eval minimize_tests
     def minimize_tests(
         self, project_name: str, sha: str, mutator: str = "universalmutator"
@@ -670,32 +706,36 @@ class Eval:
             / "merged-tests-to-killed-mutants"
             / f"{project_name}-{sha}-{mutator}.txt"
         )
-        if not data_file.exists():
-            print(f"no data file {data_file}")
-            return
 
-        orig_file = se.io.mktmp("exli")
-        se.bash.run(f"cut -d, -f1 '{data_file}' > '{orig_file}'", 0)
         for algorithm in Macros.test_minimization_algorithms:
             out_file = (
                 Macros.results_dir
                 / "minimized"
                 / f"{project_name}-{sha}-{mutator}-{algorithm}.txt"
             )
-            if not out_file.parent.exists():
-                se.bash.run(f"mkdir -p {out_file.parent}")
+            self.minimize_tests_helper(algorithm, data_file, out_file)
 
-            # run test minimization scripts
-            reduce_suite(
-                data_file=data_file,
-                orig_file=orig_file,
-                algorithm=algorithm,
-                out=out_file,
-                tiebreak_map={},  # no tiebreak
-            )
-            # sort results
-            selected_tests = se.io.load(out_file, se.io.Fmt.txtList)
-            se.io.dump(out_file, sorted(selected_tests), se.io.Fmt.txtList)
+    def minimize_tests_helper(self, algorithm: str, data_file: str, out_file: str):
+        if not data_file.exists():
+            print(f"no data file {data_file}")
+            return
+
+        if not out_file.parent.exists():
+            se.bash.run(f"mkdir -p {out_file.parent}")
+
+        orig_file = se.io.mktmp("exli")
+        se.bash.run(f"cut -d, -f1 '{data_file}' > '{orig_file}'", 0)
+        # run test minimization scripts
+        reduce_suite(
+            data_file=data_file,
+            orig_file=orig_file,
+            algorithm=algorithm,
+            out=out_file,
+            tiebreak_map={},  # no tiebreak
+        )
+        # sort results
+        selected_tests = se.io.load(out_file, se.io.Fmt.txtList)
+        se.io.dump(out_file, sorted(selected_tests), se.io.Fmt.txtList)
         se.io.rm(orig_file)
 
     def batch_minimize_tests(self, test_project_name: str = None):

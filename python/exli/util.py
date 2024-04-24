@@ -925,7 +925,7 @@ class Util:
             # add raninline.jar to evosuite-deps.txt
             deps = se.io.load(deps_file, se.io.Fmt.txt).strip()
             # TODO: hacky fix of file path problems
-            deps = re.sub(r"/home/[^/]+/", f"/home/{os.getenv('USER')}/", deps)
+            deps = re.sub(r"/home/[^/]+/", f"{Macros.home_dir}/", deps)
             se.io.dump(deps_file, deps, se.io.Fmt.txt)
 
             comp_str = f"shopt -s globstar; javac -cp {Macros.evosuite_runtime_jar}:{Macros.junit_jar}:{Macros.raninline_jar}:$(< {deps_file}) evosuite-tests/**/*.java"
@@ -1187,6 +1187,8 @@ class Util:
                 if f"{class_name};{line_num}" not in inline_tests_target_stmts:
                     print(f"skip {class_name};{line_num}, not in inline tests")
                     continue
+            if not path.startswith(f"{Macros.home_dir}/"):
+                path = re.sub(r"/home/[^/]+/", f"{Macros.home_dir}/", path)
             target_stmt = path + ";" + line_num  # path;line_num
             target_stmts.add(target_stmt)
         return target_stmts
