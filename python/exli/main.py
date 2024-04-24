@@ -583,7 +583,7 @@ class Main:
         self,
         skip_existing: bool = False,
         filter_with_inline_tests: bool = True,
-        mutator: str = "universalmutator",
+        mutator: str = Macros.universalmutator,
         test_project_name: str = None,
     ):
         """
@@ -645,7 +645,7 @@ class Main:
         sha: str,
         target_stmts_path: str,
         output_path: str,
-        mutator: str = "universalmutator",
+        mutator: str = Macros.universalmutator,
         filter_with_inline_tests: bool = True,
     ):
         """
