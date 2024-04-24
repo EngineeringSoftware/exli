@@ -88,7 +88,7 @@ class Eval:
                 original_code = mutant["orginal_code"].strip()
                 mutated_code = mutant["mutated_code"].strip()
                 file_path = mutant["filepath"]
-                if not file_path.startswith(Macros.home_dir):
+                if not file_path.startswith(f"{Macros.home_dir}"):
                     file_path = re.sub(
                         r"/home/[^/]+/", f"{Macros.home_dir}/", file_path
                     )
