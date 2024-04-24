@@ -535,40 +535,14 @@ class Eval:
         self, project_name: str, sha: str, mutator: str = Macros.universalmutator
     ):
         """
-        Add back tests (from all inline tests) for mutants that are not killed by r1 tests.
+        Add back tests in r0 that can kill mutants not killed by tests in r1.
 
         Args:
             project_name (str): The name of the project.
             sha (str): The commit sha of the project.
             mutator (str, optional): The type of mutator. Defaults to "universalmutator".
         """
-        # add back tests in R0 that can kill mutants not killed by tests in R1
-        if mutator in [Macros.universalmutator, Macros.major]:
-            r0_mutants_result_file = (
-                Macros.results_dir
-                / "mutants-eval-results"
-                / f"{project_name}-{sha}-{mutator}-{Macros.r0}.json"
-            )
-        else:
-            raise Exception("Invalid mutant type")
-
-        if not r0_mutants_result_file.exists():
-            return []
-        r0_mutants_result = se.io.load(r0_mutants_result_file, se.io.Fmt.json)
-
-        if mutator in [Macros.universalmutator, Macros.major]:
-            r1_mutants_result_file = (
-                Macros.results_dir
-                / "mutants-eval-results"
-                / f"{project_name}-{sha}-{mutator}-{Macros.r1}.json"
-            )
-        else:
-            raise Exception("Invalid mutant type")
-
-        if not r1_mutants_result_file.exists():
-            return []
-        r1_mutants_result = se.io.load(r1_mutants_result_file, se.io.Fmt.json)
-
+        # collect the mutants that are killed by r0
         killed_mutant_to_tests_dict = collections.defaultdict(set)
         killed_mutants_file = (
             Macros.results_dir
@@ -583,24 +557,37 @@ class Eval:
             test_class_name = killed_mutant["test_class_name"]
             test_method_name = killed_mutant["test_method_name"]
             mutant_index = killed_mutant["id"]
-            # have to mark the source here, because the inline test line number is different between r0(all) and r1(reduced)
             killed_mutant_to_tests_dict[mutant_index].add(
                 project_name + "#" + test_class_name + "#" + test_method_name
             )
+            
+        # load the mutantion results of r1
+        if mutator in [Macros.universalmutator, Macros.major]:
+            r1_mutants_result_file = (
+                Macros.results_dir
+                / "mutants-eval-results"
+                / f"{project_name}-{sha}-{mutator}-{Macros.r1}.json"
+            )
+        else:
+            raise Exception("Invalid mutant type")
 
+        if not r1_mutants_result_file.exists():
+            return []
+        r1_mutants_result = se.io.load(r1_mutants_result_file, se.io.Fmt.json)
+
+        # for each mutant that is not killed by r1, add back the r0 tests that can kill the mutant
         mutants_to_add_back_tests = collections.defaultdict(set)
         for mutated_result in r1_mutants_result:
             index = mutated_result["id"]
             if mutated_result[f"{Macros.r1}-killed"]:
                 continue
             else:
-                r0_killed = r0_mutants_result[index][f"{Macros.r0}-killed"]
-                if r0_killed:
+                if index in killed_mutant_to_tests_dict:
+                    # this mutant is not killed by r1 tests but killed by r0 tests
                     # add back the test that can kill the mutant
-                    if killed_mutant_to_tests_dict[index]:
-                        mutants_to_add_back_tests[f"{project_name}-{index}"].update(
-                            killed_mutant_to_tests_dict[index]
-                        )
+                    mutants_to_add_back_tests[f"{project_name}-{index}"].update(
+                        killed_mutant_to_tests_dict[index]
+                    )
 
         # all mutants to add back tests -> test to killed mutants
         addback_t2m = collections.defaultdict(set)
