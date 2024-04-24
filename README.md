@@ -229,8 +229,6 @@ python -m exli.eval add_back_tests --project_name=Bernardo-MG_velocity-config-to
 python -m exli.eval minimize_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator
 ```
 
-> Alternatively, to use the default settings `python -m exli.eval batch_minimize_tests --test_project_name=Bernardo-MG_velocity-config-tool`
-
 `${HOME}/exli/results/minimized` stores the minimized tests by 4
 different algorithms: `Greedy`, `GE`, `GRE`,
 `HGS`, which are called r2 tests in the paper.  For
