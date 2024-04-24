@@ -32,7 +32,7 @@ class Eval:
         project_name: str,
         sha: str,
         test_types: List[str] = None,
-        mutator: str = "universalmutator",
+        mutator: str = Macros.universalmutator,
         log_path: str = None,
         seed: int = Macros.DEFAULT_SEED,
     ):
@@ -49,7 +49,7 @@ class Eval:
         if sha is None:
             sha = Util.get_sha(project_name)
 
-        if mutator in ["universalmutator", "major"]:
+        if mutator in [Macros.universalmutator, Macros.major]:
             mutants_file = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
         else:
             raise Exception(f"Unknown mutant type: {mutator}")
@@ -327,7 +327,7 @@ class Eval:
     def batch_run_tests_with_mutants(
         self,
         test_types: List[str] = None,
-        mutator: str = "universalmutator",
+        mutator: str = Macros.universalmutator,
         test_project_name: str = None,
     ):
         """
@@ -383,7 +383,7 @@ class Eval:
 
     # python -m exli.eval batch_test_to_killed_mutants --mutator "universalmutator"
     def batch_test_to_killed_mutants(
-        self, mutator: str = "universalmutator", test_project_name: str = None
+        self, mutator: str = Macros.universalmutator, test_project_name: str = None
     ):
         """
         Batch process all projects to get the killed mutants for each test.
@@ -404,7 +404,7 @@ class Eval:
         self,
         project_name: str,
         sha: str,
-        mutator: str = "universalmutator",
+        mutator: str = Macros.universalmutator,
         test_type: str = Macros.r0,
     ):
         """
@@ -424,7 +424,7 @@ class Eval:
 
         killed_mutants_res = []
 
-        if mutator in ["universalmutator", "major"]:
+        if mutator in [Macros.universalmutator, Macros.major]:
             mutants_file = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
         else:
             raise Exception("unknown mutant type")
@@ -484,7 +484,7 @@ class Eval:
     # python -m exli.eval format_test_to_killed_mutants
     # --test_type all --test_type r1
     def format_test_to_killed_mutants(
-        self, test_type: str, mutator: str = "universalmutator"
+        self, test_type: str, mutator: str = Macros.universalmutator
     ):
         result_file = (
             Macros.results_dir / f"test-to-killed-mutants-{test_type}-{mutator}.txt"
@@ -535,7 +535,7 @@ class Eval:
 
     # python -m exli.eval batch_add_back_tests
     def batch_add_back_tests(
-        self, mutator: str = "universalmutator", test_project_name: str = None
+        self, mutator: str = Macros.universalmutator, test_project_name: str = None
     ):
         """
         Batch process all projects to add back tests (from r0 inline tests) for mutants that are not killed by r1 tests.
@@ -551,7 +551,7 @@ class Eval:
 
     # python -m exli.eval add_back_tests
     def add_back_tests(
-        self, project_name: str, sha: str, mutator: str = "universalmutator"
+        self, project_name: str, sha: str, mutator: str = Macros.universalmutator
     ):
         """
         Add back tests (from all inline tests) for mutants that are not killed by r1 tests.
@@ -562,7 +562,7 @@ class Eval:
             mutator (str, optional): The type of mutator. Defaults to "universalmutator".
         """
         # add back tests in R0 that can kill mutants not killed by tests in R1
-        if mutator in ["universalmutator", "major"]:
+        if mutator in [Macros.universalmutator, Macros.major]:
             r0_mutants_result_file = (
                 Macros.results_dir
                 / "mutants-eval-results"
@@ -575,7 +575,7 @@ class Eval:
             return []
         r0_mutants_result = se.io.load(r0_mutants_result_file, se.io.Fmt.json)
 
-        if mutator in ["universalmutator", "major"]:
+        if mutator in [Macros.universalmutator, Macros.major]:
             r1_mutants_result_file = (
                 Macros.results_dir
                 / "mutants-eval-results"
@@ -657,7 +657,7 @@ class Eval:
             se.io.Fmt.txtList,
         )
 
-    def batch_minimize_tests(self, mutator: str = "universalmutator"):
+    def batch_minimize_tests(self, mutator: str = Macros.universalmutator):
         """
         Batch process all projects to minimize the tests that can kill the mutants.
 
@@ -690,7 +690,7 @@ class Eval:
 
     # python -m exli.eval minimize_tests
     def minimize_tests(
-        self, project_name: str, sha: str, mutator: str = "universalmutator"
+        self, project_name: str, sha: str, mutator: str = Macros.universalmutator
     ):
         """
         Minimize the tests that can kill the mutants.
@@ -748,10 +748,10 @@ class Eval:
         for project_name, sha in Util.get_project_names_list_with_sha():
             if test_project_name is not None and project_name != test_project_name:
                 continue
-            self.minimize_tests(project_name, sha, "universalmutator")
+            self.minimize_tests(project_name, sha, Macros.universalmutator)
 
     # python -m exli.eval get_not_mutated_inline_tests
-    def get_not_mutated_inline_tests(self, mutator: str = "universalmutator"):
+    def get_not_mutated_inline_tests(self, mutator: str = Macros.universalmutator):
         # format of r1-passed-tests.txt
         # mp911de_logstash-gelf;biz.paluch.logging.gelf.wildfly.WildFlyJsonFormatter;119;120
         target_stmt_to_inline_tests = Util.get_target_stmt_to_inline_tests(
@@ -759,12 +759,12 @@ class Eval:
         )
         print(f"{len(target_stmt_to_inline_tests)=}")
         mutated_target_stmts = set()
-        for project_name in Util.get_project_names_list():
-            if mutator == "universalmutator":
-                mutant_file = Macros.results_dir / "mutants" / f"{project_name}.json"
-            elif mutator == "major":
+        for project_name, sha in Util.get_project_names_list_with_sha():
+            if mutator in [Macros.universalmutator, Macros.major]:
                 mutant_file = (
-                    Macros.results_dir / "mutants" / f"{project_name}-major.json"
+                    Macros.results_dir
+                    / "mutants"
+                    / f"{project_name}-{sha}-{mutator}.json"
                 )
             else:
                 raise Exception("unknown mutant type")
@@ -789,7 +789,7 @@ class Eval:
         return not_mutated_inline_tests
 
     # python -m exli.eval save_not_mutated_inline_tests
-    def save_not_mutated_inline_tests(self, mutator: str = "universalmutator"):
+    def save_not_mutated_inline_tests(self, mutator: str = Macros.universalmutator):
         se.io.dump(
             Macros.results_dir / f"not-mutated-inline-tests-{mutator}.txt",
             sorted(self.get_not_mutated_inline_tests(mutator=mutator)),
@@ -797,7 +797,9 @@ class Eval:
         )
 
     # python -m exli.eval save_r2_inline_test_no_source_code
-    def save_r2_inline_test_no_source_code(self, mutator: str = "universalmutator"):
+    def save_r2_inline_test_no_source_code(
+        self, mutator: str = Macros.universalmutator
+    ):
         not_mutated_inline_tests = se.io.load(
             Macros.results_dir / f"not-mutated-inline-tests-{mutator}.txt",
             se.io.Fmt.txtList,
@@ -922,7 +924,7 @@ class Eval:
 
     # python -m exli.eval add_merged_tests_to_log_file
     def add_merged_tests_to_log_file(
-        self, input_type: str = "merged", mutator: str = "universalmutator"
+        self, input_type: str = "merged", mutator: str = Macros.universalmutator
     ):
         # load merged tests
         if input_type == "merged":
@@ -1113,7 +1115,7 @@ class Eval:
     # python -m exli.eval compute_r2_mutants_results --mutator "universalmutator"
     # the mutator here is the mutantion tool used during R2 reduction; the eval mutation tool is always universalmutator
     def compute_r2_mutants_results(
-        self, mutator: str = "universalmutator", algorithm: str = "greedy"
+        self, mutator: str = Macros.universalmutator, algorithm: str = "greedy"
     ):
         r2_tests = se.io.load(
             Macros.results_dir / "r2" / f"{algorithm}-{mutator}.txt",
