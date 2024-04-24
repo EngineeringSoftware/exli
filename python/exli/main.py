@@ -690,6 +690,9 @@ class Main:
 
         # save results
         if result:
+            # for each item in result, add index
+            for i, item in enumerate(result):
+                item["id"] = i
             se.io.dump(
                 output_path,
                 result,
