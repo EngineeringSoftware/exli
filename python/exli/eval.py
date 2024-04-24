@@ -46,9 +46,6 @@ class Eval:
             mutator (str, optional): The type of mutator. Available options are ["universalmutator", "major"]. Defaults to "universalmutator".
             log_path (str, optional): The path to save the log file. Defaults to None.
         """
-        if sha is None:
-            sha = Util.get_sha(project_name)
-
         if mutator in [Macros.universalmutator, Macros.major]:
             mutants_file = Macros.mutants_dir / f"{project_name}-{sha}-{mutator}.json"
         else:
@@ -82,7 +79,7 @@ class Eval:
                 return
             res = []
             updated_mutants = []
-            for index, mutant in enumerate(tqdm(mutants)):
+            for mutant in tqdm(mutants):
                 if "compilation_failure" in mutant and mutant["compilation_failure"]:
                     continue
                 original_code = mutant["orginal_code"].strip()
@@ -97,6 +94,7 @@ class Eval:
                     file_path.split("/")[-1].split(".")[0] + f"_{line_num}Test.java"
                 )
                 mutant_res = {}
+                mutant_res["id"] = mutant["id"]
                 # add inline tests to the file
                 Util.prepare_project(project_name, sha)
                 with se.io.cd(Macros.downloads_dir / project_name):
@@ -207,10 +205,10 @@ class Eval:
                     if test_type in [Macros.r0, Macros.r1]:
                         log_file = (
                             eval_log
-                            / f"{project_name}-{sha}-{test_type}-{inline_test_name}-{index}-{mutator}.log"
+                            / f"{project_name}-{sha}-{test_type}-{inline_test_name}-{mutant['id']}-{mutator}.log"
                         )
                     else:
-                        # no enough space to save all the log files
+                        # no enough space to save all the log files, so Macros.dev, Macros.randoop, Macros.evosuite will share the same log file across different mutants
                         log_file = (
                             eval_log / f"{project_name}-{sha}-{test_type}-{mutator}.log"
                         )
