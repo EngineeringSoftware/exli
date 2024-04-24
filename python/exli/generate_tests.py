@@ -94,6 +94,21 @@ class Generate:
             res = f"Unknown test type: {test_type}"
         print(f"When seed is {seed}, {res}")
 
+    def batch_generate_coverage(self, test_project_name: str = None):
+        """
+        Generate coverage for all projects
+
+        Args:
+            test_project_name (str, optional): The name of the project to test. Defaults to None.
+        """
+        for project_name, sha in Util.get_project_names_list_with_sha():
+            if test_project_name and project_name != test_project_name:
+                continue
+            for test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
+                self.generate_coverage(
+                    project_name, sha, [Macros.DEFAULT_SEED], test_type
+                )
+
     def generate_coverage(
         self,
         project_name: str,
@@ -142,7 +157,9 @@ class Generate:
         )
         if test_type in [Macros.randoop, Macros.dev]:
             if test_type == Macros.randoop:
-                Util.copy_randoop_tests_to_src_test_java(project_name, generated_tests_dir)
+                Util.copy_randoop_tests_to_src_test_java(
+                    project_name, generated_tests_dir
+                )
             # set checkout to False because Randoop tests are copied into the repo
             Util.run_jacoco(project_name, sha, False, Macros.randoop)
             # parse into covMap.json
@@ -172,48 +189,6 @@ class Generate:
             )
         else:
             raise ValueError(f"Unknown test type: {test_type}")
-
-    # python -m exli.generate_tests analyze_covered_stmts --project_name="jkuhnert_ognl" --commit="5c30e1e"
-    def analyze_covered_stmts(
-        self,
-        project_name: str,
-        sha: str,
-        seeds: list[int],
-        test_type: str = Macros.randoop,
-    ):
-        # get the class name and line number
-        target_stmts_not_covered_path = (
-            Macros.results_dir / "target-statements-not-covered.json"
-        )
-        target_stmts_not_covered = se.io.load(target_stmts_not_covered_path)
-        target_stmts = []
-        for target_stmt in target_stmts_not_covered:
-            if target_stmt["project"] == project_name:
-                target_stmts.append(target_stmt)
-        print(f"target_stmts: {len(target_stmts)}")
-        if not target_stmts:
-            print(f"target_stmts is empty for {project_name}")
-            return
-        for seed in seeds:
-            res = []
-            cov_map_path = f"{Macros.results_dir}/coverage/{project_name}-{sha}-{test_type}-{seed}-covMap.json"
-            if not os.path.exists(cov_map_path):
-                print(f"cov_map_path: {cov_map_path} does not exist")
-                continue
-            for target_stmt in target_stmts:
-                class_name = Util.file_path_to_class_name(target_stmt["filename"])
-                line_number = target_stmt["line_number"]
-                covered_map = Util.analyze_coverage(
-                    cov_map_path, class_name, line_number, test_type
-                )
-                print(f"covered_map: {covered_map}")
-                target_stmt.update(covered_map)
-                res.append(target_stmt)
-            se.io.dump(
-                f"{Macros.results_dir}/covered-stmts/{project_name}-{sha}-{test_type}-{seed}.json",
-                res,
-                se.io.Fmt.jsonPretty,
-            )
 
     # python -m exli.generate_tests generate_tests_for_uncovered_stmts
     def generate_tests_for_uncovered_stmts(
@@ -294,6 +269,58 @@ class Generate:
                         Util.file_path_to_class_name(target_stmt["filename"])
                     )
         return not_covered_classes
+
+    # python -m exli.generate_tests analyze_covered_stmts --project_name="jkuhnert_ognl" --commit="5c30e1e"
+    def analyze_covered_stmts(
+        self,
+        project_name: str,
+        sha: str,
+        seeds: list[int],
+        test_type: str = Macros.randoop,
+    ):
+        """
+        For statements that are not covered by the initial tests, if we generate tests with different seeds,
+        see if they are covered by the new tests.
+
+        Args:
+            project_name (str): The name of the project
+            sha (str): The commit hash of the project
+            seeds (list[int]): The list of seeds
+            test_type (str, optional): The type of tests. Defaults to Macros.randoop.
+        """
+        # get the class name and line number
+        target_stmts_not_covered_path = (
+            Macros.results_dir / "target-statements-not-covered.json"
+        )
+        target_stmts_not_covered = se.io.load(target_stmts_not_covered_path)
+        target_stmts = []
+        for target_stmt in target_stmts_not_covered:
+            if target_stmt["project"] == project_name:
+                target_stmts.append(target_stmt)
+        print(f"target_stmts: {len(target_stmts)}")
+        if not target_stmts:
+            print(f"target_stmts is empty for {project_name}")
+            return
+        for seed in seeds:
+            res = []
+            cov_map_path = f"{Macros.results_dir}/coverage/{project_name}-{sha}-{test_type}-{seed}-covMap.json"
+            if not os.path.exists(cov_map_path):
+                print(f"cov_map_path: {cov_map_path} does not exist")
+                continue
+            for target_stmt in target_stmts:
+                class_name = Util.file_path_to_class_name(target_stmt["filename"])
+                line_number = target_stmt["line_number"]
+                covered_map = Util.analyze_coverage(
+                    cov_map_path, class_name, line_number, test_type
+                )
+                print(f"covered_map: {covered_map}")
+                target_stmt.update(covered_map)
+                res.append(target_stmt)
+            se.io.dump(
+                f"{Macros.results_dir}/covered-stmts/{project_name}-{sha}-{test_type}-{seed}.json",
+                res,
+                se.io.Fmt.jsonPretty,
+            )
 
     # python -m exli.generate_tests count_covered_stmts
     def count_covered_stmts(self, seeds: list[int], test_type: str = "randoop"):
