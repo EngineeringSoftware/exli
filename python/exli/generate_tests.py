@@ -140,8 +140,9 @@ class Generate:
         covMap_file = (
             f"{results_dir}/{project_name}-{sha}-{test_type}-{seed}-covMap.json"
         )
-        if test_type == Macros.randoop:
-            Util.copy_randoop_tests_to_src_test_java(project_name, generated_tests_dir)
+        if test_type in [Macros.randoop, Macros.dev]:
+            if test_type == Macros.randoop:
+                Util.copy_randoop_tests_to_src_test_java(project_name, generated_tests_dir)
             # set checkout to False because Randoop tests are copied into the repo
             Util.run_jacoco(project_name, sha, False, Macros.randoop)
             # parse into covMap.json
@@ -169,6 +170,8 @@ class Generate:
                 f"{Macros.downloads_dir}/{project_name}/target/classes/",
                 covMap_file,
             )
+        else:
+            raise ValueError(f"Unknown test type: {test_type}")
 
     # python -m exli.generate_tests analyze_covered_stmts --project_name="jkuhnert_ognl" --commit="5c30e1e"
     def analyze_covered_stmts(

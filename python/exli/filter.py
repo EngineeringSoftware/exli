@@ -14,7 +14,7 @@ logger = se.log.get_logger(__name__)
 
 class Filter:
     # python -m exli.filter classify_target_statements
-    def classify_target_statements(self):
+    def classify_target_statements(self, seed: int = Macros.DEFAULT_SEED):
         """
         Classify target statements:
         1. stream, regex, string, bit
@@ -27,8 +27,8 @@ class Filter:
             for test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
                 tests_cov_file = (
                     Macros.results_dir
-                    / f"{test_type}-tests-cov"
-                    / f"{project_name}-{sha}-covMap.json"
+                    / f"coverage"
+                    / f"{project_name}-{sha}-{test_type}-{seed}-covMap.json"
                 )
                 if not tests_cov_file.exists():
                     logger.warning(f"{tests_cov_file} does not exist")
@@ -85,8 +85,8 @@ class Filter:
                 for test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
                     cov_map_path = (
                         Macros.results_dir
-                        / f"{test_type}-tests-cov"
-                        / f"{project_name}-{sha}-covMap.json"
+                        / f"coverage"
+                        / f"{project_name}-{sha}-{test_type}-{seed}-covMap.json"
                     )
                     covered_map = Util.analyze_coverage(
                         cov_map_path, class_name, line_number, test_type
