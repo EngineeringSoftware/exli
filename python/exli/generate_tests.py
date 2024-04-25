@@ -148,6 +148,9 @@ class Generate:
         test_type: str = Macros.randoop,
         generated_tests_dir: str = None,
     ):
+        if test_type not in [Macros.dev, Macros.randoop, Macros.evosuite]:
+            raise ValueError(f"Unknown test type: {test_type}")
+
         if test_type in [Macros.evosuite, Macros.randoop] and not os.path.exists(
             generated_tests_dir
         ):
@@ -158,40 +161,38 @@ class Generate:
         covMap_file = (
             f"{results_dir}/{project_name}-{sha}-{test_type}-{seed}-covMap.json"
         )
-        if test_type in [Macros.randoop, Macros.dev]:
+
+        if test_type in [Macros.dev, Macros.randoop]:
             if test_type == Macros.randoop:
                 Util.copy_randoop_tests_to_src_test_java(
                     project_name, generated_tests_dir
                 )
             # set checkout to False because Randoop tests are copied into the repo
-            Util.run_jacoco(project_name, sha, False, Macros.randoop)
-            # parse into covMap.json
-            if not os.path.exists(
-                f"{Macros.downloads_dir}/{project_name}/target/jacoco.exec"
-            ):
-                print(f"jacoco.exec file does not exist for {project_name}")
-            Filter().generate_jacoco_report(
-                f"{Macros.downloads_dir}/{project_name}/target",
-                f"{Macros.downloads_dir}/{project_name}/target/classes/",
-                covMap_file,
-            )
+            Util.run_with_jacoco(project_name, sha, False, test_type)
+            jacoco_exec_file = f"{Macros.downloads_dir}/{project_name}/target/jacoco.exec"
         elif test_type == Macros.evosuite:
-            log_file_path = Macros.log_dir / "coverage" / "evosuite.txt"
-            try:
-                Util.run_evosuite_command_line(
-                    project_name, log_file_path, generated_tests_dir
-                )
-            except Exception as e:
-                print(f"Exception: {e}")
-            if not os.path.exists(f"{Macros.downloads_dir}/{project_name}/jacoco.exec"):
-                print(f"jacoco.exec file does not exist for {project_name}")
-            Filter().generate_jacoco_report(
-                f"{Macros.downloads_dir}/{project_name}",
-                f"{Macros.downloads_dir}/{project_name}/target/classes/",
-                covMap_file,
+            deps_file_path = f"{Macros.unit_tests_dir}/{project_name}-{sha}/deps.txt"
+            log_path = f"{Macros.log_dir}/jacoco/{project_name}-{sha}-{test_type}-tests.log"
+            Util.run_evosuite_command_line(
+                project_name, generated_tests_dir, deps_file_path, log_path
             )
-        else:
-            raise ValueError(f"Unknown test type: {test_type}")
+            jacoco_exec_file = f"{Macros.downloads_dir}/{project_name}/jacoco.exec"
+        # parse into covMap.json
+        if not os.path.exists(jacoco_exec_file):
+            # search for .exec file in Macros.downloads_dir/{project_name} and its subdirectories
+            for root, _, files in os.walk(f"{Macros.downloads_dir}/{project_name}"):
+                for file in files:
+                    if file.endswith(".exec"):
+                        jacoco_exec_file = f"{root}/{file}"
+                        break
+        if not os.path.exists(jacoco_exec_file):
+            print(f"jacoco_exec_file: {jacoco_exec_file} does not exist")
+            return
+        Filter().generate_jacoco_report(
+            os.path.dirname(jacoco_exec_file),
+            f"{Macros.downloads_dir}/{project_name}/target/classes/",
+            covMap_file,
+        )
 
     # python -m exli.generate_tests generate_tests_for_uncovered_stmts
     def generate_tests_for_uncovered_stmts(
@@ -201,6 +202,7 @@ class Generate:
         seeds: list[int],
         test_type: str = Macros.randoop,
     ):
+        # TODO: need updating
         if test_type == Macros.randoop:
             time_limit = 100
             not_covered_classes = self.get_not_covered_classes(project_name, "path")

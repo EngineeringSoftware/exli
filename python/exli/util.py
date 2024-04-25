@@ -50,7 +50,7 @@ class Util:
                     )
                 elif test_type == Macros.evosuite:
                     Util.run_evosuite_command_line(
-                        project_name, tests_dir, deps_file_path, log_path, None, timeout
+                        project_name, tests_dir, deps_file_path, log_path, timeout
                     )
                 elif test_type == Macros.randoop:
                     Util.run_randoop(
@@ -650,7 +650,7 @@ class Util:
             return run_res.returncode
 
     @classmethod
-    def run_jacoco(
+    def run_with_jacoco(
         cls,
         project_name: str,
         sha: str,
@@ -669,7 +669,7 @@ class Util:
                     project_name, test_type, maven_project
                 )
                 test_rr = se.bash.run(
-                    f"mvn clean test {Macros.SKIPS_NO_JACOCO} > {Macros.log_dir}/jacoco/{project_name}-{sha}-{test_type}-jacoco.txt",
+                    f"mvn clean test {Macros.SKIPS_NO_JACOCO} > {Macros.log_dir}/jacoco/{project_name}-{sha}-{test_type}-tests.log",
                     timeout=timeout,
                 )
                 if test_rr.returncode != 0 and not allow_test_failure:
@@ -677,22 +677,11 @@ class Util:
                 jacoco_exec = glob.glob("**/jacoco.exec", recursive=True)
                 if jacoco_exec:
                     print("jacoco.exec found")
-                    se.bash.run(
-                        f"mvn jacoco:report > {Macros.log_dir}/jacoco/{project_name}-{sha}-{test_type}-jacoco-report.txt",
-                        timeout=120,
-                    )
-                    se.bash.run(
-                        f"rm -rf {Macros.log_dir}/jacoco/{project_name}-{sha}-{test_type}-jacoco-report"
-                    )
-                    print("copying jacoco report...")
-                    se.bash.run(
-                        f"cp -r target/site/jacoco {Macros.log_dir}/jacoco/{project_name}-{sha}-{test_type}-jacoco-report"
-                    )
                     res[f"{test_type}-jacoco"] = True
                 else:
                     print("jacoco.exec not found")
                     res[f"{test_type}-jacoco"] = False
-            except Exception as e:
+            except Exception:
                 res[f"{test_type}-jacoco"] = False
                 res["exception"] = traceback.format_exc()
             Util.remove_jacoco_extension()
@@ -875,7 +864,6 @@ class Util:
         generated_tests_dir: str,
         deps_file: str,
         log_file_path: str,
-        target_jacoco_exec_path: str = None,
         time_limit: int = 600,
     ):
         if not os.path.exists(generated_tests_dir):
@@ -952,20 +940,6 @@ class Util:
                     run_str = f"java -javaagent:{Macros.jacoco_agent_jar} -Dlogback.configurationFile={Macros.project_dir}/poms/logback.xml -cp evosuite-tests:{Macros.evosuite_runtime_jar}:{Macros.junit_jar}:{Macros.raninline_jar}:$(< {deps_file}) org.junit.runner.JUnitCore {class_str} &>> {log_file_path}"
                     print(run_str)
                     run_res = se.bash.run(run_str)
-
-                    jacoco_path = Macros.downloads_dir / project_name / "jacoco.exec"
-                    if jacoco_path.exists():
-                        # generate jacoco report
-                        se.bash.run(
-                            f"java -jar {Macros.jar_dir}/jacococli-0.8.10.jar report {jacoco_path} --classfiles target/classes --html {Macros.log_dir}/jacoco/{project_name}-evosuite-jacoco-report",
-                            0,
-                        )
-                        if target_jacoco_exec_path is not None:
-                            # copy jacoco.exec to target_jacoco_exec_path
-                            se.bash.run(
-                                f"cp {jacoco_path} {target_jacoco_exec_path}/{project_name}-evosuite-jacoco.exec",
-                                0,
-                            )
             except se.TimeoutException:
                 return -1
         return run_res.returncode

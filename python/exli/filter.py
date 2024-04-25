@@ -208,9 +208,9 @@ class Filter:
                         res_list.append(repo)
                         continue
                 if jacoco:
-                    jacoco_res = Util.run_jacoco(repo["full_name"], repo)
+                    jacoco_res = Util.run_with_jacoco(repo["full_name"], repo)
                     if jacoco_res["jacoco"]:
-                        self.parse_jacoco_helper(repo["full_name"], "unit")
+                        self.parse_jacoco_helper(repo["full_name"], Macros.dev)
                     repo.update(jacoco_res)
                     if not repo["jacoco"]:
                         if randoop:
@@ -225,10 +225,10 @@ class Filter:
                         Util.prepare_project(repo["full_name"], repo["sha"])
                         Util.copy_randoop_tests_to_src_test_java(repo["full_name"])
                         # set checkout to False because Randoop tests are copied into the repo
-                        Util.run_jacoco(
-                            repo["full_name"], repo["sha"], False, "randoop"
+                        Util.run_with_jacoco(
+                            repo["full_name"], repo["sha"], False, Macros.randoop
                         )
-                        self.parse_jacoco_helper(repo["full_name"], "randoop")
+                        self.parse_jacoco_helper(repo["full_name"], Macros.randoop)
                 res_list.append(repo)
             except Exception as e:
                 se.io.dump(log_path, [f"{e}"], se.io.Fmt.txtList, append=True)
@@ -283,7 +283,7 @@ class Filter:
             Util.fix_randoop_generated_tests_helper(project_name)
 
     def generate_jacoco_report(
-        self, jacoco_exec_folder_path: str, classes_folder_path: str, output_path: str
+        self, jacoco_exec_dir: str, classes_dir: str, output_path: str
     ):
         with se.io.cd(Macros.java_dir / "minimization" / "coverage-mapper"):
             se.bash.run(
@@ -291,7 +291,7 @@ class Filter:
                 0,
             )
             se.bash.run(
-                f"java -cp .:lib/asm-9.2.jar:lib/jacoco.core-0.8.7.jar:lib/asm-tree-9.2.jar:lib/asm-commons-9.2.jar:lib/jacoco.report-0.8.7.jar:lib/json.jar edu.cornell.minimizer.CoverageMapGenerator {jacoco_exec_folder_path} {classes_folder_path}",
+                f"java -cp .:lib/asm-9.2.jar:lib/jacoco.core-0.8.7.jar:lib/asm-tree-9.2.jar:lib/asm-commons-9.2.jar:lib/jacoco.report-0.8.7.jar:lib/json.jar edu.cornell.minimizer.CoverageMapGenerator {jacoco_exec_dir} {classes_dir}",
                 0,
             )
             print(se.bash.run("find . -name 'covMap.json'").stdout)
@@ -311,83 +311,6 @@ class Filter:
             f"{jacoco_exec_folder_path}",
             f"{Macros.downloads_dir}/{project_name}/target/classes/",
             f"{Macros.results_dir}/teco-{test_type}-tests/{project_name}-covMap.json",
-        )
-
-    # python -m exli.filter parse_jacoco --test_type randoop/unit/randoop-1200/evosuite
-    def parse_jacoco(self, test_type: str, test_project_name: str = None):
-        Util.remove_jacoco_extension()
-        se.io.mkdir(Macros.results_dir / f"teco-{test_type}-tests")
-
-        time_file_path = Macros.results_dir / "time" / f"run-{test_type}-tests.json"
-        if time_file_path.exists():
-            time_dict = se.io.load(time_file_path)
-        else:
-            time_dict = {}
-
-        project_list = Util.get_project_names_list_with_sha()
-        for project_name, sha in project_list:
-            if test_project_name and project_name != test_project_name:
-                continue
-            try:
-                jacoco_path = None
-                start_time = time.time()
-                if test_type == "randoop" or test_type == "randoop-1200":
-                    Util.prepare_project(project_name, sha)
-                    Util.copy_randoop_tests_to_src_test_java(project_name)
-                    # set checkout to False because Randoop tests are copied into the repo
-                    res = Util.run_jacoco(
-                        project_name, sha, False, test_type, allow_test_failure=True
-                    )
-                    if not res["randoop-jacoco"]:
-                        time_dict[project_name] = res["exception"]
-                elif test_type == "evosuite":
-                    Util.prepare_project(project_name, sha)
-                    jacoco_path = f"{Macros.downloads_dir}/{project_name}/jacoco.exec"
-                    generated_tests_dir = f"{Macros.log_dir}/teco-evosuite-test/{project_name}/evosuite-tests"
-                    if not os.path.exists(generated_tests_dir):
-                        time_dict[project_name] = "does not have tests"
-                        print(f"does not have tests for {project_name}")
-                        continue
-                    log_file_path = (
-                        Macros.log_dir / "teco" / f"{project_name}-evosuite-jacoco.txt"
-                    )
-                    if log_file_path.exists():
-                        os.remove(log_file_path)
-                    returncode = Util.run_evosuite_command_line(
-                        project_name,
-                        log_file_path,
-                        generated_tests_dir,
-                        "evosuite-deps.txt",
-                    )
-                    if returncode != 0:
-                        time_dict[project_name] = (
-                            "evosuite tests failed, return code not 0"
-                        )
-                        print(f"evosuite tests failed for {project_name}")
-                        continue
-                elif test_type == "unit":
-                    res = Util.run_jacoco(project_name, sha)
-                    if not res["jacoco"]:
-                        time_dict[project_name] = res["exception"]
-                else:
-                    print(f"test type {test_type} is not supported")
-                    return
-                end_time = time.time()
-                time_dict[f"{project_name}-time"] = end_time - start_time
-                print("parsing jacoco.exec file...")
-                self.parse_jacoco_helper(project_name, test_type, jacoco_path)
-            except Exception as e:
-                time_dict[project_name] = (
-                    f"{test_type} tests failed, exception {traceback.format_exc()}"
-                )
-                print(traceback.format_exc())
-                Util.remove_jacoco_extension()
-                continue
-            time_dict[project_name] = f"{test_type} tests passed"
-        se.io.dump(
-            time_file_path,
-            time_dict,
-            se.io.Fmt.jsonPretty,
         )
 
     # python -m exli.filter update_randoop_tests_can_run_results
@@ -423,117 +346,6 @@ class Filter:
                     project["randoop"] = False
             res.append(project)
         se.io.dump(target_file, res, se.io.Fmt.jsonPretty)
-
-    # python -m exli.filter comment_failed_tests --project_name=jkuhnert_ognl
-    def comment_failed_tests(
-        self, project_name: str, test_type: str = "randoop", log_file: str = None
-    ):
-        if test_type == "randoop":
-            if log_file is None:
-                log_file = f"{Macros.log_dir}/teco/{project_name}-randoop-jacoco.txt"
-            log = se.io.load(log_file, se.io.Fmt.txtList)
-            failed_tests = set()
-            results = False
-            failed_tests_start = False
-            error_tests_start = False
-            for line in log:
-                if "Results" in line:
-                    results = True
-                if results and "Failed tests:" in line:
-                    failed_tests_start = True
-                if results and "Tests in error:" in line:
-                    error_tests_start = True
-
-                if results and failed_tests_start:
-                    if line.strip().startswith("test") and ":" in line:
-                        failed_test_class = (
-                            line.split(":")[0].split("(")[1].replace(")", "").strip()
-                        )
-                        failed_test_method = line.split(":")[0].split("(")[0].strip()
-                        if failed_test_class and failed_test_method:
-                            failed_tests.add(
-                                f"{failed_test_class}.{failed_test_method}"
-                            )
-                if results and error_tests_start:
-                    if line.strip().startswith("test") and ":" in line:
-                        failed_test_class = (
-                            line.split(":")[0].split("(")[1].replace(")", "").strip()
-                        )
-                        failed_test_method = line.split(":")[0].split("(")[0].strip()
-                        if failed_test_class and failed_test_method:
-                            failed_tests.add(
-                                f"{failed_test_class}.{failed_test_method}"
-                            )
-                if "BUILD FAILURE" in line:
-                    break
-
-            for failed_test in failed_tests:
-                test_class = failed_test.split(".")[0]
-                test_method = failed_test.split(".")[1]
-                test_file = f"{Macros.log_dir}/teco-{test_type}-test/{project_name}/{test_type}-tests/{test_class}.java1"
-                if not os.path.exists(test_file):
-                    se.bash.run(
-                        f"cp {Macros.log_dir}/teco-{test_type}-test/{project_name}/{test_type}-tests/{test_class}.java {test_file}"
-                    )
-                test_file_content = se.io.load(test_file, se.io.Fmt.txtList)
-                failed_test_found = False
-                for i, line in enumerate(test_file_content):
-                    if test_method + "()" in line:
-                        failed_test_found = True
-                        test_file_content[i - 1] = "//" + test_file_content[i - 1]
-                        test_file_content[i] = "//" + line
-                        print(line)
-                        print(test_file_content[i])
-                        continue
-                    if failed_test_found and (line.strip() == "" or "@Test" in line):
-                        break
-                    if failed_test_found:
-                        test_file_content[i] = "//" + line
-                        print(test_file_content[i])
-                # print(test_file_content)
-                se.io.dump(test_file, test_file_content, se.io.Fmt.txtList)
-        elif test_type == "evosuite":
-            if log_file is None:
-                log_file = f"{Macros.log_dir}/teco/{project_name}-failed-evosuite.log"
-            times = 0
-            while times < 10:
-                times += 1
-                # run evosuite generated tests
-                self.parse_jacoco("evosuite", project_name)
-                log = se.io.load(log_file, se.io.Fmt.txt)
-                # match the pattern
-                # at org.hyperledger.fabric.sdk.helper.DiagnosticFileDumper_ESTest.test00(DiagnosticFileDumper_ESTest.java:37)
-                # at string(filename:number)
-                pattern = r"at (.*)\((.*):(\d+)\)"
-                if "FAILURES" in log:
-                    for line in log.split("\n"):
-                        match = re.match(pattern, line.strip())
-                        if match:
-                            test_file = match.group(2)
-                            test_line = match.group(3)
-                            # find the test file
-                            test_file_path = None
-                            for dirpath, dirnames, filenames in os.walk(
-                                f"{Macros.log_dir}/teco-evosuite-test/{project_name}/evosuite-tests"
-                            ):
-                                if test_file in filenames:
-                                    test_file_path = os.path.join(dirpath, test_file)
-                                    break
-                            if test_file_path is None:
-                                print(f"test file {test_file} not found")
-                                continue
-                            test_file_content = se.io.load(
-                                test_file_path, se.io.Fmt.txtList
-                            )
-                            test_file_content[int(test_line) - 1] = (
-                                "//" + test_file_content[int(test_line) - 1]
-                            )
-                            print(test_file_content[int(test_line) - 1])
-                            se.io.dump(
-                                test_file_path, test_file_content, se.io.Fmt.txtList
-                            )
-                else:
-                    break
 
     # python -m exli.filter filter_target_statements_not_covered
     def filter_target_statements_not_covered(self):

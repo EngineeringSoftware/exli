@@ -189,30 +189,37 @@ class Main:
             se.bash.run("mvn test-compile " + Macros.SKIPS, 0)
 
         ################################## Run tests ##################################
-        run_tests_log_path = (
-            Macros.log_dir / "run-unit-tests" / f"{project_name}-{sha}.log"
-        )
-        if run_tests_log_path.exists():
-            run_tests_log_path.unlink()
+        run_tests_log_dir = Macros.log_dir / "run-unit-tests"
 
         if dev:
+            run_tests_log_path = run_tests_log_dir / f"{project_name}-{sha}-dev.log"
+            if run_tests_log_path.exists():
+                run_tests_log_path.unlink()
             Util.run_unit_tests(
-                Macros.dev, project_name, run_tests_log_path, maven_project
+                Macros.dev, project_name, f"{run_tests_log_path}", maven_project
             )
         if evosuite:
+            run_tests_log_path = (
+                run_tests_log_dir / f"{project_name}-{sha}-evosuite.log"
+            )
+            if run_tests_log_path.exists():
+                run_tests_log_path.unlink()
             Util.run_unit_tests(
                 Macros.evosuite,
                 project_name,
-                run_tests_log_path,
+                f"{run_tests_log_path}",
                 maven_project,
                 unit_tests_dir_dict[Macros.evosuite],
                 deps_file_path,
             )
         if randoop:
+            run_tests_log_path = run_tests_log_dir / f"{project_name}-{sha}-randoop.log"
+            if run_tests_log_path.exists():
+                run_tests_log_path.unlink()
             Util.run_unit_tests(
                 Macros.randoop,
                 project_name,
-                run_tests_log_path,
+                f"{run_tests_log_path}",
                 maven_project,
                 unit_tests_dir_dict[Macros.randoop],
             )
