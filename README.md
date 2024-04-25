@@ -9,7 +9,7 @@ This repo contains the code and data for producing the experiments in [ExLi][pap
 `itest`
 
 In our experiments, we use `itest(test_source, target_stmt_line_number)`, to represent the test source and the line number of the target statement in original file (note that after adding inline tests to the original file, the line numbers of target statements change).
-For example, `itest("Randoop", 57)` means that the test source is Randoop generated tests, and the target statement starts at line 57 in the original file.
+For example, `itest("randoop", 57)` means that the test source is Randoop generated tests, and the target statement starts at line 57 in the original file.
 
 2. "Assign" part
 `given(var, value)`
