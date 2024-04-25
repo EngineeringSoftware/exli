@@ -40,34 +40,36 @@ class Main:
         else:
             time_dict = {}
 
-        projects = Util.get_project_names_list_with_sha()
-        for project_name, sha in projects:
-            if test_project_name is not None and project_name != test_project_name:
-                continue
-            try:
-                start_time = time.time()
-                self.run(
-                    project_name,
-                    sha,
-                    True,
-                    100,
-                    True,
-                    True,
-                    120,
-                    Macros.DEFAULT_SEED,
-                    log_path,
-                )
-                end_time = time.time()
-                time_dict[project_name] = end_time - start_time
-            except Exception as e:
-                se.io.dump(
-                    log_path,
-                    [f"{project_name} {sha}: {traceback.format_exc()}"],
-                    se.io.Fmt.txtList,
-                    append=True,
-                )
-                continue
-        se.io.dump(time_res_file, time_dict, se.io.Fmt.jsonPretty)
+        try:
+            projects = Util.get_project_names_list_with_sha()
+            for project_name, sha in projects:
+                if test_project_name is not None and project_name != test_project_name:
+                    continue
+                try:
+                    start_time = time.time()
+                    self.run(
+                        project_name,
+                        sha,
+                        True,
+                        100,
+                        True,
+                        True,
+                        120,
+                        Macros.DEFAULT_SEED,
+                        log_path,
+                    )
+                    end_time = time.time()
+                    time_dict[project_name] = end_time - start_time
+                except Exception as e:
+                    se.io.dump(
+                        log_path,
+                        [f"{project_name} {sha}: {traceback.format_exc()}"],
+                        se.io.Fmt.txtList,
+                        append=True,
+                    )
+                    continue
+        finally:
+            se.io.dump(time_res_file, time_dict, se.io.Fmt.jsonPretty)
 
     # python -m exli.main run --project_name="Asana_java-asana" --sha="52fef9b"
     # python -m exli.main run --project_name="AquaticInformatics_aquarius-sdk-java" --sha="8f4edb9"
