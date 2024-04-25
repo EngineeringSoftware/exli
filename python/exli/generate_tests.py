@@ -133,9 +133,10 @@ class Generate:
                 Macros.unit_tests_dir
                 / f"{project_name}-{sha}"
                 / f"{test_type}-tests-{seed}"
+                / f"{test_type}-tests"
             )
             self.generate_coverage_helper(
-                project_name, sha, seed, generated_tests_dir, res_dir, test_type
+                project_name, sha, seed, res_dir, test_type, generated_tests_dir
             )
 
     def generate_coverage_helper(
@@ -143,11 +144,13 @@ class Generate:
         project_name: str,
         sha: str,
         seed: int,
-        generated_tests_dir: str,
         results_dir: str,
         test_type: str = Macros.randoop,
+        generated_tests_dir: str = None,
     ):
-        if not os.path.exists(generated_tests_dir):
+        if test_type in [Macros.evosuite, Macros.randoop] and not os.path.exists(
+            generated_tests_dir
+        ):
             print(f"{test_type}_tests_dir: {generated_tests_dir} does not exist")
             return
         Util.prepare_project(project_name, sha)
