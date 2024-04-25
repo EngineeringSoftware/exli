@@ -22,5 +22,11 @@ python -m exli.eval batch_run_tests_with_mutants
 python -m exli.eval batch_test_to_killed_mutants 
 # Add back inline tests.
 python -m exli.eval batch_add_back_tests
-# TODO: minimize inline tests and get the final results (r2 tests).
-
+# minimize inline tests and get the final results (r2 tests).
+python -m exli.eval batch_minimize_tests
+# plots
+python -m exli.generate_tests batch_generate_coverage
+python -m exli.filter classify_target_statements
+python -m exli.plot target_statements_bar_plot
+# tables
+python -m exli.table data_target_stmts_found
