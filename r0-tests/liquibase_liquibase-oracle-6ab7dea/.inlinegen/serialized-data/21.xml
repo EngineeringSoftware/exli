@@ -1,0 +1,7 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableSchemaName>W=z{aEIi-st-BWlal</splitTableSchemaName>
+  <newTableName>kV-4$5;a&gt;Fb]R</newTableName>
+  <newTableSchemaName>W=z{aEIi-st-BWlal</newTableSchemaName>
+  <context>W=z{aEIi-st-BWlal</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

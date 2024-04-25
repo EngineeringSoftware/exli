@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>Materialized view null has been droped</splitTableName>
+  <splitTableSchemaName>Deferred primary key added to null (http://www.liquibase.org/xml/ns/snapshot-ext)</splitTableSchemaName>
+  <newTableName>Materialized view null has been refreshed</newTableName>
+  <newTableSchemaName>Cluster null truncated</newTableSchemaName>
+  <context>refreshMaterializedView</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

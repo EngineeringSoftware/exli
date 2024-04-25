@@ -1,0 +1,18 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>database.typeName</sourceTableName>
+  <sourceSchemaName>database.typeName</sourceSchemaName>
+  <targetSchemaName>java.lang.string@0000000009</targetSchemaName>
+  <targetTableName>java.lang.string@0000000009</targetTableName>
+  <updateList></updateList>
+  <columnValues class="linked-hash-map">
+    <entry>
+      <string>database.typeName</string>
+      <string>database.typeName</string>
+    </entry>
+    <entry>
+      <null/>
+      <null/>
+    </entry>
+  </columnValues>
+</liquibase.ext.ora.merge.MergeStatement>

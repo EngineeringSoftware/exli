@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>Synonym Comment has been added to Materialized view grantObjectPermission has been droped.Grants on null have been given to null check DROPPED from null created</splitTableName>
+  <splitTableSchemaName>Materialized view DropCheckChange{} has been droped</splitTableSchemaName>
+  <newTableName>null check DROPPED from null check DROPPED from null</newTableName>
+  <newTableSchemaName>Comment has been added to Materialized view grantObjectPermission has been droped.http://www.liquibase.org/xml/ns/dbchangelog</newTableSchemaName>
+  <context>merge</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

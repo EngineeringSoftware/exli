@@ -1,0 +1,332 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Rose Namajunas</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Rose-Namajunas-69083</sherdogUrl>
+  <nickname>Thug</nickname>
+  <height>5&apos;5&quot;</height>
+  <weight>125 lbs</weight>
+  <birthday>1992-06-29 00:00:00.0 UTC</birthday>
+  <wins>12</wins>
+  <winsKo>2</winsKo>
+  <winsSub>5</winsSub>
+  <winsDec>5</winsDec>
+  <winsOther>0</winsOther>
+  <losses>6</losses>
+  <lossesKo>1</lossesKo>
+  <lossesSub>1</lossesSub>
+  <lossesDec>4</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC on ESPN 53 - Ribas vs. Namajunas</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-on-ESPN-53-Ribas-vs-Namajunas-100735</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Rose Namajunas</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Rose-Namajunas-69083</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Amanda Ribas</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Amanda-Ribas-171625</sherdogUrl>
+      </fighter2>
+      <date>2024-03-23T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>5</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 226 - Gane vs. Spivak</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-226-Gane-vs-Spivak-98110</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Manon Fiorot</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Manon-Fiorot-228689</sherdogUrl>
+      </fighter2>
+      <date>2023-09-02T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 274 - Oliveira vs. Gaethje</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-274-Oliveira-vs-Gaethje-91512</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Carla Esparza</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Carla-Esparza-63410</sherdogUrl>
+      </fighter2>
+      <date>2022-05-07T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>5</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 268 - Usman vs. Covington 2</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-268-Usman-vs-Covington-2-90043</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Weili Zhang</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Weili-Zhang-186663</sherdogUrl>
+      </fighter2>
+      <date>2021-11-06T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>5</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 261 - Usman vs. Masvidal 2</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-261-Usman-vs-Masvidal-2-88587</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Weili Zhang</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Weili-Zhang-186663</sherdogUrl>
+      </fighter2>
+      <date>2021-04-24T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>KO (Head Kick)</winMethod>
+      <winTime>1:18</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 251 - Usman vs. Masvidal</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-251-Usman-vs-Masvidal-86573</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jessica Andrade</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jessica-Andrade-100715</sherdogUrl>
+      </fighter2>
+      <date>2020-07-11T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 237 - Namajunas vs. Andrade</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-237-Namajunas-vs-Andrade-73341</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Jessica Andrade</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Jessica-Andrade-100715</sherdogUrl>
+      </fighter2>
+      <date>2019-05-11T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>KO (Slam)</winMethod>
+      <winTime>2:58</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 223 - Khabib vs. Iaquinta</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-223-Khabib-vs-Iaquinta-65291</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Joanna Jedrzejczyk</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Joanna-Jedrzejczyk-101411</sherdogUrl>
+      </fighter2>
+      <date>2018-04-07T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>5</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 217 - Bisping vs. St. Pierre</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-217-Bisping-vs-St-Pierre-61989</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Joanna Jedrzejczyk</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Joanna-Jedrzejczyk-101411</sherdogUrl>
+      </fighter2>
+      <date>2017-11-04T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>3:03</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC on Fox 24 - Johnson vs. Reis</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-on-Fox-24-Johnson-vs-Reis-57971</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Michelle Waterson-Gomez</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Michelle-WatersonGomez-23091</sherdogUrl>
+      </fighter2>
+      <date>2017-04-15T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>2:47</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 201 - Lawler vs. Woodley</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-201-Lawler-vs-Woodley-52199</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Karolina Kowalkiewicz</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Karolina-Kowalkiewicz-101401</sherdogUrl>
+      </fighter2>
+      <date>2016-07-30T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Split)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC on Fox 19 - Teixeira vs. Evans</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-on-Fox-19-Teixeira-vs-Evans-50261</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Tecia Pennington</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Tecia-Pennington-85096</sherdogUrl>
+      </fighter2>
+      <date>2016-04-16T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC Fight Night 80 - Namajunas vs. VanZant</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-80-Namajunas-vs-VanZant-47669</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Paige VanZant</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Paige-VanZant-99019</sherdogUrl>
+      </fighter2>
+      <date>2015-12-10T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>2:25</winTime>
+      <winRound>5</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC 192 - Cormier vs. Gustafsson</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-192-Cormier-vs-Gustafsson-42235</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Angela Hill</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Angela-Hill-148517</sherdogUrl>
+      </fighter2>
+      <date>2015-10-03T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>2:47</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>UFC - The Ultimate Fighter 20 Finale</name>
+        <sherdogUrl>https://www.sherdog.com/events/UFC-The-Ultimate-Fighter-20-Finale-40679</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Carla Esparza</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Carla-Esparza-63410</sherdogUrl>
+      </fighter2>
+      <date>2014-12-12T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>1:26</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Invicta FC 6 - Cyborg vs. Coenen 2</name>
+        <sherdogUrl>https://www.sherdog.com/events/Invicta-FC-6-Cyborg-vs-Coenen-2-29571</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Tecia Pennington</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Tecia-Pennington-85096</sherdogUrl>
+      </fighter2>
+      <date>2013-07-13T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Decision (Unanimous)</winMethod>
+      <winTime>5:00</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Invicta FC 5 - Penne vs. Waterson</name>
+        <sherdogUrl>https://www.sherdog.com/events/Invicta-FC-5-Penne-vs-Waterson-27451</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Kathina Lowe</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Kathina-Lowe-85551</sherdogUrl>
+      </fighter2>
+      <date>2013-04-05T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Flying Armbar)</winMethod>
+      <winTime>0:12</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Invicta FC 4 - Esparza vs. Hyatt</name>
+        <sherdogUrl>https://www.sherdog.com/events/Invicta-FC-4-Esparza-vs-Hyatt-26535</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Emily Kagan</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Emily-Kagan-68959</sherdogUrl>
+      </fighter2>
+      <date>2013-01-05T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>3:44</winTime>
+      <winRound>3</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

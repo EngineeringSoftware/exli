@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>Comment has been added to Materialized view grantObjectPermission has been droped</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName></newTableName>
+  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+  <context>hi!</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

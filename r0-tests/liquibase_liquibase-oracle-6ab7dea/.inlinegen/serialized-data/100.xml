@@ -1,0 +1,12 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>http://www.liquibase.org/xml/ns/snapshot-ext</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>http://www.liquibase.org/xml/ns/dbchangelog-ext</targetTableName>
+  <onCondition>refreshMaterializedView</onCondition>
+  <deleteCondition>Deferred primary key added to null (http://www.liquibase.org/xml/ns/snapshot-ext)</deleteCondition>
+  <insertCondition>Constraint check http://www.liquibase.org/xml/ns/dbchangelog-ext has been added to dropTrigger triggerName=Grants on null have been given to null</insertCondition>
+  <updateList>Transaction has been set</updateList>
+  <columnValues class="linked-hash-map"/>
+</liquibase.ext.ora.merge.MergeStatement>

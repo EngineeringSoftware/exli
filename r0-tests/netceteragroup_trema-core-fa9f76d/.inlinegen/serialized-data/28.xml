@@ -1,0 +1,5 @@
+<com.netcetera.trema.core.XMLTextNode>
+  <key>SLASH</key>
+  <context>com.github.javaparser.metamodel.DoubleLiteralExprMetaModel</context>
+  <valueNodeMap class="tree-map"/>
+</com.netcetera.trema.core.XMLTextNode>

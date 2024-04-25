@@ -1,0 +1,9 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>Update has been done</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>enableTrigger</newTableName>
+  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+  <columnNameList>Grants on grantObjectPermission have been given to null</columnNameList>
+  <context>hi!</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

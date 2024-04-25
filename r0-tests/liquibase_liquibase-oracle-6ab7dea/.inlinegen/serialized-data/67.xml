@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>hi!</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>enableTrigger</newTableName>
+  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+  <context>GrantObjectPermissionChange{}</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

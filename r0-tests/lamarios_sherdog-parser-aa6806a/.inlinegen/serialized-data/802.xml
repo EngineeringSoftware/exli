@@ -1,0 +1,22 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Akihiko Adachi</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Akihiko-Adachi-2229</sherdogUrl>
+  <nickname></nickname>
+  <height>5&apos;11&quot;</height>
+  <weight>200 lbs</weight>
+  <birthday>1965-11-12 00:00:00.0 UTC</birthday>
+  <wins>4</wins>
+  <winsKo>1</winsKo>
+  <winsSub>1</winsSub>
+  <winsDec>2</winsDec>
+  <winsOther>0</winsOther>
+  <losses>4</losses>
+  <lossesKo>1</lossesKo>
+  <lossesSub>1</lossesSub>
+  <lossesDec>2</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>2</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights/>
+</com.ftpix.sherdogparser.models.Fighter>

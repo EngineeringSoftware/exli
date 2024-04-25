@@ -1,0 +1,10 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>http://www.liquibase.org/xml/ns/snapshot-ext</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>null check DROPPED from null</targetTableName>
+  <updateCondition>EnableTriggerChange{}</updateCondition>
+  <updateList></updateList>
+  <columnValues class="linked-hash-map"/>
+</liquibase.ext.ora.merge.MergeStatement>

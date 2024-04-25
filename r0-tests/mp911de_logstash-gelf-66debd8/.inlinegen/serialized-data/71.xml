@@ -1,0 +1,7 @@
+<biz.paluch.logging.gelf.DynamicMdcMessageField>
+  <regex>graylogHost</regex>
+  <pattern>
+    <pattern>graylogHost</pattern>
+    <flags>0</flags>
+  </pattern>
+</biz.paluch.logging.gelf.DynamicMdcMessageField>

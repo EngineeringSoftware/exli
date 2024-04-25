@@ -1,0 +1,56 @@
+<list>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC - The Ultimate Fighter Season 20 Semifinals</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-The-Ultimate-Fighter-Season-20-Semifinals-54191</sherdogUrl>
+    </event>
+    <fighter1>
+      <name>Rose Namajunas</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Rose-Namajunas-69083</sherdogUrl>
+    </fighter1>
+    <fighter2>
+      <name>Randa Markos</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Randa-Markos-75417</sherdogUrl>
+    </fighter2>
+    <date>2014-08-14T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Kimura)</winMethod>
+    <winTime>2:45</winTime>
+    <winRound>1</winRound>
+    <type>PRO_EXHIBITION</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC - The Ultimate Fighter Season 20 Quarterfinals, Day 2</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-The-Ultimate-Fighter-Season-20-Quarterfinals-Day-2-54189</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Joanne Wood</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Joanne-Wood-94103</sherdogUrl>
+    </fighter2>
+    <date>2014-08-06T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Kimura)</winMethod>
+    <winTime>2:06</winTime>
+    <winRound>2</winRound>
+    <type>PRO_EXHIBITION</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC - The Ultimate Fighter Season 20 Opening Round, Day 7</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-The-Ultimate-Fighter-Season-20-Opening-Round-Day-7-54185</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Alex Chambers</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Alex-Chambers-65649</sherdogUrl>
+    </fighter2>
+    <date>2014-07-28T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Rear-Naked Choke)</winMethod>
+    <winTime>4:38</winTime>
+    <winRound>1</winRound>
+    <type>PRO_EXHIBITION</type>
+  </com.ftpix.sherdogparser.models.Fight>
+</list>

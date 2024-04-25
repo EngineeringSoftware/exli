@@ -1,0 +1,16 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>http://www.liquibase.org/xml/ns/snapshot-ext</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>Deferred primary key added to null (http://www.liquibase.org/xml/ns/snapshot-ext)</targetTableName>
+  <onCondition>Triggernull has been droped</onCondition>
+  <insertCondition>DropCheckChange{}</insertCondition>
+  <updateList></updateList>
+  <columnValues class="linked-hash-map">
+    <entry>
+      <string>http://www.liquibase.org/xml/ns/snapshot-ext</string>
+      <int>1</int>
+    </entry>
+  </columnValues>
+</liquibase.ext.ora.merge.MergeStatement>

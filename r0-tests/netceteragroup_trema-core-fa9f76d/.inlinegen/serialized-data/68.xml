@@ -1,0 +1,20 @@
+<com.netcetera.trema.core.api.ITextNode-array>
+  <com.netcetera.trema.core.XMLTextNode>
+    <key>Value</key>
+    <context>&apos;&apos;</context>
+    <valueNodeMap class="tree-map"/>
+    <parent class="com.netcetera.trema.core.XMLDatabase">
+      <listeners>
+        <null/>
+      </listeners>
+      <additionalRootAttrs/>
+      <additionalNamespaces/>
+      <textNodeList>
+        <com.netcetera.trema.core.XMLTextNode reference="../../.."/>
+      </textNodeList>
+      <treatWarningsAsErrors>true</treatWarningsAsErrors>
+      <parseWarnings/>
+      <xmlInternalized>false</xmlInternalized>
+    </parent>
+  </com.netcetera.trema.core.XMLTextNode>
+</com.netcetera.trema.core.api.ITextNode-array>

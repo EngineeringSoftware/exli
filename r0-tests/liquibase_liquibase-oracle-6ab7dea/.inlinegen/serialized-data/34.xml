@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>Synonym null dropped</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>Constraint check null has been added to null</newTableName>
+  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+  <context>hi!</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

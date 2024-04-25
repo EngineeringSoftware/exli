@@ -1,0 +1,22 @@
+<org.springframework.web.util.UriTemplate>
+  <uriTemplate>org.craftercms.core.exception.InvalidScopeException-v19372063047226300</uriTemplate>
+  <uriComponents class="org.springframework.web.util.HierarchicalUriComponents">
+    <path class="org.springframework.web.util.HierarchicalUriComponents$FullPathComponent">
+      <path>org.craftercms.core.exception.InvalidScopeException-v19372063047226300</path>
+    </path>
+    <queryParams class="org.springframework.util.CollectionUtils$MultiValueMapAdapter">
+      <map class="java.util.Collections$UnmodifiableMap">
+        <m class="linked-hash-map"/>
+      </map>
+    </queryParams>
+    <encoded>false</encoded>
+  </uriComponents>
+  <variableNames class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </variableNames>
+  <matchPattern>
+    <pattern>\Qorg.craftercms.core.exception.InvalidScopeException-v19372063047226300\E</pattern>
+    <flags>0</flags>
+  </matchPattern>
+</org.springframework.web.util.UriTemplate>

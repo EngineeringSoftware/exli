@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>CreateTriggerChange{}</splitTableName>
+  <splitTableSchemaName>createMaterializedView</splitTableSchemaName>
+  <newTableName>Materialized view null has been refreshed</newTableName>
+  <newTableSchemaName>Cluster null truncated</newTableSchemaName>
+  <context>Comment has been added to Materialized view grantObjectPermission has been droped.Grants on null have been given to null check DROPPED from null</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

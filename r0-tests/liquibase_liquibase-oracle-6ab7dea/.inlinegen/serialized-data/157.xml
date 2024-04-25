@@ -1,0 +1,9 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>hi!</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>grantObjectPermission</newTableName>
+  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+  <columnNameList>Table Revoking grants on null that had been given to TriggerGrants on http://www.liquibase.org/xml/ns/snapshot-ext have been given to null has been droped truncated</columnNameList>
+  <context>hi!</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

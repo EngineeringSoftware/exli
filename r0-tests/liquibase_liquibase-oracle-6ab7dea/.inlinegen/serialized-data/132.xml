@@ -1,0 +1,11 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>http://www.liquibase.org/xml/ns/snapshot-ext</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>AddDeferredPrimaryKeyChange{}</targetTableName>
+  <onCondition>Triggernull has been droped</onCondition>
+  <updateCondition>Comment has been added to Materialized view grantObjectPermission has been droped.Grants on null have been given to null check DROPPED from null</updateCondition>
+  <updateList>Transaction has been set</updateList>
+  <columnValues class="linked-hash-map"/>
+</liquibase.ext.ora.merge.MergeStatement>

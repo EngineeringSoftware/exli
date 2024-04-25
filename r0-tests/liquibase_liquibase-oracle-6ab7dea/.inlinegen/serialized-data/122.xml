@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>hi!</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>Materialized view BASIC has been refreshed</newTableName>
+  <newTableSchemaName>GrantObjectPermissionChange{}</newTableSchemaName>
+  <context>Materialized view null has been droped</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

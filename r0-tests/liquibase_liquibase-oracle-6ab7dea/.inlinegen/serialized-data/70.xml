@@ -1,0 +1,9 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>Grants on http://www.liquibase.org/xml/ns/snapshot have been given to null</sourceTableName>
+  <sourceSchemaName>encapsulateTableWithView</sourceSchemaName>
+  <targetSchemaName>Table null check DROPPED from null encapsulated with view</targetSchemaName>
+  <targetTableName>Trigger null has been created</targetTableName>
+  <updateList>null check DROPPED from null</updateList>
+  <columnValues class="linked-hash-map"/>
+</liquibase.ext.ora.merge.MergeStatement>

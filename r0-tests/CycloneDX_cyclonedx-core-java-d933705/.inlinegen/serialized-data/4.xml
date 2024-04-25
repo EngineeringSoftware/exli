@@ -1,0 +1,28 @@
+<org.cyclonedx.model.ExtensibleType>
+  <namespace></namespace>
+  <name>E0)Sxj}y:stX]T?QjL</name>
+  <attributes class="java.util.Stack" serialization="custom">
+    <unserializable-parents/>
+    <vector>
+      <default>
+        <capacityIncrement>0</capacityIncrement>
+        <elementCount>1</elementCount>
+        <elementData>
+          <org.cyclonedx.model.Attribute>
+            <key></key>
+            <value>org.cyclonedx.util.ExtensibleTypesSerializer</value>
+          </org.cyclonedx.model.Attribute>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+        </elementData>
+      </default>
+    </vector>
+  </attributes>
+</org.cyclonedx.model.ExtensibleType>

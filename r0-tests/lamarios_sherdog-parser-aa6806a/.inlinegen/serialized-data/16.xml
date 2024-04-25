@@ -1,0 +1,447 @@
+<list>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>KOTC - Capital Excalibur</name>
+      <sherdogUrl>https://www.sherdog.com/events/KOTC-Capital-Excalibur-10752</sherdogUrl>
+    </event>
+    <fighter1>
+      <name>Matt Baker</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Matt-Baker-49956</sherdogUrl>
+    </fighter1>
+    <fighter2>
+      <name>Brandon Sauve</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Brandon-Sauve-49961</sherdogUrl>
+    </fighter2>
+    <date>2009-07-18T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>TKO (Punches)</winMethod>
+    <winTime>0:06</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>IFC - Caged Combat</name>
+      <sherdogUrl>https://www.sherdog.com/events/IFC-Caged-Combat-11020</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Clay Davidson</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Clay-Davidson-23731</sherdogUrl>
+    </fighter2>
+    <date>2009-08-15T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Submission (Guillotine Choke)</winMethod>
+    <winTime>2:47</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>KOTC - Disturbed</name>
+      <sherdogUrl>https://www.sherdog.com/events/KOTC-Disturbed-11368</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Aaron Drewniak</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Aaron-Drewniak-52450</sherdogUrl>
+    </fighter2>
+    <date>2009-09-25T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Kimura)</winMethod>
+    <winTime>1:21</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>KOTC - Catalyst</name>
+      <sherdogUrl>https://www.sherdog.com/events/KOTC-Catalyst-12049</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Clay Davidson</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Clay-Davidson-23731</sherdogUrl>
+    </fighter2>
+    <date>2009-11-28T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Submission (Rear-Naked Choke)</winMethod>
+    <winTime>4:39</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>KOTC - Fearless</name>
+      <sherdogUrl>https://www.sherdog.com/events/KOTC-Fearless-13320</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Jamey Dearman</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Jamey-Dearman-63864</sherdogUrl>
+    </fighter2>
+    <date>2010-04-24T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>KO (Punches)</winMethod>
+    <winTime>0:23</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>KOTC - Forty Eight</name>
+      <sherdogUrl>https://www.sherdog.com/events/KOTC-Forty-Eight-15256</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Brad Stewart</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Brad-Stewart-52449</sherdogUrl>
+    </fighter2>
+    <date>2010-11-21T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Split)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>BFL 7 - Battlefield Fight League: Invasion</name>
+      <sherdogUrl>https://www.sherdog.com/events/BFL-7-Battlefield-Fight-League-Invasion-16000</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Jose Cornejo</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Jose-Cornejo-71450</sherdogUrl>
+    </fighter2>
+    <date>2011-03-26T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>KO (Elbows)</winMethod>
+    <winTime>1:02</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>BFL 8 - Battlefield Fight League: Island Beatdown</name>
+      <sherdogUrl>https://www.sherdog.com/events/BFL-8-Battlefield-Fight-League-Island-Beatdown-17063</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Ryan Ballingall</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Ryan-Ballingall-40131</sherdogUrl>
+    </fighter2>
+    <date>2011-05-28T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Rear-Naked Choke)</winMethod>
+    <winTime>4:43</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>BFL 10 - Battlefield Fight League: War</name>
+      <sherdogUrl>https://www.sherdog.com/events/BFL-10-Battlefield-Fight-League-War-18149</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Marcus Vinicius</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Marcus-Vinicius-79359</sherdogUrl>
+    </fighter2>
+    <date>2011-08-20T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Rear-Naked Choke)</winMethod>
+    <winTime>3:26</winTime>
+    <winRound>2</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>BFL 13 - Battlefield Fight League: Uprising</name>
+      <sherdogUrl>https://www.sherdog.com/events/BFL-13-Battlefield-Fight-League-Uprising-20273</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Andrew Buckland</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Andrew-Buckland-23001</sherdogUrl>
+    </fighter2>
+    <date>2012-02-11T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Submission (Guillotine Choke)</winMethod>
+    <winTime>2:12</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>BFL 17 - Battlefield Fight League: Heat Wave</name>
+      <sherdogUrl>https://www.sherdog.com/events/BFL-17-Battlefield-Fight-League-Heat-Wave-23861</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Brandon MacArthur</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Brandon-MacArthur-27210</sherdogUrl>
+    </fighter2>
+    <date>2012-07-28T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>TKO (Doctor Stoppage)</winMethod>
+    <winTime>2:01</winTime>
+    <winRound>2</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>FFL 6 - Hierarchy</name>
+      <sherdogUrl>https://www.sherdog.com/events/FFL-6-Hierarchy-30163</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Brad Stewart</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Brad-Stewart-52449</sherdogUrl>
+    </fighter2>
+    <date>2013-05-10T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Submission (Triangle Choke)</winMethod>
+    <winTime>3:20</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>FFL 8 - Barefoot Beach Battle</name>
+      <sherdogUrl>https://www.sherdog.com/events/FFL-8-Barefoot-Beach-Battle-31877</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Darrio Mobley</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Darrio-Mobley-64111</sherdogUrl>
+    </fighter2>
+    <date>2013-08-09T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Guillotine Choke)</winMethod>
+    <winTime>2:09</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>WSOF 7 - Karakhanyan vs. Palmer</name>
+      <sherdogUrl>https://www.sherdog.com/events/WSOF-7-Karakhanyan-vs-Palmer-32753</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>David Perron</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/David-Perron-47026</sherdogUrl>
+    </fighter2>
+    <date>2013-12-07T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Submission (Triangle Choke)</winMethod>
+    <winTime>1:46</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>WSOF Canada 1 - Ford vs. Powell</name>
+      <sherdogUrl>https://www.sherdog.com/events/WSOF-Canada-1-Ford-vs-Powell-34701</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Mike Kent</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Mike-Kent-71017</sherdogUrl>
+    </fighter2>
+    <date>2014-02-21T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Decision (Split)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>JFC - Jason Fight Championship 1</name>
+      <sherdogUrl>https://www.sherdog.com/events/JFC-Jason-Fight-Championship-1-37473</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Neyanderson Silva</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Neyanderson-Silva-166549</sherdogUrl>
+    </fighter2>
+    <date>2014-04-25T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Guillotine Choke)</winMethod>
+    <winTime>0:24</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>WSOF Canada 2 - Loiseau vs. Lewis</name>
+      <sherdogUrl>https://www.sherdog.com/events/WSOF-Canada-2-Loiseau-vs-Lewis-37525</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Tim Hague</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Tim-Hague-19599</sherdogUrl>
+    </fighter2>
+    <date>2014-06-07T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>TKO (Punches)</winMethod>
+    <winTime>3:56</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>WSOF 14 - U.S. vs. Canada</name>
+      <sherdogUrl>https://www.sherdog.com/events/WSOF-14-US-vs-Canada-39403</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Cody Krahn</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Cody-Krahn-40749</sherdogUrl>
+    </fighter2>
+    <date>2014-10-11T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Armbar)</winMethod>
+    <winTime>2:28</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>WSOF 18 - Moraes vs. Hill</name>
+      <sherdogUrl>https://www.sherdog.com/events/WSOF-18-Moraes-vs-Hill-43147</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Ali Mokdad</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Ali-Mokdad-34224</sherdogUrl>
+    </fighter2>
+    <date>2015-02-12T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>NO_CONTEST</result>
+    <winMethod>No Contest (Accidental Clash of Heads)</winMethod>
+    <winTime>0:13</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>BFL 35 - Battlefield Fight League</name>
+      <sherdogUrl>https://www.sherdog.com/events/BFL-35-Battlefield-Fight-League-43857</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Ariel Gandulla</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Ariel-Gandulla-14801</sherdogUrl>
+    </fighter2>
+    <date>2015-03-28T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>TKO (Punches)</winMethod>
+    <winTime>0:19</winTime>
+    <winRound>2</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>WSOF 21 - Palmer vs. Horodecki</name>
+      <sherdogUrl>https://www.sherdog.com/events/WSOF-21-Palmer-vs-Horodecki-43733</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Thiago Jambo Goncalves</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Thiago-Jambo-Goncalves-10661</sherdogUrl>
+    </fighter2>
+    <date>2015-06-05T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>TKO (Retirement)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>2</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>XFFC 7 - Bad Blood</name>
+      <sherdogUrl>https://www.sherdog.com/events/XFFC-7-Bad-Blood-48395</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Cody Krahn</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Cody-Krahn-40749</sherdogUrl>
+    </fighter2>
+    <date>2015-10-09T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>TKO (Punches)</winMethod>
+    <winTime>4:43</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>Z Promotions - Fight Night 2: Medicine Hat</name>
+      <sherdogUrl>https://www.sherdog.com/events/Z-Promotions-Fight-Night-2-Medicine-Hat-49865</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Emanuel Newton</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Emanuel-Newton-8833</sherdogUrl>
+    </fighter2>
+    <date>2016-04-09T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Technical Submission (Arm-Triangle Choke)</winMethod>
+    <winTime>3:04</winTime>
+    <winRound>2</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>SFL 2017: Wreck Thy Neighbor - Delhi Heroes vs. Haryana Sultans</name>
+      <sherdogUrl>https://www.sherdog.com/events/SFL-2017-Wreck-Thy-Neighbor-Delhi-Heroes-vs-Haryana-Sultans-57749</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Ravindra Balhara</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Ravindra-Balhara-120683</sherdogUrl>
+    </fighter2>
+    <date>2017-01-20T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Triangle Choke)</winMethod>
+    <winTime>2:07</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>SFL 2017: Backyard Brawl - Delhi Heroes vs. U.P. Nawabs</name>
+      <sherdogUrl>https://www.sherdog.com/events/SFL-2017-Backyard-Brawl-Delhi-Heroes-vs-UP-Nawabs-57757</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Enrico Cortese</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Enrico-Cortese-214117</sherdogUrl>
+    </fighter2>
+    <date>2017-01-28T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>NO_CONTEST</result>
+    <winMethod>NC (Knee to Head of Grounded Fighter)</winMethod>
+    <winTime>0:43</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>Brave CF 11 - Mineiro vs. Santiago</name>
+      <sherdogUrl>https://www.sherdog.com/events/Brave-CF-11-Mineiro-vs-Santiago-66633</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Klidson Abreu</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Klidson-Abreu-111535</sherdogUrl>
+    </fighter2>
+    <date>2018-04-13T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Submission (Rear-Naked Choke)</winMethod>
+    <winTime>3:01</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+</list>

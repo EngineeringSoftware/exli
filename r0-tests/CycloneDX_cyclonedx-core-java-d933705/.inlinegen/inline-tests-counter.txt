@@ -1,0 +1,4 @@
+/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/VersionXmlAnnotationIntrospector.java:40;2
+/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/VersionJsonAnnotationIntrospector.java:39;2
+/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/ExtensibleTypesSerializer.java:60;1
+/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/model/Dependency.java:57;1

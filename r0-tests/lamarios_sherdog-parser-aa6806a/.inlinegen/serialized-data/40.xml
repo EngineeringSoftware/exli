@@ -1,0 +1,19 @@
+<com.ftpix.sherdogparser.models.Fight>
+  <event>
+    <name>UFC Fight Night 115 - Volkov vs. Struve</name>
+    <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-115-Volkov-vs-Struve-58751</sherdogUrl>
+  </event>
+  <fighter1>
+    <name>Rustam Khabilov</name>
+    <sherdogUrl>https://www.sherdog.com/fighter/Rustam-Khabilov-45417</sherdogUrl>
+  </fighter1>
+  <fighter2>
+    <name>Desmond Green</name>
+    <sherdogUrl>https://www.sherdog.com/fighter/Desmond-Green-89993</sherdogUrl>
+  </fighter2>
+  <date>2017-09-02T15:00:00+08:00[Asia/Kuala_Lumpur]</date>
+  <result>FIGHTER_1_WIN</result>
+  <winMethod>Decision (Unanimous)</winMethod>
+  <winTime>5:00</winTime>
+  <winRound>3</winRound>
+</com.ftpix.sherdogparser.models.Fight>

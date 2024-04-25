@@ -1,0 +1,22 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Kevin Randleman</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Kevin-Randleman-162</sherdogUrl>
+  <nickname>The Monster</nickname>
+  <height>5&apos;10&quot;</height>
+  <weight>205 lbs</weight>
+  <birthday>1971-08-10 00:00:00.0 UTC</birthday>
+  <wins>17</wins>
+  <winsKo>9</winsKo>
+  <winsSub>0</winsSub>
+  <winsDec>8</winsDec>
+  <winsOther>0</winsOther>
+  <losses>16</losses>
+  <lossesKo>4</lossesKo>
+  <lossesSub>8</lossesSub>
+  <lossesDec>4</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights/>
+</com.ftpix.sherdogparser.models.Fighter>

@@ -1,0 +1,9 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>createMaterializedView</splitTableName>
+  <splitTableSchemaName>setTransaction</splitTableSchemaName>
+  <newTableName>Table null encapsulated with view</newTableName>
+  <newTableSchemaName>Grants on http://www.liquibase.org/xml/ns/snapshot-ext have been given to null</newTableSchemaName>
+  <columnNameList>CreateSynonymChange{}</columnNameList>
+  <context>Revoking grants on null that had been given to addDeferredPrimaryKey</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

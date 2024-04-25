@@ -1,0 +1,9 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>hi!</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>INDEX</newTableName>
+  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+  <columnNameList>http://www.liquibase.org/xml/ns/snapshot</columnNameList>
+  <context>Materialized view null has been refreshed</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

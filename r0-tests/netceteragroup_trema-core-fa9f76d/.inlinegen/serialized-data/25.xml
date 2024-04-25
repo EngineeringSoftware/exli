@@ -1,0 +1,18 @@
+<com.netcetera.trema.core.XMLTextNode>
+  <key>com.github.javaparser.metamodel.DoubleLiteralExprMetaModel</key>
+  <context></context>
+  <valueNodeMap class="tree-map">
+    <entry>
+      <string>Pezv7e</string>
+      <com.netcetera.trema.core.XMLValueNode>
+        <language>Pezv7e</language>
+        <status>
+          <position>3</position>
+          <name>special</name>
+        </status>
+        <value>bH9)l7U5y</value>
+        <parent class="com.netcetera.trema.core.XMLTextNode" reference="../../../.."/>
+      </com.netcetera.trema.core.XMLValueNode>
+    </entry>
+  </valueNodeMap>
+</com.netcetera.trema.core.XMLTextNode>

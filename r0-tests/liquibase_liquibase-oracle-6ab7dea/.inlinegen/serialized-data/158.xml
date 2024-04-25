@@ -1,0 +1,10 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>refreshMaterializedView viewName=</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>revokeObjectPermission objectName=Synonym http://www.liquibase.org/xml/ns/snapshot dropped</targetTableName>
+  <onCondition>refreshMaterializedView</onCondition>
+  <updateList>Transaction has been set</updateList>
+  <columnValues class="linked-hash-map"/>
+</liquibase.ext.ora.merge.MergeStatement>

@@ -1,0 +1,10 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>Comment has been added to Comment has been added to null</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>enableTrigger</newTableName>
+  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+  <columnNameList>Triggernull has been droped</columnNameList>
+  <primaryKeyColumnName>Comment has been added to null.Table null encapsulated with view</primaryKeyColumnName>
+  <context>hi!</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

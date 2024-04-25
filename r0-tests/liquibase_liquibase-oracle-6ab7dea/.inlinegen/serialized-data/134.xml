@@ -1,0 +1,19 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>Comment has been added to null</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>null check DROPPED from null</targetTableName>
+  <updateList></updateList>
+  <columnValues class="linked-hash-map">
+    <entry>
+      <string>AddDeferredPrimaryKeyChange{}</string>
+      <liquibase.ext.ora.merge.MergeChange>
+        <attributes>
+          <values class="tree-map"/>
+        </attributes>
+        <columns/>
+      </liquibase.ext.ora.merge.MergeChange>
+    </entry>
+  </columnValues>
+</liquibase.ext.ora.merge.MergeStatement>

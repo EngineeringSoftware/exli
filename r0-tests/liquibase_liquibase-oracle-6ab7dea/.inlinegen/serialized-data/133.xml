@@ -1,0 +1,16 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>addDeferredPrimaryKey</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>http://www.liquibase.org/xml/ns/dbchangelog-ext</targetTableName>
+  <onCondition>Revoking grants on null that had been given to null</onCondition>
+  <deleteCondition></deleteCondition>
+  <updateList>Transaction has been set</updateList>
+  <columnValues class="linked-hash-map">
+    <entry>
+      <string>DisableTriggerChange{} splitted. Created new table null</string>
+      <null/>
+    </entry>
+  </columnValues>
+</liquibase.ext.ora.merge.MergeStatement>

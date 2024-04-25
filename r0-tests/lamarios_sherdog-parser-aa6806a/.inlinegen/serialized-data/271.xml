@@ -1,0 +1,24 @@
+<com.ftpix.sherdogparser.models.Fight>
+  <fighter2 class="com.ftpix.sherdogparser.models.Fighter">
+    <sherdogUrl></sherdogUrl>
+    <nickname></nickname>
+    <height></height>
+    <weight></weight>
+    <wins>0</wins>
+    <winsKo>0</winsKo>
+    <winsSub>0</winsSub>
+    <winsDec>0</winsDec>
+    <winsOther>0</winsOther>
+    <losses>0</losses>
+    <lossesKo>0</lossesKo>
+    <lossesSub>0</lossesSub>
+    <lossesDec>0</lossesDec>
+    <lossesOther>0</lossesOther>
+    <draws>0</draws>
+    <nc>0</nc>
+    <picture>https://www.sherdog.com</picture>
+    <fights/>
+  </fighter2>
+  <result>DRAW</result>
+  <winRound>0</winRound>
+</com.ftpix.sherdogparser.models.Fight>

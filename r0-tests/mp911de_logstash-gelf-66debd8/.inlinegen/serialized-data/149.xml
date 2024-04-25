@@ -1,0 +1,7 @@
+<biz.paluch.logging.gelf.DynamicMdcMessageField>
+  <regex>kafka</regex>
+  <pattern>
+    <pattern>kafka</pattern>
+    <flags>0</flags>
+  </pattern>
+</biz.paluch.logging.gelf.DynamicMdcMessageField>

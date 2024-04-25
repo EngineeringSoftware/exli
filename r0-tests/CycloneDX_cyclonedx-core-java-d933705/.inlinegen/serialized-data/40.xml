@@ -1,0 +1,9 @@
+<org.cyclonedx.model.Dependency>
+  <ref>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;bom version=&quot;1&quot; xmlns=&quot;http://cyclonedx.org/schema/bom/1.3&quot;&gt;
+  &lt;properties&gt;
+    &lt;property/&gt;
+  &lt;/properties&gt;
+&lt;/bom&gt;
+</ref>
+</org.cyclonedx.model.Dependency>

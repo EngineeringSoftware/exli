@@ -1,0 +1,9 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>hi!</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>enableTrigger</newTableName>
+  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+  <primaryKeyColumnName>Materialized view addDeferredPrimaryKey constraintName=Deferred primary key added to null (null) has been refreshed</primaryKeyColumnName>
+  <context>revokeObjectPermission</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

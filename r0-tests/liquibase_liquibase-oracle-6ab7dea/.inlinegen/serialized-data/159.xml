@@ -1,0 +1,9 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>dropTrigger triggerName=Grants on null have been given to null</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>enableTrigger</newTableName>
+  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+  <primaryKeyColumnName>constraint null DISABLED in null</primaryKeyColumnName>
+  <context>Cluster null truncated</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

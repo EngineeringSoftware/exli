@@ -1,0 +1,9 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>renameTrigger triggerName=encapsulateTableWithView</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>enableTrigger</newTableName>
+  <newTableSchemaName></newTableSchemaName>
+  <columnNameList>Constraint null ENABLED in null</columnNameList>
+  <context>hi!</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

@@ -1,0 +1,20 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName></sourceTableName>
+  <sourceSchemaName>&lt;x~}tqXH^(+a/qRF;</sourceSchemaName>
+  <targetSchemaName></targetSchemaName>
+  <targetTableName></targetTableName>
+  <onCondition>gv4U&gt; ;Q40n=;fFh</onCondition>
+  <insertCondition>gv4U&gt; ;Q40n=;fFh</insertCondition>
+  <updateList></updateList>
+  <columnValues class="linked-hash-map">
+    <entry>
+      <null/>
+      <null/>
+    </entry>
+    <entry>
+      <string>N^XN^zUg;UW|DNl&#x7f;</string>
+      <string>gv4U&gt; ;Q40n=;fFh</string>
+    </entry>
+  </columnValues>
+</liquibase.ext.ora.merge.MergeStatement>

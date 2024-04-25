@@ -1,0 +1,77 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Atsushi Hamada</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Atsushi-Hamada-41786</sherdogUrl>
+  <nickname></nickname>
+  <height>6&apos;0&quot;</height>
+  <weight>194 lbs</weight>
+  <birthday>1980-12-03 00:00:00.0 UTC</birthday>
+  <wins>1</wins>
+  <winsKo>1</winsKo>
+  <winsSub>0</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>2</losses>
+  <lossesKo>1</lossesKo>
+  <lossesSub>1</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>GCM - Cage Force 13</name>
+        <sherdogUrl>https://www.sherdog.com/events/GCM-Cage-Force-13-11684</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Atsushi Hamada</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Atsushi-Hamada-41786</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Shuji Morikawa</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Shuji-Morikawa-23941</sherdogUrl>
+      </fighter2>
+      <date>2009-10-24T00:00:00Z[Etc/UTC]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>2:04</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Tribelate - vol. 23</name>
+        <sherdogUrl>https://www.sherdog.com/events/Tribelate-vol-23-10107</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Yusaku Inoue</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Yusaku-Inoue-45670</sherdogUrl>
+      </fighter2>
+      <date>2009-04-25T00:00:00Z[Etc/UTC]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Rear-Naked Choke)</winMethod>
+      <winTime>2:53</winTime>
+      <winRound>2</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Tribelate - vol. 21</name>
+        <sherdogUrl>https://www.sherdog.com/events/Tribelate-vol-21-9443</sherdogUrl>
+      </event>
+      <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+      <fighter2>
+        <name>Akira Hanamura</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Akira-Hanamura-29970</sherdogUrl>
+      </fighter2>
+      <date>2008-12-20T00:00:00Z[Etc/UTC]</date>
+      <result>FIGHTER_1_WIN</result>
+      <winMethod>TKO (Punches)</winMethod>
+      <winTime>1:27</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

@@ -1,0 +1,9 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>hi!</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>enableTrigger</newTableName>
+  <newTableSchemaName>Comment has been added to Materialized view grantObjectPermission has been droped.Deferred primary key added to null (null)</newTableSchemaName>
+  <primaryKeyColumnName>constraint null DISABLED in null</primaryKeyColumnName>
+  <context>Cluster null truncated</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

@@ -1,0 +1,10 @@
+<org.cyclonedx.model.Dependency>
+  <ref>org.cyclonedx.model.BomReference</ref>
+  <dependencies>
+    <org.cyclonedx.model.Dependency>
+      <dependencies class="linked-list">
+        <org.cyclonedx.model.Dependency reference="../.."/>
+      </dependencies>
+    </org.cyclonedx.model.Dependency>
+  </dependencies>
+</org.cyclonedx.model.Dependency>

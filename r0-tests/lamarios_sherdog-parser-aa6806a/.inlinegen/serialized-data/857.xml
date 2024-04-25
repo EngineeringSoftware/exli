@@ -1,0 +1,22 @@
+<list>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>Extreme Fight - Extreme Fight V</name>
+      <sherdogUrl>https://www.sherdog.com/events/Extreme-Fight-Extreme-Fight-V-96109</sherdogUrl>
+    </event>
+    <fighter1>
+      <name>Borsevschi Vasile</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Borsevschi-Vasile-418870</sherdogUrl>
+    </fighter1>
+    <fighter2>
+      <name>Liviu Butuc</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Liviu-Butuc-193933</sherdogUrl>
+    </fighter2>
+    <date>2022-11-26T00:00:00Z[Etc/UTC]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>TKO (Punches)</winMethod>
+    <winTime>1:19</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+</list>

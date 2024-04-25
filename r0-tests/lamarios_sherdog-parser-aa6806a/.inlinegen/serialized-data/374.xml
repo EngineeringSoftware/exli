@@ -1,0 +1,237 @@
+<org.jsoup.nodes.Document>
+  <siblingIndex>0</siblingIndex>
+  <tag>
+    <tagName>#root</tagName>
+    <normalName>#root</normalName>
+    <isBlock>false</isBlock>
+    <formatAsBlock>true</formatAsBlock>
+    <empty>false</empty>
+    <selfClosing>false</selfClosing>
+    <preserveWhitespace>false</preserveWhitespace>
+    <formList>false</formList>
+    <formSubmit>false</formSubmit>
+  </tag>
+  <shadowChildrenRef>
+    <referent class="list">
+      <org.jsoup.nodes.Element>
+        <parentNode class="org.jsoup.nodes.Document" reference="../../../.."/>
+        <siblingIndex>0</siblingIndex>
+        <tag>
+          <tagName>html</tagName>
+          <normalName>html</normalName>
+          <isBlock>true</isBlock>
+          <formatAsBlock>true</formatAsBlock>
+          <empty>false</empty>
+          <selfClosing>false</selfClosing>
+          <preserveWhitespace>false</preserveWhitespace>
+          <formList>false</formList>
+          <formSubmit>false</formSubmit>
+        </tag>
+        <shadowChildrenRef>
+          <referent class="list">
+            <org.jsoup.nodes.Element>
+              <parentNode class="org.jsoup.nodes.Element" reference="../../../.."/>
+              <siblingIndex>0</siblingIndex>
+              <tag>
+                <tagName>head</tagName>
+                <normalName>head</normalName>
+                <isBlock>true</isBlock>
+                <formatAsBlock>true</formatAsBlock>
+                <empty>false</empty>
+                <selfClosing>false</selfClosing>
+                <preserveWhitespace>false</preserveWhitespace>
+                <formList>false</formList>
+                <formSubmit>false</formSubmit>
+              </tag>
+              <childNodes class="empty-list"/>
+              <attributes>
+                <size>1</size>
+                <keys>
+                  <string>/baseUri</string>
+                  <null/>
+                  <null/>
+                </keys>
+                <vals>
+                  <string>y0bje&#x7f;w&apos;PD]=B&apos;</string>
+                  <null/>
+                  <null/>
+                </vals>
+              </attributes>
+            </org.jsoup.nodes.Element>
+            <org.jsoup.nodes.Element>
+              <parentNode class="org.jsoup.nodes.Element" reference="../../../.."/>
+              <siblingIndex>1</siblingIndex>
+              <tag>
+                <tagName>body</tagName>
+                <normalName>body</normalName>
+                <isBlock>true</isBlock>
+                <formatAsBlock>true</formatAsBlock>
+                <empty>false</empty>
+                <selfClosing>false</selfClosing>
+                <preserveWhitespace>false</preserveWhitespace>
+                <formList>false</formList>
+                <formSubmit>false</formSubmit>
+              </tag>
+              <childNodes class="org.jsoup.nodes.Element$NodeList" serialization="custom">
+                <unserializable-parents/>
+                <list>
+                  <default>
+                    <size>1</size>
+                  </default>
+                  <int>1</int>
+                  <org.jsoup.nodes.TextNode>
+                    <parentNode class="org.jsoup.nodes.Element" reference="../../../.."/>
+                    <siblingIndex>0</siblingIndex>
+                    <value class="string">y0bje&#x7f;w&apos;PD]=B&apos;</value>
+                  </org.jsoup.nodes.TextNode>
+                </list>
+                <org.jsoup.nodes.Element_-NodeList>
+                  <default>
+                    <owner reference="../../../.."/>
+                  </default>
+                </org.jsoup.nodes.Element_-NodeList>
+              </childNodes>
+              <attributes>
+                <size>1</size>
+                <keys>
+                  <string>/baseUri</string>
+                  <null/>
+                  <null/>
+                </keys>
+                <vals>
+                  <string>y0bje&#x7f;w&apos;PD]=B&apos;</string>
+                  <null/>
+                  <null/>
+                </vals>
+              </attributes>
+            </org.jsoup.nodes.Element>
+          </referent>
+          <queue class="java.lang.ref.ReferenceQueue$Null">
+            <lock/>
+            <queueLength>0</queueLength>
+          </queue>
+        </shadowChildrenRef>
+        <childNodes class="org.jsoup.nodes.Element$NodeList" serialization="custom">
+          <unserializable-parents/>
+          <list>
+            <default>
+              <size>2</size>
+            </default>
+            <int>2</int>
+            <org.jsoup.nodes.Element reference="../../../shadowChildrenRef/referent/org.jsoup.nodes.Element"/>
+            <org.jsoup.nodes.Element reference="../../../shadowChildrenRef/referent/org.jsoup.nodes.Element[2]"/>
+          </list>
+          <org.jsoup.nodes.Element_-NodeList>
+            <default>
+              <owner reference="../../../.."/>
+            </default>
+          </org.jsoup.nodes.Element_-NodeList>
+        </childNodes>
+        <attributes>
+          <size>1</size>
+          <keys>
+            <string>/baseUri</string>
+            <null/>
+            <null/>
+          </keys>
+          <vals>
+            <string>y0bje&#x7f;w&apos;PD]=B&apos;</string>
+            <null/>
+            <null/>
+          </vals>
+        </attributes>
+      </org.jsoup.nodes.Element>
+    </referent>
+    <queue class="java.lang.ref.ReferenceQueue$Null" reference="../referent/org.jsoup.nodes.Element/shadowChildrenRef/queue"/>
+  </shadowChildrenRef>
+  <childNodes class="org.jsoup.nodes.Element$NodeList" serialization="custom">
+    <unserializable-parents/>
+    <list>
+      <default>
+        <size>1</size>
+      </default>
+      <int>1</int>
+      <org.jsoup.nodes.Element reference="../../../shadowChildrenRef/referent/org.jsoup.nodes.Element"/>
+    </list>
+    <org.jsoup.nodes.Element_-NodeList>
+      <default>
+        <owner class="org.jsoup.nodes.Document" reference="../../../.."/>
+      </default>
+    </org.jsoup.nodes.Element_-NodeList>
+  </childNodes>
+  <attributes>
+    <size>1</size>
+    <keys>
+      <string>/baseUri</string>
+      <null/>
+      <null/>
+    </keys>
+    <vals>
+      <string>y0bje&#x7f;w&apos;PD]=B&apos;</string>
+      <null/>
+      <null/>
+    </vals>
+  </attributes>
+  <outputSettings>
+    <escapeMode>base</escapeMode>
+    <charset>UTF-8</charset>
+    <encoderThreadLocal>
+      <threadLocalHashCode>-1705278010</threadLocalHashCode>
+    </encoderThreadLocal>
+    <prettyPrint>true</prettyPrint>
+    <outline>false</outline>
+    <indentAmount>1</indentAmount>
+    <syntax>html</syntax>
+  </outputSettings>
+  <parser>
+    <treeBuilder class="org.jsoup.parser.HtmlTreeBuilder">
+      <start>
+        <type>StartTag</type>
+        <attrName></attrName>
+        <hasAttrName>false</hasAttrName>
+        <attrValue></attrValue>
+        <hasAttrValue>false</hasAttrValue>
+        <hasEmptyAttrValue>false</hasEmptyAttrValue>
+        <selfClosing>false</selfClosing>
+      </start>
+      <end>
+        <type>EndTag</type>
+        <attrName></attrName>
+        <hasAttrName>false</hasAttrName>
+        <attrValue></attrValue>
+        <hasAttrValue>false</hasAttrValue>
+        <hasEmptyAttrValue>false</hasEmptyAttrValue>
+        <selfClosing>false</selfClosing>
+      </end>
+      <baseUriSetFromDoc>false</baseUriSetFromDoc>
+      <framesetOk>false</framesetOk>
+      <fosterInserts>false</fosterInserts>
+      <fragmentParsing>false</fragmentParsing>
+      <specificScopeTarget>
+        <null/>
+      </specificScopeTarget>
+    </treeBuilder>
+    <errors serialization="custom">
+      <unserializable-parents/>
+      <list>
+        <default>
+          <size>0</size>
+        </default>
+        <int>0</int>
+      </list>
+      <org.jsoup.parser.ParseErrorList>
+        <default>
+          <initialCapacity>0</initialCapacity>
+          <maxSize>0</maxSize>
+        </default>
+      </org.jsoup.parser.ParseErrorList>
+    </errors>
+    <settings>
+      <preserveTagCase>false</preserveTagCase>
+      <preserveAttributeCase>false</preserveAttributeCase>
+    </settings>
+  </parser>
+  <quirksMode>noQuirks</quirksMode>
+  <location>y0bje&#x7f;w&apos;PD]=B&apos;</location>
+  <updateMetaCharset>false</updateMetaCharset>
+</org.jsoup.nodes.Document>

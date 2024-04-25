@@ -1,0 +1,21 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>http://www.liquibase.org/xml/ns/snapshot-ext</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>null check DROPPED from null</targetTableName>
+  <onCondition>revokeObjectPermission objectName=Synonym http://www.liquibase.org/xml/ns/snapshot dropped</onCondition>
+  <updateList>Triggernull has been droped</updateList>
+  <columnValues class="linked-hash-map">
+    <entry>
+      <string></string>
+      <liquibase.ext.ora.addcheck.AddCheckStatement>
+        <continueOnError>false</continueOnError>
+        <schemaName></schemaName>
+        <tableName></tableName>
+        <constraintName></constraintName>
+        <condition></condition>
+      </liquibase.ext.ora.addcheck.AddCheckStatement>
+    </entry>
+  </columnValues>
+</liquibase.ext.ora.merge.MergeStatement>

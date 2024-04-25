@@ -1,0 +1,168 @@
+<org.dom4j.tree.DefaultElement>
+  <qname serialization="custom">
+    <org.dom4j.QName>
+      <string></string>
+      <string></string>
+      <default>
+        <hashCode>1942574248</hashCode>
+        <documentFactory serialization="custom">
+          <org.dom4j.DocumentFactory>
+            <default/>
+          </org.dom4j.DocumentFactory>
+        </documentFactory>
+        <name>include</name>
+        <qualifiedName>include</qualifiedName>
+      </default>
+    </org.dom4j.QName>
+  </qname>
+  <parentBranch class="org.dom4j.tree.DefaultElement">
+    <qname serialization="custom">
+      <org.dom4j.QName>
+        <string></string>
+        <string></string>
+        <default>
+          <hashCode>0</hashCode>
+          <documentFactory reference="../../../../../qname/org.dom4j.QName/default/documentFactory"/>
+          <name>image-metadata</name>
+        </default>
+      </org.dom4j.QName>
+    </qname>
+    <parentBranch class="org.dom4j.tree.DefaultDocument">
+      <rootElement class="org.dom4j.tree.DefaultElement" reference="../.."/>
+      <content>
+        <org.dom4j.tree.DefaultElement reference="../../.."/>
+      </content>
+      <documentFactory reference="../../../qname/org.dom4j.QName/default/documentFactory"/>
+    </parentBranch>
+    <content class="list">
+      <org.dom4j.tree.DefaultElement reference="../../.."/>
+      <org.dom4j.tree.DefaultElement>
+        <qname serialization="custom">
+          <org.dom4j.QName>
+            <string></string>
+            <string></string>
+            <default>
+              <hashCode>1976615272</hashCode>
+              <documentFactory reference="../../../../../../../qname/org.dom4j.QName/default/documentFactory"/>
+              <name>merge-strategy</name>
+              <qualifiedName>merge-strategy</qualifiedName>
+            </default>
+          </org.dom4j.QName>
+        </qname>
+        <parentBranch class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+        <content class="list">
+          <org.dom4j.tree.DefaultText>
+            <text>inherit-levels</text>
+            <parent class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+          </org.dom4j.tree.DefaultText>
+        </content>
+      </org.dom4j.tree.DefaultElement>
+      <org.dom4j.tree.DefaultElement>
+        <qname serialization="custom">
+          <org.dom4j.QName>
+            <string></string>
+            <string></string>
+            <default>
+              <hashCode>-1094759278</hashCode>
+              <documentFactory reference="../../../../../../../qname/org.dom4j.QName/default/documentFactory"/>
+              <name>processor</name>
+              <qualifiedName>processor</qualifiedName>
+            </default>
+          </org.dom4j.QName>
+        </qname>
+        <parentBranch class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+        <content class="list">
+          <org.dom4j.tree.DefaultText>
+            <text>image</text>
+            <parent class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+          </org.dom4j.tree.DefaultText>
+        </content>
+      </org.dom4j.tree.DefaultElement>
+      <org.dom4j.tree.DefaultElement>
+        <qname serialization="custom">
+          <org.dom4j.QName>
+            <string></string>
+            <string></string>
+            <default>
+              <hashCode>3530753</hashCode>
+              <documentFactory reference="../../../../../../../qname/org.dom4j.QName/default/documentFactory"/>
+              <name>size</name>
+              <qualifiedName>size</qualifiedName>
+            </default>
+          </org.dom4j.QName>
+        </qname>
+        <parentBranch class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+        <content class="list">
+          <org.dom4j.tree.DefaultText>
+            <text>6.63kb</text>
+            <parent class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+          </org.dom4j.tree.DefaultText>
+        </content>
+      </org.dom4j.tree.DefaultElement>
+      <org.dom4j.tree.DefaultElement>
+        <qname serialization="custom">
+          <org.dom4j.QName>
+            <string></string>
+            <string></string>
+            <default>
+              <hashCode>-1600030548</hashCode>
+              <documentFactory reference="../../../../../../../qname/org.dom4j.QName/default/documentFactory"/>
+              <name>resolution</name>
+              <qualifiedName>resolution</qualifiedName>
+            </default>
+          </org.dom4j.QName>
+        </qname>
+        <parentBranch class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+        <content class="list">
+          <org.dom4j.tree.DefaultElement>
+            <qname serialization="custom">
+              <org.dom4j.QName>
+                <string></string>
+                <string></string>
+                <default>
+                  <hashCode>113126854</hashCode>
+                  <documentFactory reference="../../../../../../../../../qname/org.dom4j.QName/default/documentFactory"/>
+                  <name>width</name>
+                </default>
+              </org.dom4j.QName>
+            </qname>
+            <parentBranch class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+            <content class="list">
+              <org.dom4j.tree.DefaultText>
+                <text>346</text>
+                <parent class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+              </org.dom4j.tree.DefaultText>
+            </content>
+          </org.dom4j.tree.DefaultElement>
+          <org.dom4j.tree.DefaultElement>
+            <qname serialization="custom">
+              <org.dom4j.QName>
+                <string></string>
+                <string></string>
+                <default>
+                  <hashCode>-1221029593</hashCode>
+                  <documentFactory reference="../../../../../../../../../qname/org.dom4j.QName/default/documentFactory"/>
+                  <name>height</name>
+                </default>
+              </org.dom4j.QName>
+            </qname>
+            <parentBranch class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+            <content class="list">
+              <org.dom4j.tree.DefaultText>
+                <text>96</text>
+                <parent class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+              </org.dom4j.tree.DefaultText>
+            </content>
+          </org.dom4j.tree.DefaultElement>
+        </content>
+      </org.dom4j.tree.DefaultElement>
+    </content>
+    <attributes class="list"/>
+  </parentBranch>
+  <content class="list">
+    <org.dom4j.tree.DefaultText>
+      <text>/system-info-component.xml</text>
+      <parent class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+    </org.dom4j.tree.DefaultText>
+  </content>
+</org.dom4j.tree.DefaultElement>

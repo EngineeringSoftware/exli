@@ -1,0 +1,22 @@
+<list>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>ACF 37th - A-Toys Challenge Fight 37</name>
+      <sherdogUrl>https://www.sherdog.com/events/ACF-37th-AToys-Challenge-Fight-37-70121</sherdogUrl>
+    </event>
+    <fighter1>
+      <name>Atsushi Atsushi</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Atsushi-Atsushi-297551</sherdogUrl>
+    </fighter1>
+    <fighter2>
+      <name>Shinji Shinji</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Shinji-Shinji-297549</sherdogUrl>
+    </fighter2>
+    <date>2018-08-26T00:00:00Z[Etc/UTC]</date>
+    <result>DRAW</result>
+    <winMethod>Draw (Time Limit)</winMethod>
+    <winTime>2:00</winTime>
+    <winRound>1</winRound>
+    <type>AMATEUR</type>
+  </com.ftpix.sherdogparser.models.Fight>
+</list>

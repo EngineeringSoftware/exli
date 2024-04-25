@@ -1,0 +1,13 @@
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:102;1
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:103;1
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:125;5
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:104;1
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:70;4
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:63;4
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:62;4
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:72;1
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:60;4
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:77;1
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/AbstractRegexPropertyMojo.java:64;4
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:75;4
+/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java:100;1

@@ -1,0 +1,139 @@
+<org.dom4j.tree.ContentListFacade>
+  <branchContent>
+    <org.dom4j.tree.DefaultElement>
+      <qname serialization="custom">
+        <org.dom4j.QName>
+          <string></string>
+          <string></string>
+          <default>
+            <hashCode>1976615272</hashCode>
+            <documentFactory serialization="custom">
+              <org.dom4j.DocumentFactory>
+                <default/>
+              </org.dom4j.DocumentFactory>
+            </documentFactory>
+            <name>merge-strategy</name>
+            <qualifiedName>merge-strategy</qualifiedName>
+          </default>
+        </org.dom4j.QName>
+      </qname>
+      <parentBranch class="org.dom4j.tree.DefaultElement">
+        <qname serialization="custom">
+          <org.dom4j.QName>
+            <string></string>
+            <string></string>
+            <default>
+              <hashCode>0</hashCode>
+              <documentFactory reference="../../../../../qname/org.dom4j.QName/default/documentFactory"/>
+              <name>descriptor</name>
+            </default>
+          </org.dom4j.QName>
+        </qname>
+        <parentBranch class="org.dom4j.tree.DefaultDocument">
+          <rootElement class="org.dom4j.tree.DefaultElement" reference="../.."/>
+          <content>
+            <org.dom4j.tree.DefaultElement reference="../../.."/>
+          </content>
+          <documentFactory reference="../../../qname/org.dom4j.QName/default/documentFactory"/>
+        </parentBranch>
+        <content class="list" reference="../../.."/>
+        <attributes class="list"/>
+      </parentBranch>
+      <content class="list">
+        <org.dom4j.tree.DefaultText>
+          <text>content-bundle</text>
+          <parent class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+        </org.dom4j.tree.DefaultText>
+      </content>
+      <attributes class="list"/>
+    </org.dom4j.tree.DefaultElement>
+    <org.dom4j.tree.DefaultElement>
+      <qname serialization="custom">
+        <org.dom4j.QName>
+          <string></string>
+          <string></string>
+          <default>
+            <hashCode>-2123669217</hashCode>
+            <documentFactory reference="../../../../../org.dom4j.tree.DefaultElement/qname/org.dom4j.QName/default/documentFactory"/>
+            <name>first-quote</name>
+            <qualifiedName>first-quote</qualifiedName>
+          </default>
+        </org.dom4j.QName>
+      </qname>
+      <parentBranch class="org.dom4j.tree.DefaultElement" reference="../../org.dom4j.tree.DefaultElement/parentBranch"/>
+      <content class="list">
+        <org.dom4j.tree.DefaultText>
+          <text>I haven&apos;t failed. I&apos;ve just found 10,000 ways that won&apos;t work. -- Thomas Edison</text>
+          <parent class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+        </org.dom4j.tree.DefaultText>
+      </content>
+      <attributes class="list"/>
+    </org.dom4j.tree.DefaultElement>
+    <org.dom4j.tree.DefaultElement>
+      <qname serialization="custom">
+        <org.dom4j.QName>
+          <string></string>
+          <string></string>
+          <default>
+            <hashCode>-1794871325</hashCode>
+            <documentFactory reference="../../../../../org.dom4j.tree.DefaultElement/qname/org.dom4j.QName/default/documentFactory"/>
+            <name>second-quote</name>
+            <qualifiedName>second-quote</qualifiedName>
+          </default>
+        </org.dom4j.QName>
+      </qname>
+      <parentBranch class="org.dom4j.tree.DefaultElement" reference="../../org.dom4j.tree.DefaultElement/parentBranch"/>
+      <content class="list">
+        <org.dom4j.tree.DefaultText>
+          <text>Ne haïssez pas, c&apos;est un fardeau trop lourd à supporter. -- Martin Luther King, Jr.</text>
+          <parent class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+        </org.dom4j.tree.DefaultText>
+      </content>
+      <attributes class="list"/>
+    </org.dom4j.tree.DefaultElement>
+    <org.dom4j.tree.DefaultElement>
+      <qname serialization="custom">
+        <org.dom4j.QName>
+          <string></string>
+          <string></string>
+          <default>
+            <hashCode>-990450026</hashCode>
+            <documentFactory reference="../../../../../org.dom4j.tree.DefaultElement/qname/org.dom4j.QName/default/documentFactory"/>
+            <name>third-quote</name>
+            <qualifiedName>third-quote</qualifiedName>
+          </default>
+        </org.dom4j.QName>
+      </qname>
+      <parentBranch class="org.dom4j.tree.DefaultElement" reference="../../org.dom4j.tree.DefaultElement/parentBranch"/>
+      <content class="list">
+        <org.dom4j.tree.DefaultText>
+          <text>Si j&apos;ai vu un peu plus loin c&apos;est en me tenant sur ​​les épaules de géants. -- Issac Newton</text>
+          <parent class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+        </org.dom4j.tree.DefaultText>
+      </content>
+      <attributes class="list"/>
+    </org.dom4j.tree.DefaultElement>
+    <org.dom4j.tree.DefaultElement>
+      <qname serialization="custom">
+        <org.dom4j.QName>
+          <string></string>
+          <string></string>
+          <default>
+            <hashCode>1942574248</hashCode>
+            <documentFactory reference="../../../../../org.dom4j.tree.DefaultElement/qname/org.dom4j.QName/default/documentFactory"/>
+            <name>include</name>
+            <qualifiedName>include</qualifiedName>
+          </default>
+        </org.dom4j.QName>
+      </qname>
+      <parentBranch class="org.dom4j.tree.DefaultElement" reference="../../org.dom4j.tree.DefaultElement/parentBranch"/>
+      <content class="list">
+        <org.dom4j.tree.DefaultText>
+          <text>/system-info-component.xml</text>
+          <parent class="org.dom4j.tree.DefaultElement" reference="../../.."/>
+        </org.dom4j.tree.DefaultText>
+      </content>
+    </org.dom4j.tree.DefaultElement>
+  </branchContent>
+  <branch class="org.dom4j.tree.DefaultElement" reference="../branchContent/org.dom4j.tree.DefaultElement/parentBranch"/>
+</org.dom4j.tree.ContentListFacade>

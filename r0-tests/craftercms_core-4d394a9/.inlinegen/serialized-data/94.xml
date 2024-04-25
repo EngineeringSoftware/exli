@@ -1,0 +1,2211 @@
+<java.util.HashMap_-Node>
+  <hash>1738563841</hash>
+  <key class="string">T=iB%`cg</key>
+  <value class="org.craftercms.core.xml.mergers.impl.strategies.CompositeInheritFromHierarchyMergeStrategy">
+    <strategies class="org.dom4j.bean.BeanAttributeList">
+      <parent>
+        <qname serialization="custom">
+          <org.dom4j.QName>
+            <string></string>
+            <string></string>
+            <default>
+              <hashCode>0</hashCode>
+              <documentFactory class="org.dom4j.bean.BeanDocumentFactory" serialization="custom">
+                <org.dom4j.DocumentFactory>
+                  <default/>
+                </org.dom4j.DocumentFactory>
+              </documentFactory>
+              <name>T=iB%`cg</name>
+            </default>
+          </org.dom4j.QName>
+        </qname>
+        <bean/>
+      </parent>
+      <beanMetaData>
+        <beanClass>com.github.javaparser.ast.body.ConstructorDeclaration</beanClass>
+        <propertyDescriptors>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null">
+                <lock/>
+                <queueLength>0</queueLength>
+              </queue>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>allContainedComments</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">java.util.List</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public java.util.List&lt;com.github.javaparser.ast.comments.Comment&gt; com.github.javaparser.ast.Node.getAllContainedComments()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>getAllContainedComments</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>AllContainedComments</baseName>
+            <readMethodName>getAllContainedComments</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>annotationDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.BodyDeclaration.isAnnotationDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>isAnnotationDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>AnnotationDeclaration</baseName>
+            <readMethodName>isAnnotationDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>annotationMemberDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.BodyDeclaration.isAnnotationMemberDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>isAnnotationMemberDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>AnnotationMemberDeclaration</baseName>
+            <readMethodName>isAnnotationMemberDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>annotations</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.NodeList</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.ast.NodeList&lt;com.github.javaparser.ast.expr.AnnotationExpr&gt; com.github.javaparser.ast.body.BodyDeclaration.getAnnotations()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>getAnnotations</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>Annotations</baseName>
+            <readMethodName>getAnnotations</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>body</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.stmt.BlockStmt</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.ast.stmt.BlockStmt com.github.javaparser.ast.body.ConstructorDeclaration.getBody()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.ConstructorDeclaration</class>
+                  <name>getBody</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>Body</baseName>
+            <readMethodName>getBody</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>callableDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.CallableDeclaration.isCallableDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.CallableDeclaration</class>
+                  <name>isCallableDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>CallableDeclaration</baseName>
+            <readMethodName>isCallableDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>childNodes</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">java.util.List</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public java.util.List&lt;com.github.javaparser.ast.Node&gt; com.github.javaparser.ast.Node.getChildNodes()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>getChildNodes</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>ChildNodes</baseName>
+            <readMethodName>getChildNodes</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>class</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">java.lang.Class</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public final native java.lang.Class&lt;?&gt; java.lang.Object.getClass()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>java.lang.Object</class>
+                  <name>getClass</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">java.lang.Object</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>Class</baseName>
+            <readMethodName>getClass</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>classOrInterfaceDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.BodyDeclaration.isClassOrInterfaceDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>isClassOrInterfaceDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>ClassOrInterfaceDeclaration</baseName>
+            <readMethodName>isClassOrInterfaceDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>comment</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">java.util.Optional</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public java.util.Optional&lt;com.github.javaparser.ast.comments.Comment&gt; com.github.javaparser.ast.Node.getComment()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>getComment</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>Comment</baseName>
+            <readMethodName>getComment</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>compactConstructorDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.BodyDeclaration.isCompactConstructorDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>isCompactConstructorDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>CompactConstructorDeclaration</baseName>
+            <readMethodName>isCompactConstructorDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>constructorDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.ConstructorDeclaration.isConstructorDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.ConstructorDeclaration</class>
+                  <name>isConstructorDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>ConstructorDeclaration</baseName>
+            <readMethodName>isConstructorDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>dataKeys</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">java.util.Set</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public java.util.Set&lt;com.github.javaparser.ast.DataKey&lt;?&gt;&gt; com.github.javaparser.ast.Node.getDataKeys()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>getDataKeys</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>DataKeys</baseName>
+            <readMethodName>getDataKeys</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>enumConstantDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.BodyDeclaration.isEnumConstantDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>isEnumConstantDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>EnumConstantDeclaration</baseName>
+            <readMethodName>isEnumConstantDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>enumDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.BodyDeclaration.isEnumDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>isEnumDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>EnumDeclaration</baseName>
+            <readMethodName>isEnumDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>fieldDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.BodyDeclaration.isFieldDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>isFieldDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>FieldDeclaration</baseName>
+            <readMethodName>isFieldDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>fixedArityMethod</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.CallableDeclaration.isFixedArityMethod()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.CallableDeclaration</class>
+                  <name>isFixedArityMethod</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>FixedArityMethod</baseName>
+            <readMethodName>isFixedArityMethod</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>initializerDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.BodyDeclaration.isInitializerDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>isInitializerDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>InitializerDeclaration</baseName>
+            <readMethodName>isInitializerDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.Node</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>lineEndingStyle</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.utils.LineSeparator</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.utils.LineSeparator com.github.javaparser.ast.Node.getLineEndingStyle()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>getLineEndingStyle</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>LineEndingStyle</baseName>
+            <readMethodName>getLineEndingStyle</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>metaModel</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.metamodel.ConstructorDeclarationMetaModel</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.metamodel.ConstructorDeclarationMetaModel com.github.javaparser.ast.body.ConstructorDeclaration.getMetaModel()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.ConstructorDeclaration</class>
+                  <name>getMetaModel</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>MetaModel</baseName>
+            <readMethodName>getMetaModel</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>methodDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.BodyDeclaration.isMethodDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>isMethodDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>MethodDeclaration</baseName>
+            <readMethodName>isMethodDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>modifiers</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.NodeList</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.ast.NodeList&lt;com.github.javaparser.ast.Modifier&gt; com.github.javaparser.ast.body.CallableDeclaration.getModifiers()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.CallableDeclaration</class>
+                  <name>getModifiers</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>Modifiers</baseName>
+            <readMethodName>getModifiers</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>name</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.expr.SimpleName</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.ast.expr.SimpleName com.github.javaparser.ast.body.CallableDeclaration.getName()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.CallableDeclaration</class>
+                  <name>getName</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>Name</baseName>
+            <readMethodName>getName</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>orphanComments</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">java.util.List</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public java.util.List&lt;com.github.javaparser.ast.comments.Comment&gt; com.github.javaparser.ast.Node.getOrphanComments()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>getOrphanComments</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>OrphanComments</baseName>
+            <readMethodName>getOrphanComments</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>parameters</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.NodeList</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.ast.NodeList&lt;com.github.javaparser.ast.body.Parameter&gt; com.github.javaparser.ast.body.CallableDeclaration.getParameters()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.CallableDeclaration</class>
+                  <name>getParameters</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>Parameters</baseName>
+            <readMethodName>getParameters</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>parentNode</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">java.util.Optional</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public java.util.Optional&lt;com.github.javaparser.ast.Node&gt; com.github.javaparser.ast.Node.getParentNode()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>getParentNode</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>ParentNode</baseName>
+            <readMethodName>getParentNode</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.Node</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>parentNodeForChildren</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.Node</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.ast.Node com.github.javaparser.ast.Node.getParentNodeForChildren()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>getParentNodeForChildren</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>ParentNodeForChildren</baseName>
+            <readMethodName>getParentNodeForChildren</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.Node</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>parsed</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.Node$Parsedness</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.ast.Node$Parsedness com.github.javaparser.ast.Node.getParsed()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>getParsed</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>Parsed</baseName>
+            <readMethodName>getParsed</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.Node</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>phantom</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.Node.isPhantom()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>isPhantom</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>Phantom</baseName>
+            <readMethodName>isPhantom</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>range</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">java.util.Optional</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public java.util.Optional&lt;com.github.javaparser.Range&gt; com.github.javaparser.ast.Node.getRange()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>getRange</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>Range</baseName>
+            <readMethodName>getRange</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>receiverParameter</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">java.util.Optional</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public java.util.Optional&lt;com.github.javaparser.ast.body.ReceiverParameter&gt; com.github.javaparser.ast.body.CallableDeclaration.getReceiverParameter()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.CallableDeclaration</class>
+                  <name>getReceiverParameter</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>ReceiverParameter</baseName>
+            <readMethodName>getReceiverParameter</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>recordDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.BodyDeclaration.isRecordDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>isRecordDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>RecordDeclaration</baseName>
+            <readMethodName>isRecordDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>signature</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration$Signature</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.ast.body.CallableDeclaration$Signature com.github.javaparser.ast.body.CallableDeclaration.getSignature()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.CallableDeclaration</class>
+                  <name>getSignature</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>Signature</baseName>
+            <readMethodName>getSignature</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>thrownExceptions</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.NodeList</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.ast.NodeList&lt;com.github.javaparser.ast.type.ReferenceType&gt; com.github.javaparser.ast.body.CallableDeclaration.getThrownExceptions()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.CallableDeclaration</class>
+                  <name>getThrownExceptions</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>ThrownExceptions</baseName>
+            <readMethodName>getThrownExceptions</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>tokenRange</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">java.util.Optional</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public java.util.Optional&lt;com.github.javaparser.TokenRange&gt; com.github.javaparser.ast.Node.getTokenRange()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.Node</class>
+                  <name>getTokenRange</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.Node</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>TokenRange</baseName>
+            <readMethodName>getTokenRange</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>typeDeclaration</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.BodyDeclaration.isTypeDeclaration()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.BodyDeclaration</class>
+                  <name>isTypeDeclaration</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.BodyDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>TypeDeclaration</baseName>
+            <readMethodName>isTypeDeclaration</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.ConstructorDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>typeParameters</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.NodeList</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public com.github.javaparser.ast.NodeList&lt;com.github.javaparser.ast.type.TypeParameter&gt; com.github.javaparser.ast.body.CallableDeclaration.getTypeParameters()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.CallableDeclaration</class>
+                  <name>getTypeParameters</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>TypeParameters</baseName>
+            <readMethodName>getTypeParameters</readMethodName>
+          </java.beans.PropertyDescriptor>
+          <java.beans.PropertyDescriptor>
+            <classRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </classRef>
+            <expert>false</expert>
+            <hidden>false</hidden>
+            <preferred>false</preferred>
+            <name>variableArityMethod</name>
+            <propertyTypeRef class="java.lang.ref.WeakReference">
+              <referent class="java-class">boolean</referent>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.beans.PropertyDescriptor/classRef/queue"/>
+            </propertyTypeRef>
+            <readMethodRef>
+              <signature>public boolean com.github.javaparser.ast.body.CallableDeclaration.isVariableArityMethod()</signature>
+              <methodRef>
+                <referent class="method">
+                  <class>com.github.javaparser.ast.body.CallableDeclaration</class>
+                  <name>isVariableArityMethod</name>
+                  <parameter-types/>
+                </referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+                <timestamp>19385722861</timestamp>
+              </methodRef>
+              <typeRef>
+                <referent class="java-class">com.github.javaparser.ast.body.CallableDeclaration</referent>
+                <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../java.beans.PropertyDescriptor/classRef/queue"/>
+              </typeRef>
+            </readMethodRef>
+            <writeMethodRef/>
+            <bound>false</bound>
+            <constrained>false</constrained>
+            <baseName>VariableArityMethod</baseName>
+            <readMethodName>isVariableArityMethod</readMethodName>
+          </java.beans.PropertyDescriptor>
+        </propertyDescriptors>
+        <qNames>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>44599270</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>allContainedComments</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-331501877</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>annotationDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-231602415</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>annotationMemberDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-961709276</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>annotations</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>3029410</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>body</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>1262897570</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>callableDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>1339293429</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>childNodes</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>94742904</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>class</name>
+                <qualifiedName>class</qualifiedName>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>131809436</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>classOrInterfaceDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>950398559</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>comment</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>1259798563</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>compactConstructorDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>1464689952</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>constructorDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>1788783806</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>dataKeys</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-1325976459</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>enumConstantDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-1276899911</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>enumDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>1657404448</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>fieldDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-1190787574</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>fixedArityMethod</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>316912952</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>initializerDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>548268086</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>lineEndingStyle</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-1086066652</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>metaModel</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>656123353</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>methodDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-1901045636</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>modifiers</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>3373707</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>name</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>626137756</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>orphanComments</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>458736106</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>parameters</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-244857396</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>parentNode</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-576061316</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>parentNodeForChildren</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-995410927</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>parsed</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-608397555</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>phantom</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>108280125</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>range</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-1727289734</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>receiverParameter</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-1149991831</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>recordDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>1073584312</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>signature</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>1831080556</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>thrownExceptions</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>88924868</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>tokenRange</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-970283552</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>typeDeclaration</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-1031148348</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>typeParameters</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+          <org.dom4j.QName serialization="custom">
+            <org.dom4j.QName>
+              <string></string>
+              <string></string>
+              <default>
+                <hashCode>-427006462</hashCode>
+                <documentFactory class="org.dom4j.bean.BeanDocumentFactory" reference="../../../../../../parent/qname/org.dom4j.QName/default/documentFactory"/>
+                <name>variableArityMethod</name>
+              </default>
+            </org.dom4j.QName>
+          </org.dom4j.QName>
+        </qNames>
+        <readMethods>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[2]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[3]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[4]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[5]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[6]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[7]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[8]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[9]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[10]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[11]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[12]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[13]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[14]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[15]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[16]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[17]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[18]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[19]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[20]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[21]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[22]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[23]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[24]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[25]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[26]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[27]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[28]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[29]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[30]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[31]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[32]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[33]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[34]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[35]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[36]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[37]/readMethodRef/methodRef/referent"/>
+          <method reference="../../propertyDescriptors/java.beans.PropertyDescriptor[38]/readMethodRef/methodRef/referent"/>
+        </readMethods>
+        <writeMethods>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+          <null/>
+        </writeMethods>
+        <nameMap>
+          <entry>
+            <string>enumConstantDeclaration</string>
+            <int>13</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[14]"/>
+            <int>13</int>
+          </entry>
+          <entry>
+            <string>tokenRange</string>
+            <int>34</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[35]"/>
+            <int>34</int>
+          </entry>
+          <entry>
+            <string>annotations</string>
+            <int>3</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[4]"/>
+            <int>3</int>
+          </entry>
+          <entry>
+            <string>body</string>
+            <int>4</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[5]"/>
+            <int>4</int>
+          </entry>
+          <entry>
+            <string>fixedArityMethod</string>
+            <int>16</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[17]"/>
+            <int>16</int>
+          </entry>
+          <entry>
+            <string>variableArityMethod</string>
+            <int>37</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[38]"/>
+            <int>37</int>
+          </entry>
+          <entry>
+            <string>lineEndingStyle</string>
+            <int>18</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[19]"/>
+            <int>18</int>
+          </entry>
+          <entry>
+            <string>recordDeclaration</string>
+            <int>31</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[32]"/>
+            <int>31</int>
+          </entry>
+          <entry>
+            <string>dataKeys</string>
+            <int>12</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[13]"/>
+            <int>12</int>
+          </entry>
+          <entry>
+            <string>annotationMemberDeclaration</string>
+            <int>2</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[3]"/>
+            <int>2</int>
+          </entry>
+          <entry>
+            <string>childNodes</string>
+            <int>6</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[7]"/>
+            <int>6</int>
+          </entry>
+          <entry>
+            <string>parentNode</string>
+            <int>25</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[26]"/>
+            <int>25</int>
+          </entry>
+          <entry>
+            <string>phantom</string>
+            <int>28</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[29]"/>
+            <int>28</int>
+          </entry>
+          <entry>
+            <string>compactConstructorDeclaration</string>
+            <int>10</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[11]"/>
+            <int>10</int>
+          </entry>
+          <entry>
+            <string>name</string>
+            <int>22</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[23]"/>
+            <int>22</int>
+          </entry>
+          <entry>
+            <string>parsed</string>
+            <int>27</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[28]"/>
+            <int>27</int>
+          </entry>
+          <entry>
+            <string>parameters</string>
+            <int>24</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[25]"/>
+            <int>24</int>
+          </entry>
+          <entry>
+            <string>methodDeclaration</string>
+            <int>20</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[21]"/>
+            <int>20</int>
+          </entry>
+          <entry>
+            <string>signature</string>
+            <int>32</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[33]"/>
+            <int>32</int>
+          </entry>
+          <entry>
+            <string>classOrInterfaceDeclaration</string>
+            <int>8</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[9]"/>
+            <int>8</int>
+          </entry>
+          <entry>
+            <string>thrownExceptions</string>
+            <int>33</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[34]"/>
+            <int>33</int>
+          </entry>
+          <entry>
+            <string>range</string>
+            <int>29</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[30]"/>
+            <int>29</int>
+          </entry>
+          <entry>
+            <string>typeDeclaration</string>
+            <int>35</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[36]"/>
+            <int>35</int>
+          </entry>
+          <entry>
+            <string>modifiers</string>
+            <int>21</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[22]"/>
+            <int>21</int>
+          </entry>
+          <entry>
+            <string>typeParameters</string>
+            <int>36</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[37]"/>
+            <int>36</int>
+          </entry>
+          <entry>
+            <string>allContainedComments</string>
+            <int>0</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName"/>
+            <int>0</int>
+          </entry>
+          <entry>
+            <string>orphanComments</string>
+            <int>23</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[24]"/>
+            <int>23</int>
+          </entry>
+          <entry>
+            <string>parentNodeForChildren</string>
+            <int>26</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[27]"/>
+            <int>26</int>
+          </entry>
+          <entry>
+            <string>initializerDeclaration</string>
+            <int>17</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[18]"/>
+            <int>17</int>
+          </entry>
+          <entry>
+            <string>class</string>
+            <int>7</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[8]"/>
+            <int>7</int>
+          </entry>
+          <entry>
+            <string>enumDeclaration</string>
+            <int>14</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[15]"/>
+            <int>14</int>
+          </entry>
+          <entry>
+            <string>callableDeclaration</string>
+            <int>5</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[6]"/>
+            <int>5</int>
+          </entry>
+          <entry>
+            <string>metaModel</string>
+            <int>19</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[20]"/>
+            <int>19</int>
+          </entry>
+          <entry>
+            <string>fieldDeclaration</string>
+            <int>15</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[16]"/>
+            <int>15</int>
+          </entry>
+          <entry>
+            <string>constructorDeclaration</string>
+            <int>11</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[12]"/>
+            <int>11</int>
+          </entry>
+          <entry>
+            <string>receiverParameter</string>
+            <int>30</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[31]"/>
+            <int>30</int>
+          </entry>
+          <entry>
+            <string>annotationDeclaration</string>
+            <int>1</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[2]"/>
+            <int>1</int>
+          </entry>
+          <entry>
+            <string>comment</string>
+            <int>9</int>
+          </entry>
+          <entry>
+            <org.dom4j.QName reference="../../../qNames/org.dom4j.QName[10]"/>
+            <int>9</int>
+          </entry>
+        </nameMap>
+      </beanMetaData>
+      <attributes>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+      </attributes>
+    </strategies>
+  </value>
+</java.util.HashMap_-Node>

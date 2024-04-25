@@ -1,0 +1,4 @@
+<biz.paluch.logging.gelf.StaticMessageField>
+  <name>fieldName3</name>
+  <value>fieldValue3</value>
+</biz.paluch.logging.gelf.StaticMessageField>

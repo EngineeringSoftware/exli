@@ -1,0 +1,10 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>Constraint null ENABLED in null</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>constraint null DISABLED in null</targetTableName>
+  <onCondition>Triggernull has been droped</onCondition>
+  <updateList>Synonym revokeObjectPermission dropped</updateList>
+  <columnValues class="linked-hash-map"/>
+</liquibase.ext.ora.merge.MergeStatement>

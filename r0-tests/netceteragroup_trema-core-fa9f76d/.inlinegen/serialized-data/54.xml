@@ -1,0 +1,20 @@
+<com.netcetera.trema.core.XMLTextNode>
+  <context>@r*yK!I&quot;/^|`=:%,j</context>
+  <valueNodeMap class="tree-map"/>
+  <parent class="com.netcetera.trema.core.XMLDatabase">
+    <listeners/>
+    <additionalRootAttrs/>
+    <additionalNamespaces/>
+    <textNodeList>
+      <com.netcetera.trema.core.XMLTextNode>
+        <context>http://apache.org/xml/features/standard-uri-conformant</context>
+        <valueNodeMap class="tree-map"/>
+        <parent class="com.netcetera.trema.core.XMLDatabase" reference="../../.."/>
+      </com.netcetera.trema.core.XMLTextNode>
+      <com.netcetera.trema.core.XMLTextNode reference="../../.."/>
+    </textNodeList>
+    <treatWarningsAsErrors>true</treatWarningsAsErrors>
+    <parseWarnings/>
+    <xmlInternalized>false</xmlInternalized>
+  </parent>
+</com.netcetera.trema.core.XMLTextNode>

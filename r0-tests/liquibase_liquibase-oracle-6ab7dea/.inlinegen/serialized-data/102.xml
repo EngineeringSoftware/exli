@@ -1,0 +1,32 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>http://www.liquibase.org/xml/ns/snapshot-ext</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>null check DROPPED from null</targetTableName>
+  <deleteCondition>Materialized view Comment has been added to null has been refreshed</deleteCondition>
+  <updateList>http://www.liquibase.org/xml/ns/dbchangelog-ext</updateList>
+  <columnValues class="linked-hash-map">
+    <entry>
+      <string>constraint null DISABLED in null</string>
+      <liquibase.ext.ora.adddeferredprimarykey.AddDeferredPrimaryKeyChange>
+        <attributes>
+          <values class="tree-map"/>
+        </attributes>
+        <schemaName>hi!</schemaName>
+        <constraintName>null check DROPPED from null</constraintName>
+      </liquibase.ext.ora.adddeferredprimarykey.AddDeferredPrimaryKeyChange>
+    </entry>
+    <entry>
+      <string>SELECT</string>
+      <liquibase.ext.ora.splittable.SplitTableStatement>
+        <continueOnError>false</continueOnError>
+        <splitTableName>hi!</splitTableName>
+        <splitTableSchemaName></splitTableSchemaName>
+        <newTableName>enableTrigger</newTableName>
+        <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+        <context>hi!</context>
+      </liquibase.ext.ora.splittable.SplitTableStatement>
+    </entry>
+  </columnValues>
+</liquibase.ext.ora.merge.MergeStatement>

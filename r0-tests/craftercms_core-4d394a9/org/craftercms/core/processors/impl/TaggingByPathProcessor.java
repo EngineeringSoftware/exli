@@ -1,0 +1,85 @@
+/*
+ * Copyright (C) 2007-2020 Crafter Software Corporation. All Rights Reserved.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3 as published by
+ * the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package org.craftercms.core.processors.impl;
+
+import org.craftercms.core.processors.ItemProcessor;
+import org.craftercms.core.service.Item;
+import java.util.Map;
+import org.inlinetest.ITest;
+import static org.inlinetest.ITest.itest;
+import static org.inlinetest.ITest.group;
+
+/**
+ * {@link ItemProcessor} that adds a new tag or field to items on specific paths.
+ * @author joseross
+ */
+public class TaggingByPathProcessor extends AbstractTaggingProcessor {
+
+    /**
+     * Map of paths & values, values can be multiple (separated by commas).
+     */
+    protected Map<String, String> pathMapping;
+
+    public void setPathMapping(Map<String, String> pathMapping) {
+        this.pathMapping = pathMapping;
+    }
+
+    @Override
+    protected String getTagValues(Item item) {
+        String value = null;
+        String path = item.getUrl();
+        for (Map.Entry<String, String> entry : pathMapping.entrySet()) {
+            if (path.matches(entry.getKey())) {
+                itest("evosuite", 44).given(entry, "37.xml").given(path, "contentStoreAdapter.item").checkTrue(group());
+                itest("evosuite", 44).given(entry, "43.xml").given(path, "TaggingByPathProcessor{newField='null', pathMapping=null}").checkFalse(group());
+                itest("evosuite", 44).given(entry, "36.xml").given(path, "tiT@MO~iG\u0000jF").checkFalse(group());
+                itest("evosuite", 44).given(entry, "41.xml").given(path, "contentStoreAdapter.items").checkTrue(group());
+                itest("evosuite", 44).given(entry, "38.xml").given(path, "contentStoreAdapter.content").checkFalse(group());
+                itest("evosuite", 44).given(entry, "35.xml").given(path, "tiT@MO~iG\u0000jF").checkTrue(group());
+                itest("evosuite", 44).given(entry, "41.xml").given(path, "contentStoreAdapter.item").checkFalse(group());
+                value = entry.getValue();
+            }
+        }
+        return value;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        TaggingByPathProcessor that = (TaggingByPathProcessor) o;
+        if (newField != null ? !newField.equals(that.newField) : that.newField != null) {
+            return false;
+        }
+        return pathMapping != null ? pathMapping.equals(that.pathMapping) : that.pathMapping == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = newField != null ? newField.hashCode() : 0;
+        result = 31 * result + (pathMapping != null ? pathMapping.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "TaggingByPathProcessor{" + "newField='" + newField + '\'' + ", pathMapping=" + pathMapping + '}';
+    }
+}

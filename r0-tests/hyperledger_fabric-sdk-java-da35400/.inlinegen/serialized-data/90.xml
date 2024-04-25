@@ -1,0 +1,54 @@
+<java.util.regex.Matcher>
+  <parentPattern>
+    <pattern>([^:]+)[:]//([^:]+)[:]([0-9]+)</pattern>
+    <flags>2</flags>
+  </parentPattern>
+  <groups>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+  </groups>
+  <from>0</from>
+  <to>420</to>
+  <lookbehindTo>0</lookbehindTo>
+  <text class="string">-----BEGIN CERTIFICATE REQUEST-----
+MIH+MIGlAgEAMEMxQTA/BgNVBAMMOG9yZy5oeXBlcmxlZGdlci5mYWJyaWNfY2Eu
+c2RrLmNvbm5lY3Rpb24uY29ubmVjdF90aW1lb3V0MFkwEwYHKoZIzj0CAQYIKoZI
+zj0DAQcDQgAEYPbTyHUSdRucW4JOJFAay2BJRlk94WkaVt8gY7DennFE8tWX7P1h
+7g1XX8CUmxam6xKWtnFNW7NkS4bxYwDsoqAAMAoGCCqGSM49BAMCA0gAMEUCIBzr
+foRyBdKdAw1cANhmylfzy8waK4dH1q+oyEFo6OvJAiEA/YpVqESWsmql068B1b+x
+UcW9ZgYxTG5cE7KyCQpqsI8=
+-----END CERTIFICATE REQUEST-----
+</text>
+  <acceptMode>0</acceptMode>
+  <first>-1</first>
+  <last>0</last>
+  <oldLast>-1</oldLast>
+  <lastAppendPosition>0</lastAppendPosition>
+  <locals>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+  </locals>
+  <hitEnd>false</hitEnd>
+  <requireEnd>false</requireEnd>
+  <transparentBounds>false</transparentBounds>
+  <anchoringBounds>true</anchoringBounds>
+</java.util.regex.Matcher>

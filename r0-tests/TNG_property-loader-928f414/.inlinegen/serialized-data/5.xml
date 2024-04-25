@@ -1,0 +1,3 @@
+<properties>
+  <property name="$include" value="testForRecursiveIncludes1"/>
+</properties>

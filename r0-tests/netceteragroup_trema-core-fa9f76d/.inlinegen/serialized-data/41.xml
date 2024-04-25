@@ -1,0 +1,11 @@
+<com.netcetera.trema.core.api.ITextNode-array>
+  <com.netcetera.trema.core.XMLTextNode>
+    <key>M</key>
+    <context>com.github.javaparser.ast.expr.BinaryExpr</context>
+    <valueNodeMap class="tree-map"/>
+  </com.netcetera.trema.core.XMLTextNode>
+  <com.netcetera.trema.core.XMLTextNode reference="../com.netcetera.trema.core.XMLTextNode"/>
+  <com.netcetera.trema.core.XMLTextNode reference="../com.netcetera.trema.core.XMLTextNode"/>
+  <com.netcetera.trema.core.XMLTextNode reference="../com.netcetera.trema.core.XMLTextNode"/>
+  <com.netcetera.trema.core.XMLTextNode reference="../com.netcetera.trema.core.XMLTextNode"/>
+</com.netcetera.trema.core.api.ITextNode-array>

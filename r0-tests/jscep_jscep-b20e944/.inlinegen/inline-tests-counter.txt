@@ -1,0 +1,4 @@
+/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java:180;5
+/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/transaction/TransactionId.java:114;2
+/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/verification/ConsoleCertificateVerifier.java:62;3
+/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/transaction/TransactionId.java:113;3

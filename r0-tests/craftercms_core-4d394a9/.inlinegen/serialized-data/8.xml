@@ -1,0 +1,53 @@
+<java.util.HashMap_-Node>
+  <hash>-1701103943</hash>
+  <key class="string">/site/static-assets/.*</key>
+  <value class="org.craftercms.core.processors.ItemProcessor$$EnhancerByMockitoWithCGLIB$$249edde1">
+    <CGLIB_-BOUND>false</CGLIB_-BOUND>
+    <CGLIB_-CALLBACK__0 class="org.mockito.internal.creation.MethodInterceptorFilter">
+      <handler class="org.mockito.internal.handler.InvocationNotifierHandler">
+        <invocationListeners/>
+        <mockHandler class="org.mockito.internal.handler.NullResultGuardian">
+          <delegate class="org.mockito.internal.handler.MockHandlerImpl">
+            <invocationContainerImpl>
+              <stubbed/>
+              <mockingProgress class="org.mockito.internal.progress.ThreadSafeMockingProgress"/>
+              <answersForStubbing/>
+              <registeredInvocations>
+                <invocations class="java.util.Collections$SynchronizedList" serialization="custom">
+                  <java.util.Collections_-SynchronizedCollection>
+                    <default>
+                      <c class="linked-list"/>
+                      <mutex class="java.util.Collections$SynchronizedList" reference="../../.."/>
+                    </default>
+                  </java.util.Collections_-SynchronizedCollection>
+                  <java.util.Collections_-SynchronizedList>
+                    <default>
+                      <list class="linked-list" reference="../../../java.util.Collections_-SynchronizedCollection/default/c"/>
+                    </default>
+                  </java.util.Collections_-SynchronizedList>
+                </invocations>
+              </registeredInvocations>
+            </invocationContainerImpl>
+            <matchersBinder/>
+            <mockingProgress class="org.mockito.internal.progress.ThreadSafeMockingProgress" reference="../invocationContainerImpl/mockingProgress"/>
+            <mockSettings class="org.mockito.internal.creation.settings.CreationSettings">
+              <typeToMock>org.craftercms.core.processors.ItemProcessor</typeToMock>
+              <extraInterfaces/>
+              <defaultAnswer class="org.mockito.internal.stubbing.defaultanswers.GloballyConfiguredAnswer"/>
+              <mockName class="org.mockito.internal.util.MockNameImpl">
+                <mockName>itemProcessor</mockName>
+                <defaultName>true</defaultName>
+              </mockName>
+              <serializable>false</serializable>
+              <invocationListeners reference="../../../../invocationListeners"/>
+            </mockSettings>
+          </delegate>
+        </mockHandler>
+      </handler>
+      <cglibHacker/>
+      <objectMethodsGuru/>
+      <mockSettings class="org.mockito.internal.creation.settings.CreationSettings" reference="../handler/mockHandler/delegate/mockSettings"/>
+    </CGLIB_-CALLBACK__0>
+    <CGLIB_-CALLBACK__1 class="org.mockito.internal.creation.jmock.SerializableNoOp"/>
+  </value>
+</java.util.HashMap_-Node>

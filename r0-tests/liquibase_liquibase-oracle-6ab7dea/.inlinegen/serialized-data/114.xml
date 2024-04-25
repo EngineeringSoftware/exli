@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>hi!</splitTableName>
+  <splitTableSchemaName>grantObjectPermission</splitTableSchemaName>
+  <newTableName>Table null encapsulated with view</newTableName>
+  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+  <context>hi!</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

@@ -1,0 +1,43 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Daisuke Igarashi</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Daisuke-Igarashi-1724</sherdogUrl>
+  <nickname></nickname>
+  <height>5&apos;9&quot;</height>
+  <weight>194 lbs</weight>
+  <birthday>1976-01-23 00:00:00.0 UTC</birthday>
+  <wins>0</wins>
+  <winsKo>0</winsKo>
+  <winsSub>0</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>1</losses>
+  <lossesKo>0</lossesKo>
+  <lossesSub>1</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event>
+        <name>Pancrase - Trans 4</name>
+        <sherdogUrl>https://www.sherdog.com/events/Pancrase-Trans-4-332</sherdogUrl>
+      </event>
+      <fighter1>
+        <name>Daisuke Igarashi</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Daisuke-Igarashi-1724</sherdogUrl>
+      </fighter1>
+      <fighter2>
+        <name>Kosei Kubota</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Kosei-Kubota-911</sherdogUrl>
+      </fighter2>
+      <date>2000-06-26T00:00:00Z[Etc/UTC]</date>
+      <result>FIGHTER_2_WIN</result>
+      <winMethod>Submission (Toe Hold)</winMethod>
+      <winTime>2:48</winTime>
+      <winRound>1</winRound>
+      <type>PRO</type>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

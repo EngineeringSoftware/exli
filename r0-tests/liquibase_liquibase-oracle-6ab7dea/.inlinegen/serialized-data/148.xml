@@ -1,0 +1,24 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>http://www.liquibase.org/xml/ns/snapshot-ext</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>null check DROPPED from null</targetTableName>
+  <updateCondition>null check DROPPED from Materialized view null has been created</updateCondition>
+  <updateList></updateList>
+  <columnValues class="linked-hash-map">
+    <entry>
+      <string>Update has been done</string>
+      <liquibase.ext.ora.merge.MergeStatement>
+        <continueOnError>false</continueOnError>
+        <sourceTableName>http://www.liquibase.org/xml/ns/snapshot-ext</sourceTableName>
+        <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+        <targetSchemaName>enableTrigger</targetSchemaName>
+        <targetTableName>null check DROPPED from null</targetTableName>
+        <insertCondition>DropCheckChange{}</insertCondition>
+        <updateList></updateList>
+        <columnValues class="linked-hash-map"/>
+      </liquibase.ext.ora.merge.MergeStatement>
+    </entry>
+  </columnValues>
+</liquibase.ext.ora.merge.MergeStatement>

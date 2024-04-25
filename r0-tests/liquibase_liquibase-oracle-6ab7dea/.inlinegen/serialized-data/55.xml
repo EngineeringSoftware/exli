@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>encapsulateTableWithView</splitTableName>
+  <splitTableSchemaName>EnableConstraintChange{}</splitTableSchemaName>
+  <newTableName>DropSynonymChange{}</newTableName>
+  <newTableSchemaName>BASIC check DROPPED from null</newTableSchemaName>
+  <context>setTransaction</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

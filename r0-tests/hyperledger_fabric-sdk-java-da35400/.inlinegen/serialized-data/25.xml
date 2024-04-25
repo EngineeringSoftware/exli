@@ -1,0 +1,35 @@
+<org.glassfish.json.JsonObjectBuilderImpl_-JsonObjectImpl>
+  <valueMap class="java.util.Collections$UnmodifiableMap">
+    <m class="linked-hash-map">
+      <entry>
+        <string>path</string>
+        <org.glassfish.json.JsonStringImpl>
+          <value>src/test/fixture/sdkintegration/e2e-2Orgs/v1.3/crypto-config/peerOrganizations/org2.example.com/ca/ca.org2.example.com-cert.pem</value>
+        </org.glassfish.json.JsonStringImpl>
+      </entry>
+      <entry>
+        <string>client</string>
+        <org.glassfish.json.JsonObjectBuilderImpl_-JsonObjectImpl>
+          <valueMap class="java.util.Collections$UnmodifiableMap">
+            <m class="linked-hash-map">
+              <entry>
+                <string>keyfile</string>
+                <org.glassfish.json.JsonStringImpl>
+                  <value>src/test/fixture/sdkintegration/e2e-2Orgs/v1.3/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/5fcbc56face045c33ad213f276293bbe3c54c2e69936045af5c9c46f38b4eddc_sk</value>
+                </org.glassfish.json.JsonStringImpl>
+              </entry>
+              <entry>
+                <string>certfile</string>
+                <org.glassfish.json.JsonStringImpl>
+                  <value>src/test/fixture/sdkintegration/e2e-2Orgs/v1.3/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem</value>
+                </org.glassfish.json.JsonStringImpl>
+              </entry>
+            </m>
+          </valueMap>
+          <bufferPool class="org.glassfish.json.BufferPoolImpl"/>
+        </org.glassfish.json.JsonObjectBuilderImpl_-JsonObjectImpl>
+      </entry>
+    </m>
+  </valueMap>
+  <bufferPool class="org.glassfish.json.BufferPoolImpl" reference="../valueMap/m/entry[2]/org.glassfish.json.JsonObjectBuilderImpl_-JsonObjectImpl/bufferPool"/>
+</org.glassfish.json.JsonObjectBuilderImpl_-JsonObjectImpl>

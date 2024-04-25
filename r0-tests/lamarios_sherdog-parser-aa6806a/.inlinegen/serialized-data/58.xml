@@ -1,0 +1,73 @@
+<list>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>KOTC - Trump Card</name>
+      <sherdogUrl>https://www.sherdog.com/events/KOTC-Trump-Card-19961</sherdogUrl>
+    </event>
+    <fighter1>
+      <name>Rose Namajunas</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Rose-Namajunas-69083</sherdogUrl>
+    </fighter1>
+    <fighter2>
+      <name>Jen Aniano</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Jen-Aniano-93409</sherdogUrl>
+    </fighter2>
+    <date>2012-06-30T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>TKO (Head Kick and Punches)</winMethod>
+    <winTime>0:33</winTime>
+    <winRound>1</winRound>
+    <type>AMATEUR</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>KOTC - March Mania</name>
+      <sherdogUrl>https://www.sherdog.com/events/KOTC-March-Mania-19943</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Moriel Charneski</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Moriel-Charneski-50321</sherdogUrl>
+    </fighter2>
+    <date>2012-03-17T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>3:00</winTime>
+    <winRound>3</winRound>
+    <type>AMATEUR</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>KOTC - Winter Warriors</name>
+      <sherdogUrl>https://www.sherdog.com/events/KOTC-Winter-Warriors-15864</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Heather Bassett</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Heather-Bassett-83062</sherdogUrl>
+    </fighter2>
+    <date>2011-12-10T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>3:00</winTime>
+    <winRound>3</winRound>
+    <type>AMATEUR</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>NAFC - Relentless</name>
+      <sherdogUrl>https://www.sherdog.com/events/NAFC-Relentless-14263</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Melissa Pacheco</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Melissa-Pacheco-69082</sherdogUrl>
+    </fighter2>
+    <date>2010-08-07T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>TKO (Punches)</winMethod>
+    <winTime>2:51</winTime>
+    <winRound>1</winRound>
+    <type>AMATEUR</type>
+  </com.ftpix.sherdogparser.models.Fight>
+</list>

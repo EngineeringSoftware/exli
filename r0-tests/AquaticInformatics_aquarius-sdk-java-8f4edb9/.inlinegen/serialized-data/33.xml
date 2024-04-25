@@ -1,0 +1,44 @@
+<java.util.regex.Matcher>
+  <parentPattern>
+    <pattern>\{(\w+)\}</pattern>
+    <flags>0</flags>
+  </parentPattern>
+  <groups>
+    <int>11</int>
+    <int>29</int>
+    <int>12</int>
+    <int>28</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+  </groups>
+  <from>0</from>
+  <to>74</to>
+  <lookbehindTo>0</lookbehindTo>
+  <text class="string">/locations/{LocationUniqueId}/standardreferencedatums/{StandardIdentifier}</text>
+  <acceptMode>0</acceptMode>
+  <first>11</first>
+  <last>29</last>
+  <oldLast>29</oldLast>
+  <lastAppendPosition>0</lastAppendPosition>
+  <locals>
+    <int>-1</int>
+  </locals>
+  <hitEnd>false</hitEnd>
+  <requireEnd>false</requireEnd>
+  <transparentBounds>false</transparentBounds>
+  <anchoringBounds>true</anchoringBounds>
+</java.util.regex.Matcher>

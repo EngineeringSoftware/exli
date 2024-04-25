@@ -1,0 +1,17 @@
+<list>
+  <com.netcetera.trema.core.XMLTextNode>
+    <key>]?Za`</key>
+    <context>]?Za`</context>
+    <valueNodeMap class="tree-map"/>
+    <parent class="com.netcetera.trema.core.XMLDatabase">
+      <listeners/>
+      <additionalRootAttrs/>
+      <additionalNamespaces/>
+      <textNodeList reference="../../.."/>
+      <treatWarningsAsErrors>true</treatWarningsAsErrors>
+      <parseWarnings/>
+      <xmlInternalized>false</xmlInternalized>
+    </parent>
+  </com.netcetera.trema.core.XMLTextNode>
+  <com.netcetera.trema.core.XMLTextNode reference="../com.netcetera.trema.core.XMLTextNode"/>
+</list>

@@ -1,0 +1,9 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>hi!</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>enableTrigger</newTableName>
+  <newTableSchemaName></newTableSchemaName>
+  <columnNameList>DisableTriggerChange{}</columnNameList>
+  <context>hi!</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

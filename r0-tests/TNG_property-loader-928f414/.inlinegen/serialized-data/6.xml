@@ -1,0 +1,3 @@
+<properties>
+  <property name="$include" value="testForDoubleIncludes2,toBeIncluded"/>
+</properties>

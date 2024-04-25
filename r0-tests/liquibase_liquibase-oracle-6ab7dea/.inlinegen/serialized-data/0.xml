@@ -1,0 +1,15 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>n</sourceTableName>
+  <sourceSchemaName>9</sourceSchemaName>
+  <targetSchemaName>&amp;k(6&#x7f;.a1*!</targetSchemaName>
+  <targetTableName>9</targetTableName>
+  <deleteCondition>targetTableName</deleteCondition>
+  <updateList>&amp;k(6&#x7f;.a1*!</updateList>
+  <columnValues class="linked-hash-map">
+    <entry>
+      <null/>
+      <null/>
+    </entry>
+  </columnValues>
+</liquibase.ext.ora.merge.MergeStatement>

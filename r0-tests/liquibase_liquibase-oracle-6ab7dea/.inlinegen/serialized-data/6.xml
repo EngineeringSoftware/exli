@@ -1,0 +1,30 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>7=rhy&amp;6v80U4jb}r0</sourceTableName>
+  <sourceSchemaName>database.typeName</sourceSchemaName>
+  <targetSchemaName>java.lang.string@0000000009</targetSchemaName>
+  <targetTableName>java.lang.string@0000000009</targetTableName>
+  <updateCondition>da)4n9ZhN?$/</updateCondition>
+  <updateList></updateList>
+  <columnValues class="linked-hash-map">
+    <entry>
+      <string>database.typeName</string>
+      <string>database.typeName</string>
+    </entry>
+    <entry>
+      <null/>
+      <liquibase.statement.DatabaseFunction>
+        <value>java.lang.string@0000000009</value>
+      </liquibase.statement.DatabaseFunction>
+    </entry>
+    <entry>
+      <string>*NTh</string>
+      <object/>
+    </entry>
+    <entry>
+      <string>lc)]9
+6vz</string>
+      <string></string>
+    </entry>
+  </columnValues>
+</liquibase.ext.ora.merge.MergeStatement>

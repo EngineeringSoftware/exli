@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>Revoking grants on null that had been given to null</splitTableName>
+  <splitTableSchemaName>createMaterializedView</splitTableSchemaName>
+  <newTableName>Materialized view null has been refreshed</newTableName>
+  <newTableSchemaName>Cluster null truncated</newTableSchemaName>
+  <context>refreshMaterializedView</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

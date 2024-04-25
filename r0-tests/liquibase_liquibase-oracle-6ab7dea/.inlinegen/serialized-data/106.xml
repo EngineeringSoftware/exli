@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>Comment has been added to Deferred primary key added to null (null)</splitTableName>
+  <splitTableSchemaName>Comment has been added to null.Table null encapsulated with view</splitTableSchemaName>
+  <newTableName>splitTable</newTableName>
+  <newTableSchemaName>DropTriggerChange{}</newTableSchemaName>
+  <context>TriggerGrants on http://www.liquibase.org/xml/ns/snapshot-ext have been given to null has been droped</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

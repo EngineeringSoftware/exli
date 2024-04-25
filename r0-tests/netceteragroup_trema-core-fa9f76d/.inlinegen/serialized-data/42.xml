@@ -1,0 +1,5 @@
+<com.netcetera.trema.core.XMLTextNode>
+  <key>M</key>
+  <context>com.github.javaparser.ast.expr.BinaryExpr</context>
+  <valueNodeMap class="tree-map"/>
+</com.netcetera.trema.core.XMLTextNode>

@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>RevokeObjectPermissionChange{}</splitTableName>
+  <splitTableSchemaName>BASIC check DROPPED from null</splitTableSchemaName>
+  <newTableName>createMaterializedView</newTableName>
+  <newTableSchemaName>revokeObjectPermission</newTableSchemaName>
+  <context>dropTrigger</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

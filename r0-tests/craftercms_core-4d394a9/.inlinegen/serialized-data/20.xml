@@ -1,0 +1,25 @@
+<org.springframework.web.util.UriTemplate>
+  <uriTemplate>/site/website/hotels/{hotel}/bookings/{booking}/index.xml</uriTemplate>
+  <uriComponents class="org.springframework.web.util.HierarchicalUriComponents">
+    <path class="org.springframework.web.util.HierarchicalUriComponents$FullPathComponent">
+      <path>/site/website/hotels/{hotel}/bookings/{booking}/index.xml</path>
+    </path>
+    <queryParams class="org.springframework.util.CollectionUtils$MultiValueMapAdapter">
+      <map class="java.util.Collections$UnmodifiableMap">
+        <m class="linked-hash-map"/>
+      </map>
+    </queryParams>
+    <encoded>false</encoded>
+  </uriComponents>
+  <variableNames class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list">
+      <string>hotel</string>
+      <string>booking</string>
+    </c>
+    <list reference="../c"/>
+  </variableNames>
+  <matchPattern>
+    <pattern>\Q/site/website/hotels/\E(.*)\Q/bookings/\E(.*)\Q/index.xml\E</pattern>
+    <flags>0</flags>
+  </matchPattern>
+</org.springframework.web.util.UriTemplate>

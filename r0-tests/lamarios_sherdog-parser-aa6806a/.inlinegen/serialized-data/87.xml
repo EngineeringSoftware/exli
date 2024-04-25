@@ -1,0 +1,549 @@
+<list>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC Fight Night 200 - Hermansson vs. Strickland</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-200-Hermansson-vs-Strickland-90688</sherdogUrl>
+    </event>
+    <fighter1>
+      <name>Alexis Davis</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Alexis-Davis-22071</sherdogUrl>
+    </fighter1>
+    <fighter2>
+      <name>Julija Stoliarenko</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Julija-Stoliarenko-143533</sherdogUrl>
+    </fighter2>
+    <date>2022-02-05T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC 263 - Adesanya vs. Vettori 2</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-263-Adesanya-vs-Vettori-2-88760</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Pannie Kianzad</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Pannie-Kianzad-99523</sherdogUrl>
+    </fighter2>
+    <date>2021-06-12T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC Fight Night 186 - Rozenstruik vs. Gane</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-186-Rozenstruik-vs-Gane-87903</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Sabina Mazo</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Sabina-Mazo-190501</sherdogUrl>
+    </fighter2>
+    <date>2021-02-27T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC 240 - Holloway vs. Edgar</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-240-Holloway-vs-Edgar-76577</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Viviane Araujo</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Viviane-Araujo-200603</sherdogUrl>
+    </fighter2>
+    <date>2019-07-27T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC Fight Night 148 - Thompson vs. Pettis</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-148-Thompson-vs-Pettis-72033</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Jennifer Maia</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Jennifer-Maia-57135</sherdogUrl>
+    </fighter2>
+    <date>2019-03-23T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC on Fox 30 - Alvarez vs. Poirier 2</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-on-Fox-30-Alvarez-vs-Poirier-2-66975</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Katlyn Cerminara</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Katlyn-Cerminara-119071</sherdogUrl>
+    </fighter2>
+    <date>2018-07-28T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC Fight Night 123 - Swanson vs. Ortega</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-123-Swanson-vs-Ortega-62623</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Liz Carmouche</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Liz-Carmouche-67007</sherdogUrl>
+    </fighter2>
+    <date>2017-12-09T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Split)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC Fight Night 108 - Swanson vs. Lobov</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-108-Swanson-vs-Lobov-57969</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Cindy Dandois</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Cindy-Dandois-42457</sherdogUrl>
+    </fighter2>
+    <date>2017-04-22T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC - The Ultimate Fighter 24 Finale</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-The-Ultimate-Fighter-24-Finale-54997</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Sara McMann</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Sara-McMann-67094</sherdogUrl>
+    </fighter2>
+    <date>2016-12-03T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Submission (Arm-Triangle Choke)</winMethod>
+    <winTime>2:52</winTime>
+    <winRound>2</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC 186 - Johnson vs. Horiguchi</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-186-Johnson-vs-Horiguchi-42193</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Sarah Kaufman</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Sarah-Kaufman-16524</sherdogUrl>
+    </fighter2>
+    <date>2015-04-25T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Armbar)</winMethod>
+    <winTime>3:08</winTime>
+    <winRound>2</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC 175 - Weidman vs. Machida</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-175-Weidman-vs-Machida-36735</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Ronda Rousey</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Ronda-Rousey-73073</sherdogUrl>
+    </fighter2>
+    <date>2014-07-05T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>KO (Punches)</winMethod>
+    <winTime>0:16</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC 170 - Rousey vs. McMann</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-170-Rousey-vs-McMann-33337</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Jessica Eye</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Jessica-Eye-39575</sherdogUrl>
+    </fighter2>
+    <date>2014-02-22T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Split)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC Fight Night 31 - Fight for the Troops 3</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-Fight-Night-31-Fight-for-the-Troops-3-32077</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Liz Carmouche</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Liz-Carmouche-67007</sherdogUrl>
+    </fighter2>
+    <date>2013-11-06T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UFC 161 - Evans vs. Henderson</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFC-161-Evans-vs-Henderson-28457</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Rosi Sexton</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Rosi-Sexton-5358</sherdogUrl>
+    </fighter2>
+    <date>2013-06-15T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>Invicta FC 4 - Esparza vs. Hyatt</name>
+      <sherdogUrl>https://www.sherdog.com/events/Invicta-FC-4-Esparza-vs-Hyatt-26535</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Shayna Baszler</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Shayna-Baszler-12116</sherdogUrl>
+    </fighter2>
+    <date>2013-01-05T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Technical Submission (Rear-Naked Choke)</winMethod>
+    <winTime>2:58</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>Invicta FC 2 - Baszler vs. McMann</name>
+      <sherdogUrl>https://www.sherdog.com/events/Invicta-FC-2-Baszler-vs-McMann-22035</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Hitomi Akano</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Hitomi-Akano-11994</sherdogUrl>
+    </fighter2>
+    <date>2012-07-28T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Rear-Naked Choke)</winMethod>
+    <winTime>3:41</winTime>
+    <winRound>2</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>Strikeforce - Tate vs. Rousey</name>
+      <sherdogUrl>https://www.sherdog.com/events/Strikeforce-Tate-vs-Rousey-19921</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Sarah Kaufman</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Sarah-Kaufman-16524</sherdogUrl>
+    </fighter2>
+    <date>2012-03-03T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Decision (Majority)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>Strikeforce - Barnett vs. Kharitonov</name>
+      <sherdogUrl>https://www.sherdog.com/events/Strikeforce-Barnett-vs-Kharitonov-17411</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Amanda Nunes</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Amanda-Nunes-31496</sherdogUrl>
+    </fighter2>
+    <date>2011-09-10T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>TKO (Punches)</winMethod>
+    <winTime>4:53</winTime>
+    <winRound>2</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>Strikeforce / M-1 Global - Fedor vs. Henderson</name>
+      <sherdogUrl>https://www.sherdog.com/events/Strikeforce-M1-Global-Fedor-vs-Henderson-16815</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Julie Kedzie</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Julie-Kedzie-10093</sherdogUrl>
+    </fighter2>
+    <date>2011-07-30T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>RW 10 - Mayhem in the Mist 5</name>
+      <sherdogUrl>https://www.sherdog.com/events/RW-10-Mayhem-in-the-Mist-5-14718</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Tonya Evinger</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Tonya-Evinger-18248</sherdogUrl>
+    </fighter2>
+    <date>2010-11-06T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Rear-Naked Choke)</winMethod>
+    <winTime>1:25</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>RW 9 - Mayhem in the Mist 4</name>
+      <sherdogUrl>https://www.sherdog.com/events/RW-9-Mayhem-in-the-Mist-4-14340</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Elaina Maxwell</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Elaina-Maxwell-17691</sherdogUrl>
+    </fighter2>
+    <date>2010-08-28T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>RW 7 - Mayhem in the Mist 3</name>
+      <sherdogUrl>https://www.sherdog.com/events/RW-7-Mayhem-in-the-Mist-3-13363</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Tonya Evinger</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Tonya-Evinger-18248</sherdogUrl>
+    </fighter2>
+    <date>2010-05-08T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Rear-Naked Choke)</winMethod>
+    <winTime>1:47</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>FCF - Freestyle Cage Fighting 40</name>
+      <sherdogUrl>https://www.sherdog.com/events/FCF-Freestyle-Cage-Fighting-40-12777</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Shayna Baszler</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Shayna-Baszler-12116</sherdogUrl>
+    </fighter2>
+    <date>2010-03-27T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>RW 5 - Mayhem in the Mist</name>
+      <sherdogUrl>https://www.sherdog.com/events/RW-5-Mayhem-in-the-Mist-11096</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Molly Helsel</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Molly-Helsel-7063</sherdogUrl>
+    </fighter2>
+    <date>2009-10-10T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>5</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>Extreme Challenge - The War at the Shore</name>
+      <sherdogUrl>https://www.sherdog.com/events/Extreme-Challenge-The-War-at-the-Shore-9447</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Tara LaRosa</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Tara-LaRosa-4227</sherdogUrl>
+    </fighter2>
+    <date>2009-01-23T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>TKO (Doctor Stoppage)</winMethod>
+    <winTime>4:23</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>USFL - War in the Woods 5</name>
+      <sherdogUrl>https://www.sherdog.com/events/USFL-War-in-the-Woods-5-9232</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Margarita Kolmykova</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Margarita-Kolmykova-41208</sherdogUrl>
+    </fighter2>
+    <date>2008-11-29T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Rear-Naked Choke)</winMethod>
+    <winTime>1:02</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UCW 12 - Heatwave</name>
+      <sherdogUrl>https://www.sherdog.com/events/UCW-12-Heatwave-7354</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Kate Roy</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Kate-Roy-29715</sherdogUrl>
+    </fighter2>
+    <date>2008-06-27T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Armbar)</winMethod>
+    <winTime>3:09</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>FFF 4 - Call of the Wild</name>
+      <sherdogUrl>https://www.sherdog.com/events/FFF-4-Call-of-the-Wild-6899</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Lizbeth Carreiro</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Lizbeth-Carreiro-23990</sherdogUrl>
+    </fighter2>
+    <date>2008-04-03T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>3:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>TKO 31 - Young Guns</name>
+      <sherdogUrl>https://www.sherdog.com/events/TKO-31-Young-Guns-5776</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Valerie Letourneau</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Valerie-Letourneau-21851</sherdogUrl>
+    </fighter2>
+    <date>2007-12-14T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Split)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>ECC 6 - Hometown Heroes</name>
+      <sherdogUrl>https://www.sherdog.com/events/ECC-6-Hometown-Heroes-5769</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Tannaya Hantelman</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Tannaya-Hantelman-21373</sherdogUrl>
+    </fighter2>
+    <date>2007-10-20T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Armbar)</winMethod>
+    <winTime>1:09</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>KO Boxing - Warzone 2</name>
+      <sherdogUrl>https://www.sherdog.com/events/KO-Boxing-Warzone-2-5165</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Jody Wadsworth</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Jody-Wadsworth-22406</sherdogUrl>
+    </fighter2>
+    <date>2007-05-06T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>TKO (Punches)</winMethod>
+    <winTime>3:17</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>UCW 7 - Anarchy</name>
+      <sherdogUrl>https://www.sherdog.com/events/UCW-7-Anarchy-5061</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Sarah Kaufman</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Sarah-Kaufman-16524</sherdogUrl>
+    </fighter2>
+    <date>2007-04-07T00:00:00+08:00[Asia/Kuala_Lumpur]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>TKO (Punches)</winMethod>
+    <winTime>N/A</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+</list>

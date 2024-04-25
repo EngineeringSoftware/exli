@@ -1,0 +1,7 @@
+<liquibase.ext.ora.comment.CommentOnStatement>
+  <continueOnError>false</continueOnError>
+  <schemaName>:_Tt=IDHM7`_^qI</schemaName>
+  <tableName>RsWZq/;U</tableName>
+  <columnName>:_Tt=IDHM7`_^qI</columnName>
+  <comment></comment>
+</liquibase.ext.ora.comment.CommentOnStatement>

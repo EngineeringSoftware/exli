@@ -1,0 +1,3 @@
+/home/itdocker/exli/_downloads/liquibase_liquibase-oracle/src/main/java/liquibase/ext/ora/comment/CommentOnGenerator.java:21;1
+/home/itdocker/exli/_downloads/liquibase_liquibase-oracle/src/main/java/liquibase/ext/ora/splittable/SplitTableGenerator.java:80;1
+/home/itdocker/exli/_downloads/liquibase_liquibase-oracle/src/main/java/liquibase/ext/ora/merge/MergeGenerator.java:24;1

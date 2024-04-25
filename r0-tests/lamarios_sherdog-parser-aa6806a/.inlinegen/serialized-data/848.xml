@@ -1,0 +1,39 @@
+<com.ftpix.sherdogparser.models.Fighter>
+  <name>Atsushi Doi</name>
+  <sherdogUrl>https://www.sherdog.com/fighter/Atsushi-Doi-424156</sherdogUrl>
+  <nickname></nickname>
+  <height></height>
+  <weight></weight>
+  <wins>1</wins>
+  <winsKo>0</winsKo>
+  <winsSub>1</winsSub>
+  <winsDec>0</winsDec>
+  <winsOther>0</winsOther>
+  <losses>1</losses>
+  <lossesKo>1</lossesKo>
+  <lossesSub>0</lossesSub>
+  <lossesDec>0</lossesDec>
+  <lossesOther>0</lossesOther>
+  <draws>0</draws>
+  <nc>0</nc>
+  <picture></picture>
+  <fights>
+    <com.ftpix.sherdogparser.models.Fight>
+      <event class="com.ftpix.sherdogparser.models.Event">
+        <name>Deep</name>
+        <sherdogUrl>https://www.sherdog.com/events/Deep-Osaka-Impact-2024-2nd-Round-102577</sherdogUrl>
+        <date>2024-06-02T07:00:00Z[Etc/UTC]</date>
+        <fights/>
+        <location>Osaka, Osaka, Japan</location>
+      </event>
+      <fighter1 class="com.ftpix.sherdogparser.models.Fighter" reference="../../.."/>
+      <fighter2>
+        <name>Ryugo Takeuchi</name>
+        <sherdogUrl>https://www.sherdog.com/fighter/Ryugo-Takeuchi-442901</sherdogUrl>
+      </fighter2>
+      <date>2024-06-02T07:00:00Z[Etc/UTC]</date>
+      <result>NOT_HAPPENED</result>
+      <winRound>0</winRound>
+    </com.ftpix.sherdogparser.models.Fight>
+  </fights>
+</com.ftpix.sherdogparser.models.Fighter>

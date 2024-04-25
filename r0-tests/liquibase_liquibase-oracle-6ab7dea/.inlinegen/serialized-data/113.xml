@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>dropSynonym</splitTableName>
+  <splitTableSchemaName>Materialized view http://www.liquibase.org/xml/ns/snapshot-ext has been refreshed</splitTableSchemaName>
+  <newTableName>Materialized view refreshMaterializedView has been droped</newTableName>
+  <newTableSchemaName>DisableTriggerChange{} splitted. Created new table null</newTableSchemaName>
+  <context></context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

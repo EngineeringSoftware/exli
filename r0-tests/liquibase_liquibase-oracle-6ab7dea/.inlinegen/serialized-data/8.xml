@@ -1,0 +1,7 @@
+<liquibase.ext.ora.comment.CommentOnStatement>
+  <continueOnError>false</continueOnError>
+  <schemaName>mK*&apos;&lt;i||f&gt;2Z#$W</schemaName>
+  <tableName>mK*&apos;&lt;i||f&gt;2Z#$W</tableName>
+  <columnName>mK*&apos;&lt;i||f&gt;2Z#$W</columnName>
+  <comment>mK*&apos;&lt;i||f&gt;2Z#$W</comment>
+</liquibase.ext.ora.comment.CommentOnStatement>

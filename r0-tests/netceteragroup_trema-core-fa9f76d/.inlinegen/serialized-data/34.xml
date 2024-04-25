@@ -1,0 +1,21 @@
+<list>
+  <com.netcetera.trema.core.XMLTextNode>
+    <key>FJ</key>
+    <context>xP&amp;CrVDUM@&apos;ch</context>
+    <valueNodeMap class="tree-map"/>
+    <parent class="com.netcetera.trema.core.XMLDatabase">
+      <listeners/>
+      <additionalRootAttrs/>
+      <additionalNamespaces/>
+      <textNodeList reference="../../.."/>
+      <treatWarningsAsErrors>true</treatWarningsAsErrors>
+      <parseWarnings/>
+      <xmlInternalized>false</xmlInternalized>
+    </parent>
+  </com.netcetera.trema.core.XMLTextNode>
+  <com.netcetera.trema.core.XMLTextNode>
+    <key>FJ</key>
+    <valueNodeMap class="tree-map"/>
+    <parent class="com.netcetera.trema.core.XMLDatabase" reference="../../com.netcetera.trema.core.XMLTextNode/parent"/>
+  </com.netcetera.trema.core.XMLTextNode>
+</list>

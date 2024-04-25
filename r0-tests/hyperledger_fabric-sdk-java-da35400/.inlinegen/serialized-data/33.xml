@@ -1,0 +1,21 @@
+<org.glassfish.json.JsonObjectBuilderImpl_-JsonObjectImpl>
+  <valueMap class="java.util.Collections$UnmodifiableMap">
+    <m class="linked-hash-map">
+      <entry>
+        <string>path</string>
+        <org.glassfish.json.JsonStringImpl>
+          <value>src/test/fixture/sdkintegration/e2e-2Orgs/v1.3/crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/server.crt</value>
+        </org.glassfish.json.JsonStringImpl>
+      </entry>
+    </m>
+  </valueMap>
+  <bufferPool class="org.glassfish.json.BufferPoolImpl">
+    <queue>
+      <queue class="java.lang.ref.ReferenceQueue$Null">
+        <lock/>
+        <queueLength>0</queueLength>
+      </queue>
+      <next class="java.lang.ref.WeakReference" reference=".."/>
+    </queue>
+  </bufferPool>
+</org.glassfish.json.JsonObjectBuilderImpl_-JsonObjectImpl>

@@ -1,0 +1,10 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>ie3j5sy^h[b&amp;e0ttp</splitTableName>
+  <splitTableSchemaName>ie3j5sy^h[b&amp;e0ttp</splitTableSchemaName>
+  <newTableName>ie3j5sy^h[b&amp;e0ttp</newTableName>
+  <newTableSchemaName>ie3j5sy^h[b&amp;e0ttp</newTableSchemaName>
+  <columnNameList>@8{I&gt;Jom&#x7f;;U&quot;</columnNameList>
+  <primaryKeyColumnName>@8{I&gt;Jom&#x7f;;U&quot;</primaryKeyColumnName>
+  <context>ie3j5sy^h[b&amp;e0ttp</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

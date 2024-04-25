@@ -1,0 +1,7 @@
+<biz.paluch.logging.gelf.DynamicMdcMessageField>
+  <regex>logstash-gelf.message.pooling</regex>
+  <pattern>
+    <pattern>logstash-gelf.message.pooling</pattern>
+    <flags>0</flags>
+  </pattern>
+</biz.paluch.logging.gelf.DynamicMdcMessageField>

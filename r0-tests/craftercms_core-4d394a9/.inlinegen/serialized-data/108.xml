@@ -1,0 +1,10 @@
+<java.util.Hashtable_-Entry>
+  <hash>-1022080287</hash>
+  <key class="string">0zzo|-|QJ&quot;%0=P&lt;</key>
+  <value class="org.craftercms.core.processors.impl.TaggingByPathProcessor"/>
+  <next>
+    <hash>-328255881</hash>
+    <key class="string">EXR-#D,W1</key>
+    <value class="org.craftercms.core.processors.impl.TaggingByPathProcessor" reference="../../value"/>
+  </next>
+</java.util.Hashtable_-Entry>

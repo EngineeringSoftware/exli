@@ -1,0 +1,44 @@
+<java.util.regex.Matcher>
+  <parentPattern>
+    <pattern>\{(\w+)\}</pattern>
+    <flags>0</flags>
+  </parentPattern>
+  <groups>
+    <int>23</int>
+    <int>27</int>
+    <int>24</int>
+    <int>26</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+    <int>-1</int>
+  </groups>
+  <from>0</from>
+  <to>45</to>
+  <lookbehindTo>0</lookbehindTo>
+  <text class="string">/v1/observedproperties/{id}/categoricalvalues</text>
+  <acceptMode>0</acceptMode>
+  <first>23</first>
+  <last>27</last>
+  <oldLast>27</oldLast>
+  <lastAppendPosition>0</lastAppendPosition>
+  <locals>
+    <int>-1</int>
+  </locals>
+  <hitEnd>false</hitEnd>
+  <requireEnd>false</requireEnd>
+  <transparentBounds>false</transparentBounds>
+  <anchoringBounds>true</anchoringBounds>
+</java.util.regex.Matcher>

@@ -1,0 +1,14 @@
+<com.netcetera.trema.core.XMLTextNode>
+  <key>tYY</key>
+  <context>Duplicate key: </context>
+  <valueNodeMap class="tree-map">
+    <entry>
+      <string>Duplicate key: </string>
+      <com.netcetera.trema.core.XMLValueNode>
+        <language>Duplicate key: </language>
+        <value>Duplicate key: </value>
+        <parent class="com.netcetera.trema.core.XMLTextNode" reference="../../../.."/>
+      </com.netcetera.trema.core.XMLValueNode>
+    </entry>
+  </valueNodeMap>
+</com.netcetera.trema.core.XMLTextNode>

@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>Materialized view  has been refreshed</splitTableName>
+  <splitTableSchemaName>UPDATE</splitTableSchemaName>
+  <newTableName>null check DROPPED from null</newTableName>
+  <newTableSchemaName>refreshMaterializedView</newTableSchemaName>
+  <context>null check DROPPED from null</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>fzRwYjo 7</splitTableName>
+  <splitTableSchemaName>fzRwYjo 7</splitTableSchemaName>
+  <newTableName>fzRwYjo 7</newTableName>
+  <newTableSchemaName>fzRwYjo 7</newTableSchemaName>
+  <context>fzRwYjo 7</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

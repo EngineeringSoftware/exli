@@ -1,0 +1,30 @@
+<liquibase.ext.ora.merge.MergeStatement>
+  <continueOnError>false</continueOnError>
+  <sourceTableName>http://www.liquibase.org/xml/ns/snapshot-ext</sourceTableName>
+  <sourceSchemaName>null check DROPPED from null</sourceSchemaName>
+  <targetSchemaName>enableTrigger</targetSchemaName>
+  <targetTableName>null check DROPPED from null</targetTableName>
+  <insertCondition>dropMaterializedView</insertCondition>
+  <updateList></updateList>
+  <columnValues class="linked-hash-map">
+    <entry>
+      <string>http://www.liquibase.org/xml/ns/snapshot-ext</string>
+      <int>1</int>
+    </entry>
+    <entry>
+      <string>createTrigger</string>
+      <liquibase.ext.ora.merge.MergeChange>
+        <attributes>
+          <values class="tree-map"/>
+        </attributes>
+        <onCondition>http://www.liquibase.org/xml/ns/dbchangelog</onCondition>
+        <deleteCondition>SELECT</deleteCondition>
+        <insertCondition>Deferred primary key added to null (null)</insertCondition>
+        <insertColumnsValueList>enableTrigger</insertColumnsValueList>
+        <columns>
+          <null/>
+        </columns>
+      </liquibase.ext.ora.merge.MergeChange>
+    </entry>
+  </columnValues>
+</liquibase.ext.ora.merge.MergeStatement>

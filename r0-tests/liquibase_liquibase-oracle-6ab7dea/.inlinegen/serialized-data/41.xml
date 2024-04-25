@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>Materialized view null has been droped</splitTableName>
+  <splitTableSchemaName>createMaterializedView</splitTableSchemaName>
+  <newTableName>Grants on http://www.liquibase.org/xml/ns/snapshot-ext have been given to null</newTableName>
+  <newTableSchemaName>Table null check DROPPED from null encapsulated with view</newTableSchemaName>
+  <context>Trigger null has been created</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

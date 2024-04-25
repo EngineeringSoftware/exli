@@ -1,0 +1,9 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>hi!</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>enableTrigger</newTableName>
+  <newTableSchemaName>Materialized view grantObjectPermission has been droped</newTableSchemaName>
+  <primaryKeyColumnName>Transaction has been set</primaryKeyColumnName>
+  <context>hi!</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

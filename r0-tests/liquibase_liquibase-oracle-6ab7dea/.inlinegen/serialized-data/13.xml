@@ -1,0 +1,5 @@
+<liquibase.ext.ora.comment.CommentOnStatement>
+  <continueOnError>true</continueOnError>
+  <schemaName></schemaName>
+  <comment></comment>
+</liquibase.ext.ora.comment.CommentOnStatement>

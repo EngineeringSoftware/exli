@@ -1,0 +1,10 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>Tables null &amp; null merged</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>enableTrigger</newTableName>
+  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
+  <columnNameList>Trigger has been renamed.</columnNameList>
+  <primaryKeyColumnName>http://www.liquibase.org/xml/ns/dbchangelog</primaryKeyColumnName>
+  <context>Trigger has been enabled.</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

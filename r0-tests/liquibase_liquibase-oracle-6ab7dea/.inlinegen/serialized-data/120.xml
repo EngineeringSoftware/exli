@@ -1,0 +1,8 @@
+<liquibase.ext.ora.splittable.SplitTableStatement>
+  <continueOnError>false</continueOnError>
+  <splitTableName>hi!</splitTableName>
+  <splitTableSchemaName></splitTableSchemaName>
+  <newTableName>enableTrigger</newTableName>
+  <newTableSchemaName>Table Table Tables null &amp; null merged encapsulated with view encapsulated with view</newTableSchemaName>
+  <context>hi!</context>
+</liquibase.ext.ora.splittable.SplitTableStatement>

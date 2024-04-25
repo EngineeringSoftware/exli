@@ -1,0 +1,73 @@
+<list>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>WCSA Combat League - Combat Ring 13: Steel Heart 5</name>
+      <sherdogUrl>https://www.sherdog.com/events/WCSA-Combat-League-Combat-Ring-13-Steel-Heart-5-56723</sherdogUrl>
+    </event>
+    <fighter1>
+      <name>Daudgadzhi Ibragimov</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Daudgadzhi-Ibragimov-240733</sherdogUrl>
+    </fighter1>
+    <fighter2>
+      <name>David Zimin</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/David-Zimin-240735</sherdogUrl>
+    </fighter2>
+    <date>2015-04-10T00:00:00Z[Etc/UTC]</date>
+    <result>DRAW</result>
+    <winMethod>Draw (Unanimous)</winMethod>
+    <winTime>3:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>U-Fight - Battle of the Highlanders 4</name>
+      <sherdogUrl>https://www.sherdog.com/events/UFight-Battle-of-the-Highlanders-4-62547</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Vyaches Gorbun</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Vyaches-Gorbun-262877</sherdogUrl>
+    </fighter2>
+    <date>2016-11-26T00:00:00Z[Etc/UTC]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Submission (Arm-Triangle Choke)</winMethod>
+    <winTime>4:45</winTime>
+    <winRound>1</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>VFC 2 - Veles Fighting Championship 2</name>
+      <sherdogUrl>https://www.sherdog.com/events/VFC-2-Veles-Fighting-Championship-2-78989</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Leonid Timoshenko</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Leonid-Timoshenko-258161</sherdogUrl>
+    </fighter2>
+    <date>2019-08-11T00:00:00Z[Etc/UTC]</date>
+    <result>FIGHTER_2_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+  <com.ftpix.sherdogparser.models.Fight>
+    <event>
+      <name>MMA Series 17 - Blacksmith Fighting Championship 2</name>
+      <sherdogUrl>https://www.sherdog.com/events/MMA-Series-17-Blacksmith-Fighting-Championship-2-87684</sherdogUrl>
+    </event>
+    <fighter1 reference="../../com.ftpix.sherdogparser.models.Fight/fighter1"/>
+    <fighter2>
+      <name>Maxim Kolosov</name>
+      <sherdogUrl>https://www.sherdog.com/fighter/Maxim-Kolosov-282233</sherdogUrl>
+    </fighter2>
+    <date>2020-10-10T00:00:00Z[Etc/UTC]</date>
+    <result>FIGHTER_1_WIN</result>
+    <winMethod>Decision (Unanimous)</winMethod>
+    <winTime>5:00</winTime>
+    <winRound>3</winRound>
+    <type>PRO</type>
+  </com.ftpix.sherdogparser.models.Fight>
+</list>

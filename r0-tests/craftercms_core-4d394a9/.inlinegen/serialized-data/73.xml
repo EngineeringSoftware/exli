@@ -1,0 +1,22 @@
+<org.springframework.web.util.UriTemplate>
+  <uriTemplate>validation.error.string.minLength</uriTemplate>
+  <uriComponents class="org.springframework.web.util.HierarchicalUriComponents">
+    <path class="org.springframework.web.util.HierarchicalUriComponents$FullPathComponent">
+      <path>validation.error.string.minLength</path>
+    </path>
+    <queryParams class="org.springframework.util.CollectionUtils$MultiValueMapAdapter">
+      <map class="java.util.Collections$UnmodifiableMap">
+        <m class="linked-hash-map"/>
+      </map>
+    </queryParams>
+    <encoded>false</encoded>
+  </uriComponents>
+  <variableNames class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </variableNames>
+  <matchPattern>
+    <pattern>\Qvalidation.error.string.minLength\E</pattern>
+    <flags>0</flags>
+  </matchPattern>
+</org.springframework.web.util.UriTemplate>

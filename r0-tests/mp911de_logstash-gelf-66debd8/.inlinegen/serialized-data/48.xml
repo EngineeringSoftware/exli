@@ -1,0 +1,7 @@
+<biz.paluch.logging.gelf.DynamicMdcMessageField>
+  <regex>facility</regex>
+  <pattern>
+    <pattern>facility</pattern>
+    <flags>0</flags>
+  </pattern>
+</biz.paluch.logging.gelf.DynamicMdcMessageField>

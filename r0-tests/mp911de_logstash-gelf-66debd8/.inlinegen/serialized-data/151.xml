@@ -1,0 +1,7 @@
+<biz.paluch.logging.gelf.DynamicMdcMessageField>
+  <regex>MdcMessageField [name=&apos;DynamicMdcMessageField [regex=&apos;includeLogMessageParameters&apos;]&apos;, mdcName=&apos;double&apos;]</regex>
+  <pattern>
+    <pattern>MdcMessageField [name=&apos;DynamicMdcMessageField [regex=&apos;includeLogMessageParameters&apos;]&apos;, mdcName=&apos;double&apos;]</pattern>
+    <flags>0</flags>
+  </pattern>
+</biz.paluch.logging.gelf.DynamicMdcMessageField>
