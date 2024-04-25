@@ -44,9 +44,7 @@ class Table:
     # python -m exli.table data_target_stmts_found
     def data_target_stmts_found(self):
         file = latex.File(Macros.table_dir / "data-target-statements-found.tex")
-        target_stmts_dict = se.io.load(
-            Macros.results_dir / "target-statements.json"
-        )
+        target_stmts_dict = se.io.load(Macros.results_dir / "target-statements.json")
         df = pd.DataFrame(target_stmts_dict)
 
         # count the number of target statements of each type
@@ -87,21 +85,18 @@ class Table:
             )
         )
 
-        df["tests_stmt_covered"] = (
-            df["unit_stmt_covered"]
-            | df["randoop_stmt_covered"]
-            | df["evosuite_stmt_covered"]
+        df[f"{Macros.unit}_stmt_covered"] = (
+            df[f"{Macros.dev}_stmt_covered"]
+            | df[f"{Macros.randoop}_stmt_covered"]
+            | df[f"{Macros.evosuite}_stmt_covered"]
         )
-        df["tests_method_covered"] = (
-            df["unit_method_covered"]
-            | df["randoop_method_covered"]
-            | df["evosuite_method_covered"]
+        df[f"{Macros.unit}_method_covered"] = (
+            df[f"{Macros.dev}_method_covered"]
+            | df[f"{Macros.randoop}_method_covered"]
+            | df[f"{Macros.evosuite}_method_covered"]
         )
-        for tool in ["unit", "randoop", "evosuite", "tests"]:
-            if tool == "tests":
-                tmacro = "unit"
-            else:
-                tmacro = tool2macro[tool]
+        for tool in [Macros.dev, Macros.randoop, Macros.evosuite, Macros.unit]:
+            tmacro = tool2macro[tool]
 
             # count the number of target statements covered
             sum_by_type = (
