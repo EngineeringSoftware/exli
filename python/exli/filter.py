@@ -356,18 +356,18 @@ class Filter:
         target_stmts = se.io.load(target_statements_file, se.io.Fmt.json)
         for target_statement in target_stmts:
             if (
-                target_statement["unit_stmt_covered"] == False
-                and target_statement["randoop_stmt_covered"] == False
+                target_statement[f"{Macros.dev}_stmt_covered"] == False
+                and target_statement[f"{Macros.randoop}_stmt_covered"] == False
             ):
                 res.append(target_statement)
                 if (
-                    target_statement["randoop_method_covered"] == True
-                    and target_statement["unit_method_covered"] == True
+                    target_statement[f"{Macros.randoop}_method_covered"] == True
+                    and target_statement[f"{Macros.dev}_method_covered"] == True
                 ):
                     mtd_covered_by_all_tests += 1
                 if (
-                    target_statement["randoop_method_covered"] == False
-                    and target_statement["unit_method_covered"] == False
+                    target_statement[f"{Macros.randoop}_method_covered"] == False
+                    and target_statement[f"{Macros.dev}_method_covered"] == False
                 ):
                     mtd_not_covered_by_all_tests += 1
         print("mtd_covered_by_all_tests", mtd_covered_by_all_tests)
