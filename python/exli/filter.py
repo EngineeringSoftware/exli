@@ -358,16 +358,19 @@ class Filter:
             if (
                 target_statement[f"{Macros.dev}_stmt_covered"] == False
                 and target_statement[f"{Macros.randoop}_stmt_covered"] == False
+                and target_statement[f"{Macros.evosuite}_stmt_covered"] == False
             ):
                 res.append(target_statement)
                 if (
                     target_statement[f"{Macros.randoop}_method_covered"] == True
                     and target_statement[f"{Macros.dev}_method_covered"] == True
+                    and target_statement[f"{Macros.evosuite}_method_covered"] == True
                 ):
                     mtd_covered_by_all_tests += 1
                 if (
                     target_statement[f"{Macros.randoop}_method_covered"] == False
                     and target_statement[f"{Macros.dev}_method_covered"] == False
+                    and target_statement[f"{Macros.evosuite}_method_covered"] == False
                 ):
                     mtd_not_covered_by_all_tests += 1
         print("mtd_covered_by_all_tests", mtd_covered_by_all_tests)
