@@ -352,7 +352,7 @@ class Filter:
         res = []
         mtd_covered_by_all_tests = 0
         mtd_not_covered_by_all_tests = 0
-        target_statements_file = Macros.results_dir / "teco-target-statements.json"
+        target_statements_file = Macros.results_dir / "target-statements.json"
         target_stmts = se.io.load(target_statements_file, se.io.Fmt.json)
         for target_statement in target_stmts:
             if (
@@ -373,7 +373,7 @@ class Filter:
         print("mtd_covered_by_all_tests", mtd_covered_by_all_tests)
         print("mtd_not_covered_by_all_tests", mtd_not_covered_by_all_tests)
         se.io.dump(
-            Macros.results_dir / "teco-target-statements-not-covered.json",
+            Macros.results_dir / "target-statements-not-covered.json",
             res,
             fmt=se.io.Fmt.jsonPretty,
         )
@@ -381,7 +381,7 @@ class Filter:
     # python -m exli.filter check_teco_target_stmts_not_covered
     def check_teco_target_stmts_not_covered(self):
         not_covered = se.io.load(
-            Macros.results_dir / "teco-target-statements-not-covered.json"
+            Macros.results_dir / "target-statements-not-covered.json"
         )
         classes = collections.Counter()
         total_classes = collections.Counter()
@@ -432,7 +432,7 @@ class Filter:
 
     # python -m exli.filter check_duplicate
     def check_duplicate(self):
-        filepath = Macros.results_dir / "teco-target-statements.json"
+        filepath = Macros.results_dir / "target-statements.json"
         mutants = se.io.load(filepath)
         m = set()
         for mutant in mutants:
