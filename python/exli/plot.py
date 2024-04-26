@@ -165,7 +165,7 @@ class Plot:
 
         data = [
             [x for x in metrics_list[k] if x != 0]
-            for k in ["unique", "r0", "r1", "r2-um", "r2-major"]
+            for k in ["unique", Macros.r0, Macros.r1, Macros.r2_um]
         ]
         x_labels = [
             name_unique,
@@ -201,17 +201,15 @@ class Plot:
         venn_dir.mkdir(exist_ok=True)
 
         test_type_name_pairs = [
-            ("reduced", name_exli_r1),
-            ("r2-universalmutator", name_exli_um),
-            ("r2-major", name_exli_major),
-            ("unit", name_dev),
-            ("randoop", name_randoop),
-            ("evosuite", name_evosuite),
+            (Macros.r1, name_exli_r1),
+            (Macros.r2_um, name_exli_um),
+            (Macros.dev, name_dev),
+            (Macros.randoop, name_randoop),
+            (Macros.evosuite, name_evosuite),
         ]
         test_type_list = [t[0] for t in test_type_name_pairs]
-        test_type_list_5 = [
+        test_type_list_4 = [
             name_exli_um,
-            name_exli_major,
             name_dev,
             name_randoop,
             name_evosuite,
@@ -230,8 +228,8 @@ class Plot:
             }
             fig, ax = plt.subplots(figsize=(7, 7))
             venn.venn(
-                {k: data_proj[k] for k in test_type_list_5},
-                cmap=self.cmap5,
+                {k: data_proj[k] for k in test_type_list_4},
+                cmap=self.cmap4,
                 ax=ax,
             )
             fig.tight_layout()
@@ -244,7 +242,7 @@ class Plot:
         # venn diagram for total, with several variants
         # all 6 groups
         fig, ax = plt.subplots(figsize=(7, 7))
-        venn.venn(data_all, cmap=self.cmap6, ax=ax)
+        venn.venn(data_all, cmap=self.cmap5, ax=ax)
         fig.tight_layout()
         fig.savefig(venn_dir / "total-venn-all6.pdf")
         plt.close()
@@ -252,7 +250,7 @@ class Plot:
         # w/o ExLi-R1
         fig, ax = plt.subplots(figsize=(6, 6))
         venn.venn(
-            {k: data_all[k] for k in test_type_list_5},
+            {k: data_all[k] for k in test_type_list_4},
             cmap=self.cmap5,
             ax=ax,
         )
@@ -260,17 +258,17 @@ class Plot:
         fig.savefig(venn_dir / "total-venn.pdf")
         plt.close()
 
-        # ExLi-R1 vs. ExLi-UM vs. ExLi-Major vs. Unit
+        # ExLi-R1 vs. ExLi-UM vs. Unit
         data_comb_unit = {
             name_exli_r1: data_all[name_exli_r1],
             name_exli_um: data_all[name_exli_um],
-            name_exli_major: data_all[name_exli_major],
+
             name_unit: data_all[name_dev]
             | data_all[name_randoop]
             | data_all[name_evosuite],
         }
         fig, ax = plt.subplots(figsize=(5, 5))
-        venn.venn(data_comb_unit, cmap=self.cmap4, ax=ax)
+        venn.venn(data_comb_unit, cmap=self.cmap3, ax=ax)
         fig.tight_layout()
         fig.savefig(venn_dir / "total-venn-comb-unit.pdf")
         plt.close()
