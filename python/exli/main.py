@@ -57,9 +57,10 @@ class Main:
                         120,
                         Macros.DEFAULT_SEED,
                         log_path,
+                        time_dict,
                     )
                     end_time = time.time()
-                    time_dict[project_name] = end_time - start_time
+                    time_dict[f"{project_name}-{sha}"] = end_time - start_time
                 except Exception as e:
                     se.io.dump(
                         log_path,
@@ -84,6 +85,7 @@ class Main:
         evosuite_tl: int = 120,
         seed: int = Macros.DEFAULT_SEED,
         log_path: str = None,
+        time_dict: dict = None,
     ):
         """
         Generate inline tests for a project.
@@ -158,6 +160,7 @@ class Main:
                 elif tool == Macros.evosuite:
                     time_limit = evosuite_tl
 
+                generate_start_time = time.time()
                 Generate().generate_tests(
                     project_name,
                     sha,
@@ -169,10 +172,16 @@ class Main:
                     deps_file_path,
                     classpath_list_path,
                 )
+                generate_end_time = time.time()
+                time_dict[f"{project_name}-{sha}-{tool}"] = (
+                    generate_end_time - generate_start_time
+                )
 
         ################################## Instrument ##################################
         Util.prepare_project(project_name, sha)
         print("inserting print statement...")
+
+        instrument_start_time = time.time()
         with se.io.cd(Macros.java_raninline_dir):
             for java_file_path in java_file_paths:
                 is_auto_generated = Util.is_auto_generated_file(java_file_path)
@@ -181,6 +190,10 @@ class Main:
                         f'mvn exec:java -Dexec.mainClass="org.raninline.App" -Dexec.args="i {java_file_path} -1 {log_path} {r0_log_path} {r1_log_path} {classes_dir}"',
                         0,
                     )
+        instrument_end_time = time.time()
+        time_dict[f"{project_name}-{sha}-instrument"] = (
+            instrument_end_time - instrument_start_time
+        )
 
         print("recompiling modified file...")
         with se.io.cd(Macros.downloads_dir / project_name):
@@ -193,6 +206,7 @@ class Main:
         ################################## Run tests ##################################
         run_tests_log_dir = Macros.log_dir / "run-unit-tests"
 
+        run_tests_start_time = time.time()
         if dev:
             run_tests_log_path = run_tests_log_dir / f"{project_name}-{sha}-dev.log"
             if run_tests_log_path.exists():
@@ -225,6 +239,10 @@ class Main:
                 maven_project,
                 unit_tests_dir_dict[Macros.randoop],
             )
+        run_tests_end_time = time.time()
+        time_dict[f"{project_name}-{sha}-run-tests"] = (
+            run_tests_end_time - run_tests_start_time
+        )
 
         ################################## Save serialized data ##################################
         se.bash.run(
