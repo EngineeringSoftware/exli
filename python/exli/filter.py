@@ -378,8 +378,8 @@ class Filter:
             fmt=se.io.Fmt.jsonPretty,
         )
 
-    # python -m exli.filter check_teco_target_stmts_not_covered
-    def check_teco_target_stmts_not_covered(self):
+    # python -m exli.filter check_target_stmts_not_covered
+    def check_target_stmts_not_covered(self):
         not_covered = se.io.load(
             Macros.results_dir / "target-statements-not-covered.json"
         )
@@ -399,94 +399,39 @@ class Filter:
 
     # python -m exli.filter check_diff_in_target_stmts
     def check_diff_in_target_stmts(self):
-        reduced_pass_test_file = Macros.results_dir / "reduced-passed-tests.txt"
-        reduced_proj_to_stmts, _ = Util.get_projs_to_stmts_and_inline_tests(
-            reduced_pass_test_file
+        """
+        Sanity check for the difference between r1 and r0 target statements
+        """
+        r1_pass_test_file = Macros.results_dir / "r1-passed-tests.txt"
+        r1_proj_to_stmts, _ = Util.get_projs_to_stmts_and_inline_tests(
+            r1_pass_test_file
         )
         print(
-            "total number of reduced target statements",
-            sum([len(stmts) for stmts in reduced_proj_to_stmts.values()]),
+            "total number of r1 target statements",
+            sum([len(stmts) for stmts in r1_proj_to_stmts.values()]),
         )
 
-        all_pass_test_file = Macros.results_dir / "all-passed-tests.txt"
-        all_proj_to_stmts, _ = Util.get_projs_to_stmts_and_inline_tests(
-            all_pass_test_file
+        r0_pass_test_file = Macros.results_dir / "r0-passed-tests.txt"
+        r0_proj_to_stmts, _ = Util.get_projs_to_stmts_and_inline_tests(
+            r0_pass_test_file
         )
         # total number of target statements
         print(
-            "total number of all target statements",
-            sum([len(stmts) for stmts in all_proj_to_stmts.values()]),
+            "total number of r0 target statements",
+            sum([len(stmts) for stmts in r0_proj_to_stmts.values()]),
         )
 
-        for proj, reduced_stmts in reduced_proj_to_stmts.items():
-            if proj in all_proj_to_stmts:
-                all_stmts = all_proj_to_stmts[proj]
+        for proj, r1_stmts in r1_proj_to_stmts.items():
+            if proj in r0_proj_to_stmts:
+                r0_stmts = r0_proj_to_stmts[proj]
                 # in reduced but not in all
-                diff_stmts = [stmt for stmt in reduced_stmts if stmt not in all_stmts]
+                diff_stmts = [stmt for stmt in r1_stmts if stmt not in r0_stmts]
                 if diff_stmts:
-                    print(f"{proj}: {diff_stmts} in reduced but not in all")
+                    print(f"{proj}: {diff_stmts} in r1 but not in r0")
                 # in all but not in reduced
-                diff_stmts = [stmt for stmt in all_stmts if stmt not in reduced_stmts]
+                diff_stmts = [stmt for stmt in r0_stmts if stmt not in r1_stmts]
                 if diff_stmts:
                     print(f"{proj}: {diff_stmts} in all but not in reduced")
-
-    # python -m exli.filter check_duplicate
-    def check_duplicate(self):
-        filepath = Macros.results_dir / "target-statements.json"
-        mutants = se.io.load(filepath)
-        m = set()
-        for mutant in mutants:
-            if mutant["filename"] + str(mutant["line_number"]) in m:
-                print(mutant["filename"] + " " + str(mutant["line_number"]))
-            m.add(mutant["filename"] + str(mutant["line_number"]))
-        print(len(m))
-        print(len(mutants))
-
-    # python -m exli.filter prepare_xml
-    def prepare_xml(self):
-        for test_type in ["R0", "R1", "R2"]:
-            path_to_tests = Macros.project_dir.parent / "exli" / f"{test_type}-tests"
-            # iterate all the projects
-            for project in path_to_tests.iterdir():
-                if project.is_dir():
-                    project_name = project.name
-                    # create a directory "serialized-data" for xml files
-                    path_to_serialized_data = (
-                        path_to_tests
-                        / project_name
-                        / Macros.INLINE_GEN_DIR_NAME
-                        / "serialized-data"
-                    )
-                    if not path_to_serialized_data.exists():
-                        path_to_serialized_data.mkdir(parents=True)
-
-                    # iterate all the test classes
-                    for test_class in project.iterdir():
-                        if test_class.is_file() and test_class.name.endswith(".java"):
-                            # load the content
-                            lines = se.io.load(test_class, se.io.Fmt.txtList)
-                            for line in lines:
-                                # find string in the format of "number.xml"
-                                if re.search(r"\d+\.xml", line):
-                                    # get the number in "number.xml"
-                                    filename = re.search(r"(\d+)\.xml", line).group()
-                                    print(line)
-                                    # get the xml file
-                                    path_to_xml_file = (
-                                        Macros.r1_tests_dir
-                                        / project_name
-                                        / ".inlinegen"
-                                        / "serialized-data"
-                                        / f"{filename}"
-                                    )
-                                    if not path_to_xml_file.exists():
-                                        print(f"file {path_to_xml_file} does not exist")
-                                        continue
-                                    print(path_to_xml_file)
-                                    # copy the xml file to the project
-                                    se.bash.run(
-                                        f"cp {path_to_xml_file} {path_to_serialized_data}"
-                                    )
 
 
 if __name__ == "__main__":
