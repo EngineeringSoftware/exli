@@ -156,3 +156,167 @@ class Plot:
         ax.legend()
         fig.tight_layout()
         fig.savefig(Macros.figure_dir / "target-statements.pdf")
+
+    # python -m exli.plot dist_inline_tests_per_target_stmt_boxplot
+    def dist_inline_tests_per_target_stmt_boxplot(self, algorithm="greedy"):
+        # load data
+        _, metrics_list = Table().get_stmts_num_itest(algorithm)
+        metrics_list = {k: [v for v in l if v != 0] for k, l in metrics_list.items()}
+
+        data = [
+            [x for x in metrics_list[k] if x != 0]
+            for k in ["unique", "r0", "r1", "r2-um", "r2-major"]
+        ]
+        x_labels = [
+            name_unique,
+            name_exli_r0,
+            name_exli_r1,
+            name_exli_um,
+            name_exli_major,
+        ]
+
+        # box plot with unbroken y-label
+        fig, ax = plt.subplots()
+        ax.boxplot(data, meanline=True)
+        ax.set_xticklabels(x_labels)
+        plt.yscale("log")
+        # ax.set_ylim(0, 1000)
+        # box with y-label gap
+        # fig, (ax, box) = plt.subplots(2, 1, gridspec_kw={'height_ratios': [1, 5]}, sharex=True)
+        # box.boxplot(data)
+        # ax.boxplot(data)
+        # box.set_ylim(0, 12000)
+        # ax.set_ylim(35150, 35250)
+        # ax.spines['bottom'].set_visible(False)
+        # box.spines['top'].set_visible(False)
+        # ax.tick_params(labeltop=False)
+        # https://stackoverflow.com/questions/59305080/formatting-a-broken-y-axis-in-python-matplotlib
+        # https://matplotlib.org/3.1.0/gallery/subplots_axes_and_figures/broken_axis.html
+        fig.tight_layout()
+        fig.savefig(Macros.figure_dir / "dist-inline-tests-per-stmt-box.pdf")
+
+    # python -m exli.plot venn_mutated_results
+    def venn_mutated_results(self):
+        venn_dir = Macros.figure_dir / "venn"
+        venn_dir.mkdir(exist_ok=True)
+
+        test_type_name_pairs = [
+            ("reduced", name_exli_r1),
+            ("r2-universalmutator", name_exli_um),
+            ("r2-major", name_exli_major),
+            ("unit", name_dev),
+            ("randoop", name_randoop),
+            ("evosuite", name_evosuite),
+        ]
+        test_type_list = [t[0] for t in test_type_name_pairs]
+        test_type_list_5 = [
+            name_exli_um,
+            name_exli_major,
+            name_dev,
+            name_randoop,
+            name_evosuite,
+        ]
+
+        data_all = collections.defaultdict(set)
+        projects = [p for p in projects_used_sorted if p not in projects_no_mutant]
+        # venn diagram for each project
+        for project_name in projects:
+            results_list = Util.get_killed_mutants(project_name, test_type_list)
+            if len(results_list) != len(test_type_list):
+                raise RuntimeError(f"Project {project_name} has missing results")
+            data_proj = {
+                name: results
+                for (_, name), results in zip(test_type_name_pairs, results_list)
+            }
+            fig, ax = plt.subplots(figsize=(7, 7))
+            venn.venn(
+                {k: data_proj[k] for k in test_type_list_5},
+                cmap=self.cmap5,
+                ax=ax,
+            )
+            fig.tight_layout()
+            fig.savefig(venn_dir / f"{project_name}-venn.pdf")
+            plt.close()
+
+            for name, results in data_proj.items():
+                data_all[name].update({f"{project_name}:{r}" for r in results})
+
+        # venn diagram for total, with several variants
+        # all 6 groups
+        fig, ax = plt.subplots(figsize=(7, 7))
+        venn.venn(data_all, cmap=self.cmap6, ax=ax)
+        fig.tight_layout()
+        fig.savefig(venn_dir / "total-venn-all6.pdf")
+        plt.close()
+
+        # w/o ExLi-R1
+        fig, ax = plt.subplots(figsize=(6, 6))
+        venn.venn(
+            {k: data_all[k] for k in test_type_list_5},
+            cmap=self.cmap5,
+            ax=ax,
+        )
+        fig.tight_layout()
+        fig.savefig(venn_dir / "total-venn.pdf")
+        plt.close()
+
+        # ExLi-R1 vs. ExLi-UM vs. ExLi-Major vs. Unit
+        data_comb_unit = {
+            name_exli_r1: data_all[name_exli_r1],
+            name_exli_um: data_all[name_exli_um],
+            name_exli_major: data_all[name_exli_major],
+            name_unit: data_all[name_dev]
+            | data_all[name_randoop]
+            | data_all[name_evosuite],
+        }
+        fig, ax = plt.subplots(figsize=(5, 5))
+        venn.venn(data_comb_unit, cmap=self.cmap4, ax=ax)
+        fig.tight_layout()
+        fig.savefig(venn_dir / "total-venn-comb-unit.pdf")
+        plt.close()
+
+        # ExLi vs. Unit
+        data_comb_both = {
+            name_exli: data_all[name_exli_um] | data_all[name_exli_major],
+            name_unit: data_all[name_dev]
+            | data_all[name_randoop]
+            | data_all[name_evosuite],
+        }
+        fig, ax = plt.subplots(figsize=(5, 5))
+        venn.venn(data_comb_both, cmap=self.cmap2, ax=ax)
+        fig.tight_layout()
+        fig.savefig(venn_dir / "total-venn-comb-both.pdf")
+        plt.close()
+
+        # one latex file with all project's venn diagrams
+        latex_file = latex.File(venn_dir / "venn.tex")
+        for i, project_name in enumerate(projects):
+            # two columns
+            if i == 0:
+                latex_file.append(r"\begin{figure}[t]")
+            elif i % 2 == 0:
+                latex_file.append(r"\begin{figure}[t]\ContinuedFloat")
+            latex_file.append(r"\begin{subfigure}[b]{0.45\textwidth}")
+            latex_file.append(
+                r"\includegraphics[width=\textwidth]{"
+                + f"figures/venn/{project_name}-venn.pdf"
+                + r"}"
+            )
+            latex_file.append(r"\vspace{-10pt}")
+            latex_file.append(
+                r"\caption{" + f"{project_name.split('_')[-1].replace('_', ' ')}" + r"}"
+            )
+            latex_file.append(r"\label{fig:venn-" + f"{project_name}" + r"}")
+            latex_file.append(r"\end{subfigure}")
+            if i == len(projects) - 1:
+                latex_file.append(
+                    r"\caption{Sets of mutants killed by inline tests and unit tests.}"
+                )
+                latex_file.append(r"\label{fig:venn-all}")
+                latex_file.append(r"\end{figure}")
+                break
+            if i % 2 == 0:
+                latex_file.append(r"\hfill")
+            else:
+                latex_file.append(r"\end{figure}")
+        latex_file.save()
