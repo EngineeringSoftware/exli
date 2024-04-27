@@ -112,7 +112,4 @@ class Macros:
 
     projects_with_no_inline_tests = [
         "onelogin_onelogin-java-sdk",
-        "jenkinsci_email-ext-plugin",  # evosuite generated tests removed the whole directory
-        "phax_ph-pdf-layout", # evosuite generated tests changed the permission of the whole directory,
-        "red6_pdfcompare", # evosuite generated tests changed the permission of the whole directory,
     ]
