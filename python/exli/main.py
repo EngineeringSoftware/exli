@@ -85,7 +85,7 @@ class Main:
         evosuite_tl: int = 120,
         seed: int = Macros.DEFAULT_SEED,
         log_path: str = None,
-        time_dict: dict = None,
+        time_dict: dict = dict(),
     ):
         """
         Generate inline tests for a project.
@@ -100,6 +100,7 @@ class Main:
             evosuite_tl (int, optional): The time limit (seconds per class) for EvoSuite. Defaults to 120.
             seed (int, optional): The seed for test generation. Defaults to Macros.DEFAULT_SEED.
             log_path (str, optional): The path for the log file. Defaults to None.
+            time_dict (dict, optional): The dictionary to store the time for each step. Defaults to dict().
         """
         ################################## process input, prepare project ##################################
         if log_path is None:
