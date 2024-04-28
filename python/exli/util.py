@@ -811,6 +811,7 @@ class Util:
                             "hudson.plugins.emailext.watching.EmailExtWatchJobProperty",
                             "hudson.plugins.emailext.plugins.content.AbstractEvalContent$IsChildFileCallable",
                             "hudson.plugins.emailext.plugins.ZipDataSource",
+                            "hudson.plugins.emailext.EmailRecipientUtils",
                         ]:
                             continue
                         command = f"java -jar {Macros.evosuite_jar} -DCP_file_path {dep_file_path} -class {classpath} -seed {seed} -Dsearch_budget={time_limit} -Duse_separate_classloader=false -Dminimize=false -Dassertion_strategy=all -Dfilter_assertions=true -Dvirtual_fs=false -Dvirtual_net=false -Dsandbox_mode=OFF -Dfilter_sandbox_tests=true -Dmax_loop_iterations=-1 &> {log_path}"
