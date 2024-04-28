@@ -274,8 +274,8 @@ class Util:
         return project
 
     @classmethod
-    def avoid_permission_error(cls, project_name: str):
-        se.bash.run(f"chmod -R 777 {Macros.downloads_dir}/{project_name}")
+    def avoid_permission_error(cls):
+        se.bash.run(f"chmod -R 755 {Macros.home_dir}")
 
     @classmethod
     def prepare_project_for_test_generation(
@@ -818,7 +818,7 @@ class Util:
                         print(command)
                         try:
                             se.bash.run(command, 0, timeout=5 * time_limit)
-                            Util.avoid_permission_error(project_name)
+                            Util.avoid_permission_error()
                         except (subprocess.TimeoutExpired, Exception) as e:
                             print(traceback.format_exc())
                             res["evosuite"] = False
@@ -837,7 +837,7 @@ class Util:
                     print(command)
                     try:
                         se.bash.run(command, 0, timeout=5 * time_limit)
-                        Util.avoid_permission_error(project_name)
+                        Util.avoid_permission_error()
                     except Exception as e:
                         print(traceback.format_exc())
                         res["evosuite"] = False
