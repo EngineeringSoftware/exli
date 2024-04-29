@@ -142,3 +142,11 @@ app.pdf
 /reduced-tests-initial
 counter-log.txt
 java/raninline/.inlinegen/
+
+r0-tests/
+r0-its/
+r1-tests/
+r1-its/
+r2-tests/
+r2-its/
+results/coverage
