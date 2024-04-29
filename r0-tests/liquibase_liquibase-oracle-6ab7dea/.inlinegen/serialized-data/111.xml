@@ -1,8 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>hi!</splitTableName>
-  <splitTableSchemaName></splitTableSchemaName>
-  <newTableName>Revoking grants on null that had been given to setTransaction</newTableName>
-  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
-  <context>hi!</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

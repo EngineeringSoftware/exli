@@ -1,8 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>dropTrigger</splitTableName>
-  <splitTableSchemaName>Trigger addDeferredPrimaryKey has been created</splitTableSchemaName>
-  <newTableName>revokeObjectPermission</newTableName>
-  <newTableSchemaName>BASIC</newTableSchemaName>
-  <context>constraint Comment has been added to Materialized view grantObjectPermission has been droped DISABLED in null</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

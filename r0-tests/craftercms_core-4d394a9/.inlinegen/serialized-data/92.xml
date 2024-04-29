@@ -1,9 +1,0 @@
-<java.util.HashMap_-Node>
-  <hash>0</hash>
-  <key class="string"></key>
-  <value class="org.craftercms.core.xml.mergers.impl.strategies.ContentBundleMergeStrategy">
-    <regularMergeStrategy class="org.craftercms.core.xml.mergers.impl.strategies.ExplicitParentMergeStrategy">
-      <mergeStrategyResolver class="org.craftercms.core.xml.mergers.impl.resolvers.MetaDataMergeStrategyResolver"/>
-    </regularMergeStrategy>
-  </value>
-</java.util.HashMap_-Node>

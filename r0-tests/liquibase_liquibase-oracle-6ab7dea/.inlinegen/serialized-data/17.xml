@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableSchemaName>ie3j5sy^h[b&amp;e0ttp</splitTableSchemaName>
-  <newTableName>pUO=Tm9M1~Un0</newTableName>
-  <newTableSchemaName>RUPD$_</newTableSchemaName>
-  <columnNameList>l,e/b+co&gt;#( ]</columnNameList>
-  <primaryKeyColumnName>Bwjem</primaryKeyColumnName>
-  <context>c!N0Hajk</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

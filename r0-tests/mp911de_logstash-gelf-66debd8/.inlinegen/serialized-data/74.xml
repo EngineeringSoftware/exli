@@ -1,7 +1,0 @@
-<biz.paluch.logging.gelf.DynamicMdcMessageField>
-  <regex>writeBackoffThreshold</regex>
-  <pattern>
-    <pattern>writeBackoffThreshold</pattern>
-    <flags>0</flags>
-  </pattern>
-</biz.paluch.logging.gelf.DynamicMdcMessageField>

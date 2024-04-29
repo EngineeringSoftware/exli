@@ -1,8 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>Deferred primary key added to Constraint null ENABLED in null (http://www.liquibase.org/xml/ns/snapshot-ext)</splitTableName>
-  <splitTableSchemaName>Synonym http://www.liquibase.org/xml/ns/snapshot dropped</splitTableSchemaName>
-  <newTableName>Synonym dropCheck created</newTableName>
-  <newTableSchemaName>Revoking grants on Synonym null dropped that had been given to null</newTableSchemaName>
-  <context>Deferred primary key added to Constraint null ENABLED in null (http://www.liquibase.org/xml/ns/snapshot-ext)</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

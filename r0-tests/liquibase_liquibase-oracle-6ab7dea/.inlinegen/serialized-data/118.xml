@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>hi!</splitTableName>
-  <splitTableSchemaName></splitTableSchemaName>
-  <newTableName>enableTrigger</newTableName>
-  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
-  <columnNameList>Comment has been added to Materialized view grantObjectPermission has been droped.Grants on null have been given to null check DROPPED from null</columnNameList>
-  <context>Table null check DROPPED from null encapsulated with view</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

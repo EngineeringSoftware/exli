@@ -1,4 +1,0 @@
-/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java:884;1
-/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java:891;1
-/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java:340;1
-/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java:890;1

@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>Table AddDeferredPrimaryKeyChange{} truncated</splitTableName>
-  <splitTableSchemaName></splitTableSchemaName>
-  <newTableName>enableTrigger</newTableName>
-  <newTableSchemaName>Constraint REFERENCES ENABLED in null</newTableSchemaName>
-  <primaryKeyColumnName></primaryKeyColumnName>
-  <context>Materialized view createMaterializedView has been refreshed</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

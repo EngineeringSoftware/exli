@@ -1,5 +1,0 @@
-<org.cyclonedx.model.Dependency>
-  <dependencies class="linked-list">
-    <org.cyclonedx.model.Dependency reference="../.."/>
-  </dependencies>
-</org.cyclonedx.model.Dependency>

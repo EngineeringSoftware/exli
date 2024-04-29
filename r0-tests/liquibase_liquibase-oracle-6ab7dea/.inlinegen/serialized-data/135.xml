@@ -1,8 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>Materialized view null has been created</splitTableName>
-  <splitTableSchemaName>createMaterializedView</splitTableSchemaName>
-  <newTableName></newTableName>
-  <newTableSchemaName>Cluster null truncated</newTableSchemaName>
-  <context>refreshMaterializedView</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

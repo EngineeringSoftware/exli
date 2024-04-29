@@ -1,7 +1,0 @@
-<biz.paluch.logging.gelf.DynamicMdcMessageField>
-  <regex>Server</regex>
-  <pattern>
-    <pattern>Server</pattern>
-    <flags>0</flags>
-  </pattern>
-</biz.paluch.logging.gelf.DynamicMdcMessageField>

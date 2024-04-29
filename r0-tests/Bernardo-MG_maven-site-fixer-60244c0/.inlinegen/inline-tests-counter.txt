@@ -1,2 +1,0 @@
-/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java:108;2
-/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java:376;1

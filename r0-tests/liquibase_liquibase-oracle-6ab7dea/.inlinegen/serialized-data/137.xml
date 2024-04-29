@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>DropSynonymChange{}</splitTableName>
-  <splitTableSchemaName></splitTableSchemaName>
-  <newTableName>http://www.liquibase.org/xml/ns/dbchangelog</newTableName>
-  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
-  <primaryKeyColumnName>TriggerGrants on null have been given to null has been droped</primaryKeyColumnName>
-  <context>hi!</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

@@ -1,4 +1,0 @@
-<org.craftercms.core.util.template.impl.IdentifiableStringTemplateSource>
-  <id>template</id>
-  <source>Hello ${firstName} ${lastName}!</source>
-</org.craftercms.core.util.template.impl.IdentifiableStringTemplateSource>

@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>hi!</splitTableName>
-  <splitTableSchemaName></splitTableSchemaName>
-  <newTableName>enableTrigger</newTableName>
-  <newTableSchemaName>http://www.liquibase.org/xml/ns/snapshot-ext</newTableSchemaName>
-  <columnNameList>createTrigger</columnNameList>
-  <context>Materialized view null has been refreshed</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

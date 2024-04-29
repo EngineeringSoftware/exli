@@ -1,7 +1,0 @@
-<biz.paluch.logging.gelf.DynamicMdcMessageField>
-  <regex>includeLogMessageParameters</regex>
-  <pattern>
-    <pattern>includeLogMessageParameters</pattern>
-    <flags>0</flags>
-  </pattern>
-</biz.paluch.logging.gelf.DynamicMdcMessageField>

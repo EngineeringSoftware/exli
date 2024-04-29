@@ -1,6 +1,0 @@
-<org.cyclonedx.model.Dependency>
-  <ref>,w/DGCH+lj</ref>
-  <dependencies>
-    <org.cyclonedx.model.Dependency reference="../.."/>
-  </dependencies>
-</org.cyclonedx.model.Dependency>

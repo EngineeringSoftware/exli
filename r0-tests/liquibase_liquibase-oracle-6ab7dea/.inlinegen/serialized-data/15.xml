@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName></splitTableName>
-  <splitTableSchemaName>ie3j5sy^h[b&amp;e0ttp</splitTableSchemaName>
-  <newTableName>ie3j5sy^h[b&amp;e0ttp</newTableName>
-  <newTableSchemaName>ie3j5sy^h[b&amp;e0ttp</newTableSchemaName>
-  <columnNameList>ie3j5sy^h[b&amp;e0ttp</columnNameList>
-  <context>ie3j5sy^h[b&amp;e0ttp</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

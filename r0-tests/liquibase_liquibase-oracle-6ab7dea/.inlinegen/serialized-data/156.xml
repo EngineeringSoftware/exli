@@ -1,8 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName></splitTableName>
-  <splitTableSchemaName>dropTrigger splitted. Created new table null</splitTableSchemaName>
-  <newTableName>Cluster GrantObjectPermissionChange{} truncated splitted. Created new table CreateTriggerChange{}</newTableName>
-  <newTableSchemaName>addDeferredPrimaryKey constraintName=TriggerGrants on http://www.liquibase.org/xml/ns/snapshot-ext have been given to null has been droped</newTableSchemaName>
-  <context>Materialized view CreateMaterializedViewChange{} has been created</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

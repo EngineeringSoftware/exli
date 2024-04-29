@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>hi!</splitTableName>
-  <splitTableSchemaName></splitTableSchemaName>
-  <newTableName>merge</newTableName>
-  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
-  <primaryKeyColumnName>DELETE</primaryKeyColumnName>
-  <context>Grants on null have been given to null</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

@@ -1,7 +1,0 @@
-<list>
-  <org.cyclonedx.model.Dependency>
-    <dependencies>
-      <org.cyclonedx.model.Dependency/>
-    </dependencies>
-  </org.cyclonedx.model.Dependency>
-</list>

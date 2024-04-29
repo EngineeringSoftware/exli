@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>hi!</splitTableName>
-  <splitTableSchemaName></splitTableSchemaName>
-  <newTableName>enableTrigger</newTableName>
-  <newTableSchemaName>grantObjectPermission</newTableSchemaName>
-  <primaryKeyColumnName>http://www.liquibase.org/xml/ns/dbchangelog</primaryKeyColumnName>
-  <context>hi!</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

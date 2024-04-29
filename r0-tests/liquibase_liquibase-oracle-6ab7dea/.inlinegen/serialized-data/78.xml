@@ -1,8 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>DisableTriggerChange{}</splitTableName>
-  <splitTableSchemaName>Cluster Revoking grants on null that had been given to null truncated</splitTableSchemaName>
-  <newTableName>Trigger addDeferredPrimaryKey has been created</newTableName>
-  <newTableSchemaName>Trigger addDeferredPrimaryKey has been created</newTableSchemaName>
-  <context>Update has been done</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

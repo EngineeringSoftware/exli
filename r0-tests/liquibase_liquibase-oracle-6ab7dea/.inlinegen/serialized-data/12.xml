@@ -1,7 +1,0 @@
-<liquibase.ext.ora.comment.CommentOnStatement>
-  <continueOnError>false</continueOnError>
-  <schemaName>No @DatabaseChange annotation for </schemaName>
-  <tableName></tableName>
-  <columnName>S&lt;~M:8!+kW</columnName>
-  <comment>INGRES</comment>
-</liquibase.ext.ora.comment.CommentOnStatement>

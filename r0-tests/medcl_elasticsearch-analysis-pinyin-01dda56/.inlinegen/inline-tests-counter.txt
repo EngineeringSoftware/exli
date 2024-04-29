@@ -1,9 +1,0 @@
-/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java:89;1
-/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java:187;1
-/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java:247;1
-/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java:86;2
-/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java:201;4
-/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java:127;1
-/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java:145;2
-/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java:59;2
-/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java:129;2

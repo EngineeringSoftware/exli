@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>Materialized view null has been droped</splitTableName>
-  <splitTableSchemaName>createMaterializedView</splitTableSchemaName>
-  <newTableName>Materialized view null has been refreshed</newTableName>
-  <newTableSchemaName>Table null check DROPPED from null encapsulated with view</newTableSchemaName>
-  <primaryKeyColumnName>Tables null &amp; EnableTriggerChange{} merged</primaryKeyColumnName>
-  <context>Materialized view  has been refreshed</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

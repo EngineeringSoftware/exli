@@ -1,4 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <context>BASIC</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

@@ -1,8 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>EnableTriggerChange{}</splitTableName>
-  <splitTableSchemaName>Trigger has been enabled.</splitTableSchemaName>
-  <newTableName>Comment has been added to null</newTableName>
-  <newTableSchemaName>Materialized view  has been refreshed</newTableSchemaName>
-  <context>Materialized view  has been refreshed</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

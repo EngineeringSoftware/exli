@@ -1,7 +1,0 @@
-<biz.paluch.logging.gelf.DynamicMdcMessageField>
-  <regex>U3RhdGljTWVzc2FnZUZpZWxkIFtuYW1lPSdsb2dzdGFzaC1nZWxmLlN0YWNrVHJhY2VGaWx0ZXIudmVyYm9zZScsIHZhbHVlPSdkb3VibGUnXQ==</regex>
-  <pattern>
-    <pattern>U3RhdGljTWVzc2FnZUZpZWxkIFtuYW1lPSdsb2dzdGFzaC1nZWxmLlN0YWNrVHJhY2VGaWx0ZXIudmVyYm9zZScsIHZhbHVlPSdkb3VibGUnXQ==</pattern>
-    <flags>0</flags>
-  </pattern>
-</biz.paluch.logging.gelf.DynamicMdcMessageField>

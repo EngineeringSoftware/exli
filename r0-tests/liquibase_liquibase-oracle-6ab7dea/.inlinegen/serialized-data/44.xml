@@ -1,8 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>TriggerRevoking grants on null that had been given to null has been droped</splitTableName>
-  <splitTableSchemaName>GrantObjectPermissionChange{}</splitTableSchemaName>
-  <newTableName>Synonym http://www.liquibase.org/xml/ns/snapshot dropped</newTableName>
-  <newTableSchemaName>Trigger has been renamed.</newTableSchemaName>
-  <context>createSynonym</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

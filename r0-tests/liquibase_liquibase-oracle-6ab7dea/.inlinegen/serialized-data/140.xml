@@ -1,8 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>truncate clusterName=BASIC, tableName=AddDeferredPrimaryKeyChange{}</splitTableName>
-  <splitTableSchemaName>Table Tables null &amp; null merged encapsulated with view</splitTableSchemaName>
-  <newTableName>Deferred primary key added to  (null)</newTableName>
-  <newTableSchemaName>Synonym Tables DropCheckChange{} &amp; null merged splitted. Created new table null created</newTableSchemaName>
-  <context>LongUpdateChange{}</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>http://www.liquibase.org/xml/ns/snapshot-ext</splitTableName>
-  <splitTableSchemaName>createMaterializedView</splitTableSchemaName>
-  <newTableName>enableTrigger</newTableName>
-  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
-  <primaryKeyColumnName>http://www.liquibase.org/xml/ns/snapshot-ext</primaryKeyColumnName>
-  <context>Trigger has been enabled.</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

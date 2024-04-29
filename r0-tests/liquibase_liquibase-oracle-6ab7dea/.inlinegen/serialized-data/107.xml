@@ -1,9 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>splitTable</splitTableName>
-  <splitTableSchemaName></splitTableSchemaName>
-  <newTableName>Synonym dropCheck created</newTableName>
-  <newTableSchemaName>encapsulateTableWithView</newTableSchemaName>
-  <columnNameList>http://www.liquibase.org/xml/ns/snapshot</columnNameList>
-  <context>hi!</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

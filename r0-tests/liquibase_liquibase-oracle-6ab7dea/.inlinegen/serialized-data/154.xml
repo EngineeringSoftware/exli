@@ -1,8 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName>Materialized view BASIC has been refreshed check DROPPED from null</splitTableName>
-  <splitTableSchemaName>Constraint check http://www.liquibase.org/xml/ns/dbchangelog-ext has been added to dropTrigger triggerName=Grants on null have been given to null</splitTableSchemaName>
-  <newTableName>merge</newTableName>
-  <newTableSchemaName>Deferred primary key added to null (http://www.liquibase.org/xml/ns/snapshot-ext)</newTableSchemaName>
-  <context>CommentOnChange{}</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>

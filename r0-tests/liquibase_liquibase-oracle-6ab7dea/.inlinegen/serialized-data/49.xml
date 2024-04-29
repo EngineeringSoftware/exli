@@ -1,8 +1,0 @@
-<liquibase.ext.ora.splittable.SplitTableStatement>
-  <continueOnError>false</continueOnError>
-  <splitTableName></splitTableName>
-  <splitTableSchemaName>Deferred primary key added to null (null)</splitTableSchemaName>
-  <newTableName>Comment has been added to Materialized view grantObjectPermission has been droped</newTableName>
-  <newTableSchemaName>addDeferredPrimaryKey</newTableSchemaName>
-  <context>addDeferredPrimaryKey tableName=Synonym null dropped</context>
-</liquibase.ext.ora.splittable.SplitTableStatement>
