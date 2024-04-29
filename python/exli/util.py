@@ -799,14 +799,13 @@ class Util:
                         """
                         Have to skip some classes:
                         "jenkinsci_email-ext-plugin",  # evosuite generated tests removed the whole directory
-                        "phax_ph-pdf-layout", # evosuite generated tests changed the permission of the whole directory,
-                        "red6_pdfcompare", # evosuite generated tests changed the permission of the whole directory,
+                        "phax_ph-pdf-layout", # evosuite generated tests changed the permission of the whole directory, f2d7b98d
+                        "red6_pdfcompare", # evosuite generated tests changed the permission of the whole directory, 1259ef2e
                         """
                         if classpath in [
                             "de.redsix.pdfcompare.PdfComparator$InputStreamSupplier",
                             "de.redsix.pdfcompare.PdfComparator",
                             "com.helger.pdflayout.spec.LoadedFont$1",
-                            "udson.plugins.emailext.plugins.content.AbstractEvalContent$IsChildFileCallable",
                             "hudson.plugins.emailext.plugins.content.AbstractEvalContent",
                             "hudson.plugins.emailext.watching.EmailExtWatchJobProperty",
                             "hudson.plugins.emailext.plugins.content.AbstractEvalContent$IsChildFileCallable",
