@@ -45,7 +45,7 @@ class Generate:
                 else Macros.log_dir / "prepare-project.log"
             ),
         )
-        Util.avoid_permission_error()
+        Util.avoid_permission_error(project_name)
         if test_type == Macros.randoop:
             res = Util.generate_randoop_tests(
                 project_name,
