@@ -25,10 +25,6 @@ Instrumenter, Collector, Round1Reducer, and InlineTestConstructor.
 
 python: This directory contains the scripts of running ExLi end-to-end and generates figures.
 
-#### Generated tests
-`r0-tests` (all), `r1-tests`(after first round reduction), `r2-tests`(after second round reduction) directories contain the inline tests that
-are integrated with source code.
-
 ## How to use ExLi
 
 ### Requirements
