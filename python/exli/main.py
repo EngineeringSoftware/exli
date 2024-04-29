@@ -342,11 +342,11 @@ class Main:
         self,
         project_name: str,
         sha: str,
-        generated_tests_dir: str,
-        inline_tests_dir: str,
-        inlinetest_report_path: str,
-        cached_objects_dir: str,
-        deps_file: str,
+        generated_tests_dir: str = None,
+        inline_tests_dir: str = None,
+        inlinetest_report_path: str = None,
+        cached_objects_dir: str = None,
+        deps_file: str = None,
         parse_inline_tests: bool = False,
         log_path: str = None,
     ):
@@ -356,14 +356,31 @@ class Main:
         Args:
             project_name (str): The name of the project.
             sha (str): The commit hash.
-            generated_tests_dir (str): The path to the generated tests.
-            inline_tests_dir (str): The path to the inline tests.
-            inlinetest_report_path (str): The path to store the inline test report.
-            cached_objects_dir (str): The path to the cached objects.
-            deps_file (str): The path to the dependencies file.
+            generated_tests_dir (str, optional): The path to the generated tests.
+            inline_tests_dir (str, optional): The path to the inline tests.
+            inlinetest_report_path (str, optional): The path to store the inline test report.
+            cached_objects_dir (str, optional): The path to the cached objects.
+            deps_file (str, optional): The path to the dependencies file.
             parse_inline_tests (bool, optional): Whether to force parsing inline tests when inline tests dir is not empty. Defaults to False.
             log_path (str, optional): The path for the log file. Defaults to None.
         """
+        if generated_tests_dir is None:
+            generated_tests_dir = f"{Macros.r0_tests_dir}/{project_name}-{sha}"
+        if inline_tests_dir is None:
+            inline_tests_dir = f"{Macros.r0_its_dir}/{project_name}-{sha}"
+        if inlinetest_report_path is None:
+            inlinetest_report_path = (
+                f"{Macros.r0_its_report_dir}/{project_name}-{sha}.json"
+            )
+        if cached_objects_dir is None:
+            cached_objects_dir = (
+                Macros.r0_tests_dir
+                / f"{project_name}-{sha}"
+                / Macros.INLINE_GEN_DIR_NAME
+            )
+        if deps_file is None:
+            deps_file = Util.get_deps_file_path(project_name, sha)
+
         # source files with inline tests do not exist
         if not os.path.exists(generated_tests_dir):
             print(f"{generated_tests_dir} does not exist")
