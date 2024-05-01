@@ -810,6 +810,7 @@ class Util:
                         if classpath in [
                             "de.redsix.pdfcompare.PdfComparator$InputStreamSupplier",
                             "de.redsix.pdfcompare.PdfComparator",
+                            "de.redsix.pdfcompare.AbstractCompareResultWithSwap",
                             "com.helger.pdflayout.spec.LoadedFont$1",
                             "hudson.plugins.emailext.plugins.content.AbstractEvalContent",
                             "hudson.plugins.emailext.watching.EmailExtWatchJobProperty",
