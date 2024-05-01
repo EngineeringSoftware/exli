@@ -59,7 +59,7 @@ class Util:
         except se.TimeoutException as e:
             se.io.dump(log_path, [e], se.io.Fmt.txtList, append=True)
         finally:
-            Util.avoid_permission_error(project_name)
+            Util.avoid_permission_error(None)
             Util.remove_jacoco_extension()
 
     # assume this method is invoked in maven project, the project has run mvn test-compile
@@ -280,7 +280,7 @@ class Util:
         if project_name is not None:
             se.bash.run(f"chmod -R 755 {Macros.downloads_dir}/{project_name}")
         else:
-            se.bash.run(f"chmod -R 755 {Macros.home_dir}")
+            se.bash.run(f"chmod -R 755 {Macros.project_dir}")
 
     @classmethod
     def prepare_project_for_test_generation(
