@@ -59,7 +59,7 @@ class Util:
         except se.TimeoutException as e:
             se.io.dump(log_path, [e], se.io.Fmt.txtList, append=True)
         finally:
-            Util.avoid_permission_error(None)
+            Util.avoid_permission_error(project_name)
             Util.remove_jacoco_extension()
 
     # assume this method is invoked in maven project, the project has run mvn test-compile
