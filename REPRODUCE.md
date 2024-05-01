@@ -19,5 +19,5 @@ bash reproduce.sh
 It takes serveral days to run Randoop and EvoSuite to generate unit tests for all projects in eval, to skip this step, you can download the generated tests from [exlidata](https://bitbucket.org/sedata/exlidata/src/main/) and extract it in `exli` root directory.
 
 ```bash
-git clone git@bitbucket.org:sedata/exlidata.git
+git clone https://pipiyu@bitbucket.org/sedata/exlidata.git
 ```
