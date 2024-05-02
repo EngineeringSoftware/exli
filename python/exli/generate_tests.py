@@ -103,7 +103,7 @@ class Generate:
         """
         if not os.path.exists(Macros.java_dir / "minimization" / "coverage-mapper" / "lib" / "asm-9.2.jar"):
             with se.io.cd(Macros.java_dir / "minimization" / "coverage-mapper"):
-                se.run_cmd("bash lib.sh")
+                se.bash.run("bash lib.sh")
         for project_name, sha in Util.get_project_names_list_with_sha():
             if test_project_name and project_name != test_project_name:
                 continue
