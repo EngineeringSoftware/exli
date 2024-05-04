@@ -94,12 +94,13 @@ class Generate:
             res = f"Unknown test type: {test_type}"
         print(f"When seed is {seed}, {res}")
 
-    def batch_generate_coverage(self, test_project_name: str = None):
+    def batch_generate_coverage(self, test_project_name: str = None, test_types: list[str]= [Macros.dev, Macros.randoop, Macros.evosuite]):
         """
         Generate coverage for all projects
 
         Args:
             test_project_name (str, optional): The name of the project to test. Defaults to None.
+            test_types (list[str], optional): The types of tests. Defaults to [Macros.dev, Macros.randoop, Macros.evosuite].
         """
         if not os.path.exists(Macros.java_dir / "minimization" / "coverage-mapper" / "lib" / "asm-9.2.jar"):
             with se.io.cd(Macros.java_dir / "minimization" / "coverage-mapper"):
@@ -107,7 +108,7 @@ class Generate:
         for project_name, sha in Util.get_project_names_list_with_sha():
             if test_project_name and project_name != test_project_name:
                 continue
-            for test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
+            for test_type in test_types:
                 self.generate_coverage(
                     project_name, sha, [Macros.DEFAULT_SEED], test_type
                 )
