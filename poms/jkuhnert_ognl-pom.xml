@@ -113,6 +113,7 @@
                         <include>**/TestOgnlRuntime.java</include>
                         <include>**/TestOgnlException.java</include>
                         <include>**/TestExpressionCompiler.java</include>
+                        <include>**/RegressionTest*.java</include>
                     </includes>
                 </configuration>
             </plugin>
