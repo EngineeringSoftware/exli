@@ -560,7 +560,7 @@ class Eval:
             killed_mutant_to_tests_dict[mutant_index].add(
                 project_name + "#" + test_class_name + "#" + test_method_name
             )
-            
+
         # load the mutantion results of r1
         if mutator in [Macros.universalmutator, Macros.major]:
             r1_mutants_result_file = (
@@ -656,6 +656,10 @@ class Eval:
                 Macros.results_dir / "minimized" / f"r2-{mutator}-{algorithm}.txt"
             )
             self.minimize_tests_helper(algorithm, data_file, out_file)
+
+        # since we use greedy algorithm results in the paper, we combine the results of greedy algorithm into Macros.results/r2-passed-tests.txt
+        for f in (Macros.results_dir / "minimized").glob("*-greedy.txt"):
+            se.bash.run(f"cat {f} >> {Macros.results_dir / 'r2-passed-tests.txt'}")
 
     # python -m exli.eval minimize_tests
     def minimize_tests(

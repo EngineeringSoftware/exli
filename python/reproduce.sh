@@ -35,5 +35,6 @@ python -m exli.plot target_statements_bar_plot
 python -m exli.table data_inline_tests
 python -m exli.plot dist_inline_tests_per_target_stmt_boxplot
 
+python -m exli.table data_mutants_stat
 python -m exli.plot venn_mutated_results
 
