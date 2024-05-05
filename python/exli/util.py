@@ -13,7 +13,7 @@ import xmltodict
 from exli.macros import Macros
 from exli.maven import MavenProject
 from tqdm import tqdm
-
+from typing import Union
 
 class Util:
     @classmethod
@@ -1280,10 +1280,14 @@ class Util:
 
     @classmethod
     def fix_randoop_generated_tests_helper(
-        cls, project_name: str, generated_tests_dir: str
+        cls, project_name: str, generated_tests_dir: Union[str, Path]
     ):
-        if not os.path.exists(generated_tests_dir):
+        if isinstance(generated_tests_dir, str):
+            generated_tests_dir = Path(generated_tests_dir)
+        if not generated_tests_dir.exists():
+            print(f"{generated_tests_dir} does not exist")
             return
+
         regression_test_file = generated_tests_dir / "RegressionTest.java"
 
         if not regression_test_file.exists():
