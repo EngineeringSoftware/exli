@@ -240,6 +240,8 @@ Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test
 
 Tests that end with `#r0` are from R0 tests, end with `#r1` are from R1 tests. These 3 tests are the minimized tests (`r2` tests) by the greedy algorithm.
 
+Running `python -m exli.eval batch_minimize_tests` will merge all the minized tests with greedy algorithm into one file `${HOME}/exli/results/r2-passed-tests.txt`
+
 ### Reproduce the results in the paper
 See the [Reproduce the results](./REPRODUCE.md) for more details.
 
