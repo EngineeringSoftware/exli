@@ -1,0 +1,492 @@
+[
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/io/Convert.java",
+        "id": 0,
+        "linenumber": 261,
+        "mutated_code": "        String[] tokens = line.split(\"\");",
+        "orginal_code": "        String[] tokens = line.split(\"\\\\s+\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableArc.java",
+        "id": 1,
+        "linenumber": 124,
+        "mutated_code": "    result = (int) (temp ^ (temp >>> (32-1)));",
+        "orginal_code": "    result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableArc.java",
+        "id": 2,
+        "linenumber": 124,
+        "mutated_code": "    result = (int) (temp ^ (temp >>> 1));",
+        "orginal_code": "    result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableArc.java",
+        "id": 3,
+        "linenumber": 124,
+        "mutated_code": "    result = (int) (temp ^ (temp >>> 0));",
+        "orginal_code": "    result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableArc.java",
+        "id": 4,
+        "linenumber": 124,
+        "mutated_code": "    result = (int) (temp ^ (temp >>> -1));",
+        "orginal_code": "    result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableArc.java",
+        "id": 5,
+        "linenumber": 124,
+        "mutated_code": "    result = (int) (temp ^ (temp >>> (32+1)));",
+        "orginal_code": "    result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableArc.java",
+        "id": 6,
+        "linenumber": 124,
+        "mutated_code": "    result = (int) (temp ^ (temp >>>= 32));",
+        "orginal_code": "    result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableArc.java",
+        "id": 7,
+        "linenumber": 80,
+        "mutated_code": "      result = (int) (temp ^ (temp >>> -1));",
+        "orginal_code": "      result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableArc.java",
+        "id": 8,
+        "linenumber": 80,
+        "mutated_code": "      result = (int) (temp ^ (temp >>>= 32));",
+        "orginal_code": "      result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableArc.java",
+        "id": 9,
+        "linenumber": 80,
+        "mutated_code": "      result = (int) (temp ^ (temp >>> 0));",
+        "orginal_code": "      result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableArc.java",
+        "id": 10,
+        "linenumber": 80,
+        "mutated_code": "      result = (int) (temp ^ (temp >>> (32+1)));",
+        "orginal_code": "      result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableArc.java",
+        "id": 11,
+        "linenumber": 80,
+        "mutated_code": "      result = (int) (temp ^ (temp >>> (32-1)));",
+        "orginal_code": "      result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableArc.java",
+        "id": 12,
+        "linenumber": 80,
+        "mutated_code": "      result = (int) (temp ^ (temp >>> 1));",
+        "orginal_code": "      result = (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 13,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>> (32-1))));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 14,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 + result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 15,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 0)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 16,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 - result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 17,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>> -1)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 18,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>>= 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 19,
+        "linenumber": 173,
+        "mutated_code": "    result = (31+1) * result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 20,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 1)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 21,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 % result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 22,
+        "linenumber": 173,
+        "mutated_code": "    result = (31-1) * result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 23,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 * result / ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 24,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 / result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 25,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>> (32+1))));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 26,
+        "linenumber": 173,
+        "mutated_code": "    result = -1 * result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 27,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 * result % ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 28,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 * result + ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 29,
+        "linenumber": 173,
+        "mutated_code": "    result = 0 * result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 30,
+        "linenumber": 173,
+        "mutated_code": "    result = 1 * result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/MutableState.java",
+        "id": 31,
+        "linenumber": 173,
+        "mutated_code": "    result = 31 * result - ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 32,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 * result * (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 33,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 * result + (int) (temp ^ (temp >>> (32+1)));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 34,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 * result % (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 35,
+        "linenumber": 66,
+        "mutated_code": "    result = (31-1) * result + (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 36,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 / result + (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 37,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 * result + (int) (temp ^ (temp >>>= 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 38,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 * result - (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 39,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 * result / (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 40,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 * result + (int) (temp ^ (temp >>> 0));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 41,
+        "linenumber": 66,
+        "mutated_code": "    result = (31+1) * result + (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 42,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 * result + (int) (temp ^ (temp >>> (32-1)));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 43,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 % result + (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 44,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 * result + (int) (temp ^ (temp >>> 1));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 45,
+        "linenumber": 66,
+        "mutated_code": "    result = 0 * result + (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 46,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 + result + (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 47,
+        "linenumber": 66,
+        "mutated_code": "    result = 1 * result + (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 48,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 - result + (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 49,
+        "linenumber": 66,
+        "mutated_code": "    result = -1 * result + (int) (temp ^ (temp >>> 32));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/IndexWeight.java",
+        "id": 50,
+        "linenumber": 66,
+        "mutated_code": "    result = 31 * result + (int) (temp ^ (temp >>> -1));",
+        "orginal_code": "    result = 31 * result + (int) (temp ^ (temp >>> 32));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 51,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>> (32+1))));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 52,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>>= 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 53,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 * result % ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 54,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 % result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 55,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 0)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 56,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>> -1)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 57,
+        "linenumber": 90,
+        "mutated_code": "    result = 1 * result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 58,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 1)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 59,
+        "linenumber": 90,
+        "mutated_code": "    result = (31-1) * result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 60,
+        "linenumber": 90,
+        "mutated_code": "    result = 0 * result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 61,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 / result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 62,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 - result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 63,
+        "linenumber": 90,
+        "mutated_code": "    result = (31+1) * result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 64,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 + result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 65,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 * result - ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 66,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 * result + ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 67,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 * result * ((int) (temp ^ (temp >>> (32-1))));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 68,
+        "linenumber": 90,
+        "mutated_code": "    result = -1 * result * ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/steveash_jopenfst/src/main/java/com/github/steveash/jopenfst/ImmutableState.java",
+        "id": 69,
+        "linenumber": 90,
+        "mutated_code": "    result = 31 * result / ((int) (temp ^ (temp >>> 32)));",
+        "orginal_code": "    result = 31 * result * ((int) (temp ^ (temp >>> 32)));"
+    }
+]

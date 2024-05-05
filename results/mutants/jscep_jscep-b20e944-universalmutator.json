@@ -1,0 +1,51 @@
+[
+    {
+        "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/transaction/TransactionId.java",
+        "id": 0,
+        "linenumber": 114,
+        "mutated_code": "            int b = (that.id[j] | 0xff);",
+        "orginal_code": "            int b = (that.id[j] & 0xff);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java",
+        "id": 1,
+        "linenumber": 180,
+        "mutated_code": "        if (0==1) {",
+        "orginal_code": "        if (!url.getProtocol().matches(\"^https?$\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java",
+        "id": 2,
+        "linenumber": 180,
+        "mutated_code": "        if (!(!url.getProtocol().matches(\"^https?$\"))) {",
+        "orginal_code": "        if (!url.getProtocol().matches(\"^https?$\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java",
+        "id": 3,
+        "linenumber": 180,
+        "mutated_code": "        if (url.getProtocol().matches(\"^https?$\")) {",
+        "orginal_code": "        if (!url.getProtocol().matches(\"^https?$\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java",
+        "id": 4,
+        "linenumber": 180,
+        "mutated_code": "        if (1==1) {",
+        "orginal_code": "        if (!url.getProtocol().matches(\"^https?$\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java",
+        "id": 5,
+        "linenumber": 180,
+        "mutated_code": "        if (!url.getProtocol().matches(\"\")) {",
+        "orginal_code": "        if (!url.getProtocol().matches(\"^https?$\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/transaction/TransactionId.java",
+        "id": 6,
+        "linenumber": 113,
+        "mutated_code": "            int a = (this.id[i] | 0xff);",
+        "orginal_code": "            int a = (this.id[i] & 0xff);"
+    }
+]

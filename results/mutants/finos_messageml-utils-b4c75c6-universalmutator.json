@@ -1,0 +1,478 @@
+[
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Div.java",
+        "id": 0,
+        "linenumber": 92,
+        "mutated_code": "    String[] classes = (classAttr == null) ? classAttr.split(\" \") : null;",
+        "orginal_code": "    String[] classes = (classAttr != null) ? classAttr.split(\" \") : null;"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/entityjson/StructuredObject.java",
+        "id": 1,
+        "linenumber": 84,
+        "mutated_code": "    String[] parts = version_.split(\"\");",
+        "orginal_code": "    String[] parts = version_.split(\"\\\\.\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownRenderer.java",
+        "id": 2,
+        "linenumber": 385,
+        "mutated_code": "    if (0==1) {",
+        "orginal_code": "    if (!matcher.matches()) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownRenderer.java",
+        "id": 3,
+        "linenumber": 385,
+        "mutated_code": "    if (matcher.matches()) {",
+        "orginal_code": "    if (!matcher.matches()) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownRenderer.java",
+        "id": 4,
+        "linenumber": 385,
+        "mutated_code": "    if (1==1) {",
+        "orginal_code": "    if (!matcher.matches()) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownRenderer.java",
+        "id": 5,
+        "linenumber": 385,
+        "mutated_code": "    if (!(!matcher.matches())) {",
+        "orginal_code": "    if (!matcher.matches()) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/MessageMLParser.java",
+        "id": 6,
+        "linenumber": 381,
+        "mutated_code": "    String[] splitInput = input.split(\"\");",
+        "orginal_code": "    String[] splitInput = input.split(\"\\\\s+\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownParser.java",
+        "id": 7,
+        "linenumber": 388,
+        "mutated_code": "    message = message.replace((char) 1, (char) 32);",
+        "orginal_code": "    message = message.replace((char) 160, (char) 32);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownParser.java",
+        "id": 8,
+        "linenumber": 388,
+        "mutated_code": "    message = message.replace((char) -1, (char) 32);",
+        "orginal_code": "    message = message.replace((char) 160, (char) 32);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownParser.java",
+        "id": 9,
+        "linenumber": 388,
+        "mutated_code": "    message = message.replace((char) 0, (char) 32);",
+        "orginal_code": "    message = message.replace((char) 160, (char) 32);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownParser.java",
+        "id": 10,
+        "linenumber": 388,
+        "mutated_code": "    message = message.replace((char) (160+1), (char) 32);",
+        "orginal_code": "    message = message.replace((char) 160, (char) 32);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownParser.java",
+        "id": 11,
+        "linenumber": 388,
+        "mutated_code": "    message = message.replace((char) 160, (char) 0);",
+        "orginal_code": "    message = message.replace((char) 160, (char) 32);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownParser.java",
+        "id": 12,
+        "linenumber": 388,
+        "mutated_code": "    message = message.replace((char) 160, (char) (32+1));",
+        "orginal_code": "    message = message.replace((char) 160, (char) 32);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownParser.java",
+        "id": 13,
+        "linenumber": 388,
+        "mutated_code": "    message = message.replace((char) 160, (char) 1);",
+        "orginal_code": "    message = message.replace((char) 160, (char) 32);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownParser.java",
+        "id": 14,
+        "linenumber": 388,
+        "mutated_code": "    message = message.replace((char) 160, (char) -1);",
+        "orginal_code": "    message = message.replace((char) 160, (char) 32);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownParser.java",
+        "id": 15,
+        "linenumber": 388,
+        "mutated_code": "    message = message.replace((char) (160-1), (char) 32);",
+        "orginal_code": "    message = message.replace((char) 160, (char) 32);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/markdown/MarkdownParser.java",
+        "id": 16,
+        "linenumber": 388,
+        "mutated_code": "    message = message.replace((char) 160, (char) (32-1));",
+        "orginal_code": "    message = message.replace((char) 160, (char) 32);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Element.java",
+        "id": 17,
+        "linenumber": 156,
+        "mutated_code": "    String[] styles = styleClass.trim().split(\"\");",
+        "orginal_code": "    String[] styles = styleClass.trim().split(\"[ ]+\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Styles.java",
+        "id": 18,
+        "linenumber": 145,
+        "mutated_code": "      final Set<String> inputStyleProperties = Arrays.asList(styleAttribute.split(\"\")).stream()",
+        "orginal_code": "      final Set<String> inputStyleProperties = Arrays.asList(styleAttribute.split(\";(?!base64,)\")).stream()"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/TimePicker.java",
+        "id": 19,
+        "linenumber": 242,
+        "mutated_code": "    if (!(!format.matches(FORMAT_ATTR_PATTERN))) {",
+        "orginal_code": "    if (!format.matches(FORMAT_ATTR_PATTERN)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/TimePicker.java",
+        "id": 20,
+        "linenumber": 242,
+        "mutated_code": "    if (0==1) {",
+        "orginal_code": "    if (!format.matches(FORMAT_ATTR_PATTERN)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/TimePicker.java",
+        "id": 21,
+        "linenumber": 242,
+        "mutated_code": "    if (1==1) {",
+        "orginal_code": "    if (!format.matches(FORMAT_ATTR_PATTERN)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/TimePicker.java",
+        "id": 22,
+        "linenumber": 242,
+        "mutated_code": "    if (format.matches(FORMAT_ATTR_PATTERN)) {",
+        "orginal_code": "    if (!format.matches(FORMAT_ATTR_PATTERN)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 23,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < (0-1) || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 24,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d < 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 25,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < (0+1) || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 26,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d > 0 || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 27,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d == 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 28,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > (6+1))){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 29,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 1)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 30,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d ->false || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 31,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 1 || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 32,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d == 0 || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 33,
+        "linenumber": 57,
+        "mutated_code": "      if(0==1){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 34,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d != 0 || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 35,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d >= 0 || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 36,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < -1 || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 37,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > -1)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 38,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d >= 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 39,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > (6-1))){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 40,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> (0==1) || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 41,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> false || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 42,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 0)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 43,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d <= 0 || d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 44,
+        "linenumber": 57,
+        "mutated_code": "      if(1==1){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 45,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d <= 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 46,
+        "linenumber": 57,
+        "mutated_code": "      if (!(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6))){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 47,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 && d > 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/util/pojo/DateInterval.java",
+        "id": 48,
+        "linenumber": 57,
+        "mutated_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d != 6)){",
+        "orginal_code": "      if(Arrays.stream(daysOfWeek).anyMatch(d -> d < 0 || d > 6)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Emoji.java",
+        "id": 49,
+        "linenumber": 158,
+        "mutated_code": "    } else if (!(!this.shortcode.matches(SHORTCODE_PATTERN))) {",
+        "orginal_code": "    } else if (!this.shortcode.matches(SHORTCODE_PATTERN)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Emoji.java",
+        "id": 50,
+        "linenumber": 158,
+        "mutated_code": "    } else if (1==1) {",
+        "orginal_code": "    } else if (!this.shortcode.matches(SHORTCODE_PATTERN)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Emoji.java",
+        "id": 51,
+        "linenumber": 158,
+        "mutated_code": "    } else if (0==1) {",
+        "orginal_code": "    } else if (!this.shortcode.matches(SHORTCODE_PATTERN)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Emoji.java",
+        "id": 52,
+        "linenumber": 158,
+        "mutated_code": "    } else if (this.shortcode.matches(SHORTCODE_PATTERN)) {",
+        "orginal_code": "    } else if (!this.shortcode.matches(SHORTCODE_PATTERN)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Emoji.java",
+        "id": 53,
+        "linenumber": 158,
+        "mutated_code": "    }  if (!this.shortcode.matches(SHORTCODE_PATTERN)) {",
+        "orginal_code": "    } else if (!this.shortcode.matches(SHORTCODE_PATTERN)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/bi/BiItem.java",
+        "id": 54,
+        "linenumber": 97,
+        "mutated_code": "    if (1==1) {",
+        "orginal_code": "    if (StringUtils.isEmpty(String.valueOf(value))) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/bi/BiItem.java",
+        "id": 55,
+        "linenumber": 97,
+        "mutated_code": "    if (!(StringUtils.isEmpty(String.valueOf(value)))) {",
+        "orginal_code": "    if (StringUtils.isEmpty(String.valueOf(value))) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/bi/BiItem.java",
+        "id": 56,
+        "linenumber": 97,
+        "mutated_code": "    if (0==1) {",
+        "orginal_code": "    if (StringUtils.isEmpty(String.valueOf(value))) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/DatePicker.java",
+        "id": 57,
+        "linenumber": 117,
+        "mutated_code": "      if (!(!format.matches(DATE_FORMAT_ALLOWED))){",
+        "orginal_code": "      if(!format.matches(DATE_FORMAT_ALLOWED)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/DatePicker.java",
+        "id": 58,
+        "linenumber": 117,
+        "mutated_code": "      if(0==1){",
+        "orginal_code": "      if(!format.matches(DATE_FORMAT_ALLOWED)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/DatePicker.java",
+        "id": 59,
+        "linenumber": 117,
+        "mutated_code": "      if(format.matches(DATE_FORMAT_ALLOWED)){",
+        "orginal_code": "      if(!format.matches(DATE_FORMAT_ALLOWED)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/DatePicker.java",
+        "id": 60,
+        "linenumber": 117,
+        "mutated_code": "      if(1==1){",
+        "orginal_code": "      if(!format.matches(DATE_FORMAT_ALLOWED)){"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Keyword.java",
+        "id": 61,
+        "linenumber": 61,
+        "mutated_code": "    if (this.tag.matches(pattern)) {",
+        "orginal_code": "    if (!this.tag.matches(pattern)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Keyword.java",
+        "id": 62,
+        "linenumber": 61,
+        "mutated_code": "    if (0==1) {",
+        "orginal_code": "    if (!this.tag.matches(pattern)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Keyword.java",
+        "id": 63,
+        "linenumber": 61,
+        "mutated_code": "    if (!(!this.tag.matches(pattern))) {",
+        "orginal_code": "    if (!this.tag.matches(pattern)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/elements/Keyword.java",
+        "id": 64,
+        "linenumber": 61,
+        "mutated_code": "    if (1==1) {",
+        "orginal_code": "    if (!this.tag.matches(pattern)) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/MessageMLParser.java",
+        "id": 65,
+        "linenumber": 388,
+        "mutated_code": "      String newAttribute = Arrays.stream(element.getAttribute(input).split(\"\"))",
+        "orginal_code": "      String newAttribute = Arrays.stream(element.getAttribute(input).split(\"\\\\s+\"))"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/bi/BiContext.java",
+        "id": 66,
+        "linenumber": 101,
+        "mutated_code": "        if (!(!StringUtils.isEmpty(String.valueOf(value)))",
+        "orginal_code": "        if (!StringUtils.isEmpty(String.valueOf(value))"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/finos_messageml-utils/src/main/java/org/symphonyoss/symphony/messageml/bi/BiContext.java",
+        "id": 67,
+        "linenumber": 101,
+        "mutated_code": "        if (StringUtils.isEmpty(String.valueOf(value))",
+        "orginal_code": "        if (!StringUtils.isEmpty(String.valueOf(value))"
+    }
+]

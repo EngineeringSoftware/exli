@@ -1,0 +1,751 @@
+[
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/UrlUtils.java",
+        "id": 0,
+        "linenumber": 164,
+        "mutated_code": "    String[] urlParts = url.split(\"\");",
+        "orginal_code": "    String[] urlParts = url.split(\"\\\\?\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/DateUtils.java",
+        "id": 1,
+        "linenumber": 97,
+        "mutated_code": "    if (1==1) {",
+        "orginal_code": "    if (date.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/DateUtils.java",
+        "id": 2,
+        "linenumber": 97,
+        "mutated_code": "    if (date.trim().matches(\"\")) {",
+        "orginal_code": "    if (date.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/DateUtils.java",
+        "id": 3,
+        "linenumber": 97,
+        "mutated_code": "    if (0==1) {",
+        "orginal_code": "    if (date.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/DateUtils.java",
+        "id": 4,
+        "linenumber": 97,
+        "mutated_code": "    if (!(date.trim().matches(\"\\\\d+\"))) {",
+        "orginal_code": "    if (date.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/send/MediaAttachment.java",
+        "id": 5,
+        "linenumber": 40,
+        "mutated_code": "    if (1==1) {",
+        "orginal_code": "    if (imageUrl.matches(\"^\\\\d+$\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/send/MediaAttachment.java",
+        "id": 6,
+        "linenumber": 40,
+        "mutated_code": "    if (!(imageUrl.matches(\"^\\\\d+$\"))) {",
+        "orginal_code": "    if (imageUrl.matches(\"^\\\\d+$\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/send/MediaAttachment.java",
+        "id": 7,
+        "linenumber": 40,
+        "mutated_code": "    if (imageUrl.matches(\"\")) {",
+        "orginal_code": "    if (imageUrl.matches(\"^\\\\d+$\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/send/MediaAttachment.java",
+        "id": 8,
+        "linenumber": 40,
+        "mutated_code": "    if (0==1) {",
+        "orginal_code": "    if (imageUrl.matches(\"^\\\\d+$\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/UrlUtils.java",
+        "id": 9,
+        "linenumber": 200,
+        "mutated_code": "        result = result.replace(\"?&\", \"?\").replace( \"&\",\"&&\");",
+        "orginal_code": "        result = result.replace(\"?&\", \"?\").replace(\"&&\", \"&\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/UrlUtils.java",
+        "id": 10,
+        "linenumber": 200,
+        "mutated_code": "        result = result.replace( \"?\",\"?&\").replace(\"&&\", \"&\");",
+        "orginal_code": "        result = result.replace(\"?&\", \"?\").replace(\"&&\", \"&\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/UrlUtils.java",
+        "id": 11,
+        "linenumber": 200,
+        "mutated_code": "        result = result.replace(\"?&\", \"\");",
+        "orginal_code": "        result = result.replace(\"?&\", \"?\").replace(\"&&\", \"&\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/exception/generator/DefaultFacebookExceptionGenerator.java",
+        "id": 12,
+        "linenumber": 138,
+        "mutated_code": "    if (matcher.find()) {",
+        "orginal_code": "    if (!matcher.find()) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/exception/generator/DefaultFacebookExceptionGenerator.java",
+        "id": 13,
+        "linenumber": 138,
+        "mutated_code": "    if (!(!matcher.find())) {",
+        "orginal_code": "    if (!matcher.find()) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/exception/generator/DefaultFacebookExceptionGenerator.java",
+        "id": 14,
+        "linenumber": 138,
+        "mutated_code": "    if (0==1) {",
+        "orginal_code": "    if (!matcher.find()) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/exception/generator/DefaultFacebookExceptionGenerator.java",
+        "id": 15,
+        "linenumber": 138,
+        "mutated_code": "    if (1==1) {",
+        "orginal_code": "    if (!matcher.find()) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 16,
+        "linenumber": 60,
+        "mutated_code": "    String dayStr = key.substring(0, 0);",
+        "orginal_code": "    String dayStr = key.substring(0, 3);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 17,
+        "linenumber": 60,
+        "mutated_code": "    String dayStr = key.substring((0-1), 3);",
+        "orginal_code": "    String dayStr = key.substring(0, 3);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 18,
+        "linenumber": 60,
+        "mutated_code": "    String dayStr = key.substring((0+1), 3);",
+        "orginal_code": "    String dayStr = key.substring(0, 3);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 19,
+        "linenumber": 60,
+        "mutated_code": "    String dayStr = key.substring(0, (3+1));",
+        "orginal_code": "    String dayStr = key.substring(0, 3);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 20,
+        "linenumber": 60,
+        "mutated_code": "    String dayStr = key.substring( 3,0);",
+        "orginal_code": "    String dayStr = key.substring(0, 3);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 21,
+        "linenumber": 60,
+        "mutated_code": "    String dayStr = key.substring(0, (3-1));",
+        "orginal_code": "    String dayStr = key.substring(0, 3);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 22,
+        "linenumber": 60,
+        "mutated_code": "    String dayStr = key.substring(0, 1);",
+        "orginal_code": "    String dayStr = key.substring(0, 3);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 23,
+        "linenumber": 60,
+        "mutated_code": "    String dayStr = key.substring(1, 3);",
+        "orginal_code": "    String dayStr = key.substring(0, 3);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 24,
+        "linenumber": 60,
+        "mutated_code": "    String dayStr = key.substring(-1, 3);",
+        "orginal_code": "    String dayStr = key.substring(0, 3);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 25,
+        "linenumber": 60,
+        "mutated_code": "    String dayStr = key.substring(0, -1);",
+        "orginal_code": "    String dayStr = key.substring(0, 3);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 26,
+        "linenumber": 90,
+        "mutated_code": "      int v = data[j] | 0xFF;",
+        "orginal_code": "      int v = data[j] & 0xFF;"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 27,
+        "linenumber": 91,
+        "mutated_code": "      out[j * 2] = HEX_ARRAY[v >>> 0];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 28,
+        "linenumber": 91,
+        "mutated_code": "      out[j * -1] = HEX_ARRAY[v >>> 4];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 29,
+        "linenumber": 91,
+        "mutated_code": "      out[j * 0] = HEX_ARRAY[v >>> 4];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 30,
+        "linenumber": 91,
+        "mutated_code": "      out[j * 2] = HEX_ARRAY[v >>> (4-1)];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 31,
+        "linenumber": 91,
+        "mutated_code": "      out[j * 2] = HEX_ARRAY[v >>>= 4];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 32,
+        "linenumber": 91,
+        "mutated_code": "      out[j * 2] = HEX_ARRAY[v >>> 1];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 33,
+        "linenumber": 91,
+        "mutated_code": "      out[j * 1] = HEX_ARRAY[v >>> 4];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 34,
+        "linenumber": 91,
+        "mutated_code": "      out[j + 2] = HEX_ARRAY[v >>> 4];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 35,
+        "linenumber": 91,
+        "mutated_code": "      out[j * 2] = HEX_ARRAY[v >>> -1];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 36,
+        "linenumber": 91,
+        "mutated_code": "      out[j % 2] = HEX_ARRAY[v >>> 4];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 37,
+        "linenumber": 91,
+        "mutated_code": "      out[j * (2+1)] = HEX_ARRAY[v >>> 4];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 38,
+        "linenumber": 91,
+        "mutated_code": "      out[j * (2-1)] = HEX_ARRAY[v >>> 4];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 39,
+        "linenumber": 91,
+        "mutated_code": "      out[j - 2] = HEX_ARRAY[v >>> 4];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 40,
+        "linenumber": 91,
+        "mutated_code": "      out[j * 2] = HEX_ARRAY[v >>> (4+1)];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 41,
+        "linenumber": 91,
+        "mutated_code": "      out[j / 2] = HEX_ARRAY[v >>> 4];",
+        "orginal_code": "      out[j * 2] = HEX_ARRAY[v >>> 4];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 42,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + (1+1)).toLowerCase() + methodName.substring(offset + 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 43,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + (1-1)).toLowerCase() + methodName.substring(offset + 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 44,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset - 1).toLowerCase() + methodName.substring(offset + 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 45,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + (1-1));",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 46,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + (1+1));",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 47,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + -1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 48,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 0);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 49,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset - 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 50,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset / 1).toLowerCase() + methodName.substring(offset + 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 51,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset * 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 52,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset / 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 53,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset % 1).toLowerCase() + methodName.substring(offset + 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 54,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset * 1).toLowerCase() + methodName.substring(offset + 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 55,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset % 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 56,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + 0).toLowerCase() + methodName.substring(offset + 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 57,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring(offset, offset + -1).toLowerCase() + methodName.substring(offset + 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/ReflectionUtils.java",
+        "id": 58,
+        "linenumber": 299,
+        "mutated_code": "    methodName = methodName.substring( offset + 1,offset).toLowerCase() + methodName.substring(offset + 1);",
+        "orginal_code": "    methodName = methodName.substring(offset, offset + 1).toLowerCase() + methodName.substring(offset + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 59,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 2 + (1+1)] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 60,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 2 + 0] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 61,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x1F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 62,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 2 + -1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 63,
+        "linenumber": 92,
+        "mutated_code": "      out[j % 2 + 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 64,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 1 + 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 65,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 2 + (1-1)] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 66,
+        "linenumber": 92,
+        "mutated_code": "      out[j * (2-1) + 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 67,
+        "linenumber": 92,
+        "mutated_code": "      out[j * (2+1) + 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 68,
+        "linenumber": 92,
+        "mutated_code": "      out[j * -1 + 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 69,
+        "linenumber": 92,
+        "mutated_code": "      out[j / 2 + 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 70,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 2 - 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 71,
+        "linenumber": 92,
+        "mutated_code": "      out[j - 2 + 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 72,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 0 + 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 73,
+        "linenumber": 92,
+        "mutated_code": "      out[j + 2 + 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 74,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 2 % 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 75,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 2 + 1] = HEX_ARRAY[v | 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 76,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 2 * 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 77,
+        "linenumber": 92,
+        "mutated_code": "      out[j * 2 / 1] = HEX_ARRAY[v & 0x0F];",
+        "orginal_code": "      out[j * 2 + 1] = HEX_ARRAY[v & 0x0F];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/FacebookClient.java",
+        "id": 78,
+        "linenumber": 635,
+        "mutated_code": "      if (true && rawExpires.trim().matches(\"\\\\d+\")) {",
+        "orginal_code": "      if (rawExpires != null && rawExpires.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/FacebookClient.java",
+        "id": 79,
+        "linenumber": 635,
+        "mutated_code": "      if (rawExpires != null && rawExpires.trim().matches(\"\")) {",
+        "orginal_code": "      if (rawExpires != null && rawExpires.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/FacebookClient.java",
+        "id": 80,
+        "linenumber": 635,
+        "mutated_code": "      if (!(rawExpires != null && rawExpires.trim().matches(\"\\\\d+\"))) {",
+        "orginal_code": "      if (rawExpires != null && rawExpires.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/FacebookClient.java",
+        "id": 81,
+        "linenumber": 635,
+        "mutated_code": "      if (rawExpires == null && rawExpires.trim().matches(\"\\\\d+\")) {",
+        "orginal_code": "      if (rawExpires != null && rawExpires.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/FacebookClient.java",
+        "id": 82,
+        "linenumber": 635,
+        "mutated_code": "      if (0==1) {",
+        "orginal_code": "      if (rawExpires != null && rawExpires.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/FacebookClient.java",
+        "id": 83,
+        "linenumber": 635,
+        "mutated_code": "      if (rawExpires != null || rawExpires.trim().matches(\"\\\\d+\")) {",
+        "orginal_code": "      if (rawExpires != null && rawExpires.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/FacebookClient.java",
+        "id": 84,
+        "linenumber": 635,
+        "mutated_code": "      if ((1==1) && rawExpires.trim().matches(\"\\\\d+\")) {",
+        "orginal_code": "      if (rawExpires != null && rawExpires.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/FacebookClient.java",
+        "id": 85,
+        "linenumber": 635,
+        "mutated_code": "      if (rawExpires != null && (1==1)) {",
+        "orginal_code": "      if (rawExpires != null && rawExpires.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/FacebookClient.java",
+        "id": 86,
+        "linenumber": 635,
+        "mutated_code": "      if (1==1) {",
+        "orginal_code": "      if (rawExpires != null && rawExpires.trim().matches(\"\\\\d+\")) {"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/UrlUtils.java",
+        "id": 87,
+        "linenumber": 197,
+        "mutated_code": "        String result = url.replace( \"\",key + \"=\" + queryValue);",
+        "orginal_code": "        String result = url.replace(key + \"=\" + queryValue, \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/UrlUtils.java",
+        "id": 88,
+        "linenumber": 191,
+        "mutated_code": "    String[] urlParts = url.split(\"\");",
+        "orginal_code": "    String[] urlParts = url.split(\"\\\\?\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/UrlUtils.java",
+        "id": 89,
+        "linenumber": 138,
+        "mutated_code": "    String[] urlParts = url.split(\"\");",
+        "orginal_code": "    String[] urlParts = url.split(\"\\\\?\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 90,
+        "linenumber": 75,
+        "mutated_code": "      String indexStr = key.substring(0).replace(\"_close\", \"\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_close\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 91,
+        "linenumber": 75,
+        "mutated_code": "      String indexStr = key.substring(-1).replace(\"_close\", \"\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_close\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 92,
+        "linenumber": 75,
+        "mutated_code": "      String indexStr = key.substring(4).replace( \"\",\"_close\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_close\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 93,
+        "linenumber": 75,
+        "mutated_code": "      String indexStr = key.substring(1).replace(\"_close\", \"\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_close\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 94,
+        "linenumber": 75,
+        "mutated_code": "      String indexStr = key.substring((4+1)).replace(\"_close\", \"\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_close\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 95,
+        "linenumber": 75,
+        "mutated_code": "      String indexStr = key.substring((4-1)).replace(\"_close\", \"\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_close\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/DefaultFacebookClient.java",
+        "id": 96,
+        "linenumber": 555,
+        "mutated_code": "    String[] signedRequestTokens = signedRequest.split(\"\");",
+        "orginal_code": "    String[] signedRequestTokens = signedRequest.split(\"[.]\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 97,
+        "linenumber": 69,
+        "mutated_code": "      String indexStr = key.substring(0).replace(\"_open\", \"\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_open\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 98,
+        "linenumber": 69,
+        "mutated_code": "      String indexStr = key.substring(-1).replace(\"_open\", \"\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_open\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 99,
+        "linenumber": 69,
+        "mutated_code": "      String indexStr = key.substring(4).replace( \"\",\"_open\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_open\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 100,
+        "linenumber": 69,
+        "mutated_code": "      String indexStr = key.substring(1).replace(\"_open\", \"\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_open\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 101,
+        "linenumber": 69,
+        "mutated_code": "      String indexStr = key.substring((4+1)).replace(\"_open\", \"\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_open\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/lombok/com/restfb/types/Hours.java",
+        "id": 102,
+        "linenumber": 69,
+        "mutated_code": "      String indexStr = key.substring((4-1)).replace(\"_open\", \"\");",
+        "orginal_code": "      String indexStr = key.substring(4).replace(\"_open\", \"\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 103,
+        "linenumber": 88,
+        "mutated_code": "    char[] out = new char[data.length << (1+1)];",
+        "orginal_code": "    char[] out = new char[data.length << 1];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 104,
+        "linenumber": 88,
+        "mutated_code": "    char[] out = new char[data.length << 0];",
+        "orginal_code": "    char[] out = new char[data.length << 1];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 105,
+        "linenumber": 88,
+        "mutated_code": "    char[] out = new char[data.length << -1];",
+        "orginal_code": "    char[] out = new char[data.length << 1];"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/restfb_restfb/src/main/java/com/restfb/util/EncodingUtils.java",
+        "id": 106,
+        "linenumber": 88,
+        "mutated_code": "    char[] out = new char[data.length << (1-1)];",
+        "orginal_code": "    char[] out = new char[data.length << 1];"
+    }
+]

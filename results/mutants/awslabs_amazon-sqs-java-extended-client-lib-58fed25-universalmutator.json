@@ -1,0 +1,72 @@
+[
+    {
+        "filepath": "/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java",
+        "id": 0,
+        "linenumber": 340,
+        "mutated_code": "                largeMessagePointer = largeMessagePointer.replace(\"com.amazon.sqs.javamessaging.MessageS3Pointer\", \"\");",
+        "orginal_code": "                largeMessagePointer = largeMessagePointer.replace(\"com.amazon.sqs.javamessaging.MessageS3Pointer\", \"software.amazon.payloadoffloading.PayloadS3Pointer\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java",
+        "id": 1,
+        "linenumber": 340,
+        "mutated_code": "                largeMessagePointer = largeMessagePointer.replace( \"software.amazon.payloadoffloading.PayloadS3Pointer\",\"com.amazon.sqs.javamessaging.MessageS3Pointer\");",
+        "orginal_code": "                largeMessagePointer = largeMessagePointer.replace(\"com.amazon.sqs.javamessaging.MessageS3Pointer\", \"software.amazon.payloadoffloading.PayloadS3Pointer\");"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java",
+        "id": 2,
+        "linenumber": 891,
+        "mutated_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence - 1);",
+        "orginal_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java",
+        "id": 3,
+        "linenumber": 891,
+        "mutated_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + 0);",
+        "orginal_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java",
+        "id": 4,
+        "linenumber": 891,
+        "mutated_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + (1+1));",
+        "orginal_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java",
+        "id": 5,
+        "linenumber": 891,
+        "mutated_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + -1);",
+        "orginal_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java",
+        "id": 6,
+        "linenumber": 891,
+        "mutated_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence % 1);",
+        "orginal_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java",
+        "id": 7,
+        "linenumber": 891,
+        "mutated_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence / 1);",
+        "orginal_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java",
+        "id": 8,
+        "linenumber": 891,
+        "mutated_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + (1-1));",
+        "orginal_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + 1);"
+    },
+    {
+        "filepath": "/home/itdocker/exli/_downloads/awslabs_amazon-sqs-java-extended-client-lib/src/main/java/com/amazon/sqs/javamessaging/AmazonSQSExtendedClient.java",
+        "id": 9,
+        "linenumber": 891,
+        "mutated_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence * 1);",
+        "orginal_code": "        int secondOccurence = receiptHandle.indexOf(marker, firstOccurence + 1);"
+    }
+]
