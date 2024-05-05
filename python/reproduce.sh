@@ -25,16 +25,15 @@ python -m exli.eval batch_add_back_tests
 # minimize inline tests and get the final results (r2 tests).
 python -m exli.eval batch_minimize_tests
 
-# plots
+# talbes and plots
 python -m exli.generate_tests batch_generate_coverage
 python -m exli.filter classify_target_statements
 python -m exli.table data_target_stmts_found
 python -m exli.table data_target_stmts_passing
 python -m exli.plot target_statements_bar_plot
 
+python -m exli.table data_inline_tests
 python -m exli.plot dist_inline_tests_per_target_stmt_boxplot
 
 python -m exli.plot venn_mutated_results
 
-# tables
-python -m exli.table data_target_stmts_found

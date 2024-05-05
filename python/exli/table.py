@@ -189,6 +189,50 @@ class Table:
             )
         file.save()
 
+    # python -m exli.table data_inline_tests
+    def data_inline_tests(self, algorithm="greedy"):
+        file = latex.File(Macros.table_dir / "data-inline-tests.tex")
+
+        _, metrics_list = self.get_stmts_num_itest(algorithm)
+        metrics_list = {k: [v for v in l if v != 0] for k, l in metrics_list.items()}
+
+        # generate macros
+        for k, l in metrics_list.items():
+            file.append_macro(
+                latex.Macro(f"total-{k}-num-inline-tests", f"{sum(l):{fmt_d}}")
+            )
+            file.append_macro(
+                latex.Macro(f"avg-{k}-num-inline-tests", f"{sum(l) / len(l):{fmt_f}}")
+            )
+            file.append_macro(
+                latex.Macro(f"max-{k}-num-inline-tests", f"{max(l):{fmt_d}}")
+            )
+            file.append_macro(
+                latex.Macro(f"median-{k}-num-inline-tests", f"{np.median(l):{fmt_f}}")
+            )
+            file.append_macro(
+                latex.Macro(
+                    f"pct95-{k}-num-inline-tests", f"{np.percentile(l, 95):{fmt_f}}"
+                )
+            )
+
+        # savings
+        tools = [Macros.unique, Macros.r0, Macros.r1, Macros.r2_um]
+        for k1 in tools:
+            for k2 in tools:
+                if k1 == k2:
+                    continue
+                n1 = sum(metrics_list[k1])
+                n2 = sum(metrics_list[k2])
+                file.append(
+                    latex.Macro(
+                        f"pct-{k2}-lt-{k1}-num-inline-tests",
+                        f"{(n1 - n2) / n1 * 100:{fmt_f}}",
+                    )
+                )
+
+        file.save()
+
     def get_stmts_num_itest(
         self, algorithm="greedy"
     ) -> Tuple[List[str], Dict[str, List[int]]]:
