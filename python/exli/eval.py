@@ -280,6 +280,16 @@ class Eval:
                                     mutant["compilation_failure"] = False
                                 updated_mutants.append(mutant)
                                 if mutant["compilation_failure"]:
+                                    # The mutated code itself can be compiled successfully, but the inline test may not be compiled successfully. For example, the code is
+                                    """
+                                    int m (int a, int b){
+                                        a = a >> 1; // original code
+                                        a = b >> 1; // mutated code
+                                        itest().given(a, 1).checkEq(a, 2); // inline test
+                                        a += b;
+                                        return a
+                                    }
+                                    """
                                     continue
                                 se.io.dump(log_file, run_res, se.io.Fmt.jsonPretty)
                     except se.TimeoutException:
