@@ -441,6 +441,8 @@ class Eval:
             return
         mutants = se.io.load(mutants_file, se.io.Fmt.json)
         for mutant in mutants:
+            if "compilation_failure" in mutant and mutant["compilation_failure"]:
+                continue
             # log/eval/AquaticInformatics_aquarius-sdk-java-8f4edb9-all-AquariusServerVersion_19Test.java-0-{mutator}.log
             index = mutant["id"]
             filepath = mutant["filepath"]
