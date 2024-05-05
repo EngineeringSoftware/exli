@@ -13,11 +13,11 @@ class Macros:
     python_dir: Path = project_dir / "python"
     log_file: Path = python_dir / "experiments.log"
     log_dir: Path = project_dir / "log"
-    paper_dir: Path = project_dir / "papers" / "paper"
-    figure_dir: Path = paper_dir / "figures"
-    table_dir: Path = paper_dir / "tables"
+
     data_dir: Path = project_dir / "data"
     results_dir: Path = project_dir / "results"
+    figure_dir: Path = results_dir / "figures"
+    table_dir: Path = results_dir / "tables"
 
     unit_tests_dir: Path = project_dir / "generated-tests"
     r0_tests_dir: Path = project_dir / "r0-tests"

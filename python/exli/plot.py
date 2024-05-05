@@ -67,6 +67,9 @@ class Plot:
         self.cmap3 = mpl.colors.ListedColormap(sns.color_palette(n_colors=3))
         self.cmap2 = mpl.colors.ListedColormap(sns.color_palette(n_colors=2))
 
+        if not Macros.figure_dir.exists():
+            Macros.figure_dir.mkdir(parents=True)
+
     # python -m exli.plot target_statements_bar_plot
     def target_statements_bar_plot(self):
         plot_data = []
@@ -262,7 +265,6 @@ class Plot:
         data_comb_unit = {
             name_exli_r1: data_all[name_exli_r1],
             name_exli_um: data_all[name_exli_um],
-
             name_unit: data_all[name_dev]
             | data_all[name_randoop]
             | data_all[name_evosuite],
@@ -318,3 +320,8 @@ class Plot:
             else:
                 latex_file.append(r"\end{figure}")
         latex_file.save()
+
+
+if __name__ == "__main__":
+    se.log.setup(Macros.log_file, se.log.WARNING)
+    CLI(Plot, as_positional=False)

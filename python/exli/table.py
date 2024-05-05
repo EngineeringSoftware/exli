@@ -29,20 +29,21 @@ projects_no_mutant = ["liquibase_liquibase-oracle"]
 
 # tool (names used in experiments) to macro (names used in paper) mapping
 tool2macro = {
-    "unit": "dev",
-    "randoop": "randoop",
-    "evosuite": "evosuite",
-    "all": "r0",
-    "all": "r0",
-    "reduced": "r1",
-    "r2-universalmutator": "r2-um",
-    "r2-major": "r2-major",
+    Macros.dev: "dev",
+    Macros.randoop: "randoop",
+    Macros.evosuite: "evosuite",
+    Macros.unit: "unit",
+    Macros.r0: "r0",
+    Macros.r1: "r1",
+    Macros.r2_um: "r2-um",
+    Macros.r2_major: "r2-major",
 }
 
 
 class Table:
     # python -m exli.table data_target_stmts_found
     def data_target_stmts_found(self):
+        print("data_target_stmts_found")
         file = latex.File(Macros.table_dir / "data-target-statements-found.tex")
         target_stmts_dict = se.io.load(Macros.results_dir / "target-statements.json")
         df = pd.DataFrame(target_stmts_dict)
@@ -150,3 +151,45 @@ class Table:
                     )
                 )
         file.save()
+
+    # python -m exli.table data_target_stmts_passing
+    def data_target_stmts_passing(self):
+        file = latex.File(Macros.table_dir / "data-target-statements-passing.tex")
+        target_stmts = se.io.load(Macros.results_dir / "target-statements.json")
+        for tool in [Macros.r0, Macros.r1]:
+            tmacro = tool2macro[tool]
+            passed_tests = se.io.load(
+                Macros.results_dir / f"{tool}-passed-tests.txt", se.io.Fmt.txtList
+            )
+            stmt2type = {}
+            for stmt in target_stmts:
+                classname = Util.file_path_to_class_name(stmt["filename"])
+                stmt2type[classname + stmt["line_number"]] = stmt["type"]
+
+            type2stmts = collections.defaultdict(set)
+            for test in passed_tests:
+                tokens = test.split(";")
+                key = tokens[1] + tokens[2]
+                if key in stmt2type:
+                    type2stmts[stmt2type[key]].add(key)
+                else:
+                    logger.warning(f"cannot find {key}")
+
+            total = 0
+            for stmt_type in Macros.target_stmt_types:
+                cnt = len(type2stmts[stmt_type])
+                total += cnt
+                file.append(
+                    latex.Macro(
+                        f"total-{tmacro}-num-stmts-{stmt_type}", f"{cnt:{fmt_d}}"
+                    )
+                )
+            file.append(
+                latex.Macro(f"total-{tmacro}-num-stmts-total", f"{total:{fmt_d}}")
+            )
+        file.save()
+
+
+if __name__ == "__main__":
+    se.log.setup(Macros.log_file, se.log.WARNING)
+    CLI(Table, as_positional=False)
