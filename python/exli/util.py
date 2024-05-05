@@ -1312,7 +1312,29 @@ class Util:
                     )
                     f.write(r"public class RegressionTest {}")
         else:
-            print(f"skip {project_name}...")
+            # check if there are multiple RegressionTest*.java files
+            regression_test_java_files = generated_tests_dir.glob("RegressionTest*.java")
+            regression_test_java_files = list(regression_test_java_files)
+            if len(regression_test_java_files) > 1:
+                # create a RegressionTest.java file
+                with open(regression_test_file, "w") as f:
+                    f.write(r"import org.junit.runner.RunWith;" + "\n")
+                    f.write(r"import org.junit.runners.Suite;" + "\n")
+                    f.write(r"@RunWith(Suite.class)" + "\n")
+                    f.write(
+                        r"@Suite.SuiteClasses({"
+                        + ", ".join(
+                            [
+                                f"{file.stem}.class"
+                                for file in regression_test_java_files
+                            ]
+                        )
+                        + r"})"
+                        + "\n"
+                    )
+                    f.write(r"public class RegressionTest {}")
+            else:
+                print(f"skip {project_name}")
 
     @classmethod
     def get_dependencies(cls, project_name: str, sha: str, clazz: str):
