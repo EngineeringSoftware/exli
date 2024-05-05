@@ -56,6 +56,7 @@ class Macros:
     r2 = "r2"  # inline tests with second round reduction
     r2_um = "r2-universalmutator"  # inline tests with second round reduction using universalmutator
     r2_major = "r2-major"  # inline tests with second round reduction using major
+    unique = "unique"  # unique inline tests
     evosuite = "evosuite"
     EvoSuite = "EvoSuite"
     randoop = "randoop"

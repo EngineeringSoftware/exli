@@ -189,6 +189,71 @@ class Table:
             )
         file.save()
 
+    def get_stmts_num_itest(
+        self, algorithm="greedy"
+    ) -> Tuple[List[str], Dict[str, List[int]]]:
+        tool2num_itest = {}
+
+        # r0 tests, used as the standard of used target statements
+        r0_tests = se.io.load(
+            Macros.results_dir / f"{Macros.r0}-passed-tests.txt", se.io.Fmt.txtList
+        )
+        stmts = set()
+        r0_counter = collections.Counter()
+        for test in r0_tests:
+            stmt, _ = test.rsplit(";", 1)
+            stmts.add(stmt)
+            r0_counter[stmt] += 1
+        sorted_stmts = sorted(stmts)
+        tool2num_itest["r0"] = [r0_counter[stmt] for stmt in sorted_stmts]
+
+        # r1 tests
+        r1_tests = se.io.load(
+            Macros.results_dir / f"{Macros.r1}-passed-tests.txt", se.io.Fmt.txtList
+        )
+        r1_counter = collections.Counter()
+        for test in r1_tests:
+            stmt, _ = test.rsplit(";", 1)
+            if stmt in stmts:
+                r1_counter[stmt] += 1
+        tool2num_itest["r1"] = [r1_counter[stmt] for stmt in sorted_stmts]
+
+        # r2 tests (r2/{algorithm}-{mutator})
+        for mutator in [Macros.universalmutator]:
+            tmacro = tool2macro[f"r2-{mutator}"]
+            r2_tests = se.io.load(
+                Macros.results_dir / f"r2/{algorithm}-{mutator}.txt", se.io.Fmt.txtList
+            )
+            r2_counter = collections.Counter()
+            for test in r2_tests:
+                proj, clzstmt, _ = test.split("#", 2)
+                clz, stmt = clzstmt.rsplit("_", 1)
+                lineno = stmt[:-4]  # remove "*Test"
+                stmt = f"{proj};{clz};{lineno}"
+                if stmt in stmts:
+                    r2_counter[stmt] += 1
+            tool2num_itest[tmacro] = [r2_counter[stmt] for stmt in sorted_stmts]
+
+        # unique values
+        unique_tests = se.io.load(
+            Macros.results_dir / "unique-tests.txt", se.io.Fmt.txtList
+        )
+        unique_counter = collections.Counter()
+        for test in unique_tests:
+            stmt, cnt = test.rsplit(";", 1)
+            if stmt in stmts:
+                unique_counter[stmt] += int(cnt)
+        tool2num_itest["unique"] = [unique_counter[stmt] for stmt in sorted_stmts]
+
+        # TODO: because num of unique values are collected in a separate run after the main experiments, some statements may have less unique values (in this run) than the num of r0 tests (in the previous run), we make a hacky fix here to require the num of unique values to be at least the num of r0 tests
+        unique_lt_r0 = []
+        for i, stmt in enumerate(sorted_stmts):
+            unique = tool2num_itest["unique"][i]
+            r0 = tool2num_itest["r0"][i]
+            if unique < r0:
+                unique_lt_r0.append(f"{stmt}: {unique=} < {r0=}")
+                tool2num_itest["unique"][i] = r0
+        return stmts, tool2num_itest
 
 if __name__ == "__main__":
     se.log.setup(Macros.log_file, se.log.WARNING)
