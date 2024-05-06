@@ -413,7 +413,7 @@ class Eval:
             )
             self.get_r2_tests(project_name, sha, mutator, algo, output_path)
 
-        if test_project_name is not None:
+        if test_project_name is None:
             # since we use greedy algorithm results in the paper, we combine the results of greedy algorithm into Macros.results/r2-universalmutator-greedy-passed-tests.txt
             r2_tests_path = (
                 Macros.results_dir / f"{Macros.r2_um}-{Macros.greedy}-passed-tests.txt"
