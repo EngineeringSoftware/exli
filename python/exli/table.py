@@ -285,7 +285,7 @@ class Table:
 
         phase2name = {
             Macros.r1: "r1",
-            Macros.r2_um: "r2-um",
+            Macros.r0: "r2-um",
             Macros.dev: "dev",
             Macros.randoop: "randoop",
             Macros.evosuite: "evosuite",
@@ -296,7 +296,10 @@ class Table:
         data = collections.defaultdict(set)
         projects = [p for p in projects_used_sorted if p not in projects_no_mutant]
         for project_name in projects:
-            results_list = Util.get_killed_mutants(project_name, phases)
+            sha = Util.get_sha(project_name)
+            results_list = Util.get_killed_mutants(
+                project_name, sha, Macros.universalmutator, phases
+            )
             if len(results_list) != len(phases):
                 raise RuntimeError(f"Project {project_name} has missing results")
             data_proj = {phase: results for phase, results in zip(phases, results_list)}
@@ -304,61 +307,42 @@ class Table:
                 data[phase2name[phase]].update({f"{project_name}:{r}" for r in results})
 
         # compute several additional interesting sets and their sizes
-        data[f"r2-{Macros.r0}"] = data["r2-um"] | data["r2-major"]
-        data[f"unit-{Macros.r0}"] = data["dev"] | data["randoop"] | data["evosuite"]
-        data[f"all"] = data["r2-all"] | data["unit-all"]
-        data["intersect-r2-unit"] = data["r2-all"] & data["unit-all"]
-        data["r2-all-minus-r1"] = data["r2-all"] - data["r1"]
-        data["r2-um-minus-r1"] = data["r2-um"] - data["r1"]
-        data["r2-major-minus-r1"] = data["r2-major"] - data["r1"]
-        data["r2-all-minus-unit-all"] = data["r2-all"] - data["unit-all"]
-        data["r2-um-minus-unit-all"] = data["r2-um"] - data["unit-all"]
-        data["r2-major-minus-unit-all"] = data["r2-major"] - data["unit-all"]
-        data["r2-major-minus-r2-um"] = data["r2-major"] - data["r2-um"]
-        data["r2-um-minus-r2-major"] = data["r2-um"] - data["r2-major"]
-        data["unit-all-minus-r2-all"] = data["unit-all"] - data["r2-all"]
-        data["unit-all-minus-r2-um"] = data["unit-all"] - data["r2-um"]
-        data["unit-all-minus-r2-major"] = data["unit-all"] - data["r2-major"]
+        data["r2"] = data["r2-um"]
+        data[Macros.unit] = (
+            data[Macros.dev] | data[Macros.randoop] | data[Macros.evosuite]
+        )
+        data[f"all"] = data[Macros.r2] | data[Macros.unit]
+        data["intersect-r2-unit"] = data["r2"] & data["unit"]
+        data["r2-minus-r1"] = data["r2"] - data["r1"]
+        data["r2-minus-unit"] = data["r2"] - data["unit"]
+        data["unit-minus-r2"] = data["unit"] - data["r2"]
 
         for k, v in data.items():
             file.append_macro(latex.Macro(f"km-{k}", f"{len(v):{fmt_d}}"))
 
         # compute several interesting percentages
-        for m in ["all", "um", "major"]:
-            file.append(
-                latex.Macro(
-                    f"pct-km-r2-{m}-gt-unit-all",
-                    f"{len(data[f'r2-{m}-minus-unit-all']) / len(data['unit-all'])*100:{fmt_f}}",
-                )
-            )
-            file.append(
-                latex.Macro(
-                    f"pct-km-r2-{m}-minus-unit-all",
-                    f"{len(data[f'r2-{m}-minus-unit-all']) / len(data['all'])*100:{fmt_f}}",
-                )
-            )
-            file.append(
-                latex.Macro(
-                    f"pct-km-unit-all-minus-r2-{m}",
-                    f"{len(data[f'unit-all-minus-r2-{m}']) / len(data['all'])*100:{fmt_f}}",
-                )
-            )
-            file.append(
-                latex.Macro(
-                    f"pct-km-r2-{m}-minus-r1",
-                    f"{len(data[f'r2-{m}-minus-r1']) / len(data['all'])*100:{fmt_f}}",
-                )
-            )
         file.append(
             latex.Macro(
-                "pct-km-r2-um-gt-r2-major",
-                f"{len(data['r2-um-minus-r2-major']) / len(data['r2-major'])*100:{fmt_f}}",
+                f"pct-km-r2-gt-unit",
+                f"{len(data[f'r2-minus-unit']) / len(data['unit'])*100:{fmt_f}}",
             )
         )
         file.append(
             latex.Macro(
-                "pct-km-r2-major-gt-r2-um",
-                f"{len(data['r2-major-minus-r2-um']) / len(data['r2-um'])*100:{fmt_f}}",
+                f"pct-km-r2-minus-unit",
+                f"{len(data[f'r2-minus-unit']) / len(data['all'])*100:{fmt_f}}",
+            )
+        )
+        file.append(
+            latex.Macro(
+                f"pct-km-unit-minus-r2",
+                f"{len(data[f'unit-minus-r2']) / len(data['all'])*100:{fmt_f}}",
+            )
+        )
+        file.append(
+            latex.Macro(
+                f"pct-km-r2-minus-r1",
+                f"{len(data[f'r2-minus-r1']) / len(data['all'])*100:{fmt_f}}",
             )
         )
         file.save()

@@ -974,19 +974,22 @@ class Util:
         se.io.dump(test_path, f"inlinetestname={test_name}", se.io.Fmt.txt)
 
     @classmethod
-    def get_killed_mutants(cls, project_name: str, test_type_list: List[str]):
+    def get_killed_mutants(
+        cls, project_name: str, sha: str, mutator: str, test_type_list: List[str]
+    ):
         results_list = list()
         for test_type in test_type_list:
             mutant_result_file = (
                 Macros.results_dir
                 / "mutants-eval-results"
-                / f"{project_name}-{test_type}.json"
+                / f"{project_name}-{sha}-{mutator}-{test_type}.json"
             )
             if not mutant_result_file.exists():
+                print(f"{mutant_result_file} does not exist")
                 continue
             mutated_results = se.io.load(mutant_result_file)
             timeout = 600
-            if test_type == "evosuite":
+            if test_type == Macros.evosuite:
                 timeout = 3600
             killed_mutants_set = {
                 index
