@@ -819,7 +819,7 @@ class Eval:
             / "itests-without-mutants"
             / f"{project_name}-{sha}-{mutator}.txt"
         )
-        se.io.dump(not_mutated_inline_tests, output_path, se.io.Fmt.txtList)
+        se.io.dump(output_path, not_mutated_inline_tests, se.io.Fmt.txtList)
 
     # python -m exli.eval save_r2_inline_test_no_source_code
     def save_r2_inline_test_no_source_code(
