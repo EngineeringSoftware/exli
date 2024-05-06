@@ -209,20 +209,7 @@ and
 
 #### Step 5: Test reduction
 ```bash
-python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --test_type=r0
-python -m exli.eval test_to_killed_mutants --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --test_type=r1
-```
-
-> Alternatively, to use the default settings `python -m exli.eval batch_test_to_killed_mutants --test_project_name=Bernardo-MG_velocity-config-tool`
-
-```bash
-python -m exli.eval add_back_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator
-```
-
-> Alternatively, to use the default settings `python -m exli.eval batch_add_back_tests --test_project_name=Bernardo-MG_velocity-config-tool`
-
-```bash
-python -m exli.eval minimize_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator
+python -m exli.eval get_r2_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --algo=greedy --output_path=${HOME}/exli/results/r2/universalmutator-greedyBernardo-MG_velocity-config-tool-26226f5.txt
 ```
 
 `${HOME}/exli/results/minimized` stores the minimized tests by 4
@@ -235,12 +222,31 @@ example, the minimized tests by greedy algorithm for the project
 ```txt
 Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_200Test#testLine204()#r1
 Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test#testLine290()#r1
-Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test#testLine301()#r0
+Bernardo-MG_velocity-config-tool#com.bernardomg.velocity.tool.ConfigTool_288Test#testLine302()#r0
 ```
 
 Tests that end with `#r0` are from R0 tests, end with `#r1` are from R1 tests. These 3 tests are the minimized tests (`r2` tests) by the greedy algorithm.
 
-Running `python -m exli.eval batch_minimize_tests` will merge all the minized tests with greedy algorithm into one file `${HOME}/exli/results/r2-passed-tests.txt`
+`${HOME}/exli/results/itests-without-mutants` stores the inline tests whose target statements do not have mutants. For example, the inline tests for the project `Bernardo-MG_velocity-config-tool` at commit `26226f5` are stored in `${HOME}/exli/results/itests-without-mutants/Bernardo-MG_velocity-config-tool-26226f5-universalmutator.txt`
+
+```txt
+Bernardo-MG_velocity-config-tool;com.bernardomg.velocity.tool.ConfigTool;195;197
+Bernardo-MG_velocity-config-tool;com.bernardomg.velocity.tool.ConfigTool;195;198
+Bernardo-MG_velocity-config-tool;com.bernardomg.velocity.tool.ConfigTool;195;199
+```
+
+After merging `${HOME}/exli/results/minimized/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-greedy.txt` and `${HOME}/exli/results/itests-without-mutants/Bernardo-MG_velocity-config-tool-26226f5-universalmutator.txt`, the final r2 tests are stored in `${HOME}/exli/results/r2/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-greedy.txt`
+
+```txt
+Bernardo-MG_velocity-config-tool;com.bernardomg.velocity.tool.ConfigTool;200;204;r1
+Bernardo-MG_velocity-config-tool;com.bernardomg.velocity.tool.ConfigTool;288;290;r1
+Bernardo-MG_velocity-config-tool;com.bernardomg.velocity.tool.ConfigTool;288;302;r0
+Bernardo-MG_velocity-config-tool;com.bernardomg.velocity.tool.ConfigTool;195;197;r1
+Bernardo-MG_velocity-config-tool;com.bernardomg.velocity.tool.ConfigTool;195;198;r1
+Bernardo-MG_velocity-config-tool;com.bernardomg.velocity.tool.ConfigTool;195;199;r1
+```
+
+> Running `python -m exli.eval batch_get_r2_tests` will merge all the minized tests with greedy algorithm into one file `${HOME}/exli/results/r2-universalmutator-greedy-passed-tests.txt`
 
 ### Reproduce the results in the paper
 See the [Reproduce the results](./REPRODUCE.md) for more details.
