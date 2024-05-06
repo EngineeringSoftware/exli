@@ -689,7 +689,7 @@ class Eval:
                 proj_name = r1_test.split(";")[0]
                 if project_name != None and proj_name == project_name:
                     r2_tests.append(r1_test)
-            se.io.dump(data_file, r2_tests, se.io.Fmt.txtList)
+            se.io.dump(out_file, r2_tests, se.io.Fmt.txtList)
             return
 
         if not out_file.parent.exists():
