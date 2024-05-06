@@ -15,6 +15,7 @@ from exli.maven import MavenProject
 from tqdm import tqdm
 from typing import Union
 
+
 class Util:
     @classmethod
     def run_unit_tests(
@@ -1167,9 +1168,9 @@ class Util:
         if filter_with_inline_tests:
             r1_proj_to_target_stmts = cls.get_proj_to_target_stmts("r1")
             r0_proj_to_target_stmts = cls.get_proj_to_target_stmts("r0")
-            # intersection of r1 and r0
+            # union of r1 and r0
             proj_to_target_stmts = {
-                k: r1_proj_to_target_stmts[k] & r0_proj_to_target_stmts[k]
+                k: r1_proj_to_target_stmts[k] | r0_proj_to_target_stmts[k]
                 for k in r1_proj_to_target_stmts.keys()
             }
         lines = se.io.load(target_stmts_path, se.io.Fmt.txtList)
@@ -1177,7 +1178,7 @@ class Util:
             if not line.startswith("target stmt"):
                 break
             path = line.split(";")[1]
-            class_name = path.split("/")[-1].split(".")[0]
+            class_name = Util.get_full_class_name(path)
             line_num = line.split(";")[2]
             if filter_with_inline_tests:
                 inline_tests_target_stmts = proj_to_target_stmts[project_name]
@@ -1190,7 +1191,7 @@ class Util:
             target_stmts.add(target_stmt)
         return target_stmts
 
-    def get_proj_to_target_stmts(cls, inline_test_type: str = "r1"):
+    def get_proj_to_target_stmts(cls, inline_test_type: str = Macros.r1):
         # project to target statements with passing inline tests
         passed_inline_tests: list[str] = se.io.load(
             Macros.results_dir / f"{inline_test_type}-passed-tests.txt",
@@ -1198,9 +1199,7 @@ class Util:
         )
         proj_to_target_stmts = collections.defaultdict(set)
         for passed_inline_test in passed_inline_tests:
-            proj = passed_inline_test.split(";")[0]
-            classname = passed_inline_test.split(";")[1].split(".")[-1]
-            target_stmt_line_num = passed_inline_test.split(";")[2]
+            proj, classname, target_stmt_line_num, _ = passed_inline_test.split(";")
             proj_to_target_stmts[proj].add(f"{classname};{target_stmt_line_num}")
         return proj_to_target_stmts
 
@@ -1317,7 +1316,9 @@ class Util:
                     f.write(r"public class RegressionTest {}")
         else:
             # check if there are multiple RegressionTest*.java files
-            regression_test_java_files = generated_tests_dir.glob("RegressionTest*.java")
+            regression_test_java_files = generated_tests_dir.glob(
+                "RegressionTest*.java"
+            )
             regression_test_java_files = list(regression_test_java_files)
             if len(regression_test_java_files) > 1:
                 # create a RegressionTest.java file
