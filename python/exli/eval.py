@@ -667,15 +667,6 @@ class Eval:
             )
             self.minimize_tests_helper(algorithm, data_file, out_file, project_name)
 
-        # since we use greedy algorithm results in the paper, we combine the results of greedy algorithm into Macros.results/r2-passed-tests.txt
-        r2_passed_tests = Macros.results_dir / "r2-passed-tests.txt"
-        if r2_passed_tests.exists():
-            se.bash.run(f"rm {r2_passed_tests}")
-        for f in (Macros.results_dir / "minimized").glob(
-            f"*{Macros.universalmutator}-{Macros.greedy}.txt"
-        ):
-            se.bash.run(f"cat {f} >> {r2_passed_tests}")
-
     def minimize_tests_helper(
         self, algorithm: str, data_file: str, out_file: str, project_name: str = None
     ):
@@ -726,6 +717,33 @@ class Eval:
             if test_project_name is not None and project_name != test_project_name:
                 continue
             self.minimize_tests(project_name, sha, mutator)
+
+        # since we use greedy algorithm results in the paper, we combine the results of greedy algorithm into Macros.results/r2-universalmutator-greedy-passed-tests.txt
+        r2_tests_path = (
+            Macros.results_dir / f"{Macros.r2_um}-{Macros.greedy}-passed-tests.txt"
+        )
+        if r2_tests_path.exists():
+            se.bash.run(f"rm {r2_tests_path}")
+
+        r2_passed_tests = []
+        for f in (Macros.results_dir / "minimized").glob(
+            f"*{Macros.universalmutator}-{Macros.greedy}.txt"
+        ):
+            r2_passed_tests.extend(se.io.load(f, se.io.Fmt.txtList))
+
+        formatted_r2_passed_tests = []
+        for r2_passed_test in r2_passed_tests:
+            # mojohaus_properties-maven-plugin#org.codehaus.mojo.properties.ReadPropertiesMojo_382Test#testLine305()#r1
+            project_name, fqn_with_lineno, test_name, test_source = (
+                r2_passed_test.split("#")
+            )
+            m = re.match(r"(.+)_(\d+)Test", fqn_with_lineno)
+            fqn, target_stmt_lineno = m.group(1), m.group(2)
+            itest_lineno = re.match(r".+testLine(\d+)\(\)", test_name).group(1)
+            formatted_r2_passed_tests.append(
+                f"{project_name};{fqn};{target_stmt_lineno};{itest_lineno};{test_source}"
+            )
+        se.io.dump(r2_tests_path, formatted_r2_passed_tests, se.io.Fmt.txtList)
 
     # python -m exli.eval get_not_mutated_inline_tests
     def get_not_mutated_inline_tests(self, mutator: str = Macros.universalmutator):
