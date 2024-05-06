@@ -20,10 +20,10 @@
  * THE SOFTWARE.
  */
 package com.restfb.logging;
-
 import org.inlinetest.ITest;
 import static org.inlinetest.ITest.itest;
 import static org.inlinetest.ITest.group;
+
 
 /**
  * Java util logging message format helper class.
@@ -35,78 +35,87 @@ import static org.inlinetest.ITest.group;
  */
 final class JulMessage {
 
-    private static final String PLACEHOLDER = "{}";
+  private static final String PLACEHOLDER = "{}";
 
-    private static final char ESCAPE_SIGN = '\\';
+  private static final char ESCAPE_SIGN = '\\';
 
-    private JulMessage() {
-        throw new IllegalStateException("JulMessage is a utility class");
+  private JulMessage() {
+    throw new IllegalStateException("JulMessage is a utility class");
+  }
+
+  /**
+   * convert the message and the arguments and convert everything in a {@code MessageTuple}. The {@code MessageTuple}
+   * contains the message and the optional throwable.
+   * 
+   * @param messagePattern
+   *          the message with optional placeholders
+   * @param args
+   *          the arguments for the placeholders and the optional Throwable
+   * @return MessageTuple that contains the Throwable and the formatted message
+   */
+  static MessageTuple convertMessageString(String messagePattern, Object... args) {
+    Throwable throwable = null;
+
+    if (args.length > 0 && args[args.length - 1] instanceof Throwable) {
+      throwable = (Throwable) args[args.length - 1];
     }
 
-    /**
-     * convert the message and the arguments and convert everything in a {@code MessageTuple}. The {@code MessageTuple}
-     * contains the message and the optional throwable.
-     *
-     * @param messagePattern
-     *          the message with optional placeholders
-     * @param args
-     *          the arguments for the placeholders and the optional Throwable
-     * @return MessageTuple that contains the Throwable and the formatted message
-     */
-    static MessageTuple convertMessageString(String messagePattern, Object... args) {
-        Throwable throwable = null;
-        if (args.length > 0 && args[args.length - 1] instanceof Throwable) {
-            throwable = (Throwable) args[args.length - 1];
-        }
-        if (!messagePattern.contains(PLACEHOLDER)) {
-            return new MessageTuple(messagePattern, throwable);
-        }
-        StringBuilder sb = new StringBuilder();
-        int placeholderCount = 0;
-        int k = 0;
-        while (messagePattern.indexOf(PLACEHOLDER, k) != -1) {
-            int l = messagePattern.indexOf(PLACEHOLDER, k);
-            itest("Randoop").given(messagePattern, "Simple\\{} text").given(k, 0).checkEq(l, 7);
-            itest("Randoop").given(messagePattern, "\\{}Simple text").given(k, 0).checkEq(l, 1);
-            if (l == 0 || messagePattern.charAt(l - 1) != ESCAPE_SIGN) {
-                sb.append(messagePattern, k, l);
-                sb.append("%s");
-                k = l + 2;
-                placeholderCount++;
-            } else {
-                sb.append(messagePattern, k, l + 3);
-                k = l + 3;
-            }
-        }
-        if (k < messagePattern.length()) {
-            sb.append(messagePattern.substring(k));
-        }
-        int argsLength = (throwable != null) ? args.length - 1 : args.length;
-        if (argsLength != placeholderCount) {
-            throw new IllegalArgumentException("Placeholder count don't matches argument count (placeholders: " + placeholderCount + ", arguments: " + argsLength + ")");
-        }
-        Object[] trimmed = new Object[argsLength];
-        System.arraycopy(args, 0, trimmed, 0, argsLength);
-        return new MessageTuple(String.format(sb.toString(), trimmed), throwable);
+    if (!messagePattern.contains(PLACEHOLDER)) {
+      return new MessageTuple(messagePattern, throwable);
     }
 
-    static class MessageTuple {
+    StringBuilder sb = new StringBuilder();
 
-        private final String message;
-
-        private final Throwable throwable;
-
-        MessageTuple(String message, Throwable throwable) {
-            this.message = message;
-            this.throwable = throwable;
-        }
-
-        public String getMessage() {
-            return message;
-        }
-
-        public Throwable getThrowable() {
-            return throwable;
-        }
+    int placeholderCount = 0;
+    int k = 0;
+    while (messagePattern.indexOf(PLACEHOLDER, k) != -1) {
+      int l = messagePattern.indexOf(PLACEHOLDER, k);
+      itest("Randoop").given(messagePattern, "Simple\\{} text").given(k, 0).checkEq(l, 7);
+      itest("Randoop").given(messagePattern, "\\{}Simple text").given(k, 0).checkEq(l, 1);
+      if (l == 0 || messagePattern.charAt(l - 1) != ESCAPE_SIGN) {
+        sb.append(messagePattern, k, l);
+        sb.append("%s");
+        k = l + 2;
+        placeholderCount++;
+      } else {
+        sb.append(messagePattern, k, l + 3);
+        k = l + 3;
+      }
     }
+
+    if (k < messagePattern.length()) {
+      sb.append(messagePattern.substring(k));
+    }
+
+    int argsLength = (throwable != null) ? args.length - 1 : args.length;
+
+    if (argsLength != placeholderCount) {
+      throw new IllegalArgumentException("Placeholder count don't matches argument count (placeholders: "
+          + placeholderCount + ", arguments: " + argsLength + ")");
+    }
+
+    Object[] trimmed = new Object[argsLength];
+    System.arraycopy(args, 0, trimmed, 0, argsLength);
+
+    return new MessageTuple(String.format(sb.toString(), trimmed), throwable);
+  }
+
+  static class MessageTuple {
+    private final String message;
+
+    private final Throwable throwable;
+
+    MessageTuple(String message, Throwable throwable) {
+      this.message = message;
+      this.throwable = throwable;
+    }
+
+    public String getMessage() {
+      return message;
+    }
+
+    public Throwable getThrowable() {
+      return throwable;
+    }
+  }
 }

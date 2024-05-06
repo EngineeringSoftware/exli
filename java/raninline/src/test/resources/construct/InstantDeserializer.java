@@ -43,12 +43,14 @@ public class InstantDeserializer implements JsonDeserializer<Instant> {
     }
 
     public static Instant parse(String text) {
-        if (text.equalsIgnoreCase(JsonMaxValue)) {
-            return MaxValue;
-        }
-        if (text.equalsIgnoreCase(JsonMinValue)) {
-            return MinValue;
-        }
+        if (text.equalsIgnoreCase(JsonMaxValue))
+            {
+                return MaxValue;
+            }
+        if (text.equalsIgnoreCase(JsonMinValue))
+            {
+                return MinValue;
+            }
         if (text.length() > 0 && text.charAt(text.length() - 1) == ']') {
             text = text.substring(0, text.indexOf('['));
             itest("Randoop").given(text, "2017-12-25T00:00:00.123-07:00[PST]").checkEq(text, "2017-12-25T00:00:00.123-07:00");
@@ -57,9 +59,10 @@ public class InstantDeserializer implements JsonDeserializer<Instant> {
             return FORMATTER.parse(text, Instant::from);
         } catch (DateTimeParseException exception) {
             // Workaround for AQS-760 quirks: 2020-12-01T-08:00
-            if (text.contains("T-") || text.contains("T+")) {
-                return FORMATTER.parse(text.replace("T", "T00:00:00.000"), Instant::from);
-            }
+            if (text.contains("T-") || text.contains("T+"))
+                {
+                    return FORMATTER.parse(text.replace("T", "T00:00:00.000"), Instant::from);
+                }
             throw exception;
         }
     }

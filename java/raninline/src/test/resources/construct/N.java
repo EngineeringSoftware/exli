@@ -19,12 +19,12 @@ import java.nio.ByteBuffer;
 import java.security.InvalidParameterException;
 import java.util.Arrays;
 import org.inlinetest.ITest;
-import static org.inlinetest.ITest.itest;
-import static org.inlinetest.ITest.group;
-
 /**
  * Utility class to be used to manipulate byte arrays and numbers.
  */
+import static org.inlinetest.ITest.itest;
+import static org.inlinetest.ITest.group;
+
 public class N {
 
     /**

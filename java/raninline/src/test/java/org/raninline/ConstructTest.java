@@ -1,6 +1,7 @@
 package org.raninline;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -178,7 +179,7 @@ public class ConstructTest {
             Parser.addInlineTest(logFileName, inlineNumber, srcPath, false);
         } catch (IOException e) {
             e.printStackTrace();
-        }        
+        }
     }
 
     @Test
@@ -190,7 +191,7 @@ public class ConstructTest {
             Parser.addInlineTest(logFileName, inlineNumber, srcPath, false);
         } catch (IOException e) {
             e.printStackTrace();
-        }        
+        }
     }
 
     @Test
@@ -202,7 +203,7 @@ public class ConstructTest {
             Parser.addInlineTest(logFileName, inlineNumber, srcPath, false);
         } catch (IOException e) {
             e.printStackTrace();
-        }        
+        }
     }
 
     @Test
@@ -214,6 +215,21 @@ public class ConstructTest {
             Parser.addInlineTest(logFileName, inlineNumber, srcPath, false);
         } catch (IOException e) {
             e.printStackTrace();
-        }        
+        }
+    }
+
+    @Test
+    public void testKeepComment() throws IOException {
+        String srcPath = "src/test/resources/construct/F.java";
+        String inlineNumber = "5";
+        String logFileName = "src/test/resources/construct/inlinetest-log5.txt";
+        try {
+            Parser.addInlineTest(logFileName, inlineNumber, srcPath, false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // load srcPath
+        String content = String.join("\n", Files.readAllLines(Paths.get(srcPath)));
+        assertTrue(content.contains("a = a + 1; // increment a by 1"));
     }
 }

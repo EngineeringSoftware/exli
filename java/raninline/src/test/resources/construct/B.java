@@ -1,11 +1,10 @@
 package construct;
-
 import org.inlinetest.ITest;
 import static org.inlinetest.ITest.itest;
 import static org.inlinetest.ITest.group;
 
-public class B {
 
+public class B {
     public int parseArray() {
         int[] intArray = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         for (int i = 0; i < array.length; i++) {

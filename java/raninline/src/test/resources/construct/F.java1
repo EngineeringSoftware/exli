@@ -1,0 +1,8 @@
+package construct;
+
+public class F {
+    public int m (int a){
+        a = a + 1; // increment a by 1
+        return a;
+    }
+}

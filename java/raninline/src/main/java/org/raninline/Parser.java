@@ -17,6 +17,7 @@ import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.ImportDeclaration;
 import com.github.javaparser.ast.NodeList;
+import com.github.javaparser.printer.lexicalpreservation.LexicalPreservingPrinter;
 
 public class Parser {
 
@@ -190,6 +191,7 @@ public class Parser {
 
     public static void constructInlineTestHelper(String srcPath, Context ctx) throws IOException {
         CompilationUnit cu = StaticJavaParser.parse(Paths.get(srcPath));
+        LexicalPreservingPrinter.setup(cu);
         InlineTestConstructor visitor = new InlineTestConstructor();
         cu = (CompilationUnit) cu.accept(visitor, ctx);
         if (ctx.inlineTests.size() > 0) {
@@ -210,7 +212,9 @@ public class Parser {
         }
         FileWriter writer;
         writer = new FileWriter(srcPath);
-        writer.write(cu.toString());
+        // instead of writer.write(cu.toString()), using LexicalPreservingPrinter to
+        // keep the original formatting
+        writer.write(LexicalPreservingPrinter.print(cu));
         writer.close();
     }
 
