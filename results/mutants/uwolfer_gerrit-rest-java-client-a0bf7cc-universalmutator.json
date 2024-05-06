@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 0,
         "linenumber": 81,
@@ -7,6 +8,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 1,
         "linenumber": 81,
@@ -14,6 +16,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 2,
         "linenumber": 81,
@@ -21,6 +24,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 3,
         "linenumber": 81,
@@ -28,6 +32,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 4,
         "linenumber": 81,
@@ -35,6 +40,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 5,
         "linenumber": 81,
@@ -42,6 +48,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 6,
         "linenumber": 81,
@@ -49,6 +56,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 7,
         "linenumber": 81,
@@ -56,6 +64,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 8,
         "linenumber": 81,
@@ -63,6 +72,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 9,
         "linenumber": 81,
@@ -70,6 +80,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 10,
         "linenumber": 81,
@@ -77,6 +88,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 11,
         "linenumber": 81,
@@ -84,6 +96,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 12,
         "linenumber": 81,
@@ -91,6 +104,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 13,
         "linenumber": 81,
@@ -98,6 +112,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 14,
         "linenumber": 81,
@@ -105,6 +120,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 15,
         "linenumber": 81,
@@ -112,6 +128,7 @@
         "orginal_code": "    if (e.indexOf('%') < 0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 16,
         "linenumber": 52,
@@ -119,6 +136,7 @@
         "orginal_code": "        if (!versionMatcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 17,
         "linenumber": 52,
@@ -126,6 +144,7 @@
         "orginal_code": "        if (!versionMatcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 18,
         "linenumber": 52,
@@ -133,6 +152,7 @@
         "orginal_code": "        if (!versionMatcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 19,
         "linenumber": 52,
@@ -140,6 +160,7 @@
         "orginal_code": "        if (!versionMatcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 20,
         "linenumber": 91,
@@ -147,6 +168,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 21,
         "linenumber": 91,
@@ -154,6 +176,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 22,
         "linenumber": 91,
@@ -161,6 +184,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 23,
         "linenumber": 91,
@@ -168,6 +192,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 24,
         "linenumber": 91,
@@ -175,6 +200,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 25,
         "linenumber": 91,
@@ -182,6 +208,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 26,
         "linenumber": 91,
@@ -189,6 +216,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 27,
         "linenumber": 91,
@@ -196,6 +224,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 28,
         "linenumber": 91,
@@ -203,6 +232,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 29,
         "linenumber": 91,
@@ -210,6 +240,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 30,
         "linenumber": 91,
@@ -217,6 +248,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 31,
         "linenumber": 91,
@@ -224,6 +256,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 32,
         "linenumber": 91,
@@ -231,6 +264,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 33,
         "linenumber": 91,
@@ -238,6 +272,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 34,
         "linenumber": 91,
@@ -245,6 +280,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 35,
         "linenumber": 91,
@@ -252,6 +288,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 36,
         "linenumber": 91,
@@ -259,6 +296,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 37,
         "linenumber": 91,
@@ -266,13 +304,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
-        "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
-        "id": 38,
-        "linenumber": 91,
-        "mutated_code": "          final int v = (hexb[e.charAt(i + 1)] <<= 4) | hexb[e.charAt(i + 2)];",
-        "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
-    },
-    {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 39,
         "linenumber": 91,
@@ -280,6 +312,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 40,
         "linenumber": 91,
@@ -287,6 +320,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 41,
         "linenumber": 91,
@@ -294,6 +328,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 42,
         "linenumber": 91,
@@ -301,6 +336,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 43,
         "linenumber": 91,
@@ -308,6 +344,7 @@
         "orginal_code": "          final int v = (hexb[e.charAt(i + 1)] << 4) | hexb[e.charAt(i + 2)];"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/GerritRestClient.java",
         "id": 44,
         "linenumber": 388,
@@ -315,6 +352,7 @@
         "orginal_code": "            if (matcher.find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/GerritRestClient.java",
         "id": 45,
         "linenumber": 388,
@@ -322,6 +360,7 @@
         "orginal_code": "            if (matcher.find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/GerritRestClient.java",
         "id": 46,
         "linenumber": 388,
@@ -329,6 +368,7 @@
         "orginal_code": "            if (matcher.find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/accounts/AccountsRestClient.java",
         "id": 47,
         "linenumber": 87,
@@ -336,6 +376,7 @@
         "orginal_code": "        String request = String.format(\"/accounts/?suggest&%s\", queryPart);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/accounts/AccountsRestClient.java",
         "id": 48,
         "linenumber": 87,
@@ -343,6 +384,7 @@
         "orginal_code": "        String request = String.format(\"/accounts/?suggest&%s\", queryPart);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/UserAgentHttpRequestInterceptor.java",
         "id": 49,
         "linenumber": 34,
@@ -350,6 +392,7 @@
         "orginal_code": "        String userAgent = String.format(\"gerrit-rest-java-client/%s using %s\","
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/google/gwtorm/server/StandardKeyEncoder.java",
         "id": 50,
         "linenumber": 67,
@@ -357,6 +400,7 @@
         "orginal_code": "      final int c = b[i] & 0xff;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 51,
         "linenumber": 57,
@@ -364,6 +408,7 @@
         "orginal_code": "        ListChangesOption maxOption = MAX_CHANGE_OPTION_BY_VERSION.get(versionMatcher.group(1) + \".\" + versionMatcher.group(2));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 52,
         "linenumber": 57,
@@ -371,6 +416,7 @@
         "orginal_code": "        ListChangesOption maxOption = MAX_CHANGE_OPTION_BY_VERSION.get(versionMatcher.group(1) + \".\" + versionMatcher.group(2));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 53,
         "linenumber": 57,
@@ -378,6 +424,7 @@
         "orginal_code": "        ListChangesOption maxOption = MAX_CHANGE_OPTION_BY_VERSION.get(versionMatcher.group(1) + \".\" + versionMatcher.group(2));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 54,
         "linenumber": 57,
@@ -385,6 +432,7 @@
         "orginal_code": "        ListChangesOption maxOption = MAX_CHANGE_OPTION_BY_VERSION.get(versionMatcher.group(1) + \".\" + versionMatcher.group(2));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 55,
         "linenumber": 57,
@@ -392,6 +440,7 @@
         "orginal_code": "        ListChangesOption maxOption = MAX_CHANGE_OPTION_BY_VERSION.get(versionMatcher.group(1) + \".\" + versionMatcher.group(2));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 56,
         "linenumber": 57,
@@ -399,6 +448,7 @@
         "orginal_code": "        ListChangesOption maxOption = MAX_CHANGE_OPTION_BY_VERSION.get(versionMatcher.group(1) + \".\" + versionMatcher.group(2));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 57,
         "linenumber": 57,
@@ -406,6 +456,7 @@
         "orginal_code": "        ListChangesOption maxOption = MAX_CHANGE_OPTION_BY_VERSION.get(versionMatcher.group(1) + \".\" + versionMatcher.group(2));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 58,
         "linenumber": 57,
@@ -413,6 +464,7 @@
         "orginal_code": "        ListChangesOption maxOption = MAX_CHANGE_OPTION_BY_VERSION.get(versionMatcher.group(1) + \".\" + versionMatcher.group(2));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/changes/ListChangesOptionByVersion.java",
         "id": 59,
         "linenumber": 57,
@@ -420,6 +472,7 @@
         "orginal_code": "        ListChangesOption maxOption = MAX_CHANGE_OPTION_BY_VERSION.get(versionMatcher.group(1) + \".\" + versionMatcher.group(2));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 60,
         "linenumber": 135,
@@ -427,6 +480,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 61,
         "linenumber": 135,
@@ -434,6 +488,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 62,
         "linenumber": 135,
@@ -441,6 +496,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 63,
         "linenumber": 135,
@@ -448,6 +504,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 64,
         "linenumber": 135,
@@ -455,6 +512,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 65,
         "linenumber": 135,
@@ -462,6 +520,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 66,
         "linenumber": 135,
@@ -469,6 +528,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 67,
         "linenumber": 135,
@@ -476,6 +536,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 68,
         "linenumber": 135,
@@ -483,6 +544,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 69,
         "linenumber": 135,
@@ -490,6 +552,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 70,
         "linenumber": 135,
@@ -497,6 +560,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/GerritAuthData.java",
         "id": 71,
         "linenumber": 135,
@@ -504,6 +568,7 @@
         "orginal_code": "                host = host.substring(0, host.length() - 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/uwolfer_gerrit-rest-java-client/src/main/java/com/urswolfer/gerrit/client/rest/http/projects/ProjectsRestClient.java",
         "id": 72,
         "linenumber": 116,

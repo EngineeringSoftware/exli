@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 0,
         "linenumber": 47,
@@ -7,6 +8,7 @@
         "orginal_code": "            queryString = uri.getSchemeSpecificPart().substring(uri.getSchemeSpecificPart().indexOf('?') + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 1,
         "linenumber": 47,
@@ -14,6 +16,7 @@
         "orginal_code": "            queryString = uri.getSchemeSpecificPart().substring(uri.getSchemeSpecificPart().indexOf('?') + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 2,
         "linenumber": 47,
@@ -21,6 +24,7 @@
         "orginal_code": "            queryString = uri.getSchemeSpecificPart().substring(uri.getSchemeSpecificPart().indexOf('?') + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 3,
         "linenumber": 47,
@@ -28,6 +32,7 @@
         "orginal_code": "            queryString = uri.getSchemeSpecificPart().substring(uri.getSchemeSpecificPart().indexOf('?') + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 4,
         "linenumber": 47,
@@ -35,6 +40,7 @@
         "orginal_code": "            queryString = uri.getSchemeSpecificPart().substring(uri.getSchemeSpecificPart().indexOf('?') + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 5,
         "linenumber": 47,
@@ -42,6 +48,7 @@
         "orginal_code": "            queryString = uri.getSchemeSpecificPart().substring(uri.getSchemeSpecificPart().indexOf('?') + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 6,
         "linenumber": 47,
@@ -49,6 +56,7 @@
         "orginal_code": "            queryString = uri.getSchemeSpecificPart().substring(uri.getSchemeSpecificPart().indexOf('?') + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 7,
         "linenumber": 47,
@@ -56,6 +64,7 @@
         "orginal_code": "            queryString = uri.getSchemeSpecificPart().substring(uri.getSchemeSpecificPart().indexOf('?') + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 8,
         "linenumber": 60,
@@ -63,6 +72,7 @@
         "orginal_code": "                String value = queryParam.substring(equalsIndex + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 9,
         "linenumber": 60,
@@ -70,6 +80,7 @@
         "orginal_code": "                String value = queryParam.substring(equalsIndex + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 10,
         "linenumber": 60,
@@ -77,6 +88,7 @@
         "orginal_code": "                String value = queryParam.substring(equalsIndex + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 11,
         "linenumber": 60,
@@ -84,6 +96,7 @@
         "orginal_code": "                String value = queryParam.substring(equalsIndex + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 12,
         "linenumber": 60,
@@ -91,6 +104,7 @@
         "orginal_code": "                String value = queryParam.substring(equalsIndex + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 13,
         "linenumber": 60,
@@ -98,6 +112,7 @@
         "orginal_code": "                String value = queryParam.substring(equalsIndex + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 14,
         "linenumber": 60,
@@ -105,6 +120,7 @@
         "orginal_code": "                String value = queryParam.substring(equalsIndex + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 15,
         "linenumber": 60,
@@ -112,6 +128,7 @@
         "orginal_code": "                String value = queryParam.substring(equalsIndex + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 16,
         "linenumber": 86,
@@ -119,6 +136,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 17,
         "linenumber": 86,
@@ -126,6 +144,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 18,
         "linenumber": 86,
@@ -133,6 +152,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 19,
         "linenumber": 86,
@@ -140,6 +160,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 20,
         "linenumber": 86,
@@ -147,6 +168,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 21,
         "linenumber": 86,
@@ -154,6 +176,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 22,
         "linenumber": 86,
@@ -161,6 +184,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 23,
         "linenumber": 86,
@@ -168,6 +192,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 24,
         "linenumber": 86,
@@ -175,6 +200,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 25,
         "linenumber": 86,
@@ -182,6 +208,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 26,
         "linenumber": 86,
@@ -189,13 +216,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
-        "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
-        "id": 27,
-        "linenumber": 86,
-        "mutated_code": "            int o2 = ((i1 & 0xf) << 2) | (i0 >>> 6);",
-        "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
-    },
-    {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 28,
         "linenumber": 86,
@@ -203,13 +224,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
-        "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
-        "id": 29,
-        "linenumber": 86,
-        "mutated_code": "            int o2 = ((i0 & 0xf) << 2) | (i2 >>> 6);",
-        "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
-    },
-    {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 30,
         "linenumber": 86,
@@ -217,6 +232,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 31,
         "linenumber": 86,
@@ -224,6 +240,7 @@
         "orginal_code": "            int o2 = ((i1 & 0xf) << 2) | (i2 >>> 6);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 32,
         "linenumber": 59,
@@ -231,6 +248,7 @@
         "orginal_code": "                String key = queryParam.substring(0, equalsIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 33,
         "linenumber": 59,
@@ -238,6 +256,7 @@
         "orginal_code": "                String key = queryParam.substring(0, equalsIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 34,
         "linenumber": 59,
@@ -245,6 +264,7 @@
         "orginal_code": "                String key = queryParam.substring(0, equalsIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 35,
         "linenumber": 59,
@@ -252,6 +272,7 @@
         "orginal_code": "                String key = queryParam.substring(0, equalsIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 36,
         "linenumber": 59,
@@ -259,6 +280,7 @@
         "orginal_code": "                String key = queryParam.substring(0, equalsIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 37,
         "linenumber": 69,
@@ -266,6 +288,7 @@
         "orginal_code": "        String first = propertyName.substring(0, 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 38,
         "linenumber": 69,
@@ -273,6 +296,7 @@
         "orginal_code": "        String first = propertyName.substring(0, 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 39,
         "linenumber": 69,
@@ -280,6 +304,7 @@
         "orginal_code": "        String first = propertyName.substring(0, 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 40,
         "linenumber": 69,
@@ -287,6 +312,7 @@
         "orginal_code": "        String first = propertyName.substring(0, 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 41,
         "linenumber": 69,
@@ -294,6 +320,7 @@
         "orginal_code": "        String first = propertyName.substring(0, 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 42,
         "linenumber": 69,
@@ -301,6 +328,7 @@
         "orginal_code": "        String first = propertyName.substring(0, 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 43,
         "linenumber": 69,
@@ -308,6 +336,7 @@
         "orginal_code": "        String first = propertyName.substring(0, 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 44,
         "linenumber": 69,
@@ -315,6 +344,7 @@
         "orginal_code": "        String first = propertyName.substring(0, 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 45,
         "linenumber": 69,
@@ -322,6 +352,7 @@
         "orginal_code": "        String first = propertyName.substring(0, 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 46,
         "linenumber": 133,
@@ -329,6 +360,7 @@
         "orginal_code": "        buf[offset] = (byte) (s & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 47,
         "linenumber": 436,
@@ -336,6 +368,7 @@
         "orginal_code": "            if (SURPRESSED_PATTERN.matcher(toWrite).find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 48,
         "linenumber": 436,
@@ -343,6 +376,7 @@
         "orginal_code": "            if (SURPRESSED_PATTERN.matcher(toWrite).find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 49,
         "linenumber": 436,
@@ -350,6 +384,7 @@
         "orginal_code": "            if (SURPRESSED_PATTERN.matcher(toWrite).find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 50,
         "linenumber": 87,
@@ -357,20 +392,7 @@
         "orginal_code": "            int o3 = i2 & 0x3F;"
     },
     {
-        "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
-        "id": 51,
-        "linenumber": 87,
-        "mutated_code": "            int o3 = i0 & 0x3F;",
-        "orginal_code": "            int o3 = i2 & 0x3F;"
-    },
-    {
-        "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
-        "id": 52,
-        "linenumber": 87,
-        "mutated_code": "            int o3 = i1 & 0x3F;",
-        "orginal_code": "            int o3 = i2 & 0x3F;"
-    },
-    {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 53,
         "linenumber": 87,
@@ -378,6 +400,7 @@
         "orginal_code": "            int o3 = i2 & 0x3F;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 54,
         "linenumber": 87,
@@ -385,6 +408,7 @@
         "orginal_code": "            int o3 = i2 & 0x3F;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 55,
         "linenumber": 655,
@@ -392,6 +416,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 56,
         "linenumber": 655,
@@ -399,6 +424,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 57,
         "linenumber": 655,
@@ -406,6 +432,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 58,
         "linenumber": 655,
@@ -413,6 +440,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 59,
         "linenumber": 655,
@@ -420,6 +448,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 60,
         "linenumber": 655,
@@ -427,6 +456,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 61,
         "linenumber": 655,
@@ -434,6 +464,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 62,
         "linenumber": 655,
@@ -441,6 +472,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 63,
         "linenumber": 655,
@@ -448,6 +480,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 64,
         "linenumber": 655,
@@ -455,6 +488,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 65,
         "linenumber": 655,
@@ -462,6 +496,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 66,
         "linenumber": 655,
@@ -469,6 +504,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 67,
         "linenumber": 655,
@@ -476,6 +512,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 68,
         "linenumber": 655,
@@ -483,6 +520,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 69,
         "linenumber": 655,
@@ -490,6 +528,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 70,
         "linenumber": 655,
@@ -497,6 +536,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 71,
         "linenumber": 655,
@@ -504,6 +544,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 72,
         "linenumber": 655,
@@ -511,6 +552,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 73,
         "linenumber": 655,
@@ -518,6 +560,7 @@
         "orginal_code": "        result = 31 * result + (int) (javaTimestamp ^ (javaTimestamp >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 74,
         "linenumber": 46,
@@ -525,6 +568,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 75,
         "linenumber": 46,
@@ -532,6 +576,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 76,
         "linenumber": 46,
@@ -539,6 +584,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 77,
         "linenumber": 46,
@@ -546,6 +592,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 78,
         "linenumber": 46,
@@ -553,6 +600,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 79,
         "linenumber": 46,
@@ -560,6 +608,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 80,
         "linenumber": 46,
@@ -567,6 +616,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 81,
         "linenumber": 46,
@@ -574,6 +624,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 82,
         "linenumber": 46,
@@ -581,6 +632,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 83,
         "linenumber": 46,
@@ -588,6 +640,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 84,
         "linenumber": 46,
@@ -595,6 +648,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 85,
         "linenumber": 46,
@@ -602,6 +656,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 86,
         "linenumber": 46,
@@ -609,6 +664,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 87,
         "linenumber": 46,
@@ -616,6 +672,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 88,
         "linenumber": 46,
@@ -623,6 +680,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 89,
         "linenumber": 46,
@@ -630,6 +688,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 90,
         "linenumber": 46,
@@ -637,6 +696,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 91,
         "linenumber": 46,
@@ -644,6 +704,7 @@
         "orginal_code": "            numbersOnly &= (c >= '0' && c <= '9');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 92,
         "linenumber": 72,
@@ -651,6 +712,7 @@
         "orginal_code": "        } else if (doublePattern.matcher(value).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 93,
         "linenumber": 72,
@@ -658,6 +720,7 @@
         "orginal_code": "        } else if (doublePattern.matcher(value).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 94,
         "linenumber": 72,
@@ -665,6 +728,7 @@
         "orginal_code": "        } else if (doublePattern.matcher(value).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 95,
         "linenumber": 72,
@@ -672,6 +736,7 @@
         "orginal_code": "        } else if (doublePattern.matcher(value).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/GelfUtil.java",
         "id": 96,
         "linenumber": 81,
@@ -679,6 +744,7 @@
         "orginal_code": "            if (field.getPattern().matcher(mdcName).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/GelfUtil.java",
         "id": 97,
         "linenumber": 81,
@@ -686,6 +752,7 @@
         "orginal_code": "            if (field.getPattern().matcher(mdcName).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/GelfUtil.java",
         "id": 98,
         "linenumber": 81,
@@ -693,6 +760,7 @@
         "orginal_code": "            if (field.getPattern().matcher(mdcName).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 99,
         "linenumber": 424,
@@ -700,6 +768,7 @@
         "orginal_code": "            String toWrite = str.substring(off, len);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 100,
         "linenumber": 466,
@@ -707,6 +776,7 @@
         "orginal_code": "            if (entry.getKey().matcher(fieldName).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 101,
         "linenumber": 466,
@@ -714,6 +784,7 @@
         "orginal_code": "            if (entry.getKey().matcher(fieldName).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/GelfMessage.java",
         "id": 102,
         "linenumber": 466,
@@ -721,6 +792,7 @@
         "orginal_code": "            if (entry.getKey().matcher(fieldName).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 103,
         "linenumber": 122,
@@ -728,6 +800,7 @@
         "orginal_code": "            host = host.substring(0, host.indexOf('?'));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 104,
         "linenumber": 122,
@@ -735,6 +808,7 @@
         "orginal_code": "            host = host.substring(0, host.indexOf('?'));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 105,
         "linenumber": 122,
@@ -742,6 +816,7 @@
         "orginal_code": "            host = host.substring(0, host.indexOf('?'));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 106,
         "linenumber": 122,
@@ -749,6 +824,7 @@
         "orginal_code": "            host = host.substring(0, host.indexOf('?'));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 107,
         "linenumber": 122,
@@ -756,6 +832,7 @@
         "orginal_code": "            host = host.substring(0, host.indexOf('?'));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/JsonWriter.java",
         "id": 108,
         "linenumber": 298,
@@ -763,6 +840,7 @@
         "orginal_code": "            charToEscape &= 0xFF;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 109,
         "linenumber": 360,
@@ -770,6 +848,7 @@
         "orginal_code": "            index = traceElement.indexOf(INDENT, index + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 110,
         "linenumber": 360,
@@ -777,6 +856,7 @@
         "orginal_code": "            index = traceElement.indexOf(INDENT, index + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 111,
         "linenumber": 360,
@@ -784,6 +864,7 @@
         "orginal_code": "            index = traceElement.indexOf(INDENT, index + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 112,
         "linenumber": 360,
@@ -791,6 +872,7 @@
         "orginal_code": "            index = traceElement.indexOf(INDENT, index + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 113,
         "linenumber": 360,
@@ -798,6 +880,7 @@
         "orginal_code": "            index = traceElement.indexOf(INDENT, index + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 114,
         "linenumber": 360,
@@ -805,6 +888,7 @@
         "orginal_code": "            index = traceElement.indexOf(INDENT, index + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 115,
         "linenumber": 360,
@@ -812,6 +896,7 @@
         "orginal_code": "            index = traceElement.indexOf(INDENT, index + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 116,
         "linenumber": 360,
@@ -819,6 +904,7 @@
         "orginal_code": "            index = traceElement.indexOf(INDENT, index + 1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 117,
         "linenumber": 97,
@@ -826,6 +912,7 @@
         "orginal_code": "        if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 118,
         "linenumber": 97,
@@ -833,6 +920,7 @@
         "orginal_code": "        if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 119,
         "linenumber": 97,
@@ -840,6 +928,7 @@
         "orginal_code": "        if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 120,
         "linenumber": 82,
@@ -847,6 +936,7 @@
         "orginal_code": "            int i1 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 121,
         "linenumber": 82,
@@ -854,6 +944,7 @@
         "orginal_code": "            int i1 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 122,
         "linenumber": 82,
@@ -861,6 +952,7 @@
         "orginal_code": "            int i1 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 123,
         "linenumber": 82,
@@ -868,6 +960,7 @@
         "orginal_code": "            int i1 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 124,
         "linenumber": 82,
@@ -875,6 +968,7 @@
         "orginal_code": "            int i1 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 125,
         "linenumber": 82,
@@ -882,6 +976,7 @@
         "orginal_code": "            int i1 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 126,
         "linenumber": 82,
@@ -889,6 +984,7 @@
         "orginal_code": "            int i1 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 127,
         "linenumber": 82,
@@ -896,6 +992,7 @@
         "orginal_code": "            int i1 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 128,
         "linenumber": 82,
@@ -903,6 +1000,7 @@
         "orginal_code": "            int i1 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 129,
         "linenumber": 82,
@@ -910,6 +1008,7 @@
         "orginal_code": "            int i1 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 130,
         "linenumber": 82,
@@ -917,6 +1016,7 @@
         "orginal_code": "            int i1 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/KafkaGelfSenderProvider.java",
         "id": 131,
         "linenumber": 88,
@@ -924,6 +1024,7 @@
         "orginal_code": "        hostsPart = hostsPart.substring(0, pos);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/KafkaGelfSenderProvider.java",
         "id": 132,
         "linenumber": 88,
@@ -931,6 +1032,7 @@
         "orginal_code": "        hostsPart = hostsPart.substring(0, pos);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/KafkaGelfSenderProvider.java",
         "id": 133,
         "linenumber": 88,
@@ -938,6 +1040,7 @@
         "orginal_code": "        hostsPart = hostsPart.substring(0, pos);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/KafkaGelfSenderProvider.java",
         "id": 134,
         "linenumber": 88,
@@ -945,6 +1048,7 @@
         "orginal_code": "        hostsPart = hostsPart.substring(0, pos);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/KafkaGelfSenderProvider.java",
         "id": 135,
         "linenumber": 88,
@@ -952,6 +1056,7 @@
         "orginal_code": "        hostsPart = hostsPart.substring(0, pos);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/log4j/Log4jLogEvent.java",
         "id": 136,
         "linenumber": 226,
@@ -959,6 +1064,7 @@
         "orginal_code": "            if (field.getPattern().matcher(mdcName).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/log4j/Log4jLogEvent.java",
         "id": 137,
         "linenumber": 226,
@@ -966,6 +1072,7 @@
         "orginal_code": "            if (field.getPattern().matcher(mdcName).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/log4j/Log4jLogEvent.java",
         "id": 138,
         "linenumber": 226,
@@ -973,6 +1080,7 @@
         "orginal_code": "            if (field.getPattern().matcher(mdcName).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 139,
         "linenumber": 70,
@@ -980,6 +1088,7 @@
         "orginal_code": "        String last = propertyName.substring(1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 140,
         "linenumber": 70,
@@ -987,6 +1096,7 @@
         "orginal_code": "        String last = propertyName.substring(1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 141,
         "linenumber": 70,
@@ -994,6 +1104,7 @@
         "orginal_code": "        String last = propertyName.substring(1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/standalone/BeanPropertyExtraction.java",
         "id": 142,
         "linenumber": 70,
@@ -1001,6 +1112,7 @@
         "orginal_code": "        String last = propertyName.substring(1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/JsonWriter.java",
         "id": 143,
         "linenumber": 295,
@@ -1008,6 +1120,7 @@
         "orginal_code": "            int hi = (charToEscape >> 8) & 0xFF;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/JsonWriter.java",
         "id": 144,
         "linenumber": 295,
@@ -1015,6 +1128,7 @@
         "orginal_code": "            int hi = (charToEscape >> 8) & 0xFF;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/JsonWriter.java",
         "id": 145,
         "linenumber": 295,
@@ -1022,6 +1136,7 @@
         "orginal_code": "            int hi = (charToEscape >> 8) & 0xFF;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/JsonWriter.java",
         "id": 146,
         "linenumber": 295,
@@ -1029,6 +1144,7 @@
         "orginal_code": "            int hi = (charToEscape >> 8) & 0xFF;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/JsonWriter.java",
         "id": 147,
         "linenumber": 295,
@@ -1036,6 +1152,7 @@
         "orginal_code": "            int hi = (charToEscape >> 8) & 0xFF;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/JsonWriter.java",
         "id": 148,
         "linenumber": 295,
@@ -1043,6 +1160,7 @@
         "orginal_code": "            int hi = (charToEscape >> 8) & 0xFF;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/JsonWriter.java",
         "id": 149,
         "linenumber": 295,
@@ -1050,6 +1168,7 @@
         "orginal_code": "            int hi = (charToEscape >> 8) & 0xFF;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 150,
         "linenumber": 83,
@@ -1057,6 +1176,7 @@
         "orginal_code": "            int i2 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 151,
         "linenumber": 83,
@@ -1064,6 +1184,7 @@
         "orginal_code": "            int i2 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 152,
         "linenumber": 83,
@@ -1071,6 +1192,7 @@
         "orginal_code": "            int i2 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 153,
         "linenumber": 83,
@@ -1078,6 +1200,7 @@
         "orginal_code": "            int i2 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 154,
         "linenumber": 83,
@@ -1085,6 +1208,7 @@
         "orginal_code": "            int i2 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 155,
         "linenumber": 83,
@@ -1092,6 +1216,7 @@
         "orginal_code": "            int i2 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 156,
         "linenumber": 83,
@@ -1099,6 +1224,7 @@
         "orginal_code": "            int i2 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 157,
         "linenumber": 83,
@@ -1106,6 +1232,7 @@
         "orginal_code": "            int i2 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 158,
         "linenumber": 83,
@@ -1113,6 +1240,7 @@
         "orginal_code": "            int i2 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 159,
         "linenumber": 83,
@@ -1120,6 +1248,7 @@
         "orginal_code": "            int i2 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 160,
         "linenumber": 83,
@@ -1127,6 +1256,7 @@
         "orginal_code": "            int i2 = ip < iEnd ? in[ip++] & 0xff : 0;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 161,
         "linenumber": 70,
@@ -1134,6 +1264,7 @@
         "orginal_code": "        } else if (longPattern.matcher(value).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 162,
         "linenumber": 70,
@@ -1141,6 +1272,7 @@
         "orginal_code": "        } else if (longPattern.matcher(value).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 163,
         "linenumber": 70,
@@ -1148,6 +1280,7 @@
         "orginal_code": "        } else if (longPattern.matcher(value).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ValueDiscovery.java",
         "id": 164,
         "linenumber": 70,
@@ -1155,6 +1288,7 @@
         "orginal_code": "        } else if (longPattern.matcher(value).matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 165,
         "linenumber": 440,
@@ -1162,6 +1296,7 @@
         "orginal_code": "            if (endsWithNewLine && AT_PATTERN.matcher(toWrite).find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 166,
         "linenumber": 440,
@@ -1169,6 +1304,7 @@
         "orginal_code": "            if (endsWithNewLine && AT_PATTERN.matcher(toWrite).find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 167,
         "linenumber": 440,
@@ -1176,6 +1312,7 @@
         "orginal_code": "            if (endsWithNewLine && AT_PATTERN.matcher(toWrite).find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 168,
         "linenumber": 440,
@@ -1183,6 +1320,7 @@
         "orginal_code": "            if (endsWithNewLine && AT_PATTERN.matcher(toWrite).find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 169,
         "linenumber": 440,
@@ -1190,6 +1328,7 @@
         "orginal_code": "            if (endsWithNewLine && AT_PATTERN.matcher(toWrite).find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 170,
         "linenumber": 440,
@@ -1197,6 +1336,7 @@
         "orginal_code": "            if (endsWithNewLine && AT_PATTERN.matcher(toWrite).find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/StackTraceFilter.java",
         "id": 171,
         "linenumber": 440,
@@ -1204,6 +1344,7 @@
         "orginal_code": "            if (endsWithNewLine && AT_PATTERN.matcher(toWrite).find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 172,
         "linenumber": 134,
@@ -1211,6 +1352,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 173,
         "linenumber": 134,
@@ -1218,6 +1360,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 174,
         "linenumber": 134,
@@ -1225,6 +1368,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 175,
         "linenumber": 134,
@@ -1232,6 +1376,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 176,
         "linenumber": 134,
@@ -1239,6 +1384,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 177,
         "linenumber": 134,
@@ -1246,6 +1392,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 178,
         "linenumber": 134,
@@ -1253,6 +1400,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 179,
         "linenumber": 134,
@@ -1260,6 +1408,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 180,
         "linenumber": 134,
@@ -1267,6 +1416,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 181,
         "linenumber": 134,
@@ -1274,6 +1424,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 182,
         "linenumber": 134,
@@ -1281,6 +1432,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 183,
         "linenumber": 134,
@@ -1288,6 +1440,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 184,
         "linenumber": 134,
@@ -1295,6 +1448,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 185,
         "linenumber": 134,
@@ -1302,6 +1456,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/ReusableGzipOutputStream.java",
         "id": 186,
         "linenumber": 134,
@@ -1309,6 +1464,7 @@
         "orginal_code": "        buf[offset + 1] = (byte) ((s >> 8) & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 187,
         "linenumber": 121,
@@ -1316,6 +1472,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 188,
         "linenumber": 121,
@@ -1323,6 +1480,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 189,
         "linenumber": 121,
@@ -1330,6 +1488,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 190,
         "linenumber": 121,
@@ -1337,6 +1496,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 191,
         "linenumber": 121,
@@ -1344,6 +1504,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 192,
         "linenumber": 121,
@@ -1351,6 +1512,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 193,
         "linenumber": 121,
@@ -1358,6 +1520,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 194,
         "linenumber": 121,
@@ -1365,6 +1528,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 195,
         "linenumber": 121,
@@ -1372,6 +1536,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 196,
         "linenumber": 121,
@@ -1379,6 +1544,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 197,
         "linenumber": 121,
@@ -1386,6 +1552,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 198,
         "linenumber": 121,
@@ -1393,6 +1560,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 199,
         "linenumber": 121,
@@ -1400,6 +1568,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 200,
         "linenumber": 121,
@@ -1407,6 +1576,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 201,
         "linenumber": 121,
@@ -1414,6 +1584,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 202,
         "linenumber": 121,
@@ -1421,6 +1592,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 203,
         "linenumber": 121,
@@ -1428,6 +1600,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/RuntimeContainer.java",
         "id": 204,
         "linenumber": 121,
@@ -1435,6 +1608,7 @@
         "orginal_code": "        if (hostname.indexOf('.') != -1 && !fqdn) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 205,
         "linenumber": 84,
@@ -1442,6 +1616,7 @@
         "orginal_code": "            int o0 = i0 >>> 2;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 206,
         "linenumber": 84,
@@ -1449,6 +1624,7 @@
         "orginal_code": "            int o0 = i0 >>> 2;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 207,
         "linenumber": 84,
@@ -1456,6 +1632,7 @@
         "orginal_code": "            int o0 = i0 >>> 2;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 208,
         "linenumber": 84,
@@ -1463,6 +1640,7 @@
         "orginal_code": "            int o0 = i0 >>> 2;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 209,
         "linenumber": 84,
@@ -1470,13 +1648,7 @@
         "orginal_code": "            int o0 = i0 >>> 2;"
     },
     {
-        "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
-        "id": 210,
-        "linenumber": 84,
-        "mutated_code": "            int o0 = i1 >>> 2;",
-        "orginal_code": "            int o0 = i0 >>> 2;"
-    },
-    {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 211,
         "linenumber": 84,
@@ -1484,6 +1656,7 @@
         "orginal_code": "            int o0 = i0 >>> 2;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 212,
         "linenumber": 74,
@@ -1491,6 +1664,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 213,
         "linenumber": 74,
@@ -1498,6 +1672,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 214,
         "linenumber": 74,
@@ -1505,6 +1680,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 215,
         "linenumber": 74,
@@ -1512,6 +1688,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 216,
         "linenumber": 74,
@@ -1519,6 +1696,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 217,
         "linenumber": 74,
@@ -1526,6 +1704,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 218,
         "linenumber": 74,
@@ -1533,6 +1712,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 219,
         "linenumber": 74,
@@ -1540,6 +1720,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 220,
         "linenumber": 74,
@@ -1547,6 +1728,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 221,
         "linenumber": 74,
@@ -1554,6 +1736,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 222,
         "linenumber": 74,
@@ -1561,6 +1744,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 223,
         "linenumber": 74,
@@ -1568,6 +1752,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/jul/JulLogEvent.java",
         "id": 224,
         "linenumber": 74,
@@ -1575,6 +1760,7 @@
         "orginal_code": "            if (message.indexOf('{') != -1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 225,
         "linenumber": 84,
@@ -1582,6 +1768,7 @@
         "orginal_code": "        String numbers = value.substring(0, numbersEnd);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 226,
         "linenumber": 84,
@@ -1589,6 +1776,7 @@
         "orginal_code": "        String numbers = value.substring(0, numbersEnd);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 227,
         "linenumber": 84,
@@ -1596,6 +1784,7 @@
         "orginal_code": "        String numbers = value.substring(0, numbersEnd);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 228,
         "linenumber": 84,
@@ -1603,6 +1792,7 @@
         "orginal_code": "        String numbers = value.substring(0, numbersEnd);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/QueryStringParser.java",
         "id": 229,
         "linenumber": 84,
@@ -1610,6 +1800,7 @@
         "orginal_code": "        String numbers = value.substring(0, numbersEnd);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 230,
         "linenumber": 85,
@@ -1617,6 +1808,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 231,
         "linenumber": 85,
@@ -1624,6 +1816,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 232,
         "linenumber": 85,
@@ -1631,6 +1824,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 233,
         "linenumber": 85,
@@ -1638,6 +1832,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 234,
         "linenumber": 85,
@@ -1645,6 +1840,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 235,
         "linenumber": 85,
@@ -1652,6 +1848,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 236,
         "linenumber": 85,
@@ -1659,6 +1856,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 237,
         "linenumber": 85,
@@ -1666,6 +1864,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 238,
         "linenumber": 85,
@@ -1673,6 +1872,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 239,
         "linenumber": 85,
@@ -1680,6 +1880,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 240,
         "linenumber": 85,
@@ -1687,6 +1888,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 241,
         "linenumber": 85,
@@ -1694,6 +1896,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 242,
         "linenumber": 85,
@@ -1701,6 +1904,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 243,
         "linenumber": 85,
@@ -1708,6 +1912,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 244,
         "linenumber": 85,
@@ -1715,6 +1920,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 245,
         "linenumber": 85,
@@ -1722,6 +1928,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 246,
         "linenumber": 85,
@@ -1729,6 +1936,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 247,
         "linenumber": 85,
@@ -1736,6 +1944,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 248,
         "linenumber": 85,
@@ -1743,6 +1952,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 249,
         "linenumber": 85,
@@ -1750,6 +1960,7 @@
         "orginal_code": "            int o1 = ((i0 & 3) << 4) | (i1 >>> 4);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 250,
         "linenumber": 81,
@@ -1757,6 +1968,7 @@
         "orginal_code": "            int i0 = in[ip++] & 0xff;"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mp911de_logstash-gelf/src/main/java/biz/paluch/logging/gelf/intern/sender/Base64Coder.java",
         "id": 251,
         "linenumber": 81,

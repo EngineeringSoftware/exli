@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ExtractRequestAttributesUrlTransformer.java",
         "id": 0,
         "linenumber": 55,
@@ -7,6 +8,7 @@
         "orginal_code": "            url = url.replace(\"//\", \"/\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ContentBundleShortToLongUrlTransformer.java",
         "id": 1,
         "linenumber": 97,
@@ -14,6 +16,7 @@
         "orginal_code": "                    longUrl = longUrl.replace(base, originalBase);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/processors/impl/TaggingByPathProcessor.java",
         "id": 2,
         "linenumber": 44,
@@ -21,6 +24,7 @@
         "orginal_code": "            if (path.matches(entry.getKey())) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/processors/impl/TaggingByPathProcessor.java",
         "id": 3,
         "linenumber": 44,
@@ -28,6 +32,7 @@
         "orginal_code": "            if (path.matches(entry.getKey())) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/processors/impl/TaggingByPathProcessor.java",
         "id": 4,
         "linenumber": 44,
@@ -35,6 +40,7 @@
         "orginal_code": "            if (path.matches(entry.getKey())) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 5,
         "linenumber": 76,
@@ -42,6 +48,7 @@
         "orginal_code": "            String folder = mainDescriptorUrl.substring(0, k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 6,
         "linenumber": 76,
@@ -49,6 +56,7 @@
         "orginal_code": "            String folder = mainDescriptorUrl.substring(0, k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 7,
         "linenumber": 76,
@@ -56,6 +64,7 @@
         "orginal_code": "            String folder = mainDescriptorUrl.substring(0, k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 8,
         "linenumber": 76,
@@ -63,6 +72,7 @@
         "orginal_code": "            String folder = mainDescriptorUrl.substring(0, k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 9,
         "linenumber": 76,
@@ -70,6 +80,7 @@
         "orginal_code": "            String folder = mainDescriptorUrl.substring(0, k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 10,
         "linenumber": 98,
@@ -77,6 +88,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 11,
         "linenumber": 98,
@@ -84,6 +96,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 12,
         "linenumber": 98,
@@ -91,6 +104,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 13,
         "linenumber": 98,
@@ -98,6 +112,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 14,
         "linenumber": 98,
@@ -105,6 +120,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 15,
         "linenumber": 98,
@@ -112,6 +128,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 16,
         "linenumber": 98,
@@ -119,6 +136,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 17,
         "linenumber": 98,
@@ -126,6 +144,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 18,
         "linenumber": 98,
@@ -133,6 +152,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 19,
         "linenumber": 98,
@@ -140,6 +160,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 20,
         "linenumber": 98,
@@ -147,6 +168,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 21,
         "linenumber": 98,
@@ -154,6 +176,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 22,
         "linenumber": 98,
@@ -161,6 +184,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 23,
         "linenumber": 98,
@@ -168,6 +192,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 24,
         "linenumber": 98,
@@ -175,6 +200,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 25,
         "linenumber": 98,
@@ -182,6 +208,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 26,
         "linenumber": 98,
@@ -189,6 +216,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 27,
         "linenumber": 98,
@@ -196,6 +224,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 28,
         "linenumber": 98,
@@ -203,6 +232,7 @@
         "orginal_code": "        result = 31 * result + (int)(expireAfter ^ (expireAfter >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/util/url/impl/RegexBasedContentBundleUrlParser.java",
         "id": 29,
         "linenumber": 61,
@@ -210,6 +240,7 @@
         "orginal_code": "        if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/util/url/impl/RegexBasedContentBundleUrlParser.java",
         "id": 30,
         "linenumber": 61,
@@ -217,6 +248,7 @@
         "orginal_code": "        if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/util/url/impl/RegexBasedContentBundleUrlParser.java",
         "id": 31,
         "linenumber": 61,
@@ -224,6 +256,7 @@
         "orginal_code": "        if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 32,
         "linenumber": 72,
@@ -231,6 +264,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 33,
         "linenumber": 72,
@@ -238,6 +272,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 34,
         "linenumber": 72,
@@ -245,6 +280,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 35,
         "linenumber": 72,
@@ -252,6 +288,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/LongToShortUrlTransformer.java",
         "id": 36,
         "linenumber": 57,
@@ -259,6 +296,7 @@
         "orginal_code": "        String[] levels = StringUtils.strip(longUrl, \"/\").split(\"/\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ReplaceSubstringUrlTransformer.java",
         "id": 37,
         "linenumber": 51,
@@ -266,6 +304,7 @@
         "orginal_code": "        String result = url.replace(substringToReplace, replacement);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ExtractRequestAttributesUrlTransformer.java",
         "id": 38,
         "linenumber": 48,
@@ -273,6 +312,7 @@
         "orginal_code": "        if (uriTemplate.matches(url)) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ExtractRequestAttributesUrlTransformer.java",
         "id": 39,
         "linenumber": 48,
@@ -280,6 +320,7 @@
         "orginal_code": "        if (uriTemplate.matches(url)) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ExtractRequestAttributesUrlTransformer.java",
         "id": 40,
         "linenumber": 48,
@@ -287,6 +328,7 @@
         "orginal_code": "        if (uriTemplate.matches(url)) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 41,
         "linenumber": 81,
@@ -294,6 +336,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/', ++k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 42,
         "linenumber": 81,
@@ -301,6 +344,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/', ++k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 43,
         "linenumber": 81,
@@ -308,6 +352,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/', ++k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 44,
         "linenumber": 81,
@@ -315,6 +360,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/', ++k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 45,
         "linenumber": 81,
@@ -322,6 +368,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/', ++k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 46,
         "linenumber": 81,
@@ -329,6 +376,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/', ++k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 47,
         "linenumber": 81,
@@ -336,6 +384,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/', ++k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/AbstractInheritFromHierarchyMergeStrategy.java",
         "id": 48,
         "linenumber": 81,
@@ -343,6 +392,7 @@
         "orginal_code": "            k = mainDescriptorUrl.indexOf('/', ++k);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 49,
         "linenumber": 99,
@@ -350,6 +400,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 50,
         "linenumber": 99,
@@ -357,6 +408,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 51,
         "linenumber": 99,
@@ -364,6 +416,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 52,
         "linenumber": 99,
@@ -371,6 +424,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 53,
         "linenumber": 99,
@@ -378,6 +432,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 54,
         "linenumber": 99,
@@ -385,6 +440,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 55,
         "linenumber": 99,
@@ -392,6 +448,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 56,
         "linenumber": 99,
@@ -399,6 +456,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 57,
         "linenumber": 99,
@@ -406,6 +464,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 58,
         "linenumber": 99,
@@ -413,6 +472,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 59,
         "linenumber": 99,
@@ -420,6 +480,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 60,
         "linenumber": 99,
@@ -427,6 +488,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 61,
         "linenumber": 99,
@@ -434,6 +496,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 62,
         "linenumber": 99,
@@ -441,6 +504,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 63,
         "linenumber": 99,
@@ -448,6 +512,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 64,
         "linenumber": 99,
@@ -455,6 +520,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 65,
         "linenumber": 99,
@@ -462,6 +528,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 66,
         "linenumber": 99,
@@ -469,6 +536,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/service/CachingOptions.java",
         "id": 67,
         "linenumber": 99,
@@ -476,6 +544,7 @@
         "orginal_code": "        result = 31 * result + (int)(refreshFrequency ^ (refreshFrequency >>> 32));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ContentBundleShortToLongUrlTransformer.java",
         "id": 68,
         "linenumber": 105,
@@ -483,6 +552,7 @@
         "orginal_code": "                base = base.substring(0, delimiterIdx);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ContentBundleShortToLongUrlTransformer.java",
         "id": 69,
         "linenumber": 105,
@@ -490,6 +560,7 @@
         "orginal_code": "                base = base.substring(0, delimiterIdx);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ContentBundleShortToLongUrlTransformer.java",
         "id": 70,
         "linenumber": 105,
@@ -497,6 +568,7 @@
         "orginal_code": "                base = base.substring(0, delimiterIdx);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ContentBundleShortToLongUrlTransformer.java",
         "id": 71,
         "linenumber": 105,
@@ -504,6 +576,7 @@
         "orginal_code": "                base = base.substring(0, delimiterIdx);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ContentBundleShortToLongUrlTransformer.java",
         "id": 72,
         "linenumber": 105,
@@ -511,41 +584,7 @@
         "orginal_code": "                base = base.substring(0, delimiterIdx);"
     },
     {
-        "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/ContentBundleMergeStrategy.java",
-        "id": 73,
-        "linenumber": 103,
-        "mutated_code": "                baseName = baseName.substring(1, delimiterIdx); // baseName = folder2",
-        "orginal_code": "                baseName = baseName.substring(0, delimiterIdx); // baseName = folder2"
-    },
-    {
-        "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/ContentBundleMergeStrategy.java",
-        "id": 74,
-        "linenumber": 103,
-        "mutated_code": "                baseName = baseName.substring((0+1), delimiterIdx); // baseName = folder2",
-        "orginal_code": "                baseName = baseName.substring(0, delimiterIdx); // baseName = folder2"
-    },
-    {
-        "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/ContentBundleMergeStrategy.java",
-        "id": 75,
-        "linenumber": 103,
-        "mutated_code": "                baseName = baseName.substring((0-1), delimiterIdx); // baseName = folder2",
-        "orginal_code": "                baseName = baseName.substring(0, delimiterIdx); // baseName = folder2"
-    },
-    {
-        "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/ContentBundleMergeStrategy.java",
-        "id": 76,
-        "linenumber": 103,
-        "mutated_code": "                baseName = baseName.substring( delimiterIdx,0); // baseName = folder2",
-        "orginal_code": "                baseName = baseName.substring(0, delimiterIdx); // baseName = folder2"
-    },
-    {
-        "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/xml/mergers/impl/strategies/ContentBundleMergeStrategy.java",
-        "id": 77,
-        "linenumber": 103,
-        "mutated_code": "                baseName = baseName.substring(-1, delimiterIdx); // baseName = folder2",
-        "orginal_code": "                baseName = baseName.substring(0, delimiterIdx); // baseName = folder2"
-    },
-    {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/url/impl/ShortToLongUrlTransformer.java",
         "id": 78,
         "linenumber": 94,
@@ -553,6 +592,7 @@
         "orginal_code": "        String[] levels = StringUtils.strip(shortUrl, \"/\").split(\"/\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/util/UrlUtils.java",
         "id": 79,
         "linenumber": 51,
@@ -560,6 +600,7 @@
         "orginal_code": "        if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/util/UrlUtils.java",
         "id": 80,
         "linenumber": 51,
@@ -567,6 +608,7 @@
         "orginal_code": "        if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/util/UrlUtils.java",
         "id": 81,
         "linenumber": 51,
@@ -574,6 +616,7 @@
         "orginal_code": "        if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/util/template/impl/freemarker/FreeMarkerStringTemplateCompiler.java",
         "id": 82,
         "linenumber": 57,
@@ -581,6 +624,7 @@
         "orginal_code": "        String id = templateSource.getId().replace('/', ';');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/util/template/impl/freemarker/FreeMarkerStringTemplateCompiler.java",
         "id": 83,
         "linenumber": 57,
@@ -588,6 +632,7 @@
         "orginal_code": "        String id = templateSource.getId().replace('/', ';');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/util/template/impl/freemarker/FreeMarkerStringTemplateCompiler.java",
         "id": 84,
         "linenumber": 57,
@@ -595,6 +640,7 @@
         "orginal_code": "        String id = templateSource.getId().replace('/', ';');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/util/template/impl/freemarker/FreeMarkerStringTemplateCompiler.java",
         "id": 85,
         "linenumber": 57,
@@ -602,6 +648,7 @@
         "orginal_code": "        String id = templateSource.getId().replace('/', ';');"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/craftercms_core/src/main/java/org/craftercms/core/util/template/impl/freemarker/FreeMarkerStringTemplateCompiler.java",
         "id": 86,
         "linenumber": 57,

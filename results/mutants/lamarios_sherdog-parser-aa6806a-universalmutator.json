@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/OrganizationParser.java",
         "id": 0,
         "linenumber": 144,
@@ -7,6 +8,7 @@
         "orginal_code": "        String[] split = td.html().split(\">\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/OrganizationParser.java",
         "id": 1,
         "linenumber": 144,
@@ -14,6 +16,7 @@
         "orginal_code": "        String[] split = td.html().split(\">\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/OrganizationParser.java",
         "id": 2,
         "linenumber": 144,
@@ -21,6 +24,7 @@
         "orginal_code": "        String[] split = td.html().split(\">\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/OrganizationParser.java",
         "id": 3,
         "linenumber": 144,
@@ -28,6 +32,7 @@
         "orginal_code": "        String[] split = td.html().split(\">\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/SherdogParser.java",
         "id": 4,
         "linenumber": 28,
@@ -35,6 +40,7 @@
         "orginal_code": "           url =  url.replace(\"http\", \"https\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/SherdogParser.java",
         "id": 5,
         "linenumber": 28,

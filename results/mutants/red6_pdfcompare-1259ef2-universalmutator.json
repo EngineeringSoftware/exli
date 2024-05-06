@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 0,
         "linenumber": 151,
@@ -7,6 +8,7 @@
         "orginal_code": "                if (\"mm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 1,
         "linenumber": 151,
@@ -14,6 +16,7 @@
         "orginal_code": "                if (\"mm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 2,
         "linenumber": 151,
@@ -21,6 +24,7 @@
         "orginal_code": "                if (\"mm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 3,
         "linenumber": 151,
@@ -28,6 +32,7 @@
         "orginal_code": "                if (\"mm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 4,
         "linenumber": 151,
@@ -35,6 +40,7 @@
         "orginal_code": "                if (\"mm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 5,
         "linenumber": 151,
@@ -42,6 +48,7 @@
         "orginal_code": "                if (\"mm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 6,
         "linenumber": 151,
@@ -49,6 +56,7 @@
         "orginal_code": "                if (\"mm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 7,
         "linenumber": 151,
@@ -56,6 +64,7 @@
         "orginal_code": "                if (\"mm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 8,
         "linenumber": 151,
@@ -63,6 +72,7 @@
         "orginal_code": "                if (\"mm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 9,
         "linenumber": 153,
@@ -70,6 +80,7 @@
         "orginal_code": "                } else if (\"cm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 10,
         "linenumber": 153,
@@ -77,6 +88,7 @@
         "orginal_code": "                } else if (\"cm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 11,
         "linenumber": 153,
@@ -84,6 +96,7 @@
         "orginal_code": "                } else if (\"cm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 12,
         "linenumber": 153,
@@ -91,6 +104,7 @@
         "orginal_code": "                } else if (\"cm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 13,
         "linenumber": 153,
@@ -98,6 +112,7 @@
         "orginal_code": "                } else if (\"cm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 14,
         "linenumber": 153,
@@ -105,6 +120,7 @@
         "orginal_code": "                } else if (\"cm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 15,
         "linenumber": 153,
@@ -112,6 +128,7 @@
         "orginal_code": "                } else if (\"cm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 16,
         "linenumber": 153,
@@ -119,6 +136,7 @@
         "orginal_code": "                } else if (\"cm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 17,
         "linenumber": 153,
@@ -126,6 +144,7 @@
         "orginal_code": "                } else if (\"cm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 18,
         "linenumber": 153,
@@ -133,6 +152,7 @@
         "orginal_code": "                } else if (\"cm\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/CompareResultImpl.java",
         "id": 19,
         "linenumber": 130,
@@ -140,6 +160,7 @@
         "orginal_code": "        this.hasDifferenceInExclusion |= diffCalculator.differencesFoundInExclusion();"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 20,
         "linenumber": 155,
@@ -147,6 +168,7 @@
         "orginal_code": "                } else if (\"pt\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 21,
         "linenumber": 155,
@@ -154,6 +176,7 @@
         "orginal_code": "                } else if (\"pt\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 22,
         "linenumber": 155,
@@ -161,6 +184,7 @@
         "orginal_code": "                } else if (\"pt\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 23,
         "linenumber": 155,
@@ -168,6 +192,7 @@
         "orginal_code": "                } else if (\"pt\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 24,
         "linenumber": 155,
@@ -175,6 +200,7 @@
         "orginal_code": "                } else if (\"pt\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 25,
         "linenumber": 155,
@@ -182,6 +208,7 @@
         "orginal_code": "                } else if (\"pt\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 26,
         "linenumber": 155,
@@ -189,6 +216,7 @@
         "orginal_code": "                } else if (\"pt\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 27,
         "linenumber": 155,
@@ -196,6 +224,7 @@
         "orginal_code": "                } else if (\"pt\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 28,
         "linenumber": 155,
@@ -203,6 +232,7 @@
         "orginal_code": "                } else if (\"pt\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 29,
         "linenumber": 155,
@@ -210,6 +240,7 @@
         "orginal_code": "                } else if (\"pt\".equals(matcher.group(2))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 30,
         "linenumber": 149,
@@ -217,6 +248,7 @@
         "orginal_code": "            if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 31,
         "linenumber": 149,
@@ -224,6 +256,7 @@
         "orginal_code": "            if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/red6_pdfcompare/src/main/java/de/redsix/pdfcompare/Exclusions.java",
         "id": 32,
         "linenumber": 149,

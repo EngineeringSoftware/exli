@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 0,
         "linenumber": 24,
@@ -7,6 +8,7 @@
         "orginal_code": "        String suffix = value.substring(endIndex + VARIABLE_SUFFIX.length());"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 1,
         "linenumber": 24,
@@ -14,6 +16,7 @@
         "orginal_code": "        String suffix = value.substring(endIndex + VARIABLE_SUFFIX.length());"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 2,
         "linenumber": 24,
@@ -21,6 +24,7 @@
         "orginal_code": "        String suffix = value.substring(endIndex + VARIABLE_SUFFIX.length());"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 3,
         "linenumber": 24,
@@ -28,6 +32,7 @@
         "orginal_code": "        String suffix = value.substring(endIndex + VARIABLE_SUFFIX.length());"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 4,
         "linenumber": 20,
@@ -35,6 +40,7 @@
         "orginal_code": "        int endIndex = value.indexOf(VARIABLE_SUFFIX, startIndex + VARIABLE_PREFIX.length());"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 5,
         "linenumber": 20,
@@ -42,6 +48,7 @@
         "orginal_code": "        int endIndex = value.indexOf(VARIABLE_SUFFIX, startIndex + VARIABLE_PREFIX.length());"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 6,
         "linenumber": 20,
@@ -49,6 +56,7 @@
         "orginal_code": "        int endIndex = value.indexOf(VARIABLE_SUFFIX, startIndex + VARIABLE_PREFIX.length());"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 7,
         "linenumber": 20,
@@ -56,6 +64,7 @@
         "orginal_code": "        int endIndex = value.indexOf(VARIABLE_SUFFIX, startIndex + VARIABLE_PREFIX.length());"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 8,
         "linenumber": 22,
@@ -63,6 +72,7 @@
         "orginal_code": "        String prefix = value.substring(0, startIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 9,
         "linenumber": 22,
@@ -70,6 +80,7 @@
         "orginal_code": "        String prefix = value.substring(0, startIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 10,
         "linenumber": 22,
@@ -77,6 +88,7 @@
         "orginal_code": "        String prefix = value.substring(0, startIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 11,
         "linenumber": 22,
@@ -84,6 +96,7 @@
         "orginal_code": "        String prefix = value.substring(0, startIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 12,
         "linenumber": 22,
@@ -91,6 +104,7 @@
         "orginal_code": "        String prefix = value.substring(0, startIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 13,
         "linenumber": 23,
@@ -98,6 +112,7 @@
         "orginal_code": "        String variableName = value.substring(startIndex + VARIABLE_PREFIX.length(), endIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 14,
         "linenumber": 23,
@@ -105,6 +120,7 @@
         "orginal_code": "        String variableName = value.substring(startIndex + VARIABLE_PREFIX.length(), endIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 15,
         "linenumber": 23,
@@ -112,6 +128,7 @@
         "orginal_code": "        String variableName = value.substring(startIndex + VARIABLE_PREFIX.length(), endIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 16,
         "linenumber": 23,
@@ -119,6 +136,7 @@
         "orginal_code": "        String variableName = value.substring(startIndex + VARIABLE_PREFIX.length(), endIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/VariableResolvingFilter.java",
         "id": 17,
         "linenumber": 23,
@@ -126,6 +144,7 @@
         "orginal_code": "        String variableName = value.substring(startIndex + VARIABLE_PREFIX.length(), endIndex);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/EnvironmentResolvingFilter.java",
         "id": 18,
         "linenumber": 22,
@@ -133,6 +152,7 @@
         "orginal_code": "        if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/EnvironmentResolvingFilter.java",
         "id": 19,
         "linenumber": 22,
@@ -140,6 +160,7 @@
         "orginal_code": "        if (matcher.matches()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/TNG_property-loader/src/main/java/com/tngtech/propertyloader/impl/filters/EnvironmentResolvingFilter.java",
         "id": 20,
         "linenumber": 22,

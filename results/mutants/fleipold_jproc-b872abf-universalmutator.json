@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/fleipold_jproc/src/main/java/org/buildobjects/process/ExternalProcessFailureException.java",
         "id": 0,
         "linenumber": 39,
@@ -7,6 +8,7 @@
         "orginal_code": "        String[] lines = string.split(\"\\n\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/fleipold_jproc/src/main/java/org/buildobjects/process/Proc.java",
         "id": 1,
         "linenumber": 205,
@@ -14,6 +16,7 @@
         "orginal_code": "        if (m.find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/fleipold_jproc/src/main/java/org/buildobjects/process/Proc.java",
         "id": 2,
         "linenumber": 205,
@@ -21,6 +24,7 @@
         "orginal_code": "        if (m.find()) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/fleipold_jproc/src/main/java/org/buildobjects/process/Proc.java",
         "id": 3,
         "linenumber": 205,

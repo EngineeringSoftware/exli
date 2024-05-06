@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/transaction/TransactionId.java",
         "id": 0,
         "linenumber": 114,
@@ -7,6 +8,7 @@
         "orginal_code": "            int b = (that.id[j] & 0xff);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java",
         "id": 1,
         "linenumber": 180,
@@ -14,6 +16,7 @@
         "orginal_code": "        if (!url.getProtocol().matches(\"^https?$\")) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java",
         "id": 2,
         "linenumber": 180,
@@ -21,6 +24,7 @@
         "orginal_code": "        if (!url.getProtocol().matches(\"^https?$\")) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java",
         "id": 3,
         "linenumber": 180,
@@ -28,6 +32,7 @@
         "orginal_code": "        if (!url.getProtocol().matches(\"^https?$\")) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java",
         "id": 4,
         "linenumber": 180,
@@ -35,6 +40,7 @@
         "orginal_code": "        if (!url.getProtocol().matches(\"^https?$\")) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/client/Client.java",
         "id": 5,
         "linenumber": 180,
@@ -42,6 +48,7 @@
         "orginal_code": "        if (!url.getProtocol().matches(\"^https?$\")) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jscep_jscep/src/main/java/org/jscep/transaction/TransactionId.java",
         "id": 6,
         "linenumber": 113,

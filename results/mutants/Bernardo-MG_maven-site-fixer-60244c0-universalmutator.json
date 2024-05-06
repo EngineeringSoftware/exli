@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 0,
         "linenumber": 376,
@@ -7,6 +8,7 @@
         "orginal_code": "            texts = text.split(\"\u2013\", 2);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 1,
         "linenumber": 376,
@@ -14,6 +16,7 @@
         "orginal_code": "            texts = text.split(\"\u2013\", 2);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 2,
         "linenumber": 376,
@@ -21,6 +24,7 @@
         "orginal_code": "            texts = text.split(\"\u2013\", 2);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 3,
         "linenumber": 376,
@@ -28,6 +32,7 @@
         "orginal_code": "            texts = text.split(\"\u2013\", 2);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 4,
         "linenumber": 376,
@@ -35,6 +40,7 @@
         "orginal_code": "            texts = text.split(\"\u2013\", 2);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 5,
         "linenumber": 108,
@@ -42,6 +48,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 6,
         "linenumber": 108,
@@ -49,6 +56,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 7,
         "linenumber": 108,
@@ -56,6 +64,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 8,
         "linenumber": 108,
@@ -63,6 +72,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 9,
         "linenumber": 108,
@@ -70,6 +80,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 10,
         "linenumber": 108,
@@ -77,6 +88,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 11,
         "linenumber": 108,
@@ -84,6 +96,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 12,
         "linenumber": 108,
@@ -91,6 +104,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 13,
         "linenumber": 108,
@@ -98,6 +112,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 14,
         "linenumber": 108,
@@ -105,6 +120,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 15,
         "linenumber": 108,
@@ -112,6 +128,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 16,
         "linenumber": 108,
@@ -119,6 +136,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 17,
         "linenumber": 108,
@@ -126,6 +144,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 18,
         "linenumber": 108,
@@ -133,6 +152,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 19,
         "linenumber": 108,
@@ -140,6 +160,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 20,
         "linenumber": 108,
@@ -147,6 +168,7 @@
         "orginal_code": "            if ((!ref.isEmpty()) && (ref.substring(0, 1).equals(\"#\"))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_maven-site-fixer/src/main/java/com/bernardomg/velocity/tool/SiteTool.java",
         "id": 21,
         "linenumber": 108,

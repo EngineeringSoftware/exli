@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 0,
         "linenumber": 214,
@@ -7,6 +8,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/removeCustomFieldSetting\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 1,
         "linenumber": 214,
@@ -14,6 +16,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/removeCustomFieldSetting\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 2,
         "linenumber": 73,
@@ -21,6 +24,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/addMembers\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 3,
         "linenumber": 73,
@@ -28,6 +32,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/addMembers\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/AuditLogApiBase.java",
         "id": 4,
         "linenumber": 37,
@@ -35,6 +40,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/audit_log_events\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/AuditLogApiBase.java",
         "id": 5,
         "linenumber": 37,
@@ -42,6 +48,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/audit_log_events\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamsBase.java",
         "id": 6,
         "linenumber": 80,
@@ -49,6 +56,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamsBase.java",
         "id": 7,
         "linenumber": 80,
@@ -56,6 +64,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/UserTaskLists.java",
         "id": 8,
         "linenumber": 24,
@@ -63,6 +72,7 @@
         "orginal_code": "        String path = String.format(\"/users/%s/user_task_list\", user);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/UserTaskLists.java",
         "id": 9,
         "linenumber": 24,
@@ -70,6 +80,7 @@
         "orginal_code": "        String path = String.format(\"/users/%s/user_task_list\", user);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 10,
         "linenumber": 212,
@@ -77,6 +88,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/dependencies\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 11,
         "linenumber": 212,
@@ -84,6 +96,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/dependencies\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 12,
         "linenumber": 274,
@@ -91,6 +104,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/removeDependents\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 13,
         "linenumber": 274,
@@ -98,6 +112,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/removeDependents\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 14,
         "linenumber": 30,
@@ -105,6 +120,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/addCustomFieldSetting\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 15,
         "linenumber": 30,
@@ -112,6 +128,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/addCustomFieldSetting\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 16,
         "linenumber": 156,
@@ -119,6 +136,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/custom_field_settings\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 17,
         "linenumber": 156,
@@ -126,6 +144,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/custom_field_settings\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 18,
         "linenumber": 206,
@@ -133,6 +152,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/duplicate\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 19,
         "linenumber": 206,
@@ -140,6 +160,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/duplicate\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectBriefsBase.java",
         "id": 20,
         "linenumber": 75,
@@ -147,6 +168,7 @@
         "orginal_code": "            String path = \"/project_briefs/{project_brief_gid}\".replace(\"{project_brief_gid}\", projectBriefGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectBriefsBase.java",
         "id": 21,
         "linenumber": 75,
@@ -154,6 +176,7 @@
         "orginal_code": "            String path = \"/project_briefs/{project_brief_gid}\".replace(\"{project_brief_gid}\", projectBriefGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/OrganizationExportsBase.java",
         "id": 22,
         "linenumber": 56,
@@ -161,6 +184,7 @@
         "orginal_code": "            String path = \"/organization_exports/{organization_export_gid}\".replace(\"{organization_export_gid}\", organizationExportGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/OrganizationExportsBase.java",
         "id": 23,
         "linenumber": 56,
@@ -168,6 +192,7 @@
         "orginal_code": "            String path = \"/organization_exports/{organization_export_gid}\".replace(\"{organization_export_gid}\", organizationExportGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 24,
         "linenumber": 155,
@@ -175,6 +200,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/tags\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 25,
         "linenumber": 155,
@@ -182,6 +208,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/tags\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/OrganizationExports.java",
         "id": 26,
         "linenumber": 21,
@@ -189,6 +216,7 @@
         "orginal_code": "        String path = String.format(\"/organization_exports/%s\", organizationExport);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/OrganizationExports.java",
         "id": 27,
         "linenumber": 21,
@@ -196,6 +224,7 @@
         "orginal_code": "        String path = String.format(\"/organization_exports/%s\", organizationExport);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFieldSettings.java",
         "id": 28,
         "linenumber": 21,
@@ -203,6 +232,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/custom_field_settings\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFieldSettings.java",
         "id": 29,
         "linenumber": 21,
@@ -210,6 +240,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/custom_field_settings\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 30,
         "linenumber": 100,
@@ -217,6 +248,7 @@
         "orginal_code": "        String path = String.format(\"/custom_fields/%s/enum_options\", customField);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 31,
         "linenumber": 100,
@@ -224,6 +256,7 @@
         "orginal_code": "        String path = String.format(\"/custom_fields/%s/enum_options\", customField);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 32,
         "linenumber": 73,
@@ -231,6 +264,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/addMembers\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 33,
         "linenumber": 73,
@@ -238,6 +272,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/addMembers\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/AttachmentsBase.java",
         "id": 34,
         "linenumber": 32,
@@ -245,6 +280,7 @@
         "orginal_code": "            String path = \"/attachments/{attachment_gid}\".replace(\"{attachment_gid}\", attachmentGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/AttachmentsBase.java",
         "id": 35,
         "linenumber": 32,
@@ -252,6 +288,7 @@
         "orginal_code": "            String path = \"/attachments/{attachment_gid}\".replace(\"{attachment_gid}\", attachmentGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 36,
         "linenumber": 97,
@@ -259,6 +296,7 @@
         "orginal_code": "            String path = \"/sections/{section_gid}\".replace(\"{section_gid}\", sectionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 37,
         "linenumber": 97,
@@ -266,6 +304,7 @@
         "orginal_code": "            String path = \"/sections/{section_gid}\".replace(\"{section_gid}\", sectionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 38,
         "linenumber": 729,
@@ -273,6 +312,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 39,
         "linenumber": 729,
@@ -280,6 +320,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 40,
         "linenumber": 205,
@@ -287,6 +328,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/removeMembers\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 41,
         "linenumber": 205,
@@ -294,6 +336,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/removeMembers\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UserTaskListsBase.java",
         "id": 42,
         "linenumber": 31,
@@ -301,6 +344,7 @@
         "orginal_code": "            String path = \"/user_task_lists/{user_task_list_gid}\".replace(\"{user_task_list_gid}\", userTaskListGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UserTaskListsBase.java",
         "id": 43,
         "linenumber": 31,
@@ -308,6 +352,7 @@
         "orginal_code": "            String path = \"/user_task_lists/{user_task_list_gid}\".replace(\"{user_task_list_gid}\", userTaskListGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 44,
         "linenumber": 446,
@@ -315,6 +360,7 @@
         "orginal_code": "            String path = \"/user_task_lists/{user_task_list_gid}/tasks\".replace(\"{user_task_list_gid}\", userTaskListGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 45,
         "linenumber": 446,
@@ -322,6 +368,7 @@
         "orginal_code": "            String path = \"/user_task_lists/{user_task_list_gid}/tasks\".replace(\"{user_task_list_gid}\", userTaskListGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 46,
         "linenumber": 174,
@@ -329,6 +376,7 @@
         "orginal_code": "            String path = \"/custom_fields/{custom_field_gid}\".replace(\"{custom_field_gid}\", customFieldGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 47,
         "linenumber": 174,
@@ -336,6 +384,7 @@
         "orginal_code": "            String path = \"/custom_fields/{custom_field_gid}\".replace(\"{custom_field_gid}\", customFieldGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 48,
         "linenumber": 341,
@@ -343,6 +392,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/task_counts\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 49,
         "linenumber": 341,
@@ -350,6 +400,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/task_counts\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Attachments.java",
         "id": 50,
         "linenumber": 54,
@@ -357,6 +408,7 @@
         "orginal_code": "        String path = String.format(\"/attachments/%s\", attachment);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Attachments.java",
         "id": 51,
         "linenumber": 54,
@@ -364,6 +416,7 @@
         "orginal_code": "        String path = String.format(\"/attachments/%s\", attachment);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Stories.java",
         "id": 52,
         "linenumber": 22,
@@ -371,6 +424,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/stories\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Stories.java",
         "id": 53,
         "linenumber": 22,
@@ -378,6 +432,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/stories\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 54,
         "linenumber": 102,
@@ -385,6 +440,7 @@
         "orginal_code": "            String path = \"/tags/{tag_gid}\".replace(\"{tag_gid}\", tagGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 55,
         "linenumber": 102,
@@ -392,6 +448,7 @@
         "orginal_code": "            String path = \"/tags/{tag_gid}\".replace(\"{tag_gid}\", tagGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 56,
         "linenumber": 169,
@@ -399,6 +456,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/addCustomFieldSetting\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 57,
         "linenumber": 169,
@@ -406,6 +464,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/addCustomFieldSetting\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 58,
         "linenumber": 110,
@@ -413,6 +472,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/tasks\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 59,
         "linenumber": 110,
@@ -420,6 +480,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/tasks\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfolioMembershipsBase.java",
         "id": 60,
         "linenumber": 31,
@@ -427,6 +488,7 @@
         "orginal_code": "            String path = \"/portfolio_memberships/{portfolio_membership_gid}\".replace(\"{portfolio_membership_gid}\", portfolioMembershipGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfolioMembershipsBase.java",
         "id": 61,
         "linenumber": 31,
@@ -434,6 +496,7 @@
         "orginal_code": "            String path = \"/portfolio_memberships/{portfolio_membership_gid}\".replace(\"{portfolio_membership_gid}\", portfolioMembershipGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 62,
         "linenumber": 286,
@@ -441,6 +504,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/projects\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 63,
         "linenumber": 286,
@@ -448,6 +512,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/projects\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 64,
         "linenumber": 30,
@@ -455,6 +520,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/addCustomFieldSetting\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 65,
         "linenumber": 30,
@@ -462,6 +528,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/addCustomFieldSetting\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 66,
         "linenumber": 312,
@@ -469,6 +536,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/projects\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 67,
         "linenumber": 312,
@@ -476,6 +544,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/projects\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 68,
         "linenumber": 31,
@@ -483,6 +552,7 @@
         "orginal_code": "            String path = \"/sections/{section_gid}/addTask\".replace(\"{section_gid}\", sectionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 69,
         "linenumber": 31,
@@ -490,6 +560,7 @@
         "orginal_code": "            String path = \"/sections/{section_gid}/addTask\".replace(\"{section_gid}\", sectionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Users.java",
         "id": 70,
         "linenumber": 63,
@@ -497,6 +568,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/users\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Users.java",
         "id": 71,
         "linenumber": 63,
@@ -504,6 +576,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/users\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Stories.java",
         "id": 72,
         "linenumber": 76,
@@ -511,6 +584,7 @@
         "orginal_code": "        String path = String.format(\"/stories/%s\", story);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Stories.java",
         "id": 73,
         "linenumber": 76,
@@ -518,6 +592,7 @@
         "orginal_code": "        String path = String.format(\"/stories/%s\", story);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 74,
         "linenumber": 75,
@@ -525,6 +600,7 @@
         "orginal_code": "            String path = \"/sections/{section_gid}\".replace(\"{section_gid}\", sectionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 75,
         "linenumber": 75,
@@ -532,6 +608,7 @@
         "orginal_code": "            String path = \"/sections/{section_gid}\".replace(\"{section_gid}\", sectionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 76,
         "linenumber": 306,
@@ -539,6 +616,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 77,
         "linenumber": 306,
@@ -546,6 +624,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 78,
         "linenumber": 21,
@@ -553,6 +632,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/typeahead\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 79,
         "linenumber": 21,
@@ -560,6 +640,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/typeahead\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 80,
         "linenumber": 400,
@@ -567,6 +648,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/subtasks\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 81,
         "linenumber": 400,
@@ -574,6 +656,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/subtasks\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 82,
         "linenumber": 51,
@@ -581,6 +664,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/addItem\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 83,
         "linenumber": 51,
@@ -588,6 +672,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/addItem\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Webhooks.java",
         "id": 84,
         "linenumber": 57,
@@ -595,6 +680,7 @@
         "orginal_code": "        String path = String.format(\"/webhooks/%s\", webhook);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Webhooks.java",
         "id": 85,
         "linenumber": 57,
@@ -602,6 +688,7 @@
         "orginal_code": "        String path = String.format(\"/webhooks/%s\", webhook);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 86,
         "linenumber": 92,
@@ -609,6 +696,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/items\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 87,
         "linenumber": 92,
@@ -616,6 +704,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/items\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 88,
         "linenumber": 138,
@@ -623,6 +712,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/projects\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 89,
         "linenumber": 138,
@@ -630,6 +720,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/projects\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 90,
         "linenumber": 74,
@@ -637,6 +728,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 91,
         "linenumber": 74,
@@ -644,6 +736,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 92,
         "linenumber": 459,
@@ -651,6 +744,7 @@
         "orginal_code": "        String path = String.format(\"/user_task_lists/%s/tasks/insert\", userTaskList);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 93,
         "linenumber": 459,
@@ -658,6 +752,7 @@
         "orginal_code": "        String path = String.format(\"/user_task_lists/%s/tasks/insert\", userTaskList);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StoriesBase.java",
         "id": 94,
         "linenumber": 127,
@@ -665,6 +760,7 @@
         "orginal_code": "            String path = \"/stories/{story_gid}\".replace(\"{story_gid}\", storyGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StoriesBase.java",
         "id": 95,
         "linenumber": 127,
@@ -672,6 +768,7 @@
         "orginal_code": "            String path = \"/stories/{story_gid}\".replace(\"{story_gid}\", storyGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 96,
         "linenumber": 237,
@@ -679,6 +776,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/addDependencies\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 97,
         "linenumber": 237,
@@ -686,6 +784,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/addDependencies\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StoriesBase.java",
         "id": 98,
         "linenumber": 103,
@@ -693,6 +792,7 @@
         "orginal_code": "            String path = \"/stories/{story_gid}\".replace(\"{story_gid}\", storyGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StoriesBase.java",
         "id": 99,
         "linenumber": 103,
@@ -700,6 +800,7 @@
         "orginal_code": "            String path = \"/stories/{story_gid}\".replace(\"{story_gid}\", storyGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 100,
         "linenumber": 196,
@@ -707,6 +808,7 @@
         "orginal_code": "            String path = \"/enum_options/{enum_option_gid}\".replace(\"{enum_option_gid}\", enumOptionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 101,
         "linenumber": 196,
@@ -714,6 +816,7 @@
         "orginal_code": "            String path = \"/enum_options/{enum_option_gid}\".replace(\"{enum_option_gid}\", enumOptionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamMembershipsBase.java",
         "id": 102,
         "linenumber": 113,
@@ -721,6 +824,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}/team_memberships\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamMembershipsBase.java",
         "id": 103,
         "linenumber": 113,
@@ -728,6 +832,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}/team_memberships\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 104,
         "linenumber": 160,
@@ -735,6 +840,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 105,
         "linenumber": 160,
@@ -742,6 +848,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WebhooksBase.java",
         "id": 106,
         "linenumber": 52,
@@ -749,6 +856,7 @@
         "orginal_code": "            String path = \"/webhooks/{webhook_gid}\".replace(\"{webhook_gid}\", webhookGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WebhooksBase.java",
         "id": 107,
         "linenumber": 52,
@@ -756,6 +864,7 @@
         "orginal_code": "            String path = \"/webhooks/{webhook_gid}\".replace(\"{webhook_gid}\", webhookGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Attachments.java",
         "id": 108,
         "linenumber": 41,
@@ -763,6 +872,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/attachments\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Attachments.java",
         "id": 109,
         "linenumber": 41,
@@ -770,6 +880,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/attachments\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 110,
         "linenumber": 314,
@@ -777,6 +888,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/projects\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 111,
         "linenumber": 314,
@@ -784,6 +896,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/projects\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectMembershipsBase.java",
         "id": 112,
         "linenumber": 31,
@@ -791,6 +904,7 @@
         "orginal_code": "            String path = \"/project_memberships/{project_membership_gid}\".replace(\"{project_membership_gid}\", projectMembershipGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectMembershipsBase.java",
         "id": 113,
         "linenumber": 31,
@@ -798,6 +912,7 @@
         "orginal_code": "            String path = \"/project_memberships/{project_membership_gid}\".replace(\"{project_membership_gid}\", projectMembershipGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/dispatcher/MockDispatcher.java",
         "id": 114,
         "linenumber": 106,
@@ -805,6 +920,7 @@
         "orginal_code": "        String[] components = path.split(\"\\\\?\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 115,
         "linenumber": 52,
@@ -812,6 +928,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/tags\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 116,
         "linenumber": 52,
@@ -819,6 +936,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/tags\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 117,
         "linenumber": 282,
@@ -826,6 +944,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/subtasks\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 118,
         "linenumber": 282,
@@ -833,6 +952,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/subtasks\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 119,
         "linenumber": 493,
@@ -840,6 +960,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/removeDependents\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 120,
         "linenumber": 493,
@@ -847,6 +968,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/removeDependents\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StatusUpdatesBase.java",
         "id": 121,
         "linenumber": 56,
@@ -854,6 +976,7 @@
         "orginal_code": "            String path = \"/status_updates/{status_gid}\".replace(\"{status_gid}\", statusGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StatusUpdatesBase.java",
         "id": 122,
         "linenumber": 56,
@@ -861,6 +984,7 @@
         "orginal_code": "            String path = \"/status_updates/{status_gid}\".replace(\"{status_gid}\", statusGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectStatusesBase.java",
         "id": 123,
         "linenumber": 53,
@@ -868,6 +992,7 @@
         "orginal_code": "            String path = \"/project_statuses/{project_status_gid}\".replace(\"{project_status_gid}\", projectStatusGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectStatusesBase.java",
         "id": 124,
         "linenumber": 53,
@@ -875,6 +1000,7 @@
         "orginal_code": "            String path = \"/project_statuses/{project_status_gid}\".replace(\"{project_status_gid}\", projectStatusGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/AttachmentsBase.java",
         "id": 125,
         "linenumber": 54,
@@ -882,6 +1008,7 @@
         "orginal_code": "            String path = \"/attachments/{attachment_gid}\".replace(\"{attachment_gid}\", attachmentGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/AttachmentsBase.java",
         "id": 126,
         "linenumber": 54,
@@ -889,6 +1016,7 @@
         "orginal_code": "            String path = \"/attachments/{attachment_gid}\".replace(\"{attachment_gid}\", attachmentGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UserTaskListsBase.java",
         "id": 127,
         "linenumber": 54,
@@ -896,6 +1024,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}/user_task_list\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UserTaskListsBase.java",
         "id": 128,
         "linenumber": 54,
@@ -903,6 +1032,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}/user_task_list\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 129,
         "linenumber": 15,
@@ -910,6 +1040,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/typeahead\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 130,
         "linenumber": 15,
@@ -917,6 +1048,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/typeahead\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectStatusesBase.java",
         "id": 131,
         "linenumber": 99,
@@ -924,6 +1056,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/project_statuses\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectStatusesBase.java",
         "id": 132,
         "linenumber": 99,
@@ -931,6 +1064,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/project_statuses\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 133,
         "linenumber": 58,
@@ -938,6 +1072,7 @@
         "orginal_code": "            String path = \"/custom_fields/{custom_field_gid}/enum_options\".replace(\"{custom_field_gid}\", customFieldGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 134,
         "linenumber": 58,
@@ -945,6 +1080,7 @@
         "orginal_code": "            String path = \"/custom_fields/{custom_field_gid}/enum_options\".replace(\"{custom_field_gid}\", customFieldGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 135,
         "linenumber": 104,
@@ -952,6 +1088,7 @@
         "orginal_code": "        String path = String.format(\"/sections/%s/addTask\", section);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 136,
         "linenumber": 104,
@@ -959,6 +1096,7 @@
         "orginal_code": "        String path = String.format(\"/sections/%s/addTask\", section);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 137,
         "linenumber": 31,
@@ -966,6 +1104,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/addDependencies\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 138,
         "linenumber": 31,
@@ -973,6 +1112,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/addDependencies\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/AttachmentsBase.java",
         "id": 139,
         "linenumber": 78,
@@ -980,6 +1120,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/attachments\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/AttachmentsBase.java",
         "id": 140,
         "linenumber": 78,
@@ -987,6 +1128,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/attachments\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamMembershipsBase.java",
         "id": 141,
         "linenumber": 86,
@@ -994,6 +1136,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/team_memberships\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamMembershipsBase.java",
         "id": 142,
         "linenumber": 86,
@@ -1001,6 +1144,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/team_memberships\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 143,
         "linenumber": 633,
@@ -1008,6 +1152,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/tasks/search\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 144,
         "linenumber": 633,
@@ -1015,6 +1160,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/tasks/search\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectStatuses.java",
         "id": 145,
         "linenumber": 24,
@@ -1022,6 +1168,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/project_statuses\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectStatuses.java",
         "id": 146,
         "linenumber": 24,
@@ -1029,6 +1176,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/project_statuses\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 147,
         "linenumber": 217,
@@ -1036,6 +1184,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/addCustomFieldSetting\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 148,
         "linenumber": 217,
@@ -1043,6 +1192,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/addCustomFieldSetting\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 149,
         "linenumber": 515,
@@ -1050,6 +1200,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/removeFollowers\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 150,
         "linenumber": 515,
@@ -1057,6 +1208,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/removeFollowers\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamMembershipsBase.java",
         "id": 151,
         "linenumber": 31,
@@ -1064,6 +1216,7 @@
         "orginal_code": "            String path = \"/team_memberships/{team_membership_gid}\".replace(\"{team_membership_gid}\", teamMembershipGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamMembershipsBase.java",
         "id": 152,
         "linenumber": 31,
@@ -1071,6 +1224,7 @@
         "orginal_code": "            String path = \"/team_memberships/{team_membership_gid}\".replace(\"{team_membership_gid}\", teamMembershipGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tags.java",
         "id": 153,
         "linenumber": 115,
@@ -1078,6 +1232,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/tags\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tags.java",
         "id": 154,
         "linenumber": 115,
@@ -1085,6 +1240,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/tags\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 155,
         "linenumber": 106,
@@ -1092,6 +1248,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 156,
         "linenumber": 106,
@@ -1099,6 +1256,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 157,
         "linenumber": 91,
@@ -1106,6 +1264,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 158,
         "linenumber": 91,
@@ -1113,6 +1272,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 159,
         "linenumber": 75,
@@ -1120,6 +1280,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/addFollowers\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 160,
         "linenumber": 75,
@@ -1127,6 +1288,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/addFollowers\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 161,
         "linenumber": 121,
@@ -1134,6 +1296,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/sections\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 162,
         "linenumber": 121,
@@ -1141,6 +1304,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/sections\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 163,
         "linenumber": 364,
@@ -1148,6 +1312,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/removeCustomFieldSetting\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 164,
         "linenumber": 364,
@@ -1155,6 +1320,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/removeCustomFieldSetting\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectStatusesBase.java",
         "id": 165,
         "linenumber": 31,
@@ -1162,6 +1328,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/project_statuses\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectStatusesBase.java",
         "id": 166,
         "linenumber": 31,
@@ -1169,6 +1336,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/project_statuses\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 167,
         "linenumber": 337,
@@ -1176,6 +1344,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/addProject\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 168,
         "linenumber": 337,
@@ -1183,6 +1352,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/addProject\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 169,
         "linenumber": 89,
@@ -1190,6 +1360,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s/removeUser\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 170,
         "linenumber": 89,
@@ -1197,6 +1368,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s/removeUser\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 171,
         "linenumber": 167,
@@ -1204,6 +1376,7 @@
         "orginal_code": "            String path = \"/sections/{section_gid}\".replace(\"{section_gid}\", sectionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 172,
         "linenumber": 167,
@@ -1211,6 +1384,7 @@
         "orginal_code": "            String path = \"/sections/{section_gid}\".replace(\"{section_gid}\", sectionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamsBase.java",
         "id": 173,
         "linenumber": 106,
@@ -1218,6 +1392,7 @@
         "orginal_code": "            String path = \"/organizations/{workspace_gid}/teams\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamsBase.java",
         "id": 174,
         "linenumber": 106,
@@ -1225,6 +1400,7 @@
         "orginal_code": "            String path = \"/organizations/{workspace_gid}/teams\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 175,
         "linenumber": 287,
@@ -1232,6 +1408,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/addFollowers\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 176,
         "linenumber": 287,
@@ -1239,6 +1416,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/addFollowers\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 177,
         "linenumber": 140,
@@ -1246,6 +1424,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/items\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 178,
         "linenumber": 140,
@@ -1253,6 +1432,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/items\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 179,
         "linenumber": 45,
@@ -1260,6 +1440,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/projects\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 180,
         "linenumber": 45,
@@ -1267,6 +1448,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/projects\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 181,
         "linenumber": 36,
@@ -1274,6 +1456,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/sections\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 182,
         "linenumber": 36,
@@ -1281,6 +1464,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/sections\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 183,
         "linenumber": 116,
@@ -1288,6 +1472,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/removeUser\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 184,
         "linenumber": 116,
@@ -1295,6 +1480,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/removeUser\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 185,
         "linenumber": 24,
@@ -1302,6 +1488,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/sections\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 186,
         "linenumber": 24,
@@ -1309,6 +1496,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/sections\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 187,
         "linenumber": 193,
@@ -1316,6 +1504,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/addMembers\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 188,
         "linenumber": 193,
@@ -1323,6 +1512,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/addMembers\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UsersBase.java",
         "id": 189,
         "linenumber": 133,
@@ -1330,6 +1520,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/users\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UsersBase.java",
         "id": 190,
         "linenumber": 133,
@@ -1337,6 +1528,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/users\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspacesBase.java",
         "id": 191,
         "linenumber": 100,
@@ -1344,6 +1536,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/removeUser\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspacesBase.java",
         "id": 192,
         "linenumber": 100,
@@ -1351,6 +1544,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/removeUser\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 193,
         "linenumber": 407,
@@ -1358,6 +1552,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/removeMembers\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 194,
         "linenumber": 407,
@@ -1365,6 +1560,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/removeMembers\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspacesBase.java",
         "id": 195,
         "linenumber": 53,
@@ -1372,6 +1568,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspacesBase.java",
         "id": 196,
         "linenumber": 53,
@@ -1379,6 +1576,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 197,
         "linenumber": 419,
@@ -1386,6 +1584,7 @@
         "orginal_code": "            String path = \"/tags/{tag_gid}/tasks\".replace(\"{tag_gid}\", tagGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 198,
         "linenumber": 419,
@@ -1393,6 +1592,7 @@
         "orginal_code": "            String path = \"/tags/{tag_gid}/tasks\".replace(\"{tag_gid}\", tagGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 199,
         "linenumber": 76,
@@ -1400,6 +1600,7 @@
         "orginal_code": "            String path = \"/tags/{tag_gid}\".replace(\"{tag_gid}\", tagGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 200,
         "linenumber": 76,
@@ -1407,6 +1608,7 @@
         "orginal_code": "            String path = \"/tags/{tag_gid}\".replace(\"{tag_gid}\", tagGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 201,
         "linenumber": 393,
@@ -1414,6 +1616,7 @@
         "orginal_code": "            String path = \"/sections/{section_gid}/tasks\".replace(\"{section_gid}\", sectionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 202,
         "linenumber": 393,
@@ -1421,6 +1624,7 @@
         "orginal_code": "            String path = \"/sections/{section_gid}/tasks\".replace(\"{section_gid}\", sectionGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 203,
         "linenumber": 441,
@@ -1428,6 +1632,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/stories\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 204,
         "linenumber": 441,
@@ -1435,6 +1640,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/stories\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 205,
         "linenumber": 224,
@@ -1442,6 +1648,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/dependents\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 206,
         "linenumber": 224,
@@ -1449,6 +1656,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/dependents\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 207,
         "linenumber": 154,
@@ -1456,6 +1664,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/tasks\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 208,
         "linenumber": 154,
@@ -1463,6 +1672,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/tasks\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 209,
         "linenumber": 182,
@@ -1470,6 +1680,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/removeCustomFieldSetting\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 210,
         "linenumber": 182,
@@ -1477,6 +1688,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/removeCustomFieldSetting\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 211,
         "linenumber": 230,
@@ -1484,6 +1696,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/dependencies\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 212,
         "linenumber": 230,
@@ -1491,6 +1704,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/dependencies\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 213,
         "linenumber": 229,
@@ -1498,6 +1712,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/removeCustomFieldSetting\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 214,
         "linenumber": 229,
@@ -1505,6 +1720,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/removeCustomFieldSetting\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 215,
         "linenumber": 152,
@@ -1512,6 +1728,7 @@
         "orginal_code": "            String path = \"/custom_fields/{custom_field_gid}/enum_options/insert\".replace(\"{custom_field_gid}\", customFieldGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 216,
         "linenumber": 152,
@@ -1519,6 +1736,7 @@
         "orginal_code": "            String path = \"/custom_fields/{custom_field_gid}/enum_options/insert\".replace(\"{custom_field_gid}\", customFieldGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 217,
         "linenumber": 59,
@@ -1526,6 +1744,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s/projects\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 218,
         "linenumber": 59,
@@ -1533,6 +1752,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s/projects\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StoriesBase.java",
         "id": 219,
         "linenumber": 31,
@@ -1540,6 +1760,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/stories\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StoriesBase.java",
         "id": 220,
         "linenumber": 31,
@@ -1547,6 +1768,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/stories\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WebhooksBase.java",
         "id": 221,
         "linenumber": 125,
@@ -1554,6 +1776,7 @@
         "orginal_code": "            String path = \"/webhooks/{webhook_gid}\".replace(\"{webhook_gid}\", webhookGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WebhooksBase.java",
         "id": 222,
         "linenumber": 125,
@@ -1561,6 +1784,7 @@
         "orginal_code": "            String path = \"/webhooks/{webhook_gid}\".replace(\"{webhook_gid}\", webhookGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 223,
         "linenumber": 385,
@@ -1568,6 +1792,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/removeFollowers\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 224,
         "linenumber": 385,
@@ -1575,6 +1800,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/removeFollowers\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Jobs.java",
         "id": 225,
         "linenumber": 21,
@@ -1582,6 +1808,7 @@
         "orginal_code": "        String path = String.format(\"/jobs/%s\", job);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Jobs.java",
         "id": 226,
         "linenumber": 21,
@@ -1589,6 +1816,7 @@
         "orginal_code": "        String path = String.format(\"/jobs/%s\", job);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 227,
         "linenumber": 60,
@@ -1596,6 +1824,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 228,
         "linenumber": 60,
@@ -1603,6 +1832,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 229,
         "linenumber": 49,
@@ -1610,6 +1840,7 @@
         "orginal_code": "        String path = String.format(\"/users/%s/teams\", user);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 230,
         "linenumber": 49,
@@ -1617,6 +1848,7 @@
         "orginal_code": "        String path = String.format(\"/users/%s/teams\", user);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 231,
         "linenumber": 128,
@@ -1624,6 +1856,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/custom_fields\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 232,
         "linenumber": 128,
@@ -1631,6 +1864,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/custom_fields\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StatusUpdatesBase.java",
         "id": 233,
         "linenumber": 78,
@@ -1638,6 +1872,7 @@
         "orginal_code": "            String path = \"/status_updates/{status_gid}\".replace(\"{status_gid}\", statusGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StatusUpdatesBase.java",
         "id": 234,
         "linenumber": 78,
@@ -1645,6 +1880,7 @@
         "orginal_code": "            String path = \"/status_updates/{status_gid}\".replace(\"{status_gid}\", statusGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Stories.java",
         "id": 235,
         "linenumber": 50,
@@ -1652,6 +1888,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/stories\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Stories.java",
         "id": 236,
         "linenumber": 50,
@@ -1659,6 +1896,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/stories\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 237,
         "linenumber": 122,
@@ -1666,6 +1904,7 @@
         "orginal_code": "        String path = String.format(\"/tags/%s/tasks\", tag);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 238,
         "linenumber": 122,
@@ -1673,6 +1912,7 @@
         "orginal_code": "        String path = String.format(\"/tags/%s/tasks\", tag);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 239,
         "linenumber": 141,
@@ -1680,6 +1920,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s/projects\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 240,
         "linenumber": 141,
@@ -1687,6 +1928,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s/projects\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldSettingsBase.java",
         "id": 241,
         "linenumber": 33,
@@ -1694,6 +1936,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/custom_field_settings\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldSettingsBase.java",
         "id": 242,
         "linenumber": 33,
@@ -1701,6 +1944,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/custom_field_settings\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tags.java",
         "id": 243,
         "linenumber": 46,
@@ -1708,6 +1952,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/tags\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tags.java",
         "id": 244,
         "linenumber": 46,
@@ -1715,6 +1960,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/tags\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 245,
         "linenumber": 82,
@@ -1722,6 +1968,7 @@
         "orginal_code": "            String path = \"/custom_fields/{custom_field_gid}\".replace(\"{custom_field_gid}\", customFieldGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 246,
         "linenumber": 82,
@@ -1729,6 +1976,7 @@
         "orginal_code": "            String path = \"/custom_fields/{custom_field_gid}\".replace(\"{custom_field_gid}\", customFieldGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/dispatcher/MockDispatcher.java",
         "id": 247,
         "linenumber": 109,
@@ -1736,6 +1984,7 @@
         "orginal_code": "            String[] params = components[1].split(\"&\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/dispatcher/MockDispatcher.java",
         "id": 248,
         "linenumber": 109,
@@ -1743,6 +1992,7 @@
         "orginal_code": "            String[] params = components[1].split(\"&\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/dispatcher/MockDispatcher.java",
         "id": 249,
         "linenumber": 109,
@@ -1750,6 +2000,7 @@
         "orginal_code": "            String[] params = components[1].split(\"&\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/dispatcher/MockDispatcher.java",
         "id": 250,
         "linenumber": 109,
@@ -1757,6 +2008,7 @@
         "orginal_code": "            String[] params = components[1].split(\"&\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Users.java",
         "id": 251,
         "linenumber": 50,
@@ -1764,6 +2016,7 @@
         "orginal_code": "        String path = String.format(\"/users/%s/favorites\", user);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Users.java",
         "id": 252,
         "linenumber": 50,
@@ -1771,6 +2024,7 @@
         "orginal_code": "        String path = String.format(\"/users/%s/favorites\", user);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 253,
         "linenumber": 279,
@@ -1778,6 +2032,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 254,
         "linenumber": 279,
@@ -1785,6 +2040,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 255,
         "linenumber": 38,
@@ -1792,6 +2048,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 256,
         "linenumber": 38,
@@ -1799,6 +2056,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StoriesBase.java",
         "id": 257,
         "linenumber": 53,
@@ -1806,6 +2064,7 @@
         "orginal_code": "            String path = \"/stories/{story_gid}\".replace(\"{story_gid}\", storyGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StoriesBase.java",
         "id": 258,
         "linenumber": 53,
@@ -1813,6 +2072,7 @@
         "orginal_code": "            String path = \"/stories/{story_gid}\".replace(\"{story_gid}\", storyGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspaceMembershipsBase.java",
         "id": 259,
         "linenumber": 82,
@@ -1820,6 +2080,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/workspace_memberships\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspaceMembershipsBase.java",
         "id": 260,
         "linenumber": 82,
@@ -1827,6 +2088,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/workspace_memberships\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Stories.java",
         "id": 261,
         "linenumber": 34,
@@ -1834,6 +2096,7 @@
         "orginal_code": "        String path = String.format(\"/stories/%s\", story);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Stories.java",
         "id": 262,
         "linenumber": 34,
@@ -1841,6 +2104,7 @@
         "orginal_code": "        String path = String.format(\"/stories/%s\", story);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 263,
         "linenumber": 429,
@@ -1848,6 +2112,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 264,
         "linenumber": 429,
@@ -1855,6 +2120,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UsersBase.java",
         "id": 265,
         "linenumber": 109,
@@ -1862,6 +2128,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/users\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UsersBase.java",
         "id": 266,
         "linenumber": 109,
@@ -1869,6 +2136,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/users\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamsBase.java",
         "id": 267,
         "linenumber": 31,
@@ -1876,6 +2144,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/addUser\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamsBase.java",
         "id": 268,
         "linenumber": 31,
@@ -1883,6 +2152,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/addUser\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 269,
         "linenumber": 259,
@@ -1890,6 +2160,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/projects\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 270,
         "linenumber": 259,
@@ -1897,6 +2168,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/projects\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/UserTaskLists.java",
         "id": 271,
         "linenumber": 64,
@@ -1904,6 +2176,7 @@
         "orginal_code": "        String path = String.format(\"/user_task_lists/%s/tasks\", userTaskList);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/UserTaskLists.java",
         "id": 272,
         "linenumber": 64,
@@ -1911,6 +2184,7 @@
         "orginal_code": "        String path = String.format(\"/user_task_lists/%s/tasks\", userTaskList);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 273,
         "linenumber": 69,
@@ -1918,6 +2192,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 274,
         "linenumber": 69,
@@ -1925,6 +2200,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldSettingsBase.java",
         "id": 275,
         "linenumber": 59,
@@ -1932,6 +2208,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/custom_field_settings\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldSettingsBase.java",
         "id": 276,
         "linenumber": 59,
@@ -1939,6 +2216,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/custom_field_settings\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectMembershipsBase.java",
         "id": 277,
         "linenumber": 56,
@@ -1946,6 +2224,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/project_memberships\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectMembershipsBase.java",
         "id": 278,
         "linenumber": 56,
@@ -1953,6 +2232,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/project_memberships\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/requests/Request.java",
         "id": 279,
         "linenumber": 197,
@@ -1960,6 +2240,7 @@
         "orginal_code": "                String message = String.format(\"This request is affected by the \\\"%s\\\" deprecation. \" +"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/requests/Request.java",
         "id": 280,
         "linenumber": 197,
@@ -1967,6 +2248,7 @@
         "orginal_code": "                String message = String.format(\"This request is affected by the \\\"%s\\\" deprecation. \" +"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/requests/Request.java",
         "id": 281,
         "linenumber": 197,
@@ -1974,6 +2256,7 @@
         "orginal_code": "                String message = String.format(\"This request is affected by the \\\"%s\\\" deprecation. \" +"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/requests/Request.java",
         "id": 282,
         "linenumber": 197,
@@ -1981,6 +2264,7 @@
         "orginal_code": "                String message = String.format(\"This request is affected by the \\\"%s\\\" deprecation. \" +"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/requests/Request.java",
         "id": 283,
         "linenumber": 197,
@@ -1988,6 +2272,7 @@
         "orginal_code": "                String message = String.format(\"This request is affected by the \\\"%s\\\" deprecation. \" +"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/requests/Request.java",
         "id": 284,
         "linenumber": 197,
@@ -1995,6 +2280,7 @@
         "orginal_code": "                String message = String.format(\"This request is affected by the \\\"%s\\\" deprecation. \" +"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/requests/Request.java",
         "id": 285,
         "linenumber": 197,
@@ -2002,6 +2288,7 @@
         "orginal_code": "                String message = String.format(\"This request is affected by the \\\"%s\\\" deprecation. \" +"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 286,
         "linenumber": 123,
@@ -2009,6 +2296,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/sections/insert\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 287,
         "linenumber": 123,
@@ -2016,6 +2304,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/sections/insert\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 288,
         "linenumber": 182,
@@ -2023,6 +2312,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/duplicate\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 289,
         "linenumber": 182,
@@ -2030,6 +2320,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/duplicate\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 290,
         "linenumber": 84,
@@ -2037,6 +2328,7 @@
         "orginal_code": "        String path = String.format(\"/custom_fields/%s\", customField);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 291,
         "linenumber": 84,
@@ -2044,6 +2336,7 @@
         "orginal_code": "        String path = String.format(\"/custom_fields/%s\", customField);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 292,
         "linenumber": 559,
@@ -2051,6 +2344,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/removeTag\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 293,
         "linenumber": 559,
@@ -2058,6 +2352,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/removeTag\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 294,
         "linenumber": 116,
@@ -2065,6 +2360,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 295,
         "linenumber": 116,
@@ -2072,6 +2368,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectMemberships.java",
         "id": 296,
         "linenumber": 22,
@@ -2079,6 +2376,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/project_memberships\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectMemberships.java",
         "id": 297,
         "linenumber": 22,
@@ -2086,6 +2384,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/project_memberships\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectBriefsBase.java",
         "id": 298,
         "linenumber": 53,
@@ -2093,6 +2392,7 @@
         "orginal_code": "            String path = \"/project_briefs/{project_brief_gid}\".replace(\"{project_brief_gid}\", projectBriefGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectBriefsBase.java",
         "id": 299,
         "linenumber": 53,
@@ -2100,6 +2400,7 @@
         "orginal_code": "            String path = \"/project_briefs/{project_brief_gid}\".replace(\"{project_brief_gid}\", projectBriefGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 300,
         "linenumber": 97,
@@ -2107,6 +2408,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 301,
         "linenumber": 97,
@@ -2114,6 +2416,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFieldSettings.java",
         "id": 302,
         "linenumber": 33,
@@ -2121,6 +2424,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/custom_field_settings\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFieldSettings.java",
         "id": 303,
         "linenumber": 33,
@@ -2128,6 +2432,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/custom_field_settings\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 304,
         "linenumber": 120,
@@ -2135,6 +2440,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/removeItem\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 305,
         "linenumber": 120,
@@ -2142,6 +2448,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/removeItem\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 306,
         "linenumber": 80,
@@ -2149,6 +2456,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 307,
         "linenumber": 80,
@@ -2156,6 +2464,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 308,
         "linenumber": 256,
@@ -2163,6 +2472,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/dependents\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 309,
         "linenumber": 256,
@@ -2170,6 +2480,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/dependents\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UsersBase.java",
         "id": 310,
         "linenumber": 33,
@@ -2177,6 +2488,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}/favorites\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UsersBase.java",
         "id": 311,
         "linenumber": 33,
@@ -2184,6 +2496,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}/favorites\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TimePeriodsBase.java",
         "id": 312,
         "linenumber": 31,
@@ -2191,6 +2504,7 @@
         "orginal_code": "            String path = \"/time_periods/{time_period_gid}\".replace(\"{time_period_gid}\", timePeriodGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TimePeriodsBase.java",
         "id": 313,
         "linenumber": 31,
@@ -2198,6 +2512,7 @@
         "orginal_code": "            String path = \"/time_periods/{time_period_gid}\".replace(\"{time_period_gid}\", timePeriodGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 314,
         "linenumber": 33,
@@ -2205,6 +2520,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/typeahead\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 315,
         "linenumber": 33,
@@ -2212,6 +2528,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/typeahead\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 316,
         "linenumber": 36,
@@ -2219,6 +2536,7 @@
         "orginal_code": "        String path = String.format(\"/custom_fields/%s\", customField);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 317,
         "linenumber": 36,
@@ -2226,6 +2544,7 @@
         "orginal_code": "        String path = String.format(\"/custom_fields/%s\", customField);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 318,
         "linenumber": 144,
@@ -2233,6 +2552,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/removeMembers\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 319,
         "linenumber": 144,
@@ -2240,6 +2560,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/removeMembers\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/GoalsBase.java",
         "id": 320,
         "linenumber": 347,
@@ -2247,6 +2568,7 @@
         "orginal_code": "            String path = \"/goals/{goal_gid}\".replace(\"{goal_gid}\", goalGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/GoalsBase.java",
         "id": 321,
         "linenumber": 347,
@@ -2254,6 +2576,7 @@
         "orginal_code": "            String path = \"/goals/{goal_gid}\".replace(\"{goal_gid}\", goalGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Stories.java",
         "id": 322,
         "linenumber": 64,
@@ -2261,6 +2584,7 @@
         "orginal_code": "        String path = String.format(\"/stories/%s\", story);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Stories.java",
         "id": 323,
         "linenumber": 64,
@@ -2268,6 +2592,7 @@
         "orginal_code": "        String path = String.format(\"/stories/%s\", story);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 324,
         "linenumber": 116,
@@ -2275,6 +2600,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/projects\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 325,
         "linenumber": 116,
@@ -2282,6 +2608,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/projects\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 326,
         "linenumber": 200,
@@ -2289,6 +2616,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/tasks/search\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 327,
         "linenumber": 200,
@@ -2296,6 +2624,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/tasks/search\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/PortfolioMemberships.java",
         "id": 328,
         "linenumber": 45,
@@ -2303,6 +2632,7 @@
         "orginal_code": "        String path = String.format(\"/portfolio_memberships/%s\", portfolioMembership);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/PortfolioMemberships.java",
         "id": 329,
         "linenumber": 45,
@@ -2310,6 +2640,7 @@
         "orginal_code": "        String path = String.format(\"/portfolio_memberships/%s\", portfolioMembership);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/GoalsBase.java",
         "id": 330,
         "linenumber": 162,
@@ -2317,6 +2648,7 @@
         "orginal_code": "            String path = \"/goals/{goal_gid}\".replace(\"{goal_gid}\", goalGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/GoalsBase.java",
         "id": 331,
         "linenumber": 162,
@@ -2324,6 +2656,7 @@
         "orginal_code": "            String path = \"/goals/{goal_gid}\".replace(\"{goal_gid}\", goalGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 332,
         "linenumber": 48,
@@ -2331,6 +2664,7 @@
         "orginal_code": "        String path = String.format(\"/sections/%s\", section);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 333,
         "linenumber": 48,
@@ -2338,6 +2672,7 @@
         "orginal_code": "        String path = String.format(\"/sections/%s\", section);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 334,
         "linenumber": 51,
@@ -2345,6 +2680,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/addFollowers\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 335,
         "linenumber": 51,
@@ -2352,6 +2688,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/addFollowers\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspaceMembershipsBase.java",
         "id": 336,
         "linenumber": 55,
@@ -2359,6 +2696,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}/workspace_memberships\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspaceMembershipsBase.java",
         "id": 337,
         "linenumber": 55,
@@ -2366,6 +2704,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}/workspace_memberships\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 338,
         "linenumber": 184,
@@ -2373,6 +2712,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 339,
         "linenumber": 184,
@@ -2380,6 +2720,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectStatuses.java",
         "id": 340,
         "linenumber": 62,
@@ -2387,6 +2728,7 @@
         "orginal_code": "        String path = String.format(\"/project_statuses/%s\", projectStatus);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectStatuses.java",
         "id": 341,
         "linenumber": 62,
@@ -2394,6 +2736,7 @@
         "orginal_code": "        String path = String.format(\"/project_statuses/%s\", projectStatus);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 342,
         "linenumber": 141,
@@ -2401,6 +2744,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/subtasks\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 343,
         "linenumber": 141,
@@ -2408,6 +2752,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/subtasks\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 344,
         "linenumber": 69,
@@ -2415,6 +2760,7 @@
         "orginal_code": "        String path = String.format(\"/sections/%s\", section);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 345,
         "linenumber": 69,
@@ -2422,6 +2768,7 @@
         "orginal_code": "        String path = String.format(\"/sections/%s\", section);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 346,
         "linenumber": 367,
@@ -2429,6 +2776,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/tasks\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 347,
         "linenumber": 367,
@@ -2436,6 +2784,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/tasks\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 348,
         "linenumber": 164,
@@ -2443,6 +2792,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 349,
         "linenumber": 164,
@@ -2450,6 +2800,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 350,
         "linenumber": 181,
@@ -2457,6 +2808,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/tags\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 351,
         "linenumber": 181,
@@ -2464,6 +2816,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/tags\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 352,
         "linenumber": 35,
@@ -2471,6 +2824,7 @@
         "orginal_code": "        String path = String.format(\"/organizations/%s/teams\", organization);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 353,
         "linenumber": 35,
@@ -2478,6 +2832,7 @@
         "orginal_code": "        String path = String.format(\"/organizations/%s/teams\", organization);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 354,
         "linenumber": 250,
@@ -2485,6 +2840,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/addDependents\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 355,
         "linenumber": 250,
@@ -2492,6 +2848,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/addDependents\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 356,
         "linenumber": 61,
@@ -2499,6 +2856,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s/users\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 357,
         "linenumber": 61,
@@ -2506,6 +2864,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s/users\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamsBase.java",
         "id": 358,
         "linenumber": 158,
@@ -2513,6 +2872,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/removeUser\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamsBase.java",
         "id": 359,
         "linenumber": 158,
@@ -2520,6 +2880,7 @@
         "orginal_code": "            String path = \"/teams/{team_gid}/removeUser\".replace(\"{team_gid}\", teamGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 360,
         "linenumber": 90,
@@ -2527,6 +2888,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/typeahead\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 361,
         "linenumber": 90,
@@ -2534,6 +2896,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/typeahead\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 362,
         "linenumber": 181,
@@ -2541,6 +2904,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/removeFollowers\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 363,
         "linenumber": 181,
@@ -2548,6 +2912,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/removeFollowers\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 364,
         "linenumber": 27,
@@ -2555,6 +2920,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/typeahead\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 365,
         "linenumber": 27,
@@ -2562,6 +2928,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/typeahead\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectBriefsBase.java",
         "id": 366,
         "linenumber": 31,
@@ -2569,6 +2936,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/project_briefs\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectBriefsBase.java",
         "id": 367,
         "linenumber": 31,
@@ -2576,6 +2944,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/project_briefs\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WebhooksBase.java",
         "id": 368,
         "linenumber": 74,
@@ -2583,6 +2952,7 @@
         "orginal_code": "            String path = \"/webhooks/{webhook_gid}\".replace(\"{webhook_gid}\", webhookGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WebhooksBase.java",
         "id": 369,
         "linenumber": 74,
@@ -2590,6 +2960,7 @@
         "orginal_code": "            String path = \"/webhooks/{webhook_gid}\".replace(\"{webhook_gid}\", webhookGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspacesBase.java",
         "id": 370,
         "linenumber": 31,
@@ -2597,6 +2968,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/addUser\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspacesBase.java",
         "id": 371,
         "linenumber": 31,
@@ -2604,6 +2976,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/addUser\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 372,
         "linenumber": 145,
@@ -2611,6 +2984,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/sections/insert\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 373,
         "linenumber": 145,
@@ -2618,6 +2992,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/sections/insert\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 374,
         "linenumber": 71,
@@ -2625,6 +3000,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 375,
         "linenumber": 71,
@@ -2632,6 +3008,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 376,
         "linenumber": 48,
@@ -2639,6 +3016,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/custom_fields\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 377,
         "linenumber": 48,
@@ -2646,6 +3024,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/custom_fields\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/PortfolioMemberships.java",
         "id": 378,
         "linenumber": 33,
@@ -2653,6 +3032,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/portfolio_memberships\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/PortfolioMemberships.java",
         "id": 379,
         "linenumber": 33,
@@ -2660,6 +3040,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/portfolio_memberships\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tags.java",
         "id": 380,
         "linenumber": 92,
@@ -2667,6 +3048,7 @@
         "orginal_code": "        String path = String.format(\"/tags/%s\", tag);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tags.java",
         "id": 381,
         "linenumber": 92,
@@ -2674,6 +3056,7 @@
         "orginal_code": "        String path = String.format(\"/tags/%s\", tag);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectStatuses.java",
         "id": 382,
         "linenumber": 36,
@@ -2681,6 +3064,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/project_statuses\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectStatuses.java",
         "id": 383,
         "linenumber": 36,
@@ -2688,6 +3072,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/project_statuses\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 384,
         "linenumber": 68,
@@ -2695,6 +3080,7 @@
         "orginal_code": "        String path = String.format(\"/custom_fields/%s\", customField);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 385,
         "linenumber": 68,
@@ -2702,6 +3088,7 @@
         "orginal_code": "        String path = String.format(\"/custom_fields/%s\", customField);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 386,
         "linenumber": 204,
@@ -2709,6 +3096,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectsBase.java",
         "id": 387,
         "linenumber": 204,
@@ -2716,6 +3104,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StoriesBase.java",
         "id": 388,
         "linenumber": 77,
@@ -2723,6 +3112,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/stories\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/StoriesBase.java",
         "id": 389,
         "linenumber": 77,
@@ -2730,6 +3120,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/stories\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 390,
         "linenumber": 22,
@@ -2737,6 +3128,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 391,
         "linenumber": 22,
@@ -2744,6 +3136,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 392,
         "linenumber": 76,
@@ -2751,6 +3144,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s/addUser\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Teams.java",
         "id": 393,
         "linenumber": 76,
@@ -2758,6 +3152,7 @@
         "orginal_code": "        String path = String.format(\"/teams/%s/addUser\", team);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TypeaheadBase.java",
         "id": 394,
         "linenumber": 35,
@@ -2765,6 +3160,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/typeahead\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TypeaheadBase.java",
         "id": 395,
         "linenumber": 35,
@@ -2772,6 +3168,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}/typeahead\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 396,
         "linenumber": 537,
@@ -2779,6 +3176,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/removeProject\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 397,
         "linenumber": 537,
@@ -2786,6 +3184,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/removeProject\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 398,
         "linenumber": 53,
@@ -2793,6 +3192,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/addDependents\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 399,
         "linenumber": 53,
@@ -2800,6 +3200,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/addDependents\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Attachments.java",
         "id": 400,
         "linenumber": 66,
@@ -2807,6 +3208,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/attachments\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Attachments.java",
         "id": 401,
         "linenumber": 66,
@@ -2814,6 +3216,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/attachments\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 402,
         "linenumber": 257,
@@ -2821,6 +3224,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/removeMembers\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 403,
         "linenumber": 257,
@@ -2828,6 +3232,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/removeMembers\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 404,
         "linenumber": 134,
@@ -2835,6 +3240,7 @@
         "orginal_code": "        String path = String.format(\"/sections/%s/tasks\", section);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 405,
         "linenumber": 134,
@@ -2842,6 +3248,7 @@
         "orginal_code": "        String path = String.format(\"/sections/%s/tasks\", section);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 406,
         "linenumber": 97,
@@ -2849,6 +3256,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/addProject\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 407,
         "linenumber": 97,
@@ -2856,6 +3264,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/addProject\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/GoalsBase.java",
         "id": 408,
         "linenumber": 140,
@@ -2863,6 +3272,7 @@
         "orginal_code": "            String path = \"/goals/{goal_gid}\".replace(\"{goal_gid}\", goalGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/GoalsBase.java",
         "id": 409,
         "linenumber": 140,
@@ -2870,6 +3280,7 @@
         "orginal_code": "            String path = \"/goals/{goal_gid}\".replace(\"{goal_gid}\", goalGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 410,
         "linenumber": 262,
@@ -2877,6 +3288,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/removeDependencies\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 411,
         "linenumber": 262,
@@ -2884,6 +3296,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/removeDependencies\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 412,
         "linenumber": 300,
@@ -2891,6 +3304,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/removeFollowers\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 413,
         "linenumber": 300,
@@ -2898,6 +3312,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/removeFollowers\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 414,
         "linenumber": 388,
@@ -2905,6 +3320,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/removeTag\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 415,
         "linenumber": 388,
@@ -2912,6 +3328,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/removeTag\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectBriefsBase.java",
         "id": 416,
         "linenumber": 97,
@@ -2919,6 +3336,7 @@
         "orginal_code": "            String path = \"/project_briefs/{project_brief_gid}\".replace(\"{project_brief_gid}\", projectBriefGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectBriefsBase.java",
         "id": 417,
         "linenumber": 97,
@@ -2926,6 +3344,7 @@
         "orginal_code": "            String path = \"/project_briefs/{project_brief_gid}\".replace(\"{project_brief_gid}\", projectBriefGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 418,
         "linenumber": 53,
@@ -2933,6 +3352,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/sections\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/SectionsBase.java",
         "id": 419,
         "linenumber": 53,
@@ -2940,6 +3360,7 @@
         "orginal_code": "            String path = \"/projects/{project_gid}/sections\".replace(\"{project_gid}\", projectGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectMemberships.java",
         "id": 420,
         "linenumber": 34,
@@ -2947,6 +3368,7 @@
         "orginal_code": "        String path = String.format(\"/project_memberships/%s\", projectMembership);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectMemberships.java",
         "id": 421,
         "linenumber": 34,
@@ -2954,6 +3376,7 @@
         "orginal_code": "        String path = String.format(\"/project_memberships/%s\", projectMembership);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 422,
         "linenumber": 235,
@@ -2961,6 +3384,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/removeItem\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfoliosBase.java",
         "id": 423,
         "linenumber": 235,
@@ -2968,6 +3392,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/removeItem\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 424,
         "linenumber": 103,
@@ -2975,6 +3400,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/addUser\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 425,
         "linenumber": 103,
@@ -2982,6 +3408,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/addUser\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Webhooks.java",
         "id": 426,
         "linenumber": 71,
@@ -2989,6 +3416,7 @@
         "orginal_code": "        String path = String.format(\"/webhooks/%s\", webhook);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Webhooks.java",
         "id": 427,
         "linenumber": 71,
@@ -2996,6 +3424,7 @@
         "orginal_code": "        String path = String.format(\"/webhooks/%s\", webhook);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 428,
         "linenumber": 132,
@@ -3003,6 +3432,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/addMembers\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 429,
         "linenumber": 132,
@@ -3010,6 +3440,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/addMembers\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 430,
         "linenumber": 188,
@@ -3017,6 +3448,7 @@
         "orginal_code": "        String path = String.format(\"/tags/%s/tasks\", tag);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 431,
         "linenumber": 188,
@@ -3024,6 +3456,7 @@
         "orginal_code": "        String path = String.format(\"/tags/%s/tasks\", tag);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tags.java",
         "id": 432,
         "linenumber": 58,
@@ -3031,6 +3464,7 @@
         "orginal_code": "        String path = String.format(\"/tags/%s\", tag);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tags.java",
         "id": 433,
         "linenumber": 58,
@@ -3038,6 +3472,7 @@
         "orginal_code": "        String path = String.format(\"/tags/%s\", tag);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 434,
         "linenumber": 707,
@@ -3045,6 +3480,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/setParent\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 435,
         "linenumber": 707,
@@ -3052,6 +3488,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/setParent\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tags.java",
         "id": 436,
         "linenumber": 77,
@@ -3059,6 +3496,7 @@
         "orginal_code": "        String path = String.format(\"/tags/%s\", tag);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tags.java",
         "id": 437,
         "linenumber": 77,
@@ -3066,6 +3504,7 @@
         "orginal_code": "        String path = String.format(\"/tags/%s\", tag);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 438,
         "linenumber": 54,
@@ -3073,6 +3512,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 439,
         "linenumber": 54,
@@ -3080,6 +3520,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 440,
         "linenumber": 88,
@@ -3087,6 +3528,7 @@
         "orginal_code": "        String path = String.format(\"/sections/%s\", section);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Sections.java",
         "id": 441,
         "linenumber": 88,
@@ -3094,6 +3536,7 @@
         "orginal_code": "        String path = String.format(\"/sections/%s\", section);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 442,
         "linenumber": 168,
@@ -3101,6 +3544,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/addFollowers\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 443,
         "linenumber": 168,
@@ -3108,6 +3552,7 @@
         "orginal_code": "        String path = String.format(\"/projects/%s/addFollowers\", project);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 444,
         "linenumber": 352,
@@ -3115,6 +3560,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/removeProject\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 445,
         "linenumber": 352,
@@ -3122,6 +3568,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/removeProject\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspaceMembershipsBase.java",
         "id": 446,
         "linenumber": 31,
@@ -3129,6 +3576,7 @@
         "orginal_code": "            String path = \"/workspace_memberships/{workspace_membership_gid}\".replace(\"{workspace_membership_gid}\", workspaceMembershipGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspaceMembershipsBase.java",
         "id": 447,
         "linenumber": 31,
@@ -3136,6 +3584,7 @@
         "orginal_code": "            String path = \"/workspace_memberships/{workspace_membership_gid}\".replace(\"{workspace_membership_gid}\", workspaceMembershipGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 448,
         "linenumber": 364,
@@ -3143,6 +3592,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/tags\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 449,
         "linenumber": 364,
@@ -3150,6 +3600,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/tags\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UsersBase.java",
         "id": 450,
         "linenumber": 57,
@@ -3157,6 +3608,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/UsersBase.java",
         "id": 451,
         "linenumber": 57,
@@ -3164,6 +3616,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/UserTaskLists.java",
         "id": 452,
         "linenumber": 36,
@@ -3171,6 +3624,7 @@
         "orginal_code": "        String path = String.format(\"/user_task_lists/%s\", userTaskList);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/UserTaskLists.java",
         "id": 453,
         "linenumber": 36,
@@ -3178,6 +3632,7 @@
         "orginal_code": "        String path = String.format(\"/user_task_lists/%s\", userTaskList);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 454,
         "linenumber": 425,
@@ -3185,6 +3640,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/stories\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 455,
         "linenumber": 425,
@@ -3192,6 +3648,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/stories\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamsBase.java",
         "id": 456,
         "linenumber": 133,
@@ -3199,6 +3656,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}/teams\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TeamsBase.java",
         "id": 457,
         "linenumber": 133,
@@ -3206,6 +3664,7 @@
         "orginal_code": "            String path = \"/users/{user_gid}/teams\".replace(\"{user_gid}\", userGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 458,
         "linenumber": 162,
@@ -3213,6 +3672,7 @@
         "orginal_code": "        String path = String.format(\"/user_task_lists/%s/tasks\", userTaskList);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 459,
         "linenumber": 162,
@@ -3220,6 +3680,7 @@
         "orginal_code": "        String path = String.format(\"/user_task_lists/%s/tasks\", userTaskList);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Users.java",
         "id": 460,
         "linenumber": 35,
@@ -3227,6 +3688,7 @@
         "orginal_code": "        String path = String.format(\"/users/%s\", user);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Users.java",
         "id": 461,
         "linenumber": 35,
@@ -3234,6 +3696,7 @@
         "orginal_code": "        String path = String.format(\"/users/%s\", user);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 462,
         "linenumber": 48,
@@ -3241,6 +3704,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/tasks\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 463,
         "linenumber": 48,
@@ -3248,6 +3712,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/tasks\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspacesBase.java",
         "id": 464,
         "linenumber": 122,
@@ -3255,6 +3720,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/WorkspacesBase.java",
         "id": 465,
         "linenumber": 122,
@@ -3262,6 +3728,7 @@
         "orginal_code": "            String path = \"/workspaces/{workspace_gid}\".replace(\"{workspace_gid}\", workspaceGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 466,
         "linenumber": 119,
@@ -3269,6 +3736,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/addTag\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 467,
         "linenumber": 119,
@@ -3276,6 +3744,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/addTag\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 468,
         "linenumber": 413,
@@ -3283,6 +3752,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/subtasks\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 469,
         "linenumber": 413,
@@ -3290,6 +3760,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/subtasks\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 470,
         "linenumber": 129,
@@ -3297,6 +3768,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/projects\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Projects.java",
         "id": 471,
         "linenumber": 129,
@@ -3304,6 +3776,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s/projects\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectStatuses.java",
         "id": 472,
         "linenumber": 48,
@@ -3311,6 +3784,7 @@
         "orginal_code": "        String path = String.format(\"/project_statuses/%s\", projectStatus);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/ProjectStatuses.java",
         "id": 473,
         "linenumber": 48,
@@ -3318,6 +3792,7 @@
         "orginal_code": "        String path = String.format(\"/project_statuses/%s\", projectStatus);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 474,
         "linenumber": 106,
@@ -3325,6 +3800,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/addItem\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Portfolios.java",
         "id": 475,
         "linenumber": 106,
@@ -3332,6 +3808,7 @@
         "orginal_code": "        String path = String.format(\"/portfolios/%s/addItem\", portfolio);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 476,
         "linenumber": 376,
@@ -3339,6 +3816,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/addTag\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Tasks.java",
         "id": 477,
         "linenumber": 376,
@@ -3346,6 +3824,7 @@
         "orginal_code": "        String path = String.format(\"/tasks/%s/addTag\", task);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/JobsBase.java",
         "id": 478,
         "linenumber": 31,
@@ -3353,6 +3832,7 @@
         "orginal_code": "            String path = \"/jobs/{job_gid}\".replace(\"{job_gid}\", jobGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/JobsBase.java",
         "id": 479,
         "linenumber": 31,
@@ -3360,6 +3840,7 @@
         "orginal_code": "            String path = \"/jobs/{job_gid}\".replace(\"{job_gid}\", jobGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectStatusesBase.java",
         "id": 480,
         "linenumber": 75,
@@ -3367,6 +3848,7 @@
         "orginal_code": "            String path = \"/project_statuses/{project_status_gid}\".replace(\"{project_status_gid}\", projectStatusGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/ProjectStatusesBase.java",
         "id": 481,
         "linenumber": 75,
@@ -3374,6 +3856,7 @@
         "orginal_code": "            String path = \"/project_statuses/{project_status_gid}\".replace(\"{project_status_gid}\", projectStatusGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 482,
         "linenumber": 104,
@@ -3381,6 +3864,7 @@
         "orginal_code": "            String path = \"/custom_fields/{custom_field_gid}\".replace(\"{custom_field_gid}\", customFieldGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/CustomFieldsBase.java",
         "id": 483,
         "linenumber": 104,
@@ -3388,6 +3872,7 @@
         "orginal_code": "            String path = \"/custom_fields/{custom_field_gid}\".replace(\"{custom_field_gid}\", customFieldGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 484,
         "linenumber": 114,
@@ -3395,6 +3880,7 @@
         "orginal_code": "        String path = String.format(\"/custom_fields/%s/enum_options/insert\", customField);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/CustomFields.java",
         "id": 485,
         "linenumber": 114,
@@ -3402,6 +3888,7 @@
         "orginal_code": "        String path = String.format(\"/custom_fields/%s/enum_options/insert\", customField);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 486,
         "linenumber": 46,
@@ -3409,6 +3896,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/Workspaces.java",
         "id": 487,
         "linenumber": 46,
@@ -3416,6 +3904,7 @@
         "orginal_code": "        String path = String.format(\"/workspaces/%s\", workspace);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfolioMembershipsBase.java",
         "id": 488,
         "linenumber": 87,
@@ -3423,6 +3912,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/portfolio_memberships\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/PortfolioMembershipsBase.java",
         "id": 489,
         "linenumber": 87,
@@ -3430,6 +3920,7 @@
         "orginal_code": "            String path = \"/portfolios/{portfolio_gid}/portfolio_memberships\".replace(\"{portfolio_gid}\", portfolioGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 490,
         "linenumber": 471,
@@ -3437,6 +3928,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/removeDependencies\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TasksBase.java",
         "id": 491,
         "linenumber": 471,
@@ -3444,6 +3936,7 @@
         "orginal_code": "            String path = \"/tasks/{task_gid}/removeDependencies\".replace(\"{task_gid}\", taskGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 492,
         "linenumber": 207,
@@ -3451,6 +3944,7 @@
         "orginal_code": "            String path = \"/tags/{tag_gid}\".replace(\"{tag_gid}\", tagGid);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Asana_java-asana/src/main/java/com/asana/resources/gen/TagsBase.java",
         "id": 493,
         "linenumber": 207,

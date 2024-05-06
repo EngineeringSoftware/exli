@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java",
         "id": 0,
         "linenumber": 23,
@@ -7,6 +8,7 @@
         "orginal_code": "      newValue = StringUtils.replace(newValue, \"\\\\r\", REPLACEMENT);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java",
         "id": 1,
         "linenumber": 23,
@@ -14,6 +16,7 @@
         "orginal_code": "      newValue = StringUtils.replace(newValue, \"\\\\r\", REPLACEMENT);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java",
         "id": 2,
         "linenumber": 23,
@@ -21,6 +24,7 @@
         "orginal_code": "      newValue = StringUtils.replace(newValue, \"\\\\r\", REPLACEMENT);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java",
         "id": 3,
         "linenumber": 21,
@@ -28,6 +32,7 @@
         "orginal_code": "      String newValue = StringUtils.replace(value, \"\\\\r\\\\n\", REPLACEMENT);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java",
         "id": 4,
         "linenumber": 21,
@@ -35,6 +40,7 @@
         "orginal_code": "      String newValue = StringUtils.replace(value, \"\\\\r\\\\n\", REPLACEMENT);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java",
         "id": 5,
         "linenumber": 21,
@@ -42,6 +48,7 @@
         "orginal_code": "      String newValue = StringUtils.replace(value, \"\\\\r\\\\n\", REPLACEMENT);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java",
         "id": 6,
         "linenumber": 22,
@@ -49,6 +56,7 @@
         "orginal_code": "      newValue = StringUtils.replace(newValue, \"\\\\n\", REPLACEMENT);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java",
         "id": 7,
         "linenumber": 22,
@@ -56,6 +64,7 @@
         "orginal_code": "      newValue = StringUtils.replace(newValue, \"\\\\n\", REPLACEMENT);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/HtmlLineBreakConverter.java",
         "id": 8,
         "linenumber": 22,
@@ -63,6 +72,7 @@
         "orginal_code": "      newValue = StringUtils.replace(newValue, \"\\\\n\", REPLACEMENT);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/netceteragroup_trema-core/src/main/java/com/netcetera/trema/core/exporting/AndroidExporter.java",
         "id": 9,
         "linenumber": 140,

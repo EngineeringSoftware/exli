@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/ExtendedEmailPublisherDescriptor.java",
         "id": 0,
         "linenumber": 498,
@@ -7,6 +8,7 @@
         "orginal_code": "        if (value.matches(\"@[A-Za-z0-9.\\\\-]+\") || Util.fixEmptyAndTrim(value)==null)"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/ExtendedEmailPublisherDescriptor.java",
         "id": 1,
         "linenumber": 498,
@@ -14,6 +16,7 @@
         "orginal_code": "        if (value.matches(\"@[A-Za-z0-9.\\\\-]+\") || Util.fixEmptyAndTrim(value)==null)"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/ExtendedEmailPublisherDescriptor.java",
         "id": 2,
         "linenumber": 498,
@@ -21,6 +24,7 @@
         "orginal_code": "        if (value.matches(\"@[A-Za-z0-9.\\\\-]+\") || Util.fixEmptyAndTrim(value)==null)"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/ExtendedEmailPublisherDescriptor.java",
         "id": 3,
         "linenumber": 498,
@@ -28,6 +32,7 @@
         "orginal_code": "        if (value.matches(\"@[A-Za-z0-9.\\\\-]+\") || Util.fixEmptyAndTrim(value)==null)"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/ExtendedEmailPublisherDescriptor.java",
         "id": 4,
         "linenumber": 498,
@@ -35,6 +40,7 @@
         "orginal_code": "        if (value.matches(\"@[A-Za-z0-9.\\\\-]+\") || Util.fixEmptyAndTrim(value)==null)"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/ExtendedEmailPublisherDescriptor.java",
         "id": 5,
         "linenumber": 498,
@@ -42,6 +48,7 @@
         "orginal_code": "        if (value.matches(\"@[A-Za-z0-9.\\\\-]+\") || Util.fixEmptyAndTrim(value)==null)"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/ExtendedEmailPublisherDescriptor.java",
         "id": 6,
         "linenumber": 498,
@@ -49,6 +56,7 @@
         "orginal_code": "        if (value.matches(\"@[A-Za-z0-9.\\\\-]+\") || Util.fixEmptyAndTrim(value)==null)"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/ExtendedEmailPublisherDescriptor.java",
         "id": 7,
         "linenumber": 498,
@@ -56,6 +64,7 @@
         "orginal_code": "        if (value.matches(\"@[A-Za-z0-9.\\\\-]+\") || Util.fixEmptyAndTrim(value)==null)"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/ExtendedEmailPublisherDescriptor.java",
         "id": 8,
         "linenumber": 498,
@@ -63,6 +72,7 @@
         "orginal_code": "        if (value.matches(\"@[A-Za-z0-9.\\\\-]+\") || Util.fixEmptyAndTrim(value)==null)"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/EmailRecipientUtils.java",
         "id": 9,
         "linenumber": 136,
@@ -70,6 +80,7 @@
         "orginal_code": "            input = input.replace(\" \", \",\");"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 10,
         "linenumber": 87,
@@ -77,6 +88,7 @@
         "orginal_code": "        if (recipients.indexOf(\"bcc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 11,
         "linenumber": 87,
@@ -84,6 +96,7 @@
         "orginal_code": "        if (recipients.indexOf(\"bcc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 12,
         "linenumber": 87,
@@ -91,6 +104,7 @@
         "orginal_code": "        if (recipients.indexOf(\"bcc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 13,
         "linenumber": 87,
@@ -98,6 +112,7 @@
         "orginal_code": "        if (recipients.indexOf(\"bcc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 14,
         "linenumber": 87,
@@ -105,6 +120,7 @@
         "orginal_code": "        if (recipients.indexOf(\"bcc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 15,
         "linenumber": 87,
@@ -112,6 +128,7 @@
         "orginal_code": "        if (recipients.indexOf(\"bcc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 16,
         "linenumber": 87,
@@ -119,6 +136,7 @@
         "orginal_code": "        if (recipients.indexOf(\"bcc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 17,
         "linenumber": 87,
@@ -126,6 +144,7 @@
         "orginal_code": "        if (recipients.indexOf(\"bcc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 18,
         "linenumber": 87,
@@ -133,6 +152,7 @@
         "orginal_code": "        if (recipients.indexOf(\"bcc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/plugins/content/AbstractEvalContent.java",
         "id": 19,
         "linenumber": 103,
@@ -140,6 +160,7 @@
         "orginal_code": "            String managedFileName = fileName.substring(8);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/plugins/content/AbstractEvalContent.java",
         "id": 20,
         "linenumber": 103,
@@ -147,6 +168,7 @@
         "orginal_code": "            String managedFileName = fileName.substring(8);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/plugins/content/AbstractEvalContent.java",
         "id": 21,
         "linenumber": 103,
@@ -154,6 +176,7 @@
         "orginal_code": "            String managedFileName = fileName.substring(8);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/plugins/content/AbstractEvalContent.java",
         "id": 22,
         "linenumber": 103,
@@ -161,6 +184,7 @@
         "orginal_code": "            String managedFileName = fileName.substring(8);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/plugins/content/AbstractEvalContent.java",
         "id": 23,
         "linenumber": 103,
@@ -168,6 +192,7 @@
         "orginal_code": "            String managedFileName = fileName.substring(8);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/EmailRecipientUtils.java",
         "id": 24,
         "linenumber": 111,
@@ -175,6 +200,7 @@
         "orginal_code": "                String message = String.format(\"Resolved %s to %s\", user.getId(), addr);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/EmailRecipientUtils.java",
         "id": 25,
         "linenumber": 111,
@@ -182,6 +208,7 @@
         "orginal_code": "                String message = String.format(\"Resolved %s to %s\", user.getId(), addr);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/plugins/content/FailedTestsContent.java",
         "id": 26,
         "linenumber": 118,
@@ -189,6 +216,7 @@
         "orginal_code": "            result.summary = String.format(\"%d tests failed.\", failCount);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 27,
         "linenumber": 89,
@@ -196,6 +224,7 @@
         "orginal_code": "        } else if (recipients.indexOf(\"cc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 28,
         "linenumber": 89,
@@ -203,6 +232,7 @@
         "orginal_code": "        } else if (recipients.indexOf(\"cc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 29,
         "linenumber": 89,
@@ -210,6 +240,7 @@
         "orginal_code": "        } else if (recipients.indexOf(\"cc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 30,
         "linenumber": 89,
@@ -217,6 +248,7 @@
         "orginal_code": "        } else if (recipients.indexOf(\"cc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 31,
         "linenumber": 89,
@@ -224,6 +256,7 @@
         "orginal_code": "        } else if (recipients.indexOf(\"cc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 32,
         "linenumber": 89,
@@ -231,6 +264,7 @@
         "orginal_code": "        } else if (recipients.indexOf(\"cc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 33,
         "linenumber": 89,
@@ -238,6 +272,7 @@
         "orginal_code": "        } else if (recipients.indexOf(\"cc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 34,
         "linenumber": 89,
@@ -245,6 +280,7 @@
         "orginal_code": "        } else if (recipients.indexOf(\"cc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 35,
         "linenumber": 89,
@@ -252,6 +288,7 @@
         "orginal_code": "        } else if (recipients.indexOf(\"cc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/RecipientListStringAnalyser.java",
         "id": 36,
         "linenumber": 89,
@@ -259,6 +296,7 @@
         "orginal_code": "        } else if (recipients.indexOf(\"cc:\", firstFoundIdx) == firstFoundIdx) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/jenkinsci_email-ext-plugin/src/main/java/hudson/plugins/emailext/plugins/content/FailedTestsContent.java",
         "id": 37,
         "linenumber": 137,

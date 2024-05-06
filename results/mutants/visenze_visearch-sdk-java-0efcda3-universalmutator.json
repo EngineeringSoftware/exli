@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 0,
         "linenumber": 34,
@@ -7,6 +8,7 @@
         "orginal_code": "        String defaultUserAgent = String.format(\"visearch-java-sdk/%s \", version);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 1,
         "linenumber": 34,
@@ -14,6 +16,7 @@
         "orginal_code": "        String defaultUserAgent = String.format(\"visearch-java-sdk/%s \", version);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 2,
         "linenumber": 35,
@@ -21,6 +24,7 @@
         "orginal_code": "        defaultUserAgent += String.format(\"%s/%s \", osName, osVersion);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 3,
         "linenumber": 35,
@@ -28,6 +32,7 @@
         "orginal_code": "        defaultUserAgent += String.format(\"%s/%s \", osName, osVersion);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 4,
         "linenumber": 35,
@@ -35,6 +40,7 @@
         "orginal_code": "        defaultUserAgent += String.format(\"%s/%s \", osName, osVersion);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 5,
         "linenumber": 42,
@@ -42,6 +48,7 @@
         "orginal_code": "        String xRequestWith = String.format(\"visearch-java-sdk/%s\", version);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 6,
         "linenumber": 42,
@@ -49,6 +56,7 @@
         "orginal_code": "        String xRequestWith = String.format(\"visearch-java-sdk/%s\", version);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 7,
         "linenumber": 36,
@@ -56,6 +64,7 @@
         "orginal_code": "        defaultUserAgent += String.format(\"%s/%s/%s/%s\", javaVMName, javaVMVersion, javaVersion, language);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 8,
         "linenumber": 36,
@@ -63,6 +72,7 @@
         "orginal_code": "        defaultUserAgent += String.format(\"%s/%s/%s/%s\", javaVMName, javaVMVersion, javaVersion, language);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 9,
         "linenumber": 36,
@@ -70,6 +80,7 @@
         "orginal_code": "        defaultUserAgent += String.format(\"%s/%s/%s/%s\", javaVMName, javaVMVersion, javaVersion, language);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 10,
         "linenumber": 36,
@@ -77,6 +88,7 @@
         "orginal_code": "        defaultUserAgent += String.format(\"%s/%s/%s/%s\", javaVMName, javaVMVersion, javaVersion, language);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/visenze_visearch-sdk-java/src/main/java/com/visenze/visearch/ClientConfig.java",
         "id": 11,
         "linenumber": 36,

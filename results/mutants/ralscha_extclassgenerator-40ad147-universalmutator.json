@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/validation/FormatValidation.java",
         "id": 0,
         "linenumber": 28,
@@ -7,6 +8,7 @@
         "orginal_code": "\t\tthis.matcher = \"/\" + regexPattern.replace(\"/\", \"\\\\/\") + \"/\";"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/validation/FormatValidation.java",
         "id": 1,
         "linenumber": 28,
@@ -14,6 +16,7 @@
         "orginal_code": "\t\tthis.matcher = \"/\" + regexPattern.replace(\"/\", \"\\\\/\") + \"/\";"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/ModelGenerator.java",
         "id": 2,
         "linenumber": 946,

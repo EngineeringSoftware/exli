@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/VersionXmlAnnotationIntrospector.java",
         "id": 0,
         "linenumber": 40,
@@ -7,6 +8,7 @@
         "orginal_code": "      if (Arrays.stream(filter.versions()).noneMatch(v -> v.equals(version))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/VersionXmlAnnotationIntrospector.java",
         "id": 1,
         "linenumber": 40,
@@ -14,6 +16,7 @@
         "orginal_code": "      if (Arrays.stream(filter.versions()).noneMatch(v -> v.equals(version))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/VersionXmlAnnotationIntrospector.java",
         "id": 2,
         "linenumber": 40,
@@ -21,6 +24,7 @@
         "orginal_code": "      if (Arrays.stream(filter.versions()).noneMatch(v -> v.equals(version))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/VersionJsonAnnotationIntrospector.java",
         "id": 3,
         "linenumber": 39,
@@ -28,6 +32,7 @@
         "orginal_code": "            if (Arrays.stream(filter.versions()).noneMatch(v -> v.equals(version))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/VersionJsonAnnotationIntrospector.java",
         "id": 4,
         "linenumber": 39,
@@ -35,6 +40,7 @@
         "orginal_code": "            if (Arrays.stream(filter.versions()).noneMatch(v -> v.equals(version))) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/VersionJsonAnnotationIntrospector.java",
         "id": 5,
         "linenumber": 39,

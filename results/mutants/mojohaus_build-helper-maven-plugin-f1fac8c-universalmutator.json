@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 0,
         "linenumber": 77,
@@ -7,6 +8,7 @@
         "orginal_code": "                qualifier = matcher.group( 9 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 1,
         "linenumber": 77,
@@ -14,6 +16,7 @@
         "orginal_code": "                qualifier = matcher.group( 9 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 2,
         "linenumber": 77,
@@ -21,6 +24,7 @@
         "orginal_code": "                qualifier = matcher.group( 9 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 3,
         "linenumber": 77,
@@ -28,6 +32,7 @@
         "orginal_code": "                qualifier = matcher.group( 9 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 4,
         "linenumber": 77,
@@ -35,6 +40,7 @@
         "orginal_code": "                qualifier = matcher.group( 9 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 5,
         "linenumber": 125,
@@ -42,6 +48,7 @@
         "orginal_code": "        if ( matcherDigits.matches() )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 6,
         "linenumber": 125,
@@ -49,6 +56,7 @@
         "orginal_code": "        if ( matcherDigits.matches() )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 7,
         "linenumber": 125,
@@ -56,6 +64,7 @@
         "orginal_code": "        if ( matcherDigits.matches() )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 8,
         "linenumber": 70,
@@ -63,6 +72,7 @@
         "orginal_code": "            if ( matcher.group( 7 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 9,
         "linenumber": 70,
@@ -70,6 +80,7 @@
         "orginal_code": "            if ( matcher.group( 7 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 10,
         "linenumber": 70,
@@ -77,6 +88,7 @@
         "orginal_code": "            if ( matcher.group( 7 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 11,
         "linenumber": 70,
@@ -84,6 +96,7 @@
         "orginal_code": "            if ( matcher.group( 7 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 12,
         "linenumber": 70,
@@ -91,6 +104,7 @@
         "orginal_code": "            if ( matcher.group( 7 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 13,
         "linenumber": 70,
@@ -98,6 +112,7 @@
         "orginal_code": "            if ( matcher.group( 7 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 14,
         "linenumber": 70,
@@ -105,6 +120,7 @@
         "orginal_code": "            if ( matcher.group( 7 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 15,
         "linenumber": 70,
@@ -112,6 +128,7 @@
         "orginal_code": "            if ( matcher.group( 7 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 16,
         "linenumber": 70,
@@ -119,6 +136,7 @@
         "orginal_code": "            if ( matcher.group( 7 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 17,
         "linenumber": 103,
@@ -126,6 +144,7 @@
         "orginal_code": "            String minorString = matcher.group( 4 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 18,
         "linenumber": 103,
@@ -133,6 +152,7 @@
         "orginal_code": "            String minorString = matcher.group( 4 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 19,
         "linenumber": 103,
@@ -140,6 +160,7 @@
         "orginal_code": "            String minorString = matcher.group( 4 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 20,
         "linenumber": 103,
@@ -147,6 +168,7 @@
         "orginal_code": "            String minorString = matcher.group( 4 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 21,
         "linenumber": 103,
@@ -154,6 +176,7 @@
         "orginal_code": "            String minorString = matcher.group( 4 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 22,
         "linenumber": 63,
@@ -161,6 +184,7 @@
         "orginal_code": "            String qualifier = matcher.group( 5 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 23,
         "linenumber": 63,
@@ -168,6 +192,7 @@
         "orginal_code": "            String qualifier = matcher.group( 5 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 24,
         "linenumber": 63,
@@ -175,6 +200,7 @@
         "orginal_code": "            String qualifier = matcher.group( 5 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 25,
         "linenumber": 63,
@@ -182,6 +208,7 @@
         "orginal_code": "            String qualifier = matcher.group( 5 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 26,
         "linenumber": 63,
@@ -189,6 +216,7 @@
         "orginal_code": "            String qualifier = matcher.group( 5 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 27,
         "linenumber": 62,
@@ -196,6 +224,7 @@
         "orginal_code": "            String buildNumber = matcher.group( 4 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 28,
         "linenumber": 62,
@@ -203,6 +232,7 @@
         "orginal_code": "            String buildNumber = matcher.group( 4 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 29,
         "linenumber": 62,
@@ -210,6 +240,7 @@
         "orginal_code": "            String buildNumber = matcher.group( 4 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 30,
         "linenumber": 62,
@@ -217,6 +248,7 @@
         "orginal_code": "            String buildNumber = matcher.group( 4 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 31,
         "linenumber": 62,
@@ -224,6 +256,7 @@
         "orginal_code": "            String buildNumber = matcher.group( 4 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 32,
         "linenumber": 75,
@@ -231,6 +264,7 @@
         "orginal_code": "            if ( matcher.group( 9 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 33,
         "linenumber": 75,
@@ -238,6 +272,7 @@
         "orginal_code": "            if ( matcher.group( 9 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 34,
         "linenumber": 75,
@@ -245,6 +280,7 @@
         "orginal_code": "            if ( matcher.group( 9 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 35,
         "linenumber": 75,
@@ -252,6 +288,7 @@
         "orginal_code": "            if ( matcher.group( 9 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 36,
         "linenumber": 75,
@@ -259,6 +296,7 @@
         "orginal_code": "            if ( matcher.group( 9 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 37,
         "linenumber": 75,
@@ -266,6 +304,7 @@
         "orginal_code": "            if ( matcher.group( 9 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 38,
         "linenumber": 75,
@@ -273,6 +312,7 @@
         "orginal_code": "            if ( matcher.group( 9 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 39,
         "linenumber": 75,
@@ -280,6 +320,7 @@
         "orginal_code": "            if ( matcher.group( 9 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 40,
         "linenumber": 75,
@@ -287,6 +328,7 @@
         "orginal_code": "            if ( matcher.group( 9 ) != null )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 41,
         "linenumber": 72,
@@ -294,6 +336,7 @@
         "orginal_code": "                qualifier = matcher.group( 7 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 42,
         "linenumber": 72,
@@ -301,6 +344,7 @@
         "orginal_code": "                qualifier = matcher.group( 7 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 43,
         "linenumber": 72,
@@ -308,6 +352,7 @@
         "orginal_code": "                qualifier = matcher.group( 7 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 44,
         "linenumber": 72,
@@ -315,6 +360,7 @@
         "orginal_code": "                qualifier = matcher.group( 7 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 45,
         "linenumber": 72,
@@ -322,6 +368,7 @@
         "orginal_code": "                qualifier = matcher.group( 7 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 46,
         "linenumber": 102,
@@ -329,6 +376,7 @@
         "orginal_code": "            String majorString = matcher.group( 2 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 47,
         "linenumber": 102,
@@ -336,6 +384,7 @@
         "orginal_code": "            String majorString = matcher.group( 2 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 48,
         "linenumber": 102,
@@ -343,6 +392,7 @@
         "orginal_code": "            String majorString = matcher.group( 2 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 49,
         "linenumber": 102,
@@ -350,6 +400,7 @@
         "orginal_code": "            String majorString = matcher.group( 2 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 50,
         "linenumber": 102,
@@ -357,6 +408,7 @@
         "orginal_code": "            String majorString = matcher.group( 2 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 51,
         "linenumber": 60,
@@ -364,6 +416,7 @@
         "orginal_code": "        if ( matcher.matches() )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 52,
         "linenumber": 60,
@@ -371,6 +424,7 @@
         "orginal_code": "        if ( matcher.matches() )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 53,
         "linenumber": 60,
@@ -378,6 +432,7 @@
         "orginal_code": "        if ( matcher.matches() )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 54,
         "linenumber": 104,
@@ -385,6 +440,7 @@
         "orginal_code": "            String patchString = matcher.group( 6 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 55,
         "linenumber": 104,
@@ -392,6 +448,7 @@
         "orginal_code": "            String patchString = matcher.group( 6 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 56,
         "linenumber": 104,
@@ -399,6 +456,7 @@
         "orginal_code": "            String patchString = matcher.group( 6 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 57,
         "linenumber": 104,
@@ -406,6 +464,7 @@
         "orginal_code": "            String patchString = matcher.group( 6 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 58,
         "linenumber": 104,
@@ -413,6 +472,7 @@
         "orginal_code": "            String patchString = matcher.group( 6 );"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 59,
         "linenumber": 100,
@@ -420,6 +480,7 @@
         "orginal_code": "        if ( matcher.matches() )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 60,
         "linenumber": 100,
@@ -427,6 +488,7 @@
         "orginal_code": "        if ( matcher.matches() )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/versioning/VersionInformation.java",
         "id": 61,
         "linenumber": 100,
@@ -434,6 +496,7 @@
         "orginal_code": "        if ( matcher.matches() )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/AbstractRegexPropertyMojo.java",
         "id": 62,
         "linenumber": 64,
@@ -441,6 +504,7 @@
         "orginal_code": "        if ( matcher.find() )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/AbstractRegexPropertyMojo.java",
         "id": 63,
         "linenumber": 64,
@@ -448,6 +512,7 @@
         "orginal_code": "        if ( matcher.find() )"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/mojohaus_build-helper-maven-plugin/src/main/java/org/codehaus/mojo/buildhelper/AbstractRegexPropertyMojo.java",
         "id": 64,
         "linenumber": 64,

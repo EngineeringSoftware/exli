@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 0,
         "linenumber": 201,
@@ -7,6 +8,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 1,
         "linenumber": 201,
@@ -14,6 +16,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 2,
         "linenumber": 201,
@@ -21,6 +24,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 3,
         "linenumber": 201,
@@ -28,6 +32,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 4,
         "linenumber": 201,
@@ -35,6 +40,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 5,
         "linenumber": 201,
@@ -42,6 +48,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 6,
         "linenumber": 201,
@@ -49,6 +56,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 7,
         "linenumber": 201,
@@ -56,6 +64,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 8,
         "linenumber": 201,
@@ -63,6 +72,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 9,
         "linenumber": 201,
@@ -70,6 +80,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 10,
         "linenumber": 201,
@@ -77,6 +88,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 11,
         "linenumber": 201,
@@ -84,6 +96,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenizer.java",
         "id": 12,
         "linenumber": 201,
@@ -91,6 +104,7 @@
         "orginal_code": "                            if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 13,
         "linenumber": 127,
@@ -98,6 +112,7 @@
         "orginal_code": "            String sixStr = pinyinText.substring(start, end);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 14,
         "linenumber": 86,
@@ -105,6 +120,7 @@
         "orginal_code": "            String sixStr = pinyinText.substring(start, end);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 15,
         "linenumber": 89,
@@ -112,6 +128,7 @@
         "orginal_code": "                String guess = sixStr.substring(0, sixStr.length() - j);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 16,
         "linenumber": 89,
@@ -119,6 +136,7 @@
         "orginal_code": "                String guess = sixStr.substring(0, sixStr.length() - j);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 17,
         "linenumber": 89,
@@ -126,6 +144,7 @@
         "orginal_code": "                String guess = sixStr.substring(0, sixStr.length() - j);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 18,
         "linenumber": 89,
@@ -133,6 +152,7 @@
         "orginal_code": "                String guess = sixStr.substring(0, sixStr.length() - j);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 19,
         "linenumber": 89,
@@ -140,6 +160,7 @@
         "orginal_code": "                String guess = sixStr.substring(0, sixStr.length() - j);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 20,
         "linenumber": 89,
@@ -147,6 +168,7 @@
         "orginal_code": "                String guess = sixStr.substring(0, sixStr.length() - j);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 21,
         "linenumber": 89,
@@ -154,6 +176,7 @@
         "orginal_code": "                String guess = sixStr.substring(0, sixStr.length() - j);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 22,
         "linenumber": 89,
@@ -161,6 +184,7 @@
         "orginal_code": "                String guess = sixStr.substring(0, sixStr.length() - j);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 23,
         "linenumber": 145,
@@ -168,6 +192,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 24,
         "linenumber": 145,
@@ -175,6 +200,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 25,
         "linenumber": 145,
@@ -182,6 +208,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 26,
         "linenumber": 145,
@@ -189,6 +216,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 27,
         "linenumber": 145,
@@ -196,6 +224,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 28,
         "linenumber": 145,
@@ -203,6 +232,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 29,
         "linenumber": 145,
@@ -210,6 +240,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 30,
         "linenumber": 145,
@@ -217,6 +248,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 31,
         "linenumber": 145,
@@ -224,6 +256,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 32,
         "linenumber": 145,
@@ -231,6 +264,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 33,
         "linenumber": 145,
@@ -238,6 +272,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 34,
         "linenumber": 145,
@@ -245,6 +280,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinTokenFilter.java",
         "id": 35,
         "linenumber": 145,
@@ -252,6 +288,7 @@
         "orginal_code": "                        if (config.keepSeparateFirstLetter & pinyin.length() > 1) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 36,
         "linenumber": 59,
@@ -259,6 +296,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 37,
         "linenumber": 59,
@@ -266,6 +304,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 38,
         "linenumber": 59,
@@ -273,6 +312,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 39,
         "linenumber": 59,
@@ -280,6 +320,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 40,
         "linenumber": 59,
@@ -287,6 +328,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 41,
         "linenumber": 59,
@@ -294,6 +336,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 42,
         "linenumber": 59,
@@ -301,6 +344,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 43,
         "linenumber": 59,
@@ -308,6 +352,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 44,
         "linenumber": 59,
@@ -315,6 +360,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 45,
         "linenumber": 59,
@@ -322,6 +368,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 46,
         "linenumber": 59,
@@ -329,6 +376,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 47,
         "linenumber": 59,
@@ -336,6 +384,7 @@
         "orginal_code": "                if (lastWord & sb.length()>0) {"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/medcl_elasticsearch-analysis-pinyin/src/main/java/org/elasticsearch/index/analysis/PinyinAlphabetTokenizer.java",
         "id": 48,
         "linenumber": 59,

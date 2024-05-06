@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 0,
         "linenumber": 288,
@@ -7,6 +8,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 1,
         "linenumber": 288,
@@ -14,6 +16,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 2,
         "linenumber": 288,
@@ -21,6 +24,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 3,
         "linenumber": 288,
@@ -28,6 +32,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 4,
         "linenumber": 288,
@@ -35,6 +40,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 5,
         "linenumber": 288,
@@ -42,6 +48,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 6,
         "linenumber": 288,
@@ -49,6 +56,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 7,
         "linenumber": 288,
@@ -56,6 +64,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 8,
         "linenumber": 288,
@@ -63,6 +72,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 9,
         "linenumber": 288,
@@ -70,6 +80,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 10,
         "linenumber": 288,
@@ -77,6 +88,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 11,
         "linenumber": 288,
@@ -84,6 +96,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 12,
         "linenumber": 288,
@@ -91,6 +104,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 13,
         "linenumber": 288,
@@ -98,6 +112,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 14,
         "linenumber": 288,
@@ -105,6 +120,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 15,
         "linenumber": 288,
@@ -112,6 +128,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 16,
         "linenumber": 288,
@@ -119,6 +136,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 17,
         "linenumber": 288,
@@ -126,6 +144,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 18,
         "linenumber": 288,
@@ -133,6 +152,7 @@
         "orginal_code": "        corrected = text.replace('/', '-').replace('\\\\', '-').replace('.', '-')"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 19,
         "linenumber": 200,
@@ -140,6 +160,7 @@
         "orginal_code": "                    currentFile = currentFile.substring(0, lastDot);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 20,
         "linenumber": 200,
@@ -147,6 +168,7 @@
         "orginal_code": "                    currentFile = currentFile.substring(0, lastDot);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 21,
         "linenumber": 200,
@@ -154,6 +176,7 @@
         "orginal_code": "                    currentFile = currentFile.substring(0, lastDot);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 22,
         "linenumber": 200,
@@ -161,6 +184,7 @@
         "orginal_code": "                    currentFile = currentFile.substring(0, lastDot);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/Bernardo-MG_velocity-config-tool/src/main/java/com/bernardomg/velocity/tool/ConfigTool.java",
         "id": 23,
         "linenumber": 200,

@@ -1,5 +1,6 @@
 [
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/helpers/SdkServiceClient.java",
         "id": 0,
         "linenumber": 191,
@@ -7,6 +8,7 @@
         "orginal_code": "                String parameterName = m.group(1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/helpers/SdkServiceClient.java",
         "id": 1,
         "linenumber": 191,
@@ -14,6 +16,7 @@
         "orginal_code": "                String parameterName = m.group(1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/helpers/SdkServiceClient.java",
         "id": 2,
         "linenumber": 191,
@@ -21,6 +24,7 @@
         "orginal_code": "                String parameterName = m.group(1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/helpers/SdkServiceClient.java",
         "id": 3,
         "linenumber": 191,
@@ -28,6 +32,7 @@
         "orginal_code": "                String parameterName = m.group(1);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/AquariusServerVersion.java",
         "id": 4,
         "linenumber": 19,
@@ -35,6 +40,7 @@
         "orginal_code": "        _versionComponents = Func.map(apiVersion.split(\"\\\\.\"), Integer::parseUnsignedInt);"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/samples/serializers/InstantDeserializer.java",
         "id": 5,
         "linenumber": 45,
@@ -42,6 +48,7 @@
         "orginal_code": "            text = text.substring(0, text.indexOf('['));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/samples/serializers/InstantDeserializer.java",
         "id": 6,
         "linenumber": 45,
@@ -49,6 +56,7 @@
         "orginal_code": "            text = text.substring(0, text.indexOf('['));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/samples/serializers/InstantDeserializer.java",
         "id": 7,
         "linenumber": 45,
@@ -56,6 +64,7 @@
         "orginal_code": "            text = text.substring(0, text.indexOf('['));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/samples/serializers/InstantDeserializer.java",
         "id": 8,
         "linenumber": 45,
@@ -63,6 +72,7 @@
         "orginal_code": "            text = text.substring(0, text.indexOf('['));"
     },
     {
+        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/samples/serializers/InstantDeserializer.java",
         "id": 9,
         "linenumber": 45,
