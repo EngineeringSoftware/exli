@@ -640,41 +640,6 @@ class Eval:
             se.io.Fmt.txtList,
         )
 
-    def batch_minimize_tests(self, mutator: str = Macros.universalmutator):
-        """
-        Batch process all projects to minimize the tests that can kill the mutants.
-
-        Args:
-            test_project_name (str, optional): The name of the project to be tested. If None, minimize tests for all projects. Defaults to None.
-            mutator (str, optional): The type of mutator. Defaults to "universalmutator".
-        """
-        # merge the results into one file
-        data_file = (
-            Macros.results_dir
-            / "killed-mutants"
-            / "merged-tests-to-killed-mutants"
-            / f"all-projects-{mutator}.txt"
-        )
-        for project_name, sha in Util.get_project_names_list_with_sha():
-            proj_data_file = (
-                Macros.results_dir
-                / "killed-mutants"
-                / "merged-tests-to-killed-mutants"
-                / f"{project_name}-{sha}-{mutator}.txt"
-            )
-            if proj_data_file.exists():
-                se.bash.run(f"cat {proj_data_file} >> {data_file}")
-        for algorithm in Macros.test_minimization_algorithms:
-            # minimize the tests
-            out_file = (
-                Macros.results_dir / "minimized" / f"r2-{mutator}-{algorithm}.txt"
-            )
-            self.minimize_tests_helper(algorithm, data_file, out_file)
-
-        # since we use greedy algorithm results in the paper, we combine the results of greedy algorithm into Macros.results/r2-passed-tests.txt
-        for f in (Macros.results_dir / "minimized").glob("*-greedy.txt"):
-            se.bash.run(f"cat {f} >> {Macros.results_dir / 'r2-passed-tests.txt'}")
-
     # python -m exli.eval minimize_tests
     def minimize_tests(
         self, project_name: str, sha: str, mutator: str = Macros.universalmutator
@@ -700,11 +665,24 @@ class Eval:
                 / "minimized"
                 / f"{project_name}-{sha}-{mutator}-{algorithm}.txt"
             )
-            self.minimize_tests_helper(algorithm, data_file, out_file)
+            self.minimize_tests_helper(algorithm, data_file, out_file, project_name)
 
-    def minimize_tests_helper(self, algorithm: str, data_file: str, out_file: str):
+    def minimize_tests_helper(
+        self, algorithm: str, data_file: str, out_file: str, project_name: str = None
+    ):
         if not data_file.exists():
-            print(f"no data file {data_file}")
+            # directly copy the r1 tests to r2 tests
+            r2_tests = []
+            r1_tests = se.io.load(
+                Macros.results_dir / "r1-passed-tests.txt", se.io.Fmt.txtList
+            )
+            for r1_test in r1_tests:
+                if r1_test == "":
+                    continue
+                proj_name = r1_test.split(";")[0]
+                if project_name != None and proj_name == project_name:
+                    r2_tests.append(r1_test)
+            se.io.dump(data_file, r2_tests, se.io.Fmt.txtList)
             return
 
         if not out_file.parent.exists():
@@ -725,17 +703,20 @@ class Eval:
         se.io.dump(out_file, sorted(selected_tests), se.io.Fmt.txtList)
         se.io.rm(orig_file)
 
-    def batch_minimize_tests(self, test_project_name: str = None):
+    def batch_minimize_tests(
+        self, test_project_name: str = None, mutator: str = Macros.universalmutator
+    ):
         """
         Batch process all projects to minimize the tests that can kill the mutants.
 
         Args:
             test_project_name (str, optional): The name of the project to be tested. If None, minimize tests for all projects. Defaults to None.
+            mutator (str, optional): The type of mutator. Defaults to "universalmutator".
         """
         for project_name, sha in Util.get_project_names_list_with_sha():
             if test_project_name is not None and project_name != test_project_name:
                 continue
-            self.minimize_tests(project_name, sha, Macros.universalmutator)
+            self.minimize_tests(project_name, sha, mutator)
 
     # python -m exli.eval get_not_mutated_inline_tests
     def get_not_mutated_inline_tests(self, mutator: str = Macros.universalmutator):
