@@ -391,6 +391,97 @@ class Eval:
             se.io.Fmt.jsonPretty,
         )
 
+    def batch_get_r2_tests(
+        self,
+        mutator: str = Macros.universalmutator,
+        algo: str = Macros.greedy,
+        test_project_name: str = None,
+    ):
+        """
+        Batch process all projects to get the r2 tests.
+
+        Args:
+            mutator (str, optional): The tool used to generate mutants. Defaults to Macros.universalmutator.
+            algo (str, optional): The algorithm used to minimize the tests. Defaults to Macros.greedy.
+            test_project_name (str, optional): The name of the project to be tested. Defaults to None.
+        """
+        for project_name, sha in Util.get_project_names_list_with_sha():
+            if test_project_name is not None and project_name != test_project_name:
+                continue
+            output_path = (
+                Macros.results_dir / "r2" / f"{mutator}-{algo}-{project_name}-{sha}.txt"
+            )
+            self.get_r2_tests(project_name, sha, mutator, algo, output_path)
+
+        if test_project_name is not None:
+            # since we use greedy algorithm results in the paper, we combine the results of greedy algorithm into Macros.results/r2-universalmutator-greedy-passed-tests.txt
+            r2_tests_path = (
+                Macros.results_dir / f"{Macros.r2_um}-{Macros.greedy}-passed-tests.txt"
+            )
+            r2_tests = []
+            for project_name, sha in Util.get_project_names_list_with_sha():
+                if test_project_name is not None and project_name != test_project_name:
+                    continue
+                r2_tests_path_project = (
+                    Macros.results_dir
+                    / "r2"
+                    / f"{mutator}-{algo}-{project_name}-{sha}.txt"
+                )
+                if r2_tests_path_project.exists():
+                    r2_tests.extend(
+                        se.io.load(r2_tests_path_project, se.io.Fmt.txtList)
+                    )
+            se.io.dump(r2_tests_path, r2_tests, se.io.Fmt.txtList)
+
+    def get_r2_tests(
+        self, project_name: str, sha: str, mutator: str, algo: str, output_path: str
+    ):
+        """
+        Get the r2 tests.
+
+        Args:
+            project_name (str): The name of the project.
+            sha (str): The commit sha of the project.
+            mutator (str): The type of mutator.
+            algo (str): The algorithm used to minimize the tests.
+            output_path (str): The path to save the results.
+        """
+        self.test_to_killed_mutants(project_name, sha, mutator, Macros.r0)
+        self.test_to_killed_mutants(project_name, sha, mutator, Macros.r1)
+        self.add_back_itests_kill_mutants(project_name, sha, mutator)
+        self.minimize_tests(project_name, sha, mutator)
+        self.add_back_itests_without_mutants(project_name, sha, mutator)
+
+        minimized_tests = []
+        for f in (Macros.results_dir / "minimized").glob(f"*{mutator}-{algo}.txt"):
+            minimized_tests.extend(se.io.load(f, se.io.Fmt.txtList))
+
+        formatted_minimized_tests = []
+        for minimized_test in minimized_tests:
+            # mojohaus_properties-maven-plugin#org.codehaus.mojo.properties.ReadPropertiesMojo_382Test#testLine305()#r1
+            project_name, fqn_with_lineno, test_name, test_source = (
+                minimized_test.split("#")
+            )
+            m = re.match(r"(.+)_(\d+)Test", fqn_with_lineno)
+            fqn, target_stmt_lineno = m.group(1), m.group(2)
+            itest_lineno = re.match(r"testLine(\d+)\(\)", test_name).group(1)
+            formatted_minimized_tests.append(
+                f"{project_name};{fqn};{target_stmt_lineno};{itest_lineno};{test_source}"
+            )
+
+        itests_without_mutants = []
+        for f in (Macros.results_dir / "itests-without-mutants").glob(
+            f"*{Macros.universalmutator}.txt"
+        ):
+            itests_without_mutants.extend(se.io.load(f, se.io.Fmt.txtList))
+        # format by adding test_source
+        itests_without_mutants = [itest + Macros.r1 for itest in itests_without_mutants]
+
+        r2_tests = []
+        r2_tests.extend(formatted_minimized_tests)
+        r2_tests.extend(itests_without_mutants)
+        se.io.dump(output_path, r2_tests, se.io.Fmt.txtList)
+
     # python -m exli.eval batch_test_to_killed_mutants --mutator "universalmutator"
     def batch_test_to_killed_mutants(
         self, mutator: str = Macros.universalmutator, test_project_name: str = None
@@ -519,33 +610,8 @@ class Eval:
             ].add(f"{project_name}-{mutant_index}")
         return test_to_killed_mutants_dict
 
-    # python -m exli.eval check_minimized_results
-    def check_minimized_results(self):
-        minizied_results_dir = Macros.results_dir / "minimized-inline-tests"
-        # iterate over all minimized results
-        for minimized_result_file in minizied_results_dir.glob("*.txt"):
-            minimized_results = se.io.load(minimized_result_file, se.io.Fmt.txtList)
-            # extract file name
-            print(minimized_result_file.name, len(minimized_results))
-
-    # python -m exli.eval batch_add_back_tests
-    def batch_add_back_tests(
-        self, mutator: str = Macros.universalmutator, test_project_name: str = None
-    ):
-        """
-        Batch process all projects to add back tests (from r0 inline tests) for mutants that are not killed by r1 tests.
-
-        Args:
-            mutator (str, optional): The type of mutator. Defaults to "universalmutator".
-            test_project_name (str, optional): The name of the project to be tested. If None, adding back tests for all projects. Defaults to None.
-        """
-        for project_name, sha in Util.get_project_names_list_with_sha():
-            if test_project_name is not None and project_name != test_project_name:
-                continue
-            self.add_back_tests(project_name, sha, mutator)
-
     # python -m exli.eval add_back_tests
-    def add_back_tests(
+    def add_back_itests_kill_mutants(
         self, project_name: str, sha: str, mutator: str = Macros.universalmutator
     ):
         """
@@ -671,18 +737,7 @@ class Eval:
         self, algorithm: str, data_file: str, out_file: str, project_name: str = None
     ):
         if not data_file.exists():
-            # directly copy the r1 tests to r2 tests
-            r2_tests = []
-            r1_tests = se.io.load(
-                Macros.results_dir / "r1-passed-tests.txt", se.io.Fmt.txtList
-            )
-            for r1_test in r1_tests:
-                if r1_test == "":
-                    continue
-                proj_name = r1_test.split(";")[0]
-                if project_name != None and proj_name == project_name:
-                    r2_tests.append(r1_test)
-            se.io.dump(out_file, r2_tests, se.io.Fmt.txtList)
+            print(f"{data_file} does not exist")
             return
 
         if not out_file.parent.exists():
@@ -718,55 +773,31 @@ class Eval:
                 continue
             self.minimize_tests(project_name, sha, mutator)
 
-        # since we use greedy algorithm results in the paper, we combine the results of greedy algorithm into Macros.results/r2-universalmutator-greedy-passed-tests.txt
-        r2_tests_path = (
-            Macros.results_dir / f"{Macros.r2_um}-{Macros.greedy}-passed-tests.txt"
-        )
-        if r2_tests_path.exists():
-            se.bash.run(f"rm {r2_tests_path}")
+    def add_back_itests_without_mutants(
+        self, project_name: str, sha: str, mutator: str
+    ):
+        """
+        Add back the inline tests whose target statements are not mutated.
 
-        r2_passed_tests = []
-        for f in (Macros.results_dir / "minimized").glob(
-            f"*{Macros.universalmutator}-{Macros.greedy}.txt"
-        ):
-            r2_passed_tests.extend(se.io.load(f, se.io.Fmt.txtList))
-
-        formatted_r2_passed_tests = []
-        for r2_passed_test in r2_passed_tests:
-            # mojohaus_properties-maven-plugin#org.codehaus.mojo.properties.ReadPropertiesMojo_382Test#testLine305()#r1
-            project_name, fqn_with_lineno, test_name, test_source = (
-                r2_passed_test.split("#")
-            )
-            m = re.match(r"(.+)_(\d+)Test", fqn_with_lineno)
-            fqn, target_stmt_lineno = m.group(1), m.group(2)
-            itest_lineno = re.match(r".+testLine(\d+)\(\)", test_name).group(1)
-            formatted_r2_passed_tests.append(
-                f"{project_name};{fqn};{target_stmt_lineno};{itest_lineno};{test_source}"
-            )
-        se.io.dump(r2_tests_path, formatted_r2_passed_tests, se.io.Fmt.txtList)
-
-    # python -m exli.eval get_not_mutated_inline_tests
-    def get_not_mutated_inline_tests(self, mutator: str = Macros.universalmutator):
+        Args:
+            project_name (str): The name of the project.
+            sha (str): The commit sha of the project.
+            mutator (str): The type of mutator.
+        """
         # format of r1-passed-tests.txt
         # mp911de_logstash-gelf;biz.paluch.logging.gelf.wildfly.WildFlyJsonFormatter;119;120
         target_stmt_to_inline_tests = Util.get_target_stmt_to_inline_tests(
             Macros.results_dir / f"{Macros.r1}-passed-tests.txt"
         )
-        print(f"{len(target_stmt_to_inline_tests)=}")
         mutated_target_stmts = set()
-        for project_name, sha in Util.get_project_names_list_with_sha():
-            if mutator in [Macros.universalmutator, Macros.major]:
-                mutant_file = (
-                    Macros.results_dir
-                    / "mutants"
-                    / f"{project_name}-{sha}-{mutator}.json"
-                )
-            else:
-                raise Exception("unknown mutant type")
+        if mutator in [Macros.universalmutator, Macros.major]:
+            mutant_file = (
+                Macros.results_dir / "mutants" / f"{project_name}-{sha}-{mutator}.json"
+            )
+        else:
+            raise Exception("unknown mutant type")
 
-            if not mutant_file.exists():
-                continue
-            print(f"loading {mutant_file}")
+        if mutant_file.exists():
             mutated_results = se.io.load(mutant_file)
             for mutated_result in mutated_results:
                 classname = Util.file_path_to_class_name(mutated_result["filepath"])
@@ -778,18 +809,17 @@ class Eval:
         print(f"{len(mutated_target_stmts)=}")
         not_mutated_inline_tests = set()
         for target_stmt, inline_tests in target_stmt_to_inline_tests.items():
+            current_proj_name = target_stmt.split(";")[0]
+            if current_proj_name != project_name:
+                continue
             if target_stmt not in mutated_target_stmts:
                 not_mutated_inline_tests.update(inline_tests)
-        print("number of not mutated inline tests:", len(not_mutated_inline_tests))
-        return not_mutated_inline_tests
-
-    # python -m exli.eval save_not_mutated_inline_tests
-    def save_not_mutated_inline_tests(self, mutator: str = Macros.universalmutator):
-        se.io.dump(
-            Macros.results_dir / f"not-mutated-inline-tests-{mutator}.txt",
-            sorted(self.get_not_mutated_inline_tests(mutator=mutator)),
-            se.io.Fmt.txtList,
+        output_path = (
+            Macros.results_dir
+            / "itests-without-mutants"
+            / f"{project_name}-{sha}-{mutator}.txt"
         )
+        se.io.dump(not_mutated_inline_tests, output_path, se.io.Fmt.txtList)
 
     # python -m exli.eval save_r2_inline_test_no_source_code
     def save_r2_inline_test_no_source_code(
