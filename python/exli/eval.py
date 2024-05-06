@@ -453,18 +453,24 @@ class Eval:
         self.add_back_itests_without_mutants(project_name, sha, mutator)
 
         formatted_minimized_tests = []
-        minimized_tests = se.io.load(Macros.results_dir / "minimized" / f"{project_name}-{sha}-{mutator}-{algo}.txt", se.io.Fmt.txtList)
-        for minimized_test in minimized_tests:
-            # mojohaus_properties-maven-plugin#org.codehaus.mojo.properties.ReadPropertiesMojo_382Test#testLine305()#r1
-            project_name, fqn_with_lineno, test_name, test_source = (
-                minimized_test.split("#")
-            )
-            m = re.match(r"(.+)_(\d+)Test", fqn_with_lineno)
-            fqn, target_stmt_lineno = m.group(1), m.group(2)
-            itest_lineno = re.match(r"testLine(\d+)\(\)", test_name).group(1)
-            formatted_minimized_tests.append(
-                f"{project_name};{fqn};{target_stmt_lineno};{itest_lineno};{test_source}"
-            )
+        minimized_tests_path = (
+            Macros.results_dir
+            / "minimized"
+            / f"{project_name}-{sha}-{mutator}-{algo}.txt"
+        )
+        if minimized_tests_path.exists():            
+            minimized_tests = se.io.load(minimized_tests_path, se.io.Fmt.txtList)
+            for minimized_test in minimized_tests:
+                # mojohaus_properties-maven-plugin#org.codehaus.mojo.properties.ReadPropertiesMojo_382Test#testLine305()#r1
+                project_name, fqn_with_lineno, test_name, test_source = (
+                    minimized_test.split("#")
+                )
+                m = re.match(r"(.+)_(\d+)Test", fqn_with_lineno)
+                fqn, target_stmt_lineno = m.group(1), m.group(2)
+                itest_lineno = re.match(r"testLine(\d+)\(\)", test_name).group(1)
+                formatted_minimized_tests.append(
+                    f"{project_name};{fqn};{target_stmt_lineno};{itest_lineno};{test_source}"
+                )
 
         itests_without_mutants = []
         for f in (Macros.results_dir / "itests-without-mutants").glob(
