@@ -478,7 +478,7 @@ class Eval:
         ):
             itests_without_mutants.extend(se.io.load(f, se.io.Fmt.txtList))
         # format by adding test_source
-        itests_without_mutants = [itest + Macros.r1 for itest in itests_without_mutants]
+        itests_without_mutants = [itest + ";" + Macros.r1 for itest in itests_without_mutants]
 
         r2_tests = []
         r2_tests.extend(formatted_minimized_tests)
