@@ -667,6 +667,13 @@ class Eval:
             )
             self.minimize_tests_helper(algorithm, data_file, out_file, project_name)
 
+        # since we use greedy algorithm results in the paper, we combine the results of greedy algorithm into Macros.results/r2-passed-tests.txt
+        r2_passed_tests = Macros.results_dir / "r2-passed-tests.txt"
+        if r2_passed_tests.exists():
+            se.bash.run(f"rm {r2_passed_tests}")
+        for f in (Macros.results_dir / "minimized").glob("*-greedy.txt"):
+            se.bash.run(f"cat {f} >> {r2_passed_tests}")
+
     def minimize_tests_helper(
         self, algorithm: str, data_file: str, out_file: str, project_name: str = None
     ):
