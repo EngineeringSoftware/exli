@@ -671,7 +671,9 @@ class Eval:
         r2_passed_tests = Macros.results_dir / "r2-passed-tests.txt"
         if r2_passed_tests.exists():
             se.bash.run(f"rm {r2_passed_tests}")
-        for f in (Macros.results_dir / "minimized").glob("*-greedy.txt"):
+        for f in (Macros.results_dir / "minimized").glob(
+            f"*{Macros.universalmutator}-{Macros.greedy}.txt"
+        ):
             se.bash.run(f"cat {f} >> {r2_passed_tests}")
 
     def minimize_tests_helper(

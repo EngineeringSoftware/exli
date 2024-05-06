@@ -64,7 +64,11 @@ class Macros:
     dev = "dev"  # developer-written tests
     Dev = "Dev"
     unit = "unit"  # the combination of dev, randoop, and evosuite
-    test_minimization_algorithms = ["ge", "gre", "greedy", "hgs"]
+    ge = "ge"  # genetic algorithm
+    gre = "gre"  # genetic algorithm with reduction
+    greedy = "greedy"  # greedy algorithm
+    hgs = "hgs"  # hill climbing with greedy search
+    test_minimization_algorithms = [ge, gre, greedy, hgs]
     ITEST_DECLARE = "itest"
     universalmutator = "universalmutator"
     major = "major"
