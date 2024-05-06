@@ -481,70 +481,6 @@
     },
     {
         "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFVerificaChave.java",
-        "id": 60,
-        "linenumber": 35,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - (1-1)]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFVerificaChave.java",
-        "id": 61,
-        "linenumber": 35,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i * 1]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFVerificaChave.java",
-        "id": 62,
-        "linenumber": 35,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i % 1]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFVerificaChave.java",
-        "id": 63,
-        "linenumber": 35,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i + 1]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFVerificaChave.java",
-        "id": 64,
-        "linenumber": 35,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i / 1]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFVerificaChave.java",
-        "id": 65,
-        "linenumber": 35,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - (1+1)]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFVerificaChave.java",
-        "id": 66,
-        "linenumber": 35,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 0]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFVerificaChave.java",
-        "id": 67,
-        "linenumber": 35,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - -1]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/utils/DFUtils.java",
         "id": 68,
         "linenumber": 107,
@@ -1225,70 +1161,6 @@
     },
     {
         "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFGeraChave.java",
-        "id": 153,
-        "linenumber": 38,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - (1+1)]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFGeraChave.java",
-        "id": 154,
-        "linenumber": 38,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - (1-1)]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFGeraChave.java",
-        "id": 155,
-        "linenumber": 38,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i / 1]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFGeraChave.java",
-        "id": 156,
-        "linenumber": 38,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 0]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFGeraChave.java",
-        "id": 157,
-        "linenumber": 38,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - -1]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFGeraChave.java",
-        "id": 158,
-        "linenumber": 38,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i % 1]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFGeraChave.java",
-        "id": 159,
-        "linenumber": 38,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i + 1]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/utils/NFGeraChave.java",
-        "id": 160,
-        "linenumber": 38,
-        "mutated_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i * 1]));",
-        "orginal_code": "            valorTemp = Integer.parseInt(String.valueOf(valores[i - 1]));"
-    },
-    {
-        "compilation_failure": false,
         "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/validadores/DFStringValidador.java",
         "id": 161,
         "linenumber": 181,
@@ -1654,38 +1526,6 @@
         "linenumber": 934,
         "mutated_code": "                            final java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(\":\") + (1+1));",
         "orginal_code": "                            final java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(\":\") + 1);"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/classes/nota/NFNotaInfoCana.java",
-        "id": 207,
-        "linenumber": 50,
-        "mutated_code": "        if (1==1) {",
-        "orginal_code": "        if (!matcher.find()) {"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/classes/nota/NFNotaInfoCana.java",
-        "id": 208,
-        "linenumber": 50,
-        "mutated_code": "        if (matcher.find()) {",
-        "orginal_code": "        if (!matcher.find()) {"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/classes/nota/NFNotaInfoCana.java",
-        "id": 209,
-        "linenumber": 50,
-        "mutated_code": "        if (!(!matcher.find())) {",
-        "orginal_code": "        if (!matcher.find()) {"
-    },
-    {
-        "compilation_failure": false,
-        "filepath": "/home/itdocker/exli/_downloads/wmixvideo_nfe/src/main/java/com/fincatto/documentofiscal/nfe400/classes/nota/NFNotaInfoCana.java",
-        "id": 210,
-        "linenumber": 50,
-        "mutated_code": "        if (0==1) {",
-        "orginal_code": "        if (!matcher.find()) {"
     },
     {
         "compilation_failure": false,
