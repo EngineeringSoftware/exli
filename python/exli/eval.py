@@ -780,7 +780,9 @@ class Eval:
         self, project_name: str, sha: str, mutator: str
     ):
         """
-        Add back the inline tests whose target statements are not mutated.
+        Add back the inline tests 
+        1. whose target statements are not mutated.
+        2. whose target statements are mutated but no tests can kill the mutants.
 
         Args:
             project_name (str): The name of the project.
@@ -793,21 +795,24 @@ class Eval:
             Macros.results_dir / f"{Macros.r1}-passed-tests.txt"
         )
         mutated_target_stmts = set()
-        if mutator in [Macros.universalmutator, Macros.major]:
-            mutant_file = (
-                Macros.results_dir / "mutants" / f"{project_name}-{sha}-{mutator}.json"
-            )
-        else:
-            raise Exception("unknown mutant type")
-
-        if mutant_file.exists():
-            mutated_results = se.io.load(mutant_file)
-            for mutated_result in mutated_results:
-                classname = Util.file_path_to_class_name(mutated_result["filepath"])
-                mutated_target_stmt = (
-                    f"{project_name};{classname};{mutated_result['linenumber']}"
+        
+        for test_type in [Macros.r0, Macros.r1]:
+            if mutator in [Macros.universalmutator, Macros.major]:
+                killed_mutant_file = (
+                    Macros.results_dir / "killed-mutants" / f"{project_name}-{sha}-{mutator}-{test_type}.json"
                 )
-                mutated_target_stmts.add(mutated_target_stmt)
+            else:
+                raise Exception("unknown mutant type")
+
+            if killed_mutant_file.exists():
+                mutated_results = se.io.load(killed_mutant_file)
+                for mutated_res in mutated_results:
+                    # "test_class_name": "com.asana.resources.gen.PortfoliosBase_214Test"
+                    classname = mutated_res["test_class_name"].split("_")[0]
+                    mutated_target_stmt = (
+                        f"{project_name};{classname};{mutated_res['target_stmt_linenumber']}"
+                    )
+                    mutated_target_stmts.add(mutated_target_stmt)
 
         print(f"{len(mutated_target_stmts)=}")
         not_mutated_inline_tests = set()
