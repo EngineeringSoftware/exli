@@ -452,11 +452,8 @@ class Eval:
         self.minimize_tests(project_name, sha, mutator)
         self.add_back_itests_without_mutants(project_name, sha, mutator)
 
-        minimized_tests = []
-        for f in (Macros.results_dir / "minimized").glob(f"*{mutator}-{algo}.txt"):
-            minimized_tests.extend(se.io.load(f, se.io.Fmt.txtList))
-
         formatted_minimized_tests = []
+        minimized_tests = se.io.load(Macros.results_dir / "minimized" / f"{project_name}-{sha}-{mutator}-{algo}.txt", se.io.Fmt.txtList)
         for minimized_test in minimized_tests:
             # mojohaus_properties-maven-plugin#org.codehaus.mojo.properties.ReadPropertiesMojo_382Test#testLine305()#r1
             project_name, fqn_with_lineno, test_name, test_source = (
@@ -471,7 +468,7 @@ class Eval:
 
         itests_without_mutants = []
         for f in (Macros.results_dir / "itests-without-mutants").glob(
-            f"*{Macros.universalmutator}.txt"
+            f"{project_name}-{sha}-{mutator}.txt"
         ):
             itests_without_mutants.extend(se.io.load(f, se.io.Fmt.txtList))
         # format by adding test_source
