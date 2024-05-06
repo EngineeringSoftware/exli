@@ -295,6 +295,7 @@ class Eval:
                     except se.TimeoutException:
                         mutant_res[f"{test_type}-killed"] = False
                         mutant_res[f"{test_type}-time"] = 600
+                        mutant_res["reason"] = "timeout"
                         res.append(mutant_res)
                         continue
                     except Exception as e:
@@ -303,6 +304,7 @@ class Eval:
                             end_time = time.time()
                         mutant_res[f"{test_type}-killed"] = False
                         mutant_res[f"{test_type}-time"] = end_time - start_time
+                        mutant_res["reason"] = str(e)
                         res.append(mutant_res)
                         continue
                     if returncode == 0:
