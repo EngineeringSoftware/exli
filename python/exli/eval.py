@@ -409,7 +409,7 @@ class Eval:
             if test_project_name is not None and project_name != test_project_name:
                 continue
             output_path = (
-                Macros.results_dir / "r2" / f"{mutator}-{algo}-{project_name}-{sha}.txt"
+                Macros.results_dir / "r2" / f"{project_name}-{sha}-{mutator}-{algo}.txt"
             )
             self.get_r2_tests(project_name, sha, mutator, algo, output_path)
 
@@ -425,7 +425,7 @@ class Eval:
                 r2_tests_path_project = (
                     Macros.results_dir
                     / "r2"
-                    / f"{mutator}-{algo}-{project_name}-{sha}.txt"
+                    / f"{project_name}-{sha}-{mutator}-{algo}.txt"
                 )
                 if r2_tests_path_project.exists():
                     r2_tests.extend(
