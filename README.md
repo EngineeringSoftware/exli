@@ -209,7 +209,7 @@ and
 
 #### Step 5: Test reduction
 ```bash
-python -m exli.eval get_r2_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --algo=greedy --output_path=${HOME}/exli/results/r2/universalmutator-greedyBernardo-MG_velocity-config-tool-26226f5.txt
+python -m exli.eval get_r2_tests --project_name=Bernardo-MG_velocity-config-tool --sha=26226f5 --mutator=universalmutator --algo=greedy --output_path=${HOME}/exli/results/r2/Bernardo-MG_velocity-config-tool-26226f5-universalmutator-greedy.txt
 ```
 
 `${HOME}/exli/results/minimized` stores the minimized tests by 4
