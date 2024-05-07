@@ -277,7 +277,9 @@ class Eval:
                                     }
                                     """
                                     continue
-                                se.io.dump(tests_log_file, run_res, se.io.Fmt.jsonPretty)
+                                se.io.dump(
+                                    tests_log_file, run_res, se.io.Fmt.jsonPretty
+                                )
                     except se.TimeoutException:
                         mutant_res[f"{test_type}-killed"] = False
                         mutant_res[f"{test_type}-time"] = 600
@@ -300,6 +302,12 @@ class Eval:
                             mutant_res[f"{test_type}-killed"] = True
                     else:
                         num_failed_tests = self.get_num_failed_tests(tests_log_file)
+                        print(
+                            "initial_num_failed_tests: ",
+                            initial_num_failed_tests,
+                            "num_failed_tests: ",
+                            num_failed_tests,
+                        )
                         if num_failed_tests > initial_num_failed_tests:
                             mutant_res[f"{test_type}-killed"] = True
                         else:
