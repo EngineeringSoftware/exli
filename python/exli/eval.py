@@ -63,7 +63,7 @@ class Eval:
 
         Util.prepare_project(project_name, sha)
 
-        # execute r1 tests first to check if there is compilation failure
+        # execute r0, r1 tests first to check if there is compilation failure
         if test_types is None:
             test_types = [
                 Macros.r0,
