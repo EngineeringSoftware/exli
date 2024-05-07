@@ -75,7 +75,10 @@ class Eval:
         for test_type in test_types:
             initial_num_failed_tests = 0
             if test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
-                initial_num_failed_tests = self.get_num_failed_tests(log_path)
+                tests_log_file = f"{Macros.log_dir}/run-unit-tests/{project_name}-{sha}-{test_type}.log"
+                Util.prepare_project(project_name, sha)
+                self.run_tests(project_name, sha, test_type, seed, tests_log_file)
+                initial_num_failed_tests = self.get_num_failed_tests(tests_log_file)
             mutants = se.io.load(mutants_file, se.io.Fmt.json)
             if not mutants:
                 print(f"no mutants for {project_name}")
@@ -206,18 +209,18 @@ class Eval:
                         se.bash.run(f"rm {file_path_with_inline_test_temp}")
                     # add timeout when running tests
                     if test_type in [Macros.r0, Macros.r1]:
-                        log_file = (
+                        tests_log_file = (
                             eval_log
                             / f"{project_name}-{sha}-{test_type}-{inline_test_name}-{mutant['id']}-{mutator}.log"
                         )
                     else:
                         # no enough space to save all the log files, so Macros.dev, Macros.randoop, Macros.evosuite will share the same log file across different mutants
-                        log_file = (
+                        tests_log_file = (
                             eval_log / f"{project_name}-{sha}-{test_type}-{mutator}.log"
                         )
-                    if log_file.exists():
+                    if tests_log_file.exists():
                         # remove the log file if it exists
-                        se.bash.run(f"rm {log_file}")
+                        se.bash.run(f"rm {tests_log_file}")
                     try:
                         with se.TimeUtils.time_limit(600):
                             end_time = -1
@@ -247,9 +250,13 @@ class Eval:
                                     deps_file,
                                     inline_test_name,
                                 )
-                            elif test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
+                            elif test_type in [
+                                Macros.dev,
+                                Macros.randoop,
+                                Macros.evosuite,
+                            ]:
                                 returncode = self.run_tests(
-                                    project_name, sha, test_type, seed, log_file
+                                    project_name, sha, test_type, seed, tests_log_file
                                 )
                             end_time = time.time()
                             if test_type == Macros.r0 or test_type == Macros.r1:
@@ -270,7 +277,7 @@ class Eval:
                                     }
                                     """
                                     continue
-                                se.io.dump(log_file, run_res, se.io.Fmt.jsonPretty)
+                                se.io.dump(tests_log_file, run_res, se.io.Fmt.jsonPretty)
                     except se.TimeoutException:
                         mutant_res[f"{test_type}-killed"] = False
                         mutant_res[f"{test_type}-time"] = 600
@@ -292,7 +299,7 @@ class Eval:
                         else:
                             mutant_res[f"{test_type}-killed"] = True
                     else:
-                        num_failed_tests = self.get_num_failed_tests(log_file)
+                        num_failed_tests = self.get_num_failed_tests(tests_log_file)
                         if num_failed_tests > initial_num_failed_tests:
                             mutant_res[f"{test_type}-killed"] = True
                         else:
