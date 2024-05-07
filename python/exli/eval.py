@@ -76,6 +76,8 @@ class Eval:
             initial_num_failed_tests = 0
             if test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
                 tests_log_file = f"{Macros.log_dir}/run-unit-tests/{project_name}-{sha}-{test_type}.log"
+                if os.path.exists(tests_log_file):
+                    os.remove(tests_log_file)
                 Util.prepare_project(project_name, sha)
                 self.run_tests(project_name, sha, test_type, seed, tests_log_file)
                 initial_num_failed_tests = self.get_num_failed_tests(tests_log_file)
@@ -373,6 +375,8 @@ class Eval:
             log_path (str): The path to the log file.
         """
         num_failed_tests = 0
+        if not os.path.exists(log_path):
+            return num_failed_tests
         # get the number of failed tests
         log_content = se.io.load(log_path, se.io.Fmt.txt)
         # extract the number of tests from the log
