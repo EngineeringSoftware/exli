@@ -1,0 +1,982 @@
+[
+    {
+        "dev-killed": false,
+        "dev-time": 62.65041637420654,
+        "id": 0
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.423433780670166,
+        "id": 1
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.69323706626892,
+        "id": 2
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.45954489707947,
+        "id": 3
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.70465397834778,
+        "id": 4
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.112003326416016,
+        "id": 5
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 58.7503719329834,
+        "id": 6
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.83310651779175,
+        "id": 7
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 53.85638070106506,
+        "id": 8
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.92510676383972,
+        "id": 9
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.07164120674133,
+        "id": 10
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.15241312980652,
+        "id": 11
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 58.1723256111145,
+        "id": 12
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 54.48834204673767,
+        "id": 13
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.71920895576477,
+        "id": 14
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.39225101470947,
+        "id": 15
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 55.52707481384277,
+        "id": 16
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.45766520500183,
+        "id": 17
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 58.90506386756897,
+        "id": 18
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.7147581577301,
+        "id": 19
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.05270767211914,
+        "id": 20
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 55.716230392456055,
+        "id": 21
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.8475124835968,
+        "id": 22
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.31562256813049,
+        "id": 23
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 58.80397367477417,
+        "id": 24
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 56.97272038459778,
+        "id": 25
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.89777755737305,
+        "id": 26
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.1449933052063,
+        "id": 27
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.58367872238159,
+        "id": 28
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.476242542266846,
+        "id": 29
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 56.75178575515747,
+        "id": 30
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.92938590049744,
+        "id": 31
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 56.09849500656128,
+        "id": 32
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.48606061935425,
+        "id": 33
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.263989210128784,
+        "id": 34
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.34750771522522,
+        "id": 35
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.05665969848633,
+        "id": 36
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.332382917404175,
+        "id": 37
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.55909061431885,
+        "id": 38
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 55.278034687042236,
+        "id": 39
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.19835901260376,
+        "id": 40
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.196332693099976,
+        "id": 41
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.59281063079834,
+        "id": 42
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 56.25130891799927,
+        "id": 43
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.827632427215576,
+        "id": 44
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 56.852651834487915,
+        "id": 45
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.21971297264099,
+        "id": 46
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 55.549156665802,
+        "id": 47
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 61.86835956573486,
+        "id": 48
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.70948934555054,
+        "id": 49
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.00218081474304,
+        "id": 50
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.141075134277344,
+        "id": 51
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.12875771522522,
+        "id": 52
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.888057470321655,
+        "id": 53
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 53.09617853164673,
+        "id": 54
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 61.58081102371216,
+        "id": 55
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.122819900512695,
+        "id": 56
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 61.87048840522766,
+        "id": 57
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 56.96251392364502,
+        "id": 58
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.57900071144104,
+        "id": 59
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.45309329032898,
+        "id": 60
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 61.387948513031006,
+        "id": 61
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.54499697685242,
+        "id": 62
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.008851051330566,
+        "id": 63
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.09263324737549,
+        "id": 64
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.84938836097717,
+        "id": 65
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.59375047683716,
+        "id": 66
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 58.03553605079651,
+        "id": 67
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.955379247665405,
+        "id": 68
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 56.56500315666199,
+        "id": 69
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 62.833110332489014,
+        "id": 70
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 54.636712312698364,
+        "id": 71
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 56.31848764419556,
+        "id": 72
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 58.116578817367554,
+        "id": 73
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.77813172340393,
+        "id": 74
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.080328941345215,
+        "id": 75
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.394591331481934,
+        "id": 76
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 62.58555030822754,
+        "id": 77
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.08178734779358,
+        "id": 78
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 56.07838797569275,
+        "id": 79
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 56.72391867637634,
+        "id": 80
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.10224461555481,
+        "id": 81
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.98215579986572,
+        "id": 82
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.14279007911682,
+        "id": 83
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 56.48177242279053,
+        "id": 84
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.09264922142029,
+        "id": 85
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.71376872062683,
+        "id": 86
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.34610295295715,
+        "id": 87
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 54.83200025558472,
+        "id": 88
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.35085916519165,
+        "id": 89
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.400744915008545,
+        "id": 90
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.31231141090393,
+        "id": 91
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.072914600372314,
+        "id": 92
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.67957520484924,
+        "id": 93
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.56176710128784,
+        "id": 94
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.01469373703003,
+        "id": 95
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.099438190460205,
+        "id": 96
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 54.85269498825073,
+        "id": 97
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.579477071762085,
+        "id": 98
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.905993938446045,
+        "id": 99
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.11289620399475,
+        "id": 100
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 61.348511695861816,
+        "id": 101
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.20804286003113,
+        "id": 102
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.00130534172058,
+        "id": 103
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 55.96041798591614,
+        "id": 104
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.413240909576416,
+        "id": 105
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 56.836180448532104,
+        "id": 106
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.916736364364624,
+        "id": 107
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.52000284194946,
+        "id": 108
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.27445983886719,
+        "id": 109
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.18511390686035,
+        "id": 110
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.88386511802673,
+        "id": 111
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.214898109436035,
+        "id": 112
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 54.31367611885071,
+        "id": 113
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.7156286239624,
+        "id": 114
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.22921633720398,
+        "id": 115
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.70434284210205,
+        "id": 116
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.447505950927734,
+        "id": 117
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 61.512561082839966,
+        "id": 118
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.367995738983154,
+        "id": 119
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.84700322151184,
+        "id": 120
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.88373255729675,
+        "id": 121
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 55.08524131774902,
+        "id": 122
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.911031007766724,
+        "id": 123
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 55.82764482498169,
+        "id": 124
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.959577798843384,
+        "id": 125
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 55.69873666763306,
+        "id": 126
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.854063272476196,
+        "id": 127
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.55605912208557,
+        "id": 128
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.21012043952942,
+        "id": 129
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.680503129959106,
+        "id": 130
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.61907172203064,
+        "id": 131
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.78325963020325,
+        "id": 132
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 55.47555470466614,
+        "id": 133
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.440521478652954,
+        "id": 134
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.73225498199463,
+        "id": 135
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 54.407742738723755,
+        "id": 136
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.51913356781006,
+        "id": 137
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 61.191941022872925,
+        "id": 138
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.90798330307007,
+        "id": 139
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.21885371208191,
+        "id": 140
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.23103880882263,
+        "id": 141
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.32810115814209,
+        "id": 142
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.087477922439575,
+        "id": 143
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.533915281295776,
+        "id": 144
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 54.55885648727417,
+        "id": 145
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.7445502281189,
+        "id": 146
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.61155915260315,
+        "id": 147
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.87296104431152,
+        "id": 148
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.808197021484375,
+        "id": 149
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.068219900131226,
+        "id": 150
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.51072883605957,
+        "id": 151
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 56.987610816955566,
+        "id": 152
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.6086266040802,
+        "id": 153
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.263179779052734,
+        "id": 154
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 61.56915736198425,
+        "id": 155
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.49077820777893,
+        "id": 156
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 55.519797801971436,
+        "id": 157
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.877500772476196,
+        "id": 158
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.3079400062561,
+        "id": 159
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 61.097429513931274,
+        "id": 160
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.976731061935425,
+        "id": 161
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 55.57983875274658,
+        "id": 162
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.7365996837616,
+        "id": 163
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 55.81642198562622,
+        "id": 164
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.83375549316406,
+        "id": 165
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.97666144371033,
+        "id": 166
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.0004403591156,
+        "id": 167
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.264888525009155,
+        "id": 168
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 55.95162224769592,
+        "id": 169
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.78641152381897,
+        "id": 170
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 56.504499435424805,
+        "id": 171
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.802624464035034,
+        "id": 172
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 58.975582122802734,
+        "id": 173
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.43918228149414,
+        "id": 174
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.98820519447327,
+        "id": 175
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.717631578445435,
+        "id": 176
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.217785358428955,
+        "id": 177
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.4317090511322,
+        "id": 178
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 56.976465702056885,
+        "id": 179
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 54.22959494590759,
+        "id": 180
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 60.115458726882935,
+        "id": 181
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.29153394699097,
+        "id": 182
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.54661202430725,
+        "id": 183
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 59.31650638580322,
+        "id": 184
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 56.87914514541626,
+        "id": 185
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.93174886703491,
+        "id": 186
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 57.66794395446777,
+        "id": 187
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 58.373565435409546,
+        "id": 188
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 57.90792679786682,
+        "id": 189
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 61.03607511520386,
+        "id": 190
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 56.12577533721924,
+        "id": 191
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 55.53959560394287,
+        "id": 192
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 59.564425468444824,
+        "id": 193
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 55.81652760505676,
+        "id": 194
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 58.928699016571045,
+        "id": 195
+    }
+]

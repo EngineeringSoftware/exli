@@ -1,0 +1,107 @@
+[
+    {
+        "dev-killed": true,
+        "dev-time": 22.117969274520874,
+        "id": 0
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.751016616821289,
+        "id": 1
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.859151601791382,
+        "id": 2
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.8122732639312744,
+        "id": 3
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 3.801974296569824,
+        "id": 4
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 3.7697160243988037,
+        "id": 5
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.796963930130005,
+        "id": 6
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 3.9643828868865967,
+        "id": 7
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.706024646759033,
+        "id": 8
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.745255470275879,
+        "id": 9
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.8418126106262207,
+        "id": 10
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.7702202796936035,
+        "id": 11
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.774186611175537,
+        "id": 12
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.8370089530944824,
+        "id": 13
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.7927985191345215,
+        "id": 14
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.804304361343384,
+        "id": 15
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.7823894023895264,
+        "id": 16
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.791619300842285,
+        "id": 17
+    },
+    {
+        "dev-killed": false,
+        "dev-time": 3.77840256690979,
+        "id": 18
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 4.041307687759399,
+        "id": 19
+    },
+    {
+        "dev-killed": true,
+        "dev-time": 3.793131113052368,
+        "id": 20
+    }
+]

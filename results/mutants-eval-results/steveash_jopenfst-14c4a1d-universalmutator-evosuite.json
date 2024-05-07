@@ -1,0 +1,352 @@
+[
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.310122966766357,
+        "id": 0
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.599491119384766,
+        "id": 1
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.888872623443604,
+        "id": 2
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.628766298294067,
+        "id": 3
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.636671781539917,
+        "id": 4
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.591559171676636,
+        "id": 5
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.718718767166138,
+        "id": 6
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.472887992858887,
+        "id": 7
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.82747197151184,
+        "id": 8
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 9.525860786437988,
+        "id": 9
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.456976890563965,
+        "id": 10
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.724939107894897,
+        "id": 11
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.805777549743652,
+        "id": 12
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.17115306854248,
+        "id": 13
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 12.890884399414062,
+        "id": 14
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.620606184005737,
+        "id": 15
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.979788064956665,
+        "id": 16
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.040399551391602,
+        "id": 17
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 12.290014266967773,
+        "id": 18
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.284195899963379,
+        "id": 19
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.118864059448242,
+        "id": 20
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.625285625457764,
+        "id": 21
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.673678398132324,
+        "id": 22
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.805550336837769,
+        "id": 23
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.340803384780884,
+        "id": 24
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.098839521408081,
+        "id": 25
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.719995021820068,
+        "id": 26
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.48169231414795,
+        "id": 27
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.347289323806763,
+        "id": 28
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.768211126327515,
+        "id": 29
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.215676069259644,
+        "id": 30
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.326066493988037,
+        "id": 31
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.408912420272827,
+        "id": 32
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 9.517131567001343,
+        "id": 33
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.534809112548828,
+        "id": 34
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.186928987503052,
+        "id": 35
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.83084487915039,
+        "id": 36
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.549875020980835,
+        "id": 37
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 12.011577367782593,
+        "id": 38
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.465022802352905,
+        "id": 39
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 9.795897245407104,
+        "id": 40
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.491756439208984,
+        "id": 41
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.245102882385254,
+        "id": 42
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.804154396057129,
+        "id": 43
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.386922359466553,
+        "id": 44
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 12.44634747505188,
+        "id": 45
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.746247291564941,
+        "id": 46
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 12.495765686035156,
+        "id": 47
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.924006462097168,
+        "id": 48
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.806033849716187,
+        "id": 49
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.120372772216797,
+        "id": 50
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.109546899795532,
+        "id": 51
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.491400957107544,
+        "id": 52
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.003094911575317,
+        "id": 53
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.09714674949646,
+        "id": 54
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.979081153869629,
+        "id": 55
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.44846510887146,
+        "id": 56
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 9.9020357131958,
+        "id": 57
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.312743425369263,
+        "id": 58
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.267809867858887,
+        "id": 59
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.033409595489502,
+        "id": 60
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.504990100860596,
+        "id": 61
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.126359939575195,
+        "id": 62
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 12.176669120788574,
+        "id": 63
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.045785188674927,
+        "id": 64
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.144760370254517,
+        "id": 65
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.114776611328125,
+        "id": 66
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.088229179382324,
+        "id": 67
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 10.328117609024048,
+        "id": 68
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.58486533164978,
+        "id": 69
+    }
+]

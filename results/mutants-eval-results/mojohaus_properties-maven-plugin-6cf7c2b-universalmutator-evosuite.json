@@ -1,0 +1,192 @@
+[
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.822451591491699,
+        "id": 0
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.364046096801758,
+        "id": 1
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.387329339981079,
+        "id": 2
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.201892375946045,
+        "id": 3
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.835629940032959,
+        "id": 4
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2521445751190186,
+        "id": 5
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2998926639556885,
+        "id": 6
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.365799903869629,
+        "id": 7
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.273376941680908,
+        "id": 8
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2347536087036133,
+        "id": 9
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.278980016708374,
+        "id": 10
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2407901287078857,
+        "id": 11
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2903804779052734,
+        "id": 12
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.251952886581421,
+        "id": 13
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.232945203781128,
+        "id": 14
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.251605272293091,
+        "id": 15
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.231027841567993,
+        "id": 16
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.276247501373291,
+        "id": 17
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.194547176361084,
+        "id": 18
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.230877637863159,
+        "id": 19
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.130197286605835,
+        "id": 20
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.237358331680298,
+        "id": 21
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2336714267730713,
+        "id": 22
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.1926076412200928,
+        "id": 23
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.345914363861084,
+        "id": 24
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2645347118377686,
+        "id": 25
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.258155584335327,
+        "id": 26
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2907204627990723,
+        "id": 27
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2093024253845215,
+        "id": 28
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2694082260131836,
+        "id": 29
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.238478660583496,
+        "id": 30
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.420781135559082,
+        "id": 31
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2382845878601074,
+        "id": 32
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2285494804382324,
+        "id": 33
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.206610679626465,
+        "id": 34
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.27343487739563,
+        "id": 35
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.325777053833008,
+        "id": 36
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.2612204551696777,
+        "id": 37
+    }
+]

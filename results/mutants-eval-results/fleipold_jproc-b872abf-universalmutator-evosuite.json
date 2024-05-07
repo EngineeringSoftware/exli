@@ -1,0 +1,22 @@
+[
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.504878759384155,
+        "id": 0
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.144789695739746,
+        "id": 1
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.036080360412598,
+        "id": 2
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 11.179066181182861,
+        "id": 3
+    }
+]

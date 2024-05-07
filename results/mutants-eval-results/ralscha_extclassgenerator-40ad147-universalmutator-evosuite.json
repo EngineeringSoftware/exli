@@ -1,0 +1,17 @@
+[
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 20.022521495819092,
+        "id": 0
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 19.894029140472412,
+        "id": 1
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 19.167564153671265,
+        "id": 2
+    }
+]

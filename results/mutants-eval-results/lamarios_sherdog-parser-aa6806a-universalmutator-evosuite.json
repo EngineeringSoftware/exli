@@ -1,0 +1,32 @@
+[
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.1145644187927246,
+        "id": 0
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.989246129989624,
+        "id": 1
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.103184700012207,
+        "id": 2
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.070719003677368,
+        "id": 3
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.0576157569885254,
+        "id": 4
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 3.090041399002075,
+        "id": 5
+    }
+]

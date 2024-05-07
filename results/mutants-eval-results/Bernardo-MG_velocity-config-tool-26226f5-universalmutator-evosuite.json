@@ -1,0 +1,122 @@
+[
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5195939540863037,
+        "id": 0
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.59812068939209,
+        "id": 1
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.4772684574127197,
+        "id": 2
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5579285621643066,
+        "id": 3
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5272819995880127,
+        "id": 4
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.596665382385254,
+        "id": 5
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.545497417449951,
+        "id": 6
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5616366863250732,
+        "id": 7
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.57900071144104,
+        "id": 8
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5387752056121826,
+        "id": 9
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.511672019958496,
+        "id": 10
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5607738494873047,
+        "id": 11
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5942182540893555,
+        "id": 12
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.6031758785247803,
+        "id": 13
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.6317567825317383,
+        "id": 14
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.584491729736328,
+        "id": 15
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.4919888973236084,
+        "id": 16
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.585909605026245,
+        "id": 17
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.495070457458496,
+        "id": 18
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5168235301971436,
+        "id": 19
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5159695148468018,
+        "id": 20
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5069971084594727,
+        "id": 21
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5217127799987793,
+        "id": 22
+    },
+    {
+        "evosuite-killed": true,
+        "evosuite-time": 2.5243959426879883,
+        "id": 23
+    }
+]
