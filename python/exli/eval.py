@@ -349,6 +349,7 @@ class Eval:
                 Macros.unit_tests_dir
                 / f"{project_name}-{sha}"
                 / f"{Macros.randoop}-tests-{seed}"
+                / f"{Macros.randoop}-tests"
             )
             returncode = Util.run_randoop(project_name, generated_tests_dir, log_file)
         elif test_type == Macros.evosuite:
@@ -357,6 +358,7 @@ class Eval:
                 Macros.unit_tests_dir
                 / f"{project_name}-{sha}"
                 / f"{Macros.evosuite}-tests-{seed}"
+                / f"{Macros.evosuite}-tests"
             )
             returncode = Util.run_evosuite_command_line(
                 project_name,
