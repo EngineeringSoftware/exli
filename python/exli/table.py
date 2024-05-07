@@ -431,7 +431,7 @@ class Table:
                             }
                             res.append(item)
                         # save res
-                        se.io.dump(mutants_result_path, res)
+                        se.io.dump(mutants_result_path, res, se.io.Fmt.jsonPretty)
                     else:
                         logger.warning(f"File {mutants_result_path} does not exist")
                         continue
@@ -473,6 +473,94 @@ class Table:
             else:
                 file.append(latex.Macro(f"total-{k}", f"{sum(l):{fmt_d}}"))
             file.append(latex.Macro(f"avg-{k}", f"{sum(l) / len(l):{fmt_f}}"))
+
+        file.save()
+
+    # python -m exli.table data_time_r1
+    def data_time_r1(self):
+        file = latex.File(Macros.table_dir / "data-time-r1.tex")
+        proj_to_time = se.io.load(
+            Macros.results_dir / "time" / "extract-inline-tests.json"
+        )
+
+        sum_time = 0
+        num_proj = 0
+        for proj_name, time in proj_to_time.items():
+            # This project cannot stop because the inline tests are too large
+            if proj_name == "mpatric_mp3agic":
+                continue
+            file.append(latex.Macro(proj_name + "-r1-time", f"{time:{fmt_f}}"))
+            sum_time += time
+            num_proj += 1
+        file.append(latex.Macro("total-r1-time", f"{sum_time:{fmt_f}}"))
+        file.append(latex.Macro("avg-r1-time", f"{sum_time / num_proj:{fmt_f}}"))
+        file.save()
+
+    # python -m exli.table data_time_r2
+    def data_time_r2(self):
+        file = latex.File(Macros.table_dir / "data-time-r2.tex")
+
+        autogen_time_macros = latex.Macro.load_from_file(
+            Macros.table_dir / "data-time-run-autogen-unit.tex"
+        )
+        randoop_time = float(autogen_time_macros["avg-time-randoop-tests"].value)
+        evosuite_time = float(autogen_time_macros["avg-time-evosuite-tests"].value)
+
+        dev_time_macros = latex.Macro.load_from_file(
+            Macros.table_dir / "data-teco-projects.tex"
+        )
+        dev_time = float(dev_time_macros["avg-time-dev-tests"].value)
+
+        r1_time_macros = latex.Macro.load_from_file(
+            Macros.table_dir / "data-time-r1.tex"
+        )
+        r1_time = float(r1_time_macros["avg-r1-time"].value)
+
+        mutant_time_um_macros = latex.Macro.load_from_file(
+            Macros.table_dir / "data-mutants-eval-results.tex"
+        )
+        mutant_um_time = float(mutant_time_um_macros["avg-r0-mutation-time"].value)
+
+        if (Macros.table_dir / "data-mutants-major.tex").exists():
+            mutant_time_major_macros = latex.Macro.load_from_file(
+                Macros.table_dir / "data-mutants-major.tex"
+            )
+            mutant_major_time = float(
+                mutant_time_major_macros["avg-r0-mutation-time-major"].value
+            )
+
+        # sum of unit tests time
+        unit_time = dev_time + randoop_time + evosuite_time
+        file.append(latex.Macro("avg-unit-time", f"{unit_time:{fmt_f}}"))
+        # overhead of r1
+        file.append(
+            latex.Macro("avg-r1-time-minus-unit-time", f"{r1_time - unit_time:{fmt_f}}")
+        )
+        file.append(
+            latex.Macro(
+                "overhead-r1-time-gt-unit-time", f"{(r1_time / unit_time - 1):{fmt_f}}"
+            )
+        )
+
+        # r2 time
+        r2_um_time = r1_time + mutant_um_time
+        file.append(latex.Macro("avg-r2-um-time", f"{r2_um_time:{fmt_f}}"))
+        file.append(
+            latex.Macro(
+                "overhead-r2-um-time-gt-unit-time",
+                f"{(r2_um_time / unit_time - 1):{fmt_f}}",
+            )
+        )
+
+        if (Macros.table_dir / "data-mutants-major.tex").exists():
+            r2_major_time = r1_time + mutant_major_time
+            file.append(latex.Macro("avg-r2-major-time", f"{r2_major_time:{fmt_f}}"))
+            file.append(
+                latex.Macro(
+                    "overhead-r2-major-time-gt-unit-time",
+                    f"{(r2_major_time / unit_time - 1):{fmt_f}}",
+                )
+            )
 
         file.save()
 
