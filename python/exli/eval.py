@@ -73,6 +73,9 @@ class Eval:
                 Macros.evosuite,
             ]
         for test_type in test_types:
+            initial_num_failed_tests = 0
+            if test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
+                initial_num_failed_tests = self.get_num_failed_tests(log_path)
             mutants = se.io.load(mutants_file, se.io.Fmt.json)
             if not mutants:
                 print(f"no mutants for {project_name}")
@@ -217,13 +220,13 @@ class Eval:
                         se.bash.run(f"rm {log_file}")
                     try:
                         with se.TimeUtils.time_limit(600):
+                            end_time = -1
+                            start_time = time.time()
                             deps_file = (
                                 Macros.unit_tests_dir
                                 / f"{project_name}-{sha}"
                                 / "deps.txt"
                             )
-                            end_time = -1
-                            start_time = time.time()
                             if test_type == Macros.r0:
                                 # run all inline tests
                                 run_res, returncode = Util.run_inline_tests(
@@ -244,33 +247,9 @@ class Eval:
                                     deps_file,
                                     inline_test_name,
                                 )
-                            elif test_type == Macros.dev:
-                                # run unit tests
-                                returncode = Util.run_dev_written_unit_tests(
-                                    project_name, log_file
-                                )
-                            elif test_type == Macros.randoop:
-                                # run randoop tests
-                                generated_tests_dir = (
-                                    Macros.unit_tests_dir
-                                    / f"{project_name}-{sha}"
-                                    / f"{Macros.randoop}-tests-{seed}"
-                                )
-                                returncode = Util.run_randoop(
-                                    project_name, generated_tests_dir, log_file
-                                )
-                            elif test_type == Macros.evosuite:
-                                # run evosuite tests
-                                generated_tests_dir = (
-                                    Macros.unit_tests_dir
-                                    / f"{project_name}-{sha}"
-                                    / f"{Macros.evosuite}-tests-{seed}"
-                                )
-                                returncode = Util.run_evosuite_command_line(
-                                    project_name,
-                                    generated_tests_dir,
-                                    deps_file,
-                                    log_file,
+                            elif test_type in [Macros.dev, Macros.randoop, Macros.evosuite]:
+                                returncode = self.run_tests(
+                                    project_name, sha, test_type, seed, log_file
                                 )
                             end_time = time.time()
                             if test_type == Macros.r0 or test_type == Macros.r1:
@@ -307,10 +286,17 @@ class Eval:
                         mutant_res["reason"] = str(e)
                         res.append(mutant_res)
                         continue
-                    if returncode == 0:
-                        mutant_res[f"{test_type}-killed"] = False
+                    if test_type in [Macros.r0, Macros.r1]:
+                        if returncode == 0:
+                            mutant_res[f"{test_type}-killed"] = False
+                        else:
+                            mutant_res[f"{test_type}-killed"] = True
                     else:
-                        mutant_res[f"{test_type}-killed"] = True
+                        num_failed_tests = self.get_num_failed_tests(log_file)
+                        if num_failed_tests > initial_num_failed_tests:
+                            mutant_res[f"{test_type}-killed"] = True
+                        else:
+                            mutant_res[f"{test_type}-killed"] = False
                     mutant_res[f"{test_type}-time"] = end_time - start_time
                 print("mutant_res", mutant_res)
                 res.append(mutant_res)
@@ -332,6 +318,64 @@ class Eval:
                     updated_mutants,
                     se.io.Fmt.jsonPretty,
                 )
+
+    def run_tests(
+        self, project_name: str, sha: str, test_type: str, seed: int, log_file: str
+    ):
+        deps_file = Macros.unit_tests_dir / f"{project_name}-{sha}" / "deps.txt"
+        if test_type == Macros.dev:
+            # run unit tests
+            returncode = Util.run_dev_written_unit_tests(project_name, log_file)
+        elif test_type == Macros.randoop:
+            # run randoop tests
+            generated_tests_dir = (
+                Macros.unit_tests_dir
+                / f"{project_name}-{sha}"
+                / f"{Macros.randoop}-tests-{seed}"
+            )
+            returncode = Util.run_randoop(project_name, generated_tests_dir, log_file)
+        elif test_type == Macros.evosuite:
+            # run evosuite tests
+            generated_tests_dir = (
+                Macros.unit_tests_dir
+                / f"{project_name}-{sha}"
+                / f"{Macros.evosuite}-tests-{seed}"
+            )
+            returncode = Util.run_evosuite_command_line(
+                project_name,
+                generated_tests_dir,
+                deps_file,
+                log_file,
+            )
+        return returncode
+
+    def get_num_failed_tests(self, log_path: str):
+        """
+        Get the number of failed tests from the log file.
+        This is used to check if there are failed tests before applying the mutants.
+
+        Args:
+            log_path (str): The path to the log file.
+        """
+        num_failed_tests = 0
+        # get the number of failed tests
+        log_content = se.io.load(log_path, se.io.Fmt.txt)
+        # extract the number of tests from the log
+        # surefire-style: Tests run: 6708, Failures: 0, Errors: 0, Skipped: 0
+        # junit-cmd-style: OK (167 tests)
+        # when there is failure: Tests run: 4619,  Failures: 2654
+        # take the last one if there are multiple matches
+        res = re.findall(r"Tests run: \d+, Failures: (\d+), Errors: (\d+)", log_content)
+        if res:
+            for match in res:
+                failures, errors = map(int, match)
+                num_failed_tests += failures + errors
+        else:
+            res = re.findall(r"Tests run: \d+,  Failures: (\d+)", log_content)
+            for match in res:
+                failures = int(match)
+                num_failed_tests += failures
+        return num_failed_tests
 
     # python -m exli.eval batch_run_tests_with_mutants
     def batch_run_tests_with_mutants(
@@ -458,7 +502,7 @@ class Eval:
             / "minimized"
             / f"{project_name}-{sha}-{mutator}-{algo}.txt"
         )
-        if minimized_tests_path.exists():            
+        if minimized_tests_path.exists():
             minimized_tests = se.io.load(minimized_tests_path, se.io.Fmt.txtList)
             for minimized_test in minimized_tests:
                 # mojohaus_properties-maven-plugin#org.codehaus.mojo.properties.ReadPropertiesMojo_382Test#testLine305()#r1
@@ -478,7 +522,9 @@ class Eval:
         ):
             itests_without_mutants.extend(se.io.load(f, se.io.Fmt.txtList))
         # format by adding test_source
-        itests_without_mutants = [itest + ";" + Macros.r1 for itest in itests_without_mutants]
+        itests_without_mutants = [
+            itest + ";" + Macros.r1 for itest in itests_without_mutants
+        ]
 
         r2_tests = []
         r2_tests.extend(formatted_minimized_tests)
@@ -780,7 +826,7 @@ class Eval:
         self, project_name: str, sha: str, mutator: str
     ):
         """
-        Add back the inline tests 
+        Add back the inline tests
         1. whose target statements are not mutated.
         2. whose target statements are mutated but no tests can kill the mutants.
 
@@ -795,11 +841,13 @@ class Eval:
             Macros.results_dir / f"{Macros.r1}-passed-tests.txt"
         )
         mutated_target_stmts = set()
-        
+
         for test_type in [Macros.r0, Macros.r1]:
             if mutator in [Macros.universalmutator, Macros.major]:
                 killed_mutant_file = (
-                    Macros.results_dir / "killed-mutants" / f"{project_name}-{sha}-{mutator}-{test_type}.json"
+                    Macros.results_dir
+                    / "killed-mutants"
+                    / f"{project_name}-{sha}-{mutator}-{test_type}.json"
                 )
             else:
                 raise Exception("unknown mutant type")
@@ -809,9 +857,7 @@ class Eval:
                 for mutated_res in mutated_results:
                     # "test_class_name": "com.asana.resources.gen.PortfoliosBase_214Test"
                     classname = mutated_res["test_class_name"].split("_")[0]
-                    mutated_target_stmt = (
-                        f"{project_name};{classname};{mutated_res['target_stmt_linenumber']}"
-                    )
+                    mutated_target_stmt = f"{project_name};{classname};{mutated_res['target_stmt_linenumber']}"
                     mutated_target_stmts.add(mutated_target_stmt)
 
         print(f"{len(mutated_target_stmts)=}")
