@@ -347,6 +347,135 @@ class Table:
         )
         file.save()
 
+    # python -m exli.table data_mutants_eval_results
+    def data_mutants_eval_results(self):
+        file = latex.File(Macros.table_dir / "data-mutants-eval-results.tex")
+        metrics_list = collections.defaultdict(list)
+
+        num_projects = 0
+        for proj, sha in Util.get_project_names_list_with_sha():
+            num_projects += 1
+            mutants_path = (
+                Macros.results_dir
+                / "mutants"
+                / f"{proj}-{sha}-{Macros.universalmutator}.json"
+            )
+            mutants = []
+            if mutants_path.exists():
+                mutants = se.io.load(mutants_path)
+            # only keep compilable mutants (currently, already filtered in previous steps)
+            mutants = [
+                m
+                for m in mutants
+                if ("compilation_failure" not in m) or (not m["compilation_failure"])
+            ]
+
+            if len(mutants) == 0:
+                file.append(latex.Macro(f"{proj}-num-mutants", r"\UseMacro{TH-na}"))
+                continue
+
+            num_mutants = len(mutants)
+            file.append(latex.Macro(f"{proj}-num-mutants", f"{num_mutants:{fmt_d}}"))
+            metrics_list["num-mutants"].append(num_mutants)
+
+            target_stmts = set(
+                Util.file_path_to_class_name(m["filepath"]) + ";" + str(m["linenumber"])
+                for m in mutants
+            )
+            num_target_stmts = len(target_stmts)
+            file.append(
+                latex.Macro(
+                    f"{proj}-num-mutated-target-stmts", f"{num_target_stmts:{fmt_d}}"
+                )
+            )
+            metrics_list["num-mutated-target-stmts"].append(num_target_stmts)
+
+            for tool in [
+                Macros.dev,
+                Macros.randoop,
+                Macros.evosuite,
+                Macros.r0,
+                Macros.r1,
+                Macros.r2_um,
+            ]:
+                tmacro = tool2macro[tool]
+                mutants_result_path = (
+                    Macros.results_dir
+                    / "mutants-eval-results"
+                    / f"{proj}-{sha}-{Macros.universalmutator}-{tool}.json"
+                )
+                if not mutants_result_path.exists():
+                    if tool == Macros.r2_um:
+                        # merge r0 and r1 results
+                        r0 = se.io.load(
+                            Macros.results_dir
+                            / "mutants-eval-results"
+                            / f"{proj}-{sha}-{Macros.universalmutator}-{Macros.r0}.json"
+                        )
+                        r1 = se.io.load(
+                            Macros.results_dir
+                            / "mutants-eval-results"
+                            / f"{proj}-{sha}-{Macros.universalmutator}-{Macros.r1}.json"
+                        )
+                        res = []
+                        for r0, r1 in zip(r0, r1):
+                            if r0["id"] != r1["id"]:
+                                logger.warning(f"r0 and r1 mutants have different ids")
+                            item = {
+                                "id": r0["id"],
+                                f"{tool}-killed": r0[f"{Macros.r0}-killed"]
+                                or r1[f"{Macros.r1}-killed"],
+                                f"{tool}-time": max(
+                                    r0[f"{Macros.r0}-time"], r1[f"{Macros.r1}-time"]
+                                ),
+                            }
+                            res.append(item)
+                        # save res
+                        se.io.dump(mutants_result_path, res)
+                    else:
+                        logger.warning(f"File {mutants_result_path} does not exist")
+                        continue
+                mutants_result = se.io.load(mutants_result_path)
+                timeout = 600
+                if tool == Macros.evosuite:
+                    timeout = 3600
+                num_killed_mutants = len(
+                    [
+                        m
+                        for m in mutants_result
+                        if f"{tool}-killed" in m
+                        and m[f"{tool}-killed"]
+                        or m[f"{tool}-time"] >= timeout
+                    ]
+                )
+                mutation_score = num_killed_mutants / num_mutants * 100
+                file.append(
+                    latex.Macro(
+                        f"{proj}-{tmacro}-mutation-score", f"{mutation_score:{fmt_f}}"
+                    )
+                )
+                metrics_list[f"{tmacro}-mutation-score"].append(mutation_score)
+
+                time = sum(
+                    [
+                        m[f"{tool}-time"] if m[f"{tool}-time"] < 600 else 600
+                        for m in mutants_result
+                    ]
+                )
+                file.append(
+                    latex.Macro(f"{proj}-{tmacro}-mutation-time", f"{time:{fmt_f}}")
+                )
+                metrics_list[f"{tmacro}-mutation-time"].append(time)
+
+        for k, l in metrics_list.items():
+            if k.endswith("mutation-score") or k.endswith("time"):
+                file.append(latex.Macro(f"total-{k}", f"{sum(l):{fmt_f}}"))
+            else:
+                file.append(latex.Macro(f"total-{k}", f"{sum(l):{fmt_d}}"))
+            file.append(latex.Macro(f"avg-{k}", f"{sum(l) / len(l):{fmt_f}}"))
+
+        file.save()
+
 
 if __name__ == "__main__":
     se.log.setup(Macros.log_file, se.log.WARNING)
