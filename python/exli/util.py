@@ -889,6 +889,7 @@ class Util:
         deps_file: str,
         log_file_path: str,
         time_limit: int = 600,
+        use_jacoco: bool = True,
     ):
         if not os.path.exists(generated_tests_dir):
             return -1
@@ -961,7 +962,14 @@ class Util:
 
                     # run_str = f"java -javaagent:{Macros.jacoco_agent_jar} -jar {Macros.junit_jar} -cp evosuite-tests:{Macros.evosuite_runtime_jar}:$(< {deps_file}) {class_str} --details=none &>> {log_file_path}"
                     # need to use &>> instead of &> because we want to save EvoSuite, Randoop and Dev tests' logs into one file
-                    run_str = f"java -javaagent:{Macros.jacoco_agent_jar} -Dlogback.configurationFile={Macros.project_dir}/poms/logback.xml -cp evosuite-tests:{Macros.evosuite_runtime_jar}:{Macros.junit_jar}:{Macros.raninline_jar}:$(< {deps_file}) org.junit.runner.JUnitCore {class_str} &>> {log_file_path}"
+                    if project_name not in ["awslabs_amazon-sqs-java-extended-client-lib"]:
+                        log_config = f"-Dlogback.configurationFile={Macros.project_dir}/poms/logback.xml"
+                    else:
+                        log_config = ""
+                    if use_jacoco:
+                        run_str = f"java -javaagent:{Macros.jacoco_agent_jar} {log_config} -cp evosuite-tests:{Macros.evosuite_runtime_jar}:{Macros.junit_jar}:{Macros.raninline_jar}:$(< {deps_file}) org.junit.runner.JUnitCore {class_str} &>> {log_file_path}"
+                    else:
+                        run_str = f"java {log_config} -cp evosuite-tests:{Macros.evosuite_runtime_jar}:{Macros.junit_jar}:{Macros.raninline_jar}:$(< {deps_file}) org.junit.runner.JUnitCore {class_str} &>> {log_file_path}"
                     print(run_str)
                     run_res = se.bash.run(run_str)
             except se.TimeoutException:

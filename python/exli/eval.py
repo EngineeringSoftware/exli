@@ -365,6 +365,8 @@ class Eval:
                 generated_tests_dir,
                 deps_file,
                 log_file,
+                600,
+                False,
             )
         return returncode
 
@@ -931,38 +933,15 @@ class Eval:
                 se.io.Fmt.txtList,
             )
 
-    # python -m exli.eval check_set_of_reduction_results
-    def check_set_of_reduction_results(self):
-        algo_to_tests = collections.defaultdict(list)
-        new_algo_to_tests = collections.defaultdict(list)
-        for algorithm in Macros.test_minimization_algorithms:
-            file_path = (
-                Macros.results_dir / "minimized" / f"{algorithm}-minimized-all.txt"
-            )
-            tests = se.io.load(file_path, se.io.Fmt.txtList)
-            algo_to_tests[algorithm].extend(tests)
+    def line_number_to_test(self, test_type: str, project_name: str, sha: str):
+        """
+        Find the line number to test mapping for the inline tests.
 
-            new_file_path = (
-                Macros.results_dir / "minimized-o" / f"{algorithm}-minimized-all.txt"
-            )
-            new_tests = se.io.load(new_file_path, se.io.Fmt.txtList)
-            new_algo_to_tests[algorithm].extend(new_tests)
-        # check if the list of tests are the same
-        for algo1, tests1 in algo_to_tests.items():
-            for algo2, tests2 in algo_to_tests.items():
-                if algo1 == algo2:
-                    continue
-                if set(tests1) != set(tests2):
-                    # find the difference
-                    diff = set(tests1) - set(tests2)
-                    print(algo1, algo2, len(diff))
-            new_tests = new_algo_to_tests[algo1]
-            if set(tests1) != set(new_tests):
-                # find the difference
-                diff = set(tests1) - set(new_tests)
-                print(algo1, "new", len(diff))
-
-    def line_number_to_test(self, test_type: str, project_name: str, sha: str = None):
+        Args:
+            test_type (str): The type of tests. Available options are ["r0", "r1"].
+            project_name (str): The name of the project.
+            sha (str): The commit sha of the project.
+        """
         if sha is None:
             sha = Util.get_sha(project_name)
 
@@ -990,7 +969,7 @@ class Eval:
                 if line.strip().startswith("package"):
                     package_name = line.strip().replace(";", "").split(" ")[1].strip()
                     classname = f"{package_name}.{classlastname}"
-                elif line.strip().startswith("new Here"):
+                elif line.strip().startswith("itest("):
                     line_no = line_index + 1
                     inline_test_code = line.strip()
                     while not line.strip().endswith(";"):
@@ -1022,67 +1001,6 @@ class Eval:
                 line_index += 1
         return line_no_to_test
 
-    # python -m exli.eval add_merged_tests_to_log_file
-    def add_merged_tests_to_log_file(
-        self, input_type: str = "merged", mutator: str = Macros.universalmutator
-    ):
-        # load merged tests
-        if input_type == "merged":
-            merged_tests_to_killed_mutants_file = (
-                Macros.results_dir / f"merged-tests-to-killed-mutants-{mutator}.txt"
-            )
-            merged_tests_to_killed_mutants = se.io.load(
-                merged_tests_to_killed_mutants_file, se.io.Fmt.txtList
-            )
-            merged_tests = [
-                merged_test.split(",")[0]
-                for merged_test in merged_tests_to_killed_mutants
-            ]
-        else:
-            merged_tests = se.io.load(
-                Macros.results_dir / "r2" / f"{input_type}-{mutator}.txt",
-                se.io.Fmt.txtList,
-            )
-        proj_to_merged_tests = collections.defaultdict(list)
-        for merged_test in merged_tests:
-            if not merged_test:
-                continue
-            # mpatric_mp3agic#com.mpatric.mp3agic.MpegFrame_92Test#testLine250()#all
-            proj = merged_test.split("#")[0]
-            proj_to_merged_tests[proj].append(merged_test)
-        for proj, merged_test_list in proj_to_merged_tests.items():
-            sha = Util.get_sha(proj)
-            res_file_path = (
-                Macros.r1_tests_dir
-                / f"{proj}-{sha}"
-                / f"inlinetest-log-{input_type}.txt"
-            )
-            res_list = []
-            # load class to inline tests
-            class_line_no_to_r0_inline_test = self.line_number_to_test(
-                Macros.r0, proj, sha
-            )
-            class_line_no_to_r1_inline_test = self.line_number_to_test(
-                Macros.r1, proj, sha
-            )
-            for merged_test in merged_test_list:
-                test_class = merged_test.split("#")[1].rsplit("_", 1)[0]
-                test_method = merged_test.split("#")[2]
-                test_line_no = (
-                    merged_test.split("#")[2].replace("testLine", "").replace("()", "")
-                )
-                print(proj, merged_test, test_class, test_method, test_line_no)
-                if merged_test.endswith(Macros.r0):
-                    res_list.append(
-                        class_line_no_to_r0_inline_test[test_class + "#" + test_line_no]
-                    )
-                else:
-                    res_list.append(
-                        class_line_no_to_r1_inline_test[test_class + "#" + test_line_no]
-                    )
-
-            se.io.dump(res_file_path, res_list, se.io.Fmt.txtList)
-
     # python -m exli.eval batch_add_merged_tests_to_log_file
     def batch_add_merged_tests_to_log_file(self):
         self.add_merged_tests_to_log_file("merged")
@@ -1091,6 +1009,7 @@ class Eval:
 
     # python -m exli.eval batch_parse_log_file
     def batch_parse_log_file(self):
+        """parse the log file to get the inline"""
         log_path = Macros.log_dir / "parse-log.log"
         for input_type in ["merged"] + Macros.test_minimization_algorithms:
             generated_tests_dir = Macros.project_dir / f"{input_type}-tests"
@@ -1207,11 +1126,6 @@ class Eval:
                         input_type, project_name, logged_inline_test, added_inline_test
                     )
 
-    # python -m exli.eval batch_filter_mutants_with_all_inline_tests
-    def batch_filter_mutants_with_all_inline_tests(self):
-        for project_name, sha in Util.get_project_names_list_with_sha():
-            self.filter_mutants_with_all_inline_tests(project_name, sha)
-
     # python -m exli.eval compute_r2_mutants_results --mutator "universalmutator"
     # the mutator here is the mutantion tool used during R2 reduction; the eval mutation tool is always universalmutator
     def compute_r2_mutants_results(
@@ -1314,35 +1228,39 @@ class Eval:
                 num_test_with_mutants,
             )
 
-    # python -m exli.eval collect_randoop_tests_time
-    def collect_randoop_tests_time(cls):
-        res_file_path = Macros.results_dir / "randoop-time.json"
-        res = dict()
-        for project_name, sha in Util.get_project_names_list_with_sha():
-            with se.io.cd(Macros.downloads_dir / project_name):
-                se.bash.run("git clean -xfd")
-                se.bash.run("git checkout .")
-                se.bash.run(f"git checkout {sha}")
-            maven_project = Util.get_maven_project(project_name)
-            Util.configure_tests_for_jacoco_agent(
-                project_name, "randoop", maven_project
+    # python -m exli.eval check_set_of_reduction_results
+    def check_set_of_reduction_results(self):
+        """
+        Compare the number of reduced tests for different test reduction algorithms. Used for sanity check.
+        """
+        algo_to_tests = collections.defaultdict(list)
+        new_algo_to_tests = collections.defaultdict(list)
+        for algorithm in Macros.test_minimization_algorithms:
+            file_path = (
+                Macros.results_dir / "minimized" / f"{algorithm}-minimized-all.txt"
             )
-            Util.copy_randoop_tests_to_src_test_java(project_name)
-            print("compiling and executing Randoop tests...")
-            with se.io.cd(Macros.downloads_dir / project_name):
-                se.bash.run("mvn clean test-compile " + Macros.SKIPS)
-                try:
-                    with se.TimeUtils.time_limit(3600):
-                        start_time = time.time()
-                        run_res = se.bash.run(f"mvn test {Macros.SKIPS}")
-                        end_time = time.time()
-                        res[project_name] = end_time - start_time
-                except se.TimeoutException:
+            tests = se.io.load(file_path, se.io.Fmt.txtList)
+            algo_to_tests[algorithm].extend(tests)
+
+            new_file_path = (
+                Macros.results_dir / "minimized-o" / f"{algorithm}-minimized-all.txt"
+            )
+            new_tests = se.io.load(new_file_path, se.io.Fmt.txtList)
+            new_algo_to_tests[algorithm].extend(new_tests)
+        # check if the list of tests are the same
+        for algo1, tests1 in algo_to_tests.items():
+            for algo2, tests2 in algo_to_tests.items():
+                if algo1 == algo2:
                     continue
-                except Exception as e:
-                    print(project_name, e)
-                    continue
-        se.io.dump(res_file_path, res, se.io.Fmt.jsonPretty)
+                if set(tests1) != set(tests2):
+                    # find the difference
+                    diff = set(tests1) - set(tests2)
+                    print(algo1, algo2, len(diff))
+            new_tests = new_algo_to_tests[algo1]
+            if set(tests1) != set(new_tests):
+                # find the difference
+                diff = set(tests1) - set(new_tests)
+                print(algo1, "new", len(diff))
 
 
 if __name__ == "__main__":
