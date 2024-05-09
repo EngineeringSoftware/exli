@@ -1,1 +1,192 @@
-[{"id": 0, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.504358053207397}, {"id": 1, "r2-universalmutator-killed": true, "r2-universalmutator-time": 19.937179803848267}, {"id": 2, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.26161503791809}, {"id": 3, "r2-universalmutator-killed": false, "r2-universalmutator-time": 20.972794771194458}, {"id": 4, "r2-universalmutator-killed": true, "r2-universalmutator-time": 19.59602379798889}, {"id": 5, "r2-universalmutator-killed": true, "r2-universalmutator-time": 19.75663113594055}, {"id": 6, "r2-universalmutator-killed": true, "r2-universalmutator-time": 19.956841707229614}, {"id": 7, "r2-universalmutator-killed": true, "r2-universalmutator-time": 21.464821338653564}, {"id": 8, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.211645364761353}, {"id": 9, "r2-universalmutator-killed": true, "r2-universalmutator-time": 19.739134788513184}, {"id": 10, "r2-universalmutator-killed": true, "r2-universalmutator-time": 21.687482118606567}, {"id": 11, "r2-universalmutator-killed": true, "r2-universalmutator-time": 22.424912929534912}, {"id": 12, "r2-universalmutator-killed": true, "r2-universalmutator-time": 21.887189626693726}, {"id": 13, "r2-universalmutator-killed": true, "r2-universalmutator-time": 22.073403358459473}, {"id": 14, "r2-universalmutator-killed": true, "r2-universalmutator-time": 21.396751165390015}, {"id": 15, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.386481761932373}, {"id": 16, "r2-universalmutator-killed": true, "r2-universalmutator-time": 22.071207523345947}, {"id": 17, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.32717537879944}, {"id": 18, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.82435703277588}, {"id": 19, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.184420108795166}, {"id": 20, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.34663414955139}, {"id": 21, "r2-universalmutator-killed": true, "r2-universalmutator-time": 19.125344038009644}, {"id": 22, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.97395396232605}, {"id": 23, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.968536376953125}, {"id": 24, "r2-universalmutator-killed": true, "r2-universalmutator-time": 21.46758532524109}, {"id": 25, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.513460397720337}, {"id": 26, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.26074481010437}, {"id": 27, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.09268856048584}, {"id": 28, "r2-universalmutator-killed": true, "r2-universalmutator-time": 21.901071071624756}, {"id": 29, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.798422813415527}, {"id": 30, "r2-universalmutator-killed": true, "r2-universalmutator-time": 19.728114366531372}, {"id": 31, "r2-universalmutator-killed": false, "r2-universalmutator-time": 21.691616773605347}, {"id": 32, "r2-universalmutator-killed": true, "r2-universalmutator-time": 21.727261066436768}, {"id": 33, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.1463143825531}, {"id": 34, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.756774425506592}, {"id": 35, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.305885791778564}, {"id": 36, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.380661487579346}, {"id": 37, "r2-universalmutator-killed": true, "r2-universalmutator-time": 20.2700936794281}]
+[
+    {
+        "id": 0,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.504358053207397
+    },
+    {
+        "id": 1,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 19.937179803848267
+    },
+    {
+        "id": 2,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.26161503791809
+    },
+    {
+        "id": 3,
+        "r2-universalmutator-killed": false,
+        "r2-universalmutator-time": 20.972794771194458
+    },
+    {
+        "id": 4,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 19.59602379798889
+    },
+    {
+        "id": 5,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 19.75663113594055
+    },
+    {
+        "id": 6,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 19.956841707229614
+    },
+    {
+        "id": 7,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 21.464821338653564
+    },
+    {
+        "id": 8,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.211645364761353
+    },
+    {
+        "id": 9,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 19.739134788513184
+    },
+    {
+        "id": 10,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 21.687482118606567
+    },
+    {
+        "id": 11,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 22.424912929534912
+    },
+    {
+        "id": 12,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 21.887189626693726
+    },
+    {
+        "id": 13,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 22.073403358459473
+    },
+    {
+        "id": 14,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 21.396751165390015
+    },
+    {
+        "id": 15,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.386481761932373
+    },
+    {
+        "id": 16,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 22.071207523345947
+    },
+    {
+        "id": 17,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.32717537879944
+    },
+    {
+        "id": 18,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.82435703277588
+    },
+    {
+        "id": 19,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.184420108795166
+    },
+    {
+        "id": 20,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.34663414955139
+    },
+    {
+        "id": 21,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 19.125344038009644
+    },
+    {
+        "id": 22,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.97395396232605
+    },
+    {
+        "id": 23,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.968536376953125
+    },
+    {
+        "id": 24,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 21.46758532524109
+    },
+    {
+        "id": 25,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.513460397720337
+    },
+    {
+        "id": 26,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.26074481010437
+    },
+    {
+        "id": 27,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.09268856048584
+    },
+    {
+        "id": 28,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 21.901071071624756
+    },
+    {
+        "id": 29,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.798422813415527
+    },
+    {
+        "id": 30,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 19.728114366531372
+    },
+    {
+        "id": 31,
+        "r2-universalmutator-killed": false,
+        "r2-universalmutator-time": 21.691616773605347
+    },
+    {
+        "id": 32,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 21.727261066436768
+    },
+    {
+        "id": 33,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.1463143825531
+    },
+    {
+        "id": 34,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.756774425506592
+    },
+    {
+        "id": 35,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.305885791778564
+    },
+    {
+        "id": 36,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.380661487579346
+    },
+    {
+        "id": 37,
+        "r2-universalmutator-killed": true,
+        "r2-universalmutator-time": 20.2700936794281
+    }
+]
