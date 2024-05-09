@@ -1,62 +1,62 @@
 [
     {
-        "evosuite-killed": true,
-        "evosuite-time": 8.076719045639038,
+        "evosuite-killed": false,
+        "evosuite-time": 3.8670170307159424,
         "id": 0
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 10.288257598876953,
+        "evosuite-killed": false,
+        "evosuite-time": 3.8850114345550537,
         "id": 1
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 8.288278579711914,
+        "evosuite-killed": false,
+        "evosuite-time": 3.8676228523254395,
         "id": 2
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 8.584111213684082,
+        "evosuite-killed": false,
+        "evosuite-time": 3.983788013458252,
         "id": 3
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 10.013469934463501,
+        "evosuite-killed": false,
+        "evosuite-time": 3.840282678604126,
         "id": 4
     },
     {
         "evosuite-killed": true,
-        "evosuite-time": 7.82155704498291,
+        "evosuite-time": 3.894963502883911,
         "id": 5
     },
     {
         "evosuite-killed": true,
-        "evosuite-time": 9.326150178909302,
+        "evosuite-time": 3.98103928565979,
         "id": 6
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 9.505423307418823,
+        "evosuite-killed": false,
+        "evosuite-time": 3.9047632217407227,
         "id": 7
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 8.357125997543335,
+        "evosuite-killed": false,
+        "evosuite-time": 3.882183790206909,
         "id": 8
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 9.36018419265747,
+        "evosuite-killed": false,
+        "evosuite-time": 3.8703770637512207,
         "id": 9
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 9.154068946838379,
+        "evosuite-killed": false,
+        "evosuite-time": 3.891244888305664,
         "id": 10
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 7.96155571937561,
+        "evosuite-killed": false,
+        "evosuite-time": 3.844597101211548,
         "id": 11
     }
 ]

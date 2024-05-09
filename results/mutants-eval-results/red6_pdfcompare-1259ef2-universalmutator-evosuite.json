@@ -1,167 +1,167 @@
 [
     {
-        "evosuite-killed": true,
-        "evosuite-time": 17.870144844055176,
+        "evosuite-killed": false,
+        "evosuite-time": 5.722118377685547,
         "id": 0
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.644882440567017,
+        "evosuite-killed": false,
+        "evosuite-time": 5.709279298782349,
         "id": 1
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 16.964093923568726,
+        "evosuite-killed": false,
+        "evosuite-time": 5.712677478790283,
         "id": 2
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 17.47490692138672,
+        "evosuite-killed": false,
+        "evosuite-time": 5.7785844802856445,
         "id": 3
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 16.058574438095093,
+        "evosuite-killed": false,
+        "evosuite-time": 5.742570400238037,
         "id": 4
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 17.53086543083191,
+        "evosuite-killed": false,
+        "evosuite-time": 5.786125898361206,
         "id": 5
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.1875159740448,
+        "evosuite-killed": false,
+        "evosuite-time": 5.6796934604644775,
         "id": 6
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 17.569281578063965,
+        "evosuite-killed": false,
+        "evosuite-time": 5.7993645668029785,
         "id": 7
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.725040435791016,
+        "evosuite-killed": false,
+        "evosuite-time": 5.802930593490601,
         "id": 8
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 14.704819679260254,
+        "evosuite-killed": false,
+        "evosuite-time": 5.69233512878418,
         "id": 9
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 14.40283989906311,
+        "evosuite-killed": false,
+        "evosuite-time": 5.772284269332886,
         "id": 10
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.463117122650146,
+        "evosuite-killed": false,
+        "evosuite-time": 5.756698846817017,
         "id": 11
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 13.794811487197876,
+        "evosuite-killed": false,
+        "evosuite-time": 5.6957221031188965,
         "id": 12
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.624162197113037,
+        "evosuite-killed": false,
+        "evosuite-time": 5.7850501537323,
         "id": 13
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 14.796180963516235,
+        "evosuite-killed": false,
+        "evosuite-time": 5.763914585113525,
         "id": 14
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.7259681224823,
+        "evosuite-killed": false,
+        "evosuite-time": 5.736330270767212,
         "id": 15
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.882793188095093,
+        "evosuite-killed": false,
+        "evosuite-time": 5.813344717025757,
         "id": 16
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.579669952392578,
+        "evosuite-killed": false,
+        "evosuite-time": 5.765634775161743,
         "id": 17
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 16.21406316757202,
+        "evosuite-killed": false,
+        "evosuite-time": 5.770429611206055,
         "id": 18
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.475646734237671,
+        "evosuite-killed": false,
+        "evosuite-time": 5.789048671722412,
         "id": 19
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.340034484863281,
+        "evosuite-killed": false,
+        "evosuite-time": 5.7318689823150635,
         "id": 20
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.622634172439575,
+        "evosuite-killed": false,
+        "evosuite-time": 5.795726537704468,
         "id": 21
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.606959342956543,
+        "evosuite-killed": false,
+        "evosuite-time": 5.707501411437988,
         "id": 22
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.23960566520691,
+        "evosuite-killed": false,
+        "evosuite-time": 5.809938907623291,
         "id": 23
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 16.3058922290802,
+        "evosuite-killed": false,
+        "evosuite-time": 5.848241806030273,
         "id": 24
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.468948364257812,
+        "evosuite-killed": false,
+        "evosuite-time": 5.7147581577301025,
         "id": 25
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.943135738372803,
+        "evosuite-killed": false,
+        "evosuite-time": 5.779879093170166,
         "id": 26
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.62177300453186,
+        "evosuite-killed": false,
+        "evosuite-time": 5.751801013946533,
         "id": 27
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.258580923080444,
+        "evosuite-killed": false,
+        "evosuite-time": 5.810037136077881,
         "id": 28
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.127565145492554,
+        "evosuite-killed": false,
+        "evosuite-time": 5.8278443813323975,
         "id": 29
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.011529207229614,
+        "evosuite-killed": false,
+        "evosuite-time": 5.723299264907837,
         "id": 30
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 14.444833755493164,
+        "evosuite-killed": false,
+        "evosuite-time": 5.767965316772461,
         "id": 31
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 15.427796840667725,
+        "evosuite-killed": false,
+        "evosuite-time": 5.764141798019409,
         "id": 32
     }
 ]

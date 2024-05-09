@@ -1,362 +1,362 @@
 [
     {
         "id": 0,
-        "randoop-killed": true,
-        "randoop-time": 3.1203904151916504
+        "randoop-killed": false,
+        "randoop-time": 81.73474836349487
     },
     {
         "id": 1,
-        "randoop-killed": true,
-        "randoop-time": 4.138649225234985
+        "randoop-killed": false,
+        "randoop-time": 78.84890866279602
     },
     {
         "id": 2,
         "randoop-killed": true,
-        "randoop-time": 3.7609446048736572
+        "randoop-time": 78.45412468910217
     },
     {
         "id": 3,
-        "randoop-killed": true,
-        "randoop-time": 4.1485700607299805
+        "randoop-killed": false,
+        "randoop-time": 76.98079371452332
     },
     {
         "id": 4,
         "randoop-killed": true,
-        "randoop-time": 4.10828709602356
+        "randoop-time": 76.34576678276062
     },
     {
         "id": 5,
         "randoop-killed": true,
-        "randoop-time": 3.3239669799804688
+        "randoop-time": 75.58160352706909
     },
     {
         "id": 6,
         "randoop-killed": true,
-        "randoop-time": 2.769343137741089
+        "randoop-time": 80.92337727546692
     },
     {
         "id": 7,
-        "randoop-killed": true,
-        "randoop-time": 4.128216743469238
+        "randoop-killed": false,
+        "randoop-time": 78.63831305503845
     },
     {
         "id": 8,
         "randoop-killed": true,
-        "randoop-time": 4.050922393798828
+        "randoop-time": 79.8897213935852
     },
     {
         "id": 9,
-        "randoop-killed": true,
-        "randoop-time": 3.6363883018493652
+        "randoop-killed": false,
+        "randoop-time": 78.95814180374146
     },
     {
         "id": 10,
         "randoop-killed": true,
-        "randoop-time": 3.9297821521759033
+        "randoop-time": 80.76648235321045
     },
     {
         "id": 11,
         "randoop-killed": true,
-        "randoop-time": 3.8677399158477783
+        "randoop-time": 79.37558627128601
     },
     {
         "id": 12,
-        "randoop-killed": true,
-        "randoop-time": 2.275850772857666
+        "randoop-killed": false,
+        "randoop-time": 77.92338061332703
     },
     {
         "id": 13,
         "randoop-killed": true,
-        "randoop-time": 4.13312554359436
+        "randoop-time": 80.91173195838928
     },
     {
         "id": 14,
-        "randoop-killed": true,
-        "randoop-time": 3.9487078189849854
+        "randoop-killed": false,
+        "randoop-time": 79.26115489006042
     },
     {
         "id": 15,
         "randoop-killed": true,
-        "randoop-time": 3.826185941696167
+        "randoop-time": 80.01961994171143
     },
     {
         "id": 16,
-        "randoop-killed": true,
-        "randoop-time": 4.214076280593872
+        "randoop-killed": false,
+        "randoop-time": 78.48359727859497
     },
     {
         "id": 17,
-        "randoop-killed": true,
-        "randoop-time": 3.32231068611145
+        "randoop-killed": false,
+        "randoop-time": 78.69221448898315
     },
     {
         "id": 18,
-        "randoop-killed": true,
-        "randoop-time": 2.8284530639648438
+        "randoop-killed": false,
+        "randoop-time": 75.94626355171204
     },
     {
         "id": 19,
-        "randoop-killed": true,
-        "randoop-time": 3.3474113941192627
+        "randoop-killed": false,
+        "randoop-time": 78.78081440925598
     },
     {
         "id": 20,
         "randoop-killed": true,
-        "randoop-time": 3.774531602859497
+        "randoop-time": 81.24109554290771
     },
     {
         "id": 21,
         "randoop-killed": true,
-        "randoop-time": 4.28963041305542
+        "randoop-time": 76.48988366127014
     },
     {
         "id": 22,
         "randoop-killed": true,
-        "randoop-time": 3.7080838680267334
+        "randoop-time": 79.14795804023743
     },
     {
         "id": 23,
         "randoop-killed": true,
-        "randoop-time": 3.8662116527557373
+        "randoop-time": 78.07943868637085
     },
     {
         "id": 24,
         "randoop-killed": true,
-        "randoop-time": 3.017268419265747
+        "randoop-time": 77.87336087226868
     },
     {
         "id": 25,
         "randoop-killed": true,
-        "randoop-time": 2.5239500999450684
+        "randoop-time": 76.54315638542175
     },
     {
         "id": 26,
         "randoop-killed": true,
-        "randoop-time": 3.6716055870056152
+        "randoop-time": 80.0213611125946
     },
     {
         "id": 27,
         "randoop-killed": true,
-        "randoop-time": 3.6812102794647217
+        "randoop-time": 79.57257199287415
     },
     {
         "id": 28,
         "randoop-killed": true,
-        "randoop-time": 3.915907144546509
+        "randoop-time": 80.81630682945251
     },
     {
         "id": 29,
         "randoop-killed": true,
-        "randoop-time": 3.8834896087646484
+        "randoop-time": 79.13880324363708
     },
     {
         "id": 30,
         "randoop-killed": true,
-        "randoop-time": 3.586496591567993
+        "randoop-time": 80.88285040855408
     },
     {
         "id": 31,
         "randoop-killed": true,
-        "randoop-time": 3.030113935470581
+        "randoop-time": 79.03463172912598
     },
     {
         "id": 32,
         "randoop-killed": true,
-        "randoop-time": 4.09180212020874
+        "randoop-time": 81.67275261878967
     },
     {
         "id": 33,
         "randoop-killed": true,
-        "randoop-time": 4.301921129226685
+        "randoop-time": 81.64202380180359
     },
     {
         "id": 34,
         "randoop-killed": true,
-        "randoop-time": 3.6134073734283447
+        "randoop-time": 78.77341055870056
     },
     {
         "id": 35,
         "randoop-killed": true,
-        "randoop-time": 4.069735527038574
+        "randoop-time": 80.33673596382141
     },
     {
         "id": 36,
         "randoop-killed": true,
-        "randoop-time": 3.7667627334594727
+        "randoop-time": 77.04854798316956
     },
     {
         "id": 37,
         "randoop-killed": true,
-        "randoop-time": 3.5325770378112793
+        "randoop-time": 80.39788937568665
     },
     {
         "id": 39,
         "randoop-killed": true,
-        "randoop-time": 2.1691958904266357
+        "randoop-time": 83.3741021156311
     },
     {
         "id": 40,
         "randoop-killed": true,
-        "randoop-time": 4.075525283813477
+        "randoop-time": 76.94089245796204
     },
     {
         "id": 41,
         "randoop-killed": true,
-        "randoop-time": 3.586927890777588
+        "randoop-time": 80.15401148796082
     },
     {
         "id": 42,
         "randoop-killed": true,
-        "randoop-time": 4.27231502532959
+        "randoop-time": 77.76449656486511
     },
     {
         "id": 43,
         "randoop-killed": true,
-        "randoop-time": 4.001835107803345
+        "randoop-time": 79.58617353439331
     },
     {
         "id": 44,
-        "randoop-killed": true,
-        "randoop-time": 3.812711000442505
+        "randoop-killed": false,
+        "randoop-time": 79.15302300453186
     },
     {
         "id": 45,
-        "randoop-killed": true,
-        "randoop-time": 2.676630973815918
+        "randoop-killed": false,
+        "randoop-time": 78.37629699707031
     },
     {
         "id": 46,
-        "randoop-killed": true,
-        "randoop-time": 3.932525396347046
+        "randoop-killed": false,
+        "randoop-time": 85.19996762275696
     },
     {
         "id": 47,
-        "randoop-killed": true,
-        "randoop-time": 4.283841848373413
+        "randoop-killed": false,
+        "randoop-time": 80.01211380958557
     },
     {
         "id": 48,
         "randoop-killed": true,
-        "randoop-time": 3.499183416366577
+        "randoop-time": 76.73276925086975
     },
     {
         "id": 49,
-        "randoop-killed": true,
-        "randoop-time": 4.000166416168213
+        "randoop-killed": false,
+        "randoop-time": 80.61646151542664
     },
     {
         "id": 50,
         "randoop-killed": true,
-        "randoop-time": 3.797961711883545
+        "randoop-time": 79.3145101070404
     },
     {
         "id": 51,
-        "randoop-killed": true,
-        "randoop-time": 3.241006851196289
+        "randoop-killed": false,
+        "randoop-time": 78.47524213790894
     },
     {
         "id": 52,
-        "randoop-killed": true,
-        "randoop-time": 3.433109760284424
+        "randoop-killed": false,
+        "randoop-time": 76.11328101158142
     },
     {
         "id": 53,
-        "randoop-killed": true,
-        "randoop-time": 3.926088809967041
+        "randoop-killed": false,
+        "randoop-time": 77.70069003105164
     },
     {
         "id": 54,
-        "randoop-killed": true,
-        "randoop-time": 3.5356643199920654
+        "randoop-killed": false,
+        "randoop-time": 78.79628348350525
     },
     {
         "id": 55,
-        "randoop-killed": true,
-        "randoop-time": 3.752049207687378
+        "randoop-killed": false,
+        "randoop-time": 81.33026361465454
     },
     {
         "id": 56,
-        "randoop-killed": true,
-        "randoop-time": 4.341805696487427
+        "randoop-killed": false,
+        "randoop-time": 79.88760495185852
     },
     {
         "id": 57,
-        "randoop-killed": true,
-        "randoop-time": 3.9072465896606445
+        "randoop-killed": false,
+        "randoop-time": 80.8356659412384
     },
     {
         "id": 58,
-        "randoop-killed": true,
-        "randoop-time": 2.315241575241089
+        "randoop-killed": false,
+        "randoop-time": 80.36786985397339
     },
     {
         "id": 59,
-        "randoop-killed": true,
-        "randoop-time": 3.924388885498047
+        "randoop-killed": false,
+        "randoop-time": 77.9149079322815
     },
     {
         "id": 60,
-        "randoop-killed": true,
-        "randoop-time": 3.8114535808563232
+        "randoop-killed": false,
+        "randoop-time": 80.71937775611877
     },
     {
         "id": 61,
-        "randoop-killed": true,
-        "randoop-time": 4.008090972900391
+        "randoop-killed": false,
+        "randoop-time": 82.33093500137329
     },
     {
         "id": 62,
-        "randoop-killed": true,
-        "randoop-time": 4.4765355587005615
+        "randoop-killed": false,
+        "randoop-time": 85.58024716377258
     },
     {
         "id": 63,
-        "randoop-killed": true,
-        "randoop-time": 3.8452765941619873
+        "randoop-killed": false,
+        "randoop-time": 77.59973359107971
     },
     {
         "id": 64,
-        "randoop-killed": true,
-        "randoop-time": 2.111088514328003
+        "randoop-killed": false,
+        "randoop-time": 78.70226120948792
     },
     {
         "id": 65,
-        "randoop-killed": true,
-        "randoop-time": 3.5947837829589844
+        "randoop-killed": false,
+        "randoop-time": 76.85369443893433
     },
     {
         "id": 66,
-        "randoop-killed": true,
-        "randoop-time": 3.991065740585327
+        "randoop-killed": false,
+        "randoop-time": 78.6337194442749
     },
     {
         "id": 67,
-        "randoop-killed": true,
-        "randoop-time": 3.552457332611084
+        "randoop-killed": false,
+        "randoop-time": 79.54060626029968
     },
     {
         "id": 68,
-        "randoop-killed": true,
-        "randoop-time": 4.089805841445923
+        "randoop-killed": false,
+        "randoop-time": 76.90776300430298
     },
     {
         "id": 69,
-        "randoop-killed": true,
-        "randoop-time": 3.8589673042297363
+        "randoop-killed": false,
+        "randoop-time": 79.24250721931458
     },
     {
         "id": 70,
-        "randoop-killed": true,
-        "randoop-time": 3.6999335289001465
+        "randoop-killed": false,
+        "randoop-time": 77.67550706863403
     },
     {
         "id": 71,
-        "randoop-killed": true,
-        "randoop-time": 3.2930054664611816
+        "randoop-killed": false,
+        "randoop-time": 83.49026393890381
     },
     {
         "id": 72,
-        "randoop-killed": true,
-        "randoop-time": 3.7923827171325684
+        "randoop-killed": false,
+        "randoop-time": 81.57360196113586
     }
 ]

@@ -1,192 +1,192 @@
 [
     {
-        "evosuite-killed": true,
-        "evosuite-time": 31.29232621192932,
+        "evosuite-killed": false,
+        "evosuite-time": 42.55330562591553,
         "id": 0
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 29.334949731826782,
+        "evosuite-killed": false,
+        "evosuite-time": 42.7047553062439,
         "id": 1
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.534161806106567,
+        "evosuite-killed": false,
+        "evosuite-time": 42.23689341545105,
         "id": 2
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.248969554901123,
+        "evosuite-killed": false,
+        "evosuite-time": 43.009016036987305,
         "id": 3
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.568920850753784,
+        "evosuite-killed": false,
+        "evosuite-time": 42.99923849105835,
         "id": 4
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 27.951550722122192,
+        "evosuite-killed": false,
+        "evosuite-time": 42.44541335105896,
         "id": 5
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 27.96016526222229,
+        "evosuite-killed": false,
+        "evosuite-time": 42.59125089645386,
         "id": 6
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 29.07812261581421,
+        "evosuite-killed": false,
+        "evosuite-time": 42.95249915122986,
         "id": 7
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 30.431558847427368,
+        "evosuite-killed": false,
+        "evosuite-time": 42.805665254592896,
         "id": 8
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.64146089553833,
+        "evosuite-killed": false,
+        "evosuite-time": 42.83931231498718,
         "id": 9
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 26.49617052078247,
+        "evosuite-killed": false,
+        "evosuite-time": 42.07171559333801,
         "id": 10
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.556132555007935,
+        "evosuite-killed": false,
+        "evosuite-time": 42.1435911655426,
         "id": 11
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 29.389185667037964,
+        "evosuite-killed": false,
+        "evosuite-time": 42.556172609329224,
         "id": 12
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.750494480133057,
+        "evosuite-killed": false,
+        "evosuite-time": 42.18235445022583,
         "id": 13
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 29.674709796905518,
+        "evosuite-killed": false,
+        "evosuite-time": 42.56039500236511,
         "id": 14
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 30.284401893615723,
+        "evosuite-killed": false,
+        "evosuite-time": 42.244094371795654,
         "id": 15
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.75645899772644,
+        "evosuite-killed": false,
+        "evosuite-time": 42.10208249092102,
         "id": 16
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.693227529525757,
+        "evosuite-killed": false,
+        "evosuite-time": 42.57091212272644,
         "id": 17
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 27.970319032669067,
+        "evosuite-killed": false,
+        "evosuite-time": 41.98529124259949,
         "id": 18
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 29.95638942718506,
+        "evosuite-killed": false,
+        "evosuite-time": 43.03776669502258,
         "id": 19
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 29.781883001327515,
+        "evosuite-killed": false,
+        "evosuite-time": 42.753212690353394,
         "id": 20
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 29.780065536499023,
+        "evosuite-killed": false,
+        "evosuite-time": 42.272940158843994,
         "id": 21
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.640966415405273,
+        "evosuite-killed": false,
+        "evosuite-time": 42.69830083847046,
         "id": 22
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.697481393814087,
+        "evosuite-killed": false,
+        "evosuite-time": 42.677478551864624,
         "id": 23
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 29.61812663078308,
+        "evosuite-killed": false,
+        "evosuite-time": 42.7894332408905,
         "id": 24
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.132243394851685,
+        "evosuite-killed": false,
+        "evosuite-time": 42.22610306739807,
         "id": 25
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.9583158493042,
+        "evosuite-killed": false,
+        "evosuite-time": 42.33831024169922,
         "id": 26
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.41852593421936,
+        "evosuite-killed": false,
+        "evosuite-time": 42.25769281387329,
         "id": 27
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.470271587371826,
+        "evosuite-killed": false,
+        "evosuite-time": 42.328861713409424,
         "id": 28
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.179898977279663,
+        "evosuite-killed": false,
+        "evosuite-time": 42.9667706489563,
         "id": 29
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 27.522891998291016,
+        "evosuite-killed": false,
+        "evosuite-time": 42.73551154136658,
         "id": 30
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.612438440322876,
+        "evosuite-killed": false,
+        "evosuite-time": 42.90314960479736,
         "id": 31
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.73915934562683,
+        "evosuite-killed": false,
+        "evosuite-time": 42.114039182662964,
         "id": 32
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 30.595983743667603,
+        "evosuite-killed": false,
+        "evosuite-time": 42.66788578033447,
         "id": 33
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 27.94703197479248,
+        "evosuite-killed": false,
+        "evosuite-time": 42.56128549575806,
         "id": 34
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 29.398894548416138,
+        "evosuite-killed": false,
+        "evosuite-time": 42.713414430618286,
         "id": 35
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.02652621269226,
+        "evosuite-killed": false,
+        "evosuite-time": 42.56429147720337,
         "id": 36
     },
     {
-        "evosuite-killed": true,
-        "evosuite-time": 28.191405773162842,
+        "evosuite-killed": false,
+        "evosuite-time": 42.638792514801025,
         "id": 37
     }
 ]

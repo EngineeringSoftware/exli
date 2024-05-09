@@ -1,62 +1,62 @@
 [
     {
         "id": 0,
-        "randoop-killed": true,
-        "randoop-time": 3.4320766925811768
+        "randoop-killed": false,
+        "randoop-time": 601.2802925109863
     },
     {
         "id": 1,
-        "randoop-killed": true,
-        "randoop-time": 3.9158501625061035
+        "randoop-killed": false,
+        "randoop-time": 601.2227246761322
     },
     {
         "id": 2,
-        "randoop-killed": true,
-        "randoop-time": 3.6661934852600098
+        "randoop-killed": false,
+        "randoop-time": 601.3019814491272
     },
     {
         "id": 3,
-        "randoop-killed": true,
-        "randoop-time": 3.5336573123931885
+        "randoop-killed": false,
+        "randoop-time": 601.2943370342255
     },
     {
         "id": 4,
-        "randoop-killed": true,
-        "randoop-time": 3.7729179859161377
+        "randoop-killed": false,
+        "randoop-time": 601.2788279056549
     },
     {
         "id": 5,
-        "randoop-killed": true,
-        "randoop-time": 3.893568754196167
+        "randoop-killed": false,
+        "randoop-time": 601.2895696163177
     },
     {
         "id": 6,
-        "randoop-killed": true,
-        "randoop-time": 2.1304407119750977
+        "randoop-killed": false,
+        "randoop-time": 601.2829430103302
     },
     {
         "id": 7,
-        "randoop-killed": true,
-        "randoop-time": 3.612489938735962
+        "randoop-killed": false,
+        "randoop-time": 601.2693555355072
     },
     {
         "id": 8,
-        "randoop-killed": true,
-        "randoop-time": 4.148364305496216
+        "randoop-killed": false,
+        "randoop-time": 601.2219452857971
     },
     {
         "id": 9,
-        "randoop-killed": true,
-        "randoop-time": 3.924509048461914
+        "randoop-killed": false,
+        "randoop-time": 601.2710919380188
     },
     {
         "id": 10,
-        "randoop-killed": true,
-        "randoop-time": 3.892826557159424
+        "randoop-killed": false,
+        "randoop-time": 601.2806224822998
     },
     {
         "id": 11,
-        "randoop-killed": true,
-        "randoop-time": 3.795938730239868
+        "randoop-killed": false,
+        "randoop-time": 601.3167011737823
     }
 ]

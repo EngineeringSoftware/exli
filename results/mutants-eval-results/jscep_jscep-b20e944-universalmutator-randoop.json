@@ -2,36 +2,36 @@
     {
         "id": 0,
         "randoop-killed": true,
-        "randoop-time": 1.207326889038086
+        "randoop-time": 65.26370573043823
     },
     {
         "id": 1,
-        "randoop-killed": true,
-        "randoop-time": 1.1957147121429443
+        "randoop-killed": false,
+        "randoop-time": 67.2541913986206
     },
     {
         "id": 2,
-        "randoop-killed": true,
-        "randoop-time": 1.0927813053131104
+        "randoop-killed": false,
+        "randoop-time": 66.13897609710693
     },
     {
         "id": 3,
         "randoop-killed": true,
-        "randoop-time": 1.2516779899597168
+        "randoop-time": 64.98621582984924
     },
     {
         "id": 4,
-        "randoop-killed": true,
-        "randoop-time": 1.1816303730010986
+        "randoop-killed": false,
+        "randoop-time": 66.35595107078552
     },
     {
         "id": 5,
-        "randoop-killed": true,
-        "randoop-time": 1.1385116577148438
+        "randoop-killed": false,
+        "randoop-time": 68.9548065662384
     },
     {
         "id": 6,
         "randoop-killed": true,
-        "randoop-time": 1.1247889995574951
+        "randoop-time": 64.83403491973877
     }
 ]
