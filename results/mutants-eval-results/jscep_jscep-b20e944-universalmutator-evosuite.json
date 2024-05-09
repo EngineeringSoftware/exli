@@ -1,37 +1,37 @@
 [
     {
         "evosuite-killed": true,
-        "evosuite-time": 3.5267813205718994,
+        "evosuite-time": 77.74001789093018,
         "id": 0
     },
     {
         "evosuite-killed": true,
-        "evosuite-time": 3.423109292984009,
+        "evosuite-time": 85.42147088050842,
         "id": 1
     },
     {
         "evosuite-killed": true,
-        "evosuite-time": 3.302765369415283,
+        "evosuite-time": 75.4559760093689,
         "id": 2
     },
     {
         "evosuite-killed": true,
-        "evosuite-time": 3.3774619102478027,
+        "evosuite-time": 84.85840439796448,
         "id": 3
     },
     {
         "evosuite-killed": true,
-        "evosuite-time": 3.365644931793213,
+        "evosuite-time": 74.76814270019531,
         "id": 4
     },
     {
         "evosuite-killed": true,
-        "evosuite-time": 3.3667895793914795,
+        "evosuite-time": 56.082964181900024,
         "id": 5
     },
     {
         "evosuite-killed": true,
-        "evosuite-time": 3.35542368888855,
+        "evosuite-time": 59.965038537979126,
         "id": 6
     }
 ]
