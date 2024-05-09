@@ -161,21 +161,20 @@ class Plot:
         fig.savefig(Macros.figure_dir / "target-statements.pdf")
 
     # python -m exli.plot dist_inline_tests_per_target_stmt_boxplot
-    def dist_inline_tests_per_target_stmt_boxplot(self, algorithm="greedy"):
+    def dist_inline_tests_per_target_stmt_boxplot(self, algorithm=Macros.greedy):
         # load data
         _, metrics_list = Table().get_stmts_num_itest(algorithm)
         metrics_list = {k: [v for v in l if v != 0] for k, l in metrics_list.items()}
 
         data = [
             [x for x in metrics_list[k] if x != 0]
-            for k in ["unique", Macros.r0, Macros.r1, Macros.r2_um]
+            for k in [Macros.unique, Macros.r0, Macros.r1, Macros.r2_um + "-" + algorithm]
         ]
         x_labels = [
             name_unique,
             name_exli_r0,
             name_exli_r1,
             name_exli_um,
-            name_exli_major,
         ]
 
         # box plot with unbroken y-label
