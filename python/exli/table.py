@@ -363,6 +363,9 @@ class Table:
             mutants = []
             if mutants_path.exists():
                 mutants = se.io.load(mutants_path)
+            else:
+                logger.warning(f"File {mutants_path} does not exist")
+                continue
             # only keep compilable mutants (currently, already filtered in previous steps)
             mutants = [
                 m
@@ -404,37 +407,35 @@ class Table:
                     / "mutants-eval-results"
                     / f"{proj}-{sha}-{Macros.universalmutator}-{tool}.json"
                 )
-                if not mutants_result_path.exists():
-                    if tool == Macros.r2_um:
-                        # merge r0 and r1 results
-                        r0 = se.io.load(
-                            Macros.results_dir
-                            / "mutants-eval-results"
-                            / f"{proj}-{sha}-{Macros.universalmutator}-{Macros.r0}.json"
-                        )
-                        r1 = se.io.load(
-                            Macros.results_dir
-                            / "mutants-eval-results"
-                            / f"{proj}-{sha}-{Macros.universalmutator}-{Macros.r1}.json"
-                        )
-                        res = []
-                        for r0, r1 in zip(r0, r1):
-                            if r0["id"] != r1["id"]:
-                                logger.warning(f"r0 and r1 mutants have different ids")
-                            item = {
-                                "id": r0["id"],
-                                f"{tool}-killed": r0[f"{Macros.r0}-killed"]
-                                or r1[f"{Macros.r1}-killed"],
-                                f"{tool}-time": max(
-                                    r0[f"{Macros.r0}-time"], r1[f"{Macros.r1}-time"]
-                                ),
-                            }
-                            res.append(item)
-                        # save res
-                        se.io.dump(mutants_result_path, res, se.io.Fmt.jsonPretty)
-                    else:
-                        logger.warning(f"File {mutants_result_path} does not exist")
-                        continue
+
+                if tool == Macros.r2_um:
+                    # merge r0 and r1 results
+                    r0 = se.io.load(
+                        Macros.results_dir
+                        / "mutants-eval-results"
+                        / f"{proj}-{sha}-{Macros.universalmutator}-{Macros.r0}.json"
+                    )
+                    r1 = se.io.load(
+                        Macros.results_dir
+                        / "mutants-eval-results"
+                        / f"{proj}-{sha}-{Macros.universalmutator}-{Macros.r1}.json"
+                    )
+                    res = []
+                    for r0, r1 in zip(r0, r1):
+                        if r0["id"] != r1["id"]:
+                            logger.warning(f"r0 and r1 mutants have different ids")
+                        item = {
+                            "id": r0["id"],
+                            f"{tool}-killed": r0[f"{Macros.r0}-killed"]
+                            or r1[f"{Macros.r1}-killed"],
+                            f"{tool}-time": max(
+                                r0[f"{Macros.r0}-time"], r1[f"{Macros.r1}-time"]
+                            ),
+                        }
+                        res.append(item)
+                    # save res
+                    se.io.dump(mutants_result_path, res, se.io.Fmt.jsonPretty)
+
                 mutants_result = se.io.load(mutants_result_path)
                 timeout = 600
                 if tool == Macros.evosuite:

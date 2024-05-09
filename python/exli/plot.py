@@ -199,7 +199,7 @@ class Plot:
         fig.savefig(Macros.figure_dir / "dist-inline-tests-per-stmt-box.pdf")
 
     # python -m exli.plot venn_mutated_results
-    def venn_mutated_results(self):
+    def venn_mutated_results(self, mutator=Macros.universalmutator):
         venn_dir = Macros.figure_dir / "venn"
         venn_dir.mkdir(exist_ok=True)
 
@@ -222,7 +222,8 @@ class Plot:
         projects = [p for p in projects_used_sorted if p not in projects_no_mutant]
         # venn diagram for each project
         for project_name in projects:
-            results_list = Util.get_killed_mutants(project_name, test_type_list)
+            sha = Util.get_sha(project_name)
+            results_list = Util.get_killed_mutants(project_name, sha, mutator, test_type_list)
             if len(results_list) != len(test_type_list):
                 raise RuntimeError(f"Project {project_name} has missing results")
             data_proj = {
@@ -277,7 +278,7 @@ class Plot:
 
         # ExLi vs. Unit
         data_comb_both = {
-            name_exli: data_all[name_exli_um] | data_all[name_exli_major],
+            name_exli: data_all[name_exli_um],
             name_unit: data_all[name_dev]
             | data_all[name_randoop]
             | data_all[name_evosuite],
