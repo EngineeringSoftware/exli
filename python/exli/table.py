@@ -481,8 +481,15 @@ class Table:
         if generate_mutants_time_path.exists():
             generate_mutants_time = se.io.load(generate_mutants_time_path)
             total_time = sum(generate_mutants_time.values())
-            file.append(latex.Macro("total-generate-mutants-time", f"{total_time:{fmt_f}}"))
-            file.append(latex.Macro("avg-generate-mutants-time", f"{total_time / len(generate_mutants_time):{fmt_f}}"))
+            file.append(
+                latex.Macro("total-generate-mutants-time", f"{total_time:{fmt_f}}")
+            )
+            file.append(
+                latex.Macro(
+                    "avg-generate-mutants-time",
+                    f"{total_time / len(generate_mutants_time):{fmt_f}}",
+                )
+            )
         file.save()
 
     # python -m exli.table data_time_r1
