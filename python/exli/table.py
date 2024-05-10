@@ -8,6 +8,7 @@ from exli.macros import Macros
 from exli.util import Util
 from jsonargparse import CLI
 from seutil import latex
+import re
 
 logger = se.log.get_logger(__name__)
 
@@ -495,18 +496,21 @@ class Table:
     # python -m exli.table data_time_r1
     def data_time_r1(self):
         file = latex.File(Macros.table_dir / "data-time-r1.tex")
-        proj_to_time = se.io.load(
+        attr_to_time = se.io.load(
             Macros.results_dir / "time" / "extract-inline-tests.json"
         )
 
-        sum_time = 0
+        sum_time = collections.defaultdict(float)
         num_proj = 0
-        for proj_name, time in proj_to_time.items():
-            file.append(latex.Macro(proj_name + "-r1-time", f"{time:{fmt_f}}"))
-            sum_time += time
+        for attr, time in attr_to_time.items():
+            file.append(latex.Macro(attr + "-time", f"{time:{fmt_f}}"))
+            match = re.match(r"^(?P<proj_name>.+)-(?P<sha>[a-f0-9]{7})-(?P<metric>.+)$", attr + "-time")
+            if match:
+                sum_time[match.group("metric")] += time
             num_proj += 1
-        file.append(latex.Macro("total-r1-time", f"{sum_time:{fmt_f}}"))
-        file.append(latex.Macro("avg-r1-time", f"{sum_time / num_proj:{fmt_f}}"))
+        for k, v in sum_time.items():
+            file.append(latex.Macro(f"total-{k}", f"{v:{fmt_f}}"))
+            file.append(latex.Macro(f"avg-{k}", f"{v / num_proj:{fmt_f}}"))
         file.save()
 
     # python -m exli.table data_time_r2

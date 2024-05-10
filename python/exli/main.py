@@ -60,7 +60,7 @@ class Main:
                         time_dict,
                     )
                     end_time = time.time()
-                    time_dict[f"{project_name}-{sha}"] = end_time - start_time
+                    time_dict[f"{project_name}-{sha}-r1"] = end_time - start_time
                 except Exception as e:
                     se.io.dump(
                         log_path,
