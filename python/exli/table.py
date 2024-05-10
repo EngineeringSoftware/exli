@@ -504,7 +504,10 @@ class Table:
         num_proj = 0
         for attr, time in attr_to_time.items():
             file.append(latex.Macro(attr + "-time", f"{time:{fmt_f}}"))
-            match = re.match(r"^(?P<proj_name>.+)-(?P<sha>[a-f0-9]{7})-(?P<metric>.+)$", attr + "-time")
+            match = re.match(
+                r"^(?P<proj_name>.+)-(?P<sha>[a-f0-9]{7})-(?P<metric>.+)$",
+                attr + "-time",
+            )
             if match:
                 sum_time[match.group("metric")] += time
             num_proj += 1
@@ -579,6 +582,45 @@ class Table:
                 )
             )
 
+        file.save()
+
+    # python -m exli.table data_projects
+    def data_projects(self):
+        file = latex.File(Macros.table_dir / "data-projects.tex")
+        java_projects = se.io.load(
+            Macros.data_dir / "teco-projects-2022-01-01-unit-tests-jacoco-randoop.json"
+        )
+        metrics_list = collections.defaultdict(list)
+        for project in java_projects:
+            project_name = project["full_name"]
+            file.append(latex.Macro(project_name + "-sha", project["sha"][:7]))
+            file.append(latex.Macro(project_name + "-date", project["date"][:10]))
+            file.append(latex.Macro(project_name + "-loc", f"{project['loc']:{fmt_d}}"))
+            file.append(
+                latex.Macro(
+                    project_name + "-time-dev-tests",
+                    f"{project['time-unit-tests']:{fmt_f}}",
+                )
+            )
+            metrics_list["num-proj-exp"].append(1)
+            metrics_list["num-proj-compile"].append(1 if project["compile"] else 0)
+            metrics_list["num-proj-dev-test"].append(1 if project["unit-test"] else 0)
+            metrics_list["num-proj-jacoco"].append(1 if project["jacoco"] else 0)
+            metrics_list["num-proj-randoop"].append(1 if project["randoop"] else 0)
+            if project_name not in projects_used_sorted:
+                continue
+            metrics_list["loc"].append(project["loc"])
+            metrics_list["time-dev-tests"].append(project["time-unit-tests"])
+            metrics_list["num-proj-used"].append(1)
+
+        for k, l in metrics_list.items():
+            if k == "time-dev-tests":
+                file.append(latex.Macro(f"total-{k}", f"{sum(l):{fmt_f}}"))
+            else:
+                file.append(latex.Macro(f"total-{k}", f"{sum(l):{fmt_d}}"))
+
+            if not k.startswith("num-proj"):
+                file.append(latex.Macro(f"avg-{k}", f"{sum(l)/len(l):{fmt_f}}"))
         file.save()
 
 

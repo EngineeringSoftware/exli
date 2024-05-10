@@ -321,7 +321,7 @@ class Filter:
             source_file = Macros.project_dir / source_file
         else:
             source_file = (
-                Macros.results_dir
+                Macros.data_dir
                 / "teco-projects-2022-01-01-unit-tests-jacoco-randoop.json"
             )
 
@@ -329,7 +329,7 @@ class Filter:
             target_file = Macros.project_dir / target_file
         else:
             target_file = (
-                Macros.results_dir
+                Macros.data_dir
                 / "teco-projects-2022-01-01-unit-tests-jacoco-randoop.json"
             )
 

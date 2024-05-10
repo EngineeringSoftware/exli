@@ -106,8 +106,7 @@ class Util:
     @classmethod
     def get_sha(cls, project_name: str):
         project_dict = se.io.load(
-            Macros.results_dir
-            / "teco-projects-2022-01-01-unit-tests-jacoco-randoop.json"
+            Macros.data_dir / "teco-projects-2022-01-01-unit-tests-jacoco-randoop.json"
         )
         for project in project_dict:
             if project["full_name"] == project_name:
@@ -117,8 +116,7 @@ class Util:
     @classmethod
     def get_project_names_list(cls):
         project_dict = se.io.load(
-            Macros.results_dir
-            / "teco-projects-2022-01-01-unit-tests-jacoco-randoop.json"
+            Macros.data_dir / "teco-projects-2022-01-01-unit-tests-jacoco-randoop.json"
         )
         return [
             project["full_name"]
@@ -131,8 +129,7 @@ class Util:
     @classmethod
     def get_project_names_list_with_sha(cls):
         project_dict = se.io.load(
-            Macros.results_dir
-            / "teco-projects-2022-01-01-unit-tests-jacoco-randoop.json"
+            Macros.data_dir / "teco-projects-2022-01-01-unit-tests-jacoco-randoop.json"
         )
         return [
             (project["full_name"], project["sha"][:7])
@@ -962,7 +959,9 @@ class Util:
 
                     # run_str = f"java -javaagent:{Macros.jacoco_agent_jar} -jar {Macros.junit_jar} -cp evosuite-tests:{Macros.evosuite_runtime_jar}:$(< {deps_file}) {class_str} --details=none &>> {log_file_path}"
                     # need to use &>> instead of &> because we want to save EvoSuite, Randoop and Dev tests' logs into one file
-                    if project_name not in ["awslabs_amazon-sqs-java-extended-client-lib"]:
+                    if project_name not in [
+                        "awslabs_amazon-sqs-java-extended-client-lib"
+                    ]:
                         log_config = f"-Dlogback.configurationFile={Macros.project_dir}/poms/logback.xml"
                     else:
                         log_config = ""
