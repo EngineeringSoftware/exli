@@ -1001,12 +1001,6 @@ class Eval:
                 line_index += 1
         return line_no_to_test
 
-    # python -m exli.eval batch_add_merged_tests_to_log_file
-    def batch_add_merged_tests_to_log_file(self):
-        self.add_merged_tests_to_log_file("merged")
-        for algo in Macros.test_minimization_algorithms:
-            self.add_merged_tests_to_log_file(algo)
-
     # python -m exli.eval batch_parse_log_file
     def batch_parse_log_file(self):
         """parse the log file to get the inline"""
@@ -1033,79 +1027,6 @@ class Eval:
                     log_path,
                 )
 
-    # python -m exli.eval add_passing_tests_into_java_files
-    # --test_type "r0" or "r1"
-    def add_passing_tests_into_java_files(self, test_type: str = Macros.r0):
-        all_pass_test_file = Macros.results_dir / f"{test_type}-passed-tests.txt"
-        if test_type == Macros.r0:
-            java_files_root_dir = (
-                Macros.project_dir / "supplementary-materials" / f"{Macros.r0}-tests"
-            )
-        elif test_type == Macros.r1:
-            java_files_root_dir = (
-                Macros.project_dir / "supplementary-materials" / f"{Macros.r1}-tests"
-            )
-        else:
-            raise ValueError(f"Unknown test type: {test_type}")
-        all_proj_to_stmts, _ = Util.get_projs_to_stmts_and_inline_tests(
-            all_pass_test_file
-        )
-        total_excluded_inline_tests = 0
-        total_kept_inline_tests = 0
-        for project_name, sha in Util.get_project_names_list_with_sha():
-            excluded_inline_tests = 0
-            passed_stmts = all_proj_to_stmts[project_name]
-            java_files_dir = java_files_root_dir / f"{project_name}-{sha}"
-            if not os.path.exists(java_files_dir):
-                print(f"java files dir not exist: {java_files_dir}")
-                continue
-            java_files = glob.glob(f"{java_files_dir}/**/*.java", recursive=True)
-            for java_file in java_files:
-                file_kept_inline_tests = 0
-                newlines = []
-                java_file_content = se.io.load(java_file, se.io.Fmt.txtList)
-                index = 0
-                while index < len(java_file_content):
-                    line = java_file_content[index]
-                    if line.strip().startswith("new Here("):
-                        while not java_file_content[index].strip().endswith(";"):
-                            index += 1
-                        # target stmt line no
-                        classlastname = (
-                            java_file.replace(".java", "").split("/")[-1].strip()
-                        )
-                        target_stmt_line_no = (
-                            line.strip()
-                            .split("new Here(")[1]
-                            .split(")")[0]
-                            .split(",")[1]
-                            .strip()
-                        )
-                        key = f".{classlastname}:{target_stmt_line_no}"
-                        find_target_stmt = False
-                        for passed_stmt in passed_stmts:
-                            if passed_stmt.endswith(key):
-                                find_target_stmt = True
-                                break
-
-                        if not find_target_stmt:
-                            excluded_inline_tests += 1
-                            index += 1
-                            continue
-                        else:
-                            file_kept_inline_tests += 1
-                            total_kept_inline_tests += 1
-                    newlines.append(line)
-                    index += 1
-                if file_kept_inline_tests > 0:
-                    se.io.dump(java_file, newlines, se.io.Fmt.txtList)
-                else:
-                    os.remove(java_file)
-            total_excluded_inline_tests += excluded_inline_tests
-            print(f"{project_name} excluded inline tests: {excluded_inline_tests}")
-        print(f"total excluded inline tests: {total_excluded_inline_tests}")
-        print(f"total kept inline tests: {total_kept_inline_tests}")
-
     # python -m exli.eval check_num_of_inline_tests
     def check_num_of_inline_tests(self):
         for input_type in ["merged"] + Macros.test_minimization_algorithms:
@@ -1119,114 +1040,12 @@ class Eval:
                 )
                 sha = Util.get_sha(project_name)
                 added_inline_test = se.bash.run(
-                    f"grep -rn 'new Here(' {Macros.project_dir}/{input_type}-tests/{project_name}-{sha}/* | wc -l"
+                    f"grep -rn 'itest(' {Macros.project_dir}/{input_type}-tests/{project_name}-{sha}/* | wc -l"
                 ).stdout
                 if logged_inline_test != int(added_inline_test):
                     print(
                         input_type, project_name, logged_inline_test, added_inline_test
                     )
-
-    # python -m exli.eval compute_r2_mutants_results --mutator "universalmutator"
-    # the mutator here is the mutantion tool used during R2 reduction; the eval mutation tool is always universalmutator
-    def compute_r2_mutants_results(
-        self, mutator: str = Macros.universalmutator, algorithm: str = "greedy"
-    ):
-        r2_tests = se.io.load(
-            Macros.results_dir / "r2" / f"{algorithm}-{mutator}.txt",
-            se.io.Fmt.txtList,
-        )
-        proj_2_r2_tests = collections.defaultdict(list)
-        for test in r2_tests:
-            proj_2_r2_tests[test.split("#")[0]].append(test)
-
-        # mappings from R0/R1 tests to killed mutants, for computing mutation score
-        r0_t2m_txt = se.io.load(
-            Macros.results_dir
-            / f"test-to-killed-mutants-{Macros.r0}-universalmutator.txt",
-            se.io.Fmt.txtList,
-        )
-        r0_t2m: Dict[str, Set[int]] = {}
-        for line in r0_t2m_txt:
-            test, *mutants = line.split(",")
-            r0_t2m[test] = {int(mutant.split("-")[-1]) for mutant in mutants}
-
-        r1_t2m_txt = se.io.load(
-            Macros.results_dir
-            / f"test-to-killed-mutants-{Macros.r1}-universalmutator.txt",
-            se.io.Fmt.txtList,
-        )
-        r1_t2m: Dict[str, Set[int]] = {}
-        for line in r1_t2m_txt:
-            test, *mutants = line.split(",")
-            r1_t2m[test] = {int(mutant.split("-")[-1]) for mutant in mutants}
-
-        # mappings from R0/R1 tests to target stmts, for computing number of inline tests with mutants
-        r0_stmt_tests = se.io.load(
-            Macros.results_dir / f"{Macros.r0}-passed-tests.txt", se.io.Fmt.txtList
-        )
-        r0_t2s: Dict[str, str] = {}
-        for line in r0_stmt_tests:
-            pname, clz, stmtno, testno = line.split(";")
-            r0_t2s[f"{pname}#{clz}_{stmtno}Test#testLine{testno}()"] = f"{clz};{stmtno}"
-
-        r1_stmt_tests = se.io.load(
-            Macros.results_dir / f"{Macros.r1}-passed-tests.txt", se.io.Fmt.txtList
-        )
-        r1_t2s: Dict[str, str] = {}
-        for line in r1_stmt_tests:
-            pname, clz, stmtno, testno = line.split(";")
-            r1_t2s[f"{pname}#{clz}_{stmtno}Test#testLine{testno}()"] = f"{clz};{stmtno}"
-
-        for pname in Util.get_project_names_list():
-            mutants = se.io.load(Macros.results_dir / "mutants" / f"{pname}.json")
-            mutated_stmts = set()
-            for mutant in mutants:
-                clz = Util.file_path_to_class_name(mutant["filepath"])
-                stmtno = mutant["linenumber"]
-                mutated_stmts.add(f"{clz};{stmtno}")
-
-            r2_tests_proj = proj_2_r2_tests[pname]
-            r2_killed: List[bool] = [False for _ in range(len(mutants))]
-
-            num_test_with_mutants = 0
-            for test in r2_tests_proj:
-                if test.endswith("#" + Macros.r0):
-                    test = test.replace("#" + Macros.r0, "")
-                    if test in r0_t2m:
-                        for mutant in r0_t2m[test]:
-                            r2_killed[mutant] = True
-
-                    if r0_t2s[test] in mutated_stmts:
-                        num_test_with_mutants += 1
-                else:
-                    if test in r1_t2m:
-                        for mutant in r1_t2m[test]:
-                            r2_killed[mutant] = True
-
-                    if r1_t2s[test] in mutated_stmts:
-                        num_test_with_mutants += 1
-
-            results = [
-                {
-                    f"r2-{mutator}-killed": k,
-                    f"r2-{mutator}-time": 0,  # no time info because it is computed
-                }
-                for k in r2_killed
-            ]
-
-            se.io.dump(
-                Macros.results_dir
-                / "mutants-eval-results"
-                / f"{pname}-r2-{mutator}.json",
-                results,
-                se.io.Fmt.jsonPretty,
-            )
-            se.io.dump(
-                Macros.results_dir
-                / "mutants-eval-results"
-                / f"{pname}-r2-{mutator}-num.json",
-                num_test_with_mutants,
-            )
 
     # python -m exli.eval check_set_of_reduction_results
     def check_set_of_reduction_results(self):
