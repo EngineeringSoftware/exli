@@ -502,9 +502,6 @@ class Table:
         sum_time = 0
         num_proj = 0
         for proj_name, time in proj_to_time.items():
-            # This project cannot stop because the inline tests are too large
-            if proj_name == "mpatric_mp3agic":
-                continue
             file.append(latex.Macro(proj_name + "-r1-time", f"{time:{fmt_f}}"))
             sum_time += time
             num_proj += 1
