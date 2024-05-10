@@ -4,7 +4,6 @@ from typing import Dict, List, Tuple
 import numpy as np
 import pandas as pd
 import seutil as se
-from bs4 import BeautifulSoup
 from exli.macros import Macros
 from exli.util import Util
 from jsonargparse import CLI
@@ -475,6 +474,15 @@ class Table:
                 file.append(latex.Macro(f"total-{k}", f"{sum(l):{fmt_d}}"))
             file.append(latex.Macro(f"avg-{k}", f"{sum(l) / len(l):{fmt_f}}"))
 
+        # time of generating mutants
+        generate_mutants_time_path = (
+            Macros.results_dir / "time" / "generate-mutants-universalmutator.json"
+        )
+        if generate_mutants_time_path.exists():
+            generate_mutants_time = se.io.load(generate_mutants_time_path)
+            total_time = sum(generate_mutants_time.values())
+            file.append(latex.Macro("total-generate-mutants-time", f"{total_time:{fmt_f}}"))
+            file.append(latex.Macro("avg-generate-mutants-time", f"{total_time / len(generate_mutants_time):{fmt_f}}"))
         file.save()
 
     # python -m exli.table data_time_r1
