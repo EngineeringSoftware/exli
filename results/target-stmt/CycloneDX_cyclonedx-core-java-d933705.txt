@@ -1,4 +1,0 @@
-target stmt stream;/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/ExtensibleTypesSerializer.java;60;null;;null
-target stmt stream;/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/VersionJsonAnnotationIntrospector.java;39;null;;null
-target stmt stream;/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/util/VersionXmlAnnotationIntrospector.java;40;null;;null
-target stmt stream;/home/itdocker/exli/_downloads/CycloneDX_cyclonedx-core-java/src/main/java/org/cyclonedx/model/Dependency.java;57;null;;null

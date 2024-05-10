@@ -1,9 +1,0 @@
-target stmt string;/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/models/SearchResults.java;44;null;;null
-target stmt stream;/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/ParserUtils.java;142;null;;null
-target stmt stream;/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/ParserUtils.java;185;null;;null
-target stmt stream;/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/FighterParser.java;252;null;;null
-target stmt stream;/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/FighterParser.java;261;null;;null
-target stmt string;/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/SherdogParser.java;28;null;;null
-target stmt string;/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/OrganizationParser.java;63;null;;null
-target stmt string;/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/OrganizationParser.java;79;null;;null
-target stmt string;/home/itdocker/exli/_downloads/lamarios_sherdog-parser/src/main/java/com/ftpix/sherdogparser/parsers/OrganizationParser.java;144;null;;null

@@ -1,9 +1,0 @@
-target stmt string;/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/ModelGenerator.java;539;null;;null
-target stmt string;/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/ModelGenerator.java;536;null;;null
-target stmt string;/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/ModelGenerator.java;946;null;;null
-target stmt string;/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/ModelAnnotationProcessor.java;150;null;;null
-target stmt string;/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/ModelAnnotationProcessor.java;151;null;;null
-target stmt string;/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/ModelAnnotationProcessor.java;153;null;;null
-target stmt string;/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/validation/FormatValidation.java;28;null;;null
-target stmt string;/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/validation/AbstractValidation.java;257;null;;null
-target stmt string;/home/itdocker/exli/_downloads/ralscha_extclassgenerator/src/main/java/ch/rasc/extclassgenerator/validation/AbstractValidation.java;257;null;;null

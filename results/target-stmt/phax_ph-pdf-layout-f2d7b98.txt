@@ -1,6 +1,0 @@
-target stmt bit;/home/itdocker/exli/_downloads/phax_ph-pdf-layout/src/main/java/com/helger/pdflayout/spec/LoadedFont.java;74;null;;null
-target stmt bit;/home/itdocker/exli/_downloads/phax_ph-pdf-layout/src/main/java/com/helger/pdflayout/spec/LoadedFont.java;75;null;;null
-target stmt string;/home/itdocker/exli/_downloads/phax_ph-pdf-layout/src/main/java/com/helger/pdflayout/spec/LoadedFont.java;352;null;;null
-target stmt string;/home/itdocker/exli/_downloads/phax_ph-pdf-layout/src/main/java/com/helger/pdflayout/spec/LoadedFont.java;353;null;;null
-target stmt string;/home/itdocker/exli/_downloads/phax_ph-pdf-layout/src/main/java/com/helger/pdflayout/spec/LoadedFont.java;344;null;;null
-target stmt string;/home/itdocker/exli/_downloads/phax_ph-pdf-layout/src/main/java/com/helger/pdflayout/spec/LoadedFont.java;346;null;;null

@@ -1,4 +1,0 @@
-target stmt string;/home/itdocker/exli/_downloads/liquibase_liquibase-oracle/src/main/java/liquibase/ext/ora/comment/CommentOnGenerator.java;21;null;;null
-target stmt string;/home/itdocker/exli/_downloads/liquibase_liquibase-oracle/src/main/java/liquibase/ext/ora/comment/CommentOnGenerator.java;21;null;;null
-target stmt string;/home/itdocker/exli/_downloads/liquibase_liquibase-oracle/src/main/java/liquibase/ext/ora/splittable/SplitTableGenerator.java;80;null;;null
-target stmt string;/home/itdocker/exli/_downloads/liquibase_liquibase-oracle/src/main/java/liquibase/ext/ora/merge/MergeGenerator.java;24;null;;null
