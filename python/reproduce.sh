@@ -40,3 +40,4 @@ python -m exli.table data_mutants_eval_results
 python -m exli.plot venn_mutated_results
 
 python -m exli.table data_time_r1
+python -m exli.table data_time_r2
