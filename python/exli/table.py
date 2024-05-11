@@ -231,6 +231,20 @@ class Table:
                     )
                 )
 
+        # count the number of removed failed inline tests
+        # parse the log from Macros.results_dir / f"{test_type}-removed-failed-tests.json"
+        for test_type in [Macros.r0, Macros.r1]:
+            removed_failed_tests_path = (
+                Macros.results_dir / f"{test_type}-removed-failed-tests.json"
+            )
+            if removed_failed_tests_path.exists():
+                removed_failed_tests = se.io.load(removed_failed_tests_path)
+                file.append(
+                    latex.Macro(
+                        f"{test_type}-removed-failed-tests", len(removed_failed_tests)
+                    )
+                )
+
         file.save()
 
     def get_stmts_num_itest(
