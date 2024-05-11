@@ -515,8 +515,12 @@ class Main:
                 full_class_with_line_num
             ].append(it_line_num)
 
-        removed_failed_tests = []
-        removed_failed_tests_path = Macros.log_dir / "removed-failed-tests.json"
+        removed_failed_tests_path = Macros.results_dir / "removed-failed-tests.json"
+        if removed_failed_tests_path.exists():
+            removed_failed_tests = se.io.load(removed_failed_tests_path)
+        else:
+            removed_failed_tests = []
+
         num_of_failed_tests = 0
         for (
             project_name,
