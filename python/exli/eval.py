@@ -1082,6 +1082,77 @@ class Eval:
                 print(algo1, "new", len(diff))
 
 
+    def get_failed_tests(self, test_type: str = Macros.r0):
+        """
+        Get failed tests. This is used only when we saved the initial
+        r0-tests and r1-tests (if we did not execute `python -m
+        exli.main remove_failed_tests`)
+
+        Args:
+            test_type (str, optional): Inline tests type. Defaults to
+            Macros.r0.
+        """
+        all_pass_test_file = Macros.results_dir / f"{test_type}-passed-tests.txt"
+        java_files_root_dir = (
+            Macros.results_dir / f"{test_type}-tests"
+        )
+
+        all_proj_to_stmts, _ = Util.get_projs_to_stmts_and_inline_tests(
+            all_pass_test_file
+        )
+        total_excluded_inline_tests = 0
+        total_kept_inline_tests = 0
+        for project_name, sha in Util.get_project_names_list_with_sha():
+            excluded_inline_tests = 0
+            passed_stmts = all_proj_to_stmts[project_name]
+            java_files_dir = java_files_root_dir / f"{project_name}-{sha}"
+            if not os.path.exists(java_files_dir):
+                print(f"java files dir not exist: {java_files_dir}")
+                continue
+            java_files = glob.glob(f"{java_files_dir}/**/*.java", recursive=True)
+            for java_file in java_files:
+                file_kept_inline_tests = 0
+                newlines = []
+                java_file_content = se.io.load(java_file, se.io.Fmt.txtList)
+                index = 0
+                while index < len(java_file_content):
+                    line = java_file_content[index]
+                    if line.strip().startswith("itest("):
+                        while not java_file_content[index].strip().endswith(";"):
+                            index += 1
+                        # target stmt line no
+                        classlastname = (
+                            java_file.replace(".java", "").split("/")[-1].strip()
+                        )
+                        target_stmt_line_no = (
+                            line.strip()
+                            .split("itest(")[1]
+                            .split(")")[0]
+                            .split(",")[1]
+                            .strip()
+                        )
+                        key = f".{classlastname}:{target_stmt_line_no}"
+                        find_target_stmt = False
+                        for passed_stmt in passed_stmts:
+                            if passed_stmt.endswith(key):
+                                find_target_stmt = True
+                                break
+
+                        if not find_target_stmt:
+                            excluded_inline_tests += 1
+                            print(project_name,java_file, target_stmt_line_no, line)
+                            index += 1
+                            continue
+                        else:
+                            file_kept_inline_tests += 1
+                            total_kept_inline_tests += 1
+                    newlines.append(line)
+                    index += 1
+            total_excluded_inline_tests += excluded_inline_tests
+            print(f"{project_name} excluded inline tests: {excluded_inline_tests}")
+        print(f"total excluded inline tests: {total_excluded_inline_tests}")
+        print(f"total kept inline tests: {total_kept_inline_tests}")
+
 if __name__ == "__main__":
     se.log.setup(Macros.log_file)
     CLI(Eval, as_positional=False)
