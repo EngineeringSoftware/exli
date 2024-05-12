@@ -501,7 +501,7 @@ class Eval:
             se.io.dump(r2_tests_path, r2_tests, se.io.Fmt.txtList)
 
     def get_r2_tests(
-        self, project_name: str, sha: str, mutator: str, algo: str, output_path: str
+        self, project_name: str, sha: str, mutator: str, algo: str, output_path: str = None
     ):
         """
         Get the r2 tests.
@@ -552,6 +552,8 @@ class Eval:
         r2_tests = []
         r2_tests.extend(formatted_minimized_tests)
         r2_tests.extend(itests_without_mutants)
+        if output_path is None:
+            output_path = f"{Macros.results_dir}/r2/{project_name}-{sha}-{mutator}-{algo}.txt"
         se.io.dump(output_path, r2_tests, se.io.Fmt.txtList)
 
     # python -m exli.eval batch_test_to_killed_mutants --mutator "universalmutator"
