@@ -21,3 +21,11 @@ It takes serveral days to run Randoop and EvoSuite to generate unit tests for al
 ```bash
 git clone https://pipiyu@bitbucket.org/sedata/exlidata.git
 ```
+
+Notes: The inline tests failed mainly for three reasons: (1)~the
+object does not override the `toString()` method, leading the
+assertion to compare memory references instead of object properties;
+(2)~the object cannot be deserialized due to dynamic dispatch,
+resulting in a type mismatch and `ConversionException` thrown by
+XStream; (3)~the parsed test fails to compile because there are
+methods in the target statements that are not static and have states.
