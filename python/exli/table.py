@@ -514,8 +514,7 @@ class Table:
             Macros.results_dir / "time" / "extract-inline-tests.json"
         )
 
-        sum_time = collections.defaultdict(float)
-        num_proj = 0
+        sum_time = collections.defaultdict(list)
         for attr, time in attr_to_time.items():
             file.append(latex.Macro(attr + "-time", f"{time:{fmt_f}}"))
             match = re.match(
@@ -523,11 +522,10 @@ class Table:
                 attr + "-time",
             )
             if match:
-                sum_time[match.group("metric")] += time
-            num_proj += 1
+                sum_time[match.group("metric")].append(time)
         for k, v in sum_time.items():
-            file.append(latex.Macro(f"total-{k}", f"{v:{fmt_f}}"))
-            file.append(latex.Macro(f"avg-{k}", f"{v / num_proj:{fmt_f}}"))
+            file.append(latex.Macro(f"total-{k}", f"{sum(v):{fmt_f}}"))
+            file.append(latex.Macro(f"avg-{k}", f"{sum(v) / len(v):{fmt_f}}"))
         file.save()
 
     # python -m exli.table data_time_r2
