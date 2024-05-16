@@ -501,7 +501,12 @@ class Eval:
             se.io.dump(r2_tests_path, r2_tests, se.io.Fmt.txtList)
 
     def get_r2_tests(
-        self, project_name: str, sha: str, mutator: str, algo: str, output_path: str = None
+        self,
+        project_name: str,
+        sha: str,
+        mutator: str,
+        algo: str,
+        output_path: str = None,
     ):
         """
         Get the r2 tests.
@@ -553,7 +558,9 @@ class Eval:
         r2_tests.extend(formatted_minimized_tests)
         r2_tests.extend(itests_without_mutants)
         if output_path is None:
-            output_path = f"{Macros.results_dir}/r2/{project_name}-{sha}-{mutator}-{algo}.txt"
+            output_path = (
+                f"{Macros.results_dir}/r2/{project_name}-{sha}-{mutator}-{algo}.txt"
+            )
         se.io.dump(output_path, r2_tests, se.io.Fmt.txtList)
 
     # python -m exli.eval batch_test_to_killed_mutants --mutator "universalmutator"
@@ -1083,7 +1090,6 @@ class Eval:
                 diff = set(tests1) - set(new_tests)
                 print(algo1, "new", len(diff))
 
-
     def get_failed_tests(self, test_type: str = Macros.r0):
         """
         Get failed tests. This is used only when we saved the initial
@@ -1095,9 +1101,7 @@ class Eval:
             Macros.r0.
         """
         all_pass_test_file = Macros.results_dir / f"{test_type}-passed-tests.txt"
-        java_files_root_dir = (
-            Macros.results_dir / f"{test_type}-tests"
-        )
+        java_files_root_dir = Macros.results_dir / f"{test_type}-tests"
 
         all_proj_to_stmts, _ = Util.get_projs_to_stmts_and_inline_tests(
             all_pass_test_file
@@ -1142,7 +1146,7 @@ class Eval:
 
                         if not find_target_stmt:
                             excluded_inline_tests += 1
-                            print(project_name,java_file, target_stmt_line_no, line)
+                            print(project_name, java_file, target_stmt_line_no, line)
                             index += 1
                             continue
                         else:
@@ -1154,6 +1158,48 @@ class Eval:
             print(f"{project_name} excluded inline tests: {excluded_inline_tests}")
         print(f"total excluded inline tests: {total_excluded_inline_tests}")
         print(f"total kept inline tests: {total_kept_inline_tests}")
+
+    # python -m exli.eval check_covered_stmts
+    def check_covered_stmts(self):
+        # load all target statements
+        examples = se.io.load(Macros.results_dir / "target-statements.json")
+        # get target statements that are covered by at least one unit test
+        examples = [
+            example
+            for example in examples
+            if example[f"{Macros.evosuite}_stmt_covered"] == True
+            or example[f"{Macros.randoop}_stmt_covered"] == True
+            or example[f"{Macros.dev}_stmt_covered"] == True
+        ]
+        covered_stmts = set()
+        for example in examples:
+            class_name = Util.file_path_to_class_name(example["filename"])
+            covered_stmts.add(
+                example["project"]
+                + ";"
+                + class_name
+                + ";"
+                + str(example["line_number"])
+            )
+
+        # target stmts from passing tests
+        pass_test_file = Macros.results_dir / f"{Macros.r0}-passed-tests.txt"
+        pass_tests = se.io.load(pass_test_file, se.io.Fmt.txtList)
+        target_stmts = set()
+        for test in pass_tests:
+            project_name, classname, target_stmt_lineno, _ = test.split(";")
+            target_stmts.add(f"{project_name};{classname};{target_stmt_lineno}")
+
+        # compare the two sets
+        print(f"covered stmts: {len(covered_stmts)}")
+        print(f"passing tests target stmts: {len(target_stmts)}")
+        print(
+            f"covered stmts - passing tests target stmts: {len(covered_stmts - target_stmts)}"
+        )
+        print(
+            f"passing tests target stmts - covered stmts: {target_stmts - covered_stmts}"
+        )
+
 
 if __name__ == "__main__":
     se.log.setup(Macros.log_file)
