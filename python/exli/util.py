@@ -665,6 +665,10 @@ class Util:
         res = {}
         project = Util.prepare_project(project_name, sha, checkout)
         maven_project = MavenProject.from_project(project)
+        # create log dir for jacoco if not exist
+        jacoco_log_dir = Macros.log_dir / "jacoco"
+        if not jacoco_log_dir.exists():
+            se.io.mkdir(jacoco_log_dir)
         with se.io.cd(Macros.downloads_dir / project_name):
             try:
                 Util.copy_jacoco_extension()
@@ -672,7 +676,8 @@ class Util:
                     project_name, test_type, maven_project
                 )
                 test_rr = se.bash.run(
-                    f"mvn clean test {Macros.SKIPS_NO_JACOCO} > {Macros.log_dir}/jacoco/{project_name}-{sha}-{test_type}-tests.log",
+                    f"mvn clean test {Macros.SKIPS_NO_JACOCO} > {jacoco_log_dir}/{project_name}-{sha}-{test_type}-tests.log",
+                    0,
                     timeout=timeout,
                 )
                 if test_rr.returncode != 0 and not allow_test_failure:
