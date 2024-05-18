@@ -8,6 +8,7 @@ from exli.macros import Macros
 from exli.util import Util
 from jsonargparse import CLI
 from seutil import latex
+from pathlib import Path
 
 
 class Analysis:
@@ -222,9 +223,6 @@ class Analysis:
         r0_passed_its = se.io.load(
             Macros.results_dir / "r0-passed-tests.txt", se.io.Fmt.txtList
         )
-        target_stmts_with_passed_tests = [
-            ";".join(r0_passed_it.split(";")[:3]) for r0_passed_it in r0_passed_its
-        ]
 
         project_names = Util.get_project_names_list_with_sha()
         res = {}
@@ -273,9 +271,13 @@ class Analysis:
                             }
 
                 if inline_tests_type == Macros.r1:
-                    inline_tests_dir = Macros.r1_tests_dir / f"{project_name}-{sha}"
+                    inline_tests_dir = Path(
+                        f"{Macros.r1_tests_dir}-all/{project_name}-{sha}"
+                    )
                 elif inline_tests_type == Macros.r0:
-                    inline_tests_dir = Macros.r0_tests_dir / f"{project_name}-{sha}"
+                    inline_tests_dir = Path(
+                        f"{Macros.r0_tests_dir}-all/{project_name}-{sha}"
+                    )
                 if not inline_tests_dir.exists():
                     continue
 
@@ -350,7 +352,9 @@ class Analysis:
                                     + class_name
                                     + ";"
                                     + str(target_stmt_line_no)
-                                ) in target_stmts_with_passed_tests:
+                                    + ";"
+                                    + str(test_line_no)
+                                ) in r0_passed_its:
                                     res[key]["pass"] = True
         se.io.dump(
             Macros.results_dir / f"{inline_tests_type}-inline-tests.json",
