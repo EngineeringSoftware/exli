@@ -219,6 +219,13 @@ class Analysis:
         else:
             raise ValueError(f"Invalid inline tests type: {inline_tests_type}")
 
+        r0_passed_its = se.io.load(
+            Macros.results_dir / "r0-passed-tests.txt", se.io.Fmt.txtList
+        )
+        target_stmts_with_passed_tests = [
+            ";".join(r0_passed_it.split(";")[:3]) for r0_passed_it in r0_passed_its
+        ]
+
         project_names = Util.get_project_names_list_with_sha()
         res = {}
         for project_name, sha in project_names:
@@ -260,6 +267,7 @@ class Analysis:
                                 "target-stmt": "",
                                 "inline-test": inline_test,
                                 "file-path": file_path,
+                                "can-add-back": False,
                                 "pass": False,
                                 "source": "",  # expect to be dev or randoop or evoSuite
                             }
@@ -329,14 +337,21 @@ class Analysis:
                                 + ";"
                                 + str(self.hash(inline_test.replace(" ", "")))
                             )
+
                             if key in res:
                                 res[key]["target-stmt"] = target_stmt
-                                res[key]["pass"] = True
                                 res[key]["source"] = test_line_no_to_target_stmt_source[
                                     test_line_no
                                 ]
-                            else:
-                                print(f"Cannot find {key} in {project_name}")
+                                res[key]["can-add-back"] = True
+                                if (
+                                    project_name
+                                    + ";"
+                                    + class_name
+                                    + ";"
+                                    + str(target_stmt_line_no)
+                                ) in target_stmts_with_passed_tests:
+                                    res[key]["pass"] = True
         se.io.dump(
             Macros.results_dir / f"{inline_tests_type}-inline-tests.json",
             res,
