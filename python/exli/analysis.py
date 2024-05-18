@@ -294,20 +294,28 @@ class Analysis:
                                 test_line_no_to_target_stmt[test_line_no] = target_stmt
                                 # extract the target statement source in the first parameter of Here constructor
                                 target_stmt_source = (
-                                    line.split(",")[0].split("(")[1].strip()
+                                    line.split(",")[0]
+                                    .split("(")[1]
+                                    .replace('"', "")
+                                    .strip()
                                 )
                                 test_line_no_to_target_stmt_source[test_line_no] = (
                                     target_stmt_source
                                 )
                                 test_line_no_to_source_code[test_line_no] = line.strip()
                             else:
-                                if line != "" and line.strip()!="":
+                                if line != "" and line.strip() != "":
                                     target_stmt = line
                         for (
                             test_line_no,
                             target_stmt,
                         ) in test_line_no_to_target_stmt.items():
-                            class_name = str(test_file).replace(str(inline_tests_dir) + "/", "").replace(".java", "").replace("/", ".")
+                            class_name = (
+                                str(test_file)
+                                .replace(str(inline_tests_dir) + "/", "")
+                                .replace(".java", "")
+                                .replace("/", ".")
+                            )
                             inline_test = test_line_no_to_source_code[test_line_no]
                             target_stmt_line_no = test_line_no_to_target_stmt_line_no[
                                 test_line_no
