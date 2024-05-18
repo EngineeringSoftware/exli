@@ -2,6 +2,9 @@
 python -m exli.main batch_find_target_stmts
 # Generate unit tests with Randoop and EvoSuite. Execute unit tests to get inline tests.
 python -m exli.main batch_run
+# Copy the generated inline tests before removing failing tests
+cp -r ../../r0-tests ../../r0-tests-all
+cp -r ../../r1-tests ../../r1-tests-all
 # Execute inline tests.
 python -m exli.main batch_run_inline_tests
 # Analyze inline test reports.
