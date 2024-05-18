@@ -748,7 +748,6 @@ class Main:
                 se.io.Fmt.jsonPretty,
             )
 
-    # python -m exli.main generate_mutants_for_each_line --project_name Asana_java-asana --orig_path "/home/liuyu/projects/exli/_downloads/AquaticInformatics_aquarius-sdk-java/src/main/java/com/aquaticinformatics/aquarius/sdk/helpers/SdkServiceClient.java" --line_num 191
     def generate_mutants_for_each_line(
         self, project_name: str, orig_path: str, line_num: str
     ):
