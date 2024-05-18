@@ -263,12 +263,12 @@ class Analysis:
                                 "inline-test": inline_test,
                                 "file-path": file_path,
                                 "can-add-to-source-code": False,
-                                "source": "",  # expect to be Unit or Randoop or EvoSuite
+                                "source": "",  # expect to be dev or randoop or evoSuite
                             }
 
-                if inline_tests_type == "reduced":
+                if inline_tests_type == Macros.r1:
                     inline_tests_dir = Macros.r1_tests_dir / f"{project_name}-{sha}"
-                elif inline_tests_type == "all":
+                elif inline_tests_type == Macros.r0:
                     inline_tests_dir = Macros.r0_tests_dir / f"{project_name}-{sha}"
                 if not inline_tests_dir.exists():
                     continue
