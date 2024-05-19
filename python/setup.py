@@ -13,7 +13,7 @@ def read(fname):
 
 
 setup(
-    name="ExLi-research",
+    name="exli-research",
     version="0.1.0",
     author="Yu Liu",
     author_email="yuki.liu@utexas.edu",

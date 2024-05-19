@@ -21,7 +21,7 @@ function prepare_conda_env() {
 
         # Install libraries but not this package itself
         pip install -e .[dev,research]
-        pip uninstall ExLi-research -y
+        pip uninstall exli-research -y
 }
 
 
