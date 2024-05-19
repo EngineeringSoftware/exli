@@ -22,7 +22,7 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
 ENV PATH=$CONDA_DIR/bin:$PATH
 
 # Add new user
-RUN useradd -ms /bin/bash -c "Exli User" itdocker && echo "itdocker:itdocker" | chpasswd && adduser itdocker sudo
+RUN useradd -ms /bin/bash -c "ExLi User" itdocker && echo "itdocker:itdocker" | chpasswd && adduser itdocker sudo
 USER itdocker
 ENV USER itdocker
 WORKDIR /home/itdocker/
@@ -46,7 +46,7 @@ RUN bash -c "git clone https://github.com/EngineeringSoftware/exli.git exli"
 RUN cd "$HOME/exli/python" && /bin/bash -c "bash prepare-conda-env.sh"
 # Install ITest
 RUN cd "$HOME/inlinetest/java" && /bin/bash -c "bash install.sh"
-# Install Exli
+# Install ExLi
 RUN cd "$HOME/exli/java" && /bin/bash -c "bash install.sh"
 
 ENTRYPOINT /bin/bash
