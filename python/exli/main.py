@@ -494,12 +494,12 @@ class Main:
 
         se.io.dump(
             failed_test_file_path,
-            list(failed_tests),
+            sorted(list(failed_tests)),
             se.io.Fmt.txtList,
         )
         se.io.dump(
             passed_test_file_path,
-            list(passed_tests),
+            sorted(list(passed_tests)),
             se.io.Fmt.txtList,
         )
 
