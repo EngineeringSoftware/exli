@@ -518,7 +518,9 @@ class Main:
                 full_class_with_line_num
             ].append(it_line_num)
 
-        removed_failed_tests_path = Macros.results_dir / f"{inline_test_type}-removed-failed-tests.json"
+        removed_failed_tests_path = (
+            Macros.results_dir / f"{inline_test_type}-removed-failed-tests.json"
+        )
         if removed_failed_tests_path.exists():
             removed_failed_tests = se.io.load(removed_failed_tests_path)
         else:
@@ -551,7 +553,6 @@ class Main:
                     continue
                 file_content = se.io.load(file_path_with_inline_test, se.io.Fmt.txtList)
                 for line_num in line_nums:
-                    num_of_failed_tests += 1
                     failed_test = {
                         "project": project_name,
                         "file_path": f"{file_path_with_inline_test}",
@@ -561,6 +562,8 @@ class Main:
                         "it": file_content[int(line_num) - 1],
                     }
                     removed_failed_tests.append(failed_test)
+                    if file_content[int(line_num) - 1] != "":
+                        num_of_failed_tests += 1
                     file_content[int(line_num) - 1] = ""
                 # check if there are inline tests left
                 num_its = 0
