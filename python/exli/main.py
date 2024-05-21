@@ -546,6 +546,9 @@ class Main:
                     / f"{project_name}-{sha}"
                     / (full_class_name.split(r"$")[0].replace(".", "/") + ".java")
                 )
+                if not os.path.exists(file_path_with_inline_test):
+                    print(f"no inline test file {file_path_with_inline_test}")
+                    continue
                 file_content = se.io.load(file_path_with_inline_test, se.io.Fmt.txtList)
                 for line_num in line_nums:
                     num_of_failed_tests += 1
