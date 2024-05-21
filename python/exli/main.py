@@ -559,11 +559,19 @@ class Main:
                     }
                     removed_failed_tests.append(failed_test)
                     file_content[int(line_num) - 1] = ""
-                se.io.dump(
-                    file_path_with_inline_test,
-                    file_content,
-                    se.io.Fmt.txtList,
-                )
+                # check if there are inline tests left
+                num_its = 0
+                for line in file_content:
+                    if line.strip().startswith(Macros.ITEST_DECLARE + "("):
+                        num_its += 1
+                if num_its > 0:
+                    se.io.dump(
+                        file_path_with_inline_test,
+                        file_content,
+                        se.io.Fmt.txtList,
+                    )
+                else:
+                    se.bash.run(f"rm {file_path_with_inline_test}")
 
         se.io.dump(
             removed_failed_tests_path,
