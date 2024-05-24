@@ -435,8 +435,17 @@ class Main:
             print(f"{test_report_dir} does not exist")
             return
         # iterate all reports in the report directory
-        failed_tests = []
-        passed_tests = []
+        failed_test_file_path = (
+            f"{Macros.results_dir}/{inline_test_type}-failed-tests.txt"
+        )
+        passed_test_file_path = (
+            f"{Macros.results_dir}/{inline_test_type}-passed-tests.txt"
+        )
+        if os.path.exists(failed_test_file_path):
+            failed_tests = set(se.io.load(failed_test_file_path, se.io.Fmt.txtList))
+        else:
+            failed_tests = set()
+        passed_tests = set()
         for report_file in os.listdir(test_report_dir):
             if not report_file.endswith(".json"):
                 continue
@@ -474,29 +483,23 @@ class Main:
                 )
                 if "failure" in test_case or "error" in test_case:
                     # collect the failed test
-                    failed_tests.append(
+                    failed_tests.add(
                         f"{project_name};{class_name};{target_stmt_linenumber};{inline_test_linenumber}"
                     )
                 else:
                     # collect the passed test
-                    passed_tests.append(
+                    passed_tests.add(
                         f"{project_name};{class_name};{target_stmt_linenumber};{inline_test_linenumber}"
                     )
 
-        failed_test_file_path = (
-            f"{Macros.results_dir}/{inline_test_type}-failed-tests.txt"
-        )
-        passed_test_file_path = (
-            f"{Macros.results_dir}/{inline_test_type}-passed-tests.txt"
-        )
         se.io.dump(
             failed_test_file_path,
-            failed_tests,
+            sorted(list(failed_tests)),
             se.io.Fmt.txtList,
         )
         se.io.dump(
             passed_test_file_path,
-            passed_tests,
+            sorted(list(passed_tests)),
             se.io.Fmt.txtList,
         )
 
@@ -515,7 +518,9 @@ class Main:
                 full_class_with_line_num
             ].append(it_line_num)
 
-        removed_failed_tests_path = Macros.results_dir / f"{inline_test_type}-removed-failed-tests.json"
+        removed_failed_tests_path = (
+            Macros.results_dir / f"{inline_test_type}-removed-failed-tests.json"
+        )
         if removed_failed_tests_path.exists():
             removed_failed_tests = se.io.load(removed_failed_tests_path)
         else:
@@ -543,9 +548,11 @@ class Main:
                     / f"{project_name}-{sha}"
                     / (full_class_name.split(r"$")[0].replace(".", "/") + ".java")
                 )
+                if not os.path.exists(file_path_with_inline_test):
+                    print(f"no inline test file {file_path_with_inline_test}")
+                    continue
                 file_content = se.io.load(file_path_with_inline_test, se.io.Fmt.txtList)
                 for line_num in line_nums:
-                    num_of_failed_tests += 1
                     failed_test = {
                         "project": project_name,
                         "file_path": f"{file_path_with_inline_test}",
@@ -555,12 +562,22 @@ class Main:
                         "it": file_content[int(line_num) - 1],
                     }
                     removed_failed_tests.append(failed_test)
+                    if file_content[int(line_num) - 1] != "":
+                        num_of_failed_tests += 1
                     file_content[int(line_num) - 1] = ""
-                se.io.dump(
-                    file_path_with_inline_test,
-                    file_content,
-                    se.io.Fmt.txtList,
-                )
+                # check if there are inline tests left
+                num_its = 0
+                for line in file_content:
+                    if line.strip().startswith(Macros.ITEST_DECLARE + "("):
+                        num_its += 1
+                if num_its > 0:
+                    se.io.dump(
+                        file_path_with_inline_test,
+                        file_content,
+                        se.io.Fmt.txtList,
+                    )
+                else:
+                    se.bash.run(f"rm {file_path_with_inline_test}")
 
         se.io.dump(
             removed_failed_tests_path,

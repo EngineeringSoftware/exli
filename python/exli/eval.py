@@ -476,7 +476,7 @@ class Eval:
             if test_project_name is not None and project_name != test_project_name:
                 continue
             output_path = (
-                Macros.results_dir / "r2" / f"{project_name}-{sha}-{mutator}-{algo}.txt"
+                Macros.results_dir / Macros.r2 / f"{project_name}-{sha}-{mutator}-{algo}.txt"
             )
             self.get_r2_tests(project_name, sha, mutator, algo, output_path)
 
@@ -491,7 +491,7 @@ class Eval:
                     continue
                 r2_tests_path_project = (
                     Macros.results_dir
-                    / "r2"
+                    / Macros.r2
                     / f"{project_name}-{sha}-{mutator}-{algo}.txt"
                 )
                 if r2_tests_path_project.exists():
@@ -559,7 +559,7 @@ class Eval:
         r2_tests.extend(itests_without_mutants)
         if output_path is None:
             output_path = (
-                f"{Macros.results_dir}/r2/{project_name}-{sha}-{mutator}-{algo}.txt"
+                f"{Macros.results_dir}/{Macros.r2}/{project_name}-{sha}-{mutator}-{algo}.txt"
             )
         se.io.dump(output_path, r2_tests, se.io.Fmt.txtList)
 
@@ -937,7 +937,7 @@ class Eval:
             r2_inline_tests.extend(minimized_tests)
             r2_inline_tests.extend(updated_not_mutated_inline_tests)
             se.io.dump(
-                Macros.results_dir / "r2" / f"{algorithm}-{mutator}.txt",
+                Macros.results_dir / Macros.r2 / f"{algorithm}-{mutator}.txt",
                 sorted(r2_inline_tests),
                 se.io.Fmt.txtList,
             )
