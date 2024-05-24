@@ -8,11 +8,11 @@
    <!-- ****************** BASE POM ****************** -->
    <!-- ********************************************** -->
 
-   <parent>
+   <!-- <parent>
       <groupId>com.bernardomg.maven</groupId>
       <artifactId>base-pom</artifactId>
       <version>1.5.0</version>
-   </parent>
+   </parent> -->
 
    <!-- ********************************************** -->
    <!-- **************** PROJECT INFO **************** -->
