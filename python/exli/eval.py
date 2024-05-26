@@ -476,7 +476,9 @@ class Eval:
             if test_project_name is not None and project_name != test_project_name:
                 continue
             output_path = (
-                Macros.results_dir / Macros.r2 / f"{project_name}-{sha}-{mutator}-{algo}.txt"
+                Macros.results_dir
+                / Macros.r2
+                / f"{project_name}-{sha}-{mutator}-{algo}.txt"
             )
             self.get_r2_tests(project_name, sha, mutator, algo, output_path)
 
@@ -558,9 +560,7 @@ class Eval:
         r2_tests.extend(formatted_minimized_tests)
         r2_tests.extend(itests_without_mutants)
         if output_path is None:
-            output_path = (
-                f"{Macros.results_dir}/{Macros.r2}/{project_name}-{sha}-{mutator}-{algo}.txt"
-            )
+            output_path = f"{Macros.results_dir}/{Macros.r2}/{project_name}-{sha}-{mutator}-{algo}.txt"
         se.io.dump(output_path, r2_tests, se.io.Fmt.txtList)
 
     # python -m exli.eval batch_test_to_killed_mutants --mutator "universalmutator"
@@ -814,9 +814,7 @@ class Eval:
             )
             self.minimize_tests_helper(algorithm, data_file, out_file, project_name)
 
-    def minimize_tests_helper(
-        self, algorithm: str, data_file: str, out_file: str, project_name: str = None
-    ):
+    def minimize_tests_helper(self, algorithm: str, data_file: str, out_file: str):
         if not data_file.exists():
             print(f"{data_file} does not exist")
             return
