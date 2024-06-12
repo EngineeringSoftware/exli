@@ -232,4 +232,16 @@ public class ConstructTest {
         String content = String.join("\n", Files.readAllLines(Paths.get(srcPath)));
         assertTrue(content.contains("a = a + 1; // increment a by 1"));
     }
+
+    @Test
+    public void testAddToSwitch() {
+        String srcPath = "src/test/resources/construct/EntityDelimiterProcessor.java";
+        String inlineNumber = "-1";
+        String logFileName = "src/test/resources/construct/inlinetest-log6.txt";
+        try {
+            Parser.addInlineTest(logFileName, inlineNumber, srcPath, false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -1,0 +1,1 @@
+src/test/resources/construct/EntityDelimiterProcessor.java;9;itest("Randoop", 9).given(text, new String[] { "qgln9YkQCN", "b", "M_h6tmD-ZR" }).checkEq(prefix, "b");

@@ -13,6 +13,7 @@ import com.github.javaparser.ast.stmt.IfStmt;
 import com.github.javaparser.ast.visitor.ModifierVisitor;
 import com.github.javaparser.ast.visitor.Visitable;
 import com.github.javaparser.ast.stmt.Statement;
+import com.github.javaparser.ast.stmt.SwitchEntry;
 
 public class InlineTestConstructor extends ModifierVisitor<Context> {
     Set<Integer> visitedLines;
@@ -44,12 +45,15 @@ public class InlineTestConstructor extends ModifierVisitor<Context> {
                         // insert the inline test after the target statement
                         if (parent instanceof BlockStmt) {
                             ((BlockStmt) parent).getStatements().addAfter(inlineTest, stmt);
+                        } else if (parent instanceof SwitchEntry) {
+                            ((SwitchEntry) parent).getStatements().addAfter(inlineTest, stmt);
                         }
                     } catch (Exception e) {
                         // when the inline test is not well-formed, skip it
                         if (ctx.throwExceptionForMalformedInlineTest)
-                            throw new RuntimeException(e.toString() + "\n" + "Error when parsing inline test: " + inlineTestStr);
-                        else{
+                            throw new RuntimeException(
+                                    e.toString() + "\n" + "Error when parsing inline test: " + inlineTestStr);
+                        else {
                             continue;
                         }
                     }
