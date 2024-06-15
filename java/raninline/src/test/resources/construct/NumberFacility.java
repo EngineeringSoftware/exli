@@ -67,7 +67,9 @@ public class NumberFacility {
     @SuppressWarnings("empty-statement")
     public static byte[] leftTrim(final byte... bytes) {
         int pos = 0;
-        for (; pos < bytes.length && bytes[pos] == 0x00; pos++) ;
+        for (; pos < bytes.length && bytes[pos] == 0x00; pos++) {
+            ;
+        }
         if (pos < bytes.length) {
             return Arrays.copyOfRange(bytes, pos, bytes.length);
         } else {

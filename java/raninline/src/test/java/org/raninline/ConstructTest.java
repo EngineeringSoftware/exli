@@ -244,4 +244,16 @@ public class ConstructTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void testCanBeAdded3() {
+        String srcPath = "src/test/resources/construct/DFC.java";
+        String inlineNumber = "-1";
+        String logFileName = "src/test/resources/construct/inlinetest-log7.txt";
+        try {
+            Parser.addInlineTest(logFileName, inlineNumber, srcPath, false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

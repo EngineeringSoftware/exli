@@ -1,0 +1,19 @@
+package construct;
+
+public class DFC {
+    @Override
+    protected String createEndpointForApiCall(String apiCall, boolean hasAttachment) {
+      while (apiCall.startsWith("/"))
+        apiCall = apiCall.substring(1);
+  
+      String baseUrl = getFacebookGraphEndpointUrl();
+  
+      if (hasAttachment && (apiCall.endsWith("/videos") || apiCall.endsWith("/advideos"))) {
+        baseUrl = getFacebookGraphVideoEndpointUrl();
+      } else if (apiCall.endsWith("logout.php")) {
+        baseUrl = getFacebookEndpointUrls().getFacebookEndpoint();
+      }
+  
+      return format("%s/%s", baseUrl, apiCall);
+    }
+}
