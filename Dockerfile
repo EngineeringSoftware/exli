@@ -39,8 +39,8 @@ RUN bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && sdk install java 8.0.302
 RUN conda init bash && source ~/.bashrc
 
 # Set up working environment
-RUN bash -c "git clone https://github.com/EngineeringSoftware/inlinetest.git inlinetest"
-RUN bash -c "git clone https://github.com/EngineeringSoftware/exli.git exli"
+RUN echo "CACHEBUST e109bf8" && bash -c "git clone https://github.com/EngineeringSoftware/inlinetest.git inlinetest"
+RUN echo "CACHEBUST f8f9f8a" && bash -c "git clone https://github.com/EngineeringSoftware/exli.git exli"
 
 # Install python exli
 RUN cd "$HOME/exli/python" && /bin/bash -c "bash prepare-conda-env.sh"
